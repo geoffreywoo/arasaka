@@ -11,6 +11,7 @@ const translations = {
       swarm: "Swarm",
       stack: "Stack",
       archive: "Relic",
+      mikoshi: "Mikoshi",
       vault: "Vault",
       custody: "Custody",
       exchange: "Exchange",
@@ -636,6 +637,57 @@ const translations = {
         }
       }
     },
+    mikoshi: {
+      aria: "Mikoshi continuity engine",
+      eyebrow: "Mikoshi Continuity Engine",
+      title: "A mind is not backed up until it can survive politics, hardware failure, and grief.",
+      text: "Mikoshi binds engram extraction, persona partitioning, simulation rehearsal, and controlled return into one command surface for clients whose identity must outlive the room.",
+      modeAria: "Mikoshi continuity mode",
+      active: "Active Continuity Layer",
+      integrity: "Integrity",
+      witness: "Witness",
+      continuity: "Continuity",
+      mode: {
+        extract: "Extract",
+        partition: "Partition",
+        simulate: "Simulate",
+        return: "Return"
+      },
+      detail: {
+        extract: {
+          code: "EX-01",
+          title: "Engram Extraction Gate",
+          text: "Neural tissue is mapped into a cold continuity lattice before trauma, market shock, or board action can corrupt the witness.",
+          integrity: "98.9%",
+          witness: "BIOMETRIC",
+          continuity: "COLD"
+        },
+        partition: {
+          code: "PT-17",
+          title: "Persona Partition Array",
+          text: "Executive intent, memory, liability, and desire are separated into sealed shards so no single compromise can inherit the whole mind.",
+          integrity: "96.4%",
+          witness: "QUORUM",
+          continuity: "SPLIT"
+        },
+        simulate: {
+          code: "SM-33",
+          title: "Negotiation Ghost Theater",
+          text: "Forked personas rehearse succession disputes, hostile acquisition paths, and family pressure inside a sandbox that never touches the living root.",
+          integrity: "94.8%",
+          witness: "MODEL",
+          continuity: "LOOP"
+        },
+        return: {
+          code: "RT-09",
+          title: "Controlled Return Protocol",
+          text: "Recovered agency is thawed through hardware attestation, human witness, and command quorum before it can reenter body, board, or vault.",
+          integrity: "97.7%",
+          witness: "HUMAN",
+          continuity: "SEALED"
+        }
+      }
+    },
     vault: {
       aria: "Orbital vault array console",
       eyebrow: "Orbital Vault Array",
@@ -1145,6 +1197,7 @@ const translations = {
       swarm: "スウォーム",
       stack: "層構造",
       archive: "レリック",
+      mikoshi: "神輿",
       vault: "保管庫",
       custody: "保管",
       exchange: "交換所",
@@ -1770,6 +1823,57 @@ const translations = {
         }
       }
     },
+    mikoshi: {
+      aria: "ミコシ継続性エンジン",
+      eyebrow: "ミコシ継続性エンジン",
+      title: "心は、政治、ハードウェア故障、喪失を越えて残れるまでバックアップされたとは言えません。",
+      text: "ミコシは、エングラム抽出、人格分割、シミュレーション演習、制御された帰還を、部屋の寿命を越えてIDを残す顧客のための単一指揮面へ結合します。",
+      modeAria: "ミコシ継続性モード",
+      active: "稼働継続性レイヤー",
+      integrity: "完全性",
+      witness: "証人",
+      continuity: "継続性",
+      mode: {
+        extract: "抽出",
+        partition: "分割",
+        simulate: "模擬",
+        return: "帰還"
+      },
+      detail: {
+        extract: {
+          code: "EX-01",
+          title: "エングラム抽出ゲート",
+          text: "外傷、市場ショック、取締役会行動が証人を破損する前に、神経組織を冷却継続性格子へ写像します。",
+          integrity: "98.9%",
+          witness: "生体",
+          continuity: "冷却"
+        },
+        partition: {
+          code: "PT-17",
+          title: "人格分割アレイ",
+          text: "役員の意図、記憶、責任、欲望を封印済みシャードへ分離し、単一侵害が心全体を継承できないようにします。",
+          integrity: "96.4%",
+          witness: "クォーラム",
+          continuity: "分割"
+        },
+        simulate: {
+          code: "SM-33",
+          title: "交渉ゴースト劇場",
+          text: "フォークされた人格は、継承争い、敵対的買収経路、家族圧力を、生きたルートに触れないサンドボックス内で演習します。",
+          integrity: "94.8%",
+          witness: "モデル",
+          continuity: "ループ"
+        },
+        return: {
+          code: "RT-09",
+          title: "制御帰還プロトコル",
+          text: "回復された主体性は、肉体、取締役会、保管庫へ戻る前に、ハードウェア証明、人間証人、指揮クォーラムを通じて解凍されます。",
+          integrity: "97.7%",
+          witness: "人間",
+          continuity: "封印"
+        }
+      }
+    },
     vault: {
       aria: "軌道保管庫アレイコンソール",
       eyebrow: "軌道保管庫アレイ",
@@ -2373,6 +2477,13 @@ const archiveText = document.querySelector("[data-archive-text]");
 const archiveIntegrity = document.querySelector("[data-archive-integrity]");
 const archiveLatency = document.querySelector("[data-archive-latency]");
 const archiveRisk = document.querySelector("[data-archive-risk]");
+const mikoshiModeButtons = document.querySelectorAll("[data-mikoshi-mode]");
+const mikoshiCode = document.querySelector("[data-mikoshi-code]");
+const mikoshiTitle = document.querySelector("[data-mikoshi-title]");
+const mikoshiText = document.querySelector("[data-mikoshi-text]");
+const mikoshiIntegrity = document.querySelector("[data-mikoshi-integrity]");
+const mikoshiWitness = document.querySelector("[data-mikoshi-witness]");
+const mikoshiContinuity = document.querySelector("[data-mikoshi-continuity]");
 const vaultTierButtons = document.querySelectorAll("[data-vault-tier]");
 const vaultCode = document.querySelector("[data-vault-code]");
 const vaultTitle = document.querySelector("[data-vault-title]");
@@ -2428,6 +2539,7 @@ let activeBlackwallProtocol = "quarantine";
 let activeStackLayer = "body";
 let activeMatrixMode = "intrusion";
 let activeArchiveRecord = "relic";
+let activeMikoshiMode = "extract";
 let activeVaultTier = "memory";
 let activeCustodyInstrument = "engram";
 let activeCapitalMode = "signal";
@@ -2444,6 +2556,7 @@ const sectionLabelKeys = {
   swarm: "nav.swarm",
   stack: "nav.stack",
   archive: "nav.archive",
+  mikoshi: "nav.mikoshi",
   vault: "nav.vault",
   custody: "nav.custody",
   exchange: "nav.exchange",
@@ -2533,6 +2646,7 @@ function setLanguage(language) {
   updateStackLayer(activeStackLayer);
   updateMatrix(activeMatrixMode);
   updateArchive(activeArchiveRecord);
+  updateMikoshiMode(activeMikoshiMode);
   updateVaultTier(activeVaultTier);
   updateCustody(activeCustodyInstrument);
   updateCapitalMode(activeCapitalMode);
@@ -2915,6 +3029,27 @@ function updateArchive(recordKey) {
   if (archiveIntegrity) archiveIntegrity.textContent = record.integrity;
   if (archiveLatency) archiveLatency.textContent = record.latency;
   if (archiveRisk) archiveRisk.textContent = record.risk;
+}
+
+function updateMikoshiMode(modeKey) {
+  if (!mikoshiTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.mikoshi.detail[modeKey] || dictionary.mikoshi.detail.extract;
+  activeMikoshiMode = modeKey;
+
+  mikoshiModeButtons.forEach((button) => {
+    const isActive = button.dataset.mikoshiMode === modeKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (mikoshiCode) mikoshiCode.textContent = detail.code;
+  mikoshiTitle.textContent = detail.title;
+  if (mikoshiText) mikoshiText.textContent = detail.text;
+  if (mikoshiIntegrity) mikoshiIntegrity.textContent = detail.integrity;
+  if (mikoshiWitness) mikoshiWitness.textContent = detail.witness;
+  if (mikoshiContinuity) mikoshiContinuity.textContent = detail.continuity;
 }
 
 function updateVaultTier(tierKey) {
@@ -3395,6 +3530,18 @@ matrixButtons.forEach((button) => {
 archiveButtons.forEach((button) => {
   button.addEventListener("click", () => {
     updateArchive(button.dataset.archiveRecord);
+  });
+});
+
+mikoshiModeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateMikoshiMode(button.dataset.mikoshiMode);
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      updateMikoshiMode(button.dataset.mikoshiMode);
+    }
   });
 });
 

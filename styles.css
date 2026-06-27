@@ -702,9 +702,9 @@ select {
   display: flex;
   justify-content: center;
   min-width: 0;
-  gap: 18px;
+  gap: clamp(10px, 1vw, 18px);
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: clamp(0.72rem, 0.74vw, 0.82rem);
 }
 
 .site-nav a {
@@ -745,6 +745,12 @@ select {
 
 .header-actions {
   gap: 12px;
+}
+
+@media (max-width: 1500px) {
+  .header-actions .access-link {
+    display: none;
+  }
 }
 
 .menu-toggle {
@@ -3668,6 +3674,342 @@ select {
   font-size: 1rem;
 }
 
+.mikoshi-section {
+  position: relative;
+  overflow: hidden;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.92fr);
+  gap: 28px;
+  align-items: stretch;
+  background:
+    radial-gradient(circle at 66% 32%, rgba(225, 7, 20, 0.18), transparent 30%),
+    radial-gradient(circle at 78% 72%, rgba(116, 199, 216, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(182, 243, 91, 0.055), transparent 46%),
+    #050507;
+}
+
+.mikoshi-section::before,
+.mikoshi-section::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.mikoshi-section::before {
+  inset: 28px;
+  border: 1px solid rgba(225, 7, 20, 0.22);
+  clip-path: polygon(0 0, 76% 0, 100% 24%, 100% 100%, 18% 100%, 0 78%);
+}
+
+.mikoshi-section::after {
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 18%, rgba(225, 7, 20, 0.07) 18% 19%, transparent 19%),
+    linear-gradient(90deg, transparent 0 76%, rgba(116, 199, 216, 0.08) 76% 77%, transparent 77%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(255, 255, 255, 0.026) 34px 35px);
+  mask-image: radial-gradient(circle at 64% 48%, #000, transparent 72%);
+}
+
+.mikoshi-copy,
+.mikoshi-console {
+  position: relative;
+  z-index: 1;
+}
+
+.mikoshi-copy {
+  align-self: center;
+}
+
+.mikoshi-copy h2 {
+  margin: 0;
+  font-size: 2.92rem;
+  line-height: 0.98;
+}
+
+.mikoshi-copy p {
+  color: var(--muted);
+}
+
+.mikoshi-console {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(270px, 0.58fr) minmax(178px, 0.32fr);
+  grid-template-areas:
+    "core modes"
+    "readout readout";
+  gap: 1px;
+  min-height: 540px;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.28);
+  border-radius: 6px;
+  background:
+    linear-gradient(110deg, rgba(225, 7, 20, 0.32), rgba(116, 199, 216, 0.22), rgba(182, 243, 91, 0.12)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.mikoshi-console::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.11), transparent),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(255, 255, 255, 0.035) 42px 43px);
+  transform: translateX(-100%);
+  animation: consoleSweep 10s ease-in-out infinite;
+}
+
+.mikoshi-core,
+.mikoshi-modes,
+.mikoshi-readout {
+  position: relative;
+  z-index: 2;
+}
+
+.mikoshi-core {
+  grid-area: core;
+  overflow: hidden;
+  display: grid;
+  min-height: 390px;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, rgba(116, 199, 216, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(5, 5, 7, 0.62), rgba(7, 10, 12, 0.94));
+}
+
+.mikoshi-core::before,
+.mikoshi-core::after {
+  position: absolute;
+  content: "";
+}
+
+.mikoshi-core::before {
+  width: min(360px, 70%);
+  aspect-ratio: 1;
+  border: 1px solid rgba(225, 7, 20, 0.38);
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+  animation: coreSpin 18s linear infinite;
+}
+
+.mikoshi-core::after {
+  width: min(260px, 54%);
+  aspect-ratio: 1;
+  border: 1px dashed rgba(182, 243, 91, 0.34);
+  border-radius: 50%;
+  animation: coreSpin 11s linear infinite reverse;
+}
+
+.mikoshi-column {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: min(118px, 28vw);
+  height: min(310px, 58vw);
+  place-items: center;
+  border: 1px solid rgba(116, 199, 216, 0.42);
+  background:
+    linear-gradient(90deg, transparent 0 26%, rgba(116, 199, 216, 0.14) 26% 28%, transparent 28% 72%, rgba(225, 7, 20, 0.16) 72% 74%, transparent 74%),
+    linear-gradient(180deg, rgba(225, 7, 20, 0.12), rgba(116, 199, 216, 0.1)),
+    rgba(5, 5, 7, 0.78);
+  box-shadow:
+    inset 0 0 34px rgba(116, 199, 216, 0.18),
+    0 0 48px rgba(225, 7, 20, 0.18);
+}
+
+.mikoshi-column span {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: rgba(182, 243, 91, 0.46);
+  box-shadow: 0 0 18px rgba(182, 243, 91, 0.4);
+}
+
+.mikoshi-column span:nth-child(1) {
+  top: 22%;
+}
+
+.mikoshi-column span:nth-child(2) {
+  top: 50%;
+}
+
+.mikoshi-column span:nth-child(3) {
+  top: 78%;
+}
+
+.mikoshi-column strong {
+  position: relative;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 1.28rem;
+  text-shadow: 0 0 28px rgba(182, 243, 91, 0.46);
+}
+
+.mikoshi-ring {
+  position: absolute;
+  border: 1px solid rgba(116, 199, 216, 0.28);
+  border-radius: 50%;
+}
+
+.ring-one {
+  width: min(420px, 78%);
+  aspect-ratio: 1;
+}
+
+.ring-two {
+  width: min(310px, 62%);
+  aspect-ratio: 1;
+  border-color: rgba(225, 7, 20, 0.3);
+}
+
+.mikoshi-shards {
+  position: absolute;
+  inset: 16%;
+}
+
+.mikoshi-shards i {
+  position: absolute;
+  width: 78px;
+  height: 22px;
+  border: 1px solid rgba(225, 7, 20, 0.42);
+  background: rgba(5, 5, 7, 0.74);
+  clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%);
+}
+
+.mikoshi-shards i:nth-child(1) {
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mikoshi-shards i:nth-child(2) {
+  right: 3%;
+  top: 48%;
+  transform: rotate(90deg);
+}
+
+.mikoshi-shards i:nth-child(3) {
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.mikoshi-shards i:nth-child(4) {
+  left: 3%;
+  top: 48%;
+  transform: rotate(-90deg);
+}
+
+.mikoshi-modes {
+  grid-area: modes;
+  display: grid;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mikoshi-mode {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  min-height: 96px;
+  padding: 15px;
+  border: 0;
+  color: var(--muted);
+  background: rgba(5, 5, 7, 0.84);
+  text-align: left;
+  cursor: pointer;
+}
+
+.mikoshi-mode:hover,
+.mikoshi-mode:focus-visible,
+.mikoshi-mode.is-active {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.3), rgba(116, 199, 216, 0.08)),
+    rgba(10, 12, 14, 0.94);
+}
+
+.mikoshi-mode span {
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.mikoshi-mode strong {
+  font-size: 0.92rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.mikoshi-readout {
+  grid-area: readout;
+  display: grid;
+  grid-template-columns: minmax(170px, 0.24fr) minmax(0, 1fr);
+  gap: 12px 24px;
+  align-content: center;
+  min-height: 150px;
+  padding: 22px 24px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.16), transparent 54%),
+    rgba(5, 5, 7, 0.9);
+}
+
+.mikoshi-readout > span {
+  color: var(--dim);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mikoshi-readout h3 {
+  margin: 0;
+  font-size: 1.95rem;
+  line-height: 1.02;
+}
+
+.mikoshi-readout p {
+  grid-column: 2 / -1;
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.mikoshi-readout dl {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 4px 0 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mikoshi-readout dl div {
+  display: grid;
+  gap: 6px;
+  min-height: 76px;
+  align-content: center;
+  padding: 12px;
+  background: rgba(8, 10, 12, 0.82);
+}
+
+.mikoshi-readout dt {
+  color: var(--dim);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mikoshi-readout dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
 .vault-section {
   position: relative;
   overflow: hidden;
@@ -6539,6 +6881,7 @@ select {
   .vault-section,
   .stack-section,
   .archive-section,
+  .mikoshi-section,
   .custody-section,
   .capital-section,
   .exchange-section,
@@ -6652,6 +6995,23 @@ select {
   }
 
   .vault-tier {
+    min-height: 76px;
+  }
+
+  .mikoshi-console {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "core"
+      "modes"
+      "readout";
+    min-height: 0;
+  }
+
+  .mikoshi-modes {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mikoshi-mode {
     min-height: 76px;
   }
 
@@ -6898,6 +7258,7 @@ select {
   .vault-copy h2,
   .stack-copy h2,
   .archive-copy h2,
+  .mikoshi-copy h2,
   .custody-copy h2,
   .capital-copy h2,
   .exchange-copy h2,
@@ -6916,6 +7277,7 @@ select {
   .ice-readout,
   .swarm-readout,
   .vault-readout,
+  .mikoshi-readout,
   .blackwall-readout,
   .systems-console,
   .archive-console,
@@ -7024,6 +7386,25 @@ select {
 
   .vault-readout p,
   .vault-readout dl {
+    grid-column: 1;
+  }
+
+  .mikoshi-core {
+    min-height: 320px;
+  }
+
+  .mikoshi-modes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mikoshi-mode:hover,
+  .mikoshi-mode:focus-visible,
+  .mikoshi-mode.is-active {
+    transform: none;
+  }
+
+  .mikoshi-readout p,
+  .mikoshi-readout dl {
     grid-column: 1;
   }
 
@@ -7204,6 +7585,7 @@ select {
   .vault-copy h2,
   .stack-copy h2,
   .archive-copy h2,
+  .mikoshi-copy h2,
   .custody-copy h2,
   .capital-copy h2,
   .exchange-copy h2,
@@ -7260,6 +7642,8 @@ select {
   .swarm-readout dl,
   .vault-tiers,
   .vault-readout dl,
+  .mikoshi-modes,
+  .mikoshi-readout dl,
   .blackwall-protocols,
   .blackwall-readout dl,
   .capital-controls,
@@ -7271,6 +7655,10 @@ select {
 
   .megacity-map {
     min-height: 360px;
+  }
+
+  .mikoshi-core {
+    min-height: 280px;
   }
 
   .city-district {
