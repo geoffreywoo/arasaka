@@ -129,6 +129,7 @@
         <a href="#archive" data-i18n="nav.archive">Relic</a>
         <a href="#vault" data-i18n="nav.vault">Vault</a>
         <a href="#custody" data-i18n="nav.custody">Custody</a>
+        <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
         <a href="#grid" data-i18n="nav.grid">Grid</a>
         <a href="#topology" data-i18n="nav.topology">Topology</a>
         <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
@@ -173,6 +174,7 @@
       <a href="#archive" data-i18n="nav.archive">Relic</a>
       <a href="#vault" data-i18n="nav.vault">Vault</a>
       <a href="#custody" data-i18n="nav.custody">Custody</a>
+      <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
       <a href="#grid" data-i18n="nav.grid">Grid</a>
       <a href="#topology" data-i18n="nav.topology">Topology</a>
       <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
@@ -1030,6 +1032,67 @@
               <div>
                 <dt data-i18n="capital.relay">Relay</dt>
                 <dd data-capital-relay>COLD</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section exchange-section" id="exchange">
+        <div class="exchange-copy">
+          <p class="eyebrow" data-i18n="exchange.eyebrow">Netrunner Exchange</p>
+          <h2 data-i18n="exchange.title">Every intrusion is a market before it becomes an attack.</h2>
+          <p data-i18n="exchange.text">
+            Arasaka exchange systems price hostile signal, rogue AI drift, street-level rumor, and founder leverage in real time, converting netrunner pressure into executable counter-position.
+          </p>
+        </div>
+
+        <div class="exchange-console" aria-label="Netrunner exchange console" data-i18n-aria-label="exchange.aria">
+          <div class="exchange-board" aria-hidden="true">
+            <div class="exchange-grid">
+              <span class="exchange-trace trace-runner">RUNNER</span>
+              <span class="exchange-trace trace-ice">ICE</span>
+              <span class="exchange-trace trace-rumor">RUMOR</span>
+              <span class="exchange-trace trace-relay">A/F</span>
+              <strong data-exchange-code>NX-01</strong>
+            </div>
+          </div>
+
+          <div class="exchange-markets" role="group" aria-label="Netrunner exchange market" data-i18n-aria-label="exchange.marketAria">
+            <button class="exchange-market is-active" type="button" data-exchange-market="runner" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="exchange.market.runner">Runner Heat</strong>
+            </button>
+            <button class="exchange-market" type="button" data-exchange-market="ai" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="exchange.market.ai">Rogue AI Drift</strong>
+            </button>
+            <button class="exchange-market" type="button" data-exchange-market="rumor" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="exchange.market.rumor">Rumor Futures</strong>
+            </button>
+            <button class="exchange-market exchange-market-ghost" type="button" data-exchange-market="founder" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="exchange.market.founder">Founder Ghost</strong>
+            </button>
+          </div>
+
+          <aside class="exchange-readout">
+            <span data-i18n="exchange.active">Active Market</span>
+            <h3 data-exchange-title>Runner Heat Index</h3>
+            <p data-exchange-text>Hostile netrunner signatures are priced by intrusion depth, proximity to protected memory, and expected Black ICE burn.</p>
+            <dl>
+              <div>
+                <dt data-i18n="exchange.spread">Spread</dt>
+                <dd data-exchange-spread>4.2bps</dd>
+              </div>
+              <div>
+                <dt data-i18n="exchange.liquidity">Liquidity</dt>
+                <dd data-exchange-liquidity>THIN</dd>
+              </div>
+              <div>
+                <dt data-i18n="exchange.counter">Counter</dt>
+                <dd data-exchange-counter>ICE LONG</dd>
               </div>
             </dl>
           </aside>

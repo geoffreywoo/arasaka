@@ -13,6 +13,7 @@ const translations = {
       archive: "Relic",
       vault: "Vault",
       custody: "Custody",
+      exchange: "Exchange",
       grid: "Grid",
       topology: "Topology",
       blackwall: "Blackwall",
@@ -779,6 +780,57 @@ const translations = {
         }
       }
     },
+    exchange: {
+      aria: "Netrunner exchange console",
+      eyebrow: "Netrunner Exchange",
+      title: "Every intrusion is a market before it becomes an attack.",
+      text: "Arasaka exchange systems price hostile signal, rogue AI drift, street-level rumor, and founder leverage in real time, converting netrunner pressure into executable counter-position.",
+      marketAria: "Netrunner exchange market",
+      active: "Active Market",
+      spread: "Spread",
+      liquidity: "Liquidity",
+      counter: "Counter",
+      market: {
+        runner: "Runner Heat",
+        ai: "Rogue AI Drift",
+        rumor: "Rumor Futures",
+        founder: "Founder Ghost"
+      },
+      detail: {
+        runner: {
+          code: "NX-01",
+          title: "Runner Heat Index",
+          text: "Hostile netrunner signatures are priced by intrusion depth, proximity to protected memory, and expected Black ICE burn.",
+          spread: "4.2bps",
+          liquidity: "THIN",
+          counter: "ICE LONG"
+        },
+        ai: {
+          code: "BW-09",
+          title: "Rogue AI Drift Market",
+          text: "Blackwall edge noise is converted into synthetic volatility before autonomous systems can mistake infection for signal.",
+          spread: "9.8bps",
+          liquidity: "FROZEN",
+          counter: "MIRROR"
+        },
+        rumor: {
+          code: "RM-33",
+          title: "Rumor Futures Desk",
+          text: "Street chatter, board leaks, and acquisition myths are bundled into false surfaces that pull hostile capital away from the real rail.",
+          spread: "2.7bps",
+          liquidity: "DEEP",
+          counter: "DECOY"
+        },
+        founder: {
+          code: "AF-GW",
+          title: "Founder Ghost Mark",
+          text: "A barely visible relay prices social proof without declaring the person, the fund, or the thesis behind the signal.",
+          spread: "0.8bps",
+          liquidity: "GHOST",
+          counter: "QUIET"
+        }
+      }
+    },
     topology: {
       eyebrow: "Threat Topology",
       title: "Assets, adversaries, and leverage rendered as one field.",
@@ -1095,6 +1147,7 @@ const translations = {
       archive: "レリック",
       vault: "保管庫",
       custody: "保管",
+      exchange: "交換所",
       grid: "都市網",
       topology: "位相図",
       blackwall: "ブラックウォール",
@@ -1861,6 +1914,57 @@ const translations = {
         }
       }
     },
+    exchange: {
+      aria: "ネットランナー交換所コンソール",
+      eyebrow: "ネットランナー交換所",
+      title: "すべての侵入は、攻撃になる前に市場である。",
+      text: "荒坂の交換システムは、敵対シグナル、 rogue AI の偏移、街路レベルの噂、創業者レバレッジをリアルタイムで価格化し、ネットランナー圧力を実行可能な対抗ポジションへ変換します。",
+      marketAria: "ネットランナー交換市場",
+      active: "稼働市場",
+      spread: "スプレッド",
+      liquidity: "流動性",
+      counter: "対抗",
+      market: {
+        runner: "ランナー熱量",
+        ai: "rogue AI 偏移",
+        rumor: "噂先物",
+        founder: "創業者ゴースト"
+      },
+      detail: {
+        runner: {
+          code: "NX-01",
+          title: "ランナー熱量指数",
+          text: "敵対ネットランナー署名は、侵入深度、保護記憶への近接性、予測ブラックICE消耗によって価格化されます。",
+          spread: "4.2bps",
+          liquidity: "薄い",
+          counter: "ICEロング"
+        },
+        ai: {
+          code: "BW-09",
+          title: "rogue AI 偏移市場",
+          text: "ブラックウォール境界ノイズは、自律システムが感染をシグナルと誤認する前に、合成ボラティリティへ変換されます。",
+          spread: "9.8bps",
+          liquidity: "凍結",
+          counter: "ミラー"
+        },
+        rumor: {
+          code: "RM-33",
+          title: "噂先物デスク",
+          text: "街の噂、取締役会リーク、買収神話を偽装面へ束ね、敵対資本を実際のレールから引き離します。",
+          spread: "2.7bps",
+          liquidity: "深い",
+          counter: "デコイ"
+        },
+        founder: {
+          code: "AF-GW",
+          title: "創業者ゴースト印",
+          text: "ほとんど見えない中継が、人物、ファンド、シグナル背後の仮説を宣言せずに社会的証明を価格化します。",
+          spread: "0.8bps",
+          liquidity: "ゴースト",
+          counter: "静音"
+        }
+      }
+    },
     topology: {
       eyebrow: "脅威位相図",
       title: "資産、敵対者、レバレッジをひとつの場として描画する。",
@@ -2287,6 +2391,13 @@ const capitalText = document.querySelector("[data-capital-text]");
 const capitalConviction = document.querySelector("[data-capital-conviction]");
 const capitalObscurity = document.querySelector("[data-capital-obscurity]");
 const capitalRelay = document.querySelector("[data-capital-relay]");
+const exchangeMarketButtons = document.querySelectorAll("[data-exchange-market]");
+const exchangeCode = document.querySelector("[data-exchange-code]");
+const exchangeTitle = document.querySelector("[data-exchange-title]");
+const exchangeText = document.querySelector("[data-exchange-text]");
+const exchangeSpread = document.querySelector("[data-exchange-spread]");
+const exchangeLiquidity = document.querySelector("[data-exchange-liquidity]");
+const exchangeCounter = document.querySelector("[data-exchange-counter]");
 const doctrineToggles = document.querySelectorAll("[data-doctrine-toggle]");
 const operationTheaterButtons = document.querySelectorAll("[data-operation-theater]");
 const operationTitle = document.querySelector("[data-operation-title]");
@@ -2320,6 +2431,7 @@ let activeArchiveRecord = "relic";
 let activeVaultTier = "memory";
 let activeCustodyInstrument = "engram";
 let activeCapitalMode = "signal";
+let activeExchangeMarket = "runner";
 let activeOperationTheater = "plaza";
 let activeSectionId = "top";
 
@@ -2334,6 +2446,7 @@ const sectionLabelKeys = {
   archive: "nav.archive",
   vault: "nav.vault",
   custody: "nav.custody",
+  exchange: "nav.exchange",
   grid: "nav.grid",
   topology: "nav.topology",
   blackwall: "nav.blackwall",
@@ -2423,6 +2536,7 @@ function setLanguage(language) {
   updateVaultTier(activeVaultTier);
   updateCustody(activeCustodyInstrument);
   updateCapitalMode(activeCapitalMode);
+  updateExchangeMarket(activeExchangeMarket);
   updateDoctrineToggleLabels();
   updateOperationTheater(activeOperationTheater);
   updateActiveSection(activeSectionId);
@@ -2863,6 +2977,27 @@ function updateCapitalMode(modeKey) {
   if (capitalRelay) capitalRelay.textContent = detail.relay;
 }
 
+function updateExchangeMarket(marketKey) {
+  if (!exchangeTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.exchange.detail[marketKey] || dictionary.exchange.detail.runner;
+  activeExchangeMarket = marketKey;
+
+  exchangeMarketButtons.forEach((button) => {
+    const isActive = button.dataset.exchangeMarket === marketKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (exchangeCode) exchangeCode.textContent = detail.code;
+  exchangeTitle.textContent = detail.title;
+  if (exchangeText) exchangeText.textContent = detail.text;
+  if (exchangeSpread) exchangeSpread.textContent = detail.spread;
+  if (exchangeLiquidity) exchangeLiquidity.textContent = detail.liquidity;
+  if (exchangeCounter) exchangeCounter.textContent = detail.counter;
+}
+
 function updateDoctrineToggleLabels() {
   const language = document.documentElement.dataset.language || "en";
   const dictionary = translations[language] || translations.en;
@@ -3295,6 +3430,18 @@ capitalModeButtons.forEach((button) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       updateCapitalMode(button.dataset.capitalMode);
+    }
+  });
+});
+
+exchangeMarketButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateExchangeMarket(button.dataset.exchangeMarket);
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      updateExchangeMarket(button.dataset.exchangeMarket);
     }
   });
 });
