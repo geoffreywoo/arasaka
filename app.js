@@ -12,6 +12,7 @@ const translations = {
       stack: "Stack",
       archive: "Relic",
       mikoshi: "Mikoshi",
+      soulkiller: "Soulkiller",
       vault: "Vault",
       custody: "Custody",
       exchange: "Exchange",
@@ -688,6 +689,57 @@ const translations = {
         }
       }
     },
+    soulkiller: {
+      aria: "Soulkiller redaction lab",
+      eyebrow: "Soulkiller Redaction Lab",
+      title: "Identity becomes controllable when memory can be separated from the witness.",
+      text: "Arasaka redaction chambers isolate hostile engrams, copy executive signal, and seal dangerous persona fragments before they can infect body, board, or Blackwall perimeter.",
+      stageAria: "Soulkiller redaction stage",
+      active: "Active Redaction Stage",
+      integrity: "Integrity",
+      drift: "Ego Drift",
+      chain: "Command Chain",
+      stage: {
+        sever: "Sever",
+        copy: "Copy",
+        redact: "Redact",
+        seal: "Seal"
+      },
+      detail: {
+        sever: {
+          code: "SK-SEV",
+          title: "Neural Severance Gate",
+          text: "Personhood is decoupled from compromised tissue under human command, leaving a cold witness path for extraction and review.",
+          integrity: "96.8%",
+          drift: "0.19",
+          chain: "HUMAN"
+        },
+        copy: {
+          code: "SK-COPY",
+          title: "Executive Signal Copy",
+          text: "Strategic memory, decision cadence, and command reflex are copied into sealed substrate without granting the duplicate authority.",
+          integrity: "94.1%",
+          drift: "0.27",
+          chain: "ESCROW"
+        },
+        redact: {
+          code: "SK-RED",
+          title: "Hostile Memory Redaction",
+          text: "Blackmail vectors, rogue AI hooks, and coercive emotional payloads are burned from the engram before continuity review.",
+          integrity: "91.6%",
+          drift: "0.44",
+          chain: "BURN"
+        },
+        seal: {
+          code: "SK-SEAL",
+          title: "Persona Seal Event",
+          text: "The surviving fragment is locked behind biometric witness, cold quorum, and board-proof audit trace until release is authorized.",
+          integrity: "98.3%",
+          drift: "0.08",
+          chain: "QUORUM"
+        }
+      }
+    },
     vault: {
       aria: "Orbital vault array console",
       eyebrow: "Orbital Vault Array",
@@ -1198,6 +1250,7 @@ const translations = {
       stack: "層構造",
       archive: "レリック",
       mikoshi: "神輿",
+      soulkiller: "ソウルキラー",
       vault: "保管庫",
       custody: "保管",
       exchange: "交換所",
@@ -1874,6 +1927,57 @@ const translations = {
         }
       }
     },
+    soulkiller: {
+      aria: "ソウルキラー検閲ラボ",
+      eyebrow: "ソウルキラー検閲ラボ",
+      title: "記憶を証人から分離できるとき、IDは制御可能になります。",
+      text: "荒坂の検閲チャンバーは敵対エングラムを隔離し、役員シグナルを複製し、危険な人格断片が肉体、取締役会、ブラックウォール境界を感染させる前に封印します。",
+      stageAria: "ソウルキラー検閲段階",
+      active: "稼働検閲段階",
+      integrity: "完全性",
+      drift: "自我偏移",
+      chain: "指揮系統",
+      stage: {
+        sever: "切断",
+        copy: "複製",
+        redact: "検閲",
+        seal: "封印"
+      },
+      detail: {
+        sever: {
+          code: "SK-SEV",
+          title: "神経切断ゲート",
+          text: "人間指揮の下で人格を汚染組織から切り離し、抽出と審査のための冷却証人経路を残します。",
+          integrity: "96.8%",
+          drift: "0.19",
+          chain: "人間"
+        },
+        copy: {
+          code: "SK-COPY",
+          title: "役員シグナル複製",
+          text: "戦略記憶、意思決定リズム、指揮反射を、複製体へ権限を与えずに封印基質へ複製します。",
+          integrity: "94.1%",
+          drift: "0.27",
+          chain: "エスクロー"
+        },
+        redact: {
+          code: "SK-RED",
+          title: "敵対記憶検閲",
+          text: "恐喝ベクトル、rogue AI フック、強制的な感情ペイロードを、継続性審査前にエングラムから焼却します。",
+          integrity: "91.6%",
+          drift: "0.44",
+          chain: "焼却"
+        },
+        seal: {
+          code: "SK-SEAL",
+          title: "人格封印イベント",
+          text: "生存断片は、生体証人、冷却クォーラム、取締役会耐性のある監査痕跡の背後に、解放承認までロックされます。",
+          integrity: "98.3%",
+          drift: "0.08",
+          chain: "クォーラム"
+        }
+      }
+    },
     vault: {
       aria: "軌道保管庫アレイコンソール",
       eyebrow: "軌道保管庫アレイ",
@@ -2484,6 +2588,13 @@ const mikoshiText = document.querySelector("[data-mikoshi-text]");
 const mikoshiIntegrity = document.querySelector("[data-mikoshi-integrity]");
 const mikoshiWitness = document.querySelector("[data-mikoshi-witness]");
 const mikoshiContinuity = document.querySelector("[data-mikoshi-continuity]");
+const soulkillerStageButtons = document.querySelectorAll("[data-soulkiller-stage]");
+const soulkillerCode = document.querySelector("[data-soulkiller-code]");
+const soulkillerTitle = document.querySelector("[data-soulkiller-title]");
+const soulkillerText = document.querySelector("[data-soulkiller-text]");
+const soulkillerIntegrity = document.querySelector("[data-soulkiller-integrity]");
+const soulkillerDrift = document.querySelector("[data-soulkiller-drift]");
+const soulkillerChain = document.querySelector("[data-soulkiller-chain]");
 const vaultTierButtons = document.querySelectorAll("[data-vault-tier]");
 const vaultCode = document.querySelector("[data-vault-code]");
 const vaultTitle = document.querySelector("[data-vault-title]");
@@ -2540,6 +2651,7 @@ let activeStackLayer = "body";
 let activeMatrixMode = "intrusion";
 let activeArchiveRecord = "relic";
 let activeMikoshiMode = "extract";
+let activeSoulkillerStage = "sever";
 let activeVaultTier = "memory";
 let activeCustodyInstrument = "engram";
 let activeCapitalMode = "signal";
@@ -2557,6 +2669,7 @@ const sectionLabelKeys = {
   stack: "nav.stack",
   archive: "nav.archive",
   mikoshi: "nav.mikoshi",
+  soulkiller: "nav.soulkiller",
   vault: "nav.vault",
   custody: "nav.custody",
   exchange: "nav.exchange",
@@ -2647,6 +2760,7 @@ function setLanguage(language) {
   updateMatrix(activeMatrixMode);
   updateArchive(activeArchiveRecord);
   updateMikoshiMode(activeMikoshiMode);
+  updateSoulkillerStage(activeSoulkillerStage);
   updateVaultTier(activeVaultTier);
   updateCustody(activeCustodyInstrument);
   updateCapitalMode(activeCapitalMode);
@@ -3050,6 +3164,27 @@ function updateMikoshiMode(modeKey) {
   if (mikoshiIntegrity) mikoshiIntegrity.textContent = detail.integrity;
   if (mikoshiWitness) mikoshiWitness.textContent = detail.witness;
   if (mikoshiContinuity) mikoshiContinuity.textContent = detail.continuity;
+}
+
+function updateSoulkillerStage(stageKey) {
+  if (!soulkillerTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.soulkiller.detail[stageKey] || dictionary.soulkiller.detail.sever;
+  activeSoulkillerStage = stageKey;
+
+  soulkillerStageButtons.forEach((button) => {
+    const isActive = button.dataset.soulkillerStage === stageKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (soulkillerCode) soulkillerCode.textContent = detail.code;
+  soulkillerTitle.textContent = detail.title;
+  if (soulkillerText) soulkillerText.textContent = detail.text;
+  if (soulkillerIntegrity) soulkillerIntegrity.textContent = detail.integrity;
+  if (soulkillerDrift) soulkillerDrift.textContent = detail.drift;
+  if (soulkillerChain) soulkillerChain.textContent = detail.chain;
 }
 
 function updateVaultTier(tierKey) {
@@ -3541,6 +3676,18 @@ mikoshiModeButtons.forEach((button) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       updateMikoshiMode(button.dataset.mikoshiMode);
+    }
+  });
+});
+
+soulkillerStageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateSoulkillerStage(button.dataset.soulkillerStage);
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      updateSoulkillerStage(button.dataset.soulkillerStage);
     }
   });
 });
