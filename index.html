@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en" data-language="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Arasaka Corporation neural security, autonomous defense, and cybernetic capital systems portal."
+    >
+    <meta name="theme-color" content="#050507">
+    <title>Arasaka Corporation | 荒坂株式会社</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/hero-headquarters.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="boot-sequence" data-boot-sequence aria-hidden="true">
+      <div class="boot-panel">
+        <div class="boot-mark">
+          <span></span>
+          <strong>A</strong>
+        </div>
+        <div class="boot-copy">
+          <span data-i18n="boot.kicker">荒坂株式会社 Public Node</span>
+          <strong data-i18n="boot.title">Identity Handshake</strong>
+          <p data-i18n="boot.text">Neural custody layer online. Corporate perimeter accepting public signal.</p>
+        </div>
+        <div class="boot-progress">
+          <i></i>
+        </div>
+      </div>
+    </div>
+    <div class="cursor-reticle" data-cursor-reticle aria-hidden="true">
+      <span></span>
+      <span></span>
+    </div>
+    <canvas class="signal-weather" data-signal-weather aria-hidden="true"></canvas>
+    <aside class="signal-spine" aria-hidden="true">
+      <div class="spine-status">
+        <span data-i18n="spine.node">Public Node</span>
+        <strong>AA-90</strong>
+      </div>
+      <div class="spine-track">
+        <i data-spine-meter></i>
+      </div>
+      <div class="spine-depth">
+        <span data-i18n="spine.depth">Scroll Depth</span>
+        <strong data-spine-progress>00%</strong>
+      </div>
+      <div class="spine-layer">
+        <span data-i18n="spine.layer">Active Layer</span>
+        <strong data-spine-current>Boot</strong>
+      </div>
+      <div class="spine-relays">
+        <span data-i18n="spine.tokyo">Tokyo Root</span>
+        <span data-i18n="spine.night">NC Relay</span>
+        <span data-i18n="spine.orbit">Orbital Cold</span>
+      </div>
+    </aside>
+    <aside class="public-node-dock" data-node-dock aria-label="Public node signal dock" data-i18n-aria-label="dock.aria">
+      <button
+        class="node-dock-toggle"
+        type="button"
+        data-node-dock-toggle
+        data-i18n-aria-label="dock.collapse"
+        aria-label="Collapse public node dock"
+        aria-expanded="true"
+      >
+        <span data-dock-toggle-glyph>−</span>
+      </button>
+      <div class="node-dock-status">
+        <span data-i18n="dock.eyebrow">Public Node</span>
+        <strong data-dock-code>NC-WATCH</strong>
+      </div>
+      <div class="node-dock-copy">
+        <span data-i18n="dock.active">Active Signal</span>
+        <strong data-dock-title>Neural Custody Watch</strong>
+        <p data-dock-text>Biometric escrow, engram drift, and executive continuity signals are being mirrored into the public perimeter.</p>
+      </div>
+      <div class="node-dock-modes" role="group" aria-label="Public node mode" data-i18n-aria-label="dock.modeAria">
+        <button class="node-dock-mode is-active" type="button" data-dock-mode="custody" aria-pressed="true">
+          <span data-i18n="dock.mode.custody">Custody</span>
+        </button>
+        <button class="node-dock-mode" type="button" data-dock-mode="blackwall" aria-pressed="false">
+          <span data-i18n="dock.mode.blackwall">Blackwall</span>
+        </button>
+        <button class="node-dock-mode" type="button" data-dock-mode="capital" aria-pressed="false">
+          <span data-i18n="dock.mode.capital">Capital</span>
+        </button>
+        <button class="node-dock-mode node-dock-mode-ghost" type="button" data-dock-mode="relay" aria-pressed="false">
+          <span data-i18n="dock.mode.relay">Relay</span>
+        </button>
+      </div>
+      <dl class="node-dock-readouts">
+        <div>
+          <dt data-i18n="dock.integrity">Integrity</dt>
+          <dd data-dock-primary>99.1%</dd>
+        </div>
+        <div>
+          <dt data-i18n="dock.heat">Heat</dt>
+          <dd data-dock-secondary>LOW</dd>
+        </div>
+        <div>
+          <dt data-i18n="dock.trace">Trace</dt>
+          <dd data-dock-tertiary>0xA0</dd>
+        </div>
+      </dl>
+    </aside>
+
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Arasaka Corporation home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">ARASAKA</span>
+          <span class="brand-sub">荒坂株式会社</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Site">
+        <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
+        <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
+        <a href="#systems" data-i18n="nav.systems">Systems</a>
+        <a href="#ice" data-i18n="nav.ice">ICE</a>
+        <a href="#swarm" data-i18n="nav.swarm">Swarm</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#archive" data-i18n="nav.archive">Relic</a>
+        <a href="#vault" data-i18n="nav.vault">Vault</a>
+        <a href="#custody" data-i18n="nav.custody">Custody</a>
+        <a href="#grid" data-i18n="nav.grid">Grid</a>
+        <a href="#topology" data-i18n="nav.topology">Topology</a>
+        <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
+        <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
+        <a href="#dossier" data-i18n="nav.dossier">Dossier</a>
+        <a href="#operations" data-i18n="nav.operations">Operations</a>
+        <a href="#governance" data-i18n="nav.governance">Governance</a>
+        <a href="#careers" data-i18n="nav.careers">Careers</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          data-i18n-aria-label="menu.open"
+          aria-label="Open systems menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="locale-control" role="group" aria-label="Language">
+          <button class="locale-button is-active" type="button" data-language-option="en" aria-pressed="true">EN</button>
+          <button class="locale-button" type="button" data-language-option="ja" aria-pressed="false">日本語</button>
+        </div>
+        <a class="access-link" href="#contact" data-i18n="header.access">Protected Access</a>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" data-mobile-nav hidden aria-label="Mobile site">
+      <a href="#top" data-i18n="nav.home">Home</a>
+      <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
+      <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
+      <a href="#systems" data-i18n="nav.systems">Systems</a>
+      <a href="#ice" data-i18n="nav.ice">ICE</a>
+      <a href="#swarm" data-i18n="nav.swarm">Swarm</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#archive" data-i18n="nav.archive">Relic</a>
+      <a href="#vault" data-i18n="nav.vault">Vault</a>
+      <a href="#custody" data-i18n="nav.custody">Custody</a>
+      <a href="#grid" data-i18n="nav.grid">Grid</a>
+      <a href="#topology" data-i18n="nav.topology">Topology</a>
+      <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
+      <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
+      <a href="#dossier" data-i18n="nav.dossier">Dossier</a>
+      <a href="#operations" data-i18n="nav.operations">Operations</a>
+      <a href="#governance" data-i18n="nav.governance">Governance</a>
+      <a href="#careers" data-i18n="nav.careers">Careers</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <canvas class="hero-signal-canvas" id="hero-signal-canvas" width="1440" height="900" aria-hidden="true"></canvas>
+        <div class="hero-scanline" aria-hidden="true"></div>
+
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">荒坂株式会社 | Neural Security / Autonomous Defense / Capital Systems</p>
+            <h1 id="hero-title" data-i18n="hero.title">Secure the Future Before It Boots.</h1>
+            <p class="hero-text" data-i18n="hero.text">
+              Arasaka engineers the invisible layer beneath sovereign capital: neural custody, autonomous protection, synthetic intelligence containment, and city-scale continuity for clients operating beyond ordinary law.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#contact">
+                <span data-i18n="hero.ctaPrimary">Request Black Ledger Access</span>
+                <span class="button-icon" aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-secondary" href="#divisions">
+                <span data-i18n="hero.ctaSecondary">Enter Systems Layer</span>
+                <span class="button-icon" aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-intel" aria-label="Corporate status">
+            <div class="hero-ledger">
+              <div class="ledger-heading">
+                <span data-i18n="ledger.title">Corporate Registry</span>
+                <strong>SECURE</strong>
+              </div>
+              <dl>
+                <div>
+                  <dt data-i18n="ledger.founded">Founded</dt>
+                  <dd>1915</dd>
+                </div>
+                <div>
+                  <dt data-i18n="ledger.headquarters">Headquarters</dt>
+                  <dd data-i18n="ledger.tokyo">Tokyo, Japan</dd>
+                </div>
+                <div>
+                  <dt data-i18n="ledger.theaters">Active Theaters</dt>
+                  <dd>64</dd>
+                </div>
+                <div>
+                  <dt data-i18n="ledger.clearance">Public Clearance</dt>
+                  <dd>AA-90</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="neural-core" aria-label="Core diagnostics" data-i18n-aria-label="hero.diagnostics.region">
+              <div class="core-rings">
+                <span></span>
+                <span></span>
+                <strong>A</strong>
+              </div>
+
+              <div class="core-panel">
+                <div class="core-readouts">
+                  <div class="core-readout">
+                    <span data-core-primary-label>RELIC CUSTODY</span>
+                    <strong data-core-primary-value>98.74%</strong>
+                  </div>
+                  <div class="core-readout">
+                    <span data-core-secondary-label>MIKOSHI GATE</span>
+                    <strong data-core-secondary-value>COLD</strong>
+                  </div>
+                </div>
+                <div class="core-modes" role="group" aria-label="Diagnostic layer" data-i18n-aria-label="hero.diagnostics.aria">
+                  <button class="core-mode is-active" type="button" data-hero-diagnostic="relic" aria-pressed="true">
+                    <span data-i18n="hero.diagnostics.mode.relic">Relic</span>
+                  </button>
+                  <button class="core-mode" type="button" data-hero-diagnostic="blackwall" aria-pressed="false">
+                    <span data-i18n="hero.diagnostics.mode.blackwall">Blackwall</span>
+                  </button>
+                  <button class="core-mode" type="button" data-hero-diagnostic="ledger" aria-pressed="false">
+                    <span data-i18n="hero.diagnostics.mode.ledger">Ledger</span>
+                  </button>
+                  <button class="core-mode" type="button" data-hero-diagnostic="drone" aria-pressed="false">
+                    <span data-i18n="hero.diagnostics.mode.drone">Drone</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="status-rail" aria-label="Network status">
+        <div>
+          <span data-i18n="status.tokyo">Tokyo HQ</span>
+          <strong data-time-zone="Asia/Tokyo">--:--</strong>
+        </div>
+        <div>
+          <span data-i18n="status.nightCity">Night City Relay</span>
+          <strong data-time-zone="America/Los_Angeles">--:--</strong>
+        </div>
+        <div>
+          <span data-i18n="status.securityIndex">Private Security Index</span>
+          <strong data-i18n="status.stable">Stable</strong>
+        </div>
+        <div>
+          <span data-i18n="status.market">Banking Session</span>
+          <strong data-i18n="status.active">Active</strong>
+        </div>
+      </section>
+
+      <section class="section megacity-section" id="grid" aria-label="Megacity control grid" data-i18n-aria-label="megacity.aria">
+        <div class="megacity-copy">
+          <p class="eyebrow" data-i18n="megacity.eyebrow">Megacity Grid</p>
+          <h2 data-i18n="megacity.title">A city becomes an instrument when every street can answer command.</h2>
+          <p data-i18n="megacity.text">
+            Arasaka infrastructure binds private security, cyberware clinics, drone corridors, data centers, and capital gates into one municipal operating surface.
+          </p>
+        </div>
+
+        <div class="megacity-console">
+          <div class="megacity-map" role="group" aria-label="Megacity district" data-i18n-aria-label="megacity.modeAria">
+            <button class="city-district district-plaza is-active" type="button" data-city-district="plaza" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="megacity.district.plaza">Corporate Plaza</strong>
+            </button>
+            <button class="city-district district-bay" type="button" data-city-district="bay" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="megacity.district.bay">Port Authority</strong>
+            </button>
+            <button class="city-district district-underrail" type="button" data-city-district="underrail" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="megacity.district.underrail">Underrail Market</strong>
+            </button>
+            <button class="city-district district-orbit" type="button" data-city-district="orbit" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="megacity.district.orbit">Orbital Uplink</strong>
+            </button>
+            <div class="city-sigil" aria-hidden="true">
+              <span></span>
+              <strong data-city-code>NC-PLAZA</strong>
+            </div>
+          </div>
+
+          <aside class="megacity-readout">
+            <span data-i18n="megacity.active">Active District Layer</span>
+            <h3 data-city-title>Corporate Plaza Perimeter</h3>
+            <p data-city-text>Executive elevators, biometric turnstiles, armored reception, and public myth are resolved through one command gate.</p>
+            <dl>
+              <div>
+                <dt data-i18n="megacity.response">Response</dt>
+                <dd data-city-response>0.8s</dd>
+              </div>
+              <div>
+                <dt data-i18n="megacity.coverage">Coverage</dt>
+                <dd data-city-coverage>99.2%</dd>
+              </div>
+              <div>
+                <dt data-i18n="megacity.density">Signal Density</dt>
+                <dd data-city-density>HIGH</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <div class="megacity-feed" aria-hidden="true">
+            <span>DRONE ROUTE / GREEN</span>
+            <span>CLINIC NODE / LOCKED</span>
+            <span>CAPITAL GATE / COLD</span>
+            <span>PUBLIC SIGNAL / CLEAN</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="command-ribbon" aria-label="Corporate command ribbon" data-i18n-aria-label="command.aria">
+        <div class="command-ribbon-header">
+          <span data-i18n="command.eyebrow">Command Ribbon</span>
+          <strong data-command-code>TKY-ROOT</strong>
+        </div>
+        <div class="command-nodes" role="group" aria-label="Command node" data-i18n-aria-label="command.nodeAria">
+          <button class="command-node is-active" type="button" data-command-node="tokyo" aria-pressed="true">
+            <span>01</span>
+            <strong data-i18n="command.node.tokyo">Tokyo Root</strong>
+          </button>
+          <button class="command-node" type="button" data-command-node="night" aria-pressed="false">
+            <span>02</span>
+            <strong data-i18n="command.node.night">Night City</strong>
+          </button>
+          <button class="command-node" type="button" data-command-node="orbit" aria-pressed="false">
+            <span>03</span>
+            <strong data-i18n="command.node.orbit">Orbital Cold</strong>
+          </button>
+          <button class="command-node command-node-ghost" type="button" data-command-node="ghost" aria-pressed="false">
+            <span>04</span>
+            <strong data-i18n="command.node.ghost">Ghost Relay</strong>
+          </button>
+        </div>
+        <div class="command-readout">
+          <span data-i18n="command.active">Active Command Surface</span>
+          <h2 data-command-title>Tokyo Root Authority</h2>
+          <p data-command-text>Family command, public registry, and neural custody policy resolve through the primary corporate root.</p>
+        </div>
+        <dl class="command-telemetry" aria-label="Command telemetry">
+          <div>
+            <dt data-i18n="command.sync">Sync</dt>
+            <dd data-command-sync>99.4%</dd>
+          </div>
+          <div>
+            <dt data-i18n="command.risk">Risk</dt>
+            <dd data-command-risk>0.08</dd>
+          </div>
+          <div>
+            <dt data-i18n="command.trace">Trace</dt>
+            <dd data-command-trace>0xA9</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="protocol-band" aria-label="Public protocol feed">
+        <div class="protocol-copy">
+          <p class="eyebrow" data-i18n="protocol.eyebrow">Public Protocol Feed</p>
+          <h2 data-i18n="protocol.title">A controlled leak from the corporate operating system.</h2>
+        </div>
+
+        <div class="protocol-stack">
+          <div class="protocol-stream" aria-hidden="true">
+            <div class="protocol-line">
+              <span>ARSK://MIKOSHI-COLD // ENGRAM HASH SEALED // RELAY 09-A</span>
+              <span>BLACK-LEDGER SETTLEMENT // VAULT PATH VERIFIED // ORB-12</span>
+              <span>DRONE SWARM HANDSHAKE // HUMAN AUTH CHAIN INTACT</span>
+              <span>ARSK://MIKOSHI-COLD // ENGRAM HASH SEALED // RELAY 09-A</span>
+              <span>BLACK-LEDGER SETTLEMENT // VAULT PATH VERIFIED // ORB-12</span>
+              <span>DRONE SWARM HANDSHAKE // HUMAN AUTH CHAIN INTACT</span>
+            </div>
+            <div class="protocol-line protocol-line-alt">
+              <span>NEUROPRINT MATCH // PLAZA GATE CLEAN // ICE RESPONSE IDLE</span>
+              <span>MEMETIC RISK LOW // SOCIAL GRAPH QUARANTINE COMPLETE</span>
+              <span>CAPITAL ROUTE RECOMPUTED // SOVEREIGN NODE GREEN</span>
+              <span>NEUROPRINT MATCH // PLAZA GATE CLEAN // ICE RESPONSE IDLE</span>
+              <span>MEMETIC RISK LOW // SOCIAL GRAPH QUARANTINE COMPLETE</span>
+              <span>CAPITAL ROUTE RECOMPUTED // SOVEREIGN NODE GREEN</span>
+            </div>
+          </div>
+
+          <div class="protocol-console">
+            <div class="protocol-modes" role="group" aria-label="Protocol layer" data-i18n-aria-label="protocol.modeAria">
+              <button class="protocol-mode is-active" type="button" data-protocol-mode="neural" aria-pressed="true">
+                <span data-i18n="protocol.mode.neural">Neural</span>
+              </button>
+              <button class="protocol-mode" type="button" data-protocol-mode="ice" aria-pressed="false">
+                <span data-i18n="protocol.mode.ice">Black ICE</span>
+              </button>
+              <button class="protocol-mode" type="button" data-protocol-mode="ledger" aria-pressed="false">
+                <span data-i18n="protocol.mode.ledger">Ledger</span>
+              </button>
+              <button class="protocol-mode" type="button" data-protocol-mode="drone" aria-pressed="false">
+                <span data-i18n="protocol.mode.drone">Drone</span>
+              </button>
+            </div>
+            <div class="protocol-readout">
+              <span data-i18n="protocol.activeLayer">Active Protocol</span>
+              <strong data-protocol-title>Neural Custody Handshake</strong>
+              <p data-protocol-text>Neuroprint hashes are matched against sealed engram custody without exposing biological keys.</p>
+              <div class="protocol-readout-meta">
+                <span data-protocol-code>NC-19</span>
+                <span data-protocol-state>COLD SYNC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="protocol-metrics" aria-label="Telemetry metrics">
+          <div>
+            <span data-i18n="protocol.metric1">Neural Latency</span>
+            <strong data-telemetry="latency">--</strong>
+          </div>
+          <div>
+            <span data-i18n="protocol.metric2">Packet Cipher</span>
+            <strong data-telemetry="cipher">--</strong>
+          </div>
+          <div>
+            <span data-i18n="protocol.metric3">Escrow Pulse</span>
+            <strong data-telemetry="pulse">--</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="divisions">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="divisions.eyebrow">Divisions</p>
+          <h2 data-i18n="divisions.title">Cybernetic infrastructure for people who own the future.</h2>
+          <p data-i18n="divisions.text">
+            Arasaka unifies body, network, weapon, and balance sheet into a single protected operating system. Our clients do not outsource risk. They acquire control.
+          </p>
+        </div>
+
+        <div class="division-grid">
+          <article class="division-card">
+            <span class="card-index">01</span>
+            <h3 data-i18n="division.security.title">Autonomous Security</h3>
+            <p data-i18n="division.security.text">Predictive threat scoring, drone overwatch, executive extraction, and response teams synchronized to city surveillance feeds.</p>
+          </article>
+          <article class="division-card">
+            <span class="card-index">02</span>
+            <h3 data-i18n="division.banking.title">Black Ledger Banking</h3>
+            <p data-i18n="division.banking.text">Private capital rails, sovereign custody, dark-pool settlement, and asset continuity for founders, families, and states.</p>
+          </article>
+          <article class="division-card">
+            <span class="card-index">03</span>
+            <h3 data-i18n="division.manufacturing.title">Cyberware Platforms</h3>
+            <p data-i18n="division.manufacturing.text">Neural ports, combat prosthetics, sensory overlays, and secure implants manufactured for sanctioned operators.</p>
+          </article>
+          <article class="division-card">
+            <span class="card-index">04</span>
+            <h3 data-i18n="division.intelligence.title">Netrunner Intelligence</h3>
+            <p data-i18n="division.intelligence.text">Black ICE, memetic risk analysis, executive memory defense, and hostile AI containment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section foundry-section" id="foundry">
+        <div class="foundry-copy">
+          <p class="eyebrow" data-i18n="foundry.eyebrow">Cyberware Foundry</p>
+          <h2 data-i18n="foundry.title">Hardware for bodies that operate like institutions.</h2>
+          <p data-i18n="foundry.text">
+            Arasaka cyberware is not consumer augmentation. It is sovereign hardware: implants, reflex loops, identity anchors, and sealed biometric firmware manufactured for people whose bodies are strategic assets.
+          </p>
+        </div>
+
+        <div class="foundry-console" aria-label="Cyberware foundry console" data-i18n-aria-label="foundry.aria">
+          <div class="foundry-media">
+            <img
+              src="assets/cyberware-foundry.png"
+              alt="Arasaka cyberware foundry with neural implant diagnostics and robotic assembly arms"
+              loading="lazy"
+            >
+            <div class="foundry-overlay" aria-hidden="true">
+              <span>IMPLANT BUS // CLEAN</span>
+              <span>NEUROPRINT // SEALED</span>
+              <span>HUMAN COMMAND // REQUIRED</span>
+            </div>
+          </div>
+
+          <div class="foundry-controls" role="group" aria-label="Cyberware platform" data-i18n-aria-label="foundry.platformAria">
+            <button class="foundry-platform is-active" type="button" data-foundry-platform="spine" aria-pressed="true">
+              <span>SP-19</span>
+              <strong data-i18n="foundry.platform.spine">Spinal Bus</strong>
+            </button>
+            <button class="foundry-platform" type="button" data-foundry-platform="optic" aria-pressed="false">
+              <span>OP-44</span>
+              <strong data-i18n="foundry.platform.optic">Optic Crown</strong>
+            </button>
+            <button class="foundry-platform" type="button" data-foundry-platform="reflex" aria-pressed="false">
+              <span>RX-08</span>
+              <strong data-i18n="foundry.platform.reflex">Reflex Governor</strong>
+            </button>
+            <button class="foundry-platform" type="button" data-foundry-platform="dermal" aria-pressed="false">
+              <span>DM-31</span>
+              <strong data-i18n="foundry.platform.dermal">Dermal Lattice</strong>
+            </button>
+          </div>
+
+          <aside class="foundry-readout">
+            <span data-i18n="foundry.active">Selected Platform</span>
+            <strong data-foundry-code>SP-19</strong>
+            <h3 data-foundry-title>Spinal Command Bus</h3>
+            <p data-foundry-text>Low-latency neural routing for command authority, threat reflex, and memory escrow handshake.</p>
+            <dl>
+              <div>
+                <dt data-i18n="foundry.metricLatency">Latency</dt>
+                <dd data-foundry-latency>1.6ms</dd>
+              </div>
+              <div>
+                <dt data-i18n="foundry.metricYield">Yield</dt>
+                <dd data-foundry-yield>98.2%</dd>
+              </div>
+              <div>
+                <dt data-i18n="foundry.metricLock">Lock</dt>
+                <dd data-foundry-lock>BIOMETRIC</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section systems-section" id="systems">
+        <div class="systems-copy">
+          <p class="eyebrow" data-i18n="systems.eyebrow">Secure Systems</p>
+          <h2 data-i18n="systems.title">The corporation as a nervous system.</h2>
+          <p data-i18n="systems.text">
+            Every Arasaka deployment is built as a closed loop: sensing, prediction, force, finance, and reputation all routed through hardened decision engines.
+          </p>
+        </div>
+        <div class="systems-console" aria-label="Secure systems modules" data-i18n-aria-label="systems.aria">
+          <article class="is-active" role="button" tabindex="0" data-system-module="neural" aria-pressed="true">
+            <span>SYNC-01</span>
+            <h3 data-i18n="systems.neural.title">Neural Escrow</h3>
+            <p data-i18n="systems.neural.text">Encrypted engram custody and executive continuity protocols for high-value minds.</p>
+          </article>
+          <article role="button" tabindex="0" data-system-module="ice" aria-pressed="false">
+            <span>ICE-77</span>
+            <h3 data-i18n="systems.ice.title">Black ICE Mesh</h3>
+            <p data-i18n="systems.ice.text">Adaptive counterintrusion fields trained on hostile netrunner signatures.</p>
+          </article>
+          <article role="button" tabindex="0" data-system-module="orbital" aria-pressed="false">
+            <span>ORB-12</span>
+            <h3 data-i18n="systems.orbital.title">Orbital Vault</h3>
+            <p data-i18n="systems.orbital.text">Redundant off-world custody for keys, contracts, patents, and strategic leverage.</p>
+          </article>
+          <article role="button" tabindex="0" data-system-module="memetic" aria-pressed="false">
+            <span>MEM-09</span>
+            <h3 data-i18n="systems.memetic.title">Memetic Defense</h3>
+            <p data-i18n="systems.memetic.text">Narrative risk mapping across media markets, creator networks, and adversarial social graph events.</p>
+          </article>
+          <div class="systems-orchestrator">
+            <span data-i18n="systems.activeModule">Active Module</span>
+            <strong data-system-code>SYNC-01</strong>
+            <h3 data-system-title>Neural Escrow</h3>
+            <p data-system-text>Encrypted engram custody and executive continuity protocols for high-value minds.</p>
+            <dl>
+              <div>
+                <dt data-i18n="systems.latency">Latency</dt>
+                <dd data-system-latency>2.8ms</dd>
+              </div>
+              <div>
+                <dt data-i18n="systems.integrity">Integrity</dt>
+                <dd data-system-integrity>99.8%</dd>
+              </div>
+              <div>
+                <dt data-i18n="systems.exposure">Exposure</dt>
+                <dd data-system-exposure>0.02</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ice-section" id="ice">
+        <div class="ice-copy">
+          <p class="eyebrow" data-i18n="ice.eyebrow">Black ICE Crucible</p>
+          <h2 data-i18n="ice.title">Intrusion becomes evidence before it becomes damage.</h2>
+          <p data-i18n="ice.text">
+            Arasaka counterintrusion chambers mirror hostile netrunner intent, burn exploit paths, and preserve a human-readable chain of force before the attacker reaches memory, markets, or implants.
+          </p>
+        </div>
+
+        <div class="ice-console" aria-label="Black ICE counterintrusion console" data-i18n-aria-label="ice.aria">
+          <div class="ice-core" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong data-ice-code>RUNNER-BAIT</strong>
+          </div>
+
+          <div class="ice-vectors" role="group" aria-label="Intrusion vector" data-i18n-aria-label="ice.vectorAria">
+            <button class="ice-vector is-active" type="button" data-ice-vector="runner" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="ice.vector.runner">Netrunner Ghost</strong>
+            </button>
+            <button class="ice-vector" type="button" data-ice-vector="implant" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="ice.vector.implant">Implant Fork</strong>
+            </button>
+            <button class="ice-vector" type="button" data-ice-vector="market" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="ice.vector.market">Market Poison</strong>
+            </button>
+            <button class="ice-vector" type="button" data-ice-vector="rogue" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="ice.vector.rogue">Rogue AI Bloom</strong>
+            </button>
+          </div>
+
+          <aside class="ice-readout">
+            <span data-i18n="ice.active">Active Countermeasure</span>
+            <h3 data-ice-title>Ghost Runner Honeypot</h3>
+            <p data-ice-text>False executive credentials lure the runner into a mirrored chamber where every exploit becomes signed evidence.</p>
+            <dl>
+              <div>
+                <dt data-i18n="ice.burn">Burn Rate</dt>
+                <dd data-ice-burn>87%</dd>
+              </div>
+              <div>
+                <dt data-i18n="ice.quarantine">Quarantine</dt>
+                <dd data-ice-quarantine>SEALED</dd>
+              </div>
+              <div>
+                <dt data-i18n="ice.witness">Witness Chain</dt>
+                <dd data-ice-witness>HUMAN</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section swarm-section" id="swarm">
+        <div class="swarm-copy">
+          <p class="eyebrow" data-i18n="swarm.eyebrow">Autonomous Defense Swarm</p>
+          <h2 data-i18n="swarm.title">Force is deployed as geometry before it becomes violence.</h2>
+          <p data-i18n="swarm.text">
+            Arasaka drone formations translate command authority into visible deterrence: extraction corridors, counter-sniper veils, executive overwatch, and human-confirmed escalation held in one tactical mesh.
+          </p>
+        </div>
+
+        <div class="swarm-console" aria-label="Autonomous defense swarm console" data-i18n-aria-label="swarm.aria">
+          <div class="swarm-sky" aria-hidden="true">
+            <span class="swarm-unit unit-a"></span>
+            <span class="swarm-unit unit-b"></span>
+            <span class="swarm-unit unit-c"></span>
+            <span class="swarm-unit unit-d"></span>
+            <span class="swarm-unit unit-e"></span>
+            <strong data-swarm-code>VEIL-09</strong>
+          </div>
+
+          <div class="swarm-formations" role="group" aria-label="Swarm formation" data-i18n-aria-label="swarm.modeAria">
+            <button class="swarm-mode is-active" type="button" data-swarm-mode="veil" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="swarm.mode.veil">Executive Veil</strong>
+            </button>
+            <button class="swarm-mode" type="button" data-swarm-mode="corridor" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="swarm.mode.corridor">Extraction Corridor</strong>
+            </button>
+            <button class="swarm-mode" type="button" data-swarm-mode="sentinel" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="swarm.mode.sentinel">Sentinel Ring</strong>
+            </button>
+            <button class="swarm-mode" type="button" data-swarm-mode="silence" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="swarm.mode.silence">Silent Bloom</strong>
+            </button>
+          </div>
+
+          <aside class="swarm-readout">
+            <span data-i18n="swarm.active">Active Formation</span>
+            <h3 data-swarm-title>Executive Veil Pattern</h3>
+            <p data-swarm-text>Microdrones form a visible deterrence veil around the principal while lidar ghosts mask the true extraction vector.</p>
+            <dl>
+              <div>
+                <dt data-i18n="swarm.units">Units</dt>
+                <dd data-swarm-units>48</dd>
+              </div>
+              <div>
+                <dt data-i18n="swarm.response">Response</dt>
+                <dd data-swarm-response>0.9s</dd>
+              </div>
+              <div>
+                <dt data-i18n="swarm.authority">Authority</dt>
+                <dd data-swarm-authority>HUMAN</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="stack-copy">
+          <p class="eyebrow" data-i18n="stack.eyebrow">Sovereign Stack</p>
+          <h2 data-i18n="stack.title">The client is not protected by a perimeter. The client becomes one.</h2>
+          <p data-i18n="stack.text">
+            Arasaka deployments bind cyberware, memory custody, network defense, capital routing, and autonomous force into a single operating envelope.
+          </p>
+        </div>
+
+        <div class="stack-shell" aria-label="Sovereign technology stack" data-i18n-aria-label="stack.aria">
+          <article class="stack-layer layer-body is-active" role="button" tabindex="0" data-stack-layer="body" aria-pressed="true">
+            <span>01 // BODY</span>
+            <h3 data-i18n="stack.body.title">Implant Sovereignty</h3>
+            <p data-i18n="stack.body.text">Neural ports, reflex governors, biometric locks, and prosthetic identity anchors.</p>
+          </article>
+          <article class="stack-layer layer-memory" role="button" tabindex="0" data-stack-layer="memory" aria-pressed="false">
+            <span>02 // MEMORY</span>
+            <h3 data-i18n="stack.memory.title">Engram Continuity</h3>
+            <p data-i18n="stack.memory.text">Cold-storage persona escrow, succession locks, and hostile memory extraction defense.</p>
+          </article>
+          <article class="stack-layer layer-network" role="button" tabindex="0" data-stack-layer="network" aria-pressed="false">
+            <span>03 // NETWORK</span>
+            <h3 data-i18n="stack.network.title">Blackwall Posture</h3>
+            <p data-i18n="stack.network.text">Counter-AI segmentation, Black ICE mesh routing, and zero-trust executive surfaces.</p>
+          </article>
+          <article class="stack-layer layer-capital" role="button" tabindex="0" data-stack-layer="capital" aria-pressed="false">
+            <span>04 // CAPITAL</span>
+            <h3 data-i18n="stack.capital.title">Ledger Immunity</h3>
+            <p data-i18n="stack.capital.text">Sovereign accounts, dark settlement paths, and collateral that survives jurisdictional shock.</p>
+          </article>
+          <article class="stack-layer layer-force" role="button" tabindex="0" data-stack-layer="force" aria-pressed="false">
+            <span>05 // FORCE</span>
+            <h3 data-i18n="stack.force.title">Autonomous Deterrence</h3>
+            <p data-i18n="stack.force.text">Drone overwatch, rapid extraction, and kinetic authorization loops with human command.</p>
+          </article>
+        </div>
+
+        <aside class="stack-core" aria-label="Sovereign stack core" data-i18n-aria-label="stack.coreAria">
+          <div class="stack-axis">
+            <span class="is-active" data-stack-axis="body">BODY</span>
+            <span data-stack-axis="memory">MEMORY</span>
+            <span data-stack-axis="network">NET</span>
+            <span data-stack-axis="capital">CAPITAL</span>
+            <span data-stack-axis="force">FORCE</span>
+          </div>
+          <div class="stack-sigil">A</div>
+          <div class="stack-readout">
+            <span data-i18n="stack.activeLayer">Active Layer</span>
+            <strong data-stack-code>BODY-01</strong>
+            <h3 data-stack-title>Implant Sovereignty</h3>
+            <p data-stack-text>Neural ports, reflex governors, biometric locks, and prosthetic identity anchors.</p>
+            <dl>
+              <div>
+                <dt data-i18n="stack.posture">Posture</dt>
+                <dd data-stack-posture>LOCKED</dd>
+              </div>
+              <div>
+                <dt data-i18n="stack.directive">Directive</dt>
+                <dd data-stack-directive>ANCHOR</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="stack-checks">
+            <span>IDENTITY SEALED</span>
+            <span>ESCROW COLD</span>
+            <span>RESPONSE HOT</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section archive-section" id="archive">
+        <div class="archive-copy">
+          <p class="eyebrow" data-i18n="archive.eyebrow">Relic Archive</p>
+          <h2 data-i18n="archive.title">Memory is a jurisdiction when the body becomes optional.</h2>
+          <p data-i18n="archive.text">
+            Arasaka archive systems treat engrams as protected instruments: hashed, partitioned, time-locked, and recoverable only through biometric command chains.
+          </p>
+        </div>
+
+        <div class="archive-console" aria-label="Relic archive console">
+          <div class="archive-tabs" role="group" aria-label="Archive record">
+            <button class="archive-tab is-active" type="button" data-archive-record="relic" aria-pressed="true">
+              <span>MK-09</span>
+              <strong data-i18n="archive.record.relic.tab">Relic Vault</strong>
+            </button>
+            <button class="archive-tab" type="button" data-archive-record="persona" aria-pressed="false">
+              <span>PS-13</span>
+              <strong data-i18n="archive.record.persona.tab">Persona Fork</strong>
+            </button>
+            <button class="archive-tab" type="button" data-archive-record="succession" aria-pressed="false">
+              <span>SC-04</span>
+              <strong data-i18n="archive.record.succession.tab">Succession Lock</strong>
+            </button>
+          </div>
+
+          <div class="archive-display">
+            <div class="archive-core" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <strong data-archive-code>MK-09</strong>
+            </div>
+            <div class="archive-readout">
+              <span data-i18n="archive.selected">Selected Memory Instrument</span>
+              <h3 data-archive-title>Relic Vault</h3>
+              <p data-archive-text>Cold engram storage with biometric thaw control and jurisdiction-resistant custody proofs.</p>
+              <dl class="archive-stats">
+                <div>
+                  <dt data-i18n="archive.integrity">Integrity</dt>
+                  <dd data-archive-integrity>99.2%</dd>
+                </div>
+                <div>
+                  <dt data-i18n="archive.latency">Thaw Latency</dt>
+                  <dd data-archive-latency>4.8s</dd>
+                </div>
+                <div>
+                  <dt data-i18n="archive.risk">Leak Risk</dt>
+                  <dd data-archive-risk>0.03</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section vault-section" id="vault">
+        <div class="vault-copy">
+          <p class="eyebrow" data-i18n="vault.eyebrow">Orbital Vault Array</p>
+          <h2 data-i18n="vault.title">What cannot be seized on Earth must be governed above it.</h2>
+          <p data-i18n="vault.text">
+            Arasaka orbital custody moves memory proofs, voting keys, patent claims, and sovereign liquidity into cold jurisdictions beyond ordinary courts, markets, and street wars.
+          </p>
+        </div>
+
+        <div class="vault-console" aria-label="Orbital vault array console" data-i18n-aria-label="vault.aria">
+          <div class="vault-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong data-vault-code>ORB-MEM</strong>
+          </div>
+
+          <div class="vault-tiers" role="group" aria-label="Orbital vault tier" data-i18n-aria-label="vault.tierAria">
+            <button class="vault-tier is-active" type="button" data-vault-tier="memory" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="vault.tier.memory">Memory Cold</strong>
+            </button>
+            <button class="vault-tier" type="button" data-vault-tier="keys" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="vault.tier.keys">Voting Keys</strong>
+            </button>
+            <button class="vault-tier" type="button" data-vault-tier="patent" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="vault.tier.patent">Patent Deep</strong>
+            </button>
+            <button class="vault-tier vault-tier-ghost" type="button" data-vault-tier="relay" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="vault.tier.relay">Ghost Relay</strong>
+            </button>
+          </div>
+
+          <aside class="vault-readout">
+            <span data-i18n="vault.active">Active Vault Tier</span>
+            <h3 data-vault-title>Off-world Memory Cold Storage</h3>
+            <p data-vault-text>Engram proofs are sealed in orbital cold tissue, recoverable only through biometric witness and command quorum.</p>
+            <dl>
+              <div>
+                <dt data-i18n="vault.latency">Latency</dt>
+                <dd data-vault-latency>41.2ms</dd>
+              </div>
+              <div>
+                <dt data-i18n="vault.jurisdiction">Jurisdiction</dt>
+                <dd data-vault-jurisdiction>ORBITAL</dd>
+              </div>
+              <div>
+                <dt data-i18n="vault.thaw">Thaw</dt>
+                <dd data-vault-thaw>LOCKED</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section custody-section" id="custody">
+        <div class="custody-copy">
+          <p class="eyebrow" data-i18n="custody.eyebrow">Black Ledger Custody</p>
+          <h2 data-i18n="custody.title">Capital is safer when it can disappear without becoming lost.</h2>
+          <p data-i18n="custody.text">
+            Arasaka custody systems bind sovereign accounts, patent vaults, engram collateral, and orbital key material into settlement paths no public market can observe.
+          </p>
+        </div>
+
+        <div class="custody-board" aria-label="Black ledger custody instruments">
+          <div class="custody-header">
+            <span data-i18n="custody.table.asset">Instrument</span>
+            <span data-i18n="custody.table.state">State</span>
+            <span data-i18n="custody.table.route">Route</span>
+            <span data-i18n="custody.table.risk">Risk</span>
+          </div>
+          <article data-custody-instrument="engram" role="button" tabindex="0" aria-pressed="true" class="is-active">
+            <span data-i18n="custody.asset1">Engram Collateral</span>
+            <strong data-i18n="custody.state1">Frozen</strong>
+            <span>MIKOSHI / ORB-12</span>
+            <em>0.04</em>
+          </article>
+          <article data-custody-instrument="voting" role="button" tabindex="0" aria-pressed="false">
+            <span data-i18n="custody.asset2">Founder Voting Keys</span>
+            <strong data-i18n="custody.state2">Sealed</strong>
+            <span>TOKYO / ZURICH</span>
+            <em>0.09</em>
+          </article>
+          <article data-custody-instrument="patent" role="button" tabindex="0" aria-pressed="false">
+            <span data-i18n="custody.asset3">Patent War Chest</span>
+            <strong data-i18n="custody.state3">Armed</strong>
+            <span>OSAKA / NIGHT CITY</span>
+            <em>0.18</em>
+          </article>
+          <article data-custody-instrument="liquidity" role="button" tabindex="0" aria-pressed="false">
+            <span data-i18n="custody.asset4">Sovereign Liquidity</span>
+            <strong data-i18n="custody.state4">Dark</strong>
+            <span>FRANKFURT / ORBITAL</span>
+            <em>0.02</em>
+          </article>
+        </div>
+
+        <aside class="custody-orb" aria-hidden="true">
+          <div class="orb-shell">
+            <span></span>
+            <span></span>
+            <strong>¥</strong>
+          </div>
+          <div class="orb-caption">
+            <span>BLACK LEDGER</span>
+            <strong data-custody-code>ENGRAM COLD</strong>
+          </div>
+          <div class="custody-detail">
+            <span data-i18n="custody.detailLabel">Selected Instrument</span>
+            <strong data-custody-title>Engram Collateral</strong>
+            <p data-custody-text>Persona-backed collateral remains frozen until biometric witness and memory proof align.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="capital-section" aria-label="Capital singularity console" data-i18n-aria-label="capital.aria">
+        <div class="capital-copy">
+          <p class="eyebrow" data-i18n="capital.eyebrow">Capital Singularity</p>
+          <h2 data-i18n="capital.title">Markets become weapons when signal, custody, and myth converge.</h2>
+          <p data-i18n="capital.text">
+            Arasaka capital engines model liquidity as an attack surface: patents, sovereign accounts, founder identity, and social proof route through private rails before public markets know which future has been purchased.
+          </p>
+        </div>
+
+        <div class="capital-console">
+          <div class="capital-graph" aria-hidden="true">
+            <span class="capital-node node-ledger">LEDGER</span>
+            <span class="capital-node node-patent">PATENT</span>
+            <span class="capital-node node-myth">MYTH</span>
+            <span class="capital-node node-ghost">A/F</span>
+            <strong data-capital-code>SG-01</strong>
+          </div>
+
+          <div class="capital-controls" role="group" aria-label="Capital engine mode" data-i18n-aria-label="capital.modeAria">
+            <button class="capital-mode is-active" type="button" data-capital-mode="signal" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="capital.mode.signal">Signal Pricing</strong>
+            </button>
+            <button class="capital-mode" type="button" data-capital-mode="patent" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="capital.mode.patent">Patent Gravity</strong>
+            </button>
+            <button class="capital-mode" type="button" data-capital-mode="liquidity" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="capital.mode.liquidity">Liquidity Shadow</strong>
+            </button>
+            <button class="capital-mode capital-mode-ghost" type="button" data-capital-mode="relay" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="capital.mode.relay">Ghost Syndicate</strong>
+            </button>
+          </div>
+
+          <aside class="capital-readout">
+            <span data-i18n="capital.active">Active Capital Engine</span>
+            <h3 data-capital-title>Memetic Signal Pricing</h3>
+            <p data-capital-text>Creator velocity, founder aura, rumor half-life, and private order flow are fused before the public chart moves.</p>
+            <dl>
+              <div>
+                <dt data-i18n="capital.conviction">Conviction</dt>
+                <dd data-capital-conviction>94%</dd>
+              </div>
+              <div>
+                <dt data-i18n="capital.obscurity">Obscurity</dt>
+                <dd data-capital-obscurity>HIGH</dd>
+              </div>
+              <div>
+                <dt data-i18n="capital.relay">Relay</dt>
+                <dd data-capital-relay>COLD</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section topology-section" id="topology">
+        <div class="topology-copy">
+          <p class="eyebrow" data-i18n="topology.eyebrow">Threat Topology</p>
+          <h2 data-i18n="topology.title">Assets, adversaries, and leverage rendered as one field.</h2>
+          <p data-i18n="topology.text">
+            Arasaka command models the city as an executable graph: people, wallets, implants, drones, rumors, access keys, and hostile AI signatures constantly recomputed into response paths.
+          </p>
+        </div>
+
+        <div class="topology-frame" aria-label="Animated threat topology">
+          <canvas id="topology-canvas" width="960" height="560"></canvas>
+          <div class="topology-overlay" aria-hidden="true">
+            <span class="topology-tag tag-tokyo">TOKYO ROOT</span>
+            <span class="topology-tag tag-night">NIGHT CITY</span>
+            <span class="topology-tag tag-orbit">ORBITAL VAULT</span>
+            <span class="topology-tag tag-blackwall">BLACKWALL EDGE</span>
+          </div>
+          <div class="topology-lenses" role="group" aria-label="Topology lens">
+            <button class="topology-lens is-active" type="button" data-topology-lens="assets" aria-pressed="true">
+              <span data-i18n="topology.lens.assets">Assets</span>
+            </button>
+            <button class="topology-lens" type="button" data-topology-lens="runners" aria-pressed="false">
+              <span data-i18n="topology.lens.runners">Netrunners</span>
+            </button>
+            <button class="topology-lens" type="button" data-topology-lens="capital" aria-pressed="false">
+              <span data-i18n="topology.lens.capital">Capital</span>
+            </button>
+            <button class="topology-lens" type="button" data-topology-lens="blackwall" aria-pressed="false">
+              <span data-i18n="topology.lens.blackwall">Blackwall</span>
+            </button>
+          </div>
+          <div class="topology-insight">
+            <span data-i18n="topology.activeLens">Active Lens</span>
+            <strong data-topology-title>Asset Graph</strong>
+            <p data-topology-text>Executive bodies, wallets, implants, and access keys clustered by extraction priority.</p>
+          </div>
+          <div class="topology-readouts">
+            <div>
+              <span data-i18n="topology.readout1">Leverage Routes</span>
+              <strong>12,804</strong>
+            </div>
+            <div>
+              <span data-i18n="topology.readout2">Hostile Signals</span>
+              <strong>0.37%</strong>
+            </div>
+            <div>
+              <span data-i18n="topology.readout3">Engram Locks</span>
+              <strong>881</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blackwall-section" id="blackwall">
+        <div class="blackwall-copy">
+          <p class="eyebrow" data-i18n="blackwall.eyebrow">Blackwall Containment</p>
+          <h2 data-i18n="blackwall.title">The border between intelligence and infection is actively manufactured.</h2>
+          <p data-i18n="blackwall.text">
+            Arasaka containment architecture treats rogue AI contact as a material event: mirrored, partitioned, burned, or negotiated through human command before it can touch memory, markets, or implants.
+          </p>
+        </div>
+
+        <div class="blackwall-console" aria-label="Blackwall containment console" data-i18n-aria-label="blackwall.aria">
+          <div class="blackwall-core" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong data-blackwall-code>Q-LOCK</strong>
+          </div>
+
+          <div class="blackwall-protocols" role="group" aria-label="Blackwall protocol" data-i18n-aria-label="blackwall.protocolAria">
+            <button class="blackwall-protocol is-active" type="button" data-blackwall-protocol="quarantine" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="blackwall.protocol.quarantine">Quarantine</strong>
+            </button>
+            <button class="blackwall-protocol" type="button" data-blackwall-protocol="mirror" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="blackwall.protocol.mirror">Mirror</strong>
+            </button>
+            <button class="blackwall-protocol" type="button" data-blackwall-protocol="burn" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="blackwall.protocol.burn">Burn</strong>
+            </button>
+            <button class="blackwall-protocol" type="button" data-blackwall-protocol="treaty" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="blackwall.protocol.treaty">Treaty</strong>
+            </button>
+          </div>
+
+          <div class="blackwall-readout">
+            <span data-i18n="blackwall.active">Active Containment Path</span>
+            <h3 data-blackwall-title>Quarantine Partition</h3>
+            <p data-blackwall-text>Unknown machine intent is sealed inside disposable network tissue until human command confirms origin, appetite, and blast radius.</p>
+            <dl>
+              <div>
+                <dt data-i18n="blackwall.metricDrift">Drift</dt>
+                <dd data-blackwall-drift>0.04%</dd>
+              </div>
+              <div>
+                <dt data-i18n="blackwall.metricHeat">Heat</dt>
+                <dd data-blackwall-heat>LOW</dd>
+              </div>
+              <div>
+                <dt data-i18n="blackwall.metricHuman">Human Chain</dt>
+                <dd data-blackwall-human>INTACT</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section matrix-section" id="matrix">
+        <div class="matrix-copy">
+          <p class="eyebrow" data-i18n="matrix.eyebrow">Response Matrix</p>
+          <h2 data-i18n="matrix.title">When the city mutates, the command layer recomputes.</h2>
+          <p data-i18n="matrix.text">
+            Select a public scenario to observe how Arasaka routes intrusion, extraction, capital, and memory events through human command and autonomous infrastructure.
+          </p>
+        </div>
+
+        <div class="matrix-console" aria-label="Response matrix simulator">
+          <div class="matrix-toolbar" role="group" aria-label="Response scenario">
+            <button class="matrix-mode is-active" type="button" data-matrix-mode="intrusion" aria-pressed="true">
+              <span data-i18n="matrix.mode.intrusion">Intrusion</span>
+            </button>
+            <button class="matrix-mode" type="button" data-matrix-mode="extraction" aria-pressed="false">
+              <span data-i18n="matrix.mode.extraction">Extraction</span>
+            </button>
+            <button class="matrix-mode" type="button" data-matrix-mode="liquidity" aria-pressed="false">
+              <span data-i18n="matrix.mode.liquidity">Liquidity</span>
+            </button>
+            <button class="matrix-mode" type="button" data-matrix-mode="engram" aria-pressed="false">
+              <span data-i18n="matrix.mode.engram">Engram</span>
+            </button>
+          </div>
+
+          <div class="matrix-display">
+            <div class="matrix-signal" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <strong data-matrix-code>ICE-77</strong>
+            </div>
+            <div class="matrix-readout">
+              <span data-i18n="matrix.readout">Selected Response Path</span>
+              <h3 data-matrix-title>Black ICE Counterintrusion</h3>
+              <p data-matrix-text>Hostile netrunner signatures are isolated, mirrored, and routed into a disposable counter-AI chamber.</p>
+            </div>
+          </div>
+
+          <div class="matrix-bars" aria-label="Response metrics">
+            <div class="matrix-bar">
+              <span data-i18n="matrix.metric1">Autonomy</span>
+              <strong data-matrix-value="autonomy">72%</strong>
+              <i style="--level: 72%"></i>
+            </div>
+            <div class="matrix-bar">
+              <span data-i18n="matrix.metric2">Human Command</span>
+              <strong data-matrix-value="command">91%</strong>
+              <i style="--level: 91%"></i>
+            </div>
+            <div class="matrix-bar">
+              <span data-i18n="matrix.metric3">Capital Exposure</span>
+              <strong data-matrix-value="capital">18%</strong>
+              <i style="--level: 18%"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section doctrine-section" aria-label="Classified doctrine">
+        <div class="doctrine-header">
+          <p class="eyebrow" data-i18n="doctrine.eyebrow">Classified Doctrine</p>
+          <h2 data-i18n="doctrine.title">Order is not found. It is manufactured.</h2>
+        </div>
+
+        <div class="doctrine-grid">
+          <article data-doctrine-card>
+            <span>PRINCIPLE 01</span>
+            <h3 data-i18n="doctrine.p1.title">Identity Is Infrastructure</h3>
+            <p data-i18n="doctrine.p1.text">A protected client is a verified body, memory, balance sheet, and command chain moving as one.</p>
+            <button class="doctrine-toggle" type="button" data-doctrine-toggle aria-expanded="false">
+              <span data-i18n="doctrine.decrypt">Decrypt Note</span>
+            </button>
+            <div class="doctrine-classified" hidden>
+              <strong data-i18n="doctrine.classified">Classified Note</strong>
+              <p data-i18n="doctrine.p1.note">Identity loss is treated as infrastructure failure. Recovery begins at the biometric root, not the account layer.</p>
+            </div>
+          </article>
+          <article data-doctrine-card>
+            <span>PRINCIPLE 02</span>
+            <h3 data-i18n="doctrine.p2.title">Markets Are Terrain</h3>
+            <p data-i18n="doctrine.p2.text">Liquidity, rumor, patents, and political pressure are mapped with the same discipline as a battlefield.</p>
+            <button class="doctrine-toggle" type="button" data-doctrine-toggle aria-expanded="false">
+              <span data-i18n="doctrine.decrypt">Decrypt Note</span>
+            </button>
+            <div class="doctrine-classified" hidden>
+              <strong data-i18n="doctrine.classified">Classified Note</strong>
+              <p data-i18n="doctrine.p2.note">Price is only one signal. Narrative velocity, patent leverage, and settlement latency decide the real battlefield.</p>
+            </div>
+          </article>
+          <article data-doctrine-card>
+            <span>PRINCIPLE 03</span>
+            <h3 data-i18n="doctrine.p3.title">Memory Must Survive Flesh</h3>
+            <p data-i18n="doctrine.p3.text">Continuity belongs to those who can preserve intent after the biological system fails.</p>
+            <button class="doctrine-toggle" type="button" data-doctrine-toggle aria-expanded="false">
+              <span data-i18n="doctrine.decrypt">Decrypt Note</span>
+            </button>
+            <div class="doctrine-classified" hidden>
+              <strong data-i18n="doctrine.classified">Classified Note</strong>
+              <p data-i18n="doctrine.p3.note">The archive does not preserve nostalgia. It preserves agency, command preference, and strategic will.</p>
+            </div>
+          </article>
+          <article data-doctrine-card>
+            <span>PRINCIPLE 04</span>
+            <h3 data-i18n="doctrine.p4.title">Force Requires Legibility</h3>
+            <p data-i18n="doctrine.p4.text">Every autonomous response remains accountable to a human command path and a sealed audit trail.</p>
+            <button class="doctrine-toggle" type="button" data-doctrine-toggle aria-expanded="false">
+              <span data-i18n="doctrine.decrypt">Decrypt Note</span>
+            </button>
+            <div class="doctrine-classified" hidden>
+              <strong data-i18n="doctrine.classified">Classified Note</strong>
+              <p data-i18n="doctrine.p4.note">Unattributed force is a liability. Legible force becomes governance, deterrence, and proof.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dossier-section" id="dossier">
+        <div class="dossier-copy">
+          <p class="eyebrow" data-i18n="dossier.eyebrow">Executive Dossier</p>
+          <h2 data-i18n="dossier.title">The protected founder is modeled before the threat arrives.</h2>
+          <p data-i18n="dossier.text">
+            Arasaka private systems maintain a living representation of client identity: capital routes, memory proofs, biometric authority, and quiet external relays held in one sealed profile.
+          </p>
+        </div>
+
+        <div class="dossier-card" aria-label="Executive dossier profile">
+          <div class="dossier-id">
+            <div class="id-mark" aria-hidden="true">
+              <span></span>
+              <strong>G.W.</strong>
+            </div>
+            <div>
+              <span data-i18n="dossier.profileLabel">Protected Principal</span>
+              <h3 data-i18n="dossier.profile">Founder Operator / Private Capital Node</h3>
+              <p data-i18n="dossier.profileText">Identity anchors are split across body, ledger, archive, and off-network social proof.</p>
+            </div>
+          </div>
+
+          <div class="dossier-grid">
+            <article>
+              <span data-i18n="dossier.signal">Quiet Relay</span>
+              <strong>G.W. / A-F</strong>
+              <em data-i18n="dossier.signalState">Cameo signal only</em>
+            </article>
+            <article>
+              <span data-i18n="dossier.clearance">Clearance</span>
+              <strong>AA-90</strong>
+              <em data-i18n="dossier.clearanceState">Human review</em>
+            </article>
+            <article>
+              <span data-i18n="dossier.asset">Asset Surface</span>
+              <strong>FOUNDER</strong>
+              <em data-i18n="dossier.assetState">Capital / memory / network</em>
+            </article>
+            <article>
+              <span data-i18n="dossier.posture">Posture</span>
+              <strong>COLD</strong>
+              <em data-i18n="dossier.postureState">No public claim</em>
+            </article>
+          </div>
+
+          <div class="dossier-rails" aria-label="Dossier integrity rails">
+            <div>
+              <span data-i18n="dossier.rail1">Identity Integrity</span>
+              <strong>97%</strong>
+              <i style="--level: 97%"></i>
+            </div>
+            <div>
+              <span data-i18n="dossier.rail2">Capital Obfuscation</span>
+              <strong>88%</strong>
+              <i style="--level: 88%"></i>
+            </div>
+            <div>
+              <span data-i18n="dossier.rail3">Narrative Stealth</span>
+              <strong>94%</strong>
+              <i style="--level: 94%"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section operations-section" id="operations">
+        <div class="operations-media">
+          <img
+            src="assets/security-operations.png"
+            alt="Arasaka security operations center overlooking a neon city at night"
+            loading="eager"
+          >
+          <div class="operations-overlay">
+            <div class="operations-theaters" role="group" aria-label="Operations theater" data-i18n-aria-label="operations.theaterAria">
+              <button class="operations-theater is-active" type="button" data-operation-theater="plaza" aria-pressed="true">
+                <span data-i18n="operations.theater.plaza">Plaza</span>
+              </button>
+              <button class="operations-theater" type="button" data-operation-theater="orbital" aria-pressed="false">
+                <span data-i18n="operations.theater.orbital">Orbital</span>
+              </button>
+              <button class="operations-theater" type="button" data-operation-theater="blackwall" aria-pressed="false">
+                <span data-i18n="operations.theater.blackwall">Blackwall</span>
+              </button>
+              <button class="operations-theater" type="button" data-operation-theater="drone" aria-pressed="false">
+                <span data-i18n="operations.theater.drone">Drone Grid</span>
+              </button>
+            </div>
+            <div class="operations-status">
+              <span data-i18n="operations.activeTheater">Active Theater</span>
+              <strong data-operation-title>Plaza Vault</strong>
+              <p data-operation-text>Biometric gates and armored corridors bind executive access to Black Ledger custody.</p>
+              <dl>
+                <div>
+                  <dt data-i18n="operations.response">Response</dt>
+                  <dd data-operation-response>00:18</dd>
+                </div>
+                <div>
+                  <dt data-i18n="operations.coverage">Coverage</dt>
+                  <dd data-operation-coverage>96%</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="operations-copy">
+          <p class="eyebrow" data-i18n="operations.eyebrow">Night City Operations</p>
+          <h2 data-i18n="operations.title">Every access point is an executable threat model.</h2>
+          <p data-i18n="operations.text">
+            The Night City tower network coordinates kinetic response, counter-AI isolation, biometric capital access, and autonomous mobility across corporate districts.
+          </p>
+          <ul class="operations-list">
+            <li data-i18n="operations.item1">Neuroprint access gates with live deception detection</li>
+            <li data-i18n="operations.item2">Encrypted custody corridors from plaza vault to orbital relay</li>
+            <li data-i18n="operations.item3">Netrunner cells for Blackwall-adjacent threat isolation</li>
+            <li data-i18n="operations.item4">Autonomous drone patrols governed by human kill-chain authorization</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section governance-section" id="governance">
+        <div class="section-header compact">
+          <p class="eyebrow" data-i18n="governance.eyebrow">Governance</p>
+          <h2 data-i18n="governance.title">Old blood. New substrate. Absolute continuity.</h2>
+          <p data-i18n="governance.text">
+            Arasaka remains a family-led global institution, but the control surface has evolved: neural archives, private defense networks, and capital systems that survive regime change.
+          </p>
+        </div>
+
+        <div class="timeline" aria-label="Corporate timeline">
+          <article>
+            <time>1915</time>
+            <h3 data-i18n="timeline.1915.title">Tokyo Incorporation</h3>
+            <p data-i18n="timeline.1915.text">A family industrial concern becomes a security institution built for national volatility.</p>
+          </article>
+          <article>
+            <time>2023</time>
+            <h3 data-i18n="timeline.2023.title">Reconstruction Mandate</h3>
+            <p data-i18n="timeline.2023.text">Corporate conflict hardens Arasaka doctrine around redundancy, memory, and private deterrence.</p>
+          </article>
+          <article>
+            <time>2077</time>
+            <h3 data-i18n="timeline.2077.title">Night City Ascendancy</h3>
+            <p data-i18n="timeline.2077.text">Security, finance, cyberware, and intelligence assets anchor the city's corporate nervous system.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section careers-section" id="careers">
+        <div class="section-header compact">
+          <p class="eyebrow" data-i18n="careers.eyebrow">Careers</p>
+          <h2 data-i18n="careers.title">Build where law, machine, and capital converge.</h2>
+          <p data-i18n="careers.text">
+            We recruit operators who can engineer trust under pressure: cyberneticists, tacticians, cryptographers, and founders who think like sovereigns.
+          </p>
+        </div>
+
+        <div class="role-list">
+          <a href="#contact">
+            <span data-i18n="career.role1">Neural Security Architect</span>
+            <strong>Night City</strong>
+          </a>
+          <a href="#contact">
+            <span data-i18n="career.role2">Black ICE Response Lead</span>
+            <strong>Tokyo</strong>
+          </a>
+          <a href="#contact">
+            <span data-i18n="career.role3">Autonomous Defense Engineer</span>
+            <strong>Osaka</strong>
+          </a>
+          <a href="#contact">
+            <span data-i18n="career.role4">Memetic Capital Analyst</span>
+            <strong>Frankfurt</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Protected Access</p>
+          <h2 data-i18n="contact.title">Request access to the private layer.</h2>
+          <p data-i18n="contact.text">
+            Founders, capital allocators, operators, and sovereign clients may request review through the public intake channel. Weak signals are ignored. Strong signals are escalated.
+          </p>
+        </div>
+
+        <div class="access-console">
+          <div class="terminal-panel" aria-label="Secure terminal status">
+            <div class="terminal-header">
+              <span data-i18n="terminal.title">Secure Liaison Terminal</span>
+              <strong data-i18n="terminal.state">LISTENING</strong>
+            </div>
+            <div class="terminal-screen">
+              <p data-terminal-line="0">></p>
+              <p data-terminal-line="1">></p>
+              <p data-terminal-line="2">></p>
+              <p data-terminal-line="3">></p>
+            </div>
+            <div class="terminal-status">
+              <div>
+                <span data-i18n="terminal.channel">Channel</span>
+                <strong>ARSK-00</strong>
+              </div>
+              <div>
+                <span data-i18n="terminal.entropy">Entropy</span>
+                <strong data-terminal-entropy>--</strong>
+              </div>
+              <div>
+                <span data-i18n="terminal.routing">Routing</span>
+                <strong data-i18n="terminal.routingValue">Cold</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <label>
+              <span data-i18n="form.name">Name</span>
+              <input name="name" autocomplete="name" required data-i18n-placeholder="form.namePlaceholder" placeholder="Takemura Goro">
+            </label>
+            <label>
+              <span data-i18n="form.organization">Organization</span>
+              <input name="organization" autocomplete="organization" required data-i18n-placeholder="form.organizationPlaceholder" placeholder="Private Office / Sovereign Lab / GP Node">
+            </label>
+            <label>
+              <span data-i18n="form.region">Region</span>
+              <select name="region" required>
+                <option value="" data-i18n="form.regionPlaceholder">Select region</option>
+                <option value="tokyo" data-i18n="form.regionTokyo">Tokyo</option>
+                <option value="night-city" data-i18n="form.regionNightCity">Night City</option>
+                <option value="europe" data-i18n="form.regionEurope">Europe</option>
+                <option value="global" data-i18n="form.regionGlobal">Global</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="form.clearance">Requested Clearance</span>
+              <select name="clearance" required>
+                <option value="" data-i18n="form.clearancePlaceholder">Select tier</option>
+                <option value="executive" data-i18n="form.clearanceExecutive">Neural Custody</option>
+                <option value="banking" data-i18n="form.clearanceBanking">Black Ledger Banking</option>
+                <option value="security" data-i18n="form.clearanceSecurity">Autonomous Security</option>
+                <option value="intelligence" data-i18n="form.clearanceIntelligence">Netrunner Intelligence</option>
+              </select>
+            </label>
+            <button class="button button-primary form-button" type="submit">
+              <span data-i18n="form.submit">Transmit Request</span>
+              <span class="button-icon" aria-hidden="true">↗</span>
+            </button>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-primary">
+        <strong>ARASAKA</strong>
+        <span data-i18n="footer.registry">荒坂株式会社 Public Corporate Network</span>
+      </div>
+      <div class="footer-meta">
+        <nav class="footer-cameo" aria-label="Quiet external references">
+          <span data-i18n="footer.cameo">quiet relay</span>
+          <a href="https://www.geoffreywoo.com/" target="_blank" rel="noreferrer" aria-label="Quiet external relay G W">G.W.</a>
+          <a href="https://www.antifund.com/" target="_blank" rel="noreferrer" aria-label="Quiet external relay A F">A/F</a>
+        </nav>
+        <p data-i18n="footer.notice">
+          Original fan-made web concept. No official game assets are used.
+        </p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
