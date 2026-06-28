@@ -3462,6 +3462,8 @@ a,
     "qualification meta"
     "procurement meta"
     "topology meta"
+    "specsheet meta"
+    "runbook meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -3623,6 +3625,11 @@ a,
 .product-route-procurement-intake,
 .product-route-topology-head,
 .product-route-topology-map article,
+.product-route-specsheet-head,
+.product-route-specsheet figure,
+.product-route-specsheet-grid article,
+.product-route-runbook-head,
+.product-route-runbook-rail article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -4269,6 +4276,229 @@ a,
   color: var(--paper);
   font-size: 0.98rem;
   line-height: 1.08;
+}
+
+.product-route-specsheet {
+  grid-area: specsheet;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.4fr) minmax(260px, 0.34fr) minmax(0, 0.66fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.18), rgba(209, 177, 107, 0.12), rgba(116, 199, 216, 0.12)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-specsheet-head,
+.product-route-specsheet figure,
+.product-route-specsheet-grid article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-specsheet-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-specsheet-head > span,
+.product-route-specsheet-grid article > span {
+  color: var(--red);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-specsheet-head p,
+.product-route-specsheet-grid p,
+.product-route-specsheet figcaption {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-specsheet figure {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  min-height: 312px;
+  margin: 0;
+  padding: 0;
+}
+
+.product-route-specsheet figure::before,
+.product-route-specsheet figure::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.product-route-specsheet figure::before {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.72)),
+    repeating-linear-gradient(90deg, transparent 0 28px, rgba(255, 255, 255, 0.045) 28px 29px);
+}
+
+.product-route-specsheet figure::after {
+  z-index: 2;
+  border: 1px solid rgba(225, 7, 20, 0.24);
+  clip-path: polygon(0 0, 88% 0, 100% 22%, 100% 100%, 12% 100%, 0 78%);
+}
+
+.product-route-specsheet img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.18) contrast(1.08);
+}
+
+.product-route-specsheet figcaption {
+  position: relative;
+  z-index: 3;
+  margin: 14px;
+  padding: 9px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.68);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-specsheet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-specsheet-grid article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 156px;
+}
+
+.product-route-specsheet-grid article::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  content: "";
+  background: linear-gradient(180deg, var(--red), transparent);
+}
+
+.product-route-specsheet-grid strong {
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.product-route-runbook {
+  grid-area: runbook;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.16), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-runbook-head,
+.product-route-runbook-rail article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-runbook-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-runbook-head > span,
+.product-route-runbook-rail small,
+.product-route-runbook-rail article > span,
+.product-route-runbook-rail em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-runbook-head > span,
+.product-route-runbook-rail article > span {
+  color: var(--acid);
+  font-size: 0.66rem;
+}
+
+.product-route-runbook-head p,
+.product-route-runbook-rail p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-runbook-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-runbook-rail article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 174px;
+}
+
+.product-route-runbook-rail article::before {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 42px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, var(--acid), transparent);
+  opacity: 0.52;
+}
+
+.product-route-runbook-rail small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-runbook-rail strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+}
+
+.product-route-runbook-rail em {
+  align-self: end;
+  color: var(--acid);
+  font-size: 0.64rem;
+  font-style: normal;
 }
 
 .product-route-switcher {
@@ -10351,6 +10581,8 @@ a,
       "qualification"
       "procurement"
       "topology"
+      "specsheet"
+      "runbook"
       "switcher"
       "ops"
       "panels"
@@ -10384,6 +10616,7 @@ a,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
+  .product-route-runbook,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -10392,6 +10625,7 @@ a,
   .product-route-brief-heading,
   .product-route-qualification-head,
   .product-route-procurement-head,
+  .product-route-runbook-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -10413,6 +10647,15 @@ a,
   }
 
   .product-route-topology-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-specsheet {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-specsheet-grid,
+  .product-route-runbook-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -11063,13 +11306,24 @@ a,
     display: none;
   }
 
+  .product-route-specsheet-grid,
+  .product-route-runbook-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-specsheet figure {
+    min-height: 260px;
+  }
+
   .product-route-brief article {
     min-height: 0;
   }
 
   .product-route-qualification article,
   .product-route-procurement-matrix article,
-  .product-route-topology-map article {
+  .product-route-topology-map article,
+  .product-route-specsheet-grid article,
+  .product-route-runbook-rail article {
     min-height: 0;
   }
 
@@ -11284,6 +11538,8 @@ a,
   .product-route-qualification,
   .product-route-procurement,
   .product-route-topology,
+  .product-route-specsheet,
+  .product-route-runbook,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -11292,11 +11548,13 @@ a,
   .product-route-ops article,
   .product-route-panels article,
   .product-route-case-rail article,
-  .product-route-procurement-matrix article {
+  .product-route-procurement-matrix article,
+  .product-route-runbook-rail article {
     min-height: 0;
   }
 
-  .product-route-topology-map article {
+  .product-route-topology-map article,
+  .product-route-specsheet-grid article {
     min-height: 0;
   }
 

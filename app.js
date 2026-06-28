@@ -1820,6 +1820,20 @@ const translations = {
       runtime: "Runtime Surface",
       downstream: "Downstream Proof",
       audit: "Audit Lock",
+      specsheet: "Product Visuals and Specifications",
+      specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
+      productPhoto: "Product Photo",
+      coreSpecs: "Core Specs",
+      formFactor: "Form Factor",
+      operatingSurface: "Operating Surface",
+      deploymentEnvelope: "Deployment Envelope",
+      controlProof: "Control Proof",
+      runbook: "Deployment Runbook",
+      runbookLead: "A sealed activation sequence for moving this product from intake to controlled authority.",
+      intakePhase: "Intake",
+      stagingPhase: "Staging",
+      activationPhase: "Activation",
+      proofPhase: "Proof",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -1879,6 +1893,20 @@ const translations = {
       runtime: "Runtime Team",
       downstream: "Downstream Proof",
       audit: "Audit Lock",
+      specsheet: "Service Visuals and Specifications",
+      specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
+      productPhoto: "Service Photo",
+      coreSpecs: "Core Specs",
+      formFactor: "Delivery Shape",
+      operatingSurface: "Operating Surface",
+      deploymentEnvelope: "Theater Envelope",
+      controlProof: "Control Proof",
+      runbook: "Deployment Runbook",
+      runbookLead: "A sealed engagement sequence for moving this mandate from sponsor signal to operational proof.",
+      intakePhase: "Intake",
+      stagingPhase: "Staging",
+      activationPhase: "Activation",
+      proofPhase: "Proof",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -3594,6 +3622,20 @@ const translations = {
       runtime: "実行面",
       downstream: "下流証明",
       audit: "監査ロック",
+      specsheet: "製品ビジュアル・仕様",
+      specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
+      productPhoto: "製品写真",
+      coreSpecs: "主要仕様",
+      formFactor: "形態",
+      operatingSurface: "運用面",
+      deploymentEnvelope: "配備範囲",
+      controlProof: "制御証明",
+      runbook: "配備ランブック",
+      runbookLead: "この製品を取込から制御権限へ移すための封印済み起動シーケンス。",
+      intakePhase: "取込",
+      stagingPhase: "ステージング",
+      activationPhase: "起動",
+      proofPhase: "証明",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -3653,6 +3695,20 @@ const translations = {
       runtime: "実行チーム",
       downstream: "下流証明",
       audit: "監査ロック",
+      specsheet: "サービスビジュアル・仕様",
+      specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
+      productPhoto: "サービス写真",
+      coreSpecs: "主要仕様",
+      formFactor: "提供形態",
+      operatingSurface: "運用面",
+      deploymentEnvelope: "作戦範囲",
+      controlProof: "制御証明",
+      runbook: "配備ランブック",
+      runbookLead: "この委任をスポンサー信号から運用証明へ移す封印済みエンゲージメント・シーケンス。",
+      intakePhase: "取込",
+      stagingPhase: "ステージング",
+      activationPhase: "起動",
+      proofPhase: "証明",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -3863,6 +3919,8 @@ const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeTopology = document.querySelector("[data-route-topology]");
+const routeSpecsheet = document.querySelector("[data-route-specsheet]");
+const routeRunbook = document.querySelector("[data-route-runbook]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3880,6 +3938,8 @@ const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
+const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
+const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -4726,6 +4786,79 @@ function renderRouteTopology(target, labels, rows) {
   target.replaceChildren(heading, map);
 }
 
+function renderRouteSpecsheet(target, labels, sheet) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const figure = document.createElement("figure");
+  const image = document.createElement("img");
+  const caption = document.createElement("figcaption");
+  const specGrid = document.createElement("div");
+
+  heading.className = "product-route-specsheet-head";
+  label.textContent = labels.specsheet;
+  lead.textContent = labels.specsheetLead;
+  heading.append(label, lead);
+
+  image.src = sheet.image;
+  image.alt = sheet.alt;
+  image.loading = "lazy";
+  caption.textContent = sheet.caption;
+  figure.append(image, caption);
+
+  specGrid.className = "product-route-specsheet-grid";
+  sheet.specs.forEach(({ label: specLabel, value, text }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    eyebrow.textContent = specLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(eyebrow, title, copy);
+    specGrid.append(article);
+  });
+
+  target.replaceChildren(heading, figure, specGrid);
+}
+
+function renderRouteRunbook(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-runbook-head";
+  label.textContent = labels.runbook;
+  lead.textContent = labels.runbookLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-runbook-rail";
+  rows.forEach(({ label: rowLabel, value, text, signal }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const meter = document.createElement("em");
+
+    code.textContent = `R-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    meter.textContent = signal;
+    article.append(code, eyebrow, title, copy, meter);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -4932,6 +5065,61 @@ function updateProductRoute() {
       label: dictionary.productRoute.audit,
       value: operations.sla[2] || operations.sla[0],
       text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteSpecsheet(routeSpecsheet, dictionary.productRoute, {
+    image: `../../assets/${routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
+    alt: `${file.title} ${dictionary.productRoute.productPhoto}`,
+    caption: `${dictionary.productRoute.productPhoto} / ${field.incident} / ${field.doctrine}`,
+    specs: [
+      {
+        label: dictionary.productRoute.formFactor,
+        value: operations.packages[0],
+        text: file.tabs.modules.items[0] || file.tabs.modules.text
+      },
+      {
+        label: dictionary.productRoute.operatingSurface,
+        value: file.surface,
+        text: operations.integrations.join(" / ")
+      },
+      {
+        label: dictionary.productRoute.deploymentEnvelope,
+        value: operations.regions.join(" / "),
+        text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+      },
+      {
+        label: dictionary.productRoute.controlProof,
+        value: operations.sla[0],
+        text: file.tabs.governance.items[0] || file.tabs.governance.text
+      }
+    ]
+  });
+
+  renderRouteRunbook(routeRunbook, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.intakePhase,
+      value: field.exposure,
+      text: file.tabs.overview.items[0] || file.tabs.overview.text,
+      signal: file.clearance
+    },
+    {
+      label: dictionary.productRoute.stagingPhase,
+      value: operations.regions[0],
+      text: operations.integrations[1] || operations.integrations[0],
+      signal: operations.packages[0]
+    },
+    {
+      label: dictionary.productRoute.activationPhase,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      signal: file.latency
+    },
+    {
+      label: dictionary.productRoute.proofPhase,
+      value: operations.sla[0],
+      text: file.tabs.governance.items[1] || file.tabs.governance.text,
+      signal: operations.sla[2] || operations.sla[1] || operations.sla[0]
     }
   ]);
 
@@ -5218,6 +5406,61 @@ function updateServiceRoute() {
       label: routeLabels.audit,
       value: file.operations.sla[2] || file.operations.sla[0],
       text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteSpecsheet(serviceRouteSpecsheet, routeLabels, {
+    image: `../../assets/${routeFieldImages.service[serviceKey] || routeFieldImages.fallback}`,
+    alt: `${file.title} ${routeLabels.productPhoto}`,
+    caption: `${routeLabels.productPhoto} / ${file.field.incident} / ${file.field.doctrine}`,
+    specs: [
+      {
+        label: routeLabels.formFactor,
+        value: file.operations.packages[0],
+        text: file.tabs.operators.items[0] || file.tabs.operators.text
+      },
+      {
+        label: routeLabels.operatingSurface,
+        value: file.surface,
+        text: file.operations.integrations.join(" / ")
+      },
+      {
+        label: routeLabels.deploymentEnvelope,
+        value: file.operations.regions.join(" / "),
+        text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+      },
+      {
+        label: routeLabels.controlProof,
+        value: file.operations.sla[0],
+        text: file.tabs.governance.items[0] || file.tabs.governance.text
+      }
+    ]
+  });
+
+  renderRouteRunbook(serviceRouteRunbook, routeLabels, [
+    {
+      label: routeLabels.intakePhase,
+      value: file.field.exposure,
+      text: file.tabs.overview.items[0] || file.tabs.overview.text,
+      signal: file.clearance
+    },
+    {
+      label: routeLabels.stagingPhase,
+      value: file.operations.regions[0],
+      text: file.operations.integrations[1] || file.operations.integrations[0],
+      signal: file.operations.packages[0]
+    },
+    {
+      label: routeLabels.activationPhase,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      signal: file.window
+    },
+    {
+      label: routeLabels.proofPhase,
+      value: file.operations.sla[0],
+      text: file.tabs.governance.items[1] || file.tabs.governance.text,
+      signal: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 
