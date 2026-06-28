@@ -2330,6 +2330,14 @@ const translations = {
       driftSignal: "Drift Signal",
       intrusionSignal: "Intrusion Signal",
       auditSignal: "Audit Signal",
+      riskRegister: "Risk Register",
+      riskRegisterLead: "An internal diligence ledger for primary signal, containment duty, governance hold, and residual exposure.",
+      riskSignal: "Primary Signal",
+      containmentDuty: "Containment Duty",
+      governanceHold: "Governance Hold",
+      residualExposure: "Residual Exposure",
+      severity: "Severity",
+      owner: "Owner",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2467,6 +2475,14 @@ const translations = {
       driftSignal: "Drift Signal",
       intrusionSignal: "Intrusion Signal",
       auditSignal: "Audit Signal",
+      riskRegister: "Risk Register",
+      riskRegisterLead: "An internal diligence ledger for primary signal, containment duty, governance hold, and residual exposure.",
+      riskSignal: "Primary Signal",
+      containmentDuty: "Containment Duty",
+      governanceHold: "Governance Hold",
+      residualExposure: "Residual Exposure",
+      severity: "Severity",
+      owner: "Owner",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4719,6 +4735,14 @@ const translations = {
       driftSignal: "ドリフト信号",
       intrusionSignal: "侵入信号",
       auditSignal: "監査信号",
+      riskRegister: "リスク台帳",
+      riskRegisterLead: "主要信号、封じ込め責務、統治保留、残存露出を扱う内部デューデリジェンス台帳。",
+      riskSignal: "主要信号",
+      containmentDuty: "封じ込め責務",
+      governanceHold: "統治保留",
+      residualExposure: "残存露出",
+      severity: "重大度",
+      owner: "責任者",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -4856,6 +4880,14 @@ const translations = {
       driftSignal: "ドリフト信号",
       intrusionSignal: "侵入信号",
       auditSignal: "監査信号",
+      riskRegister: "リスク台帳",
+      riskRegisterLead: "主要信号、封じ込め責務、統治保留、残存露出を扱う内部デューデリジェンス台帳。",
+      riskSignal: "主要信号",
+      containmentDuty: "封じ込め責務",
+      governanceHold: "統治保留",
+      residualExposure: "残存露出",
+      severity: "重大度",
+      owner: "責任者",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5136,6 +5168,7 @@ const routeTopology = document.querySelector("[data-route-topology]");
 const routeAdapters = document.querySelector("[data-route-adapters]");
 const routeContract = document.querySelector("[data-route-contract]");
 const routeTelemetry = document.querySelector("[data-route-telemetry]");
+const routeRiskRegister = document.querySelector("[data-route-risk-register]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5165,6 +5198,7 @@ const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
 const serviceRouteContract = document.querySelector("[data-service-contract]");
 const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]");
+const serviceRouteRiskRegister = document.querySelector("[data-service-risk-register]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6321,6 +6355,51 @@ function renderRouteTelemetry(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteRiskRegister(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const table = document.createElement("div");
+
+  heading.className = "product-route-risk-head";
+  label.textContent = labels.riskRegister;
+  lead.textContent = labels.riskRegisterLead;
+  heading.append(label, lead);
+
+  table.className = "product-route-risk-table";
+  rows.forEach(({ label: rowLabel, value, text, severity, owner }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const meta = document.createElement("dl");
+
+    code.textContent = `X-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+
+    [
+      [labels.severity, severity],
+      [labels.owner, owner]
+    ].forEach(([term, detail]) => {
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = detail;
+      meta.append(dt, dd);
+    });
+
+    article.append(code, eyebrow, title, copy, meta);
+    table.append(article);
+  });
+
+  target.replaceChildren(heading, table);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -6855,6 +6934,37 @@ function updateProductRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: file.tabs.governance.text,
       channel: operations.sla[2] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteRiskRegister(routeRiskRegister, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.riskSignal,
+      value: field.exposure,
+      text: field.text,
+      severity: file.clearance,
+      owner: operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.containmentDuty,
+      value: operations.packages[1] || operations.packages[0],
+      text: file.tabs.deployment.text,
+      severity: operations.sla[0],
+      owner: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.governanceHold,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      severity: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      owner: file.tabs.governance.title
+    },
+    {
+      label: dictionary.productRoute.residualExposure,
+      value: field.doctrine,
+      text: operations.regions.join(" / "),
+      severity: operations.sla[1] || operations.sla[0],
+      owner: operations.packages[0]
     }
   ]);
 
@@ -7423,6 +7533,37 @@ function updateServiceRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: file.tabs.governance.text,
       channel: file.operations.sla[2] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteRiskRegister(serviceRouteRiskRegister, routeLabels, [
+    {
+      label: routeLabels.riskSignal,
+      value: file.field.exposure,
+      text: file.field.text,
+      severity: file.clearance,
+      owner: file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.containmentDuty,
+      value: file.operations.packages[1] || file.operations.packages[0],
+      text: file.tabs.deployment.text,
+      severity: file.operations.sla[0],
+      owner: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.governanceHold,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      severity: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      owner: file.tabs.governance.title
+    },
+    {
+      label: routeLabels.residualExposure,
+      value: file.field.doctrine,
+      text: file.operations.regions.join(" / "),
+      severity: file.operations.sla[1] || file.operations.sla[0],
+      owner: file.operations.packages[0]
     }
   ]);
 
