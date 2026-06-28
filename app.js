@@ -1987,6 +1987,12 @@ const translations = {
       certificateRetention: "Retention",
       certificateCounterparty: "Counterparty",
       certificateSeal: "Arasaka Internal Assurance",
+      slaEnvelope: "Service-Level Envelope",
+      slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
+      responseCovenant: "Response Covenant",
+      availabilityMode: "Availability Mode",
+      retentionClock: "Retention Clock",
+      jurisdictionFence: "Jurisdiction Fence",
       topology: "Integration Topology",
       topologyLead: "A system map for how this product binds custody, operators, jurisdiction, and proof.",
       upstream: "Upstream Source",
@@ -2067,6 +2073,12 @@ const translations = {
       certificateRetention: "Retention",
       certificateCounterparty: "Counterparty",
       certificateSeal: "Arasaka Internal Assurance",
+      slaEnvelope: "Service-Level Envelope",
+      slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
+      responseCovenant: "Response Covenant",
+      availabilityMode: "Availability Mode",
+      retentionClock: "Retention Clock",
+      jurisdictionFence: "Jurisdiction Fence",
       topology: "Integration Topology",
       topologyLead: "A service map for how this mandate binds teams, systems, theaters, and proof.",
       upstream: "Upstream Signal",
@@ -3969,6 +3981,12 @@ const translations = {
       certificateRetention: "保持",
       certificateCounterparty: "相手方",
       certificateSeal: "荒坂内部保証",
+      slaEnvelope: "サービスレベル範囲",
+      slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
+      responseCovenant: "応答契約",
+      availabilityMode: "可用性モード",
+      retentionClock: "保持時計",
+      jurisdictionFence: "管轄フェンス",
       topology: "統合トポロジー",
       topologyLead: "この製品が保管、オペレーター、管轄、証明をどう結合するかを示すシステムマップ。",
       upstream: "上流ソース",
@@ -4049,6 +4067,12 @@ const translations = {
       certificateRetention: "保持",
       certificateCounterparty: "相手方",
       certificateSeal: "荒坂内部保証",
+      slaEnvelope: "サービスレベル範囲",
+      slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
+      responseCovenant: "応答契約",
+      availabilityMode: "可用性モード",
+      retentionClock: "保持時計",
+      jurisdictionFence: "管轄フェンス",
       topology: "統合トポロジー",
       topologyLead: "この委任がチーム、システム、作戦区、証明をどう結合するかを示すサービスマップ。",
       upstream: "上流信号",
@@ -4279,6 +4303,7 @@ const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeCertificate = document.querySelector("[data-route-certificate]");
+const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
@@ -4299,6 +4324,7 @@ const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
 const serviceRouteCertificate = document.querySelector("[data-service-certificate]");
+const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
@@ -5174,6 +5200,36 @@ function renderRouteCertificate(target, labels, certificate) {
   target.replaceChildren(heading, seal, grid);
 }
 
+function renderRouteSla(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-sla-head";
+  label.textContent = labels.slaEnvelope;
+  lead.textContent = labels.slaEnvelopeLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-sla-grid";
+  rows.forEach(({ label: rowLabel, value, text }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteTopology(target, labels, rows) {
   if (!target) return;
 
@@ -5471,6 +5527,29 @@ function updateProductRoute() {
     retention: operations.sla[2] || operations.sla[1] || operations.sla[0],
     counterparty: `${operations.regions[0]} / ${field.exposure}`
   });
+
+  renderRouteSla(routeSla, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.responseCovenant,
+      value: operations.sla[0],
+      text: file.tabs.deployment.text
+    },
+    {
+      label: dictionary.productRoute.availabilityMode,
+      value: operations.sla[1] || operations.packages[0],
+      text: `${operations.integrations[0]} / ${operations.packages[0]}`
+    },
+    {
+      label: dictionary.productRoute.retentionClock,
+      value: operations.sla[2] || file.latency,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.jurisdictionFence,
+      value: operations.regions.join(" / "),
+      text: field.exposure
+    }
+  ]);
 
   renderRouteTopology(routeTopology, dictionary.productRoute, [
     {
@@ -5819,6 +5898,29 @@ function updateServiceRoute() {
     retention: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
     counterparty: `${file.operations.regions[0]} / ${file.field.exposure}`
   });
+
+  renderRouteSla(serviceRouteSla, routeLabels, [
+    {
+      label: routeLabels.responseCovenant,
+      value: file.operations.sla[0],
+      text: file.tabs.deployment.text
+    },
+    {
+      label: routeLabels.availabilityMode,
+      value: file.operations.sla[1] || file.operations.packages[0],
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[0]}`
+    },
+    {
+      label: routeLabels.retentionClock,
+      value: file.operations.sla[2] || file.window,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: routeLabels.jurisdictionFence,
+      value: file.operations.regions.join(" / "),
+      text: file.field.exposure
+    }
+  ]);
 
   renderRouteTopology(serviceRouteTopology, routeLabels, [
     {

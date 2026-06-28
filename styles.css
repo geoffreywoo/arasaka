@@ -4305,6 +4305,7 @@ a,
     "qualification meta"
     "procurement meta"
     "certificate meta"
+    "sla meta"
     "topology meta"
     "specsheet meta"
     "runbook meta"
@@ -4467,6 +4468,8 @@ a,
 .product-route-procurement-matrix article,
 .product-route-procurement > p,
 .product-route-procurement-intake,
+.product-route-sla-head,
+.product-route-sla-grid article,
 .product-route-topology-head,
 .product-route-topology-map article,
 .product-route-specsheet-head,
@@ -5112,6 +5115,84 @@ a,
   color: var(--paper);
   font-size: 0.88rem;
   line-height: 1.2;
+}
+
+.product-route-sla {
+  grid-area: sla;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.18), rgba(209, 177, 107, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-sla-head,
+.product-route-sla-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.08), transparent 54%),
+    rgba(4, 8, 11, 0.94);
+}
+
+.product-route-sla-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-sla-head span,
+.product-route-sla-grid span {
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-sla-head p,
+.product-route-sla-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-sla-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-sla-grid article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 156px;
+  padding: 15px;
+}
+
+.product-route-sla-grid article::before {
+  position: absolute;
+  inset: 0 12px auto;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.84;
+}
+
+.product-route-sla-grid strong {
+  color: var(--paper);
+  font-size: 0.96rem;
+  line-height: 1.08;
 }
 
 .product-route-topology {
@@ -11570,6 +11651,7 @@ a,
       "qualification"
       "procurement"
       "certificate"
+      "sla"
       "topology"
       "specsheet"
       "runbook"
@@ -11606,6 +11688,7 @@ a,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
+  .product-route-sla,
   .product-route-runbook,
   .product-route-ops,
   .product-route-panels {
@@ -11615,6 +11698,7 @@ a,
   .product-route-brief-heading,
   .product-route-qualification-head,
   .product-route-procurement-head,
+  .product-route-sla-head,
   .product-route-runbook-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
@@ -11634,6 +11718,14 @@ a,
 
   .product-route-topology {
     grid-template-columns: 1fr;
+  }
+
+  .product-route-sla {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-sla-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-topology-map {
@@ -12298,6 +12390,14 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-sla {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-sla-grid {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-procurement-matrix {
     grid-template-columns: 1fr;
   }
@@ -12325,6 +12425,7 @@ a,
 
   .product-route-qualification article,
   .product-route-procurement-matrix article,
+  .product-route-sla-grid article,
   .product-route-topology-map article,
   .product-route-specsheet-grid article,
   .product-route-runbook-rail article {
@@ -12580,6 +12681,7 @@ a,
   .product-route-qualification,
   .product-route-procurement,
   .product-route-certificate,
+  .product-route-sla,
   .product-route-topology,
   .product-route-specsheet,
   .product-route-runbook,
@@ -12592,6 +12694,7 @@ a,
   .product-route-panels article,
   .product-route-case-rail article,
   .product-route-procurement-matrix article,
+  .product-route-sla-grid article,
   .product-route-runbook-rail article {
     min-height: 0;
   }
