@@ -2293,6 +2293,13 @@ const translations = {
       operatorSeat: "Operator Seat",
       redline: "Red-Line",
       controlFooter: "Operator telemetry is simulated from sealed product-route records and does not expose client systems.",
+      evidencePacket: "Evidence Packet",
+      evidencePacketLead: "A sealed export manifest tying field lore, buyer proof, operator telemetry, and internal assurance into one review artifact.",
+      sourceLineage: "Source Lineage",
+      assuranceMaterial: "Assurance Material",
+      buyerRoomArtifact: "Buyer Room",
+      exportState: "Export State",
+      packetFooter: "Packet export is staged for private-room review; public pages show only sanitized manifest fields.",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -2392,6 +2399,13 @@ const translations = {
       operatorSeat: "Operator Seat",
       redline: "Red-Line",
       controlFooter: "Operator telemetry is simulated from sealed service-route records and does not expose client systems.",
+      evidencePacket: "Evidence Packet",
+      evidencePacketLead: "A sealed mandate manifest tying field lore, sponsor proof, operator telemetry, and internal assurance into one review artifact.",
+      sourceLineage: "Source Lineage",
+      assuranceMaterial: "Assurance Material",
+      buyerRoomArtifact: "Mandate Room",
+      exportState: "Export State",
+      packetFooter: "Packet export is staged for private-room review; public pages show only sanitized mandate fields.",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -4606,6 +4620,13 @@ const translations = {
       operatorSeat: "オペレーター席",
       redline: "レッドライン",
       controlFooter: "オペレーターテレメトリは封印済み製品経路レコードからシミュレートされ、クライアントシステムを露出しません。",
+      evidencePacket: "証拠パケット",
+      evidencePacketLead: "現地ロア、購入者証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済みエクスポート・マニフェスト。",
+      sourceLineage: "ソース系譜",
+      assuranceMaterial: "保証資料",
+      buyerRoomArtifact: "購入者ルーム",
+      exportState: "エクスポート状態",
+      packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済みマニフェスト項目のみ表示されます。",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4705,6 +4726,13 @@ const translations = {
       operatorSeat: "オペレーター席",
       redline: "レッドライン",
       controlFooter: "オペレーターテレメトリは封印済みサービス経路レコードからシミュレートされ、クライアントシステムを露出しません。",
+      evidencePacket: "証拠パケット",
+      evidencePacketLead: "現地ロア、スポンサー証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済み委任マニフェスト。",
+      sourceLineage: "ソース系譜",
+      assuranceMaterial: "保証資料",
+      buyerRoomArtifact: "委任ルーム",
+      exportState: "エクスポート状態",
+      packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済み委任項目のみ表示されます。",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4978,6 +5006,7 @@ const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeCertificate = document.querySelector("[data-route-certificate]");
 const routeReadiness = document.querySelector("[data-route-readiness]");
 const routeControlRoom = document.querySelector("[data-route-control-room]");
+const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
@@ -5001,6 +5030,7 @@ const serviceRouteProcurement = document.querySelector("[data-service-procuremen
 const serviceRouteCertificate = document.querySelector("[data-service-certificate]");
 const serviceRouteReadiness = document.querySelector("[data-service-readiness]");
 const serviceRouteControlRoom = document.querySelector("[data-service-control-room]");
+const serviceRouteEvidencePacket = document.querySelector("[data-service-evidence-packet]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
@@ -5954,6 +5984,47 @@ function renderRouteControlRoom(target, labels, rows, footerText) {
   target.replaceChildren(heading, deck, footer);
 }
 
+function renderRouteEvidencePacket(target, labels, rows, packetId, footerText) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const manifest = document.createElement("div");
+  const manifestId = document.createElement("strong");
+  const grid = document.createElement("div");
+  const footer = document.createElement("p");
+
+  heading.className = "product-route-packet-head";
+  label.textContent = labels.evidencePacket;
+  lead.textContent = labels.evidencePacketLead;
+  heading.append(label, lead);
+
+  manifest.className = "product-route-packet-manifest";
+  manifestId.textContent = packetId;
+  manifest.append(manifestId);
+
+  grid.className = "product-route-packet-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `P-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  footer.className = "product-route-packet-foot";
+  footer.textContent = footerText;
+  target.replaceChildren(heading, manifest, grid, footer);
+}
+
 function renderRouteSla(target, labels, rows) {
   if (!target) return;
 
@@ -6331,6 +6402,29 @@ function updateProductRoute() {
       pulse: file.clearance
     }
   ], dictionary.productRoute.controlFooter);
+
+  renderRouteEvidencePacket(routeEvidencePacket, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.sourceLineage,
+      value: field.incident,
+      text: `${field.label} / ${dictionary.productRoute.imageCredit}: CD PROJEKT RED Press Center`
+    },
+    {
+      label: dictionary.productRoute.assuranceMaterial,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.buyerRoomArtifact,
+      value: operations.packages[0],
+      text: operations.integrations.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.exportState,
+      value: `${file.code}-${file.clearance}`,
+      text: operations.sla.join(" / ")
+    }
+  ], `${file.code}-PACKET-${file.clearance}`, dictionary.productRoute.packetFooter);
 
   renderRouteSla(routeSla, dictionary.productRoute, [
     {
@@ -6752,6 +6846,29 @@ function updateServiceRoute() {
       pulse: file.clearance
     }
   ], routeLabels.controlFooter);
+
+  renderRouteEvidencePacket(serviceRouteEvidencePacket, routeLabels, [
+    {
+      label: routeLabels.sourceLineage,
+      value: file.field.incident,
+      text: `${file.field.label} / ${routeLabels.imageCredit}: CD PROJEKT RED Press Center`
+    },
+    {
+      label: routeLabels.assuranceMaterial,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items.join(" / ")
+    },
+    {
+      label: routeLabels.buyerRoomArtifact,
+      value: file.operations.packages[0],
+      text: file.operations.integrations.join(" / ")
+    },
+    {
+      label: routeLabels.exportState,
+      value: `${file.code}-${file.clearance}`,
+      text: file.operations.sla.join(" / ")
+    }
+  ], `${file.code}-PACKET-${file.clearance}`, routeLabels.packetFooter);
 
   renderRouteSla(serviceRouteSla, routeLabels, [
     {
