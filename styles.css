@@ -872,9 +872,8 @@ a,
   overflow: hidden auto;
   max-height: calc(100svh - 92px - env(safe-area-inset-bottom));
   display: none;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  padding: 1px;
+  gap: 8px;
+  padding: 8px;
   border: 1px solid rgba(225, 7, 20, 0.28);
   border-radius: 6px;
   background:
@@ -888,6 +887,41 @@ a,
   display: none;
 }
 
+.mobile-nav-priority,
+.mobile-nav-group div {
+  display: grid;
+  gap: 1px;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.mobile-nav-priority {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mobile-nav-group {
+  display: grid;
+  gap: 6px;
+}
+
+.mobile-nav-group > span {
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.mobile-nav-group div {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mobile-nav-group-routes div {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .mobile-nav a {
   min-height: 44px;
   display: grid;
@@ -898,6 +932,36 @@ a,
   font-size: 0.82rem;
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.mobile-nav-priority a {
+  align-content: space-between;
+  gap: 10px;
+  min-height: 92px;
+  padding: 12px;
+  color: var(--paper);
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.18), transparent),
+    rgba(6, 8, 10, 0.95);
+}
+
+.mobile-nav-priority a span {
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+}
+
+.mobile-nav-priority a strong {
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.05;
+}
+
+.mobile-nav-group-routes a {
+  min-height: 38px;
+  color: rgba(243, 244, 242, 0.68);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
 }
 
 .mobile-nav a:hover,
@@ -9057,7 +9121,7 @@ a,
     right: 12px;
     top: 64px;
     max-height: calc(100svh - 82px - env(safe-area-inset-bottom));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .public-node-dock {
@@ -10008,13 +10072,21 @@ a,
     right: 8px;
     top: 60px;
     max-height: calc(100svh - 76px - env(safe-area-inset-bottom));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .mobile-nav a {
     min-height: 40px;
     padding-inline: 10px;
     font-size: 0.68rem;
+  }
+
+  .mobile-nav-priority a {
+    min-height: 76px;
+  }
+
+  .mobile-nav-group div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .matrix-mode {

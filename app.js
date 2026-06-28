@@ -34,7 +34,11 @@ const translations = {
     },
     menu: {
       open: "Open systems menu",
-      close: "Close systems menu"
+      close: "Close systems menu",
+      priorityAria: "Priority mobile routes",
+      groupCorporate: "Corporate",
+      groupSystems: "Systems",
+      groupDossiers: "Dossiers"
     },
     boot: {
       kicker: "荒坂株式会社 Public Node",
@@ -1703,7 +1707,11 @@ const translations = {
     },
     menu: {
       open: "システムメニューを開く",
-      close: "システムメニューを閉じる"
+      close: "システムメニューを閉じる",
+      priorityAria: "優先モバイル経路",
+      groupCorporate: "企業",
+      groupSystems: "システム",
+      groupDossiers: "記録"
     },
     boot: {
       kicker: "荒坂株式会社 公開ノード",
@@ -3424,6 +3432,7 @@ const spineCurrent = document.querySelector("[data-spine-current]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
 const navLinks = document.querySelectorAll(".site-nav a[href^='#'], .mobile-nav a[href^='#']");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
 let terminalOffset = 0;
 let activeDockMode = "custody";
 let isDockCollapsed = false;
@@ -5161,7 +5170,7 @@ function initMobileMenu() {
   menuToggle.addEventListener("click", () => {
     setMobileMenu(!menuToggle.classList.contains("is-open"));
   });
-  navLinks.forEach((link) => {
+  mobileNavLinks.forEach((link) => {
     link.addEventListener("click", () => setMobileMenu(false));
   });
   window.addEventListener("keydown", (event) => {

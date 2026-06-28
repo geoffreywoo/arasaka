@@ -169,31 +169,58 @@
     </header>
 
     <nav class="mobile-nav" id="mobile-nav" data-mobile-nav hidden aria-label="Mobile site">
-      <a href="#top" data-i18n="nav.home">Home</a>
-      <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
-      <a href="#services" data-i18n="nav.services">Services</a>
-      <a href="#products" data-i18n="nav.products">Products</a>
-      <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
-      <a href="#systems" data-i18n="nav.systems">Systems</a>
-      <a href="#ice" data-i18n="nav.ice">ICE</a>
-      <a href="#swarm" data-i18n="nav.swarm">Swarm</a>
-      <a href="#stack" data-i18n="nav.stack">Stack</a>
-      <a href="#archive" data-i18n="nav.archive">Relic</a>
-      <a href="#mikoshi" data-i18n="nav.mikoshi">Mikoshi</a>
-      <a href="#soulkiller" data-i18n="nav.soulkiller">Soulkiller</a>
-      <a href="#vault" data-i18n="nav.vault">Vault</a>
-      <a href="#custody" data-i18n="nav.custody">Custody</a>
-      <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
-      <a href="#grid" data-i18n="nav.grid">Grid</a>
-      <a href="#lore" data-i18n="nav.lore">Lore</a>
-      <a href="#topology" data-i18n="nav.topology">Topology</a>
-      <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
-      <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
-      <a href="#dossier" data-i18n="nav.dossier">Dossier</a>
-      <a href="#operations" data-i18n="nav.operations">Operations</a>
-      <a href="#governance" data-i18n="nav.governance">Governance</a>
-      <a href="#careers" data-i18n="nav.careers">Careers</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="mobile-nav-priority" aria-label="Priority mobile routes" data-i18n-aria-label="menu.priorityAria">
+        <a href="#services"><span>SV</span><strong data-i18n="nav.services">Services</strong></a>
+        <a href="#products"><span>PX</span><strong data-i18n="nav.products">Products</strong></a>
+        <a href="#dossier"><span>AA</span><strong data-i18n="nav.dossier">Dossier</strong></a>
+        <a href="#contact"><span>RQ</span><strong data-i18n="header.access">Protected Access</strong></a>
+      </div>
+      <div class="mobile-nav-group">
+        <span data-i18n="menu.groupCorporate">Corporate</span>
+        <div>
+          <a href="#top" data-i18n="nav.home">Home</a>
+          <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
+          <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
+          <a href="#operations" data-i18n="nav.operations">Operations</a>
+          <a href="#governance" data-i18n="nav.governance">Governance</a>
+          <a href="#careers" data-i18n="nav.careers">Careers</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <span data-i18n="menu.groupSystems">Systems</span>
+        <div>
+          <a href="#systems" data-i18n="nav.systems">Systems</a>
+          <a href="#ice" data-i18n="nav.ice">ICE</a>
+          <a href="#swarm" data-i18n="nav.swarm">Swarm</a>
+          <a href="#stack" data-i18n="nav.stack">Stack</a>
+          <a href="#archive" data-i18n="nav.archive">Relic</a>
+          <a href="#mikoshi" data-i18n="nav.mikoshi">Mikoshi</a>
+          <a href="#soulkiller" data-i18n="nav.soulkiller">Soulkiller</a>
+          <a href="#vault" data-i18n="nav.vault">Vault</a>
+          <a href="#custody" data-i18n="nav.custody">Custody</a>
+          <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
+          <a href="#grid" data-i18n="nav.grid">Grid</a>
+          <a href="#lore" data-i18n="nav.lore">Lore</a>
+          <a href="#topology" data-i18n="nav.topology">Topology</a>
+          <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
+          <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group mobile-nav-group-routes">
+        <span data-i18n="menu.groupDossiers">Dossiers</span>
+        <div>
+          <a href="services/executive-continuity/">SV-01</a>
+          <a href="services/counterintrusion/">SV-02</a>
+          <a href="services/black-ledger-mandate/">SV-03</a>
+          <a href="services/autonomous-protection/">SV-04</a>
+          <a href="products/relic/">AR-RELIC</a>
+          <a href="products/mikoshi/">MIKOSHI</a>
+          <a href="products/ice/">ICE-77</a>
+          <a href="products/ledger/">BL-00</a>
+          <a href="products/swarm/">SWARM</a>
+          <a href="products/soulkiller/">SOUL-23</a>
+        </div>
+      </div>
     </nav>
 
     <main id="main">
