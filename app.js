@@ -2365,6 +2365,13 @@ const translations = {
       stagingPhase: "Staging",
       activationPhase: "Activation",
       proofPhase: "Proof",
+      privateRoom: "Private Room Handoff",
+      privateRoomLead: "A sealed buyer-room route for ticket, sponsor room, off-network checksum, and audit trail after runbook proof is accepted.",
+      accessTicket: "Access Ticket",
+      sponsorRoom: "Sponsor Room",
+      relayChecksum: "Relay Checksum",
+      auditTrail: "Audit Trail",
+      handoffAction: "Request sealed room",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2510,6 +2517,13 @@ const translations = {
       stagingPhase: "Staging",
       activationPhase: "Activation",
       proofPhase: "Proof",
+      privateRoom: "Private Room Handoff",
+      privateRoomLead: "A sealed mandate-room route for ticket, sponsor room, off-network checksum, and audit trail after runbook proof is accepted.",
+      accessTicket: "Access Ticket",
+      sponsorRoom: "Sponsor Room",
+      relayChecksum: "Relay Checksum",
+      auditTrail: "Audit Trail",
+      handoffAction: "Request sealed room",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4770,6 +4784,13 @@ const translations = {
       stagingPhase: "ステージング",
       activationPhase: "起動",
       proofPhase: "証明",
+      privateRoom: "プライベートルーム引継",
+      privateRoomLead: "ランブック証明の承認後に、チケット、スポンサー室、オフネットワーク・チェックサム、監査証跡を封印済み購入者ルームへ渡す経路。",
+      accessTicket: "アクセスチケット",
+      sponsorRoom: "スポンサー室",
+      relayChecksum: "中継チェックサム",
+      auditTrail: "監査証跡",
+      handoffAction: "封印ルームを申請",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -4915,6 +4936,13 @@ const translations = {
       stagingPhase: "ステージング",
       activationPhase: "起動",
       proofPhase: "証明",
+      privateRoom: "プライベートルーム引継",
+      privateRoomLead: "ランブック証明の承認後に、チケット、スポンサー室、オフネットワーク・チェックサム、監査証跡を封印済み委任ルームへ渡す経路。",
+      accessTicket: "アクセスチケット",
+      sponsorRoom: "スポンサー室",
+      relayChecksum: "中継チェックサム",
+      auditTrail: "監査証跡",
+      handoffAction: "封印ルームを申請",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5173,6 +5201,7 @@ const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
+const routePrivateRoom = document.querySelector("[data-route-private-room]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5203,6 +5232,7 @@ const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]")
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
+const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6548,6 +6578,48 @@ function renderRouteRunbook(target, labels, rows) {
   target.replaceChildren(heading, rail);
 }
 
+function renderRoutePrivateRoom(target, labels, rows, href) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+  const action = document.createElement("a");
+  const actionText = document.createElement("span");
+  const actionIcon = document.createElement("span");
+
+  heading.className = "product-route-private-head";
+  label.textContent = labels.privateRoom;
+  lead.textContent = labels.privateRoomLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-private-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `H-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  action.className = "product-route-private-action";
+  action.href = href;
+  actionText.textContent = labels.handoffAction;
+  actionIcon.textContent = "->";
+  actionIcon.setAttribute("aria-hidden", "true");
+  action.append(actionText, actionIcon);
+
+  target.replaceChildren(heading, grid, action);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7069,6 +7141,29 @@ function updateProductRoute() {
       signal: operations.sla[2] || operations.sla[1] || operations.sla[0]
     }
   ]);
+
+  renderRoutePrivateRoom(routePrivateRoom, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.accessTicket,
+      value: `${file.code}-ROOM-${file.surface.toUpperCase().replace(/\s+/g, "-")}`,
+      text: `${operations.sla[0]} / ${file.tabs.deployment.title}`
+    },
+    {
+      label: dictionary.productRoute.sponsorRoom,
+      value: `${operations.regions[0]} / ${operations.packages[0]}`,
+      text: file.tabs.overview.items[0] || file.tabs.overview.text
+    },
+    {
+      label: dictionary.productRoute.relayChecksum,
+      value: "G.W. / A/F",
+      text: `${field.doctrine} / ${operations.integrations[0]}`
+    },
+    {
+      label: dictionary.productRoute.auditTrail,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ], "../../#contact");
 
   if (routeOps) {
     const operationGroups = [
@@ -7668,6 +7763,29 @@ function updateServiceRoute() {
       signal: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
+
+  renderRoutePrivateRoom(serviceRoutePrivateRoom, routeLabels, [
+    {
+      label: routeLabels.accessTicket,
+      value: `${file.code}-ROOM-${file.surface.toUpperCase().replace(/\s+/g, "-")}`,
+      text: `${file.operations.sla[0]} / ${file.tabs.deployment.title}`
+    },
+    {
+      label: routeLabels.sponsorRoom,
+      value: `${file.operations.regions[0]} / ${file.operations.packages[0]}`,
+      text: file.tabs.overview.items[0] || file.tabs.overview.text
+    },
+    {
+      label: routeLabels.relayChecksum,
+      value: "G.W. / A/F",
+      text: `${file.field.doctrine} / ${file.operations.integrations[0]}`
+    },
+    {
+      label: routeLabels.auditTrail,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ], "../../#contact");
 
   if (serviceRouteOps) {
     const operationGroups = [

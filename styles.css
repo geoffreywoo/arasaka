@@ -4664,6 +4664,7 @@ a,
     "config meta"
     "decision meta"
     "runbook meta"
+    "private meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -4836,6 +4837,8 @@ a,
 .product-route-specsheet-grid article,
 .product-route-runbook-head,
 .product-route-runbook-rail article,
+.product-route-private-head,
+.product-route-private-grid article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -6863,6 +6866,115 @@ a,
   color: var(--acid);
   font-size: 0.64rem;
   font-style: normal;
+}
+
+.product-route-private {
+  grid-area: private;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr) minmax(168px, 0.18fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.14), rgba(209, 177, 107, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-private-head,
+.product-route-private-grid article,
+.product-route-private-action {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.07), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-private-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-private-head span,
+.product-route-private-grid article > span,
+.product-route-private-grid small,
+.product-route-private-action {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-private-head span,
+.product-route-private-grid article > span {
+  color: var(--cyan);
+  font-size: 0.66rem;
+}
+
+.product-route-private-head p,
+.product-route-private-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-private-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-private-grid article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 162px;
+  padding: 15px;
+}
+
+.product-route-private-grid article::before {
+  position: absolute;
+  inset: auto 14px 14px;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--cyan), var(--gold), transparent);
+  opacity: 0.68;
+}
+
+.product-route-private-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-private-grid strong {
+  color: var(--paper);
+  font-size: 0.96rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-private-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 100%;
+  padding: 16px;
+  color: var(--cyan);
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.product-route-private-action:hover,
+.product-route-private-action:focus-visible {
+  color: var(--ink);
+  outline: 0;
 }
 
 .product-route-switcher {
@@ -13920,6 +14032,7 @@ a,
       "config"
       "decision"
       "runbook"
+      "private"
       "switcher"
       "ops"
       "panels"
@@ -13964,6 +14077,7 @@ a,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
+  .product-route-private,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -13986,6 +14100,7 @@ a,
   .product-route-config-head,
   .product-route-decision-head,
   .product-route-runbook-head,
+  .product-route-private-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -14086,6 +14201,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-private {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-config-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -14095,7 +14214,8 @@ a,
   }
 
   .product-route-specsheet-grid,
-  .product-route-runbook-rail {
+  .product-route-runbook-rail,
+  .product-route-private-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -14820,7 +14940,8 @@ a,
   .product-route-risk-table,
   .product-route-config-grid,
   .product-route-decision-grid,
-  .product-route-runbook-rail {
+  .product-route-runbook-rail,
+  .product-route-private-grid {
     grid-template-columns: 1fr;
   }
 
@@ -14839,7 +14960,8 @@ a,
   .product-route-specsheet-grid article,
   .product-route-telemetry-grid article,
   .product-route-risk-table article,
-  .product-route-runbook-rail article {
+  .product-route-runbook-rail article,
+  .product-route-private-grid article {
     min-height: 0;
   }
 
@@ -15124,6 +15246,7 @@ a,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
+  .product-route-private,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -15139,7 +15262,8 @@ a,
   .product-route-sla-grid article,
   .product-route-config-grid article,
   .product-route-decision-grid article,
-  .product-route-runbook-rail article {
+  .product-route-runbook-rail article,
+  .product-route-private-grid article {
     min-height: 0;
   }
 
