@@ -2387,6 +2387,13 @@ const translations = {
       containmentModel: "Containment Model",
       proofModel: "Proof Model",
       pressure: "Pressure",
+      custodyChain: "Custody Chain",
+      custodyChainLead: "A sealed chain-of-control showing origin, authority, witness, and export state before this system leaves the internal file room.",
+      origin: "Origin",
+      authority: "Authority",
+      witness: "Witness",
+      exportLock: "Export Lock",
+      seal: "Seal",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2554,6 +2561,13 @@ const translations = {
       containmentModel: "Containment Model",
       proofModel: "Proof Model",
       pressure: "Pressure",
+      custodyChain: "Custody Chain",
+      custodyChainLead: "A sealed chain-of-control showing origin, authority, witness, and export state before this mandate leaves the internal file room.",
+      origin: "Origin",
+      authority: "Authority",
+      witness: "Witness",
+      exportLock: "Export Lock",
+      seal: "Seal",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4836,6 +4850,13 @@ const translations = {
       containmentModel: "封じ込めモデル",
       proofModel: "証明モデル",
       pressure: "圧力",
+      custodyChain: "保管チェーン",
+      custodyChainLead: "このシステムが内部ファイル室を離れる前に、起点、権限、証人、エクスポート状態を示す封印済み制御チェーン。",
+      origin: "起点",
+      authority: "権限",
+      witness: "証人",
+      exportLock: "エクスポートロック",
+      seal: "封印",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5003,6 +5024,13 @@ const translations = {
       containmentModel: "封じ込めモデル",
       proofModel: "証明モデル",
       pressure: "圧力",
+      custodyChain: "保管チェーン",
+      custodyChainLead: "この委任が内部ファイル室を離れる前に、起点、権限、証人、エクスポート状態を示す封印済み制御チェーン。",
+      origin: "起点",
+      authority: "権限",
+      witness: "証人",
+      exportLock: "エクスポートロック",
+      seal: "封印",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5264,6 +5292,7 @@ const routeRunbook = document.querySelector("[data-route-runbook]");
 const routePrivateRoom = document.querySelector("[data-route-private-room]");
 const routeTranscript = document.querySelector("[data-route-transcript]");
 const routeThreatModel = document.querySelector("[data-route-threat-model]");
+const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5297,6 +5326,7 @@ const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
 const serviceRouteTranscript = document.querySelector("[data-service-transcript]");
 const serviceRouteThreatModel = document.querySelector("[data-service-threat-model]");
+const serviceRouteCustodyChain = document.querySelector("[data-service-custody-chain]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6762,6 +6792,40 @@ function renderRouteThreatModel(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteCustodyChain(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-custody-head";
+  label.textContent = labels.custodyChain;
+  lead.textContent = labels.custodyChainLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-custody-rail";
+  rows.forEach(({ label: rowLabel, value, text, seal }, index) => {
+    const article = document.createElement("article");
+    const indexNode = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const stamp = document.createElement("em");
+
+    indexNode.textContent = String(index + 1).padStart(2, "0");
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    stamp.textContent = `${labels.seal}: ${seal}`;
+    article.append(indexNode, eyebrow, title, copy, stamp);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7362,6 +7426,33 @@ function updateProductRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: field.doctrine,
       pressure: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteCustodyChain(routeCustodyChain, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.origin,
+      value: field.incident,
+      text: `${field.label} / ${file.surface}`,
+      seal: file.code
+    },
+    {
+      label: dictionary.productRoute.authority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      seal: file.clearance
+    },
+    {
+      label: dictionary.productRoute.witness,
+      value: operations.integrations[0],
+      text: operations.integrations.slice(1).join(" / ") || operations.packages[0],
+      seal: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.exportLock,
+      value: `${file.code}-G.W.-A/F`,
+      text: `${operations.sla[2] || operations.sla[1] || operations.sla[0]} / ${field.doctrine}`,
+      seal: operations.packages[2] || operations.packages[1] || operations.packages[0]
     }
   ]);
 
@@ -8042,6 +8133,33 @@ function updateServiceRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: file.field.doctrine,
       pressure: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteCustodyChain(serviceRouteCustodyChain, routeLabels, [
+    {
+      label: routeLabels.origin,
+      value: file.field.incident,
+      text: `${file.field.label} / ${file.surface}`,
+      seal: file.code
+    },
+    {
+      label: routeLabels.authority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      seal: file.clearance
+    },
+    {
+      label: routeLabels.witness,
+      value: file.operations.integrations[0],
+      text: file.operations.integrations.slice(1).join(" / ") || file.operations.packages[0],
+      seal: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.exportLock,
+      value: `${file.code}-G.W.-A/F`,
+      text: `${file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]} / ${file.field.doctrine}`,
+      seal: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0]
     }
   ]);
 
