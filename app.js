@@ -1814,6 +1814,12 @@ const translations = {
       evidence: "Evidence Required",
       intake: "Open Procurement Channel",
       intakeText: "Route through protected access with mandate proof, jurisdiction notes, and escalation authority.",
+      topology: "Integration Topology",
+      topologyLead: "A system map for how this product binds custody, operators, jurisdiction, and proof.",
+      upstream: "Upstream Source",
+      runtime: "Runtime Surface",
+      downstream: "Downstream Proof",
+      audit: "Audit Lock",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -1867,6 +1873,12 @@ const translations = {
       evidence: "Evidence Required",
       intake: "Open Mandate Channel",
       intakeText: "Route through protected access with sponsor identity, theater scope, and escalation authority.",
+      topology: "Integration Topology",
+      topologyLead: "A service map for how this mandate binds teams, systems, theaters, and proof.",
+      upstream: "Upstream Signal",
+      runtime: "Runtime Team",
+      downstream: "Downstream Proof",
+      audit: "Audit Lock",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -3576,6 +3588,12 @@ const translations = {
       evidence: "必要証拠",
       intake: "調達チャネルを開く",
       intakeText: "委任証明、管轄メモ、エスカレーション権限を添えて保護アクセスへ経路化します。",
+      topology: "統合トポロジー",
+      topologyLead: "この製品が保管、オペレーター、管轄、証明をどう結合するかを示すシステムマップ。",
+      upstream: "上流ソース",
+      runtime: "実行面",
+      downstream: "下流証明",
+      audit: "監査ロック",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -3629,6 +3647,12 @@ const translations = {
       evidence: "必要証拠",
       intake: "委任チャネルを開く",
       intakeText: "スポンサー身元、作戦区範囲、エスカレーション権限を添えて保護アクセスへ経路化します。",
+      topology: "統合トポロジー",
+      topologyLead: "この委任がチーム、システム、作戦区、証明をどう結合するかを示すサービスマップ。",
+      upstream: "上流信号",
+      runtime: "実行チーム",
+      downstream: "下流証明",
+      audit: "監査ロック",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -3838,6 +3862,7 @@ const routeCaseFile = document.querySelector("[data-route-case-file]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
+const routeTopology = document.querySelector("[data-route-topology]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3854,6 +3879,7 @@ const serviceRouteCaseFile = document.querySelector("[data-service-case-file]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
+const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -4668,6 +4694,38 @@ function renderRouteProcurement(target, labels, rows, intakeHref) {
   target.replaceChildren(heading, matrix, note, intake);
 }
 
+function renderRouteTopology(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const map = document.createElement("div");
+
+  heading.className = "product-route-topology-head";
+  label.textContent = labels.topology;
+  lead.textContent = labels.topologyLead;
+  heading.append(label, lead);
+
+  map.className = "product-route-topology-map";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `N-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    map.append(article);
+  });
+
+  target.replaceChildren(heading, map);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -4853,6 +4911,29 @@ function updateProductRoute() {
       text: field.doctrine
     }
   ], "../../#contact");
+
+  renderRouteTopology(routeTopology, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.upstream,
+      value: field.incident,
+      text: field.exposure
+    },
+    {
+      label: dictionary.productRoute.runtime,
+      value: operations.integrations[0],
+      text: file.tabs.modules.items[0] || file.tabs.modules.text
+    },
+    {
+      label: dictionary.productRoute.downstream,
+      value: operations.packages[2] || operations.packages[0],
+      text: operations.regions.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.audit,
+      value: operations.sla[2] || operations.sla[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
 
   if (routeOps) {
     const operationGroups = [
@@ -5116,6 +5197,29 @@ function updateServiceRoute() {
       text: file.field.doctrine
     }
   ], "../../#contact");
+
+  renderRouteTopology(serviceRouteTopology, routeLabels, [
+    {
+      label: routeLabels.upstream,
+      value: file.field.incident,
+      text: file.field.exposure
+    },
+    {
+      label: routeLabels.runtime,
+      value: file.operations.integrations[0],
+      text: file.tabs.stack?.items?.[0] || file.tabs.stack?.text || file.tabs.operators.text
+    },
+    {
+      label: routeLabels.downstream,
+      value: file.operations.packages[2] || file.operations.packages[0],
+      text: file.operations.regions.join(" / ")
+    },
+    {
+      label: routeLabels.audit,
+      value: file.operations.sla[2] || file.operations.sla[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
 
   if (serviceRouteOps) {
     const operationGroups = [

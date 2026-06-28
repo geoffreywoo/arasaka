@@ -3461,6 +3461,7 @@ a,
     "brief meta"
     "qualification meta"
     "procurement meta"
+    "topology meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -3620,6 +3621,8 @@ a,
 .product-route-procurement-matrix article,
 .product-route-procurement > p,
 .product-route-procurement-intake,
+.product-route-topology-head,
+.product-route-topology-map article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -4166,6 +4169,106 @@ a,
 .product-route-procurement-intake:focus-visible {
   color: var(--ink);
   outline: 0;
+}
+
+.product-route-topology {
+  grid-area: topology;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.18), rgba(182, 243, 91, 0.11), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-topology-head,
+.product-route-topology-map article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-topology-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-topology-head > span,
+.product-route-topology-map small,
+.product-route-topology-map article > span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-topology-head > span,
+.product-route-topology-map article > span {
+  color: var(--cyan);
+  font-size: 0.66rem;
+}
+
+.product-route-topology-head p,
+.product-route-topology-map p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-topology-map {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-topology-map::before {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 34px;
+  height: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(116, 199, 216, 0.74), rgba(182, 243, 91, 0.48), transparent);
+}
+
+.product-route-topology-map article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 172px;
+}
+
+.product-route-topology-map article::before {
+  position: absolute;
+  top: 28px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 1px solid currentColor;
+  background: rgba(5, 5, 7, 0.92);
+  box-shadow: 0 0 16px rgba(116, 199, 216, 0.42);
+  transform: rotate(45deg);
+}
+
+.product-route-topology-map small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-topology-map strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
 }
 
 .product-route-switcher {
@@ -10247,6 +10350,7 @@ a,
       "brief"
       "qualification"
       "procurement"
+      "topology"
       "switcher"
       "ops"
       "panels"
@@ -10301,6 +10405,14 @@ a,
   }
 
   .product-route-procurement-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-topology {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-topology-map {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -10943,12 +11055,21 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-topology-map {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-topology-map::before {
+    display: none;
+  }
+
   .product-route-brief article {
     min-height: 0;
   }
 
   .product-route-qualification article,
-  .product-route-procurement-matrix article {
+  .product-route-procurement-matrix article,
+  .product-route-topology-map article {
     min-height: 0;
   }
 
@@ -11162,6 +11283,7 @@ a,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
+  .product-route-topology,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -11171,6 +11293,10 @@ a,
   .product-route-panels article,
   .product-route-case-rail article,
   .product-route-procurement-matrix article {
+    min-height: 0;
+  }
+
+  .product-route-topology-map article {
     min-height: 0;
   }
 
