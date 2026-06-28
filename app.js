@@ -1591,6 +1591,50 @@ const translations = {
           href: "services/black-ledger-mandate/"
         }
       },
+      acquisitionAria: "Commercial acquisition matrix",
+      acquisitionEyebrow: "Acquisition Matrix",
+      acquisitionTitle: "Systems clear through mandate lanes, not checkout carts.",
+      acquisitionText: "A buyer-side routing surface for principals deciding which Arasaka package can move from rumor to deployment.",
+      acquisitionNotice: "No public pricing. Protected access only.",
+      acquisitionOwner: "Owner",
+      acquisitionClearance: "Clearance",
+      acquisitionWindow: "Window",
+      acquisitionEvidence: "Evidence",
+      acquisitionOpen: "Open lane",
+      acquisition: {
+        continuity: {
+          code: "LANE-01",
+          title: "Continuity Mandate",
+          owner: "Board / founder office",
+          clearance: "AA-90",
+          window: "72H",
+          evidence: "Succession proof + biometric witness"
+        },
+        counter: {
+          code: "LANE-02",
+          title: "Counterintrusion Mandate",
+          owner: "CISO / sovereign net",
+          clearance: "ICE-77",
+          window: "0.9ms",
+          evidence: "Active probe trace + burn authority"
+        },
+        capital: {
+          code: "LANE-03",
+          title: "Black Ledger Mandate",
+          owner: "Founder capital / family office",
+          clearance: "BL-00",
+          window: "T+0",
+          evidence: "Mandate hash + attribution silence"
+        },
+        protection: {
+          code: "LANE-04",
+          title: "Protection Mandate",
+          owner: "Principal security / route office",
+          clearance: "SEC-12",
+          window: "00:18",
+          evidence: "Theater map + force rules"
+        }
+      },
       assuranceAria: "Assurance ledger",
       assuranceEyebrow: "Assurance Ledger",
       assuranceTitle: "Proof artifacts stay sealed until the mandate is real.",
@@ -3647,6 +3691,50 @@ const translations = {
           includes: "ブラック台帳 / スウォーム / 防護",
           proof: "委任ハッシュ + 武力監査",
           href: "services/black-ledger-mandate/"
+        }
+      },
+      acquisitionAria: "商用取得マトリクス",
+      acquisitionEyebrow: "取得マトリクス",
+      acquisitionTitle: "システムは購入カートではなく、委任レーンで承認されます。",
+      acquisitionText: "どの荒坂パッケージを噂から配備へ移せるか判断するプリンシパル向けの買い手側経路面。",
+      acquisitionNotice: "公開価格なし。保護アクセスのみ。",
+      acquisitionOwner: "所有者",
+      acquisitionClearance: "認証",
+      acquisitionWindow: "窓",
+      acquisitionEvidence: "証拠",
+      acquisitionOpen: "レーンを開く",
+      acquisition: {
+        continuity: {
+          code: "LANE-01",
+          title: "継続性委任",
+          owner: "取締役会 / 創業者室",
+          clearance: "AA-90",
+          window: "72H",
+          evidence: "継承証明 + 生体証人"
+        },
+        counter: {
+          code: "LANE-02",
+          title: "対侵入委任",
+          owner: "CISO / 主権ネット",
+          clearance: "ICE-77",
+          window: "0.9ms",
+          evidence: "能動探査痕跡 + 焼却権限"
+        },
+        capital: {
+          code: "LANE-03",
+          title: "ブラック台帳委任",
+          owner: "創業者資本 / ファミリーオフィス",
+          clearance: "BL-00",
+          window: "T+0",
+          evidence: "委任ハッシュ + 帰属沈黙"
+        },
+        protection: {
+          code: "LANE-04",
+          title: "防護委任",
+          owner: "プリンシパル警護 / 経路室",
+          clearance: "SEC-12",
+          window: "00:18",
+          evidence: "作戦区地図 + 武力規則"
         }
       },
       assuranceAria: "保証台帳",
