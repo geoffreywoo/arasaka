@@ -3798,6 +3798,168 @@ a,
   outline: 0;
 }
 
+.assurance-ledger {
+  width: min(1180px, 100%);
+  margin: 14px auto 0;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.76fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.18), rgba(182, 243, 91, 0.1), rgba(225, 7, 20, 0.12)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.assurance-ledger-head,
+.assurance-ledger article,
+.assurance-ledger-seal {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.05), transparent 55%),
+    rgba(4, 8, 11, 0.94);
+}
+
+.assurance-ledger-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--cyan);
+}
+
+.assurance-ledger-head span,
+.assurance-ledger article > span,
+.assurance-ledger dt,
+.assurance-ledger-seal span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.63rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.assurance-ledger-head span,
+.assurance-ledger article > span,
+.assurance-ledger-seal span {
+  color: var(--cyan);
+}
+
+.assurance-ledger-head strong {
+  color: var(--paper);
+  font-size: 1.24rem;
+  line-height: 1.05;
+}
+
+.assurance-ledger-head p,
+.assurance-ledger article p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.assurance-ledger-head a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 38px;
+  width: fit-content;
+  padding: 0 10px;
+  border: 1px solid rgba(116, 199, 216, 0.28);
+  border-radius: 4px;
+  color: var(--cyan);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.assurance-ledger-head a:hover,
+.assurance-ledger-head a:focus-visible {
+  border-color: rgba(182, 243, 91, 0.44);
+  color: var(--acid);
+  outline: 0;
+}
+
+.assurance-ledger article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 11px;
+  min-height: 266px;
+  padding: 15px;
+}
+
+.assurance-ledger article::before {
+  position: absolute;
+  inset: auto 12px 0;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.82;
+}
+
+.assurance-ledger article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.assurance-ledger h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.assurance-ledger dl {
+  display: grid;
+  gap: 1px;
+  margin: auto 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.assurance-ledger dl div {
+  display: grid;
+  gap: 5px;
+  padding: 9px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.assurance-ledger dt {
+  color: var(--dim);
+}
+
+.assurance-ledger dd {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.84);
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.assurance-ledger-seal {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-top: 1px solid rgba(116, 199, 216, 0.14);
+}
+
+.assurance-ledger-seal img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 0.78;
+  filter: drop-shadow(0 0 10px rgba(116, 199, 216, 0.35));
+}
+
 .product-link,
 .product-route-link,
 .service-route-link {
@@ -10996,6 +11158,14 @@ a,
     grid-column: 1 / -1;
   }
 
+  .assurance-ledger {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .assurance-ledger-head {
+    grid-column: 1 / -1;
+  }
+
   .product-page-body {
     grid-template-columns: 1fr;
   }
@@ -11961,6 +12131,19 @@ a,
     min-height: 70px;
   }
 
+  .assurance-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .assurance-ledger-head,
+  .assurance-ledger article {
+    padding: 14px;
+  }
+
+  .assurance-ledger-seal {
+    justify-content: flex-start;
+  }
+
   .product-route-header {
     align-items: start;
   }
@@ -12170,6 +12353,10 @@ a,
   }
 
   .solution-bundles article {
+    min-height: 0;
+  }
+
+  .assurance-ledger article {
     min-height: 0;
   }
 

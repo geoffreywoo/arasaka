@@ -1585,6 +1585,44 @@ const translations = {
           href: "services/black-ledger-mandate/"
         }
       },
+      assuranceAria: "Assurance ledger",
+      assuranceEyebrow: "Assurance Ledger",
+      assuranceTitle: "Proof artifacts stay sealed until the mandate is real.",
+      assuranceText: "A procurement-facing trust layer for custody, command, retention, and attribution. Public enough to qualify the system, narrow enough to expose only what a board can safely review.",
+      assuranceStatus: "Status",
+      assuranceEvidence: "Evidence",
+      assuranceOpen: "Review access",
+      assuranceSeal: "Authenticated by Arasaka Internal Assurance",
+      assurance: {
+        custody: {
+          code: "AS-01",
+          title: "Neural Custody Audit",
+          text: "Engram capture, construct movement, and archive thaw require biometric witness plus board-grade authorization.",
+          status: "Dual-key",
+          evidence: "Archive integrity report"
+        },
+        command: {
+          code: "AS-02",
+          title: "Human Command Chain",
+          text: "Autonomous response, burn authority, and kinetic escalation remain bound to named human witnesses.",
+          status: "Witnessed",
+          evidence: "Force and burn ledger"
+        },
+        retention: {
+          code: "AS-03",
+          title: "Cold Retention Policy",
+          text: "Memory proofs, mandate hashes, and settlement traces are held in cold partitions with narrow disclosure clocks.",
+          status: "Sealed",
+          evidence: "Retention manifest"
+        },
+        attribution: {
+          code: "AS-04",
+          title: "Attribution Control",
+          text: "Public silence, founder signal, and counterparty exposure are scored before capital or reputation moves.",
+          status: "Dark rail",
+          evidence: "Disclosure timer"
+        }
+      },
       card: {
         relic: {
           title: "Relic Continuity Suite",
@@ -3583,6 +3621,44 @@ const translations = {
           includes: "ブラック台帳 / スウォーム / 防護",
           proof: "委任ハッシュ + 武力監査",
           href: "services/black-ledger-mandate/"
+        }
+      },
+      assuranceAria: "保証台帳",
+      assuranceEyebrow: "保証台帳",
+      assuranceTitle: "証明アーティファクトは、委任が実在するまで封印されます。",
+      assuranceText: "保管、指揮、保持、帰属のための調達向け信頼レイヤー。システムを適格化するには十分に公開され、取締役会が安全に審査できる範囲だけを露出します。",
+      assuranceStatus: "状態",
+      assuranceEvidence: "証拠",
+      assuranceOpen: "アクセス審査",
+      assuranceSeal: "荒坂内部保証により認証",
+      assurance: {
+        custody: {
+          code: "AS-01",
+          title: "神経保管監査",
+          text: "エングラム取得、コンストラクト移動、アーカイブ解凍には、生体証人と取締役会級承認が必要です。",
+          status: "二重鍵",
+          evidence: "アーカイブ完全性報告"
+        },
+        command: {
+          code: "AS-02",
+          title: "人間指揮鎖",
+          text: "自律応答、焼却権限、キネティック・エスカレーションは、指名された人間証人へ結合されます。",
+          status: "証人付き",
+          evidence: "武力・焼却台帳"
+        },
+        retention: {
+          code: "AS-03",
+          title: "冷却保持ポリシー",
+          text: "記憶証明、委任ハッシュ、決済追跡は、狭い開示時計を持つ冷却パーティションに保持されます。",
+          status: "封印済み",
+          evidence: "保持マニフェスト"
+        },
+        attribution: {
+          code: "AS-04",
+          title: "帰属制御",
+          text: "資本または評価が動く前に、公開沈黙、創業者信号、相手方露出が採点されます。",
+          status: "暗黒レール",
+          evidence: "開示タイマー"
         }
       },
       card: {
