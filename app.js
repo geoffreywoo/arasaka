@@ -2417,6 +2417,13 @@ const translations = {
       retentionState: "Retention State",
       handoffChannel: "Handoff Channel",
       checksum: "Checksum",
+      boardDocket: "Board Docket",
+      boardDocketLead: "Executive authorization packet binding chair review, launch motion, quorum state, and capital escrow before external delivery.",
+      chairReview: "Chair Review",
+      launchMotion: "Launch Motion",
+      quorumState: "Quorum State",
+      escrowMemo: "Escrow Memo",
+      docketNote: "Note",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2614,6 +2621,13 @@ const translations = {
       retentionState: "Retention State",
       handoffChannel: "Handoff Channel",
       checksum: "Checksum",
+      boardDocket: "Board Docket",
+      boardDocketLead: "Executive mandate packet binding sponsor review, activation motion, quorum state, and capital escrow before field delivery.",
+      chairReview: "Sponsor Review",
+      launchMotion: "Activation Motion",
+      quorumState: "Quorum State",
+      escrowMemo: "Escrow Memo",
+      docketNote: "Note",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4926,6 +4940,13 @@ const translations = {
       retentionState: "保持状態",
       handoffChannel: "引き渡しチャネル",
       checksum: "チェックサム",
+      boardDocket: "取締役会ドケット",
+      boardDocketLead: "外部納入前に、議長審査、起動動議、定足数状態、資本エスクローを束ねる役員承認パケット。",
+      chairReview: "議長審査",
+      launchMotion: "起動動議",
+      quorumState: "定足数状態",
+      escrowMemo: "エスクローメモ",
+      docketNote: "注記",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5123,6 +5144,13 @@ const translations = {
       retentionState: "保持状態",
       handoffChannel: "引き渡しチャネル",
       checksum: "チェックサム",
+      boardDocket: "取締役会ドケット",
+      boardDocketLead: "現場納入前に、スポンサー審査、起動動議、定足数状態、資本エスクローを束ねる役員委任パケット。",
+      chairReview: "スポンサー審査",
+      launchMotion: "起動動議",
+      quorumState: "定足数状態",
+      escrowMemo: "エスクローメモ",
+      docketNote: "注記",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5388,6 +5416,7 @@ const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
 const routeAuthorizationLedger = document.querySelector("[data-route-authorization-ledger]");
 const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]");
 const routeForensicReceipt = document.querySelector("[data-route-forensic-receipt]");
+const routeBoardDocket = document.querySelector("[data-route-board-docket]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5425,6 +5454,7 @@ const serviceRouteCustodyChain = document.querySelector("[data-service-custody-c
 const serviceRouteAuthorizationLedger = document.querySelector("[data-service-authorization-ledger]");
 const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team-replay]");
 const serviceRouteForensicReceipt = document.querySelector("[data-service-forensic-receipt]");
+const serviceRouteBoardDocket = document.querySelector("[data-service-board-docket]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7028,6 +7058,38 @@ function renderRouteForensicReceipt(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteBoardDocket(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-docket-head";
+  label.textContent = labels.boardDocket;
+  lead.textContent = labels.boardDocketLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-docket-rail";
+  rows.forEach(({ label: rowLabel, value, text, note }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const memo = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    memo.textContent = `${labels.docketNote}: ${note}`;
+    article.append(eyebrow, title, copy, memo);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7736,6 +7798,33 @@ function updateProductRoute() {
       value: operations.packages[0],
       text: `${dictionary.productRoute.capitalObserver} / G.W. / A-F`,
       checksum: operations.integrations[0]
+    }
+  ]);
+
+  renderRouteBoardDocket(routeBoardDocket, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.chairReview,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      note: file.clearance
+    },
+    {
+      label: dictionary.productRoute.launchMotion,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      note: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.quorumState,
+      value: operations.regions[0],
+      text: `${field.doctrine} / ${field.exposure}`,
+      note: operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.escrowMemo,
+      value: operations.packages[0],
+      text: `${dictionary.productRoute.capitalObserver} / ${operations.integrations[0]}`,
+      note: "G.W. / A-F"
     }
   ]);
 
@@ -8524,6 +8613,33 @@ function updateServiceRoute() {
       value: file.operations.packages[0],
       text: `${routeLabels.capitalObserver} / G.W. / A-F`,
       checksum: file.operations.integrations[0]
+    }
+  ]);
+
+  renderRouteBoardDocket(serviceRouteBoardDocket, routeLabels, [
+    {
+      label: routeLabels.chairReview,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      note: file.clearance
+    },
+    {
+      label: routeLabels.launchMotion,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      note: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.quorumState,
+      value: file.operations.regions[0],
+      text: `${file.field.doctrine} / ${file.field.exposure}`,
+      note: file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.escrowMemo,
+      value: file.operations.packages[0],
+      text: `${routeLabels.capitalObserver} / ${file.operations.integrations[0]}`,
+      note: "G.W. / A-F"
     }
   ]);
 
