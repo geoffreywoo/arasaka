@@ -3761,6 +3761,15 @@ const sectionTargets = Object.keys(sectionLabelKeys)
 const readPath = (object, path) => path.split(".").reduce((value, key) => value?.[key], object);
 const productRouteOrder = ["relic", "mikoshi", "ice", "ledger", "swarm", "soulkiller"];
 const serviceRouteOrder = ["executive", "counter", "capital", "protection"];
+const routeFieldImages = {
+  product: {
+    ledger: "cyberpunk2077-afterlife-press.png"
+  },
+  service: {
+    capital: "cyberpunk2077-afterlife-press.png"
+  },
+  fallback: "cyberpunk2077-showdown-press.png"
+};
 
 const productOperations = {
   en: {
@@ -4451,7 +4460,7 @@ function updateProductRoute() {
       [dictionary.productRoute.doctrine, field.doctrine]
     ];
 
-    image.src = "../../assets/cyberpunk2077-showdown-press.png";
+    image.src = `../../assets/${routeFieldImages.product[productKey] || routeFieldImages.fallback}`;
     image.alt = field.title;
     image.loading = "lazy";
     captionLabel.textContent = dictionary.productRoute.imageCredit;
@@ -4668,7 +4677,7 @@ function updateServiceRoute() {
       [routeLabels.doctrine, file.field.doctrine]
     ];
 
-    image.src = "../../assets/cyberpunk2077-showdown-press.png";
+    image.src = `../../assets/${routeFieldImages.service[serviceKey] || routeFieldImages.fallback}`;
     image.alt = file.field.title;
     image.loading = "lazy";
     captionLabel.textContent = routeLabels.imageCredit;
