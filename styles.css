@@ -1911,7 +1911,8 @@ a,
 .lore-console,
 .lore-briefings,
 .lore-chronology,
-.source-vault {
+.source-vault,
+.signal-intel {
   position: relative;
   z-index: 1;
 }
@@ -2448,6 +2449,172 @@ a,
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.62rem;
   font-weight: 900;
+}
+
+.signal-intel {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.38fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.22), rgba(116, 199, 216, 0.12), rgba(209, 177, 107, 0.14)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.signal-intel-head,
+.signal-intel article {
+  min-width: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent),
+    rgba(6, 8, 10, 0.92);
+}
+
+.signal-intel-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--red);
+}
+
+.signal-intel-head span,
+.signal-intel article > span,
+.signal-intel dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.signal-intel-head span,
+.signal-intel article > span {
+  color: var(--red);
+}
+
+.signal-intel-head strong {
+  color: var(--paper);
+  font-size: 1.18rem;
+  line-height: 1.05;
+}
+
+.signal-intel-head p,
+.signal-intel article p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.signal-intel article {
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  display: grid;
+  align-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.signal-intel article::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  content: "";
+  background: linear-gradient(180deg, var(--red), var(--cyan));
+  box-shadow: 0 0 22px rgba(225, 7, 20, 0.45);
+}
+
+.signal-intel article::after {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 34px;
+  height: 34px;
+  content: "";
+  border: 1px solid currentColor;
+  opacity: 0.26;
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+}
+
+.signal-intel article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-intel h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.08rem;
+  line-height: 1.06;
+}
+
+.signal-intel dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.signal-intel dl div {
+  display: grid;
+  gap: 3px;
+  min-height: 52px;
+  align-content: center;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.signal-intel dt {
+  color: var(--dim);
+}
+
+.signal-intel dd {
+  margin: 0;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.signal-intel a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(225, 7, 20, 0.22);
+  border-radius: 4px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.signal-intel a:hover,
+.signal-intel a:focus-visible {
+  border-color: currentColor;
+  color: var(--acid);
+  outline: 0;
+}
+
+.signal-intel-ghost {
+  color: var(--gold);
+}
+
+.signal-intel-ghost::before {
+  background: linear-gradient(180deg, var(--gold), var(--acid));
+}
+
+.signal-intel-ghost > span,
+.signal-intel-ghost dd {
+  color: var(--gold);
 }
 
 .command-ribbon {
@@ -9840,6 +10007,14 @@ a,
     grid-column: 1 / -1;
   }
 
+  .signal-intel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .signal-intel-head {
+    grid-column: 1 / -1;
+  }
+
   .megacity-readout {
     grid-template-columns: minmax(140px, 0.28fr) minmax(0, 1fr);
   }
@@ -10428,6 +10603,10 @@ a,
   .source-vault figure,
   .source-vault img {
     min-height: 190px;
+  }
+
+  .signal-intel article {
+    min-height: 218px;
   }
 
   .city-district:hover,
@@ -11023,6 +11202,7 @@ a,
   .lore-chronology,
   .lore-chronology ol,
   .source-vault,
+  .signal-intel,
   .lore-readout dl,
   .product-grid,
   .node-dock-readouts,

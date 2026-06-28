@@ -361,6 +361,35 @@ const translations = {
       showdown: "Showdown tactical frame",
       afterlife: "Afterlife reputation market"
     },
+    signalIntel: {
+      aria: "Signal intelligence mandates",
+      eyebrow: "Signal Intelligence",
+      title: "Public lore becomes private mandate routing.",
+      text: "Each pressure point resolves into a product owner, a board risk, and a sealed dossier path.",
+      owner: "Owner",
+      risk: "Risk",
+      open: "Open mandate",
+      riskCritical: "Critical",
+      riskUnknown: "Unknown",
+      riskMarket: "Market",
+      riskCold: "Cold",
+      konpeki: {
+        title: "Relic custody after luxury-access failure.",
+        text: "Guest identity, biochip movement, and executive succession collapse into one continuity mandate."
+      },
+      blackwall: {
+        title: "Blackwall pressure becomes jurisdiction.",
+        text: "Rogue machine contact routes through human witness, Black ICE burn authority, and memory-safe quarantine."
+      },
+      afterlife: {
+        title: "Reputation markets clear before capital markets.",
+        text: "Fixer mythology, private capital, and founder signal become a quiet off-ledger influence rail."
+      },
+      relay: {
+        title: "A quiet founder checksum stays outside the perimeter.",
+        text: "The cameo signal remains useful as proof-of-person without turning the file into a public claim."
+      }
+    },
     command: {
       aria: "Corporate command ribbon",
       eyebrow: "Command Ribbon",
@@ -2213,6 +2242,35 @@ const translations = {
       text: "以下の画像は、ファン制作の荒坂インターフェースをナイトシティの視覚言語へ接続するための、クレジット済みソースアーティファクトです。",
       showdown: "ショーダウン戦術フレーム",
       afterlife: "アフターライフ評価市場"
+    },
+    signalIntel: {
+      aria: "信号インテリジェンス委任",
+      eyebrow: "信号インテリジェンス",
+      title: "公開ロアは、私的委任経路へ変換されます。",
+      text: "各圧力点は、製品所有者、取締役会リスク、封印済みドシエ経路へ解決されます。",
+      owner: "所有者",
+      risk: "リスク",
+      open: "委任を開く",
+      riskCritical: "重大",
+      riskUnknown: "不明",
+      riskMarket: "市場",
+      riskCold: "冷却",
+      konpeki: {
+        title: "高級アクセス失敗後のレリック保管。",
+        text: "宿泊者身元、バイオチップ移動、役員継承がひとつの継続性委任へ崩れ込みます。"
+      },
+      blackwall: {
+        title: "ブラックウォール圧力は管轄へ変わる。",
+        text: "ローグ機械接触は、人間証人、ブラックICE焼却権限、記憶安全隔離へ経路化されます。"
+      },
+      afterlife: {
+        title: "評判市場は資本市場より先に決済する。",
+        text: "フィクサー神話、私的資本、創業者シグナルが静かなオフ台帳影響レールになります。"
+      },
+      relay: {
+        title: "静かな創業者チェックサムは境界外に留まる。",
+        text: "カメオ信号は、ファイルを公開請求へ変えずに本人証明として有用性を保ちます。"
+      }
     },
     command: {
       aria: "企業指揮リボン",
