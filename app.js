@@ -2327,6 +2327,12 @@ const translations = {
       configurationBlack: "Black",
       configurationScope: "Scope",
       configurationEscalation: "Escalation",
+      decisionMatrix: "Mandate Decision Matrix",
+      decisionMatrixLead: "A final executive read on signer, blocker, readiness signal, and room routing before activation is authorized.",
+      signer: "Signer",
+      blocker: "Blocker",
+      readySignal: "Ready Signal",
+      roomRoute: "Room Route",
       runbook: "Deployment Runbook",
       runbookLead: "A sealed activation sequence for moving this product from intake to controlled authority.",
       intakePhase: "Intake",
@@ -2440,6 +2446,12 @@ const translations = {
       configurationBlack: "Black",
       configurationScope: "Scope",
       configurationEscalation: "Escalation",
+      decisionMatrix: "Mandate Decision Matrix",
+      decisionMatrixLead: "A final sponsor read on signer, blocker, readiness signal, and room routing before the service team activates.",
+      signer: "Signer",
+      blocker: "Blocker",
+      readySignal: "Ready Signal",
+      roomRoute: "Room Route",
       runbook: "Deployment Runbook",
       runbookLead: "A sealed engagement sequence for moving this mandate from sponsor signal to operational proof.",
       intakePhase: "Intake",
@@ -4668,6 +4680,12 @@ const translations = {
       configurationBlack: "ブラック",
       configurationScope: "範囲",
       configurationEscalation: "エスカレーション",
+      decisionMatrix: "委任判断マトリクス",
+      decisionMatrixLead: "起動承認前に、署名者、阻害要因、準備信号、ルーム経路を確認する最終役員判定。",
+      signer: "署名者",
+      blocker: "阻害要因",
+      readySignal: "準備信号",
+      roomRoute: "ルーム経路",
       runbook: "配備ランブック",
       runbookLead: "この製品を取込から制御権限へ移すための封印済み起動シーケンス。",
       intakePhase: "取込",
@@ -4781,6 +4799,12 @@ const translations = {
       configurationBlack: "ブラック",
       configurationScope: "範囲",
       configurationEscalation: "エスカレーション",
+      decisionMatrix: "委任判断マトリクス",
+      decisionMatrixLead: "サービスチーム起動前に、署名者、阻害要因、準備信号、ルーム経路を確認する最終スポンサー判定。",
+      signer: "署名者",
+      blocker: "阻害要因",
+      readySignal: "準備信号",
+      roomRoute: "ルーム経路",
       runbook: "配備ランブック",
       runbookLead: "この委任をスポンサー信号から運用証明へ移す封印済みエンゲージメント・シーケンス。",
       intakePhase: "取込",
@@ -5039,6 +5063,7 @@ const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
+const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
@@ -5064,6 +5089,7 @@ const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
+const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
@@ -6199,6 +6225,38 @@ function renderRouteConfiguration(target, labels, tiers) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteDecision(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-decision-head";
+  label.textContent = labels.decisionMatrix;
+  lead.textContent = labels.decisionMatrixLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-decision-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `D-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteRunbook(target, labels, rows) {
   if (!target) return;
 
@@ -6594,6 +6652,29 @@ function updateProductRoute() {
       scope: operations.packages[2] || operations.packages[1] || operations.packages[0],
       escalation: operations.integrations.slice(1).join(" / ") || operations.integrations[0],
       proof: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteDecision(routeDecision, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.signer,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.blocker,
+      value: field.exposure,
+      text: field.doctrine
+    },
+    {
+      label: dictionary.productRoute.readySignal,
+      value: operations.sla[0],
+      text: operations.sla.slice(1).join(" / ")
+    },
+    {
+      label: dictionary.productRoute.roomRoute,
+      value: operations.packages[0],
+      text: `${operations.regions[0]} / ${operations.integrations[0]}`
     }
   ]);
 
@@ -7062,6 +7143,29 @@ function updateServiceRoute() {
       scope: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
       escalation: file.operations.integrations.slice(1).join(" / ") || file.operations.integrations[0],
       proof: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteDecision(serviceRouteDecision, routeLabels, [
+    {
+      label: routeLabels.signer,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text
+    },
+    {
+      label: routeLabels.blocker,
+      value: file.field.exposure,
+      text: file.field.doctrine
+    },
+    {
+      label: routeLabels.readySignal,
+      value: file.operations.sla[0],
+      text: file.operations.sla.slice(1).join(" / ")
+    },
+    {
+      label: routeLabels.roomRoute,
+      value: file.operations.packages[0],
+      text: `${file.operations.regions[0]} / ${file.operations.integrations[0]}`
     }
   ]);
 
