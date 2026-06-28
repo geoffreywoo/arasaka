@@ -2380,6 +2380,13 @@ const translations = {
       closeoutLine: "Closeout Line",
       operator: "Operator",
       timestamp: "Timestamp",
+      threatModel: "Threat Model",
+      threatModelLead: "A route-specific adversary model for who attacks this system, where pressure enters, how containment holds, and what proves control.",
+      adversary: "Adversary",
+      attackSurface: "Attack Surface",
+      containmentModel: "Containment Model",
+      proofModel: "Proof Model",
+      pressure: "Pressure",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2540,6 +2547,13 @@ const translations = {
       closeoutLine: "Closeout Line",
       operator: "Operator",
       timestamp: "Timestamp",
+      threatModel: "Threat Model",
+      threatModelLead: "A route-specific adversary model for who pressures this mandate, where exposure enters, how containment holds, and what proves control.",
+      adversary: "Adversary",
+      attackSurface: "Attack Surface",
+      containmentModel: "Containment Model",
+      proofModel: "Proof Model",
+      pressure: "Pressure",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4815,6 +4829,13 @@ const translations = {
       closeoutLine: "完了ライン",
       operator: "オペレーター",
       timestamp: "タイムスタンプ",
+      threatModel: "脅威モデル",
+      threatModelLead: "誰がこのシステムを攻撃し、圧力がどこから入り、封じ込めがどう維持され、何が制御を証明するかを示すルート別敵対者モデル。",
+      adversary: "敵対者",
+      attackSurface: "攻撃面",
+      containmentModel: "封じ込めモデル",
+      proofModel: "証明モデル",
+      pressure: "圧力",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -4975,6 +4996,13 @@ const translations = {
       closeoutLine: "完了ライン",
       operator: "オペレーター",
       timestamp: "タイムスタンプ",
+      threatModel: "脅威モデル",
+      threatModelLead: "誰がこの委任に圧力をかけ、露出がどこから入り、封じ込めがどう維持され、何が制御を証明するかを示すルート別敵対者モデル。",
+      adversary: "敵対者",
+      attackSurface: "攻撃面",
+      containmentModel: "封じ込めモデル",
+      proofModel: "証明モデル",
+      pressure: "圧力",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5235,6 +5263,7 @@ const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routePrivateRoom = document.querySelector("[data-route-private-room]");
 const routeTranscript = document.querySelector("[data-route-transcript]");
+const routeThreatModel = document.querySelector("[data-route-threat-model]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5267,6 +5296,7 @@ const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
 const serviceRouteTranscript = document.querySelector("[data-service-transcript]");
+const serviceRouteThreatModel = document.querySelector("[data-service-threat-model]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6698,6 +6728,40 @@ function renderRouteTranscript(target, labels, rows) {
   target.replaceChildren(heading, log);
 }
 
+function renderRouteThreatModel(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-threat-head";
+  label.textContent = labels.threatModel;
+  lead.textContent = labels.threatModelLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-threat-grid";
+  rows.forEach(({ label: rowLabel, value, text, pressure }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const seal = document.createElement("em");
+
+    code.textContent = `M-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    seal.textContent = `${labels.pressure}: ${pressure}`;
+    article.append(code, eyebrow, title, copy, seal);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7271,6 +7335,33 @@ function updateProductRoute() {
       text: operations.integrations.slice(1).join(" / ") || operations.integrations[0],
       operator: operations.packages[0],
       timestamp: operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteThreatModel(routeThreatModel, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.adversary,
+      value: field.incident,
+      text: field.text,
+      pressure: file.clearance
+    },
+    {
+      label: dictionary.productRoute.attackSurface,
+      value: field.exposure,
+      text: `${file.surface} / ${operations.integrations.join(" / ")}`,
+      pressure: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.containmentModel,
+      value: operations.packages[2] || operations.packages[1] || operations.packages[0],
+      text: file.tabs.deployment.text,
+      pressure: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.proofModel,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: field.doctrine,
+      pressure: operations.sla[2] || operations.sla[1] || operations.sla[0]
     }
   ]);
 
@@ -7924,6 +8015,33 @@ function updateServiceRoute() {
       text: file.operations.integrations.slice(1).join(" / ") || file.operations.integrations[0],
       operator: file.operations.packages[0],
       timestamp: file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteThreatModel(serviceRouteThreatModel, routeLabels, [
+    {
+      label: routeLabels.adversary,
+      value: file.field.incident,
+      text: file.field.text,
+      pressure: file.clearance
+    },
+    {
+      label: routeLabels.attackSurface,
+      value: file.field.exposure,
+      text: `${file.surface} / ${file.operations.integrations.join(" / ")}`,
+      pressure: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.containmentModel,
+      value: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
+      text: file.tabs.deployment.text,
+      pressure: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.proofModel,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.field.doctrine,
+      pressure: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 
