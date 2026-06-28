@@ -604,6 +604,38 @@ select {
   font: inherit;
 }
 
+button,
+a,
+dd,
+dt,
+h1,
+h2,
+h3,
+p,
+span,
+strong {
+  min-width: 0;
+}
+
+button,
+a,
+.button,
+.mobile-nav a,
+.node-dock-mode,
+.core-mode,
+.protocol-mode,
+.foundry-platform,
+.ice-vector,
+.swarm-mode,
+.vault-tier,
+.mikoshi-mode,
+.soulkiller-stage,
+.blackwall-protocol,
+.capital-mode,
+.exchange-market {
+  overflow-wrap: anywhere;
+}
+
 .skip-link {
   position: fixed;
   left: 16px;
@@ -833,7 +865,8 @@ select {
   right: 16px;
   top: 72px;
   z-index: 19;
-  overflow: hidden;
+  overflow: hidden auto;
+  max-height: calc(100svh - 92px - env(safe-area-inset-bottom));
   display: none;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
@@ -852,7 +885,7 @@ select {
 }
 
 .mobile-nav a {
-  min-height: 46px;
+  min-height: 44px;
   display: grid;
   align-items: center;
   padding: 0 14px;
@@ -7457,6 +7490,10 @@ select {
 
 @media (max-width: 720px) {
   body {
+    padding-bottom: 92px;
+  }
+
+  body.has-expanded-dock {
     padding-bottom: 268px;
   }
 
@@ -7489,6 +7526,8 @@ select {
     left: 12px;
     right: 12px;
     top: 64px;
+    max-height: calc(100svh - 82px - env(safe-area-inset-bottom));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .public-node-dock {
@@ -7500,6 +7539,10 @@ select {
       "copy"
       "modes"
       "readouts";
+  }
+
+  .public-node-dock.is-collapsed {
+    width: min(244px, calc(100vw - 24px));
   }
 
   .node-dock-status,
@@ -7527,8 +7570,8 @@ select {
   }
 
   .hero {
-    min-height: 82svh;
-    padding: 108px 18px 34px;
+    min-height: 78svh;
+    padding: 94px 18px 34px;
   }
 
   .hero-shell {
@@ -7536,7 +7579,8 @@ select {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 1;
   }
 
   .hero-text {
@@ -7546,6 +7590,12 @@ select {
   .hero-actions,
   .button {
     width: 100%;
+  }
+
+  .button {
+    min-height: 50px;
+    padding-inline: 14px;
+    text-align: center;
   }
 
   .status-rail {
@@ -7935,6 +7985,10 @@ select {
 
 @media (max-width: 420px) {
   body {
+    padding-bottom: 88px;
+  }
+
+  body.has-expanded-dock {
     padding-bottom: 314px;
   }
 
@@ -7942,8 +7996,32 @@ select {
     font-size: 0.9rem;
   }
 
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    padding-inline: 12px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .locale-button {
+    min-width: 42px;
+    font-size: 0.76rem;
+  }
+
   .hero h1 {
-    font-size: 2.42rem;
+    font-size: 2.18rem;
   }
 
   .section h2,
@@ -8223,7 +8301,17 @@ select {
   }
 
   .mobile-nav {
-    grid-template-columns: 1fr;
+    left: 8px;
+    right: 8px;
+    top: 60px;
+    max-height: calc(100svh - 76px - env(safe-area-inset-bottom));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-nav a {
+    min-height: 40px;
+    padding-inline: 10px;
+    font-size: 0.68rem;
   }
 
   .matrix-mode {

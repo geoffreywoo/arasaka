@@ -2637,6 +2637,7 @@ const navLinks = document.querySelectorAll(".site-nav a[href^='#'], .mobile-nav 
 let terminalOffset = 0;
 let activeDockMode = "custody";
 let isDockCollapsed = false;
+let dockUserToggled = false;
 let activeHeroDiagnostic = "relic";
 let activeProtocolMode = "neural";
 let activeCityDistrict = "plaza";
@@ -2823,7 +2824,13 @@ function setDockCollapsed(collapsed) {
   if (nodeDock) {
     nodeDock.classList.toggle("is-collapsed", collapsed);
   }
+  document.body.classList.toggle("has-expanded-dock", !collapsed);
   updateDockToggleLabel();
+}
+
+function syncDockForViewport() {
+  if (!nodeDock || dockUserToggled) return;
+  setDockCollapsed(window.matchMedia("(max-width: 720px)").matches);
 }
 
 function updateDockMode(modeKey) {
@@ -3496,6 +3503,7 @@ function initMobileMenu() {
     if (window.innerWidth > 1040) {
       setMobileMenu(false);
     }
+    syncDockForViewport();
   });
 }
 
@@ -3526,6 +3534,7 @@ languageButtons.forEach((button) => {
 
 if (nodeDockToggle) {
   nodeDockToggle.addEventListener("click", () => {
+    dockUserToggled = true;
     setDockCollapsed(!isDockCollapsed);
   });
 }
@@ -4034,6 +4043,7 @@ initTopologyCanvas();
 initSignalWeather();
 initBootSequence();
 initCursorReticle();
+syncDockForViewport();
 initSignalSpine();
 initMobileMenu();
 initActiveSections();
