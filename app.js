@@ -1434,6 +1434,67 @@ const translations = {
         }
       }
     },
+    casefiles: {
+      aria: "Incident case file console",
+      eyebrow: "Incident Case Files",
+      title: "Night City disasters are product requirements with blood still on the page.",
+      text: "Browse public-safe fragments from the Arasaka incident desk: evidence frames, response owners, proof artifacts, and the commercial systems each disaster hardens.",
+      tabAria: "Incident case file",
+      stamp: "Internal Archive",
+      active: "Active Case",
+      evidence: "Evidence",
+      owner: "Owner",
+      severity: "Severity",
+      open: "Open internal dossier",
+      tab: {
+        konpeki: "Konpeki",
+        tower: "Tower",
+        blackwall: "Blackwall",
+        afterlife: "Afterlife"
+      },
+      detail: {
+        konpeki: {
+          code: "KP-RELIC",
+          title: "Konpeki Relic Breach",
+          text: "A luxury hotel incident exposes succession, guest identity, and biochip custody as a single attack surface.",
+          evidence: "Biochip custody trace",
+          owner: "Relic / Executive Continuity",
+          severity: "Board Critical",
+          image: "assets/product-relic-catalog.png",
+          href: "products/relic/"
+        },
+        tower: {
+          code: "AT-MIKOSHI",
+          title: "Arasaka Tower Trauma",
+          text: "Site loss, public mythology, and command shock become the root doctrine for offsite memory custody and redundant authority.",
+          evidence: "Command absence model",
+          owner: "Mikoshi / Orbital Vault",
+          severity: "Existential",
+          image: "assets/product-mikoshi-catalog.png",
+          href: "products/mikoshi/"
+        },
+        blackwall: {
+          code: "BW-ICE",
+          title: "Blackwall Contact Event",
+          text: "Rogue-machine pressure reframes intrusion response as jurisdiction, quarantine, and witnessed burn authority.",
+          evidence: "Rogue AI adjacency",
+          owner: "Black ICE / Counterintrusion",
+          severity: "Unknown",
+          image: "assets/service-counter-catalog.png",
+          href: "services/counterintrusion/"
+        },
+        afterlife: {
+          code: "AF-LEDGER",
+          title: "Afterlife Capital Signal",
+          text: "Street reputation, founder myth, and private liquidity move faster than public markets can name the trade.",
+          evidence: "Reputation collateral",
+          owner: "Black Ledger Mandate",
+          severity: "Market Stealth",
+          image: "assets/service-capital-catalog.png",
+          href: "services/black-ledger-mandate/"
+        }
+      }
+    },
     doctrine: {
       eyebrow: "Classified Doctrine",
       title: "Order is not found. It is manufactured.",
@@ -3719,6 +3780,67 @@ const translations = {
         }
       }
     },
+    casefiles: {
+      aria: "インシデントケースファイルコンソール",
+      eyebrow: "インシデントケースファイル",
+      title: "ナイトシティの災害は、まだ血の残る製品要件です。",
+      text: "荒坂インシデントデスクの公開安全断片を閲覧します。証拠フレーム、応答所有者、証明アーティファクト、そして各災害が強化する商用システム。",
+      tabAria: "インシデントケースファイル",
+      stamp: "内部アーカイブ",
+      active: "稼働ケース",
+      evidence: "証拠",
+      owner: "所有者",
+      severity: "深刻度",
+      open: "内部ドシエを開く",
+      tab: {
+        konpeki: "紺碧",
+        tower: "タワー",
+        blackwall: "黒壁",
+        afterlife: "アフター"
+      },
+      detail: {
+        konpeki: {
+          code: "KP-RELIC",
+          title: "紺碧プラザ・レリック侵害",
+          text: "高級ホテルでの事象が、継承、ゲストID、バイオチップ保管を単一の攻撃面として露出させます。",
+          evidence: "バイオチップ保管痕跡",
+          owner: "レリック / 役員継続性",
+          severity: "取締役会クリティカル",
+          image: "assets/product-relic-catalog.png",
+          href: "products/relic/"
+        },
+        tower: {
+          code: "AT-MIKOSHI",
+          title: "荒坂タワー外傷",
+          text: "拠点喪失、公開神話、指揮ショックが、オフサイト記憶保管と冗長権限の根幹ドクトリンになります。",
+          evidence: "指揮不在モデル",
+          owner: "ミコシ / 軌道保管庫",
+          severity: "存続危機",
+          image: "assets/product-mikoshi-catalog.png",
+          href: "products/mikoshi/"
+        },
+        blackwall: {
+          code: "BW-ICE",
+          title: "ブラックウォール接触事象",
+          text: "Rogue Machine 圧力が、侵入応答を管轄、隔離、証人付き焼却権限として再定義します。",
+          evidence: "Rogue AI 隣接性",
+          owner: "ブラックICE / 対侵入",
+          severity: "不明",
+          image: "assets/service-counter-catalog.png",
+          href: "services/counterintrusion/"
+        },
+        afterlife: {
+          code: "AF-LEDGER",
+          title: "アフターライフ資本シグナル",
+          text: "ストリート評価、創業者神話、私的流動性は、公開市場が取引を名付けるより早く移動します。",
+          evidence: "評価担保",
+          owner: "ブラック台帳マンデート",
+          severity: "市場ステルス",
+          image: "assets/service-capital-catalog.png",
+          href: "services/black-ledger-mandate/"
+        }
+      }
+    },
     doctrine: {
       eyebrow: "機密ドクトリン",
       title: "秩序は発見されるものではありません。製造されるものです。",
@@ -4579,6 +4701,15 @@ const simulationWindow = document.querySelector("[data-sim-window]");
 const simulationRisk = document.querySelector("[data-sim-risk]");
 const simulationProof = document.querySelector("[data-sim-proof]");
 const simulationLink = document.querySelector("[data-sim-link]");
+const casefileButtons = document.querySelectorAll("[data-casefile]");
+const casefileImage = document.querySelector("[data-casefile-image]");
+const casefileCode = document.querySelector("[data-casefile-code]");
+const casefileTitle = document.querySelector("[data-casefile-title]");
+const casefileText = document.querySelector("[data-casefile-text]");
+const casefileEvidence = document.querySelector("[data-casefile-evidence]");
+const casefileOwner = document.querySelector("[data-casefile-owner]");
+const casefileSeverity = document.querySelector("[data-casefile-severity]");
+const casefileLink = document.querySelector("[data-casefile-link]");
 const archiveButtons = document.querySelectorAll("[data-archive-record]");
 const archiveCode = document.querySelector("[data-archive-code]");
 const archiveTitle = document.querySelector("[data-archive-title]");
@@ -4717,6 +4848,7 @@ let activeBlackwallProtocol = "quarantine";
 let activeStackLayer = "body";
 let activeMatrixMode = "intrusion";
 let activeSimulationScenario = "plaza";
+let activeCasefile = "konpeki";
 let activeArchiveRecord = "relic";
 let activeMikoshiMode = "extract";
 let activeSoulkillerStage = "sever";
@@ -5251,6 +5383,7 @@ function setLanguage(language) {
   updateStackLayer(activeStackLayer);
   updateMatrix(activeMatrixMode);
   updateSimulation(activeSimulationScenario);
+  updateCasefile(activeCasefile);
   updateArchive(activeArchiveRecord);
   updateMikoshiMode(activeMikoshiMode);
   updateSoulkillerStage(activeSoulkillerStage);
@@ -6878,6 +7011,29 @@ function updateSimulation(scenarioKey) {
   if (simulationLink) simulationLink.href = scenario.href;
 }
 
+function updateCasefile(caseKey) {
+  if (!casefileTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const record = dictionary.casefiles.detail[caseKey] || dictionary.casefiles.detail.konpeki;
+  activeCasefile = caseKey;
+
+  casefileButtons.forEach((button) => {
+    const isActive = button.dataset.casefile === caseKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (casefileImage) casefileImage.src = record.image;
+  if (casefileCode) casefileCode.textContent = record.code;
+  casefileTitle.textContent = record.title;
+  if (casefileText) casefileText.textContent = record.text;
+  if (casefileEvidence) casefileEvidence.textContent = record.evidence;
+  if (casefileOwner) casefileOwner.textContent = record.owner;
+  if (casefileSeverity) casefileSeverity.textContent = record.severity;
+  if (casefileLink) casefileLink.href = record.href;
+}
+
 function updateArchive(recordKey) {
   if (!archiveTitle) return;
   const language = document.documentElement.dataset.language || "en";
@@ -7433,6 +7589,12 @@ matrixButtons.forEach((button) => {
 simulationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     updateSimulation(button.dataset.simScenario);
+  });
+});
+
+casefileButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateCasefile(button.dataset.casefile);
   });
 });
 

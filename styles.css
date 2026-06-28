@@ -10884,6 +10884,241 @@ a,
   font-weight: 900;
 }
 
+.casefile-section {
+  position: relative;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 1fr);
+  gap: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(5, 5, 7, 0.98), rgba(225, 7, 20, 0.12) 42%, rgba(116, 199, 216, 0.07)),
+    repeating-linear-gradient(0deg, transparent 0 42px, rgba(255, 255, 255, 0.025) 42px 43px),
+    #050607;
+}
+
+.casefile-section::before {
+  position: absolute;
+  inset: 24px 28px;
+  pointer-events: none;
+  content: "";
+  border-top: 1px solid rgba(225, 7, 20, 0.56);
+  border-right: 1px solid rgba(116, 199, 216, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.casefile-section::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent 0 58%, rgba(0, 0, 0, 0.32) 58% 100%),
+    radial-gradient(circle at 22% 68%, rgba(182, 243, 91, 0.08), transparent 28%);
+}
+
+.casefile-copy,
+.casefile-console {
+  position: relative;
+  z-index: 1;
+}
+
+.casefile-copy {
+  display: grid;
+  align-content: center;
+}
+
+.casefile-copy h2 {
+  font-size: 2.65rem;
+}
+
+.casefile-copy p {
+  color: var(--muted);
+}
+
+.casefile-console {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.36fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(320px, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(225, 7, 20, 0.28);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.046), rgba(255, 255, 255, 0.014)),
+    rgba(7, 8, 10, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.casefile-tabs {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.casefile-tab {
+  min-height: 66px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 12px;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+
+.casefile-tab:last-child {
+  border-right: 0;
+}
+
+.casefile-tab span {
+  color: rgba(182, 243, 91, 0.8);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.casefile-tab strong {
+  color: inherit;
+  font-size: 0.74rem;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.casefile-tab:hover,
+.casefile-tab:focus-visible,
+.casefile-tab.is-active {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.26), rgba(182, 243, 91, 0.08)),
+    rgba(225, 7, 20, 0.1);
+}
+
+.casefile-visual {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.44);
+}
+
+.casefile-visual::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.68)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 5px);
+  mix-blend-mode: screen;
+  opacity: 0.52;
+}
+
+.casefile-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.12) contrast(1.08);
+}
+
+.casefile-stamp {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid rgba(225, 7, 20, 0.46);
+  background: rgba(5, 5, 7, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+.casefile-stamp span,
+.casefile-readout > span,
+.casefile-readout dt {
+  color: var(--dim);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.casefile-stamp strong {
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.casefile-readout {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 28px;
+}
+
+.casefile-readout h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.04;
+}
+
+.casefile-readout p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.casefile-readout dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 4px 0 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.casefile-readout dl div {
+  display: grid;
+  gap: 6px;
+  min-height: 88px;
+  padding: 14px;
+  background: rgba(5, 5, 7, 0.78);
+}
+
+.casefile-readout dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.casefile-link {
+  width: fit-content;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(116, 199, 216, 0.36);
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: rgba(116, 199, 216, 0.08);
+}
+
+.casefile-link:hover,
+.casefile-link:focus-visible {
+  border-color: rgba(225, 7, 20, 0.72);
+  color: var(--red);
+}
+
 .doctrine-section {
   position: relative;
   width: min(1180px, 100%);
@@ -12040,6 +12275,7 @@ a,
   .blackwall-section,
   .matrix-section,
   .simulation-section,
+  .casefile-section,
   .doctrine-section,
   .dossier-section,
   .command-ribbon,
@@ -12753,6 +12989,7 @@ a,
   .blackwall-copy h2,
   .matrix-copy h2,
   .simulation-copy h2,
+  .casefile-copy h2,
   .dossier-copy h2,
   .doctrine-header h2 {
     font-size: 2.35rem;
@@ -12772,6 +13009,8 @@ a,
   .soulkiller-readout,
   .blackwall-readout,
   .simulation-readout,
+  .casefile-console,
+  .casefile-readout,
   .systems-console,
   .archive-console,
   .dossier-grid,
@@ -13345,6 +13584,7 @@ a,
   .blackwall-copy h2,
   .matrix-copy h2,
   .simulation-copy h2,
+  .casefile-copy h2,
   .dossier-copy h2,
   .doctrine-header h2 {
     font-size: 2rem;
@@ -13859,6 +14099,54 @@ a,
   }
 
   .simulation-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .casefile-console {
+    grid-template-rows: auto minmax(260px, auto) auto;
+  }
+
+  .casefile-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .casefile-tab {
+    min-height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .casefile-tab:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .casefile-tab:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .casefile-visual {
+    min-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .casefile-readout {
+    padding: 18px;
+  }
+
+  .casefile-readout h3 {
+    font-size: 1.5rem;
+  }
+
+  .casefile-readout dl {
+    grid-template-columns: 1fr;
+  }
+
+  .casefile-readout dl div {
+    min-height: 72px;
+  }
+
+  .casefile-link {
     width: 100%;
     justify-content: center;
   }
