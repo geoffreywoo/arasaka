@@ -4652,6 +4652,7 @@ a,
     "procurement meta"
     "certificate meta"
     "readiness meta"
+    "control meta"
     "sla meta"
     "topology meta"
     "specsheet meta"
@@ -5546,6 +5547,141 @@ a,
   color: var(--paper);
   font-size: 0.94rem;
   line-height: 1.08;
+}
+
+.product-route-control {
+  grid-area: control;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  grid-template-areas:
+    "head deck"
+    "foot deck";
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.18), rgba(182, 243, 91, 0.1), rgba(116, 199, 216, 0.13)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-control-head,
+.product-route-control-foot,
+.product-route-control-deck article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-control-head {
+  grid-area: head;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-control-head span,
+.product-route-control-deck small,
+.product-route-control-deck article > span,
+.product-route-control-deck i,
+.product-route-control-foot {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-control-head span,
+.product-route-control-deck article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-control-head p,
+.product-route-control-deck p,
+.product-route-control-foot {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.78rem;
+  line-height: 1.38;
+}
+
+.product-route-control-deck {
+  grid-area: deck;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-control-deck article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 176px;
+  padding: 15px;
+}
+
+.product-route-control-deck article::before,
+.product-route-control-deck article::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.product-route-control-deck article::before {
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 20px, rgba(255, 255, 255, 0.035) 20px 21px),
+    linear-gradient(180deg, rgba(225, 7, 20, 0.16), transparent 44%);
+  opacity: 0.72;
+}
+
+.product-route-control-deck article::after {
+  left: 15px;
+  right: 15px;
+  bottom: 14px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--acid), transparent);
+  opacity: 0.78;
+}
+
+.product-route-control-deck article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-control-deck small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-control-deck strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+}
+
+.product-route-control-deck i {
+  align-self: end;
+  color: var(--acid);
+  font-size: 0.62rem;
+  font-style: normal;
+}
+
+.product-route-control-foot {
+  grid-area: foot;
+  align-self: stretch;
+  display: grid;
+  align-content: end;
+  min-height: 92px;
+  padding: 16px;
+  border-left: 3px solid rgba(225, 7, 20, 0.5);
 }
 
 .product-route-sla {
@@ -12992,6 +13128,7 @@ a,
       "procurement"
       "certificate"
       "readiness"
+      "control"
       "sla"
       "topology"
       "specsheet"
@@ -13030,6 +13167,7 @@ a,
   .product-route-qualification,
   .product-route-procurement,
   .product-route-readiness,
+  .product-route-control,
   .product-route-sla,
   .product-route-runbook,
   .product-route-ops,
@@ -13041,6 +13179,8 @@ a,
   .product-route-qualification-head,
   .product-route-procurement-head,
   .product-route-readiness-head,
+  .product-route-control-head,
+  .product-route-control-foot,
   .product-route-sla-head,
   .product-route-runbook-head,
   .product-route-procurement > p,
@@ -13065,6 +13205,18 @@ a,
 
   .product-route-sla {
     grid-template-columns: 1fr;
+  }
+
+  .product-route-control {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "deck"
+      "foot";
+  }
+
+  .product-route-control-deck {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-sla-grid {
@@ -13749,6 +13901,14 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-control {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "deck"
+      "foot";
+  }
+
   .product-route-readiness-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -13758,6 +13918,10 @@ a,
   }
 
   .product-route-sla-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-control-deck {
     grid-template-columns: 1fr;
   }
 
@@ -14064,6 +14228,7 @@ a,
   .product-route-procurement,
   .product-route-certificate,
   .product-route-readiness,
+  .product-route-control,
   .product-route-sla,
   .product-route-topology,
   .product-route-specsheet,
@@ -14078,6 +14243,7 @@ a,
   .product-route-case-rail article,
   .product-route-procurement-matrix article,
   .product-route-readiness-grid article,
+  .product-route-control-deck article,
   .product-route-sla-grid article,
   .product-route-runbook-rail article {
     min-height: 0;
@@ -14089,6 +14255,10 @@ a,
   }
 
   .product-route-readiness-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-control-deck {
     grid-template-columns: 1fr;
   }
 

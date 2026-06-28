@@ -2286,6 +2286,13 @@ const translations = {
       dataBoundary: "Data Boundary",
       supportPosture: "Support Posture",
       roomHandoff: "Room Handoff",
+      controlRoom: "Live Control Room",
+      controlRoomLead: "An internal operator console for telemetry state, custody posture, route pressure, and red-line escalation.",
+      signalState: "Signal State",
+      custodyState: "Custody State",
+      operatorSeat: "Operator Seat",
+      redline: "Red-Line",
+      controlFooter: "Operator telemetry is simulated from sealed product-route records and does not expose client systems.",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -2378,6 +2385,13 @@ const translations = {
       dataBoundary: "Data Boundary",
       supportPosture: "Support Posture",
       roomHandoff: "Room Handoff",
+      controlRoom: "Live Control Room",
+      controlRoomLead: "An internal operator console for theater state, custody posture, route pressure, and red-line escalation.",
+      signalState: "Theater State",
+      custodyState: "Custody State",
+      operatorSeat: "Operator Seat",
+      redline: "Red-Line",
+      controlFooter: "Operator telemetry is simulated from sealed service-route records and does not expose client systems.",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -4585,6 +4599,13 @@ const translations = {
       dataBoundary: "データ境界",
       supportPosture: "支援姿勢",
       roomHandoff: "ルーム引き渡し",
+      controlRoom: "ライブ管制室",
+      controlRoomLead: "テレメトリ状態、保管姿勢、経路圧力、レッドライン・エスカレーションを示す内部オペレーターコンソール。",
+      signalState: "信号状態",
+      custodyState: "保管状態",
+      operatorSeat: "オペレーター席",
+      redline: "レッドライン",
+      controlFooter: "オペレーターテレメトリは封印済み製品経路レコードからシミュレートされ、クライアントシステムを露出しません。",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4677,6 +4698,13 @@ const translations = {
       dataBoundary: "データ境界",
       supportPosture: "支援姿勢",
       roomHandoff: "ルーム引き渡し",
+      controlRoom: "ライブ管制室",
+      controlRoomLead: "作戦区状態、保管姿勢、経路圧力、レッドライン・エスカレーションを示す内部オペレーターコンソール。",
+      signalState: "作戦区状態",
+      custodyState: "保管状態",
+      operatorSeat: "オペレーター席",
+      redline: "レッドライン",
+      controlFooter: "オペレーターテレメトリは封印済みサービス経路レコードからシミュレートされ、クライアントシステムを露出しません。",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4949,6 +4977,7 @@ const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeCertificate = document.querySelector("[data-route-certificate]");
 const routeReadiness = document.querySelector("[data-route-readiness]");
+const routeControlRoom = document.querySelector("[data-route-control-room]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
@@ -4971,6 +5000,7 @@ const serviceRouteQualification = document.querySelector("[data-service-qualific
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
 const serviceRouteCertificate = document.querySelector("[data-service-certificate]");
 const serviceRouteReadiness = document.querySelector("[data-service-readiness]");
+const serviceRouteControlRoom = document.querySelector("[data-service-control-room]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
@@ -5887,6 +5917,43 @@ function renderRouteReadiness(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteControlRoom(target, labels, rows, footerText) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const deck = document.createElement("div");
+  const footer = document.createElement("p");
+
+  heading.className = "product-route-control-head";
+  label.textContent = labels.controlRoom;
+  lead.textContent = labels.controlRoomLead;
+  heading.append(label, lead);
+
+  deck.className = "product-route-control-deck";
+  rows.forEach(({ label: rowLabel, value, text, pulse }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const meter = document.createElement("i");
+
+    code.textContent = `C-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    meter.textContent = pulse;
+    article.append(code, eyebrow, title, copy, meter);
+    deck.append(article);
+  });
+
+  footer.className = "product-route-control-foot";
+  footer.textContent = footerText;
+  target.replaceChildren(heading, deck, footer);
+}
+
 function renderRouteSla(target, labels, rows) {
   if (!target) return;
 
@@ -6237,6 +6304,33 @@ function updateProductRoute() {
       text: file.tabs.deployment.items[0] || file.tabs.deployment.text
     }
   ]);
+
+  renderRouteControlRoom(routeControlRoom, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.signalState,
+      value: field.exposure,
+      text: field.incident,
+      pulse: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.custodyState,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[1] || file.tabs.governance.text,
+      pulse: operations.sla[2] || operations.sla[1]
+    },
+    {
+      label: dictionary.productRoute.operatorSeat,
+      value: operations.integrations[0],
+      text: operations.integrations.slice(1).join(" / "),
+      pulse: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.redline,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      pulse: file.clearance
+    }
+  ], dictionary.productRoute.controlFooter);
 
   renderRouteSla(routeSla, dictionary.productRoute, [
     {
@@ -6631,6 +6725,33 @@ function updateServiceRoute() {
       text: file.tabs.deployment.items[0] || file.tabs.deployment.text
     }
   ]);
+
+  renderRouteControlRoom(serviceRouteControlRoom, routeLabels, [
+    {
+      label: routeLabels.signalState,
+      value: file.field.exposure,
+      text: file.field.incident,
+      pulse: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.custodyState,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[1] || file.tabs.governance.text,
+      pulse: file.operations.sla[2] || file.operations.sla[1]
+    },
+    {
+      label: routeLabels.operatorSeat,
+      value: file.operations.integrations[0],
+      text: file.operations.integrations.slice(1).join(" / "),
+      pulse: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.redline,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      pulse: file.clearance
+    }
+  ], routeLabels.controlFooter);
 
   renderRouteSla(serviceRouteSla, routeLabels, [
     {
