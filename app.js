@@ -2424,6 +2424,13 @@ const translations = {
       quorumState: "Quorum State",
       escrowMemo: "Escrow Memo",
       docketNote: "Note",
+      exportLicense: "Export License",
+      exportLicenseLead: "Jurisdictional deployment license describing authorized corridor, license class, prohibited surface, and renewal window.",
+      jurisdiction: "Jurisdiction",
+      licenseClass: "License Class",
+      prohibitedSurface: "Prohibited Surface",
+      renewalWindow: "Renewal Window",
+      licenseSeal: "Seal",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2628,6 +2635,13 @@ const translations = {
       quorumState: "Quorum State",
       escrowMemo: "Escrow Memo",
       docketNote: "Note",
+      exportLicense: "Export License",
+      exportLicenseLead: "Jurisdictional mandate license describing authorized corridor, license class, prohibited surface, and renewal window.",
+      jurisdiction: "Jurisdiction",
+      licenseClass: "License Class",
+      prohibitedSurface: "Prohibited Surface",
+      renewalWindow: "Renewal Window",
+      licenseSeal: "Seal",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4947,6 +4961,13 @@ const translations = {
       quorumState: "定足数状態",
       escrowMemo: "エスクローメモ",
       docketNote: "注記",
+      exportLicense: "輸出ライセンス",
+      exportLicenseLead: "承認済み回廊、ライセンス区分、禁止領域、更新窓口を記述する管轄配備ライセンス。",
+      jurisdiction: "管轄",
+      licenseClass: "ライセンス区分",
+      prohibitedSurface: "禁止領域",
+      renewalWindow: "更新窓口",
+      licenseSeal: "封印",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5151,6 +5172,13 @@ const translations = {
       quorumState: "定足数状態",
       escrowMemo: "エスクローメモ",
       docketNote: "注記",
+      exportLicense: "輸出ライセンス",
+      exportLicenseLead: "承認済み回廊、ライセンス区分、禁止領域、更新窓口を記述する管轄委任ライセンス。",
+      jurisdiction: "管轄",
+      licenseClass: "ライセンス区分",
+      prohibitedSurface: "禁止領域",
+      renewalWindow: "更新窓口",
+      licenseSeal: "封印",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5417,6 +5445,7 @@ const routeAuthorizationLedger = document.querySelector("[data-route-authorizati
 const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]");
 const routeForensicReceipt = document.querySelector("[data-route-forensic-receipt]");
 const routeBoardDocket = document.querySelector("[data-route-board-docket]");
+const routeExportLicense = document.querySelector("[data-route-export-license]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5455,6 +5484,7 @@ const serviceRouteAuthorizationLedger = document.querySelector("[data-service-au
 const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team-replay]");
 const serviceRouteForensicReceipt = document.querySelector("[data-service-forensic-receipt]");
 const serviceRouteBoardDocket = document.querySelector("[data-service-board-docket]");
+const serviceRouteExportLicense = document.querySelector("[data-service-export-license]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7090,6 +7120,38 @@ function renderRouteBoardDocket(target, labels, rows) {
   target.replaceChildren(heading, rail);
 }
 
+function renderRouteExportLicense(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-license-head";
+  label.textContent = labels.exportLicense;
+  lead.textContent = labels.exportLicenseLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-license-grid";
+  rows.forEach(({ label: rowLabel, value, text, seal }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.licenseSeal}: ${seal}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7825,6 +7887,33 @@ function updateProductRoute() {
       value: operations.packages[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.integrations[0]}`,
       note: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteExportLicense(routeExportLicense, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.jurisdiction,
+      value: operations.regions[0],
+      text: `${operations.regions.join(" / ")} / ${file.surface}`,
+      seal: file.clearance
+    },
+    {
+      label: dictionary.productRoute.licenseClass,
+      value: file.tabs.specs.title,
+      text: file.tabs.specs.items.join(" / ") || file.tabs.specs.text,
+      seal: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.prohibitedSurface,
+      value: field.exposure,
+      text: field.doctrine,
+      seal: operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.renewalWindow,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
+      seal: "G.W. / A-F"
     }
   ]);
 
@@ -8640,6 +8729,33 @@ function updateServiceRoute() {
       value: file.operations.packages[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.integrations[0]}`,
       note: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteExportLicense(serviceRouteExportLicense, routeLabels, [
+    {
+      label: routeLabels.jurisdiction,
+      value: file.operations.regions[0],
+      text: `${file.operations.regions.join(" / ")} / ${file.surface}`,
+      seal: file.clearance
+    },
+    {
+      label: routeLabels.licenseClass,
+      value: file.tabs.stack.title,
+      text: file.tabs.stack.items.join(" / ") || file.tabs.stack.text,
+      seal: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.prohibitedSurface,
+      value: file.field.exposure,
+      text: file.field.doctrine,
+      seal: file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.renewalWindow,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
+      seal: "G.W. / A-F"
     }
   ]);
 
