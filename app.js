@@ -2403,6 +2403,13 @@ const translations = {
       desk: "Desk",
       state: "State",
       capitalObserver: "Off-network capital observer",
+      redTeamReplay: "Red Team Replay",
+      redTeamReplayLead: "A sanitized adversarial replay showing probe, breach attempt, countermeasure, and verdict before this system is approved for deployment.",
+      probe: "Probe",
+      breachAttempt: "Breach Attempt",
+      countermeasure: "Countermeasure",
+      verdict: "Verdict",
+      latencyTag: "Latency",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2586,6 +2593,13 @@ const translations = {
       desk: "Desk",
       state: "State",
       capitalObserver: "Off-network capital observer",
+      redTeamReplay: "Red Team Replay",
+      redTeamReplayLead: "A sanitized adversarial replay showing probe, breach attempt, countermeasure, and verdict before this service is approved for activation.",
+      probe: "Probe",
+      breachAttempt: "Breach Attempt",
+      countermeasure: "Countermeasure",
+      verdict: "Verdict",
+      latencyTag: "Window",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4884,6 +4898,13 @@ const translations = {
       desk: "デスク",
       state: "状態",
       capitalObserver: "オフネットワーク資本オブザーバー",
+      redTeamReplay: "レッドチーム再生",
+      redTeamReplayLead: "このシステムの配備承認前に、プローブ、侵害試行、対抗措置、判定を示すサニタイズ済み敵対シミュレーション。",
+      probe: "プローブ",
+      breachAttempt: "侵害試行",
+      countermeasure: "対抗措置",
+      verdict: "判定",
+      latencyTag: "レイテンシ",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5067,6 +5088,13 @@ const translations = {
       desk: "デスク",
       state: "状態",
       capitalObserver: "オフネットワーク資本オブザーバー",
+      redTeamReplay: "レッドチーム再生",
+      redTeamReplayLead: "このサービスの起動承認前に、プローブ、侵害試行、対抗措置、判定を示すサニタイズ済み敵対シミュレーション。",
+      probe: "プローブ",
+      breachAttempt: "侵害試行",
+      countermeasure: "対抗措置",
+      verdict: "判定",
+      latencyTag: "窓口",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5330,6 +5358,7 @@ const routeTranscript = document.querySelector("[data-route-transcript]");
 const routeThreatModel = document.querySelector("[data-route-threat-model]");
 const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
 const routeAuthorizationLedger = document.querySelector("[data-route-authorization-ledger]");
+const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5365,6 +5394,7 @@ const serviceRouteTranscript = document.querySelector("[data-service-transcript]
 const serviceRouteThreatModel = document.querySelector("[data-service-threat-model]");
 const serviceRouteCustodyChain = document.querySelector("[data-service-custody-chain]");
 const serviceRouteAuthorizationLedger = document.querySelector("[data-service-authorization-ledger]");
+const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team-replay]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6902,6 +6932,40 @@ function renderRouteAuthorizationLedger(target, labels, rows) {
   target.replaceChildren(heading, table);
 }
 
+function renderRouteRedTeamReplay(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-redteam-head";
+  label.textContent = labels.redTeamReplay;
+  lead.textContent = labels.redTeamReplayLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-redteam-rail";
+  rows.forEach(({ label: rowLabel, value, text, latency }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `RT-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.latencyTag}: ${latency}`;
+    article.append(code, eyebrow, title, copy, tag);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7556,6 +7620,33 @@ function updateProductRoute() {
       value: file.tabs.deployment.title,
       desk: operations.integrations[0],
       state: operations.sla[0]
+    }
+  ]);
+
+  renderRouteRedTeamReplay(routeRedTeamReplay, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.probe,
+      value: field.exposure,
+      text: `${field.incident} / ${operations.integrations[0]}`,
+      latency: file.latency
+    },
+    {
+      label: dictionary.productRoute.breachAttempt,
+      value: field.doctrine,
+      text: field.text,
+      latency: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.countermeasure,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      latency: operations.packages[1] || operations.packages[0]
+    },
+    {
+      label: dictionary.productRoute.verdict,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${operations.regions.join(" / ")} / ${operations.sla[2] || operations.sla[1] || operations.sla[0]}`,
+      latency: file.clearance
     }
   ]);
 
@@ -8290,6 +8381,33 @@ function updateServiceRoute() {
       value: file.tabs.deployment.title,
       desk: file.operations.integrations[0],
       state: file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteRedTeamReplay(serviceRouteRedTeamReplay, routeLabels, [
+    {
+      label: routeLabels.probe,
+      value: file.field.exposure,
+      text: `${file.field.incident} / ${file.operations.integrations[0]}`,
+      latency: file.window
+    },
+    {
+      label: routeLabels.breachAttempt,
+      value: file.field.doctrine,
+      text: file.field.text,
+      latency: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.countermeasure,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      latency: file.operations.packages[1] || file.operations.packages[0]
+    },
+    {
+      label: routeLabels.verdict,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.operations.regions.join(" / ")} / ${file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]}`,
+      latency: file.clearance
     }
   ]);
 

@@ -4669,6 +4669,7 @@ a,
     "threat meta"
     "custody meta"
     "auth meta"
+    "redteam meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -4851,6 +4852,8 @@ a,
 .product-route-custody-rail article,
 .product-route-auth-head,
 .product-route-auth-table article,
+.product-route-redteam-head,
+.product-route-redteam-rail article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -7434,6 +7437,123 @@ a,
 
 .product-route-auth-table dd {
   color: var(--acid);
+  overflow-wrap: anywhere;
+}
+
+.product-route-redteam {
+  grid-area: redteam;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.2), rgba(116, 199, 216, 0.12), rgba(209, 177, 107, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-redteam-head,
+.product-route-redteam-rail article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.1), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-redteam-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-redteam-head span,
+.product-route-redteam-rail article > span,
+.product-route-redteam-rail small,
+.product-route-redteam-rail em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-redteam-head span,
+.product-route-redteam-rail article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-redteam-head p,
+.product-route-redteam-rail p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-redteam-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-redteam-rail article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 190px;
+  padding: 15px;
+}
+
+.product-route-redteam-rail article::before,
+.product-route-redteam-rail article::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.product-route-redteam-rail article::before {
+  inset: 0;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 18px, rgba(225, 7, 20, 0.04) 18px 19px),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.1), transparent 54%);
+}
+
+.product-route-redteam-rail article::after {
+  inset: auto 14px 14px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--cyan), transparent);
+  opacity: 0.72;
+}
+
+.product-route-redteam-rail article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-redteam-rail small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-redteam-rail strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-redteam-rail em {
+  align-self: end;
+  color: var(--cyan);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -14497,6 +14617,7 @@ a,
       "threat"
       "custody"
       "auth"
+      "redteam"
       "switcher"
       "ops"
       "panels"
@@ -14546,6 +14667,7 @@ a,
   .product-route-threat,
   .product-route-custody,
   .product-route-auth,
+  .product-route-redteam,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -14573,6 +14695,7 @@ a,
   .product-route-threat-head,
   .product-route-custody-head,
   .product-route-auth-head,
+  .product-route-redteam-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -14673,6 +14796,10 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-route-redteam-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-route-specsheet {
     grid-template-columns: 1fr;
   }
@@ -14705,6 +14832,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-redteam {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-config-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -14717,7 +14848,8 @@ a,
   .product-route-runbook-rail,
   .product-route-private-grid,
   .product-route-custody-rail,
-  .product-route-auth-table {
+  .product-route-auth-table,
+  .product-route-redteam-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -15454,7 +15586,8 @@ a,
   .product-route-private-grid,
   .product-route-threat-grid,
   .product-route-custody-rail,
-  .product-route-auth-table {
+  .product-route-auth-table,
+  .product-route-redteam-rail {
     grid-template-columns: 1fr;
   }
 
@@ -15485,7 +15618,8 @@ a,
   .product-route-private-grid article,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
-  .product-route-auth-table article {
+  .product-route-auth-table article,
+  .product-route-redteam-rail article {
     min-height: 0;
   }
 
@@ -15775,6 +15909,7 @@ a,
   .product-route-threat,
   .product-route-custody,
   .product-route-auth,
+  .product-route-redteam,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -15794,7 +15929,8 @@ a,
   .product-route-private-grid article,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
-  .product-route-auth-table article {
+  .product-route-auth-table article,
+  .product-route-redteam-rail article {
     min-height: 0;
   }
 
@@ -15811,7 +15947,8 @@ a,
   .product-route-specsheet-grid article,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
-  .product-route-auth-table article {
+  .product-route-auth-table article,
+  .product-route-redteam-rail article {
     min-height: 0;
   }
 
@@ -15860,6 +15997,10 @@ a,
   }
 
   .product-route-auth-table {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-redteam-rail {
     grid-template-columns: 1fr;
   }
 
