@@ -11271,6 +11271,242 @@ a,
   font-size: 0.82rem;
 }
 
+.clientroom-section {
+  position: relative;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.35fr) minmax(0, 1fr);
+  gap: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(116, 199, 216, 0.11), transparent 32%, rgba(225, 7, 20, 0.14)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.026) 0 1px, transparent 1px 92px),
+    #050608;
+}
+
+.clientroom-section::before {
+  position: absolute;
+  inset: 26px 30px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-bottom-color: rgba(225, 7, 20, 0.44);
+}
+
+.clientroom-section::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 76% 36%, rgba(182, 243, 91, 0.12), transparent 28%),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.34));
+}
+
+.clientroom-copy,
+.clientroom-console {
+  position: relative;
+  z-index: 1;
+}
+
+.clientroom-copy {
+  display: grid;
+  align-content: center;
+}
+
+.clientroom-copy h2 {
+  font-size: 2.75rem;
+}
+
+.clientroom-copy p {
+  color: var(--muted);
+}
+
+.clientroom-console {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.3fr) minmax(220px, 0.38fr) minmax(0, 1fr);
+  min-height: 440px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.046), rgba(255, 255, 255, 0.014)),
+    rgba(7, 9, 12, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.clientroom-switcher {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clientroom-option {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  min-height: 92px;
+  padding: 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+
+.clientroom-option:last-child {
+  border-bottom: 0;
+}
+
+.clientroom-option span {
+  color: rgba(225, 7, 20, 0.8);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.clientroom-option strong {
+  color: inherit;
+  font-size: 0.74rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.clientroom-option:hover,
+.clientroom-option:focus-visible,
+.clientroom-option.is-active {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.28), rgba(116, 199, 216, 0.08)),
+    rgba(225, 7, 20, 0.1);
+}
+
+.clientroom-option.is-active span {
+  color: var(--acid);
+}
+
+.clientroom-visual {
+  position: relative;
+  min-height: 440px;
+  margin: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.clientroom-visual::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.72)),
+    repeating-linear-gradient(90deg, transparent 0 34px, rgba(182, 243, 91, 0.08) 34px 35px);
+}
+
+.clientroom-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.16) contrast(1.08);
+}
+
+.clientroom-visual figcaption {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid rgba(182, 243, 91, 0.34);
+  background: rgba(5, 5, 7, 0.74);
+  backdrop-filter: blur(14px);
+}
+
+.clientroom-visual span,
+.clientroom-readout > span,
+.clientroom-readout dt {
+  color: var(--dim);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clientroom-visual strong {
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.clientroom-readout {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 28px;
+}
+
+.clientroom-readout h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.04;
+}
+
+.clientroom-readout p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.clientroom-readout dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  margin: 6px 0 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.clientroom-readout dl div {
+  display: grid;
+  gap: 6px;
+  min-height: 72px;
+  padding: 14px;
+  background: rgba(5, 5, 7, 0.78);
+}
+
+.clientroom-readout dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.clientroom-link {
+  width: fit-content;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(225, 7, 20, 0.42);
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: rgba(225, 7, 20, 0.1);
+}
+
+.clientroom-link:hover,
+.clientroom-link:focus-visible {
+  border-color: rgba(182, 243, 91, 0.64);
+  color: var(--acid);
+}
+
 .dossier-section {
   position: relative;
   width: min(1180px, 100%);
@@ -12278,6 +12514,7 @@ a,
   .casefile-section,
   .doctrine-section,
   .dossier-section,
+  .clientroom-section,
   .command-ribbon,
   .protocol-band {
     grid-template-columns: 1fr;
@@ -12991,6 +13228,7 @@ a,
   .simulation-copy h2,
   .casefile-copy h2,
   .dossier-copy h2,
+  .clientroom-copy h2,
   .doctrine-header h2 {
     font-size: 2.35rem;
   }
@@ -13011,6 +13249,8 @@ a,
   .simulation-readout,
   .casefile-console,
   .casefile-readout,
+  .clientroom-console,
+  .clientroom-readout,
   .systems-console,
   .archive-console,
   .dossier-grid,
@@ -13586,6 +13826,7 @@ a,
   .simulation-copy h2,
   .casefile-copy h2,
   .dossier-copy h2,
+  .clientroom-copy h2,
   .doctrine-header h2 {
     font-size: 2rem;
   }
@@ -14147,6 +14388,50 @@ a,
   }
 
   .casefile-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .clientroom-console {
+    grid-template-rows: auto minmax(280px, auto) auto;
+    min-height: 0;
+  }
+
+  .clientroom-switcher {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .clientroom-option {
+    min-height: 72px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .clientroom-option:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .clientroom-option:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .clientroom-visual {
+    min-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .clientroom-readout {
+    padding: 18px;
+  }
+
+  .clientroom-readout h3 {
+    font-size: 1.5rem;
+  }
+
+  .clientroom-link {
     width: 100%;
     justify-content: center;
   }

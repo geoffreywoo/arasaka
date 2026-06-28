@@ -2589,6 +2589,68 @@
         </div>
       </section>
 
+      <section class="section clientroom-section" id="clientrooms">
+        <div class="clientroom-copy">
+          <p class="eyebrow" data-i18n="clientRooms.eyebrow">Private Client Rooms</p>
+          <h2 data-i18n="clientRooms.title">Qualified principals do not buy products. They enter rooms.</h2>
+          <p data-i18n="clientRooms.text">
+            Each Arasaka deployment resolves into a controlled operating room: board continuity, counterintrusion response, capital custody, or autonomous route command.
+          </p>
+        </div>
+
+        <div class="clientroom-console" aria-label="Private client room console" data-i18n-aria-label="clientRooms.aria">
+          <div class="clientroom-switcher" role="group" aria-label="Private room" data-i18n-aria-label="clientRooms.switcherAria">
+            <button class="clientroom-option is-active" type="button" data-client-room="board" aria-pressed="true">
+              <span>ROOM-01</span>
+              <strong data-i18n="clientRooms.option.board">Board Continuity</strong>
+            </button>
+            <button class="clientroom-option" type="button" data-client-room="soc" aria-pressed="false">
+              <span>ROOM-02</span>
+              <strong data-i18n="clientRooms.option.soc">Counterintrusion SOC</strong>
+            </button>
+            <button class="clientroom-option" type="button" data-client-room="capital" aria-pressed="false">
+              <span>ROOM-03</span>
+              <strong data-i18n="clientRooms.option.capital">Capital Darkroom</strong>
+            </button>
+            <button class="clientroom-option" type="button" data-client-room="route" aria-pressed="false">
+              <span>ROOM-04</span>
+              <strong data-i18n="clientRooms.option.route">Route Control</strong>
+            </button>
+          </div>
+
+          <figure class="clientroom-visual">
+            <img src="assets/product-mikoshi-catalog.png" alt="" data-client-room-image>
+            <figcaption>
+              <span data-i18n="clientRooms.visual">Room Surface</span>
+              <strong data-client-room-code>MIKOSHI-BOARD</strong>
+            </figcaption>
+          </figure>
+
+          <div class="clientroom-readout">
+            <span data-i18n="clientRooms.active">Active Private Room</span>
+            <h3 data-client-room-title>Board Continuity Room</h3>
+            <p data-client-room-text>Family quorum, Relic custody, Mikoshi witness paths, and succession rehearsal are operated from one sealed board surface.</p>
+            <dl>
+              <div>
+                <dt data-i18n="clientRooms.clearance">Clearance</dt>
+                <dd data-client-room-clearance>AA-90</dd>
+              </div>
+              <div>
+                <dt data-i18n="clientRooms.proof">Proof Object</dt>
+                <dd data-client-room-proof>Witness hash</dd>
+              </div>
+              <div>
+                <dt data-i18n="clientRooms.response">Response</dt>
+                <dd data-client-room-response>Human quorum</dd>
+              </div>
+            </dl>
+            <a class="clientroom-link" href="products/mikoshi/" data-client-room-link>
+              <span data-i18n="clientRooms.open">Open room dossier</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section operations-section" id="operations">
         <div class="operations-media">
           <img

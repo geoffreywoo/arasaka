@@ -1547,6 +1547,67 @@ const translations = {
       relayGw: "public identity",
       relayAf: "capital signal"
     },
+    clientRooms: {
+      aria: "Private client room console",
+      eyebrow: "Private Client Rooms",
+      title: "Qualified principals do not buy products. They enter rooms.",
+      text: "Each Arasaka deployment resolves into a controlled operating room: board continuity, counterintrusion response, capital custody, or autonomous route command.",
+      switcherAria: "Private room",
+      visual: "Room Surface",
+      active: "Active Private Room",
+      clearance: "Clearance",
+      proof: "Proof Object",
+      response: "Response",
+      open: "Open room dossier",
+      option: {
+        board: "Board Continuity",
+        soc: "Counterintrusion SOC",
+        capital: "Capital Darkroom",
+        route: "Route Control"
+      },
+      detail: {
+        board: {
+          code: "MIKOSHI-BOARD",
+          title: "Board Continuity Room",
+          text: "Family quorum, Relic custody, Mikoshi witness paths, and succession rehearsal are operated from one sealed board surface.",
+          clearance: "AA-90",
+          proof: "Witness hash",
+          response: "Human quorum",
+          image: "assets/product-mikoshi-catalog.png",
+          href: "products/mikoshi/"
+        },
+        soc: {
+          code: "ICE-SOC",
+          title: "Counterintrusion Operations Room",
+          text: "Netrunner heat, rogue-machine drift, trap routing, and Blackwall-adjacent quarantine are reviewed before burn authority is released.",
+          clearance: "BLACK-7",
+          proof: "Trace vault",
+          response: "0.9ms mirror",
+          image: "assets/product-ice-catalog.png",
+          href: "products/ice/"
+        },
+        capital: {
+          code: "LEDGER-DARK",
+          title: "Capital Darkroom",
+          text: "Founder identity, patent collateral, private settlement, and reputation signals are modeled before public markets detect gravity.",
+          clearance: "COLD-03",
+          proof: "Mandate hash",
+          response: "T+0 route",
+          image: "assets/product-ledger-catalog.png",
+          href: "products/ledger/"
+        },
+        route: {
+          code: "SWARM-CTRL",
+          title: "Autonomous Route Control",
+          text: "District scans, drone veils, route denial, and visible force posture are rehearsed around the protected principal before movement begins.",
+          clearance: "MOB-18",
+          proof: "Force audit",
+          response: "00:18 gate",
+          image: "assets/service-protection-catalog.png",
+          href: "services/autonomous-protection/"
+        }
+      }
+    },
     operations: {
       eyebrow: "Night City Operations",
       title: "Every access point is an executable threat model.",
@@ -3893,6 +3954,67 @@ const translations = {
       relayGw: "公開ID",
       relayAf: "資本信号"
     },
+    clientRooms: {
+      aria: "私的クライアントルームコンソール",
+      eyebrow: "私的クライアントルーム",
+      title: "適格プリンシパルは製品を買いません。部屋へ入ります。",
+      text: "各荒坂配備は、取締役会継続性、対侵入応答、資本保管、自律経路指揮のための制御済み運用ルームへ解決されます。",
+      switcherAria: "私的ルーム",
+      visual: "ルームサーフェス",
+      active: "稼働私的ルーム",
+      clearance: "認証",
+      proof: "証明オブジェクト",
+      response: "応答",
+      open: "ルームドシエを開く",
+      option: {
+        board: "取締役会継続",
+        soc: "対侵入SOC",
+        capital: "資本暗室",
+        route: "経路制御"
+      },
+      detail: {
+        board: {
+          code: "MIKOSHI-BOARD",
+          title: "取締役会継続ルーム",
+          text: "家族クォーラム、レリック保管、ミコシ証人経路、継承演習を、ひとつの封印済み取締役会サーフェスから運用します。",
+          clearance: "AA-90",
+          proof: "証人ハッシュ",
+          response: "人間クォーラム",
+          image: "assets/product-mikoshi-catalog.png",
+          href: "products/mikoshi/"
+        },
+        soc: {
+          code: "ICE-SOC",
+          title: "対侵入運用ルーム",
+          text: "ネットランナー熱、Rogue Machine 偏移、罠ルーティング、ブラックウォール隣接隔離を、焼却権限解放前に審査します。",
+          clearance: "BLACK-7",
+          proof: "追跡保管庫",
+          response: "0.9ミリ秒ミラー",
+          image: "assets/product-ice-catalog.png",
+          href: "products/ice/"
+        },
+        capital: {
+          code: "LEDGER-DARK",
+          title: "資本暗室",
+          text: "創業者ID、特許担保、私的決済、評価シグナルを、公開市場が重力を検知する前にモデル化します。",
+          clearance: "COLD-03",
+          proof: "委任ハッシュ",
+          response: "T+0経路",
+          image: "assets/product-ledger-catalog.png",
+          href: "products/ledger/"
+        },
+        route: {
+          code: "SWARM-CTRL",
+          title: "自律経路制御",
+          text: "地区走査、ドローンヴェール、経路否認、可視武力姿勢を、保護対象プリンシパルの移動前に演習します。",
+          clearance: "MOB-18",
+          proof: "実力監査",
+          response: "00:18ゲート",
+          image: "assets/service-protection-catalog.png",
+          href: "services/autonomous-protection/"
+        }
+      }
+    },
     operations: {
       eyebrow: "ナイトシティ運用",
       title: "すべてのアクセス点は、実行可能な脅威モデルです。",
@@ -4710,6 +4832,15 @@ const casefileEvidence = document.querySelector("[data-casefile-evidence]");
 const casefileOwner = document.querySelector("[data-casefile-owner]");
 const casefileSeverity = document.querySelector("[data-casefile-severity]");
 const casefileLink = document.querySelector("[data-casefile-link]");
+const clientRoomButtons = document.querySelectorAll("[data-client-room]");
+const clientRoomImage = document.querySelector("[data-client-room-image]");
+const clientRoomCode = document.querySelector("[data-client-room-code]");
+const clientRoomTitle = document.querySelector("[data-client-room-title]");
+const clientRoomText = document.querySelector("[data-client-room-text]");
+const clientRoomClearance = document.querySelector("[data-client-room-clearance]");
+const clientRoomProof = document.querySelector("[data-client-room-proof]");
+const clientRoomResponse = document.querySelector("[data-client-room-response]");
+const clientRoomLink = document.querySelector("[data-client-room-link]");
 const archiveButtons = document.querySelectorAll("[data-archive-record]");
 const archiveCode = document.querySelector("[data-archive-code]");
 const archiveTitle = document.querySelector("[data-archive-title]");
@@ -4849,6 +4980,7 @@ let activeStackLayer = "body";
 let activeMatrixMode = "intrusion";
 let activeSimulationScenario = "plaza";
 let activeCasefile = "konpeki";
+let activeClientRoom = "board";
 let activeArchiveRecord = "relic";
 let activeMikoshiMode = "extract";
 let activeSoulkillerStage = "sever";
@@ -5384,6 +5516,7 @@ function setLanguage(language) {
   updateMatrix(activeMatrixMode);
   updateSimulation(activeSimulationScenario);
   updateCasefile(activeCasefile);
+  updateClientRoom(activeClientRoom);
   updateArchive(activeArchiveRecord);
   updateMikoshiMode(activeMikoshiMode);
   updateSoulkillerStage(activeSoulkillerStage);
@@ -7034,6 +7167,29 @@ function updateCasefile(caseKey) {
   if (casefileLink) casefileLink.href = record.href;
 }
 
+function updateClientRoom(roomKey) {
+  if (!clientRoomTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const room = dictionary.clientRooms.detail[roomKey] || dictionary.clientRooms.detail.board;
+  activeClientRoom = roomKey;
+
+  clientRoomButtons.forEach((button) => {
+    const isActive = button.dataset.clientRoom === roomKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (clientRoomImage) clientRoomImage.src = room.image;
+  if (clientRoomCode) clientRoomCode.textContent = room.code;
+  clientRoomTitle.textContent = room.title;
+  if (clientRoomText) clientRoomText.textContent = room.text;
+  if (clientRoomClearance) clientRoomClearance.textContent = room.clearance;
+  if (clientRoomProof) clientRoomProof.textContent = room.proof;
+  if (clientRoomResponse) clientRoomResponse.textContent = room.response;
+  if (clientRoomLink) clientRoomLink.href = room.href;
+}
+
 function updateArchive(recordKey) {
   if (!archiveTitle) return;
   const language = document.documentElement.dataset.language || "en";
@@ -7595,6 +7751,12 @@ simulationButtons.forEach((button) => {
 casefileButtons.forEach((button) => {
   button.addEventListener("click", () => {
     updateCasefile(button.dataset.casefile);
+  });
+});
+
+clientRoomButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateClientRoom(button.dataset.clientRoom);
   });
 });
 
