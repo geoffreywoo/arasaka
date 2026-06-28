@@ -1552,6 +1552,39 @@ const translations = {
         capital: { domain: "Private leverage", surface: "Sovereign rail", proof: "Attribution silence" },
         protection: { domain: "Hostile transit", surface: "City corridor", proof: "Force audit" }
       },
+      solutionsAria: "Enterprise solution bundles",
+      solutionsEyebrow: "Enterprise Bundles",
+      solutionsTitle: "Mandates are bought as systems, not SKUs.",
+      solutionsText: "Each bundle combines products, service teams, evidence output, and escalation authority into one deployable corporate package.",
+      bundleIncludes: "Includes",
+      bundleProof: "Proof Output",
+      bundleOpen: "Primary Dossier",
+      bundles: {
+        continuity: {
+          code: "BDL-01",
+          title: "Continuity Sovereign",
+          text: "For founders, families, and boards that need authority to survive breach, rumor, and biological failure.",
+          includes: "Relic / Mikoshi / Executive Continuity",
+          proof: "Construct escrow + quorum lock",
+          href: "products/relic/"
+        },
+        counterfield: {
+          code: "BDL-02",
+          title: "Blackwall Counterfield",
+          text: "For sovereign networks under active probe, hostile runner pressure, or rogue-machine adjacency.",
+          includes: "Black ICE / Counterintrusion / Soulkiller",
+          proof: "Trace vault + witnessed burn ledger",
+          href: "services/counterintrusion/"
+        },
+        mobility: {
+          code: "BDL-03",
+          title: "Capital Mobility Shield",
+          text: "For principals moving through hostile districts while founder capital, reputation, and routes remain quiet.",
+          includes: "Black Ledger / Swarm / Protection",
+          proof: "Mandate hash + force audit",
+          href: "services/black-ledger-mandate/"
+        }
+      },
       card: {
         relic: {
           title: "Relic Continuity Suite",
@@ -3518,6 +3551,39 @@ const translations = {
         counter: { domain: "能動探査", surface: "ランナー作戦区", proof: "焼却台帳" },
         capital: { domain: "私的レバレッジ", surface: "主権レール", proof: "帰属沈黙" },
         protection: { domain: "敵対通行", surface: "都市回廊", proof: "武力監査" }
+      },
+      solutionsAria: "エンタープライズ・ソリューションバンドル",
+      solutionsEyebrow: "エンタープライズ・バンドル",
+      solutionsTitle: "委任はSKUではなく、システムとして購入されます。",
+      solutionsText: "各バンドルは、製品、サービスチーム、証明出力、エスカレーション権限を、配備可能な企業パッケージへ結合します。",
+      bundleIncludes: "含有",
+      bundleProof: "証明出力",
+      bundleOpen: "主要ドシエ",
+      bundles: {
+        continuity: {
+          code: "BDL-01",
+          title: "継続性ソブリン",
+          text: "侵害、噂、生物学的失敗を権限が生き延びる必要がある創業者、一族、取締役会向け。",
+          includes: "レリック / 神輿 / 役員継続",
+          proof: "コンストラクト保管 + 定足数ロック",
+          href: "products/relic/"
+        },
+        counterfield: {
+          code: "BDL-02",
+          title: "ブラックウォール対抗場",
+          text: "能動探査、敵対ランナー圧力、ローグマシン隣接にさらされる主権ネットワーク向け。",
+          includes: "ブラックICE / 対侵入 / ソウルキラー",
+          proof: "追跡保管庫 + 証人付き焼却台帳",
+          href: "services/counterintrusion/"
+        },
+        mobility: {
+          code: "BDL-03",
+          title: "資本機動シールド",
+          text: "敵対地区を移動しながら、創業者資本、評価、経路を静かに保つプリンシパル向け。",
+          includes: "ブラック台帳 / スウォーム / 防護",
+          proof: "委任ハッシュ + 武力監査",
+          href: "services/black-ledger-mandate/"
+        }
       },
       card: {
         relic: {
