@@ -2563,6 +2563,7 @@ a,
     "header header"
     "hero meta"
     "proof meta"
+    "ops meta"
     "panels panels"
     "related related";
   gap: 14px;
@@ -2709,6 +2710,7 @@ a,
 
 .product-route-meta div,
 .product-route-proof,
+.product-route-ops article,
 .product-route-panels article,
 .product-route-related {
   background:
@@ -2748,6 +2750,71 @@ a,
   max-width: 760px;
   margin: 0;
   color: rgba(243, 244, 242, 0.72);
+}
+
+.product-route-ops {
+  grid-area: ops;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.16);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-ops > span {
+  grid-column: 1 / -1;
+  padding: 10px 14px;
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: rgba(6, 8, 10, 0.94);
+}
+
+.product-route-ops article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 178px;
+  padding: 16px;
+}
+
+.product-route-ops h2 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.product-route-ops ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-route-ops li {
+  position: relative;
+  padding-left: 13px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.product-route-ops li::before {
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: var(--cyan);
 }
 
 .product-route-panels {
@@ -8458,6 +8525,7 @@ a,
       "hero"
       "meta"
       "proof"
+      "ops"
       "panels"
       "related";
   }
@@ -8470,6 +8538,7 @@ a,
     min-height: 86px;
   }
 
+  .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -9181,10 +9250,12 @@ a,
   }
 
   .product-route-meta,
+  .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
   }
 
+  .product-route-ops article,
   .product-route-panels article {
     min-height: 0;
   }

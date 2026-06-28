@@ -1573,6 +1573,11 @@ const translations = {
       request: "Request deployment review",
       related: "Related systems",
       architecture: "Information Architecture",
+      operations: "Operational Matrix",
+      packages: "Packages",
+      integrations: "Integrations",
+      regions: "Regions",
+      sla: "SLA",
       proof: "Deployment Proof",
       proofText: "This standalone system page is rendered from the same bilingual product registry as the public dossier overlay.",
       registry: "Product Registry",
@@ -3039,6 +3044,11 @@ const translations = {
       request: "配備審査を申請",
       related: "関連システム",
       architecture: "情報アーキテクチャ",
+      operations: "運用マトリクス",
+      packages: "パッケージ",
+      integrations: "統合",
+      regions: "地域",
+      sla: "SLA",
       proof: "配備証明",
       proofText: "この独立システムページは、公開ドシエ・オーバーレイと同じ二言語製品レジストリから描画されています。",
       registry: "製品レジストリ",
@@ -3232,6 +3242,7 @@ const routeSummary = document.querySelector("[data-route-summary]");
 const routeClearance = document.querySelector("[data-route-clearance]");
 const routeLatency = document.querySelector("[data-route-latency]");
 const routeSurface = document.querySelector("[data-route-surface]");
+const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
 const bootSequence = document.querySelector("[data-boot-sequence]");
@@ -3304,6 +3315,85 @@ const sectionTargets = Object.keys(sectionLabelKeys)
   .filter(Boolean);
 
 const readPath = (object, path) => path.split(".").reduce((value, key) => value?.[key], object);
+
+const productOperations = {
+  en: {
+    relic: {
+      packages: ["Principal Capture", "Family Continuity", "Board Simulation"],
+      integrations: ["Mikoshi Gate", "Orbital Vault", "Black Ledger Mandate"],
+      regions: ["Tokyo", "Night City", "Orbital Cold"],
+      sla: ["99.8% archive integrity", "2-hour emergency witness window", "Dual-key activation"]
+    },
+    mikoshi: {
+      packages: ["Silent Archive", "Construct Council", "Return Protocol"],
+      integrations: ["Relic Biochip", "Soulkiller Lab", "Family Quorum Vault"],
+      regions: ["Tokyo", "Orbital Cold", "Blackwall Isolate"],
+      sla: ["Deep-cold redundancy", "Synthetic witness audit", "Partition drift review"]
+    },
+    ice: {
+      packages: ["Passive Mesh", "Active Burn", "Blackwall Quarantine"],
+      integrations: ["Netrunner Exchange", "Secure Systems", "Response Matrix"],
+      regions: ["Night City", "Tokyo Root", "Sovereign Lab"],
+      sla: ["0.9ms trap response", "Human override channel", "After-action trace vault"]
+    },
+    ledger: {
+      packages: ["Founder Relay", "Sovereign Rail", "Patent Gravity"],
+      integrations: ["Orbital Vault", "Quiet Relay", "Capital Singularity"],
+      regions: ["Tokyo", "Europe", "Offshore Cold"],
+      sla: ["T+0 dark settlement", "Zero public attribution", "Mandate hash retention"]
+    },
+    swarm: {
+      packages: ["Executive Veil", "Extraction Corridor", "Sentinel Ring"],
+      integrations: ["Megacity Grid", "Operations Theater", "Human Kill Chain"],
+      regions: ["Night City", "Tokyo", "Port Authority"],
+      sla: ["00:18 response window", "96% district coverage", "Civilian exclusion map"]
+    },
+    soulkiller: {
+      packages: ["Severance Gate", "Construct Flask", "Evidence Cooler"],
+      integrations: ["Mikoshi Engine", "Relic Suite", "Blackwall Quarantine"],
+      regions: ["Blacksite", "Orbital Cold", "Legal Shadow"],
+      sla: ["Sealed runtime", "Two-officer custody", "Post-operation silence protocol"]
+    }
+  },
+  ja: {
+    relic: {
+      packages: ["プリンシパル取得", "家族継続", "取締役会シミュレーション"],
+      integrations: ["神輿ゲート", "軌道保管庫", "ブラック台帳委任"],
+      regions: ["東京", "ナイトシティ", "軌道冷却"],
+      sla: ["99.8% アーカイブ完全性", "2時間緊急証人窓", "二重鍵起動"]
+    },
+    mikoshi: {
+      packages: ["静的アーカイブ", "コンストラクト評議会", "帰還プロトコル"],
+      integrations: ["レリック・バイオチップ", "ソウルキラー研究室", "家族定足数保管庫"],
+      regions: ["東京", "軌道冷却", "ブラックウォール隔離"],
+      sla: ["深冷冗長性", "合成証人監査", "パーティション偏移審査"]
+    },
+    ice: {
+      packages: ["受動メッシュ", "能動焼却", "ブラックウォール隔離"],
+      integrations: ["ネットランナー交換所", "安全システム", "即応マトリクス"],
+      regions: ["ナイトシティ", "東京ルート", "主権ラボ"],
+      sla: ["0.9ms 罠応答", "人間オーバーライド経路", "事後追跡保管庫"]
+    },
+    ledger: {
+      packages: ["創業者中継", "主権レール", "特許重力"],
+      integrations: ["軌道保管庫", "秘匿中継", "資本特異点"],
+      regions: ["東京", "欧州", "オフショア冷却"],
+      sla: ["T+0 暗黒決済", "公開帰属ゼロ", "委任ハッシュ保持"]
+    },
+    swarm: {
+      packages: ["役員ヴェール", "脱出回廊", "センチネルリング"],
+      integrations: ["メガシティ網", "運用拠点", "人間キルチェーン"],
+      regions: ["ナイトシティ", "東京", "港湾権限"],
+      sla: ["00:18 応答窓", "96% 地区カバレッジ", "民間人除外マップ"]
+    },
+    soulkiller: {
+      packages: ["切断ゲート", "コンストラクトフラスコ", "証拠冷却器"],
+      integrations: ["神輿エンジン", "レリックスイート", "ブラックウォール隔離"],
+      regions: ["ブラックサイト", "軌道冷却", "法的影"],
+      sla: ["封印ランタイム", "二名責任者保管", "作戦後沈黙プロトコル"]
+    }
+  }
+};
 
 function saveLanguage(language) {
   try {
@@ -3522,6 +3612,37 @@ function updateProductRoute() {
   if (routeClearance) routeClearance.textContent = file.clearance;
   if (routeLatency) routeLatency.textContent = file.latency;
   if (routeSurface) routeSurface.textContent = file.surface;
+
+  if (routeOps) {
+    const operations = (productOperations[language] || productOperations.en)[productKey] || productOperations.en.relic;
+    const operationGroups = [
+      ["packages", dictionary.productRoute.packages],
+      ["integrations", dictionary.productRoute.integrations],
+      ["regions", dictionary.productRoute.regions],
+      ["sla", dictionary.productRoute.sla]
+    ];
+    const label = document.createElement("span");
+
+    label.textContent = dictionary.productRoute.operations;
+    routeOps.replaceChildren(label);
+
+    operationGroups.forEach(([operationKey, operationLabel]) => {
+      const article = document.createElement("article");
+      const heading = document.createElement("h2");
+      const list = document.createElement("ul");
+
+      heading.textContent = operationLabel;
+
+      operations[operationKey].forEach((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        list.append(row);
+      });
+
+      article.append(heading, list);
+      routeOps.append(article);
+    });
+  }
 
   if (routePanels) {
     routePanels.replaceChildren();
