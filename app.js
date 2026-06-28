@@ -870,6 +870,40 @@ const translations = {
         }
       }
     },
+    techRegistry: {
+      aria: "Cybertechnology registry",
+      eyebrow: "Technology Registry",
+      title: "Every product is built from controlled technical primitives.",
+      text: "Arasaka systems are composed from shared substrate layers: neural custody, hostile-network containment, capital stealth, biometric command, and autonomous force.",
+      layer: "Layer",
+      bound: "Bound",
+      open: "Open primitive",
+      engram: {
+        title: "Engram Custody",
+        text: "Memory hashes, consent locks, construct drift scoring, and cold archive custody for minds that must remain strategically available.",
+        layer: "Neural"
+      },
+      blackice: {
+        title: "Black ICE Mesh",
+        text: "Hostile intent scoring, trap partitions, burn ledgers, and Blackwall-adjacent quarantine before intrusion reaches memory or markets.",
+        layer: "Network"
+      },
+      ledger: {
+        title: "Dark Settlement Rail",
+        text: "Private leverage, patent gravity, mandate hashes, and attribution timers for capital that must move before public markets react.",
+        layer: "Capital"
+      },
+      biometric: {
+        title: "Biometric Command Chain",
+        text: "Neuroprint gates, human witness chains, force authorization, and sealed proof artifacts binding machines back to accountable operators.",
+        layer: "Authority"
+      },
+      swarm: {
+        title: "Autonomous Force Geometry",
+        text: "Drone veils, extraction corridors, sentinel rings, and response choreography that turns city movement into governed deterrence.",
+        layer: "Kinetic"
+      }
+    },
     archive: {
       eyebrow: "Relic Archive",
       title: "Memory is a jurisdiction when the body becomes optional.",
@@ -3057,6 +3091,40 @@ const translations = {
           posture: "即応",
           directive: "抑止"
         }
+      }
+    },
+    techRegistry: {
+      aria: "サイバーテクノロジー登録簿",
+      eyebrow: "テクノロジー登録簿",
+      title: "すべての製品は、制御済み技術プリミティブから構築されます。",
+      text: "荒坂システムは、神経保管、敵対ネットワーク封じ込め、資本ステルス、生体指揮、自律戦力という共有基盤層から構成されます。",
+      layer: "層",
+      bound: "境界",
+      open: "プリミティブを開く",
+      engram: {
+        title: "エングラム保管",
+        text: "戦略的に利用可能でなければならない精神のための、記憶ハッシュ、同意ロック、コンストラクトドリフト採点、冷却アーカイブ保管。",
+        layer: "神経"
+      },
+      blackice: {
+        title: "ブラックICEメッシュ",
+        text: "侵入が記憶や市場へ到達する前に行う、敵対意図採点、罠パーティション、焼却台帳、ブラックウォール隣接隔離。",
+        layer: "ネットワーク"
+      },
+      ledger: {
+        title: "暗黒決済レール",
+        text: "公開市場が反応する前に移動すべき資本のための、私的レバレッジ、特許重力、委任ハッシュ、帰属タイマー。",
+        layer: "資本"
+      },
+      biometric: {
+        title: "生体指揮鎖",
+        text: "機械を説明責任ある操作者へ結び戻す、ニューロプリントゲート、人間証人鎖、武力承認、封印済み証明アーティファクト。",
+        layer: "権限"
+      },
+      swarm: {
+        title: "自律戦力ジオメトリ",
+        text: "都市移動を統治済み抑止へ変える、ドローンヴェール、脱出回廊、監視リング、応答振付。",
+        layer: "キネティック"
       }
     },
     archive: {

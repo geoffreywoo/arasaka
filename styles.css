@@ -6586,6 +6586,166 @@ a,
   font-weight: 900;
 }
 
+.tech-registry-section {
+  position: relative;
+  overflow: hidden;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.38fr) minmax(0, 1fr);
+  gap: 28px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(182, 243, 91, 0.1), transparent 30%),
+    linear-gradient(110deg, rgba(116, 199, 216, 0.1), transparent 42%, rgba(225, 7, 20, 0.08)),
+    #050608;
+}
+
+.tech-registry-section::before {
+  position: absolute;
+  inset: 24px 32px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(182, 243, 91, 0.14);
+  clip-path: polygon(0 0, 92% 0, 100% 20%, 100% 100%, 8% 100%, 0 82%);
+}
+
+.tech-registry-copy,
+.tech-registry {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-registry-copy {
+  align-self: center;
+}
+
+.tech-registry-copy h2 {
+  font-size: 2.7rem;
+}
+
+.tech-registry-copy p {
+  color: var(--muted);
+}
+
+.tech-registry {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.14), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.12)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.tech-registry article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 354px;
+  min-width: 0;
+  padding: 15px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 54%),
+    rgba(5, 8, 10, 0.94);
+}
+
+.tech-registry article::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--acid), var(--cyan), transparent);
+  opacity: 0.82;
+}
+
+.tech-registry article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-registry article > span,
+.tech-registry dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tech-registry article > span {
+  color: var(--acid);
+}
+
+.tech-registry h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.02rem;
+  line-height: 1.06;
+}
+
+.tech-registry p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.tech-registry dl {
+  display: grid;
+  gap: 1px;
+  margin: auto 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tech-registry dl div {
+  display: grid;
+  gap: 4px;
+  min-height: 48px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.tech-registry dt {
+  color: var(--dim);
+}
+
+.tech-registry dd {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.84);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.tech-registry a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(182, 243, 91, 0.24);
+  border-radius: 4px;
+  color: var(--acid);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tech-registry a:hover,
+.tech-registry a:focus-visible {
+  border-color: rgba(225, 7, 20, 0.44);
+  color: var(--red);
+  outline: 0;
+}
+
 .systems-section {
   position: relative;
   display: grid;
@@ -11621,6 +11781,7 @@ a,
   .lore-section,
   .product-page-body,
   .foundry-section,
+  .tech-registry-section,
   .systems-section,
   .ice-section,
   .swarm-section,
@@ -11760,6 +11921,14 @@ a,
       "media"
       "controls"
       "readout";
+  }
+
+  .tech-registry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-registry article {
+    min-height: 0;
   }
 
   .foundry-controls {
@@ -13115,6 +13284,7 @@ a,
   }
 
   .foundry-controls,
+  .tech-registry,
   .megacity-feed,
   .lore-nodes,
   .lore-briefings,
