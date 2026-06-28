@@ -3289,6 +3289,7 @@ a,
     "header header"
     "hero meta"
     "field meta"
+    "case meta"
     "proof meta"
     "brief meta"
     "qualification meta"
@@ -3442,6 +3443,8 @@ a,
 
 .product-route-meta div,
 .product-route-proof,
+.product-route-case-head,
+.product-route-case-rail article,
 .product-route-brief-heading,
 .product-route-brief article,
 .product-route-qualification-head,
@@ -3640,6 +3643,96 @@ a,
   max-width: 760px;
   margin: 0;
   color: rgba(243, 244, 242, 0.72);
+}
+
+.product-route-case-file {
+  grid-area: case;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.16), rgba(116, 199, 216, 0.1), rgba(182, 243, 91, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-case-head,
+.product-route-case-rail article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-case-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-case-head > span,
+.product-route-case-rail small,
+.product-route-case-rail article > span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-case-head > span {
+  color: var(--red);
+  font-size: 0.68rem;
+}
+
+.product-route-case-head p,
+.product-route-case-rail p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.38;
+}
+
+.product-route-case-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-case-rail article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 182px;
+}
+
+.product-route-case-rail article::before {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 34px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, currentColor, transparent);
+  opacity: 0.44;
+}
+
+.product-route-case-rail article > span {
+  color: var(--red);
+  font-size: 0.62rem;
+}
+
+.product-route-case-rail small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-case-rail strong {
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
 }
 
 .product-route-brief {
@@ -9973,6 +10066,7 @@ a,
       "header"
       "hero"
       "field"
+      "case"
       "meta"
       "proof"
       "brief"
@@ -9994,6 +10088,14 @@ a,
 
   .product-route-field {
     grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+  }
+
+  .product-route-case-file {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-case-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-field dl {
@@ -10624,6 +10726,14 @@ a,
     line-height: 1;
   }
 
+  .product-route-case-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-case-rail article {
+    min-height: 0;
+  }
+
   .product-route-switcher {
     margin-inline: -1px;
     padding: 12px;
@@ -10869,6 +10979,7 @@ a,
   }
 
   .product-route-meta,
+  .product-route-case-file,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
@@ -10879,6 +10990,7 @@ a,
 
   .product-route-ops article,
   .product-route-panels article,
+  .product-route-case-rail article,
   .product-route-procurement-matrix article {
     min-height: 0;
   }

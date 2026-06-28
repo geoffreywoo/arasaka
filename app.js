@@ -1752,6 +1752,12 @@ const translations = {
       exposure: "Exposure",
       doctrine: "Doctrine",
       imageCredit: "Image credit",
+      caseFile: "Night City Case File",
+      caseLead: "A deployment narrative tying the public lore incident to Arasaka product control, containment, and proof.",
+      signal: "Signal Origin",
+      phase: "Activation Phase",
+      containment: "Containment Layer",
+      result: "Case Outcome",
       packages: "Packages",
       integrations: "Integrations",
       regions: "Regions",
@@ -1799,6 +1805,12 @@ const translations = {
       exposure: "Exposure",
       doctrine: "Doctrine",
       imageCredit: "Image credit",
+      caseFile: "Night City Case File",
+      caseLead: "A mandate narrative tying the public lore incident to Arasaka service teams, containment, and proof.",
+      signal: "Signal Origin",
+      phase: "Activation Phase",
+      containment: "Containment Layer",
+      result: "Case Outcome",
       packages: "Teams",
       integrations: "Systems",
       regions: "Theaters",
@@ -3473,6 +3485,12 @@ const translations = {
       exposure: "露出",
       doctrine: "ドクトリン",
       imageCredit: "画像クレジット",
+      caseFile: "ナイトシティ事例ファイル",
+      caseLead: "公開ロア事案を荒坂の製品制御、封じ込め、証明へ接続する配備ナラティブ。",
+      signal: "信号起点",
+      phase: "起動段階",
+      containment: "封じ込め層",
+      result: "事例結果",
       packages: "パッケージ",
       integrations: "統合",
       regions: "地域",
@@ -3520,6 +3538,12 @@ const translations = {
       exposure: "露出",
       doctrine: "ドクトリン",
       imageCredit: "画像クレジット",
+      caseFile: "ナイトシティ事例ファイル",
+      caseLead: "公開ロア事案を荒坂のサービスチーム、封じ込め、証明へ接続する委任ナラティブ。",
+      signal: "信号起点",
+      phase: "起動段階",
+      containment: "封じ込め層",
+      result: "事例結果",
       packages: "チーム",
       integrations: "システム",
       regions: "作戦区",
@@ -3752,6 +3776,7 @@ const routeLatency = document.querySelector("[data-route-latency]");
 const routeSurface = document.querySelector("[data-route-surface]");
 const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
+const routeCaseFile = document.querySelector("[data-route-case-file]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
@@ -3767,6 +3792,7 @@ const serviceRouteWindow = document.querySelector("[data-service-window]");
 const serviceRouteSurface = document.querySelector("[data-service-surface]");
 const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
+const serviceRouteCaseFile = document.querySelector("[data-service-case-file]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
@@ -4509,6 +4535,38 @@ function renderRouteQualification(target, labels, rows) {
   });
 }
 
+function renderRouteCaseFile(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-case-head";
+  label.textContent = labels.caseFile;
+  lead.textContent = labels.caseLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-case-rail";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `0${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function renderRouteProcurement(target, labels, rows, intakeHref) {
   if (!target) return;
 
@@ -4689,6 +4747,29 @@ function updateProductRoute() {
       label: dictionary.productRoute.outcome,
       value: operations.sla[0],
       text: file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteCaseFile(routeCaseFile, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.signal,
+      value: field.incident,
+      text: field.text
+    },
+    {
+      label: dictionary.productRoute.phase,
+      value: operations.packages[1] || operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+    },
+    {
+      label: dictionary.productRoute.containment,
+      value: operations.integrations[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.result,
+      value: operations.sla[1] || operations.sla[0],
+      text: field.doctrine
     }
   ]);
 
@@ -4929,6 +5010,29 @@ function updateServiceRoute() {
       label: routeLabels.outcome,
       value: file.operations.sla[0],
       text: file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteCaseFile(serviceRouteCaseFile, routeLabels, [
+    {
+      label: routeLabels.signal,
+      value: file.field.incident,
+      text: file.field.text
+    },
+    {
+      label: routeLabels.phase,
+      value: file.operations.packages[1] || file.operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+    },
+    {
+      label: routeLabels.containment,
+      value: file.operations.integrations[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: routeLabels.result,
+      value: file.operations.sla[1] || file.operations.sla[0],
+      text: file.field.doctrine
     }
   ]);
 
