@@ -1305,6 +1305,7 @@ const translations = {
       text: "Arasaka products are sold as sealed operating environments: hardware, custody, intelligence, response, and governance bundled into auditable client deployments.",
       aria: "Arasaka product pages",
       open: "Open product page",
+      route: "Full system page",
       card: {
         relic: {
           title: "Relic Continuity Suite",
@@ -1565,6 +1566,22 @@ const translations = {
             }
           }
         }
+      }
+    },
+    productRoute: {
+      back: "Return to corporate grid",
+      request: "Request deployment review",
+      related: "Related systems",
+      architecture: "Information Architecture",
+      proof: "Deployment Proof",
+      proofText: "This standalone system page is rendered from the same bilingual product registry as the public dossier overlay.",
+      registry: "Product Registry",
+      sections: {
+        overview: "Overview",
+        modules: "Modules",
+        specs: "Specs",
+        deployment: "Deployment",
+        governance: "Governance"
       }
     }
   },
@@ -2874,6 +2891,7 @@ const translations = {
       text: "荒坂製品は、ハードウェア、保管、情報、即応、統治を監査可能な顧客配備へ束ねた密閉型オペレーティング環境として提供されます。",
       aria: "荒坂製品ページ",
       open: "製品ページを開く",
+      route: "フルシステムページ",
       card: {
         relic: {
           title: "レリック継続スイート",
@@ -3014,6 +3032,22 @@ const translations = {
             governance: { title: "統治姿勢", text: "秘匿には特別委任が必要で、内部審査専用の封印証跡を生成します。", items: ["赤色委任", "二名責任者保管", "作戦後沈黙プロトコル"] }
           }
         }
+      }
+    },
+    productRoute: {
+      back: "企業グリッドへ戻る",
+      request: "配備審査を申請",
+      related: "関連システム",
+      architecture: "情報アーキテクチャ",
+      proof: "配備証明",
+      proofText: "この独立システムページは、公開ドシエ・オーバーレイと同じ二言語製品レジストリから描画されています。",
+      registry: "製品レジストリ",
+      sections: {
+        overview: "概要",
+        modules: "モジュール",
+        specs: "仕様",
+        deployment: "配備",
+        governance: "統治"
       }
     }
   }
@@ -3190,6 +3224,16 @@ const productList = document.querySelector("[data-product-list]");
 const productClearance = document.querySelector("[data-product-clearance]");
 const productLatency = document.querySelector("[data-product-latency]");
 const productSurface = document.querySelector("[data-product-surface]");
+const productRoute = document.querySelector("[data-product-route]");
+const routeKicker = document.querySelector("[data-route-kicker]");
+const routeCode = document.querySelector("[data-route-code]");
+const routeTitle = document.querySelector("[data-route-title]");
+const routeSummary = document.querySelector("[data-route-summary]");
+const routeClearance = document.querySelector("[data-route-clearance]");
+const routeLatency = document.querySelector("[data-route-latency]");
+const routeSurface = document.querySelector("[data-route-surface]");
+const routePanels = document.querySelector("[data-route-panels]");
+const routeRelated = document.querySelector("[data-route-related]");
 const bootSequence = document.querySelector("[data-boot-sequence]");
 const cursorReticle = document.querySelector("[data-cursor-reticle]");
 const spineMeter = document.querySelector("[data-spine-meter]");
@@ -3311,7 +3355,7 @@ function setLanguage(language) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  if (formMessage.textContent.trim()) {
+  if (formMessage?.textContent.trim()) {
     formMessage.textContent = dictionary.form.success;
   }
 
@@ -3340,6 +3384,7 @@ function setLanguage(language) {
   updateDoctrineToggleLabels();
   updateOperationTheater(activeOperationTheater);
   updateProductPage(activeProductPage, activeProductTab);
+  updateProductRoute();
   updateActiveSection(activeSectionId);
   updateMenuButtonLabel();
   saveLanguage(language);
@@ -3459,6 +3504,69 @@ function initProductPages() {
 
   window.addEventListener("hashchange", openProductFromHash);
   openProductFromHash();
+}
+
+function updateProductRoute() {
+  if (!productRoute || !routeTitle) return;
+  const productKey = productRoute.dataset.productRoute || "relic";
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const file = dictionary.productPage.files[productKey] || dictionary.productPage.files.relic;
+  const tabOrder = ["overview", "modules", "specs", "deployment", "governance"];
+
+  document.title = `${file.title} | Arasaka Corporation`;
+  if (routeKicker) routeKicker.textContent = file.kicker;
+  if (routeCode) routeCode.textContent = file.code;
+  routeTitle.textContent = file.title;
+  if (routeSummary) routeSummary.textContent = file.summary;
+  if (routeClearance) routeClearance.textContent = file.clearance;
+  if (routeLatency) routeLatency.textContent = file.latency;
+  if (routeSurface) routeSurface.textContent = file.surface;
+
+  if (routePanels) {
+    routePanels.replaceChildren();
+    tabOrder.forEach((tabKey) => {
+      const tab = file.tabs[tabKey];
+      if (!tab) return;
+
+      const article = document.createElement("article");
+      const label = document.createElement("span");
+      const heading = document.createElement("h2");
+      const copy = document.createElement("p");
+      const list = document.createElement("ul");
+
+      label.textContent = dictionary.productRoute.sections[tabKey] || tabKey;
+      heading.textContent = tab.title;
+      copy.textContent = tab.text;
+
+      tab.items.forEach((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        list.append(row);
+      });
+
+      article.append(label, heading, copy, list);
+      routePanels.append(article);
+    });
+  }
+
+  if (routeRelated) {
+    routeRelated.replaceChildren();
+    Object.entries(dictionary.productPage.files)
+      .filter(([key]) => key !== productKey)
+      .slice(0, 3)
+      .forEach(([key, related]) => {
+        const link = document.createElement("a");
+        link.href = `../${key}/`;
+        link.textContent = related.title;
+        routeRelated.append(link);
+      });
+  }
+}
+
+function initProductRoute() {
+  if (!productRoute) return;
+  updateProductRoute();
 }
 
 function updateTimes() {
@@ -4490,13 +4598,17 @@ operationTheaterButtons.forEach((button) => {
   });
 });
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const language = document.documentElement.dataset.language || "en";
-  formMessage.textContent = translations[language].form.success;
-  updateTerminal(translations[language].terminal.submitted);
-  form.reset();
-});
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const language = document.documentElement.dataset.language || "en";
+    if (formMessage) {
+      formMessage.textContent = translations[language].form.success;
+    }
+    updateTerminal(translations[language].terminal.submitted);
+    form.reset();
+  });
+}
 
 function initHeroCanvas() {
   if (!heroCanvas) return;
@@ -4768,4 +4880,5 @@ syncDockForViewport();
 initSignalSpine();
 initMobileMenu();
 initProductPages();
+initProductRoute();
 initActiveSections();
