@@ -18,6 +18,7 @@ const translations = {
       custody: "Custody",
       exchange: "Exchange",
       grid: "Grid",
+      lore: "Lore",
       topology: "Topology",
       blackwall: "Blackwall",
       matrix: "Matrix",
@@ -205,6 +206,67 @@ const translations = {
           response: "0.4s",
           coverage: "99.8%",
           density: "CLEAR"
+        }
+      }
+    },
+    lore: {
+      eyebrow: "Night City Lore Board",
+      title: "The public story is noise. The incident ledger is product strategy.",
+      text: "Arasaka systems are mapped against the canonical pressure points of 2077: tower trauma, Konpeki Plaza, the Relic, Mikoshi, Afterlife mercenary networks, and Blackwall-adjacent containment.",
+      nodeAria: "Lore incident node",
+      creditLabel: "Image credit",
+      credit: "CD PROJEKT RED / Cyberpunk 2077 press materials",
+      active: "Selected Incident",
+      year: "Year",
+      risk: "Risk",
+      product: "Product Tie",
+      node: {
+        tower: "Tower Trauma",
+        konpeki: "Konpeki Plaza",
+        relic: "Biochip Event",
+        blackwall: "Blackwall Edge",
+        afterlife: "Afterlife Market"
+      },
+      detail: {
+        tower: {
+          code: "AT-2023",
+          title: "Tower Trauma Doctrine",
+          text: "The 2023 tower attack becomes the origin model for redundant command, offsite identity custody, and private deterrence.",
+          year: "2023",
+          risk: "EXTREME",
+          product: "Mikoshi / Vault"
+        },
+        konpeki: {
+          code: "KP-2077",
+          title: "Konpeki Plaza Breach",
+          text: "The hotel incident reframes luxury access as a hostile API: guest identity, executive custody, and Relic movement must resolve in one closed loop.",
+          year: "2077",
+          risk: "CRITICAL",
+          product: "Relic / Security"
+        },
+        relic: {
+          code: "RL-BIO",
+          title: "Relic Biochip Event",
+          text: "A prototype immortality device becomes a volatile corporate asset when construct memory, biological host, and succession politics collide.",
+          year: "2077",
+          risk: "VOLATILE",
+          product: "Relic Suite"
+        },
+        blackwall: {
+          code: "BW-EDGE",
+          title: "Blackwall Edge Drift",
+          text: "Rogue-AI pressure beyond the wall turns every net operation into a containment problem with human witness, quarantine, and burn authority.",
+          year: "NET",
+          risk: "UNKNOWN",
+          product: "Black ICE Mesh"
+        },
+        afterlife: {
+          code: "AF-LIFE",
+          title: "Afterlife Market Signal",
+          text: "Mercenary reputation networks convert violence into price discovery, making fixers, runners, and legend-status operators part of the city ledger.",
+          year: "NC",
+          risk: "MARKET",
+          product: "Netrunner Exchange"
         }
       }
     },
@@ -1235,7 +1297,7 @@ const translations = {
     footer: {
       registry: "荒坂株式会社 Public Corporate Network",
       cameo: "quiet relay",
-      notice: "Original fan-made web concept. No official game assets are used."
+      notice: "Unofficial fan-made web concept. Cyberpunk 2077 names and credited press imagery belong to CD PROJEKT RED / CD PROJEKT."
     },
     products: {
       eyebrow: "Product Architecture",
@@ -1525,6 +1587,7 @@ const translations = {
       custody: "保管",
       exchange: "交換所",
       grid: "都市網",
+      lore: "記録盤",
       topology: "位相図",
       blackwall: "ブラックウォール",
       matrix: "行列",
@@ -1712,6 +1775,67 @@ const translations = {
           response: "0.4秒",
           coverage: "99.8%",
           density: "明瞭"
+        }
+      }
+    },
+    lore: {
+      eyebrow: "ナイトシティ記録盤",
+      title: "公開された物語はノイズ。インシデント台帳こそ製品戦略です。",
+      text: "荒坂システムは、2077年の正史上の圧力点へ対応して設計されています。タワーの傷跡、紺碧プラザ、レリック、神輿、アフターライフ傭兵網、ブラックウォール隣接封じ込め。",
+      nodeAria: "ロア・インシデントノード",
+      creditLabel: "画像クレジット",
+      credit: "CD PROJEKT RED / Cyberpunk 2077 プレス素材",
+      active: "選択中のインシデント",
+      year: "年",
+      risk: "リスク",
+      product: "製品接続",
+      node: {
+        tower: "タワーの傷跡",
+        konpeki: "紺碧プラザ",
+        relic: "バイオチップ事案",
+        blackwall: "ブラックウォール縁",
+        afterlife: "アフターライフ市場"
+      },
+      detail: {
+        tower: {
+          code: "AT-2023",
+          title: "タワー外傷ドクトリン",
+          text: "2023年のタワー襲撃は、冗長指揮、遠隔身元保管、民間抑止の原型モデルになります。",
+          year: "2023",
+          risk: "極限",
+          product: "神輿 / 保管庫"
+        },
+        konpeki: {
+          code: "KP-2077",
+          title: "紺碧プラザ侵害",
+          text: "ホテル事案は、高級アクセスを敵対APIとして再定義します。宿泊者身元、役員保管、レリック移動をひとつの閉ループで解決する必要があります。",
+          year: "2077",
+          risk: "重大",
+          product: "レリック / 警備"
+        },
+        relic: {
+          code: "RL-BIO",
+          title: "レリック・バイオチップ事案",
+          text: "プロトタイプの不死装置は、コンストラクト記憶、生体ホスト、継承政治が衝突した瞬間に不安定な企業資産へ変わります。",
+          year: "2077",
+          risk: "不安定",
+          product: "レリックスイート"
+        },
+        blackwall: {
+          code: "BW-EDGE",
+          title: "ブラックウォール端部偏移",
+          text: "壁の向こう側にあるローグAI圧力は、あらゆるネット作戦を人間証人、隔離、焼却権限を持つ封じ込め問題に変えます。",
+          year: "NET",
+          risk: "不明",
+          product: "ブラックICEメッシュ"
+        },
+        afterlife: {
+          code: "AF-LIFE",
+          title: "アフターライフ市場シグナル",
+          text: "傭兵評価網は暴力を価格発見へ変換し、フィクサー、ランナー、伝説級オペレーターを都市台帳の一部にします。",
+          year: "NC",
+          risk: "市場",
+          product: "ネットランナー交換所"
         }
       }
     },
@@ -2742,7 +2866,7 @@ const translations = {
     footer: {
       registry: "荒坂株式会社 公開法人ネットワーク",
       cameo: "秘匿中継",
-      notice: "オリジナルのファン制作ウェブコンセプトです。公式ゲーム素材は使用していません。"
+      notice: "非公式ファン制作ウェブコンセプトです。Cyberpunk 2077 の名称およびクレジット表記されたプレス画像は CD PROJEKT RED / CD PROJEKT に帰属します。"
     },
     products: {
       eyebrow: "製品アーキテクチャ",
@@ -2930,6 +3054,13 @@ const cityText = document.querySelector("[data-city-text]");
 const cityResponse = document.querySelector("[data-city-response]");
 const cityCoverage = document.querySelector("[data-city-coverage]");
 const cityDensity = document.querySelector("[data-city-density]");
+const loreNodeButtons = document.querySelectorAll("[data-lore-node]");
+const loreCode = document.querySelector("[data-lore-code]");
+const loreTitle = document.querySelector("[data-lore-title]");
+const loreText = document.querySelector("[data-lore-text]");
+const loreYear = document.querySelector("[data-lore-year]");
+const loreRisk = document.querySelector("[data-lore-risk]");
+const loreProduct = document.querySelector("[data-lore-product]");
 const commandNodeButtons = document.querySelectorAll("[data-command-node]");
 const commandCode = document.querySelector("[data-command-code]");
 const commandTitle = document.querySelector("[data-command-title]");
@@ -3074,6 +3205,7 @@ let dockUserToggled = false;
 let activeHeroDiagnostic = "relic";
 let activeProtocolMode = "neural";
 let activeCityDistrict = "plaza";
+let activeLoreNode = "tower";
 let activeCommandNode = "tokyo";
 let activeSystemModule = "neural";
 let activeIceVector = "runner";
@@ -3112,6 +3244,7 @@ const sectionLabelKeys = {
   custody: "nav.custody",
   exchange: "nav.exchange",
   grid: "nav.grid",
+  lore: "nav.lore",
   topology: "nav.topology",
   blackwall: "nav.blackwall",
   matrix: "nav.matrix",
@@ -3187,6 +3320,7 @@ function setLanguage(language) {
   updateDockToggleLabel();
   updateProtocolMode(activeProtocolMode);
   updateCityDistrict(activeCityDistrict);
+  updateLoreNode(activeLoreNode);
   updateCommandNode(activeCommandNode);
   updateFoundryPlatform(activeFoundryPlatform);
   updateSystemModule(activeSystemModule);
@@ -3465,6 +3599,27 @@ function updateCityDistrict(districtKey) {
   if (cityResponse) cityResponse.textContent = detail.response;
   if (cityCoverage) cityCoverage.textContent = detail.coverage;
   if (cityDensity) cityDensity.textContent = detail.density;
+}
+
+function updateLoreNode(nodeKey) {
+  if (!loreTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.lore.detail[nodeKey] || dictionary.lore.detail.tower;
+  activeLoreNode = dictionary.lore.detail[nodeKey] ? nodeKey : "tower";
+
+  loreNodeButtons.forEach((button) => {
+    const isActive = button.dataset.loreNode === activeLoreNode;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (loreCode) loreCode.textContent = detail.code;
+  loreTitle.textContent = detail.title;
+  if (loreText) loreText.textContent = detail.text;
+  if (loreYear) loreYear.textContent = detail.year;
+  if (loreRisk) loreRisk.textContent = detail.risk;
+  if (loreProduct) loreProduct.textContent = detail.product;
 }
 
 function updateCommandNode(nodeKey) {
@@ -4155,6 +4310,18 @@ cityDistrictButtons.forEach((button) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       updateCityDistrict(button.dataset.cityDistrict);
+    }
+  });
+});
+
+loreNodeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateLoreNode(button.dataset.loreNode);
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      updateLoreNode(button.dataset.loreNode);
     }
   });
 });

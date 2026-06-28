@@ -134,6 +134,7 @@
         <a href="#custody" data-i18n="nav.custody">Custody</a>
         <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
         <a href="#grid" data-i18n="nav.grid">Grid</a>
+        <a href="#lore" data-i18n="nav.lore">Lore</a>
         <a href="#topology" data-i18n="nav.topology">Topology</a>
         <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
         <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
@@ -182,6 +183,7 @@
       <a href="#custody" data-i18n="nav.custody">Custody</a>
       <a href="#exchange" data-i18n="nav.exchange">Exchange</a>
       <a href="#grid" data-i18n="nav.grid">Grid</a>
+      <a href="#lore" data-i18n="nav.lore">Lore</a>
       <a href="#topology" data-i18n="nav.topology">Topology</a>
       <a href="#blackwall" data-i18n="nav.blackwall">Blackwall</a>
       <a href="#matrix" data-i18n="nav.matrix">Matrix</a>
@@ -359,6 +361,74 @@
             <span>CAPITAL GATE / COLD</span>
             <span>PUBLIC SIGNAL / CLEAN</span>
           </div>
+        </div>
+      </section>
+
+      <section class="section lore-section" id="lore">
+        <div class="lore-copy">
+          <p class="eyebrow" data-i18n="lore.eyebrow">Night City Lore Board</p>
+          <h2 data-i18n="lore.title">The public story is noise. The incident ledger is product strategy.</h2>
+          <p data-i18n="lore.text">
+            Arasaka systems are mapped against the canonical pressure points of 2077: tower trauma, Konpeki Plaza, the Relic, Mikoshi, Afterlife mercenary networks, and Blackwall-adjacent containment.
+          </p>
+        </div>
+
+        <div class="lore-console">
+          <figure class="lore-media">
+            <img
+              src="assets/cyberpunk2077-showdown-press.png"
+              alt="Cyberpunk 2077 official press screenshot with an Arasaka tactical operator in a red-lit interior"
+              loading="lazy"
+            >
+            <figcaption>
+              <span data-i18n="lore.creditLabel">Image credit</span>
+              <a href="https://press.cdprojektred.com/en/224/797" target="_blank" rel="noreferrer" data-i18n="lore.credit">CD PROJEKT RED / Cyberpunk 2077 press materials</a>
+            </figcaption>
+          </figure>
+
+          <div class="lore-nodes" role="group" aria-label="Lore incident node" data-i18n-aria-label="lore.nodeAria">
+            <button class="lore-node is-active" type="button" data-lore-node="tower" aria-pressed="true">
+              <span>2023</span>
+              <strong data-i18n="lore.node.tower">Tower Trauma</strong>
+            </button>
+            <button class="lore-node" type="button" data-lore-node="konpeki" aria-pressed="false">
+              <span>2077</span>
+              <strong data-i18n="lore.node.konpeki">Konpeki Plaza</strong>
+            </button>
+            <button class="lore-node" type="button" data-lore-node="relic" aria-pressed="false">
+              <span>RELIC</span>
+              <strong data-i18n="lore.node.relic">Biochip Event</strong>
+            </button>
+            <button class="lore-node" type="button" data-lore-node="blackwall" aria-pressed="false">
+              <span>NET</span>
+              <strong data-i18n="lore.node.blackwall">Blackwall Edge</strong>
+            </button>
+            <button class="lore-node" type="button" data-lore-node="afterlife" aria-pressed="false">
+              <span>NC</span>
+              <strong data-i18n="lore.node.afterlife">Afterlife Market</strong>
+            </button>
+          </div>
+
+          <aside class="lore-readout">
+            <span data-i18n="lore.active">Selected Incident</span>
+            <strong data-lore-code>AT-2023</strong>
+            <h3 data-lore-title>Tower Trauma Doctrine</h3>
+            <p data-lore-text>The 2023 tower attack becomes the origin model for redundant command, offsite identity custody, and private deterrence.</p>
+            <dl>
+              <div>
+                <dt data-i18n="lore.year">Year</dt>
+                <dd data-lore-year>2023</dd>
+              </div>
+              <div>
+                <dt data-i18n="lore.risk">Risk</dt>
+                <dd data-lore-risk>EXTREME</dd>
+              </div>
+              <div>
+                <dt data-i18n="lore.product">Product Tie</dt>
+                <dd data-lore-product>Mikoshi / Vault</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
