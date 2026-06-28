@@ -147,6 +147,32 @@ const translations = {
         }
       }
     },
+    fieldConsole: {
+      aria: "Mobile field dossier console",
+      routesAria: "Priority dossier routes",
+      eyebrow: "Mobile Field Console",
+      title: "Four routes into the private layer.",
+      text: "A first-screen command surface for the dossiers most likely to matter on mobile: continuity, counterintrusion, black-ledger capital, and autonomous protection.",
+      clearance: "Clearance",
+      latency: "Latency",
+      open: "Open dossier",
+      relic: {
+        title: "Relic Continuity",
+        text: "Engram capture and succession custody for authority that cannot stay biological."
+      },
+      counter: {
+        title: "Counterintrusion",
+        text: "Black ICE quarantine, netrunner burn authority, and Blackwall-adjacent response."
+      },
+      ledger: {
+        title: "Black Ledger",
+        text: "Founder custody, dark settlement, and reputation collateral beneath public markets."
+      },
+      protection: {
+        title: "Autonomous Protection",
+        text: "Drone veils, extraction corridors, and human-authorized kinetic response."
+      }
+    },
     ledger: {
       title: "Corporate Registry",
       founded: "Founded",
@@ -1944,6 +1970,32 @@ const translations = {
             secondaryValue: "正常"
           }
         }
+      }
+    },
+    fieldConsole: {
+      aria: "モバイル現地ドシエ・コンソール",
+      routesAria: "優先ドシエ経路",
+      eyebrow: "モバイル現地コンソール",
+      title: "プライベート層へ入る四つの経路。",
+      text: "モバイルで最初に必要になる継続性、対侵入、ブラック台帳資本、自律保護のドシエへ接続する第一画面の指揮面。",
+      clearance: "権限",
+      latency: "遅延",
+      open: "ドシエを開く",
+      relic: {
+        title: "レリック継続性",
+        text: "生体に留められない権限のためのエングラム取得と継承保管。"
+      },
+      counter: {
+        title: "対侵入",
+        text: "ブラックICE隔離、ネットランナー焼却権限、ブラックウォール隣接対応。"
+      },
+      ledger: {
+        title: "ブラック台帳",
+        text: "公開市場の下で動く創業者保管、ダーク決済、評判担保。"
+      },
+      protection: {
+        title: "自律保護",
+        text: "ドローン遮蔽、抽出回廊、人間承認型の実力対応。"
       }
     },
     ledger: {
