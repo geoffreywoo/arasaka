@@ -3076,6 +3076,7 @@ a,
     "field meta"
     "proof meta"
     "brief meta"
+    "qualification meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -3227,6 +3228,8 @@ a,
 .product-route-proof,
 .product-route-brief-heading,
 .product-route-brief article,
+.product-route-qualification-head,
+.product-route-qualification article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -3245,6 +3248,7 @@ a,
 .product-route-meta span,
 .product-route-proof > span,
 .product-route-brief-heading > span,
+.product-route-qualification-head > span,
 .product-route-switcher > span,
 .product-route-related > span {
   color: var(--dim);
@@ -3506,6 +3510,76 @@ a,
   content: "";
   border: 1px solid rgba(182, 243, 91, 0.72);
   background: rgba(182, 243, 91, 0.16);
+}
+
+.product-route-qualification {
+  grid-area: qualification;
+  display: grid;
+  grid-template-columns: minmax(200px, 0.7fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.16);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.16), rgba(225, 7, 20, 0.12), rgba(182, 243, 91, 0.12)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-qualification-head,
+.product-route-qualification article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-qualification-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-qualification-head > span,
+.product-route-qualification article > span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-qualification-head > span,
+.product-route-qualification article > span {
+  color: var(--cyan);
+}
+
+.product-route-qualification-head p,
+.product-route-qualification p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-qualification article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 178px;
+}
+
+.product-route-qualification article::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  content: "";
+  background: linear-gradient(180deg, var(--cyan), transparent);
+}
+
+.product-route-qualification strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
 }
 
 .product-route-switcher {
@@ -9471,6 +9545,7 @@ a,
       "meta"
       "proof"
       "brief"
+      "qualification"
       "switcher"
       "ops"
       "panels"
@@ -9494,12 +9569,14 @@ a,
   }
 
   .product-route-brief,
+  .product-route-qualification,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .product-route-brief-heading {
+  .product-route-brief-heading,
+  .product-route-qualification-head {
     grid-column: 1 / -1;
   }
 
@@ -10083,7 +10160,15 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-qualification {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-brief article {
+    min-height: 0;
+  }
+
+  .product-route-qualification article {
     min-height: 0;
   }
 
@@ -10276,6 +10361,7 @@ a,
 
   .product-route-meta,
   .product-route-brief,
+  .product-route-qualification,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;

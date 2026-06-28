@@ -1697,6 +1697,12 @@ const translations = {
       activation: "Activation",
       control: "Control Surface",
       assurance: "Assurance",
+      qualification: "Qualification Matrix",
+      qualificationLead: "A buyer-facing read on fit, trigger, deployment gate, and delivered proof.",
+      fit: "Best Fit",
+      trigger: "Trigger Event",
+      gate: "Deployment Gate",
+      outcome: "Delivered Proof",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -1730,6 +1736,12 @@ const translations = {
       activation: "Activation",
       control: "Control Surface",
       assurance: "Assurance",
+      qualification: "Mandate Qualification",
+      qualificationLead: "A service-facing read on fit, trigger, deployment gate, and delivered proof.",
+      fit: "Best Fit",
+      trigger: "Trigger Event",
+      gate: "Deployment Gate",
+      outcome: "Delivered Proof",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -3322,6 +3334,12 @@ const translations = {
       activation: "起動",
       control: "制御面",
       assurance: "保証",
+      qualification: "適格性マトリクス",
+      qualificationLead: "適合性、起動事案、配備ゲート、提供証明を示す買い手向け判定。",
+      fit: "最適適合",
+      trigger: "起動事案",
+      gate: "配備ゲート",
+      outcome: "提供証明",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -3355,6 +3373,12 @@ const translations = {
       activation: "起動",
       control: "制御面",
       assurance: "保証",
+      qualification: "委任適格性",
+      qualificationLead: "適合性、起動事案、配備ゲート、提供証明を示すサービス向け判定。",
+      fit: "最適適合",
+      trigger: "起動事案",
+      gate: "配備ゲート",
+      outcome: "提供証明",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -3554,6 +3578,7 @@ const routeSurface = document.querySelector("[data-route-surface]");
 const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
 const routeBrief = document.querySelector("[data-route-brief]");
+const routeQualification = document.querySelector("[data-route-qualification]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3567,6 +3592,7 @@ const serviceRouteSurface = document.querySelector("[data-service-surface]");
 const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
+const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -4269,6 +4295,33 @@ function renderRouteBrief(target, labels, rows) {
   });
 }
 
+function renderRouteQualification(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+
+  heading.className = "product-route-qualification-head";
+  label.textContent = labels.qualification;
+  lead.textContent = labels.qualificationLead;
+  heading.append(label, lead);
+  target.replaceChildren(heading);
+
+  rows.forEach(({ label: rowLabel, value, text }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(eyebrow, title, copy);
+    target.append(article);
+  });
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -4287,8 +4340,9 @@ function updateProductRoute() {
   if (routeLatency) routeLatency.textContent = file.latency;
   if (routeSurface) routeSurface.textContent = file.surface;
 
+  const field = (productFieldFiles[language] || productFieldFiles.en)[productKey] || productFieldFiles.en.relic;
+
   if (routeField) {
-    const field = (productFieldFiles[language] || productFieldFiles.en)[productKey] || productFieldFiles.en.relic;
     const figure = document.createElement("figure");
     const image = document.createElement("img");
     const caption = document.createElement("figcaption");
@@ -4382,6 +4436,29 @@ function updateProductRoute() {
       label: dictionary.productRoute.assurance,
       text: file.tabs.governance.text,
       items: operations.sla
+    }
+  ]);
+
+  renderRouteQualification(routeQualification, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.fit,
+      value: file.tabs.specs.title,
+      text: file.tabs.specs.text
+    },
+    {
+      label: dictionary.productRoute.trigger,
+      value: field.incident,
+      text: field.text
+    },
+    {
+      label: dictionary.productRoute.gate,
+      value: operations.regions.join(" / "),
+      text: file.tabs.deployment.text
+    },
+    {
+      label: dictionary.productRoute.outcome,
+      value: operations.sla[0],
+      text: file.tabs.governance.text
     }
   ]);
 
@@ -4576,6 +4653,29 @@ function updateServiceRoute() {
       label: routeLabels.assurance,
       text: file.tabs.governance.text,
       items: file.operations.sla
+    }
+  ]);
+
+  renderRouteQualification(serviceRouteQualification, routeLabels, [
+    {
+      label: routeLabels.fit,
+      value: file.tabs.operators.title,
+      text: file.tabs.operators.text
+    },
+    {
+      label: routeLabels.trigger,
+      value: file.field.incident,
+      text: file.field.text
+    },
+    {
+      label: routeLabels.gate,
+      value: file.operations.regions.join(" / "),
+      text: file.tabs.deployment.text
+    },
+    {
+      label: routeLabels.outcome,
+      value: file.operations.sla[0],
+      text: file.tabs.governance.text
     }
   ]);
 
