@@ -273,6 +273,26 @@ const translations = {
           risk: "MARKET",
           product: "Netrunner Exchange"
         }
+      },
+      briefingsAria: "Night City intelligence briefings",
+      briefings: {
+        open: "Open linked dossier",
+        konpeki: {
+          title: "Konpeki Plaza becomes continuity doctrine.",
+          text: "A single biochip breach reframes executive survival as custody, witness, and post-body command infrastructure."
+        },
+        blackwall: {
+          title: "The Blackwall edge turns defense into terrain.",
+          text: "Rogue-AI pressure makes every intrusion a jurisdictional event requiring quarantine and human burn authority."
+        },
+        afterlife: {
+          title: "Afterlife markets price reputation like collateral.",
+          text: "Street mythology, founder signal, and private capital clear through the same quiet leverage rail."
+        },
+        route: {
+          title: "Extraction routes are command interfaces.",
+          text: "Drone veils, traffic denial, and district response windows turn movement into a governed protection system."
+        }
       }
     },
     command: {
@@ -1945,6 +1965,26 @@ const translations = {
           year: "NC",
           risk: "市場",
           product: "ネットランナー交換所"
+        }
+      },
+      briefingsAria: "ナイトシティ情報ブリーフィング",
+      briefings: {
+        open: "関連記録を開く",
+        konpeki: {
+          title: "紺碧プラザは継続性ドクトリンになります。",
+          text: "ひとつのバイオチップ侵害が、役員生存を保管、証人、ポストボディ指揮インフラとして再定義します。"
+        },
+        blackwall: {
+          title: "ブラックウォール端は防衛を地形へ変えます。",
+          text: "ローグAI圧力は、すべての侵入を隔離と人間の焼却権限を要する管轄事案に変えます。"
+        },
+        afterlife: {
+          title: "アフターライフ市場は評判を担保のように価格付けします。",
+          text: "ストリート神話、創業者シグナル、私的資本は同じ静かなレバレッジレールで決済されます。"
+        },
+        route: {
+          title: "脱出経路は指揮インターフェースです。",
+          text: "ドローンヴェール、交通拒否、地区応答窓が移動を統治された防護システムへ変えます。"
         }
       }
     },
