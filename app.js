@@ -2394,6 +2394,15 @@ const translations = {
       witness: "Witness",
       exportLock: "Export Lock",
       seal: "Seal",
+      authorizationLedger: "Authorization Ledger",
+      authorizationLedgerLead: "A board-facing activation ledger for signer, hold, capital gate, and launch vote before this system reaches client authority.",
+      sponsor: "Sponsor",
+      legalHold: "Legal Hold",
+      capitalGate: "Capital Gate",
+      activationVote: "Activation Vote",
+      desk: "Desk",
+      state: "State",
+      capitalObserver: "Off-network capital observer",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2568,6 +2577,15 @@ const translations = {
       witness: "Witness",
       exportLock: "Export Lock",
       seal: "Seal",
+      authorizationLedger: "Authorization Ledger",
+      authorizationLedgerLead: "A board-facing mandate ledger for sponsor, hold, capital gate, and activation vote before this service reaches client authority.",
+      sponsor: "Sponsor",
+      legalHold: "Legal Hold",
+      capitalGate: "Capital Gate",
+      activationVote: "Activation Vote",
+      desk: "Desk",
+      state: "State",
+      capitalObserver: "Off-network capital observer",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4857,6 +4875,15 @@ const translations = {
       witness: "証人",
       exportLock: "エクスポートロック",
       seal: "封印",
+      authorizationLedger: "承認台帳",
+      authorizationLedgerLead: "このシステムがクライアント権限へ到達する前に、署名者、保留、資本ゲート、起動票を示す取締役会向け起動台帳。",
+      sponsor: "スポンサー",
+      legalHold: "法務保留",
+      capitalGate: "資本ゲート",
+      activationVote: "起動票",
+      desk: "デスク",
+      state: "状態",
+      capitalObserver: "オフネットワーク資本オブザーバー",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5031,6 +5058,15 @@ const translations = {
       witness: "証人",
       exportLock: "エクスポートロック",
       seal: "封印",
+      authorizationLedger: "承認台帳",
+      authorizationLedgerLead: "このサービスがクライアント権限へ到達する前に、スポンサー、保留、資本ゲート、起動票を示す取締役会向け委任台帳。",
+      sponsor: "スポンサー",
+      legalHold: "法務保留",
+      capitalGate: "資本ゲート",
+      activationVote: "起動票",
+      desk: "デスク",
+      state: "状態",
+      capitalObserver: "オフネットワーク資本オブザーバー",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5293,6 +5329,7 @@ const routePrivateRoom = document.querySelector("[data-route-private-room]");
 const routeTranscript = document.querySelector("[data-route-transcript]");
 const routeThreatModel = document.querySelector("[data-route-threat-model]");
 const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
+const routeAuthorizationLedger = document.querySelector("[data-route-authorization-ledger]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5327,6 +5364,7 @@ const serviceRoutePrivateRoom = document.querySelector("[data-service-private-ro
 const serviceRouteTranscript = document.querySelector("[data-service-transcript]");
 const serviceRouteThreatModel = document.querySelector("[data-service-threat-model]");
 const serviceRouteCustodyChain = document.querySelector("[data-service-custody-chain]");
+const serviceRouteAuthorizationLedger = document.querySelector("[data-service-authorization-ledger]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6826,6 +6864,44 @@ function renderRouteCustodyChain(target, labels, rows) {
   target.replaceChildren(heading, rail);
 }
 
+function renderRouteAuthorizationLedger(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const table = document.createElement("div");
+
+  heading.className = "product-route-auth-head";
+  label.textContent = labels.authorizationLedger;
+  lead.textContent = labels.authorizationLedgerLead;
+  heading.append(label, lead);
+
+  table.className = "product-route-auth-table";
+  rows.forEach(({ label: rowLabel, value, desk, state }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const meta = document.createElement("dl");
+    const deskTerm = document.createElement("dt");
+    const deskDetail = document.createElement("dd");
+    const stateTerm = document.createElement("dt");
+    const stateDetail = document.createElement("dd");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    deskTerm.textContent = labels.desk;
+    deskDetail.textContent = desk;
+    stateTerm.textContent = labels.state;
+    stateDetail.textContent = state;
+    meta.append(deskTerm, deskDetail, stateTerm, stateDetail);
+    article.append(eyebrow, title, meta);
+    table.append(article);
+  });
+
+  target.replaceChildren(heading, table);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7453,6 +7529,33 @@ function updateProductRoute() {
       value: `${file.code}-G.W.-A/F`,
       text: `${operations.sla[2] || operations.sla[1] || operations.sla[0]} / ${field.doctrine}`,
       seal: operations.packages[2] || operations.packages[1] || operations.packages[0]
+    }
+  ]);
+
+  renderRouteAuthorizationLedger(routeAuthorizationLedger, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.sponsor,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      desk: operations.regions[0],
+      state: file.clearance
+    },
+    {
+      label: dictionary.productRoute.legalHold,
+      value: field.exposure,
+      desk: file.tabs.governance.title,
+      state: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.capitalGate,
+      value: operations.packages[0],
+      desk: dictionary.productRoute.capitalObserver,
+      state: "G.W. / A-F"
+    },
+    {
+      label: dictionary.productRoute.activationVote,
+      value: file.tabs.deployment.title,
+      desk: operations.integrations[0],
+      state: operations.sla[0]
     }
   ]);
 
@@ -8160,6 +8263,33 @@ function updateServiceRoute() {
       value: `${file.code}-G.W.-A/F`,
       text: `${file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]} / ${file.field.doctrine}`,
       seal: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0]
+    }
+  ]);
+
+  renderRouteAuthorizationLedger(serviceRouteAuthorizationLedger, routeLabels, [
+    {
+      label: routeLabels.sponsor,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      desk: file.operations.regions[0],
+      state: file.clearance
+    },
+    {
+      label: routeLabels.legalHold,
+      value: file.field.exposure,
+      desk: file.tabs.governance.title,
+      state: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.capitalGate,
+      value: file.operations.packages[0],
+      desk: routeLabels.capitalObserver,
+      state: "G.W. / A-F"
+    },
+    {
+      label: routeLabels.activationVote,
+      value: file.tabs.deployment.title,
+      desk: file.operations.integrations[0],
+      state: file.operations.sla[0]
     }
   ]);
 
