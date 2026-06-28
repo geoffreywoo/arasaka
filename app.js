@@ -1659,6 +1659,57 @@ const translations = {
           evidence: "Theater map + force rules"
         }
       },
+      routerAria: "Mandate routing console",
+      routerControlAria: "Mandate pressure pattern",
+      routerEyebrow: "Mandate Router",
+      routerTitle: "Select the pressure pattern. Route the dossier.",
+      routerText: "A public-facing triage console for matching board risk, hostile signal, capital pressure, or physical exposure to the correct Arasaka system.",
+      routerSystem: "System",
+      routerProof: "Proof",
+      routerWindow: "Window",
+      routerOpen: "Open routed dossier",
+      router: {
+        continuity: {
+          button: "Continuity",
+          code: "MR-01 / AA-90",
+          title: "Preserve authority after biological failure.",
+          text: "Route executive identity, construct custody, and succession pressure into Relic, Mikoshi, and witnessed continuity services.",
+          system: "Relic / Mikoshi",
+          proof: "Archive integrity",
+          window: "72H",
+          href: "products/relic/"
+        },
+        intrusion: {
+          button: "Intrusion",
+          code: "MR-02 / ICE-77",
+          title: "Turn hostile net pressure into governed counterforce.",
+          text: "Route active probes, runner traces, and Blackwall-adjacent contact into Black ICE mesh and counterintrusion theater.",
+          system: "Black ICE / Counterintrusion",
+          proof: "Trace vault",
+          window: "0.9ms",
+          href: "services/counterintrusion/"
+        },
+        capital: {
+          button: "Capital",
+          code: "MR-03 / BL-00",
+          title: "Move founder leverage before markets can see it.",
+          text: "Route private capital, patent gravity, and reputation risk into dark settlement rails and mandate-controlled disclosure.",
+          system: "Black Ledger",
+          proof: "Mandate hash",
+          window: "T+0",
+          href: "services/black-ledger-mandate/"
+        },
+        mobility: {
+          button: "Mobility",
+          code: "MR-04 / SEC-12",
+          title: "Keep the principal moving through hostile city geometry.",
+          text: "Route district exposure, extraction corridors, and kinetic response into autonomous protection and defense swarm coverage.",
+          system: "Swarm / Protection",
+          proof: "Force audit",
+          window: "00:18",
+          href: "services/autonomous-protection/"
+        }
+      },
       assuranceAria: "Assurance ledger",
       assuranceEyebrow: "Assurance Ledger",
       assuranceTitle: "Proof artifacts stay sealed until the mandate is real.",
@@ -3797,6 +3848,57 @@ const translations = {
           evidence: "作戦区地図 + 武力規則"
         }
       },
+      routerAria: "委任経路コンソール",
+      routerControlAria: "委任圧力パターン",
+      routerEyebrow: "委任ルーター",
+      routerTitle: "圧力パターンを選択し、ドシエを経路化します。",
+      routerText: "取締役会リスク、敵対信号、資本圧力、物理露出を正しい荒坂システムへ照合する公開トリアージコンソール。",
+      routerSystem: "システム",
+      routerProof: "証明",
+      routerWindow: "窓",
+      routerOpen: "経路化ドシエを開く",
+      router: {
+        continuity: {
+          button: "継続性",
+          code: "MR-01 / AA-90",
+          title: "生物学的失敗後も権限を保持します。",
+          text: "役員身元、コンストラクト保管、継承圧力をレリック、神輿、証人付き継続サービスへ経路化します。",
+          system: "レリック / 神輿",
+          proof: "アーカイブ完全性",
+          window: "72H",
+          href: "products/relic/"
+        },
+        intrusion: {
+          button: "対侵入",
+          code: "MR-02 / ICE-77",
+          title: "敵対ネット圧力を統治済み対抗力へ変換します。",
+          text: "能動探査、ランナー痕跡、ブラックウォール隣接接触をブラックICEメッシュと対侵入作戦区へ経路化します。",
+          system: "ブラックICE / 対侵入",
+          proof: "追跡保管庫",
+          window: "0.9ms",
+          href: "services/counterintrusion/"
+        },
+        capital: {
+          button: "資本",
+          code: "MR-03 / BL-00",
+          title: "市場が見る前に創業者レバレッジを移動します。",
+          text: "私的資本、特許重力、評価リスクを暗黒決済レールと委任制御済み開示へ経路化します。",
+          system: "ブラック台帳",
+          proof: "委任ハッシュ",
+          window: "T+0",
+          href: "services/black-ledger-mandate/"
+        },
+        mobility: {
+          button: "機動性",
+          code: "MR-04 / SEC-12",
+          title: "敵対的な都市幾何の中でプリンシパルを移動させ続けます。",
+          text: "地区露出、脱出回廊、キネティック応答を自律防護と防衛スウォームのカバレッジへ経路化します。",
+          system: "スウォーム / 防護",
+          proof: "武力監査",
+          window: "00:18",
+          href: "services/autonomous-protection/"
+        }
+      },
       assuranceAria: "保証台帳",
       assuranceEyebrow: "保証台帳",
       assuranceTitle: "証明アーティファクトは、委任が実在するまで封印されます。",
@@ -4217,6 +4319,14 @@ const accessReviewClearance = document.querySelector("[data-access-review-cleara
 const accessReviewRoute = document.querySelector("[data-access-review-route]");
 const accessReviewResponse = document.querySelector("[data-access-review-response]");
 const accessReviewLink = document.querySelector("[data-access-review-link]");
+const mandateRouterButtons = document.querySelectorAll("[data-mandate-route]");
+const mandateCode = document.querySelector("[data-mandate-code]");
+const mandateTitle = document.querySelector("[data-mandate-title]");
+const mandateText = document.querySelector("[data-mandate-text]");
+const mandateSystem = document.querySelector("[data-mandate-system]");
+const mandateProof = document.querySelector("[data-mandate-proof]");
+const mandateWindow = document.querySelector("[data-mandate-window]");
+const mandateLink = document.querySelector("[data-mandate-link]");
 const systemModuleButtons = document.querySelectorAll("[data-system-module]");
 const systemCode = document.querySelector("[data-system-code]");
 const systemTitle = document.querySelector("[data-system-title]");
@@ -4413,6 +4523,7 @@ let activeCustodyInstrument = "engram";
 let activeCapitalMode = "signal";
 let activeExchangeMarket = "runner";
 let activeOperationTheater = "plaza";
+let activeMandateRoute = "continuity";
 let activeProductPage = "relic";
 let activeProductTab = "overview";
 let lastFocusedProductTrigger = null;
@@ -4946,6 +5057,7 @@ function setLanguage(language) {
   updateExchangeMarket(activeExchangeMarket);
   updateDoctrineToggleLabels();
   updateOperationTheater(activeOperationTheater);
+  updateMandateRouter(activeMandateRoute);
   updateProductPage(activeProductPage, activeProductTab);
   updateAccessReview(clearanceSelect?.value || "executive");
   updateProductRoute();
@@ -6428,6 +6540,28 @@ function updateAccessReview(clearanceKey = "executive") {
   if (accessReviewLink) accessReviewLink.href = detail.href;
 }
 
+function updateMandateRouter(routeKey = "continuity") {
+  if (!mandateTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.products.router[routeKey] || dictionary.products.router.continuity;
+  activeMandateRoute = routeKey;
+
+  mandateRouterButtons.forEach((button) => {
+    const isActive = button.dataset.mandateRoute === routeKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (mandateCode) mandateCode.textContent = detail.code;
+  mandateTitle.textContent = detail.title;
+  if (mandateText) mandateText.textContent = detail.text;
+  if (mandateSystem) mandateSystem.textContent = detail.system;
+  if (mandateProof) mandateProof.textContent = detail.proof;
+  if (mandateWindow) mandateWindow.textContent = detail.window;
+  if (mandateLink) mandateLink.href = detail.href;
+}
+
 function updateTopologyLens(lensKey) {
   if (!topologyTitle) return;
   const language = document.documentElement.dataset.language || "en";
@@ -7165,6 +7299,18 @@ doctrineToggles.forEach((button) => {
 operationTheaterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     updateOperationTheater(button.dataset.operationTheater);
+  });
+});
+
+mandateRouterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateMandateRouter(button.dataset.mandateRoute);
+  });
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      updateMandateRouter(button.dataset.mandateRoute);
+    }
   });
 });
 
