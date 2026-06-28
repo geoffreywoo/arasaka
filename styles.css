@@ -4675,6 +4675,7 @@ a,
     "license meta"
     "bond meta"
     "escrow meta"
+    "monitor meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -4869,6 +4870,8 @@ a,
 .product-route-bond-grid article,
 .product-route-escrow-head,
 .product-route-escrow-grid article,
+.product-route-monitor-head,
+.product-route-monitor-grid article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -8066,6 +8069,106 @@ a,
 .product-route-escrow-grid em {
   align-self: end;
   color: var(--cyan);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.product-route-monitor {
+  grid-area: monitor;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.16), rgba(182, 243, 91, 0.1), rgba(209, 177, 107, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-monitor-head,
+.product-route-monitor-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.12), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-monitor-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-monitor-head span,
+.product-route-monitor-grid article > span,
+.product-route-monitor-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-monitor-head span,
+.product-route-monitor-grid article > span {
+  color: var(--cyan);
+  font-size: 0.64rem;
+}
+
+.product-route-monitor-head p,
+.product-route-monitor-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-monitor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-monitor-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 176px;
+  padding: 15px;
+}
+
+.product-route-monitor-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(116, 199, 216, 0.045) 18px 19px),
+    linear-gradient(135deg, rgba(116, 199, 216, 0.1), transparent 52%);
+}
+
+.product-route-monitor-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-monitor-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-monitor-grid em {
+  align-self: end;
+  color: var(--acid);
   font-size: 0.62rem;
   font-style: normal;
   line-height: 1.2;
@@ -15138,6 +15241,7 @@ a,
       "license"
       "bond"
       "escrow"
+      "monitor"
       "switcher"
       "ops"
       "panels"
@@ -15193,6 +15297,7 @@ a,
   .product-route-license,
   .product-route-bond,
   .product-route-escrow,
+  .product-route-monitor,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -15226,6 +15331,7 @@ a,
   .product-route-license-head,
   .product-route-bond-head,
   .product-route-escrow-head,
+  .product-route-monitor-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -15350,6 +15456,10 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-route-monitor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-route-specsheet {
     grid-template-columns: 1fr;
   }
@@ -15387,7 +15497,8 @@ a,
   .product-route-docket,
   .product-route-license,
   .product-route-bond,
-  .product-route-escrow {
+  .product-route-escrow,
+  .product-route-monitor {
     grid-template-columns: 1fr;
   }
 
@@ -15409,7 +15520,8 @@ a,
   .product-route-docket-rail,
   .product-route-license-grid,
   .product-route-bond-grid,
-  .product-route-escrow-grid {
+  .product-route-escrow-grid,
+  .product-route-monitor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -16152,7 +16264,8 @@ a,
   .product-route-docket-rail,
   .product-route-license-grid,
   .product-route-bond-grid,
-  .product-route-escrow-grid {
+  .product-route-escrow-grid,
+  .product-route-monitor-grid {
     grid-template-columns: 1fr;
   }
 
@@ -16189,7 +16302,8 @@ a,
   .product-route-docket-rail article,
   .product-route-license-grid article,
   .product-route-bond-grid article,
-  .product-route-escrow-grid article {
+  .product-route-escrow-grid article,
+  .product-route-monitor-grid article {
     min-height: 0;
   }
 
@@ -16485,6 +16599,7 @@ a,
   .product-route-license,
   .product-route-bond,
   .product-route-escrow,
+  .product-route-monitor,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -16510,7 +16625,8 @@ a,
   .product-route-docket-rail article,
   .product-route-license-grid article,
   .product-route-bond-grid article,
-  .product-route-escrow-grid article {
+  .product-route-escrow-grid article,
+  .product-route-monitor-grid article {
     min-height: 0;
   }
 
@@ -16533,7 +16649,8 @@ a,
   .product-route-docket-rail article,
   .product-route-license-grid article,
   .product-route-bond-grid article,
-  .product-route-escrow-grid article {
+  .product-route-escrow-grid article,
+  .product-route-monitor-grid article {
     min-height: 0;
   }
 
@@ -16590,7 +16707,8 @@ a,
   .product-route-docket-rail,
   .product-route-license-grid,
   .product-route-bond-grid,
-  .product-route-escrow-grid {
+  .product-route-escrow-grid,
+  .product-route-monitor-grid {
     grid-template-columns: 1fr;
   }
 

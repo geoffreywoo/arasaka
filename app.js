@@ -2445,6 +2445,13 @@ const translations = {
       releaseCondition: "Release Condition",
       counterpartyNode: "Counterparty Node",
       escrowStamp: "Stamp",
+      continuityMonitor: "Continuity Monitor",
+      continuityMonitorLead: "Post-acceptance watch surface for heartbeat, watch desk, escalation rule, and cold-standby channel.",
+      heartbeat: "Heartbeat",
+      watchDesk: "Watch Desk",
+      escalationRule: "Escalation Rule",
+      standbyChannel: "Standby Channel",
+      monitorSignal: "Signal",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2670,6 +2677,13 @@ const translations = {
       releaseCondition: "Release Condition",
       counterpartyNode: "Counterparty Node",
       escrowStamp: "Stamp",
+      continuityMonitor: "Continuity Monitor",
+      continuityMonitorLead: "Post-acceptance watch surface for heartbeat, watch desk, escalation rule, and cold-standby channel.",
+      heartbeat: "Heartbeat",
+      watchDesk: "Watch Desk",
+      escalationRule: "Escalation Rule",
+      standbyChannel: "Standby Channel",
+      monitorSignal: "Signal",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -5010,6 +5024,13 @@ const translations = {
       releaseCondition: "解除条件",
       counterpartyNode: "相手先ノード",
       escrowStamp: "スタンプ",
+      continuityMonitor: "継続監視",
+      continuityMonitorLead: "受領後のハートビート、監視デスク、エスカレーション規則、コールドスタンバイチャネルを示す監視面。",
+      heartbeat: "ハートビート",
+      watchDesk: "監視デスク",
+      escalationRule: "エスカレーション規則",
+      standbyChannel: "スタンバイチャネル",
+      monitorSignal: "シグナル",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5235,6 +5256,13 @@ const translations = {
       releaseCondition: "解除条件",
       counterpartyNode: "相手先ノード",
       escrowStamp: "スタンプ",
+      continuityMonitor: "継続監視",
+      continuityMonitorLead: "受領後のハートビート、監視デスク、エスカレーション規則、コールドスタンバイチャネルを示す監視面。",
+      heartbeat: "ハートビート",
+      watchDesk: "監視デスク",
+      escalationRule: "エスカレーション規則",
+      standbyChannel: "スタンバイチャネル",
+      monitorSignal: "シグナル",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5504,6 +5532,7 @@ const routeBoardDocket = document.querySelector("[data-route-board-docket]");
 const routeExportLicense = document.querySelector("[data-route-export-license]");
 const routeUnderwritingBond = document.querySelector("[data-route-underwriting-bond]");
 const routeSettlementEscrow = document.querySelector("[data-route-settlement-escrow]");
+const routeContinuityMonitor = document.querySelector("[data-route-continuity-monitor]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5545,6 +5574,7 @@ const serviceRouteBoardDocket = document.querySelector("[data-service-board-dock
 const serviceRouteExportLicense = document.querySelector("[data-service-export-license]");
 const serviceRouteUnderwritingBond = document.querySelector("[data-service-underwriting-bond]");
 const serviceRouteSettlementEscrow = document.querySelector("[data-service-settlement-escrow]");
+const serviceRouteContinuityMonitor = document.querySelector("[data-service-continuity-monitor]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7276,6 +7306,38 @@ function renderRouteSettlementEscrow(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteContinuityMonitor(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-monitor-head";
+  label.textContent = labels.continuityMonitor;
+  lead.textContent = labels.continuityMonitorLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-monitor-grid";
+  rows.forEach(({ label: rowLabel, value, text, signal }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.monitorSignal}: ${signal}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -8092,6 +8154,33 @@ function updateProductRoute() {
       value: dictionary.productRoute.capitalObserver,
       text: `${operations.regions.join(" / ")} / ${operations.packages[0]}`,
       stamp: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteContinuityMonitor(routeContinuityMonitor, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.heartbeat,
+      value: file.latency,
+      text: `${file.code} / ${file.surface}`,
+      signal: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.watchDesk,
+      value: operations.integrations[0],
+      text: `${operations.regions[0]} / ${file.tabs.deployment.title}`,
+      signal: file.clearance
+    },
+    {
+      label: dictionary.productRoute.escalationRule,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${field.incident} / ${field.doctrine}`,
+      signal: operations.packages[0]
+    },
+    {
+      label: dictionary.productRoute.standbyChannel,
+      value: operations.regions.join(" / "),
+      text: `${dictionary.productRoute.capitalObserver} / ${file.tabs.governance.title}`,
+      signal: "G.W. / A-F"
     }
   ]);
 
@@ -8988,6 +9077,33 @@ function updateServiceRoute() {
       value: routeLabels.capitalObserver,
       text: `${file.operations.regions.join(" / ")} / ${file.operations.packages[0]}`,
       stamp: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteContinuityMonitor(serviceRouteContinuityMonitor, routeLabels, [
+    {
+      label: routeLabels.heartbeat,
+      value: file.window,
+      text: `${file.code} / ${file.surface}`,
+      signal: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.watchDesk,
+      value: file.operations.integrations[0],
+      text: `${file.operations.regions[0]} / ${file.tabs.deployment.title}`,
+      signal: file.clearance
+    },
+    {
+      label: routeLabels.escalationRule,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.field.incident} / ${file.field.doctrine}`,
+      signal: file.operations.packages[0]
+    },
+    {
+      label: routeLabels.standbyChannel,
+      value: file.operations.regions.join(" / "),
+      text: `${routeLabels.capitalObserver} / ${file.tabs.governance.title}`,
+      signal: "G.W. / A-F"
     }
   ]);
 
