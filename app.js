@@ -359,7 +359,31 @@ const translations = {
       title: "Official Cyberpunk press material, sealed into the public archive.",
       text: "The images below are credited source artifacts used to anchor the fan-made Arasaka interface in the visual language of Night City.",
       showdown: "Showdown tactical frame",
-      afterlife: "Afterlife reputation market"
+      afterlife: "Afterlife reputation market",
+      evidenceAria: "Visual evidence deck",
+      evidenceEyebrow: "Visual Evidence",
+      evidenceTitle: "Generated product plates turn lore pressure into corporate collateral.",
+      evidenceText: "Each plate is a visual proof artifact: a product photo, a mandate route, and a credited source trail bundled into one dossier entry.",
+      evidenceOpen: "Open dossier",
+      evidenceCredit: "Generated catalog plate",
+      evidence: {
+        relic: {
+          title: "Relic breach kit",
+          text: "Konpeki biochip exposure becomes board-grade continuity packaging."
+        },
+        ice: {
+          title: "Black ICE field mesh",
+          text: "Blackwall pressure resolves into trap response, quarantine, and burn authority."
+        },
+        ledger: {
+          title: "Black Ledger rail",
+          text: "Afterlife reputation and founder signal are treated as collateral before markets react."
+        },
+        protection: {
+          title: "Autonomous protection route",
+          text: "City movement turns into drone veil geometry and response choreography."
+        }
+      }
     },
     signalIntel: {
       aria: "Signal intelligence mandates",
@@ -2281,7 +2305,31 @@ const translations = {
       title: "公式Cyberpunkプレス素材を公開アーカイブへ封印。",
       text: "以下の画像は、ファン制作の荒坂インターフェースをナイトシティの視覚言語へ接続するための、クレジット済みソースアーティファクトです。",
       showdown: "ショーダウン戦術フレーム",
-      afterlife: "アフターライフ評価市場"
+      afterlife: "アフターライフ評価市場",
+      evidenceAria: "ビジュアル証拠デッキ",
+      evidenceEyebrow: "ビジュアル証拠",
+      evidenceTitle: "生成された製品プレートが、ロア圧力を企業担保資料へ変換します。",
+      evidenceText: "各プレートは、製品写真、委任経路、クレジット済みソーストレイルをひとつのドシエ項目に束ねた視覚証明です。",
+      evidenceOpen: "ドシエを開く",
+      evidenceCredit: "生成カタログプレート",
+      evidence: {
+        relic: {
+          title: "レリック侵害キット",
+          text: "コンペキのバイオチップ露出は、取締役会級の継続性パッケージになります。"
+        },
+        ice: {
+          title: "ブラックICE現地メッシュ",
+          text: "ブラックウォール圧力は、罠応答、隔離、焼却権限へ解決されます。"
+        },
+        ledger: {
+          title: "ブラック台帳レール",
+          text: "アフターライフ評価と創業者信号は、市場反応前に担保として扱われます。"
+        },
+        protection: {
+          title: "自律防護経路",
+          text: "都市移動は、ドローンヴェール形状と応答振付へ変換されます。"
+        }
+      }
     },
     signalIntel: {
       aria: "信号インテリジェンス委任",
