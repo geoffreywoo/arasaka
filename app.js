@@ -391,6 +391,7 @@ const translations = {
       aria: "Arasaka service offerings",
       path: "Path",
       window: "Window",
+      route: "Service dossier",
       executive: {
         title: "Executive Continuity Deployment",
         text: "Board-level identity custody, succession simulation, and memory escrow for founders whose authority must survive disruption.",
@@ -1633,6 +1634,38 @@ const translations = {
         deployment: "Deployment",
         governance: "Governance"
       }
+    },
+    serviceRoute: {
+      back: "Return to service grid",
+      request: "Request mandate review",
+      related: "Related services",
+      architecture: "Service Information Architecture",
+      operations: "Engagement Matrix",
+      suite: "Service Suite",
+      field: "Night City Service Field File",
+      incident: "Incident",
+      exposure: "Exposure",
+      doctrine: "Doctrine",
+      imageCredit: "Image credit",
+      packages: "Teams",
+      integrations: "Systems",
+      regions: "Theaters",
+      sla: "SLA",
+      proof: "Deployment Proof",
+      proofText: "This standalone service page is rendered from the same bilingual service registry as the public service grid.",
+      open: "Open service node",
+      meta: {
+        clearance: "Clearance",
+        window: "Window",
+        surface: "Surface"
+      },
+      sections: {
+        overview: "Overview",
+        operators: "Operators",
+        stack: "Stack",
+        deployment: "Deployment",
+        governance: "Governance"
+      }
     }
   },
   ja: {
@@ -2027,6 +2060,7 @@ const translations = {
       aria: "荒坂サービス提供",
       path: "経路",
       window: "窓口",
+      route: "サービス記録",
       executive: {
         title: "役員継続配備",
         text: "権限が破壊を生き延びる必要がある創業者向けの、取締役会レベルID保管、継承シミュレーション、記憶エスクロー。",
@@ -3149,6 +3183,38 @@ const translations = {
         deployment: "配備",
         governance: "統治"
       }
+    },
+    serviceRoute: {
+      back: "サービスグリッドへ戻る",
+      request: "委任審査を申請",
+      related: "関連サービス",
+      architecture: "サービス情報アーキテクチャ",
+      operations: "エンゲージメント・マトリクス",
+      suite: "サービススイート",
+      field: "ナイトシティ・サービス現地ファイル",
+      incident: "事案",
+      exposure: "露出",
+      doctrine: "ドクトリン",
+      imageCredit: "画像クレジット",
+      packages: "チーム",
+      integrations: "システム",
+      regions: "作戦区",
+      sla: "SLA",
+      proof: "配備証明",
+      proofText: "この独立サービスページは、公開サービスグリッドと同じ二言語サービスレジストリから描画されています。",
+      open: "サービスノードを開く",
+      meta: {
+        clearance: "クリアランス",
+        window: "窓口",
+        surface: "領域"
+      },
+      sections: {
+        overview: "概要",
+        operators: "オペレーター",
+        stack: "スタック",
+        deployment: "配備",
+        governance: "統治"
+      }
     }
   }
 };
@@ -3325,6 +3391,7 @@ const productClearance = document.querySelector("[data-product-clearance]");
 const productLatency = document.querySelector("[data-product-latency]");
 const productSurface = document.querySelector("[data-product-surface]");
 const productRoute = document.querySelector("[data-product-route]");
+const serviceRoute = document.querySelector("[data-service-route]");
 const routeKicker = document.querySelector("[data-route-kicker]");
 const routeCode = document.querySelector("[data-route-code]");
 const routeTitle = document.querySelector("[data-route-title]");
@@ -3337,6 +3404,18 @@ const routeField = document.querySelector("[data-route-field]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
+const serviceRouteKicker = document.querySelector("[data-service-kicker]");
+const serviceRouteCode = document.querySelector("[data-service-code]");
+const serviceRouteTitle = document.querySelector("[data-service-title]");
+const serviceRouteSummary = document.querySelector("[data-service-summary]");
+const serviceRouteClearance = document.querySelector("[data-service-clearance]");
+const serviceRouteWindow = document.querySelector("[data-service-window]");
+const serviceRouteSurface = document.querySelector("[data-service-surface]");
+const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
+const serviceRouteField = document.querySelector("[data-service-field]");
+const serviceRouteOps = document.querySelector("[data-service-ops]");
+const serviceRoutePanels = document.querySelector("[data-service-panels]");
+const serviceRouteRelated = document.querySelector("[data-service-related]");
 const bootSequence = document.querySelector("[data-boot-sequence]");
 const cursorReticle = document.querySelector("[data-cursor-reticle]");
 const spineMeter = document.querySelector("[data-spine-meter]");
@@ -3409,6 +3488,7 @@ const sectionTargets = Object.keys(sectionLabelKeys)
 
 const readPath = (object, path) => path.split(".").reduce((value, key) => value?.[key], object);
 const productRouteOrder = ["relic", "mikoshi", "ice", "ledger", "swarm", "soulkiller"];
+const serviceRouteOrder = ["executive", "counter", "capital", "protection"];
 
 const productOperations = {
   en: {
@@ -3592,6 +3672,213 @@ const productFieldFiles = {
   }
 };
 
+const serviceRoutes = {
+  en: {
+    executive: {
+      slug: "executive-continuity",
+      kicker: "ARASAKA SERVICE FILE",
+      code: "SV-01",
+      title: "Executive Continuity Deployment",
+      summary: "Board-level identity custody, succession simulation, and memory escrow for founders whose authority must survive disruption.",
+      clearance: "AA-90",
+      window: "72H",
+      surface: "Identity",
+      field: {
+        label: "NC SERVICE FILE / KONPEKI RESPONSE",
+        title: "Continuity begins before the board knows it is in crisis.",
+        text: "Executive Continuity Deployment converts Relic capture, Mikoshi custody, and family quorum control into a sealed response program for principals who cannot be allowed to disappear.",
+        incident: "Principal breach watch",
+        exposure: "Succession rumor cascade",
+        doctrine: "Authority must outlive biology"
+      },
+      operations: {
+        packages: ["Board Witness Cell", "Engram Escrow Team", "Family Quorum Desk"],
+        integrations: ["Relic Continuity Suite", "Mikoshi Archive", "Black Ledger Mandate"],
+        regions: ["Tokyo", "Night City", "Orbital Cold"],
+        sla: ["72-hour custody seal", "2-hour emergency witness", "Dual-key succession lock"]
+      },
+      tabs: {
+        overview: { title: "Mandate frame", text: "A continuity mandate defines who may speak, sign, and return for a principal under disruption.", items: ["Principal identity map", "Authority preservation path", "Board silence protocol"] },
+        operators: { title: "Human custody chain", text: "The deployment is staffed by legal witnesses, medtech operators, and counterintelligence handlers.", items: ["Two-officer custody", "Family liaison desk", "Memory intake surgeon"] },
+        stack: { title: "Neural and capital stack", text: "Relic, Mikoshi, and Black Ledger assets are synchronized so identity and control settle together.", items: ["Biochip intake", "Archive partition", "Mandate hash"] },
+        deployment: { title: "Sealed response window", text: "Teams move from watch mode to capture mode only after board-grade triggers are confirmed.", items: ["Breach confirmation", "Construct escrow", "Return simulation"] },
+        governance: { title: "Continuity governance", text: "Every action produces a narrow audit trail for internal review, not public explanation.", items: ["Privilege seal", "Succession quorum", "Post-event redaction"] }
+      }
+    },
+    counter: {
+      slug: "counterintrusion",
+      kicker: "ARASAKA SERVICE FILE",
+      code: "SV-02",
+      title: "Counterintrusion Theater",
+      summary: "Netrunner cells, Black ICE quarantine, and human-witnessed burn authority for sovereign networks under active probe.",
+      clearance: "ICE-77",
+      window: "0.9ms",
+      surface: "Net",
+      field: {
+        label: "NC SERVICE FILE / BLACKWALL EDGE",
+        title: "A breach is not a moment. It is a theater.",
+        text: "Counterintrusion Theater wraps Black ICE Mesh, live netrunner cells, and human burn authority around sovereign networks when probes become campaign behavior.",
+        incident: "Active runner trace",
+        exposure: "Route burn spillover",
+        doctrine: "Defense must become terrain"
+      },
+      operations: {
+        packages: ["Netrunner Cell", "Black ICE Quarantine", "Witnessed Burn Desk"],
+        integrations: ["Black ICE Mesh", "Secure Systems", "Response Matrix"],
+        regions: ["Night City", "Tokyo Root", "Sovereign Lab"],
+        sla: ["0.9ms trap response", "Human override channel", "After-action trace vault"]
+      },
+      tabs: {
+        overview: { title: "Theater command", text: "Intrusion is treated as terrain with entry points, decoys, witnesses, and red lines.", items: ["Probe classification", "Burn authority ladder", "Containment geometry"] },
+        operators: { title: "Runner and witness cells", text: "Specialist operators pair machine-speed response with accountable human authorization.", items: ["Netrunner lead", "ICE engineer", "Legal witness"] },
+        stack: { title: "Counterfield stack", text: "Black ICE, trace capture, and quarantine layers are staged as a responsive defensive field.", items: ["Passive mesh", "Active burn", "Blackwall isolate"] },
+        deployment: { title: "Active probe response", text: "The service deploys into live networks without forcing clients to wait for a public incident name.", items: ["Ingress map", "Trap routing", "Route cooler"] },
+        governance: { title: "Burn governance", text: "Every lethal or identity-affecting countermeasure is routed through a human-witnessed authority chain.", items: ["Mandate ledger", "Witness seal", "Collateral review"] }
+      }
+    },
+    capital: {
+      slug: "black-ledger-mandate",
+      kicker: "ARASAKA SERVICE FILE",
+      code: "SV-03",
+      title: "Black Ledger Mandate",
+      summary: "Private settlement rails, patent gravity mapping, and founder custody structures for capital that must move without spectacle.",
+      clearance: "BL-00",
+      window: "T+0",
+      surface: "Capital",
+      field: {
+        label: "NC SERVICE FILE / AFTERLIFE MARKET",
+        title: "Quiet capital can be louder than an army.",
+        text: "Black Ledger Mandate turns patents, rumors, founder custody, and dark settlement into a single private rail so hostile buyers never see where leverage clears.",
+        incident: "Off-market succession run",
+        exposure: "Patent gravity event",
+        doctrine: "Liquidity is deterrence"
+      },
+      operations: {
+        packages: ["Founder Relay", "Sovereign Rail", "Patent Gravity Desk"],
+        integrations: ["Black Ledger Custody", "Orbital Vault", "Quiet Relay"],
+        regions: ["Tokyo", "Europe", "Offshore Cold"],
+        sla: ["T+0 dark settlement", "Zero public attribution", "Mandate hash retention"]
+      },
+      tabs: {
+        overview: { title: "Mandate scope", text: "The mandate defines what capital may move, who can be seen, and which assets must remain quiet.", items: ["Principal map", "Asset silence rules", "Counterparty shadow list"] },
+        operators: { title: "Custody desk", text: "Capital operators coordinate legal shells, family offices, and technical evidence lockers.", items: ["Settlement lead", "Patent analyst", "Custody counsel"] },
+        stack: { title: "Dark rail stack", text: "Ledger custody, vault retention, and quiet relay infrastructure settle control without spectacle.", items: ["Mandate hash", "Vault mirror", "Relay audit"] },
+        deployment: { title: "Private clearing", text: "The engagement opens with a narrow settlement corridor and expands only after attribution risk is scored.", items: ["Risk scan", "Dark settlement", "Gravity review"] },
+        governance: { title: "Attribution control", text: "Governance is designed around proof that exists internally and absence that exists publicly.", items: ["Need-to-know desk", "Public silence map", "Sealed disclosure clock"] }
+      }
+    },
+    protection: {
+      slug: "autonomous-protection",
+      kicker: "ARASAKA SERVICE FILE",
+      code: "SV-04",
+      title: "Autonomous Protection Detail",
+      summary: "Drone veils, extraction corridors, and city-grid response choreography for principals crossing hostile districts.",
+      clearance: "SEC-12",
+      window: "00:18",
+      surface: "Kinetic",
+      field: {
+        label: "NC SERVICE FILE / EXECUTIVE ROUTE",
+        title: "Protection is choreography at city scale.",
+        text: "Autonomous Protection Detail makes drone veils, traffic denial, and human-authorized kinetic gates feel less like escape and more like weather around the principal.",
+        incident: "District extraction corridor",
+        exposure: "Kinetic response veil",
+        doctrine: "Mobility is command"
+      },
+      operations: {
+        packages: ["Executive Veil", "Extraction Corridor", "Sentinel Ring"],
+        integrations: ["Autonomous Defense Swarm", "Megacity Grid", "Operations Theater"],
+        regions: ["Night City", "Tokyo", "Port Authority"],
+        sla: ["00:18 response window", "96% district coverage", "Civilian exclusion map"]
+      },
+      tabs: {
+        overview: { title: "Protection frame", text: "The service treats the city as a responsive escort layer around a moving principal.", items: ["Route threat score", "Drone veil geometry", "Extraction priority"] },
+        operators: { title: "Human command loop", text: "Autonomous assets operate inside a human command chain with explicit escalation rules.", items: ["Principal marshal", "Swarm pilot", "Rules-of-force witness"] },
+        stack: { title: "Kinetic stack", text: "Defense Swarm, city grid feeds, and corridor denial are synchronized before the principal moves.", items: ["Sensor intake", "Traffic denial", "Sentinel ring"] },
+        deployment: { title: "Route activation", text: "Teams pre-stage on likely crossings and activate visible force only when the risk model crosses threshold.", items: ["Soft veil", "Hard corridor", "Extraction gate"] },
+        governance: { title: "Force governance", text: "Kinetic authority is logged with civilian exclusion maps and after-action accountability.", items: ["Human authorization", "Exclusion map", "Force audit"] }
+      }
+    }
+  },
+  ja: {
+    executive: {
+      slug: "executive-continuity",
+      kicker: "荒坂サービスファイル",
+      code: "SV-01",
+      title: "役員継続配備",
+      summary: "権限が破壊を生き延びる必要がある創業者向けの、取締役会レベルID保管、継承シミュレーション、記憶エスクロー。",
+      clearance: "AA-90",
+      window: "72H",
+      surface: "ID",
+      field: { label: "NCサービスファイル / コンペキ対応", title: "継続性は、取締役会が危機を知る前に始まります。", text: "役員継続配備は、レリック取得、神輿保管、家族定足数制御を、消えてはならないプリンシパル向けの封印済み応答プログラムへ変換します。", incident: "プリンシパル侵害監視", exposure: "継承噂カスケード", doctrine: "権限は生物性を超えて残る" },
+      operations: { packages: ["取締役会証人セル", "エングラム保管チーム", "家族定足数デスク"], integrations: ["レリック継続スイート", "神輿アーカイブ", "ブラック台帳委任"], regions: ["東京", "ナイトシティ", "軌道冷却"], sla: ["72時間保管封印", "2時間緊急証人", "二重鍵継承ロック"] },
+      tabs: {
+        overview: { title: "委任フレーム", text: "継続委任は、混乱下で誰が話し、署名し、戻れるかを定義します。", items: ["プリンシパルIDマップ", "権限保存経路", "取締役会沈黙プロトコル"] },
+        operators: { title: "人間保管鎖", text: "法的証人、医療技術者、対情報ハンドラーが配備を担います。", items: ["二名責任者保管", "家族連絡デスク", "記憶取得外科"] },
+        stack: { title: "神経・資本スタック", text: "IDと制御が同時に決済されるよう、レリック、神輿、ブラック台帳を同期します。", items: ["バイオチップ取得", "アーカイブ分割", "委任ハッシュ"] },
+        deployment: { title: "封印応答窓", text: "チームは取締役会級トリガー確認後にのみ監視から取得へ移行します。", items: ["侵害確認", "コンストラクト保管", "帰還シミュレーション"] },
+        governance: { title: "継続統治", text: "全行動は公開説明ではなく内部審査向けの狭い監査証跡を生成します。", items: ["特権封印", "継承定足数", "事後秘匿"] }
+      }
+    },
+    counter: {
+      slug: "counterintrusion",
+      kicker: "荒坂サービスファイル",
+      code: "SV-02",
+      title: "対侵入作戦区",
+      summary: "能動探査下の主権ネットワーク向けに、ネットランナーセル、ブラックICE隔離、人間証人付き焼却権限を提供します。",
+      clearance: "ICE-77",
+      window: "0.9ms",
+      surface: "ネット",
+      field: { label: "NCサービスファイル / ブラックウォール端", title: "侵害は瞬間ではなく、作戦区です。", text: "対侵入作戦区は、探査がキャンペーン化した時、ブラックICEメッシュ、生ネットランナーセル、人間の焼却権限を主権ネットワークへ巻き付けます。", incident: "能動ランナー追跡", exposure: "経路焼却波及", doctrine: "防衛は地形になるべき" },
+      operations: { packages: ["ネットランナーセル", "ブラックICE隔離", "証人付き焼却デスク"], integrations: ["ブラックICEメッシュ", "安全システム", "即応マトリクス"], regions: ["ナイトシティ", "東京ルート", "主権ラボ"], sla: ["0.9ms 罠応答", "人間オーバーライド経路", "事後追跡保管庫"] },
+      tabs: {
+        overview: { title: "作戦区指揮", text: "侵入は入口、囮、証人、越境線を持つ地形として扱われます。", items: ["探査分類", "焼却権限梯子", "封じ込め形状"] },
+        operators: { title: "ランナー・証人セル", text: "専門オペレーターが機械速度の応答と説明責任ある人間承認を組み合わせます。", items: ["ネットランナーリード", "ICE技師", "法的証人"] },
+        stack: { title: "対抗場スタック", text: "ブラックICE、追跡取得、隔離層を応答型防衛場として配置します。", items: ["受動メッシュ", "能動焼却", "ブラックウォール隔離"] },
+        deployment: { title: "能動探査応答", text: "公開事件名を待たず、稼働中ネットワークへ配備します。", items: ["侵入マップ", "罠ルーティング", "経路冷却"] },
+        governance: { title: "焼却統治", text: "致死的またはID影響のある対抗策は、人間証人付き権限鎖を通ります。", items: ["委任台帳", "証人封印", "巻き添え審査"] }
+      }
+    },
+    capital: {
+      slug: "black-ledger-mandate",
+      kicker: "荒坂サービスファイル",
+      code: "SV-03",
+      title: "ブラック台帳委任",
+      summary: "見世物にならずに移動すべき資本のための、私的決済レール、特許重力マッピング、創業者保管構造。",
+      clearance: "BL-00",
+      window: "T+0",
+      surface: "資本",
+      field: { label: "NCサービスファイル / アフターライフ市場", title: "静かな資本は軍隊より大きな音を出せます。", text: "ブラック台帳委任は、特許、噂、創業者保管、暗黒決済を単一の私的レールへ変え、敵対的買い手にレバレッジ決済地点を見せません。", incident: "非公開継承ラン", exposure: "特許重力イベント", doctrine: "流動性は抑止力" },
+      operations: { packages: ["創業者中継", "主権レール", "特許重力デスク"], integrations: ["ブラック台帳保管", "軌道保管庫", "秘匿中継"], regions: ["東京", "欧州", "オフショア冷却"], sla: ["T+0 暗黒決済", "公開帰属ゼロ", "委任ハッシュ保持"] },
+      tabs: {
+        overview: { title: "委任範囲", text: "委任は移動可能な資本、可視化可能な人物、静かに保つべき資産を定義します。", items: ["プリンシパルマップ", "資産沈黙規則", "相手方シャドウリスト"] },
+        operators: { title: "保管デスク", text: "資本オペレーターが法的シェル、ファミリーオフィス、技術証拠保管庫を調整します。", items: ["決済リード", "特許アナリスト", "保管弁護士"] },
+        stack: { title: "暗黒レールスタック", text: "台帳保管、保管庫保持、秘匿中継が見世物なしに制御を決済します。", items: ["委任ハッシュ", "保管庫ミラー", "中継監査"] },
+        deployment: { title: "私的清算", text: "狭い決済回廊から開始し、帰属リスク採点後にのみ拡張します。", items: ["リスク走査", "暗黒決済", "重力審査"] },
+        governance: { title: "帰属制御", text: "統治は内部に存在する証明と公開上の不存在を中心に設計されます。", items: ["必要範囲デスク", "公開沈黙マップ", "封印開示時計"] }
+      }
+    },
+    protection: {
+      slug: "autonomous-protection",
+      kicker: "荒坂サービスファイル",
+      code: "SV-04",
+      title: "自律防護ディテール",
+      summary: "敵対地区を横断するプリンシパル向けの、ドローンヴェール、脱出回廊、都市網応答の振付。",
+      clearance: "SEC-12",
+      window: "00:18",
+      surface: "キネティック",
+      field: { label: "NCサービスファイル / 役員経路", title: "防護は都市規模の振付です。", text: "自律防護ディテールは、ドローンヴェール、交通拒否、人間承認のキネティックゲートを、プリンシパル周囲の気象のように見せます。", incident: "地区脱出回廊", exposure: "キネティック応答ヴェール", doctrine: "機動性は指揮" },
+      operations: { packages: ["役員ヴェール", "脱出回廊", "センチネルリング"], integrations: ["自律防衛スウォーム", "メガシティ網", "運用拠点"], regions: ["ナイトシティ", "東京", "港湾権限"], sla: ["00:18 応答窓", "96% 地区カバレッジ", "民間人除外マップ"] },
+      tabs: {
+        overview: { title: "防護フレーム", text: "都市を移動するプリンシパル周囲の応答型護衛層として扱います。", items: ["経路脅威スコア", "ドローンヴェール形状", "脱出優先度"] },
+        operators: { title: "人間指揮ループ", text: "自律資産は明示的な段階的規則を持つ人間指揮鎖内で作動します。", items: ["プリンシパル保安官", "スウォーム操縦者", "武力規則証人"] },
+        stack: { title: "キネティックスタック", text: "プリンシパル移動前に防衛スウォーム、都市網フィード、回廊拒否を同期します。", items: ["センサー取得", "交通拒否", "センチネルリング"] },
+        deployment: { title: "経路起動", text: "予想交差地点へ事前配置し、リスクモデルが閾値を超えた時だけ可視武力を起動します。", items: ["ソフトヴェール", "ハード回廊", "脱出ゲート"] },
+        governance: { title: "武力統治", text: "キネティック権限は民間人除外マップと事後説明責任つきで記録されます。", items: ["人間承認", "除外マップ", "武力監査"] }
+      }
+    }
+  }
+};
+
 function saveLanguage(language) {
   try {
     localStorage.setItem("arasaka-language", language);
@@ -3672,6 +3959,7 @@ function setLanguage(language) {
   updateOperationTheater(activeOperationTheater);
   updateProductPage(activeProductPage, activeProductTab);
   updateProductRoute();
+  updateServiceRoute();
   updateActiveSection(activeSectionId);
   updateMenuButtonLabel();
   saveLanguage(language);
@@ -3960,6 +4248,178 @@ function updateProductRoute() {
 function initProductRoute() {
   if (!productRoute) return;
   updateProductRoute();
+}
+
+function updateServiceRoute() {
+  if (!serviceRoute || !serviceRouteTitle) return;
+  const serviceKey = serviceRoute.dataset.serviceRoute || "executive";
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const routeLabels = dictionary.serviceRoute;
+  const services = serviceRoutes[language] || serviceRoutes.en;
+  const fallbackServices = serviceRoutes.en;
+  const file = services[serviceKey] || services.executive || fallbackServices.executive;
+  const tabOrder = ["overview", "operators", "stack", "deployment", "governance"];
+  const root = window.location.pathname.includes("/services/") ? "../" : "services/";
+
+  document.title = `${file.title} | Arasaka Corporation`;
+  if (serviceRouteKicker) serviceRouteKicker.textContent = file.kicker;
+  if (serviceRouteCode) serviceRouteCode.textContent = file.code;
+  serviceRouteTitle.textContent = file.title;
+  if (serviceRouteSummary) serviceRouteSummary.textContent = file.summary;
+  if (serviceRouteClearance) serviceRouteClearance.textContent = file.clearance;
+  if (serviceRouteWindow) serviceRouteWindow.textContent = file.window;
+  if (serviceRouteSurface) serviceRouteSurface.textContent = file.surface;
+
+  if (serviceRouteField) {
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    const caption = document.createElement("figcaption");
+    const captionLabel = document.createElement("span");
+    const captionLink = document.createElement("a");
+    const content = document.createElement("div");
+    const label = document.createElement("span");
+    const heading = document.createElement("h2");
+    const copy = document.createElement("p");
+    const readouts = document.createElement("dl");
+    const rows = [
+      [routeLabels.incident, file.field.incident],
+      [routeLabels.exposure, file.field.exposure],
+      [routeLabels.doctrine, file.field.doctrine]
+    ];
+
+    image.src = "../../assets/cyberpunk2077-showdown-press.png";
+    image.alt = file.field.title;
+    image.loading = "lazy";
+    captionLabel.textContent = routeLabels.imageCredit;
+    captionLink.href = "https://press.cdprojektred.com/en/224/797";
+    captionLink.target = "_blank";
+    captionLink.rel = "noreferrer";
+    captionLink.textContent = "CD PROJEKT RED / Cyberpunk 2077";
+    caption.append(captionLabel, captionLink);
+    figure.append(image, caption);
+
+    label.textContent = file.field.label;
+    heading.textContent = file.field.title;
+    copy.textContent = file.field.text;
+
+    rows.forEach(([term, detail]) => {
+      const row = document.createElement("div");
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = detail;
+      row.append(dt, dd);
+      readouts.append(row);
+    });
+
+    content.append(label, heading, copy, readouts);
+    serviceRouteField.replaceChildren(figure, content);
+  }
+
+  if (serviceRouteSwitcher) {
+    const label = document.createElement("span");
+    const rail = document.createElement("div");
+
+    label.textContent = routeLabels.suite;
+    serviceRouteSwitcher.replaceChildren(label);
+
+    serviceRouteOrder.forEach((key) => {
+      const serviceFile = services[key] || fallbackServices[key];
+      if (!serviceFile) return;
+
+      const link = document.createElement("a");
+      const code = document.createElement("span");
+      const name = document.createElement("strong");
+
+      link.href = key === serviceKey ? "./" : `${root}${serviceFile.slug}/`;
+      link.className = key === serviceKey ? "is-active" : "";
+      link.setAttribute("aria-current", key === serviceKey ? "page" : "false");
+      code.textContent = serviceFile.code;
+      name.textContent = serviceFile.title;
+
+      link.append(code, name);
+      rail.append(link);
+    });
+
+    serviceRouteSwitcher.append(rail);
+  }
+
+  if (serviceRouteOps) {
+    const operationGroups = [
+      ["packages", routeLabels.packages],
+      ["integrations", routeLabels.integrations],
+      ["regions", routeLabels.regions],
+      ["sla", routeLabels.sla]
+    ];
+    const label = document.createElement("span");
+
+    label.textContent = routeLabels.operations;
+    serviceRouteOps.replaceChildren(label);
+
+    operationGroups.forEach(([operationKey, operationLabel]) => {
+      const article = document.createElement("article");
+      const heading = document.createElement("h2");
+      const list = document.createElement("ul");
+
+      heading.textContent = operationLabel;
+      file.operations[operationKey].forEach((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        list.append(row);
+      });
+
+      article.append(heading, list);
+      serviceRouteOps.append(article);
+    });
+  }
+
+  if (serviceRoutePanels) {
+    serviceRoutePanels.replaceChildren();
+    tabOrder.forEach((tabKey) => {
+      const tab = file.tabs[tabKey];
+      if (!tab) return;
+
+      const article = document.createElement("article");
+      const label = document.createElement("span");
+      const heading = document.createElement("h2");
+      const copy = document.createElement("p");
+      const list = document.createElement("ul");
+
+      label.textContent = routeLabels.sections[tabKey] || tabKey;
+      heading.textContent = tab.title;
+      copy.textContent = tab.text;
+
+      tab.items.forEach((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        list.append(row);
+      });
+
+      article.append(label, heading, copy, list);
+      serviceRoutePanels.append(article);
+    });
+  }
+
+  if (serviceRouteRelated) {
+    serviceRouteRelated.replaceChildren();
+    serviceRouteOrder
+      .filter((key) => key !== serviceKey)
+      .slice(0, 3)
+      .forEach((key) => {
+        const related = services[key] || fallbackServices[key];
+        if (!related) return;
+        const link = document.createElement("a");
+        link.href = `${root}${related.slug}/`;
+        link.textContent = related.title;
+        serviceRouteRelated.append(link);
+      });
+  }
+}
+
+function initServiceRoute() {
+  if (!serviceRoute) return;
+  updateServiceRoute();
 }
 
 function updateTimes() {
@@ -5274,4 +5734,5 @@ initSignalSpine();
 initMobileMenu();
 initProductPages();
 initProductRoute();
+initServiceRoute();
 initActiveSections();
