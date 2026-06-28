@@ -121,6 +121,7 @@
 
       <nav class="site-nav" aria-label="Site">
         <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
+        <a href="#products" data-i18n="nav.products">Products</a>
         <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
         <a href="#systems" data-i18n="nav.systems">Systems</a>
         <a href="#ice" data-i18n="nav.ice">ICE</a>
@@ -168,6 +169,7 @@
     <nav class="mobile-nav" id="mobile-nav" data-mobile-nav hidden aria-label="Mobile site">
       <a href="#top" data-i18n="nav.home">Home</a>
       <a href="#divisions" data-i18n="nav.divisions">Divisions</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
       <a href="#foundry" data-i18n="nav.foundry">Foundry</a>
       <a href="#systems" data-i18n="nav.systems">Systems</a>
       <a href="#ice" data-i18n="nav.ice">ICE</a>
@@ -502,6 +504,73 @@
             <span class="card-index">04</span>
             <h3 data-i18n="division.intelligence.title">Netrunner Intelligence</h3>
             <p data-i18n="division.intelligence.text">Black ICE, memetic risk analysis, executive memory defense, and hostile AI containment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section product-section" id="products">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="products.eyebrow">Product Architecture</p>
+          <h2 data-i18n="products.title">Each service is a deployable corporate weapon system.</h2>
+          <p data-i18n="products.text">
+            Arasaka products are sold as sealed operating environments: hardware, custody, intelligence, response, and governance bundled into auditable client deployments.
+          </p>
+        </div>
+
+        <div class="product-grid" aria-label="Arasaka product pages" data-i18n-aria-label="products.aria">
+          <article class="product-card product-card-red">
+            <span class="product-code">AR-RELIC</span>
+            <h3 data-i18n="products.card.relic.title">Relic Continuity Suite</h3>
+            <p data-i18n="products.card.relic.text">Executive engram capture, construct escrow, and succession simulation for assets too valuable to remain biological.</p>
+            <button class="product-link" type="button" data-product-page="relic">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="product-card product-card-cyan">
+            <span class="product-code">MIKOSHI-IX</span>
+            <h3 data-i18n="products.card.mikoshi.title">Mikoshi Continuity Engine</h3>
+            <p data-i18n="products.card.mikoshi.text">Private construct vaulting, memory partition control, and simulation chambers for post-body governance.</p>
+            <button class="product-link" type="button" data-product-page="mikoshi">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="product-card product-card-acid">
+            <span class="product-code">ICE-77</span>
+            <h3 data-i18n="products.card.ice.title">Black ICE Mesh</h3>
+            <p data-i18n="products.card.ice.text">Counterintrusion membranes, hostile netrunner burn logic, and Blackwall-adjacent quarantine for sovereign networks.</p>
+            <button class="product-link" type="button" data-product-page="ice">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="product-card product-card-gold">
+            <span class="product-code">BL-00</span>
+            <h3 data-i18n="products.card.ledger.title">Black Ledger Custody</h3>
+            <p data-i18n="products.card.ledger.text">Dark settlement, patent gravity, and capital continuity rails for founders, family offices, and sovereign pools.</p>
+            <button class="product-link" type="button" data-product-page="ledger">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="product-card product-card-cyan">
+            <span class="product-code">SWARM-12</span>
+            <h3 data-i18n="products.card.swarm.title">Autonomous Defense Swarm</h3>
+            <p data-i18n="products.card.swarm.text">Drone veils, extraction corridors, and human-authorized kinetic response for city-scale executive protection.</p>
+            <button class="product-link" type="button" data-product-page="swarm">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="product-card product-card-red">
+            <span class="product-code">SOUL-23</span>
+            <h3 data-i18n="products.card.soulkiller.title">Soulkiller Redaction Lab</h3>
+            <p data-i18n="products.card.soulkiller.text">Identity severance, construct capture, and evidence minimization for the most sensitive neural operations.</p>
+            <button class="product-link" type="button" data-product-page="soulkiller">
+              <span data-i18n="products.open">Open product page</span>
+              <span aria-hidden="true">↗</span>
+            </button>
           </article>
         </div>
       </section>
@@ -1712,6 +1781,50 @@
         </div>
       </section>
     </main>
+
+    <aside class="product-page-shell" data-product-shell hidden aria-label="Product detail page" data-i18n-aria-label="productPage.aria">
+      <div class="product-page-backdrop" data-product-close></div>
+      <article class="product-page" role="dialog" aria-modal="true" aria-labelledby="product-page-title">
+        <button class="product-close" type="button" data-product-close data-i18n-aria-label="productPage.close" aria-label="Close product page">×</button>
+        <div class="product-page-hero">
+          <span class="product-page-kicker" data-product-kicker>ARASAKA PRODUCT FILE</span>
+          <strong data-product-code>AR-RELIC</strong>
+          <h2 id="product-page-title" data-product-title>Relic Continuity Suite</h2>
+          <p data-product-summary>Executive engram capture, construct escrow, and succession simulation for assets too valuable to remain biological.</p>
+        </div>
+        <div class="product-page-body">
+          <nav class="product-page-tabs" aria-label="Product information architecture" data-i18n-aria-label="productPage.tabsAria">
+            <button class="product-page-tab is-active" type="button" data-product-tab="overview" aria-pressed="true" data-i18n="productPage.tab.overview">Overview</button>
+            <button class="product-page-tab" type="button" data-product-tab="modules" aria-pressed="false" data-i18n="productPage.tab.modules">Modules</button>
+            <button class="product-page-tab" type="button" data-product-tab="specs" aria-pressed="false" data-i18n="productPage.tab.specs">Specs</button>
+            <button class="product-page-tab" type="button" data-product-tab="deployment" aria-pressed="false" data-i18n="productPage.tab.deployment">Deployment</button>
+            <button class="product-page-tab" type="button" data-product-tab="governance" aria-pressed="false" data-i18n="productPage.tab.governance">Governance</button>
+          </nav>
+          <section class="product-page-panel">
+            <div class="product-page-copy">
+              <span data-product-tab-label>Overview</span>
+              <h3 data-product-tab-title>Continuity for minds that move markets.</h3>
+              <p data-product-tab-text>Capture executive memory, isolate construct drift, and rehearse succession outcomes before any biological incident reaches the board.</p>
+            </div>
+            <div class="product-page-list" data-product-list></div>
+          </section>
+          <aside class="product-page-meta">
+            <div>
+              <span data-i18n="productPage.meta.clearance">Clearance</span>
+              <strong data-product-clearance>AA-90</strong>
+            </div>
+            <div>
+              <span data-i18n="productPage.meta.latency">Latency</span>
+              <strong data-product-latency>2.8ms</strong>
+            </div>
+            <div>
+              <span data-i18n="productPage.meta.surface">Surface</span>
+              <strong data-product-surface>Neural</strong>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </aside>
 
     <footer class="site-footer">
       <div class="footer-primary">

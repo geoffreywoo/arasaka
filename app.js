@@ -5,6 +5,7 @@ const translations = {
     nav: {
       home: "Home",
       divisions: "Divisions",
+      products: "Products",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -1235,6 +1236,274 @@ const translations = {
       registry: "荒坂株式会社 Public Corporate Network",
       cameo: "quiet relay",
       notice: "Original fan-made web concept. No official game assets are used."
+    },
+    products: {
+      eyebrow: "Product Architecture",
+      title: "Each service is a deployable corporate weapon system.",
+      text: "Arasaka products are sold as sealed operating environments: hardware, custody, intelligence, response, and governance bundled into auditable client deployments.",
+      aria: "Arasaka product pages",
+      open: "Open product page",
+      card: {
+        relic: {
+          title: "Relic Continuity Suite",
+          text: "Executive engram capture, construct escrow, and succession simulation for assets too valuable to remain biological."
+        },
+        mikoshi: {
+          title: "Mikoshi Continuity Engine",
+          text: "Private construct vaulting, memory partition control, and simulation chambers for post-body governance."
+        },
+        ice: {
+          title: "Black ICE Mesh",
+          text: "Counterintrusion membranes, hostile netrunner burn logic, and Blackwall-adjacent quarantine for sovereign networks."
+        },
+        ledger: {
+          title: "Black Ledger Custody",
+          text: "Dark settlement, patent gravity, and capital continuity rails for founders, family offices, and sovereign pools."
+        },
+        swarm: {
+          title: "Autonomous Defense Swarm",
+          text: "Drone veils, extraction corridors, and human-authorized kinetic response for city-scale executive protection."
+        },
+        soulkiller: {
+          title: "Soulkiller Redaction Lab",
+          text: "Identity severance, construct capture, and evidence minimization for the most sensitive neural operations."
+        }
+      }
+    },
+    productPage: {
+      aria: "Product detail page",
+      close: "Close product page",
+      tabsAria: "Product information architecture",
+      tab: {
+        overview: "Overview",
+        modules: "Modules",
+        specs: "Specs",
+        deployment: "Deployment",
+        governance: "Governance"
+      },
+      meta: {
+        clearance: "Clearance",
+        latency: "Latency",
+        surface: "Surface"
+      },
+      files: {
+        relic: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "AR-RELIC",
+          title: "Relic Continuity Suite",
+          summary: "Executive engram capture, construct escrow, and succession simulation for assets too valuable to remain biological.",
+          clearance: "AA-90",
+          latency: "2.8ms",
+          surface: "Neural",
+          tabs: {
+            overview: {
+              title: "Continuity for minds that move markets.",
+              text: "Capture executive memory, isolate construct drift, and rehearse succession outcomes before any biological incident reaches the board.",
+              items: ["Biochip-backed identity escrow", "Construct drift scoring", "Succession rehearsal chamber"]
+            },
+            modules: {
+              title: "Core modules",
+              text: "A sealed stack for intake, simulation, consent record, and emergency transfer.",
+              items: ["Neuroprint Intake", "Relic Biochip Custody", "Boardroom Fork Simulator"]
+            },
+            specs: {
+              title: "Operating envelope",
+              text: "Designed for principal offices, family control rooms, and orbital custody relays.",
+              items: ["99.8% archive integrity", "Cold-gate Mikoshi handoff", "Human witness chain required"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "The suite begins with a private neural audit, then moves through capture, simulation, and board-approved continuity drills.",
+              items: ["Week 0 neural audit", "Week 2 biochip escrow", "Week 6 succession simulation"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "No construct is activated without client mandate, family quorum, and Arasaka custody officer approval.",
+              items: ["Mandate vault", "Dual-key activation", "Construct evidence log"]
+            }
+          }
+        },
+        mikoshi: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "MIKOSHI-IX",
+          title: "Mikoshi Continuity Engine",
+          summary: "Private construct vaulting, memory partition control, and simulation chambers for post-body governance.",
+          clearance: "S-12",
+          latency: "Cold",
+          surface: "Archive",
+          tabs: {
+            overview: {
+              title: "A private afterlife for corporate authority.",
+              text: "Mikoshi isolates constructs in governed partitions where memory, identity, and board rights can be evaluated without public exposure.",
+              items: ["Construct partitioning", "Simulated counsel chambers", "Memory chain reconciliation"]
+            },
+            modules: {
+              title: "Continuity engine modules",
+              text: "Each module controls a different boundary between the living office and the archived principal.",
+              items: ["Partition Gate", "Consent Ledger", "Return Window"]
+            },
+            specs: {
+              title: "Vault specifications",
+              text: "Engineered for deep-cold identity storage and simulation environments with strict witness controls.",
+              items: ["Orbital backup relay", "Blackwall-isolated chamber", "Synthetic witness audit"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "Mikoshi deployments begin as silent archives before any active simulation or return procedure is approved.",
+              items: ["Archive creation", "Partition test", "Continuity council review"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "Construct rights, family mandates, and corporate voting power are separated until legal activation.",
+              items: ["Family quorum gate", "Board access split", "No-public-claim protocol"]
+            }
+          }
+        },
+        ice: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "ICE-77",
+          title: "Black ICE Mesh",
+          summary: "Counterintrusion membranes, hostile netrunner burn logic, and Blackwall-adjacent quarantine for sovereign networks.",
+          clearance: "ICE-77",
+          latency: "0.9ms",
+          surface: "Net",
+          tabs: {
+            overview: {
+              title: "Counterintrusion that bites back.",
+              text: "Black ICE Mesh scores intent, traps unauthorized cognition, and burns hostile routes before an operator can touch the protected substrate.",
+              items: ["Intent scoring", "Disposable trap partitions", "Hostile route burn"]
+            },
+            modules: {
+              title: "Mesh modules",
+              text: "Modules combine silent detection with visible deterrence for networks that must look calm while preparing force.",
+              items: ["Runner Lure", "Blackwall Edge Gate", "Trace Guillotine"]
+            },
+            specs: {
+              title: "Operating envelope",
+              text: "Designed for corporate HQs, sovereign labs, and capital rails with zero-trust neurointerfaces.",
+              items: ["0.04% hostile AI drift", "Human override channel", "Memory-safe quarantine"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "Mesh rollouts start with passive shadowing, then graduate to active ICE once the adversary map is complete.",
+              items: ["Shadow scan", "Trap calibration", "Active burn authorization"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "Burn logic stays below lethal thresholds unless explicit executive and legal authorizations align.",
+              items: ["Kill-chain witness", "Legal hold mode", "After-action trace vault"]
+            }
+          }
+        },
+        ledger: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "BL-00",
+          title: "Black Ledger Custody",
+          summary: "Dark settlement, patent gravity, and capital continuity rails for founders, family offices, and sovereign pools.",
+          clearance: "BL-00",
+          latency: "T+0",
+          surface: "Capital",
+          tabs: {
+            overview: {
+              title: "Capital custody beneath public-market visibility.",
+              text: "Black Ledger keeps ownership, settlement, and strategic leverage moving while adversaries see only inert shadows.",
+              items: ["Dark-pool settlement", "Patent gravity map", "Founder relay checksum"]
+            },
+            modules: {
+              title: "Custody modules",
+              text: "The product bundles capital movement, jurisdictional fog, and narrative stealth into one control surface.",
+              items: ["Sovereign Rail", "Patent Vault", "Quiet Relay"]
+            },
+            specs: {
+              title: "Operating envelope",
+              text: "Built for private offices, venture syndicates, and states that need discretion before disclosure.",
+              items: ["Cold key rotation", "Zero public attribution", "Multi-jurisdiction escrow"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "A custody deployment starts with asset mapping and ends with a live capital console operated through human review.",
+              items: ["Asset graph intake", "Settlement rail test", "Capital console handoff"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "Every transfer binds a human mandate to a machine-verifiable trail that can stay private until disclosure is required.",
+              items: ["Mandate hash", "Disclosure timer", "Counterparty silence score"]
+            }
+          }
+        },
+        swarm: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "SWARM-12",
+          title: "Autonomous Defense Swarm",
+          summary: "Drone veils, extraction corridors, and human-authorized kinetic response for city-scale executive protection.",
+          clearance: "SEC-12",
+          latency: "00:18",
+          surface: "Kinetic",
+          tabs: {
+            overview: {
+              title: "Protection that arrives before the threat is public.",
+              text: "The swarm fuses city sensors, private convoy telemetry, and human authorization into a live defensive organism.",
+              items: ["Executive veil", "Extraction corridor", "Sentinel ring"]
+            },
+            modules: {
+              title: "Swarm modules",
+              text: "Each module governs a different physical response tier, from silent repositioning to visible deterrence.",
+              items: ["Microdrone veil", "Armored corridor", "Counter-sniper bloom"]
+            },
+            specs: {
+              title: "Operating envelope",
+              text: "Designed for Night City-scale threat density with clear human authority over kinetic escalation.",
+              items: ["96% district coverage", "Human kill-chain lock", "Low-noise patrol mode"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "Swarm deployments map districts first, then stage autonomous assets around principals and critical routes.",
+              items: ["District scan", "Route rehearsal", "Live overwatch"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "The system can move without asking, but it cannot escalate without named human authority.",
+              items: ["Escalation quorum", "Bodycam evidence chain", "Civilian exclusion map"]
+            }
+          }
+        },
+        soulkiller: {
+          kicker: "ARASAKA PRODUCT FILE",
+          code: "SOUL-23",
+          title: "Soulkiller Redaction Lab",
+          summary: "Identity severance, construct capture, and evidence minimization for the most sensitive neural operations.",
+          clearance: "RED",
+          latency: "Sealed",
+          surface: "Memory",
+          tabs: {
+            overview: {
+              title: "A black-site instrument for impossible memory problems.",
+              text: "Soulkiller Redaction Lab models neural extraction as a controlled incident with witness, custody, and evidence minimization layers.",
+              items: ["Identity severance", "Construct capture", "Trace minimization"]
+            },
+            modules: {
+              title: "Redaction modules",
+              text: "Each module isolates a volatile stage of extraction so the operation can be audited without exposing the subject.",
+              items: ["Severance Gate", "Construct Flask", "Evidence Cooler"]
+            },
+            specs: {
+              title: "Operating envelope",
+              text: "Restricted to sealed facilities, hostile-AI quarantine zones, and emergency continuity mandates.",
+              items: ["No public endpoint", "Synthetic witness lock", "Blacksite-only runtime"]
+            },
+            deployment: {
+              title: "Deployment path",
+              text: "The lab is never sold as software; it is deployed as a controlled facility with Arasaka operators in the loop.",
+              items: ["Facility seal", "Witness calibration", "Extraction window"]
+            },
+            governance: {
+              title: "Governance posture",
+              text: "Redaction requires extraordinary mandate and produces a sealed evidence trail for internal review only.",
+              items: ["Red mandate", "Two-officer custody", "Post-operation silence protocol"]
+            }
+          }
+        }
+      }
     }
   },
   ja: {
@@ -1243,6 +1512,7 @@ const translations = {
     nav: {
       home: "ホーム",
       divisions: "事業部門",
+      products: "製品群",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -2473,6 +2743,154 @@ const translations = {
       registry: "荒坂株式会社 公開法人ネットワーク",
       cameo: "秘匿中継",
       notice: "オリジナルのファン制作ウェブコンセプトです。公式ゲーム素材は使用していません。"
+    },
+    products: {
+      eyebrow: "製品アーキテクチャ",
+      title: "各サービスは配備可能な企業兵器システムです。",
+      text: "荒坂製品は、ハードウェア、保管、情報、即応、統治を監査可能な顧客配備へ束ねた密閉型オペレーティング環境として提供されます。",
+      aria: "荒坂製品ページ",
+      open: "製品ページを開く",
+      card: {
+        relic: {
+          title: "レリック継続スイート",
+          text: "生物学的存在に留めるには価値が高すぎる資産のための、役員エングラム取得、コンストラクト保管、継承シミュレーション。"
+        },
+        mikoshi: {
+          title: "神輿継続エンジン",
+          text: "身体後の統治に向けた、私的コンストラクト保管、記憶パーティション制御、シミュレーション室。"
+        },
+        ice: {
+          title: "ブラックICEメッシュ",
+          text: "主権ネットワーク向けの、対侵入膜、敵対ネットランナー焼却ロジック、ブラックウォール隣接隔離。"
+        },
+        ledger: {
+          title: "ブラック台帳保管",
+          text: "創業者、ファミリーオフィス、主権資本プールのための、暗黒決済、特許重力、資本継続レール。"
+        },
+        swarm: {
+          title: "自律防衛スウォーム",
+          text: "都市規模の役員保護に向けた、ドローンヴェール、脱出回廊、人間承認型の物理即応。"
+        },
+        soulkiller: {
+          title: "ソウルキラー秘匿研究室",
+          text: "最も機密性の高い神経作戦のための、身元切断、コンストラクト取得、証拠最小化。"
+        }
+      }
+    },
+    productPage: {
+      aria: "製品詳細ページ",
+      close: "製品ページを閉じる",
+      tabsAria: "製品情報アーキテクチャ",
+      tab: {
+        overview: "概要",
+        modules: "モジュール",
+        specs: "仕様",
+        deployment: "配備",
+        governance: "統治"
+      },
+      meta: {
+        clearance: "認証",
+        latency: "遅延",
+        surface: "領域"
+      },
+      files: {
+        relic: {
+          kicker: "荒坂製品ファイル",
+          code: "AR-RELIC",
+          title: "レリック継続スイート",
+          summary: "生物学的存在に留めるには価値が高すぎる資産のための、役員エングラム取得、コンストラクト保管、継承シミュレーション。",
+          clearance: "AA-90",
+          latency: "2.8ms",
+          surface: "神経",
+          tabs: {
+            overview: { title: "市場を動かす精神のための継続性。", text: "役員記憶を取得し、コンストラクトの揺らぎを隔離し、生物学的事故が取締役会に届く前に継承結果を予行します。", items: ["バイオチップ身元保管", "コンストラクト揺らぎ採点", "取締役会継承シミュレーター"] },
+            modules: { title: "中核モジュール", text: "取り込み、シミュレーション、同意記録、緊急移送のための密閉スタックです。", items: ["ニューロプリント取り込み", "レリック・バイオチップ保管", "取締役会フォークシミュレーター"] },
+            specs: { title: "稼働範囲", text: "プリンシパル事務所、家族統制室、軌道保管中継向けに設計されています。", items: ["99.8% アーカイブ完全性", "冷却神輿ハンドオフ", "人間証人チェーン必須"] },
+            deployment: { title: "配備経路", text: "私的神経監査から開始し、取得、シミュレーション、取締役会承認済み継続訓練へ進みます。", items: ["0週目 神経監査", "2週目 バイオチップ保管", "6週目 継承シミュレーション"] },
+            governance: { title: "統治姿勢", text: "顧客委任、家族定足数、荒坂保管責任者の承認なしにコンストラクトは起動されません。", items: ["委任保管庫", "二重鍵起動", "コンストラクト証跡ログ"] }
+          }
+        },
+        mikoshi: {
+          kicker: "荒坂製品ファイル",
+          code: "MIKOSHI-IX",
+          title: "神輿継続エンジン",
+          summary: "身体後の統治に向けた、私的コンストラクト保管、記憶パーティション制御、シミュレーション室。",
+          clearance: "S-12",
+          latency: "冷却",
+          surface: "記録",
+          tabs: {
+            overview: { title: "企業権限のための私的な来世。", text: "神輿は、記憶、身元、取締役会権限を公開露出なしで評価できる統治済みパーティションへコンストラクトを隔離します。", items: ["コンストラクト分割", "模擬顧問室", "記憶チェーン照合"] },
+            modules: { title: "継続エンジンモジュール", text: "各モジュールは、生きている事務所と保管されたプリンシパルの境界を制御します。", items: ["パーティションゲート", "同意台帳", "帰還窓"] },
+            specs: { title: "保管庫仕様", text: "厳格な証人制御を備えた深冷身元保管とシミュレーション環境向けに設計されています。", items: ["軌道バックアップ中継", "ブラックウォール隔離室", "合成証人監査"] },
+            deployment: { title: "配備経路", text: "神輿配備は、能動シミュレーションや帰還手順が承認される前に、静かなアーカイブとして開始されます。", items: ["アーカイブ作成", "パーティション試験", "継続評議会審査"] },
+            governance: { title: "統治姿勢", text: "法的起動まで、コンストラクト権利、家族委任、企業議決権は分離されます。", items: ["家族定足数ゲート", "取締役会アクセス分割", "公開主張なしプロトコル"] }
+          }
+        },
+        ice: {
+          kicker: "荒坂製品ファイル",
+          code: "ICE-77",
+          title: "ブラックICEメッシュ",
+          summary: "主権ネットワーク向けの、対侵入膜、敵対ネットランナー焼却ロジック、ブラックウォール隣接隔離。",
+          clearance: "ICE-77",
+          latency: "0.9ms",
+          surface: "ネット",
+          tabs: {
+            overview: { title: "噛み返す対侵入システム。", text: "ブラックICEメッシュは意図を採点し、無許可の認知を罠へ閉じ込め、操作者が保護基盤に触れる前に敵対経路を焼却します。", items: ["意図採点", "使い捨て罠パーティション", "敵対経路焼却"] },
+            modules: { title: "メッシュモジュール", text: "静かな検知と可視的抑止を組み合わせ、平静に見えながら力を準備するネットワークを守ります。", items: ["ランナー誘引", "ブラックウォール端部ゲート", "追跡ギロチン"] },
+            specs: { title: "稼働範囲", text: "ゼロトラスト・ニューロインターフェースを持つ企業本社、主権ラボ、資本レール向けです。", items: ["0.04% 敵対AIドリフト", "人間オーバーライド経路", "記憶安全隔離"] },
+            deployment: { title: "配備経路", text: "受動シャドーイングから開始し、敵対者マップが完成した後に能動ICEへ移行します。", items: ["シャドースキャン", "罠較正", "能動焼却承認"] },
+            governance: { title: "統治姿勢", text: "明示的な役員承認と法務承認が一致しない限り、焼却ロジックは致死閾値以下に留まります。", items: ["キルチェーン証人", "法的保留モード", "事後追跡保管庫"] }
+          }
+        },
+        ledger: {
+          kicker: "荒坂製品ファイル",
+          code: "BL-00",
+          title: "ブラック台帳保管",
+          summary: "創業者、ファミリーオフィス、主権資本プールのための、暗黒決済、特許重力、資本継続レール。",
+          clearance: "BL-00",
+          latency: "T+0",
+          surface: "資本",
+          tabs: {
+            overview: { title: "公開市場の視界下にある資本保管。", text: "ブラック台帳は、敵対者には不活性な影だけを見せながら、所有権、決済、戦略的レバレッジを動かします。", items: ["暗黒決済", "特許重力マップ", "創業者中継チェックサム"] },
+            modules: { title: "保管モジュール", text: "資本移動、管轄霧化、物語ステルスをひとつの制御面へ束ねます。", items: ["主権レール", "特許保管庫", "秘匿中継"] },
+            specs: { title: "稼働範囲", text: "開示前に裁量を必要とする個人事務所、ベンチャーシンジケート、国家向けです。", items: ["冷却鍵ローテーション", "公開帰属ゼロ", "多管轄エスクロー"] },
+            deployment: { title: "配備経路", text: "資産マッピングから始まり、人間審査を通じて運用されるライブ資本コンソールで終わります。", items: ["資産グラフ取り込み", "決済レール試験", "資本コンソール引渡し"] },
+            governance: { title: "統治姿勢", text: "全ての移転は、人間委任と機械検証可能な証跡を結び、必要な開示時まで私的に保持できます。", items: ["委任ハッシュ", "開示タイマー", "相手方沈黙スコア"] }
+          }
+        },
+        swarm: {
+          kicker: "荒坂製品ファイル",
+          code: "SWARM-12",
+          title: "自律防衛スウォーム",
+          summary: "都市規模の役員保護に向けた、ドローンヴェール、脱出回廊、人間承認型の物理即応。",
+          clearance: "SEC-12",
+          latency: "00:18",
+          surface: "物理",
+          tabs: {
+            overview: { title: "脅威が公開される前に到着する保護。", text: "スウォームは都市センサー、私的車列テレメトリ、人間承認を融合し、生きた防衛有機体として稼働します。", items: ["役員ヴェール", "脱出回廊", "センチネルリング"] },
+            modules: { title: "スウォームモジュール", text: "各モジュールは、静かな再配置から可視的抑止まで異なる物理即応階層を管理します。", items: ["マイクロドローンヴェール", "装甲回廊", "対狙撃ブルーム"] },
+            specs: { title: "稼働範囲", text: "物理エスカレーションに明確な人間権限を持たせ、ナイトシティ規模の脅威密度へ対応します。", items: ["96% 地区カバレッジ", "人間キルチェーンロック", "低ノイズ巡回モード"] },
+            deployment: { title: "配備経路", text: "地区を先にマッピングし、その後プリンシパルと重要経路の周辺に自律資産を配置します。", items: ["地区走査", "経路リハーサル", "ライブ監視"] },
+            governance: { title: "統治姿勢", text: "システムは許可なしに移動できますが、指名された人間権限なしにエスカレーションできません。", items: ["エスカレーション定足数", "ボディカム証跡", "民間人除外マップ"] }
+          }
+        },
+        soulkiller: {
+          kicker: "荒坂製品ファイル",
+          code: "SOUL-23",
+          title: "ソウルキラー秘匿研究室",
+          summary: "最も機密性の高い神経作戦のための、身元切断、コンストラクト取得、証拠最小化。",
+          clearance: "RED",
+          latency: "封印",
+          surface: "記憶",
+          tabs: {
+            overview: { title: "不可能な記憶問題のためのブラックサイト装置。", text: "ソウルキラー秘匿研究室は、神経抽出を証人、保管、証拠最小化の層を持つ制御済みインシデントとして扱います。", items: ["身元切断", "コンストラクト取得", "痕跡最小化"] },
+            modules: { title: "秘匿モジュール", text: "各モジュールは抽出の不安定な段階を隔離し、対象を露出せずに作戦を監査可能にします。", items: ["切断ゲート", "コンストラクトフラスコ", "証拠冷却器"] },
+            specs: { title: "稼働範囲", text: "密閉施設、敵対AI隔離圏、緊急継続委任に限定されます。", items: ["公開エンドポイントなし", "合成証人ロック", "ブラックサイト専用ランタイム"] },
+            deployment: { title: "配備経路", text: "研究室はソフトウェアとして販売されず、荒坂オペレーターが介在する制御施設として配備されます。", items: ["施設封印", "証人較正", "抽出窓"] },
+            governance: { title: "統治姿勢", text: "秘匿には特別委任が必要で、内部審査専用の封印証跡を生成します。", items: ["赤色委任", "二名責任者保管", "作戦後沈黙プロトコル"] }
+          }
+        }
+      }
     }
   }
 };
@@ -2626,6 +3044,21 @@ const operationTitle = document.querySelector("[data-operation-title]");
 const operationText = document.querySelector("[data-operation-text]");
 const operationResponse = document.querySelector("[data-operation-response]");
 const operationCoverage = document.querySelector("[data-operation-coverage]");
+const productButtons = document.querySelectorAll("[data-product-page]");
+const productShell = document.querySelector("[data-product-shell]");
+const productCloseButtons = document.querySelectorAll("[data-product-close]");
+const productTabButtons = document.querySelectorAll("[data-product-tab]");
+const productKicker = document.querySelector("[data-product-kicker]");
+const productCode = document.querySelector("[data-product-code]");
+const productTitle = document.querySelector("[data-product-title]");
+const productSummary = document.querySelector("[data-product-summary]");
+const productTabLabel = document.querySelector("[data-product-tab-label]");
+const productTabTitle = document.querySelector("[data-product-tab-title]");
+const productTabText = document.querySelector("[data-product-tab-text]");
+const productList = document.querySelector("[data-product-list]");
+const productClearance = document.querySelector("[data-product-clearance]");
+const productLatency = document.querySelector("[data-product-latency]");
+const productSurface = document.querySelector("[data-product-surface]");
 const bootSequence = document.querySelector("[data-boot-sequence]");
 const cursorReticle = document.querySelector("[data-cursor-reticle]");
 const spineMeter = document.querySelector("[data-spine-meter]");
@@ -2658,11 +3091,15 @@ let activeCustodyInstrument = "engram";
 let activeCapitalMode = "signal";
 let activeExchangeMarket = "runner";
 let activeOperationTheater = "plaza";
+let activeProductPage = "relic";
+let activeProductTab = "overview";
+let lastFocusedProductTrigger = null;
 let activeSectionId = "top";
 
 const sectionLabelKeys = {
   top: "nav.home",
   divisions: "nav.divisions",
+  products: "nav.products",
   foundry: "nav.foundry",
   systems: "nav.systems",
   ice: "nav.ice",
@@ -2768,9 +3205,126 @@ function setLanguage(language) {
   updateExchangeMarket(activeExchangeMarket);
   updateDoctrineToggleLabels();
   updateOperationTheater(activeOperationTheater);
+  updateProductPage(activeProductPage, activeProductTab);
   updateActiveSection(activeSectionId);
   updateMenuButtonLabel();
   saveLanguage(language);
+}
+
+function getProductFile(productKey = activeProductPage) {
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  return dictionary.productPage.files[productKey] || dictionary.productPage.files.relic;
+}
+
+function setProductTab(tabKey = "overview") {
+  const file = getProductFile();
+  activeProductTab = file.tabs[tabKey] ? tabKey : "overview";
+  updateProductPage(activeProductPage, activeProductTab);
+}
+
+function updateProductPage(productKey = "relic", tabKey = "overview") {
+  if (!productTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const file = dictionary.productPage.files[productKey] || dictionary.productPage.files.relic;
+  const tab = file.tabs[tabKey] || file.tabs.overview;
+  const tabLabel = dictionary.productPage.tab[tabKey] || dictionary.productPage.tab.overview;
+
+  activeProductPage = dictionary.productPage.files[productKey] ? productKey : "relic";
+  activeProductTab = file.tabs[tabKey] ? tabKey : "overview";
+
+  if (productKicker) productKicker.textContent = file.kicker;
+  if (productCode) productCode.textContent = file.code;
+  productTitle.textContent = file.title;
+  if (productSummary) productSummary.textContent = file.summary;
+  if (productTabLabel) productTabLabel.textContent = tabLabel;
+  if (productTabTitle) productTabTitle.textContent = tab.title;
+  if (productTabText) productTabText.textContent = tab.text;
+  if (productClearance) productClearance.textContent = file.clearance;
+  if (productLatency) productLatency.textContent = file.latency;
+  if (productSurface) productSurface.textContent = file.surface;
+
+  productTabButtons.forEach((button) => {
+    const isActive = button.dataset.productTab === activeProductTab;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (productList) {
+    productList.replaceChildren();
+    tab.items.forEach((item, index) => {
+      const row = document.createElement("div");
+      const code = document.createElement("span");
+      const text = document.createElement("strong");
+      code.textContent = `0${index + 1}`;
+      text.textContent = item;
+      row.append(code, text);
+      productList.append(row);
+    });
+  }
+}
+
+function openProductPage(productKey, trigger = null, updateHash = true) {
+  if (!productShell) return;
+  lastFocusedProductTrigger = trigger || document.activeElement;
+  updateProductPage(productKey, activeProductTab);
+  productShell.hidden = false;
+  document.body.classList.add("has-product-page");
+  productShell.classList.add("is-open");
+  if (updateHash) {
+    history.replaceState(null, "", `#product-${activeProductPage}`);
+  }
+  productTitle?.focus?.();
+}
+
+function closeProductPage(clearHash = true) {
+  if (!productShell) return;
+  productShell.classList.remove("is-open");
+  productShell.hidden = true;
+  document.body.classList.remove("has-product-page");
+  if (clearHash && window.location.hash.startsWith("#product-")) {
+    history.replaceState(null, "", "#products");
+  }
+  if (lastFocusedProductTrigger?.focus) {
+    lastFocusedProductTrigger.focus();
+  }
+}
+
+function openProductFromHash() {
+  const match = window.location.hash.match(/^#product-([a-z-]+)$/);
+  if (!match) return;
+  openProductPage(match[1], null, false);
+}
+
+function initProductPages() {
+  if (!productShell) return;
+  productTitle?.setAttribute("tabindex", "-1");
+  updateProductPage(activeProductPage, activeProductTab);
+
+  productButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeProductTab = "overview";
+      openProductPage(button.dataset.productPage, button);
+    });
+  });
+
+  productTabButtons.forEach((button) => {
+    button.addEventListener("click", () => setProductTab(button.dataset.productTab));
+  });
+
+  productCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => closeProductPage(true));
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && productShell.classList.contains("is-open")) {
+      closeProductPage(true);
+    }
+  });
+
+  window.addEventListener("hashchange", openProductFromHash);
+  openProductFromHash();
 }
 
 function updateTimes() {
@@ -4046,4 +4600,5 @@ initCursorReticle();
 syncDockForViewport();
 initSignalSpine();
 initMobileMenu();
+initProductPages();
 initActiveSections();
