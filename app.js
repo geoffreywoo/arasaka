@@ -1771,6 +1771,14 @@ const translations = {
       trigger: "Trigger Event",
       gate: "Deployment Gate",
       outcome: "Delivered Proof",
+      procurement: "Procurement Fit",
+      procurementLead: "A commercial readout for mandate owners deciding whether this system belongs in a sealed deployment.",
+      buyer: "Buyer Profile",
+      model: "Commercial Model",
+      window: "Activation Window",
+      evidence: "Evidence Required",
+      intake: "Open Procurement Channel",
+      intakeText: "Route through protected access with mandate proof, jurisdiction notes, and escalation authority.",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -1810,6 +1818,14 @@ const translations = {
       trigger: "Trigger Event",
       gate: "Deployment Gate",
       outcome: "Delivered Proof",
+      procurement: "Procurement Fit",
+      procurementLead: "A commercial readout for principals deciding whether this mandate should move from review to deployment.",
+      buyer: "Mandate Owner",
+      model: "Commercial Model",
+      window: "Activation Window",
+      evidence: "Evidence Required",
+      intake: "Open Mandate Channel",
+      intakeText: "Route through protected access with sponsor identity, theater scope, and escalation authority.",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -3476,6 +3492,14 @@ const translations = {
       trigger: "起動事案",
       gate: "配備ゲート",
       outcome: "提供証明",
+      procurement: "調達適合",
+      procurementLead: "封印済み配備にこのシステムを入れるべきか判断する委任所有者向けの商用判定。",
+      buyer: "購入者像",
+      model: "商用モデル",
+      window: "起動窓",
+      evidence: "必要証拠",
+      intake: "調達チャネルを開く",
+      intakeText: "委任証明、管轄メモ、エスカレーション権限を添えて保護アクセスへ経路化します。",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -3515,6 +3539,14 @@ const translations = {
       trigger: "起動事案",
       gate: "配備ゲート",
       outcome: "提供証明",
+      procurement: "調達適合",
+      procurementLead: "この委任を審査から配備へ移すべきか判断するプリンシパル向けの商用判定。",
+      buyer: "委任所有者",
+      model: "商用モデル",
+      window: "起動窓",
+      evidence: "必要証拠",
+      intake: "委任チャネルを開く",
+      intakeText: "スポンサー身元、作戦区範囲、エスカレーション権限を添えて保護アクセスへ経路化します。",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -3722,6 +3754,7 @@ const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
+const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3736,6 +3769,7 @@ const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
+const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -4475,6 +4509,49 @@ function renderRouteQualification(target, labels, rows) {
   });
 }
 
+function renderRouteProcurement(target, labels, rows, intakeHref) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const matrix = document.createElement("div");
+  const intake = document.createElement("a");
+  const intakeText = document.createElement("span");
+  const intakeIcon = document.createElement("span");
+
+  heading.className = "product-route-procurement-head";
+  label.textContent = labels.procurement;
+  lead.textContent = labels.procurementLead;
+  heading.append(label, lead);
+
+  matrix.className = "product-route-procurement-matrix";
+  rows.forEach(({ label: rowLabel, value, text }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(eyebrow, title, copy);
+    matrix.append(article);
+  });
+
+  intake.className = "product-route-procurement-intake";
+  intake.href = intakeHref;
+  intakeText.textContent = labels.intake;
+  intakeIcon.textContent = "->";
+  intakeIcon.setAttribute("aria-hidden", "true");
+  intake.append(intakeText, intakeIcon);
+
+  const note = document.createElement("p");
+  note.textContent = labels.intakeText;
+
+  target.replaceChildren(heading, matrix, note, intake);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -4614,6 +4691,29 @@ function updateProductRoute() {
       text: file.tabs.governance.text
     }
   ]);
+
+  renderRouteProcurement(routeProcurement, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.buyer,
+      value: `${file.surface} principal / ${operations.regions[0]}`,
+      text: file.tabs.overview.text
+    },
+    {
+      label: dictionary.productRoute.model,
+      value: operations.packages[0],
+      text: operations.integrations.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.window,
+      value: operations.sla[0],
+      text: file.tabs.deployment.text
+    },
+    {
+      label: dictionary.productRoute.evidence,
+      value: field.exposure,
+      text: field.doctrine
+    }
+  ], "../../#contact");
 
   if (routeOps) {
     const operationGroups = [
@@ -4831,6 +4931,29 @@ function updateServiceRoute() {
       text: file.tabs.governance.text
     }
   ]);
+
+  renderRouteProcurement(serviceRouteProcurement, routeLabels, [
+    {
+      label: routeLabels.buyer,
+      value: `${file.surface} sponsor / ${file.operations.regions[0]}`,
+      text: file.tabs.overview.text
+    },
+    {
+      label: routeLabels.model,
+      value: file.operations.packages[0],
+      text: file.operations.integrations.join(" / ")
+    },
+    {
+      label: routeLabels.window,
+      value: file.operations.sla[0],
+      text: file.tabs.deployment.text
+    },
+    {
+      label: routeLabels.evidence,
+      value: file.field.exposure,
+      text: file.field.doctrine
+    }
+  ], "../../#contact");
 
   if (serviceRouteOps) {
     const operationGroups = [

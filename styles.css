@@ -3292,6 +3292,7 @@ a,
     "proof meta"
     "brief meta"
     "qualification meta"
+    "procurement meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -3445,6 +3446,10 @@ a,
 .product-route-brief article,
 .product-route-qualification-head,
 .product-route-qualification article,
+.product-route-procurement-head,
+.product-route-procurement-matrix article,
+.product-route-procurement > p,
+.product-route-procurement-intake,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -3795,6 +3800,112 @@ a,
   color: var(--paper);
   font-size: 0.98rem;
   line-height: 1.08;
+}
+
+.product-route-procurement {
+  grid-area: procurement;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  grid-template-areas:
+    "head matrix"
+    "note intake";
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(209, 177, 107, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(209, 177, 107, 0.16), rgba(225, 7, 20, 0.12), rgba(116, 199, 216, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-procurement-head {
+  grid-area: head;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+}
+
+.product-route-procurement-head > span,
+.product-route-procurement-matrix article > span {
+  color: var(--gold);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-procurement-head p,
+.product-route-procurement-matrix p,
+.product-route-procurement > p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-procurement-matrix {
+  grid-area: matrix;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-procurement-matrix article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 168px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-procurement-matrix article::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  content: "";
+  background: linear-gradient(180deg, var(--gold), transparent);
+}
+
+.product-route-procurement-matrix strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+}
+
+.product-route-procurement > p {
+  grid-area: note;
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-procurement-intake {
+  grid-area: intake;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+  min-width: 0;
+  padding: 0 16px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-procurement-intake:hover,
+.product-route-procurement-intake:focus-visible {
+  color: var(--ink);
+  outline: 0;
 }
 
 .product-route-switcher {
@@ -9866,6 +9977,7 @@ a,
       "proof"
       "brief"
       "qualification"
+      "procurement"
       "switcher"
       "ops"
       "panels"
@@ -9890,14 +10002,29 @@ a,
 
   .product-route-brief,
   .product-route-qualification,
+  .product-route-procurement,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-brief-heading,
-  .product-route-qualification-head {
+  .product-route-qualification-head,
+  .product-route-procurement-head,
+  .product-route-procurement > p,
+  .product-route-procurement-intake {
     grid-column: 1 / -1;
+  }
+
+  .product-route-procurement {
+    grid-template-areas:
+      "head head"
+      "matrix matrix"
+      "note intake";
+  }
+
+  .product-route-procurement-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-switcher div {
@@ -10514,11 +10641,25 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-procurement {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "matrix"
+      "note"
+      "intake";
+  }
+
+  .product-route-procurement-matrix {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-brief article {
     min-height: 0;
   }
 
-  .product-route-qualification article {
+  .product-route-qualification article,
+  .product-route-procurement-matrix article {
     min-height: 0;
   }
 
@@ -10730,13 +10871,15 @@ a,
   .product-route-meta,
   .product-route-brief,
   .product-route-qualification,
+  .product-route-procurement,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
   }
 
   .product-route-ops article,
-  .product-route-panels article {
+  .product-route-panels article,
+  .product-route-procurement-matrix article {
     min-height: 0;
   }
 
