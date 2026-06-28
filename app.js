@@ -2320,6 +2320,13 @@ const translations = {
       operatingSurface: "Operating Surface",
       deploymentEnvelope: "Deployment Envelope",
       controlProof: "Control Proof",
+      configuration: "Deployment Configuration",
+      configurationLead: "Selectable commercial packages for scope, control posture, escalation, and evidence depth before the runbook is sealed.",
+      configurationCore: "Core",
+      configurationSecure: "Secure",
+      configurationBlack: "Black",
+      configurationScope: "Scope",
+      configurationEscalation: "Escalation",
       runbook: "Deployment Runbook",
       runbookLead: "A sealed activation sequence for moving this product from intake to controlled authority.",
       intakePhase: "Intake",
@@ -2426,6 +2433,13 @@ const translations = {
       operatingSurface: "Operating Surface",
       deploymentEnvelope: "Theater Envelope",
       controlProof: "Control Proof",
+      configuration: "Mandate Configuration",
+      configurationLead: "Selectable service packages for scope, team posture, escalation, and evidence depth before the engagement runbook is sealed.",
+      configurationCore: "Core",
+      configurationSecure: "Secure",
+      configurationBlack: "Black",
+      configurationScope: "Scope",
+      configurationEscalation: "Escalation",
       runbook: "Deployment Runbook",
       runbookLead: "A sealed engagement sequence for moving this mandate from sponsor signal to operational proof.",
       intakePhase: "Intake",
@@ -4647,6 +4661,13 @@ const translations = {
       operatingSurface: "運用面",
       deploymentEnvelope: "配備範囲",
       controlProof: "制御証明",
+      configuration: "配備構成",
+      configurationLead: "ランブック封印前に、範囲、制御姿勢、エスカレーション、証拠深度を選択する商用パッケージ。",
+      configurationCore: "コア",
+      configurationSecure: "セキュア",
+      configurationBlack: "ブラック",
+      configurationScope: "範囲",
+      configurationEscalation: "エスカレーション",
       runbook: "配備ランブック",
       runbookLead: "この製品を取込から制御権限へ移すための封印済み起動シーケンス。",
       intakePhase: "取込",
@@ -4753,6 +4774,13 @@ const translations = {
       operatingSurface: "運用面",
       deploymentEnvelope: "作戦範囲",
       controlProof: "制御証明",
+      configuration: "委任構成",
+      configurationLead: "エンゲージメント・ランブック封印前に、範囲、チーム姿勢、エスカレーション、証拠深度を選択するサービスパッケージ。",
+      configurationCore: "コア",
+      configurationSecure: "セキュア",
+      configurationBlack: "ブラック",
+      configurationScope: "範囲",
+      configurationEscalation: "エスカレーション",
       runbook: "配備ランブック",
       runbookLead: "この委任をスポンサー信号から運用証明へ移す封印済みエンゲージメント・シーケンス。",
       intakePhase: "取込",
@@ -5010,6 +5038,7 @@ const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
+const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
@@ -5034,6 +5063,7 @@ const serviceRouteEvidencePacket = document.querySelector("[data-service-evidenc
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
+const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
@@ -6126,6 +6156,49 @@ function renderRouteSpecsheet(target, labels, sheet) {
   target.replaceChildren(heading, figure, specGrid);
 }
 
+function renderRouteConfiguration(target, labels, tiers) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-config-head";
+  label.textContent = labels.configuration;
+  lead.textContent = labels.configurationLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-config-grid";
+  tiers.forEach(({ tier, sku, scope, escalation, proof }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const title = document.createElement("strong");
+    const skuLine = document.createElement("small");
+    const list = document.createElement("dl");
+
+    code.textContent = `K-${index + 1}`;
+    title.textContent = tier;
+    skuLine.textContent = sku;
+    [
+      [labels.configurationScope, scope],
+      [labels.configurationEscalation, escalation],
+      [labels.controlProof, proof]
+    ].forEach(([term, value]) => {
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = value;
+      list.append(dt, dd);
+    });
+
+    article.append(code, title, skuLine, list);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteRunbook(target, labels, rows) {
   if (!target) return;
 
@@ -6499,6 +6572,30 @@ function updateProductRoute() {
       }
     ]
   });
+
+  renderRouteConfiguration(routeConfiguration, dictionary.productRoute, [
+    {
+      tier: dictionary.productRoute.configurationCore,
+      sku: `${file.code}-CORE`,
+      scope: operations.packages[0],
+      escalation: operations.regions[0],
+      proof: operations.sla[0]
+    },
+    {
+      tier: dictionary.productRoute.configurationSecure,
+      sku: `${file.code}-SECURE`,
+      scope: operations.packages[1] || operations.packages[0],
+      escalation: operations.integrations[0],
+      proof: operations.sla[1] || operations.sla[0]
+    },
+    {
+      tier: dictionary.productRoute.configurationBlack,
+      sku: `${file.code}-BLACK`,
+      scope: operations.packages[2] || operations.packages[1] || operations.packages[0],
+      escalation: operations.integrations.slice(1).join(" / ") || operations.integrations[0],
+      proof: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
 
   renderRouteRunbook(routeRunbook, dictionary.productRoute, [
     {
@@ -6943,6 +7040,30 @@ function updateServiceRoute() {
       }
     ]
   });
+
+  renderRouteConfiguration(serviceRouteConfiguration, routeLabels, [
+    {
+      tier: routeLabels.configurationCore,
+      sku: `${file.code}-CORE`,
+      scope: file.operations.packages[0],
+      escalation: file.operations.regions[0],
+      proof: file.operations.sla[0]
+    },
+    {
+      tier: routeLabels.configurationSecure,
+      sku: `${file.code}-SECURE`,
+      scope: file.operations.packages[1] || file.operations.packages[0],
+      escalation: file.operations.integrations[0],
+      proof: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      tier: routeLabels.configurationBlack,
+      sku: `${file.code}-BLACK`,
+      scope: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
+      escalation: file.operations.integrations.slice(1).join(" / ") || file.operations.integrations[0],
+      proof: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
 
   renderRouteRunbook(serviceRouteRunbook, routeLabels, [
     {
