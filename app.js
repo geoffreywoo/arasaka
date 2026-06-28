@@ -4026,6 +4026,22 @@ const routeFieldImages = {
   },
   fallback: "cyberpunk2077-showdown-press.png"
 };
+const routeVisualImages = {
+  product: {
+    relic: "product-relic-catalog.png",
+    mikoshi: "product-mikoshi-catalog.png",
+    ice: "product-ice-catalog.png",
+    ledger: "product-ledger-catalog.png",
+    swarm: "product-swarm-catalog.png",
+    soulkiller: "product-soulkiller-catalog.png"
+  },
+  service: {
+    executive: "service-executive-catalog.png",
+    counter: "service-counter-catalog.png",
+    capital: "service-capital-catalog.png",
+    protection: "service-protection-catalog.png"
+  }
+};
 
 const productOperations = {
   en: {
@@ -5069,7 +5085,7 @@ function updateProductRoute() {
   ]);
 
   renderRouteSpecsheet(routeSpecsheet, dictionary.productRoute, {
-    image: `../../assets/${routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
+    image: `../../assets/${routeVisualImages.product[productKey] || routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
     alt: `${file.title} ${dictionary.productRoute.productPhoto}`,
     caption: `${dictionary.productRoute.productPhoto} / ${field.incident} / ${field.doctrine}`,
     specs: [
@@ -5410,7 +5426,7 @@ function updateServiceRoute() {
   ]);
 
   renderRouteSpecsheet(serviceRouteSpecsheet, routeLabels, {
-    image: `../../assets/${routeFieldImages.service[serviceKey] || routeFieldImages.fallback}`,
+    image: `../../assets/${routeVisualImages.service[serviceKey] || routeFieldImages.service[serviceKey] || routeFieldImages.fallback}`,
     alt: `${file.title} ${routeLabels.productPhoto}`,
     caption: `${routeLabels.productPhoto} / ${file.field.incident} / ${file.field.doctrine}`,
     specs: [

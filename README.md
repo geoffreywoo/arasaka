@@ -14,6 +14,8 @@ Static bilingual cyberpunk megacorp website for `arasaka.com`, with subtle off-n
 - `assets/cyberware-foundry.png` - original generated cyberware foundry image
 - `assets/cyberpunk2077-showdown-press.png` - Cyberpunk 2077 official press screenshot from CD PROJEKT RED Press Center
 - `assets/cyberpunk2077-afterlife-press.png` - Cyberpunk 2077 official press screenshot thumbnail from CD PROJEKT RED Press Center
+- `assets/product-*-catalog.png` - original generated bitmap catalog plates for product visual/spec cards, composited from site source imagery and Arasaka UI treatment
+- `assets/service-*-catalog.png` - original generated bitmap catalog plates for service visual/spec cards, composited from site source imagery and Arasaka UI treatment
 - `assets/ATTRIBUTION.md` - source and unofficial fan-work attribution notes
 - `assets/favicon.svg` - original site mark
 

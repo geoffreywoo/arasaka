@@ -3192,7 +3192,7 @@ a,
 .service-card {
   position: relative;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 388px;
   display: grid;
   align-content: space-between;
   gap: 16px;
@@ -3222,6 +3222,42 @@ a,
   font-size: 0.7rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.service-card-visual,
+.product-card-visual {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.service-card-visual {
+  aspect-ratio: 5 / 3;
+  margin-inline: -2px;
+}
+
+.service-card-visual::before,
+.product-card-visual::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, transparent 54%, rgba(0, 0, 0, 0.5)),
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.04) 18px 19px);
+}
+
+.service-card-visual img,
+.product-card-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(1.06) contrast(1.04);
 }
 
 .service-card h3 {
@@ -3305,7 +3341,7 @@ a,
 .product-card {
   position: relative;
   overflow: hidden;
-  min-height: 286px;
+  min-height: 420px;
   display: grid;
   align-content: space-between;
   gap: 18px;
@@ -3371,8 +3407,13 @@ a,
   text-transform: uppercase;
 }
 
+.product-card-visual {
+  aspect-ratio: 5 / 3;
+  margin-top: -4px;
+}
+
 .product-card h3 {
-  max-width: 82%;
+  max-width: 100%;
   margin: 0;
   color: var(--ink);
   font-size: 1.24rem;
