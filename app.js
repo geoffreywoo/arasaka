@@ -2280,6 +2280,12 @@ const translations = {
       certificateRetention: "Retention",
       certificateCounterparty: "Counterparty",
       certificateSeal: "Arasaka Internal Assurance",
+      readiness: "Commercial Readiness Ledger",
+      readinessLead: "A final buyer-side gate for authority, data boundary, support posture, and room handoff before deployment is approved.",
+      authorityGate: "Authority Gate",
+      dataBoundary: "Data Boundary",
+      supportPosture: "Support Posture",
+      roomHandoff: "Room Handoff",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -2366,6 +2372,12 @@ const translations = {
       certificateRetention: "Retention",
       certificateCounterparty: "Counterparty",
       certificateSeal: "Arasaka Internal Assurance",
+      readiness: "Commercial Readiness Ledger",
+      readinessLead: "A final mandate gate for authority, data boundary, support posture, and room handoff before service activation is approved.",
+      authorityGate: "Authority Gate",
+      dataBoundary: "Data Boundary",
+      supportPosture: "Support Posture",
+      roomHandoff: "Room Handoff",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -4567,6 +4579,12 @@ const translations = {
       certificateRetention: "保持",
       certificateCounterparty: "相手方",
       certificateSeal: "荒坂内部保証",
+      readiness: "商用準備台帳",
+      readinessLead: "配備承認前に、権限、データ境界、支援姿勢、ルーム引き渡しを確認する最終購入者側ゲート。",
+      authorityGate: "権限ゲート",
+      dataBoundary: "データ境界",
+      supportPosture: "支援姿勢",
+      roomHandoff: "ルーム引き渡し",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4653,6 +4671,12 @@ const translations = {
       certificateRetention: "保持",
       certificateCounterparty: "相手方",
       certificateSeal: "荒坂内部保証",
+      readiness: "商用準備台帳",
+      readinessLead: "サービス起動承認前に、権限、データ境界、支援姿勢、ルーム引き渡しを確認する最終委任ゲート。",
+      authorityGate: "権限ゲート",
+      dataBoundary: "データ境界",
+      supportPosture: "支援姿勢",
+      roomHandoff: "ルーム引き渡し",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -4924,6 +4948,7 @@ const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
 const routeCertificate = document.querySelector("[data-route-certificate]");
+const routeReadiness = document.querySelector("[data-route-readiness]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
@@ -4945,6 +4970,7 @@ const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
 const serviceRouteCertificate = document.querySelector("[data-service-certificate]");
+const serviceRouteReadiness = document.querySelector("[data-service-readiness]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
@@ -5829,6 +5855,38 @@ function renderRouteCertificate(target, labels, certificate) {
   target.replaceChildren(heading, seal, grid);
 }
 
+function renderRouteReadiness(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-readiness-head";
+  label.textContent = labels.readiness;
+  lead.textContent = labels.readinessLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-readiness-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `G-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSla(target, labels, rows) {
   if (!target) return;
 
@@ -6156,6 +6214,29 @@ function updateProductRoute() {
     retention: operations.sla[2] || operations.sla[1] || operations.sla[0],
     counterparty: `${operations.regions[0]} / ${field.exposure}`
   });
+
+  renderRouteReadiness(routeReadiness, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.authorityGate,
+      value: file.clearance,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.dataBoundary,
+      value: field.exposure,
+      text: operations.regions.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.supportPosture,
+      value: operations.sla[1] || operations.sla[0],
+      text: operations.integrations.join(" / ")
+    },
+    {
+      label: dictionary.productRoute.roomHandoff,
+      value: operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+    }
+  ]);
 
   renderRouteSla(routeSla, dictionary.productRoute, [
     {
@@ -6527,6 +6608,29 @@ function updateServiceRoute() {
     retention: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
     counterparty: `${file.operations.regions[0]} / ${file.field.exposure}`
   });
+
+  renderRouteReadiness(serviceRouteReadiness, routeLabels, [
+    {
+      label: routeLabels.authorityGate,
+      value: file.clearance,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: routeLabels.dataBoundary,
+      value: file.field.exposure,
+      text: file.operations.regions.join(" / ")
+    },
+    {
+      label: routeLabels.supportPosture,
+      value: file.operations.sla[1] || file.operations.sla[0],
+      text: file.operations.integrations.join(" / ")
+    },
+    {
+      label: routeLabels.roomHandoff,
+      value: file.operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text
+    }
+  ]);
 
   renderRouteSla(serviceRouteSla, routeLabels, [
     {
