@@ -1175,7 +1175,13 @@ const translations = {
       postureState: "No public claim",
       rail1: "Identity Integrity",
       rail2: "Capital Obfuscation",
-      rail3: "Narrative Stealth"
+      rail3: "Narrative Stealth",
+      relayEyebrow: "Off-Network Relay",
+      relayTitle: "Checksum preserved outside the corporate perimeter.",
+      relayText: "The principal signal resolves through public identity and private capital traces without forcing either surface into the Arasaka file.",
+      relayAria: "Quiet relay endpoints",
+      relayGw: "public identity",
+      relayAf: "capital signal"
     },
     operations: {
       eyebrow: "Night City Operations",
@@ -2772,7 +2778,13 @@ const translations = {
       postureState: "公開請求なし",
       rail1: "ID完全性",
       rail2: "資本難読化",
-      rail3: "物語ステルス"
+      rail3: "物語ステルス",
+      relayEyebrow: "オフネットワーク中継",
+      relayTitle: "企業境界の外側に保存されたチェックサム。",
+      relayText: "プリンシパル信号は、公開IDと私的資本の痕跡を通じて解決され、どちらの表面も荒坂ファイルへ強制しません。",
+      relayAria: "静かな中継エンドポイント",
+      relayGw: "公開ID",
+      relayAf: "資本信号"
     },
     operations: {
       eyebrow: "ナイトシティ運用",

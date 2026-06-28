@@ -7750,7 +7750,8 @@ a,
 
 .dossier-id,
 .dossier-grid,
-.dossier-rails {
+.dossier-rails,
+.dossier-relay {
   position: relative;
   z-index: 1;
 }
@@ -7903,6 +7904,98 @@ a,
   content: "";
   background: linear-gradient(90deg, var(--red), var(--gold), var(--acid));
   box-shadow: 0 0 18px rgba(182, 243, 91, 0.36);
+}
+
+.dossier-relay {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.52fr);
+  gap: 1px;
+  padding: 1px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.16), rgba(225, 7, 20, 0.12)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.dossier-relay > div,
+.dossier-relay nav {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(6, 8, 10, 0.92);
+}
+
+.dossier-relay > div {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.dossier-relay span {
+  color: var(--dim);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dossier-relay > div > strong {
+  color: var(--paper);
+  font-size: 1.1rem;
+  line-height: 1.08;
+}
+
+.dossier-relay p {
+  max-width: 540px;
+  margin: 0;
+  color: rgba(243, 244, 242, 0.68);
+  font-size: 0.84rem;
+}
+
+.dossier-relay nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+}
+
+.dossier-relay a {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  min-height: 102px;
+  padding: 16px;
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.dossier-relay a::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  content: "";
+  background: rgba(116, 199, 216, 0.38);
+}
+
+.dossier-relay a:hover,
+.dossier-relay a:focus-visible {
+  background: rgba(225, 7, 20, 0.12);
+  transform: translateY(-1px);
+}
+
+.dossier-relay a:hover::before,
+.dossier-relay a:focus-visible::before {
+  background: var(--red);
+}
+
+.dossier-relay a span {
+  color: var(--acid);
+  font-size: 0.9rem;
+}
+
+.dossier-relay a strong {
+  font-size: 0.76rem;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .operations-section {
@@ -9329,6 +9422,10 @@ a,
     grid-auto-columns: minmax(172px, 72vw);
   }
 
+  .dossier-relay {
+    grid-template-columns: 1fr;
+  }
+
   .timeline article {
     padding-right: 0;
   }
@@ -9521,6 +9618,14 @@ a,
   .product-route-ops article,
   .product-route-panels article {
     min-height: 0;
+  }
+
+  .dossier-relay nav {
+    grid-template-columns: 1fr;
+  }
+
+  .dossier-relay a {
+    min-height: 76px;
   }
 
   .command-nodes,
