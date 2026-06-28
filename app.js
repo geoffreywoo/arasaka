@@ -2312,6 +2312,12 @@ const translations = {
       runtime: "Runtime Surface",
       downstream: "Downstream Proof",
       audit: "Audit Lock",
+      adapters: "Integration Adapter Matrix",
+      adaptersLead: "A compatibility layer for identity, network, custody, and proof channels before this product enters the client stack.",
+      identityPlane: "Identity Plane",
+      networkPlane: "Network Plane",
+      custodyPlane: "Custody Plane",
+      proofPlane: "Proof Plane",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2431,6 +2437,12 @@ const translations = {
       runtime: "Runtime Team",
       downstream: "Downstream Proof",
       audit: "Audit Lock",
+      adapters: "Integration Adapter Matrix",
+      adaptersLead: "A compatibility layer for identity, network, custody, and proof channels before this mandate enters the client stack.",
+      identityPlane: "Identity Plane",
+      networkPlane: "Network Plane",
+      custodyPlane: "Custody Plane",
+      proofPlane: "Proof Plane",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4665,6 +4677,12 @@ const translations = {
       runtime: "実行面",
       downstream: "下流証明",
       audit: "監査ロック",
+      adapters: "統合アダプター・マトリクス",
+      adaptersLead: "この製品がクライアントスタックへ入る前に、身元、ネットワーク、保管、証明チャネルを接続する互換レイヤー。",
+      identityPlane: "身元プレーン",
+      networkPlane: "ネットワークプレーン",
+      custodyPlane: "保管プレーン",
+      proofPlane: "証明プレーン",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -4784,6 +4802,12 @@ const translations = {
       runtime: "実行チーム",
       downstream: "下流証明",
       audit: "監査ロック",
+      adapters: "統合アダプター・マトリクス",
+      adaptersLead: "この委任がクライアントスタックへ入る前に、身元、ネットワーク、保管、証明チャネルを接続する互換レイヤー。",
+      identityPlane: "身元プレーン",
+      networkPlane: "ネットワークプレーン",
+      custodyPlane: "保管プレーン",
+      proofPlane: "証明プレーン",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5061,6 +5085,7 @@ const routeControlRoom = document.querySelector("[data-route-control-room]");
 const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
+const routeAdapters = document.querySelector("[data-route-adapters]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5087,6 +5112,7 @@ const serviceRouteControlRoom = document.querySelector("[data-service-control-ro
 const serviceRouteEvidencePacket = document.querySelector("[data-service-evidence-packet]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
+const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6143,6 +6169,40 @@ function renderRouteTopology(target, labels, rows) {
   target.replaceChildren(heading, map);
 }
 
+function renderRouteAdapters(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-adapters-head";
+  label.textContent = labels.adapters;
+  lead.textContent = labels.adaptersLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-adapters-grid";
+  rows.forEach(({ label: rowLabel, adapter, boundary, assurance }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const seal = document.createElement("em");
+
+    code.textContent = `A-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = adapter;
+    copy.textContent = boundary;
+    seal.textContent = assurance;
+    article.append(code, eyebrow, title, copy, seal);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -6600,6 +6660,33 @@ function updateProductRoute() {
       label: dictionary.productRoute.audit,
       value: operations.sla[2] || operations.sla[0],
       text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteAdapters(routeAdapters, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.identityPlane,
+      adapter: operations.integrations[0],
+      boundary: file.tabs.overview.items[0] || file.tabs.overview.text,
+      assurance: file.clearance
+    },
+    {
+      label: dictionary.productRoute.networkPlane,
+      adapter: operations.integrations[1] || operations.integrations[0],
+      boundary: field.exposure,
+      assurance: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.custodyPlane,
+      adapter: operations.packages[0],
+      boundary: operations.regions.join(" / "),
+      assurance: operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.proofPlane,
+      adapter: operations.integrations[2] || operations.integrations[0],
+      boundary: file.tabs.governance.items[0] || file.tabs.governance.text,
+      assurance: operations.sla[2] || operations.sla[0]
     }
   ]);
 
@@ -7091,6 +7178,33 @@ function updateServiceRoute() {
       label: routeLabels.audit,
       value: file.operations.sla[2] || file.operations.sla[0],
       text: file.tabs.governance.items[0] || file.tabs.governance.text
+    }
+  ]);
+
+  renderRouteAdapters(serviceRouteAdapters, routeLabels, [
+    {
+      label: routeLabels.identityPlane,
+      adapter: file.operations.integrations[0],
+      boundary: file.tabs.overview.items[0] || file.tabs.overview.text,
+      assurance: file.clearance
+    },
+    {
+      label: routeLabels.networkPlane,
+      adapter: file.operations.integrations[1] || file.operations.integrations[0],
+      boundary: file.field.exposure,
+      assurance: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.custodyPlane,
+      adapter: file.operations.packages[0],
+      boundary: file.operations.regions.join(" / "),
+      assurance: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.proofPlane,
+      adapter: file.operations.integrations[2] || file.operations.integrations[0],
+      boundary: file.tabs.governance.items[0] || file.tabs.governance.text,
+      assurance: file.operations.sla[2] || file.operations.sla[0]
     }
   ]);
 
