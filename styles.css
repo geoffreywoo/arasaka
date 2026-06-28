@@ -1695,6 +1695,7 @@ a,
 .lore-copy,
 .lore-console,
 .lore-briefings,
+.lore-chronology,
 .source-vault {
   position: relative;
   z-index: 1;
@@ -1997,6 +1998,138 @@ a,
 
 .lore-briefings a:hover,
 .lore-briefings a:focus-visible {
+  border-color: currentColor;
+  outline: 0;
+}
+
+.lore-chronology {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.16);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.14), rgba(116, 199, 216, 0.13), rgba(225, 7, 20, 0.12)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.lore-chronology-head,
+.lore-chronology li {
+  min-width: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent),
+    rgba(6, 8, 10, 0.92);
+}
+
+.lore-chronology-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--acid);
+}
+
+.lore-chronology-head span,
+.lore-chronology li span,
+.lore-chronology time {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.lore-chronology-head span,
+.lore-chronology time {
+  color: var(--acid);
+}
+
+.lore-chronology-head strong {
+  color: var(--paper);
+  font-size: 1.22rem;
+  line-height: 1.06;
+}
+
+.lore-chronology-head p,
+.lore-chronology p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.84rem;
+  line-height: 1.42;
+}
+
+.lore-chronology ol {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lore-chronology li {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 236px;
+}
+
+.lore-chronology li::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, var(--red), var(--cyan), var(--acid));
+}
+
+.lore-chronology time {
+  display: block;
+  padding: 14px 14px 0;
+  color: var(--cyan);
+  font-size: 0.8rem;
+}
+
+.lore-chronology li div {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  padding: 10px 14px 14px;
+}
+
+.lore-chronology li span {
+  color: var(--dim);
+}
+
+.lore-chronology li strong {
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.lore-chronology a {
+  align-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 34px;
+  margin-top: 2px;
+  padding: 0 10px;
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 4px;
+  color: var(--cyan);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.lore-chronology a:hover,
+.lore-chronology a:focus-visible {
   border-color: currentColor;
   outline: 0;
 }
@@ -9093,6 +9226,14 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lore-chronology {
+    grid-template-columns: 1fr;
+  }
+
+  .lore-chronology ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .source-vault {
     grid-template-columns: 1fr 1fr;
   }
@@ -9618,6 +9759,14 @@ a,
 
   .lore-briefings article {
     min-height: 210px;
+  }
+
+  .lore-chronology ol {
+    grid-template-columns: 1fr;
+  }
+
+  .lore-chronology li {
+    min-height: 0;
   }
 
   .source-vault figure,
@@ -10162,6 +10311,8 @@ a,
   .megacity-feed,
   .lore-nodes,
   .lore-briefings,
+  .lore-chronology,
+  .lore-chronology ol,
   .source-vault,
   .lore-readout dl,
   .product-grid,

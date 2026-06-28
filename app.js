@@ -293,6 +293,38 @@ const translations = {
           title: "Extraction routes are command interfaces.",
           text: "Drone veils, traffic denial, and district response windows turn movement into a governed protection system."
         }
+      },
+      chronology: {
+        aria: "Arasaka incident chronology",
+        eyebrow: "Incident Chronology",
+        title: "Every public disaster becomes an internal product mandate.",
+        text: "A mobile field ledger for the canonical Arasaka pressure points that shape continuity, net defense, capital custody, and autonomous protection.",
+        open: "Trace surface",
+        founding: {
+          kicker: "Corporate Root",
+          title: "Arasaka authority initializes in Tokyo.",
+          text: "Family command, banking discipline, and private force become one operating substrate."
+        },
+        tower: {
+          kicker: "Tower Trauma",
+          title: "The tower attack converts loss into redundancy doctrine.",
+          text: "Command must survive site failure, rumor shock, and body-level absence."
+        },
+        konpeki: {
+          kicker: "Konpeki Breach",
+          title: "The Relic incident makes immortality an attack surface.",
+          text: "Guest identity, executive succession, construct custody, and rumor velocity collapse into one emergency loop."
+        },
+        blackwall: {
+          kicker: "Blackwall Edge",
+          title: "Rogue machine pressure makes defense jurisdictional.",
+          text: "Intrusion response now needs quarantine geometry, witnessed burn authority, and memory-safe counterfields."
+        },
+        afterlife: {
+          kicker: "Afterlife Market",
+          title: "Street reputation prices capital before markets can react.",
+          text: "Legends, fixers, founders, and off-ledger liquidity become a single influence rail."
+        }
       }
     },
     sourceVault: {
@@ -2005,6 +2037,38 @@ const translations = {
         route: {
           title: "脱出経路は指揮インターフェースです。",
           text: "ドローンヴェール、交通拒否、地区応答窓が移動を統治された防護システムへ変えます。"
+        }
+      },
+      chronology: {
+        aria: "荒坂インシデント年表",
+        eyebrow: "インシデント年表",
+        title: "すべての公開災害は、内部製品委任へ変換されます。",
+        text: "継続性、ネット防衛、資本保管、自律防護を形作る、正史上の荒坂圧力点をまとめたモバイル現地台帳です。",
+        open: "表面を追跡",
+        founding: {
+          kicker: "企業ルート",
+          title: "荒坂権限が東京で初期化される。",
+          text: "家族指揮、銀行規律、民間武力がひとつの運用基盤になります。"
+        },
+        tower: {
+          kicker: "タワーの傷跡",
+          title: "タワー襲撃は喪失を冗長性ドクトリンへ変えます。",
+          text: "指揮は拠点喪失、噂の衝撃、身体レベルの不在を生き延びる必要があります。"
+        },
+        konpeki: {
+          kicker: "紺碧侵害",
+          title: "レリック事案は不死性を攻撃面へ変えます。",
+          text: "宿泊者ID、役員継承、コンストラクト保管、噂速度がひとつの緊急ループへ崩れ込みます。"
+        },
+        blackwall: {
+          kicker: "ブラックウォール端",
+          title: "ローグ機械圧力は防衛を管轄問題へ変えます。",
+          text: "侵入対応には隔離ジオメトリ、証人付き焼却権限、記憶安全な対抗場が必要になります。"
+        },
+        afterlife: {
+          kicker: "アフターライフ市場",
+          title: "ストリート評価は、市場より先に資本を価格付けします。",
+          text: "伝説、フィクサー、創業者、オフ台帳流動性が単一の影響レールになります。"
         }
       }
     },
