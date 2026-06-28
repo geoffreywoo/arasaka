@@ -1575,6 +1575,11 @@ const translations = {
       architecture: "Information Architecture",
       operations: "Operational Matrix",
       suite: "Product Suite",
+      field: "Night City Field File",
+      incident: "Incident",
+      exposure: "Exposure",
+      doctrine: "Doctrine",
+      imageCredit: "Image credit",
       packages: "Packages",
       integrations: "Integrations",
       regions: "Regions",
@@ -3047,6 +3052,11 @@ const translations = {
       architecture: "情報アーキテクチャ",
       operations: "運用マトリクス",
       suite: "製品スイート",
+      field: "ナイトシティ現地ファイル",
+      incident: "事案",
+      exposure: "露出",
+      doctrine: "ドクトリン",
+      imageCredit: "画像クレジット",
       packages: "パッケージ",
       integrations: "統合",
       regions: "地域",
@@ -3245,6 +3255,7 @@ const routeClearance = document.querySelector("[data-route-clearance]");
 const routeLatency = document.querySelector("[data-route-latency]");
 const routeSurface = document.querySelector("[data-route-surface]");
 const routeSwitcher = document.querySelector("[data-route-switcher]");
+const routeField = document.querySelector("[data-route-field]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3395,6 +3406,109 @@ const productOperations = {
       integrations: ["神輿エンジン", "レリックスイート", "ブラックウォール隔離"],
       regions: ["ブラックサイト", "軌道冷却", "法的影"],
       sla: ["封印ランタイム", "二名責任者保管", "作戦後沈黙プロトコル"]
+    }
+  }
+};
+
+const productFieldFiles = {
+  en: {
+    relic: {
+      label: "NC FIELD FILE / KONPEKI",
+      title: "Biochip theft turned continuity into a weapons platform.",
+      text: "The Relic suite is framed as a boardroom continuity product, but its operational history belongs to breach response, memory custody, and city-scale rumor control.",
+      incident: "Konpeki Plaza breach",
+      exposure: "Engram custody leak",
+      doctrine: "Immortality is supply chain"
+    },
+    mikoshi: {
+      label: "NC FIELD FILE / ORBITAL COLD",
+      title: "A private afterlife needs colder infrastructure than any vault.",
+      text: "Mikoshi converts the messy mythology of post-body survival into partitions, witness chains, and simulation chambers that can be governed like sovereign territory.",
+      incident: "Construct sovereignty claim",
+      exposure: "Archive drift",
+      doctrine: "Memory is jurisdiction"
+    },
+    ice: {
+      label: "NC FIELD FILE / BLACKWALL EDGE",
+      title: "The city perimeter is a hostile interface.",
+      text: "Black ICE Mesh treats every intrusion as both signal and story: netrunner paths are burned, copied, and folded back into the counterfield before the market can name the breach.",
+      incident: "Blackwall-adjacent probe",
+      exposure: "Netrunner route burn",
+      doctrine: "Defense must become terrain"
+    },
+    ledger: {
+      label: "NC FIELD FILE / AFTERLIFE MARKET",
+      title: "Capital custody is an influence operation with a balance sheet.",
+      text: "Black Ledger turns patents, rumors, family mandates, and dark settlement into the same private rail so hostile acquirers never see where leverage actually clears.",
+      incident: "Off-market succession run",
+      exposure: "Patent gravity event",
+      doctrine: "Liquidity is deterrence"
+    },
+    swarm: {
+      label: "NC FIELD FILE / EXECUTIVE ROUTE",
+      title: "Protection is choreography at city scale.",
+      text: "Autonomous Defense Swarm wraps executives in drone veils, traffic denial, and human-authorized kinetic gates that make extraction feel less like escape and more like weather.",
+      incident: "District extraction corridor",
+      exposure: "Kinetic response veil",
+      doctrine: "Mobility is command"
+    },
+    soulkiller: {
+      label: "NC FIELD FILE / SEALED MEMORY",
+      title: "Some operations need a room the public cannot imagine.",
+      text: "Soulkiller Redaction Lab is not a product brochure. It is the blacksite logic behind memory severance, construct capture, and evidence minimization when identity becomes liability.",
+      incident: "Sealed neural extraction",
+      exposure: "Identity severance",
+      doctrine: "Silence is evidence control"
+    }
+  },
+  ja: {
+    relic: {
+      label: "NC 現地ファイル / コンペキ",
+      title: "バイオチップ窃取は、継続性を兵器プラットフォームへ変えた。",
+      text: "レリックスイートは取締役会向けの継続製品として見せられますが、その運用史は侵害対応、記憶保管、都市規模の噂統制に属しています。",
+      incident: "コンペキ・プラザ侵害",
+      exposure: "エングラム保管漏洩",
+      doctrine: "不死性はサプライチェーン"
+    },
+    mikoshi: {
+      label: "NC 現地ファイル / 軌道冷却",
+      title: "私的な来世には、どの保管庫より冷たいインフラが必要です。",
+      text: "神輿はポストボディ生存の神話を、主権領域のように統治できるパーティション、証人鎖、シミュレーション室へ変換します。",
+      incident: "コンストラクト主権請求",
+      exposure: "アーカイブ偏移",
+      doctrine: "記憶は管轄権"
+    },
+    ice: {
+      label: "NC 現地ファイル / ブラックウォール端",
+      title: "都市境界は敵対的インターフェースです。",
+      text: "ブラックICEメッシュは侵入を信号であり物語でもあるものとして扱い、ネットランナー経路を焼却、複写し、市場が侵害を名付ける前に対抗場へ戻します。",
+      incident: "ブラックウォール隣接探査",
+      exposure: "ネットランナー経路焼却",
+      doctrine: "防衛は地形になるべき"
+    },
+    ledger: {
+      label: "NC 現地ファイル / アフターライフ市場",
+      title: "資本保管は貸借対照表を持つ影響作戦です。",
+      text: "ブラック台帳は特許、噂、家族委任、暗黒決済を同じ私的レールへ変え、敵対的取得者に本当のレバレッジ決済地点を見せません。",
+      incident: "非公開継承ラン",
+      exposure: "特許重力イベント",
+      doctrine: "流動性は抑止力"
+    },
+    swarm: {
+      label: "NC 現地ファイル / 役員経路",
+      title: "防護は都市規模の振付です。",
+      text: "自律防衛スウォームは役員をドローンヴェール、交通拒否、人間承認のキネティックゲートで包み、脱出を逃走ではなく気象のように見せます。",
+      incident: "地区脱出回廊",
+      exposure: "キネティック応答ヴェール",
+      doctrine: "機動性は指揮"
+    },
+    soulkiller: {
+      label: "NC 現地ファイル / 封印記憶",
+      title: "公衆が想像できない部屋を必要とする作戦があります。",
+      text: "ソウルキラー秘匿研究室は製品パンフレットではありません。身元が負債になる時の記憶切断、コンストラクト取得、証拠最小化を支えるブラックサイト論理です。",
+      incident: "封印神経抽出",
+      exposure: "身元切断",
+      doctrine: "沈黙は証拠統制"
     }
   }
 };
@@ -3616,6 +3730,53 @@ function updateProductRoute() {
   if (routeClearance) routeClearance.textContent = file.clearance;
   if (routeLatency) routeLatency.textContent = file.latency;
   if (routeSurface) routeSurface.textContent = file.surface;
+
+  if (routeField) {
+    const field = (productFieldFiles[language] || productFieldFiles.en)[productKey] || productFieldFiles.en.relic;
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    const caption = document.createElement("figcaption");
+    const captionLabel = document.createElement("span");
+    const captionLink = document.createElement("a");
+    const content = document.createElement("div");
+    const label = document.createElement("span");
+    const heading = document.createElement("h2");
+    const copy = document.createElement("p");
+    const readouts = document.createElement("dl");
+    const rows = [
+      [dictionary.productRoute.incident, field.incident],
+      [dictionary.productRoute.exposure, field.exposure],
+      [dictionary.productRoute.doctrine, field.doctrine]
+    ];
+
+    image.src = "../../assets/cyberpunk2077-showdown-press.png";
+    image.alt = field.title;
+    image.loading = "lazy";
+    captionLabel.textContent = dictionary.productRoute.imageCredit;
+    captionLink.href = "https://press.cdprojektred.com/en/224/797";
+    captionLink.target = "_blank";
+    captionLink.rel = "noreferrer";
+    captionLink.textContent = "CD PROJEKT RED / Cyberpunk 2077";
+    caption.append(captionLabel, captionLink);
+    figure.append(image, caption);
+
+    label.textContent = field.label;
+    heading.textContent = field.title;
+    copy.textContent = field.text;
+
+    rows.forEach(([term, detail]) => {
+      const row = document.createElement("div");
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = detail;
+      row.append(dt, dd);
+      readouts.append(row);
+    });
+
+    content.append(label, heading, copy, readouts);
+    routeField.replaceChildren(figure, content);
+  }
 
   if (routeSwitcher) {
     const label = document.createElement("span");
