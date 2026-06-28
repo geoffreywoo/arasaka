@@ -1574,6 +1574,7 @@ const translations = {
       related: "Related systems",
       architecture: "Information Architecture",
       operations: "Operational Matrix",
+      suite: "Product Suite",
       packages: "Packages",
       integrations: "Integrations",
       regions: "Regions",
@@ -3045,6 +3046,7 @@ const translations = {
       related: "関連システム",
       architecture: "情報アーキテクチャ",
       operations: "運用マトリクス",
+      suite: "製品スイート",
       packages: "パッケージ",
       integrations: "統合",
       regions: "地域",
@@ -3242,6 +3244,7 @@ const routeSummary = document.querySelector("[data-route-summary]");
 const routeClearance = document.querySelector("[data-route-clearance]");
 const routeLatency = document.querySelector("[data-route-latency]");
 const routeSurface = document.querySelector("[data-route-surface]");
+const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3315,6 +3318,7 @@ const sectionTargets = Object.keys(sectionLabelKeys)
   .filter(Boolean);
 
 const readPath = (object, path) => path.split(".").reduce((value, key) => value?.[key], object);
+const productRouteOrder = ["relic", "mikoshi", "ice", "ledger", "swarm", "soulkiller"];
 
 const productOperations = {
   en: {
@@ -3612,6 +3616,34 @@ function updateProductRoute() {
   if (routeClearance) routeClearance.textContent = file.clearance;
   if (routeLatency) routeLatency.textContent = file.latency;
   if (routeSurface) routeSurface.textContent = file.surface;
+
+  if (routeSwitcher) {
+    const label = document.createElement("span");
+    const rail = document.createElement("div");
+
+    label.textContent = dictionary.productRoute.suite;
+    routeSwitcher.replaceChildren(label);
+
+    productRouteOrder.forEach((key) => {
+      const productFile = dictionary.productPage.files[key];
+      if (!productFile) return;
+
+      const link = document.createElement("a");
+      const code = document.createElement("span");
+      const name = document.createElement("strong");
+
+      link.href = key === productKey ? "./" : `../${key}/`;
+      link.className = key === productKey ? "is-active" : "";
+      link.setAttribute("aria-current", key === productKey ? "page" : "false");
+      code.textContent = productFile.code;
+      name.textContent = productFile.title;
+
+      link.append(code, name);
+      rail.append(link);
+    });
+
+    routeSwitcher.append(rail);
+  }
 
   if (routeOps) {
     const operations = (productOperations[language] || productOperations.en)[productKey] || productOperations.en.relic;

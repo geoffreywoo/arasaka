@@ -2563,6 +2563,7 @@ a,
     "header header"
     "hero meta"
     "proof meta"
+    "switcher meta"
     "ops meta"
     "panels panels"
     "related related";
@@ -2643,6 +2644,7 @@ a,
 .product-route-hero > span,
 .product-route-hero > strong,
 .product-route-proof > span,
+.product-route-switcher > span,
 .product-route-related > span,
 .product-route-panels article > span,
 .product-route-meta span {
@@ -2727,6 +2729,7 @@ a,
 
 .product-route-meta span,
 .product-route-proof > span,
+.product-route-switcher > span,
 .product-route-related > span {
   color: var(--dim);
 }
@@ -2750,6 +2753,77 @@ a,
   max-width: 760px;
   margin: 0;
   color: rgba(243, 244, 242, 0.72);
+}
+
+.product-route-switcher {
+  grid-area: switcher;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(116, 199, 216, 0.14);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.1), rgba(116, 199, 216, 0.06)),
+    rgba(6, 8, 10, 0.86);
+}
+
+.product-route-switcher div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(154px, 1fr);
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(116, 199, 216, 0.55) rgba(255, 255, 255, 0.08);
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-route-switcher a {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  min-height: 62px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.product-route-switcher a::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  content: "";
+  background: rgba(116, 199, 216, 0.34);
+}
+
+.product-route-switcher a:hover,
+.product-route-switcher a:focus-visible,
+.product-route-switcher a.is-active {
+  border-color: rgba(225, 7, 20, 0.42);
+  background: rgba(225, 7, 20, 0.12);
+  transform: translateY(-1px);
+}
+
+.product-route-switcher a.is-active::before {
+  background: var(--red);
+}
+
+.product-route-switcher a span {
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+}
+
+.product-route-switcher a strong {
+  font-size: 0.78rem;
+  line-height: 1.12;
 }
 
 .product-route-ops {
@@ -8525,6 +8599,7 @@ a,
       "hero"
       "meta"
       "proof"
+      "switcher"
       "ops"
       "panels"
       "related";
@@ -8541,6 +8616,10 @@ a,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-switcher div {
+    grid-auto-columns: minmax(188px, 38vw);
   }
 
   .contact-copy {
@@ -9064,6 +9143,15 @@ a,
   .product-route-actions,
   .product-route-actions .button {
     width: 100%;
+  }
+
+  .product-route-switcher {
+    margin-inline: -1px;
+    padding: 12px;
+  }
+
+  .product-route-switcher div {
+    grid-auto-columns: minmax(172px, 72vw);
   }
 
   .timeline article {
