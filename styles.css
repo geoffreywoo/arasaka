@@ -4036,6 +4036,7 @@ a,
     "brief meta"
     "qualification meta"
     "procurement meta"
+    "certificate meta"
     "topology meta"
     "specsheet meta"
     "runbook meta"
@@ -4751,6 +4752,98 @@ a,
 .product-route-procurement-intake:focus-visible {
   color: var(--ink);
   outline: 0;
+}
+
+.product-route-certificate {
+  grid-area: certificate;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.82fr) minmax(160px, 0.44fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(209, 177, 107, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(209, 177, 107, 0.16), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-certificate-head,
+.product-route-certificate-seal,
+.product-route-certificate-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 52%),
+    rgba(5, 8, 10, 0.94);
+}
+
+.product-route-certificate-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+}
+
+.product-route-certificate-head span,
+.product-route-certificate-grid span {
+  color: var(--gold);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-certificate-head p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.product-route-certificate-seal {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.product-route-certificate-seal img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  opacity: 0.82;
+  filter: drop-shadow(0 0 16px rgba(209, 177, 107, 0.32));
+}
+
+.product-route-certificate-seal strong {
+  color: rgba(243, 244, 242, 0.86);
+  font-size: 0.78rem;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.product-route-certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-certificate-grid article {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  min-height: 86px;
+  padding: 13px;
+}
+
+.product-route-certificate-grid strong {
+  color: var(--paper);
+  font-size: 0.88rem;
+  line-height: 1.2;
 }
 
 .product-route-topology {
@@ -11196,6 +11289,7 @@ a,
       "brief"
       "qualification"
       "procurement"
+      "certificate"
       "topology"
       "specsheet"
       "runbook"
@@ -11916,6 +12010,10 @@ a,
       "intake";
   }
 
+  .product-route-certificate {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-procurement-matrix {
     grid-template-columns: 1fr;
   }
@@ -12172,6 +12270,7 @@ a,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
+  .product-route-certificate,
   .product-route-topology,
   .product-route-specsheet,
   .product-route-runbook,

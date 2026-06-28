@@ -1930,6 +1930,13 @@ const translations = {
       evidence: "Evidence Required",
       intake: "Open Procurement Channel",
       intakeText: "Route through protected access with mandate proof, jurisdiction notes, and escalation authority.",
+      certificate: "Commercial Certificate",
+      certificateLead: "A sealed buyer artifact for the file room: authority, retention, proof clock, and counterparty exposure.",
+      certificateId: "Certificate ID",
+      certificateAuthority: "Authority",
+      certificateRetention: "Retention",
+      certificateCounterparty: "Counterparty",
+      certificateSeal: "Arasaka Internal Assurance",
       topology: "Integration Topology",
       topologyLead: "A system map for how this product binds custody, operators, jurisdiction, and proof.",
       upstream: "Upstream Source",
@@ -2003,6 +2010,13 @@ const translations = {
       evidence: "Evidence Required",
       intake: "Open Mandate Channel",
       intakeText: "Route through protected access with sponsor identity, theater scope, and escalation authority.",
+      certificate: "Commercial Certificate",
+      certificateLead: "A sealed buyer artifact for the file room: authority, retention, proof clock, and counterparty exposure.",
+      certificateId: "Certificate ID",
+      certificateAuthority: "Authority",
+      certificateRetention: "Retention",
+      certificateCounterparty: "Counterparty",
+      certificateSeal: "Arasaka Internal Assurance",
       topology: "Integration Topology",
       topologyLead: "A service map for how this mandate binds teams, systems, theaters, and proof.",
       upstream: "Upstream Signal",
@@ -3848,6 +3862,13 @@ const translations = {
       evidence: "必要証拠",
       intake: "調達チャネルを開く",
       intakeText: "委任証明、管轄メモ、エスカレーション権限を添えて保護アクセスへ経路化します。",
+      certificate: "商用証明書",
+      certificateLead: "ファイル室向けの封印済み購入者アーティファクト。権限、保持、証明時計、相手方露出を記録します。",
+      certificateId: "証明書ID",
+      certificateAuthority: "権限",
+      certificateRetention: "保持",
+      certificateCounterparty: "相手方",
+      certificateSeal: "荒坂内部保証",
       topology: "統合トポロジー",
       topologyLead: "この製品が保管、オペレーター、管轄、証明をどう結合するかを示すシステムマップ。",
       upstream: "上流ソース",
@@ -3921,6 +3942,13 @@ const translations = {
       evidence: "必要証拠",
       intake: "委任チャネルを開く",
       intakeText: "スポンサー身元、作戦区範囲、エスカレーション権限を添えて保護アクセスへ経路化します。",
+      certificate: "商用証明書",
+      certificateLead: "ファイル室向けの封印済み購入者アーティファクト。権限、保持、証明時計、相手方露出を記録します。",
+      certificateId: "証明書ID",
+      certificateAuthority: "権限",
+      certificateRetention: "保持",
+      certificateCounterparty: "相手方",
+      certificateSeal: "荒坂内部保証",
       topology: "統合トポロジー",
       topologyLead: "この委任がチーム、システム、作戦区、証明をどう結合するかを示すサービスマップ。",
       upstream: "上流信号",
@@ -4150,6 +4178,7 @@ const routeCaseFile = document.querySelector("[data-route-case-file]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
+const routeCertificate = document.querySelector("[data-route-certificate]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
@@ -4169,6 +4198,7 @@ const serviceRouteCaseFile = document.querySelector("[data-service-case-file]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
+const serviceRouteCertificate = document.querySelector("[data-service-certificate]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
@@ -5002,6 +5032,48 @@ function renderRouteProcurement(target, labels, rows, intakeHref) {
   target.replaceChildren(heading, matrix, note, intake);
 }
 
+function renderRouteCertificate(target, labels, certificate) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const seal = document.createElement("div");
+  const mark = document.createElement("img");
+  const sealText = document.createElement("strong");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-certificate-head";
+  label.textContent = labels.certificate;
+  lead.textContent = labels.certificateLead;
+  heading.append(label, lead);
+
+  mark.src = "../../assets/arasaka-mark-white.png";
+  mark.alt = "";
+  sealText.textContent = labels.certificateSeal;
+  seal.className = "product-route-certificate-seal";
+  seal.append(mark, sealText);
+
+  grid.className = "product-route-certificate-grid";
+  [
+    [labels.certificateId, certificate.id],
+    [labels.certificateAuthority, certificate.authority],
+    [labels.certificateRetention, certificate.retention],
+    [labels.certificateCounterparty, certificate.counterparty]
+  ].forEach(([rowLabel, value]) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const text = document.createElement("strong");
+
+    eyebrow.textContent = rowLabel;
+    text.textContent = value;
+    article.append(eyebrow, text);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, seal, grid);
+}
+
 function renderRouteTopology(target, labels, rows) {
   if (!target) return;
 
@@ -5292,6 +5364,13 @@ function updateProductRoute() {
       text: field.doctrine
     }
   ], "../../#contact");
+
+  renderRouteCertificate(routeCertificate, dictionary.productRoute, {
+    id: `${file.code}-${file.clearance}-SEALED`,
+    authority: file.tabs.governance.items[0] || file.tabs.governance.title,
+    retention: operations.sla[2] || operations.sla[1] || operations.sla[0],
+    counterparty: `${operations.regions[0]} / ${field.exposure}`
+  });
 
   renderRouteTopology(routeTopology, dictionary.productRoute, [
     {
@@ -5633,6 +5712,13 @@ function updateServiceRoute() {
       text: file.field.doctrine
     }
   ], "../../#contact");
+
+  renderRouteCertificate(serviceRouteCertificate, routeLabels, {
+    id: `${file.code}-${file.clearance}-MANDATE`,
+    authority: file.tabs.governance.items[0] || file.tabs.governance.title,
+    retention: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+    counterparty: `${file.operations.regions[0]} / ${file.field.exposure}`
+  });
 
   renderRouteTopology(serviceRouteTopology, routeLabels, [
     {
