@@ -2372,6 +2372,14 @@ const translations = {
       relayChecksum: "Relay Checksum",
       auditTrail: "Audit Trail",
       handoffAction: "Request sealed room",
+      operatorTranscript: "Operator Transcript",
+      operatorTranscriptLead: "A sanitized internal command log showing how the sealed room interprets signal, witness, escalation, and closeout.",
+      commandLog: "Command Log",
+      witnessNote: "Witness Note",
+      escalationMemo: "Escalation Memo",
+      closeoutLine: "Closeout Line",
+      operator: "Operator",
+      timestamp: "Timestamp",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2524,6 +2532,14 @@ const translations = {
       relayChecksum: "Relay Checksum",
       auditTrail: "Audit Trail",
       handoffAction: "Request sealed room",
+      operatorTranscript: "Operator Transcript",
+      operatorTranscriptLead: "A sanitized internal command log showing how the mandate room interprets signal, witness, escalation, and closeout.",
+      commandLog: "Command Log",
+      witnessNote: "Witness Note",
+      escalationMemo: "Escalation Memo",
+      closeoutLine: "Closeout Line",
+      operator: "Operator",
+      timestamp: "Timestamp",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4791,6 +4807,14 @@ const translations = {
       relayChecksum: "中継チェックサム",
       auditTrail: "監査証跡",
       handoffAction: "封印ルームを申請",
+      operatorTranscript: "オペレーター記録",
+      operatorTranscriptLead: "封印ルームが信号、証人、エスカレーション、完了をどう解釈したかを示すサニタイズ済み内部コマンドログ。",
+      commandLog: "コマンドログ",
+      witnessNote: "証人メモ",
+      escalationMemo: "エスカレーションメモ",
+      closeoutLine: "完了ライン",
+      operator: "オペレーター",
+      timestamp: "タイムスタンプ",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -4943,6 +4967,14 @@ const translations = {
       relayChecksum: "中継チェックサム",
       auditTrail: "監査証跡",
       handoffAction: "封印ルームを申請",
+      operatorTranscript: "オペレーター記録",
+      operatorTranscriptLead: "委任ルームが信号、証人、エスカレーション、完了をどう解釈したかを示すサニタイズ済み内部コマンドログ。",
+      commandLog: "コマンドログ",
+      witnessNote: "証人メモ",
+      escalationMemo: "エスカレーションメモ",
+      closeoutLine: "完了ライン",
+      operator: "オペレーター",
+      timestamp: "タイムスタンプ",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5202,6 +5234,7 @@ const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routePrivateRoom = document.querySelector("[data-route-private-room]");
+const routeTranscript = document.querySelector("[data-route-transcript]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5233,6 +5266,7 @@ const serviceRouteConfiguration = document.querySelector("[data-service-configur
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
+const serviceRouteTranscript = document.querySelector("[data-service-transcript]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6620,6 +6654,50 @@ function renderRoutePrivateRoom(target, labels, rows, href) {
   target.replaceChildren(heading, grid, action);
 }
 
+function renderRouteTranscript(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const log = document.createElement("div");
+
+  heading.className = "product-route-transcript-head";
+  label.textContent = labels.operatorTranscript;
+  lead.textContent = labels.operatorTranscriptLead;
+  heading.append(label, lead);
+
+  log.className = "product-route-transcript-log";
+  rows.forEach(({ label: rowLabel, value, text, operator, timestamp }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const meta = document.createElement("dl");
+
+    code.textContent = `L-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    [
+      [labels.operator, operator],
+      [labels.timestamp, timestamp]
+    ].forEach(([term, detail]) => {
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = detail;
+      meta.append(dt, dd);
+    });
+
+    article.append(code, eyebrow, title, copy, meta);
+    log.append(article);
+  });
+
+  target.replaceChildren(heading, log);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7164,6 +7242,37 @@ function updateProductRoute() {
       text: operations.sla[2] || operations.sla[1] || operations.sla[0]
     }
   ], "../../#contact");
+
+  renderRouteTranscript(routeTranscript, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.commandLog,
+      value: field.incident,
+      text: field.text,
+      operator: operations.integrations[0],
+      timestamp: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.witnessNote,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      operator: file.clearance,
+      timestamp: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.escalationMemo,
+      value: operations.packages[1] || operations.packages[0],
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      operator: operations.regions[0],
+      timestamp: file.latency
+    },
+    {
+      label: dictionary.productRoute.closeoutLine,
+      value: field.doctrine,
+      text: operations.integrations.slice(1).join(" / ") || operations.integrations[0],
+      operator: operations.packages[0],
+      timestamp: operations.sla[1] || operations.sla[0]
+    }
+  ]);
 
   if (routeOps) {
     const operationGroups = [
@@ -7786,6 +7895,37 @@ function updateServiceRoute() {
       text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ], "../../#contact");
+
+  renderRouteTranscript(serviceRouteTranscript, routeLabels, [
+    {
+      label: routeLabels.commandLog,
+      value: file.field.incident,
+      text: file.field.text,
+      operator: file.operations.integrations[0],
+      timestamp: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.witnessNote,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      operator: file.clearance,
+      timestamp: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.escalationMemo,
+      value: file.operations.packages[1] || file.operations.packages[0],
+      text: file.tabs.deployment.items[1] || file.tabs.deployment.text,
+      operator: file.operations.regions[0],
+      timestamp: file.window
+    },
+    {
+      label: routeLabels.closeoutLine,
+      value: file.field.doctrine,
+      text: file.operations.integrations.slice(1).join(" / ") || file.operations.integrations[0],
+      operator: file.operations.packages[0],
+      timestamp: file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
 
   if (serviceRouteOps) {
     const operationGroups = [

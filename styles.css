@@ -4665,6 +4665,7 @@ a,
     "decision meta"
     "runbook meta"
     "private meta"
+    "transcript meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -4839,6 +4840,8 @@ a,
 .product-route-runbook-rail article,
 .product-route-private-head,
 .product-route-private-grid article,
+.product-route-transcript-head,
+.product-route-transcript-log article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -6975,6 +6978,122 @@ a,
 .product-route-private-action:focus-visible {
   color: var(--ink);
   outline: 0;
+}
+
+.product-route-transcript {
+  grid-area: transcript;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.13), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-transcript-head,
+.product-route-transcript-log article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.06), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-transcript-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-transcript-head span,
+.product-route-transcript-log article > span,
+.product-route-transcript-log small,
+.product-route-transcript-log dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-transcript-head span,
+.product-route-transcript-log article > span {
+  color: var(--acid);
+  font-size: 0.64rem;
+}
+
+.product-route-transcript-head p,
+.product-route-transcript-log p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-transcript-log {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-transcript-log article {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(54px, 0.1fr) minmax(140px, 0.22fr) minmax(0, 1fr) minmax(150px, 0.26fr);
+  gap: 12px;
+  align-items: start;
+  min-height: 92px;
+  padding: 14px;
+}
+
+.product-route-transcript-log article::before {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 10px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, var(--acid), var(--cyan), transparent);
+  opacity: 0.52;
+}
+
+.product-route-transcript-log small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-transcript-log strong {
+  color: var(--paper);
+  font-size: 0.94rem;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.product-route-transcript-log dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 5px 8px;
+  margin: 0;
+}
+
+.product-route-transcript-log dt,
+.product-route-transcript-log dd {
+  margin: 0;
+  font-size: 0.62rem;
+  line-height: 1.22;
+}
+
+.product-route-transcript-log dt {
+  color: var(--dim);
+}
+
+.product-route-transcript-log dd {
+  color: var(--acid);
+  font-weight: 900;
+  overflow-wrap: anywhere;
 }
 
 .product-route-switcher {
@@ -14033,6 +14152,7 @@ a,
       "decision"
       "runbook"
       "private"
+      "transcript"
       "switcher"
       "ops"
       "panels"
@@ -14078,6 +14198,7 @@ a,
   .product-route-decision,
   .product-route-runbook,
   .product-route-private,
+  .product-route-transcript,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -14101,6 +14222,7 @@ a,
   .product-route-decision-head,
   .product-route-runbook-head,
   .product-route-private-head,
+  .product-route-transcript-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -14205,6 +14327,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-transcript {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-config-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -14217,6 +14343,14 @@ a,
   .product-route-runbook-rail,
   .product-route-private-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-transcript-log article {
+    grid-template-columns: minmax(42px, 0.12fr) minmax(120px, 0.24fr) minmax(0, 1fr);
+  }
+
+  .product-route-transcript-log article dl {
+    grid-column: 2 / -1;
   }
 
   .product-route-switcher div {
@@ -14945,6 +15079,14 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-transcript-log article {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-transcript-log article dl {
+    grid-column: auto;
+  }
+
   .product-route-specsheet figure {
     min-height: 260px;
   }
@@ -15247,6 +15389,7 @@ a,
   .product-route-decision,
   .product-route-runbook,
   .product-route-private,
+  .product-route-transcript,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -15267,11 +15410,16 @@ a,
     min-height: 0;
   }
 
+  .product-route-transcript-log article {
+    min-height: 0;
+  }
+
   .product-route-topology-map article,
   .product-route-adapters-grid article,
   .product-route-contract-grid article,
   .product-route-telemetry-grid article,
   .product-route-risk-table article,
+  .product-route-transcript-log article,
   .product-route-specsheet-grid article {
     min-height: 0;
   }
