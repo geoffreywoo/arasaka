@@ -9076,6 +9076,102 @@ a,
   font-size: 0.86rem;
 }
 
+.access-review {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.16), rgba(225, 7, 20, 0.12), rgba(182, 243, 91, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.access-review-head,
+.access-review dl,
+.access-review a {
+  min-width: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent),
+    rgba(6, 8, 10, 0.92);
+}
+
+.access-review-head {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.access-review-head span,
+.access-review dt {
+  color: var(--dim);
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.access-review-head strong {
+  color: var(--paper);
+  font-size: 1.1rem;
+  line-height: 1.06;
+}
+
+.access-review-head p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.access-review dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.access-review dl div {
+  display: grid;
+  gap: 4px;
+  min-height: 70px;
+  align-content: center;
+  padding: 10px 12px;
+  background: rgba(5, 5, 7, 0.72);
+}
+
+.access-review dd {
+  margin: 0;
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.22;
+  text-transform: uppercase;
+}
+
+.access-review a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 14px;
+  color: var(--cyan);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.access-review a:hover,
+.access-review a:focus-visible {
+  color: var(--acid);
+  outline: 0;
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
@@ -10538,6 +10634,10 @@ a,
   }
 
   .terminal-status {
+    grid-template-columns: 1fr;
+  }
+
+  .access-review dl {
     grid-template-columns: 1fr;
   }
 

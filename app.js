@@ -1398,6 +1398,48 @@ const translations = {
         "AUTONOMOUS RESPONSE HELD // HUMAN COMMAND REQUIRED"
       ]
     },
+    accessReview: {
+      aria: "Access review route",
+      eyebrow: "Access Review",
+      clearance: "Clearance",
+      route: "Route",
+      response: "Response",
+      open: "Open dossier",
+      detail: {
+        executive: {
+          title: "Neural Custody Review",
+          text: "Executive identity custody, Relic continuity, and Mikoshi witness paths are routed for human review.",
+          clearance: "AA-90",
+          route: "Relic / Mikoshi",
+          response: "Human witness",
+          href: "products/relic/"
+        },
+        banking: {
+          title: "Black Ledger Review",
+          text: "Founder capital, patent gravity, and off-market succession signals are routed into cold settlement analysis.",
+          clearance: "BL-00",
+          route: "Ledger / Mandate",
+          response: "Capital desk",
+          href: "services/black-ledger-mandate/"
+        },
+        security: {
+          title: "Autonomous Security Review",
+          text: "Drone veils, extraction corridors, and city-grid response windows are scored for principal protection.",
+          clearance: "SEC-12",
+          route: "Swarm / Protection",
+          response: "Tactical desk",
+          href: "services/autonomous-protection/"
+        },
+        intelligence: {
+          title: "Netrunner Intelligence Review",
+          text: "Black ICE, runner traces, and Blackwall-adjacent contact risk are routed into counterintrusion theater.",
+          clearance: "ICE-77",
+          route: "ICE / Counterintrusion",
+          response: "Runner cell",
+          href: "services/counterintrusion/"
+        }
+      }
+    },
     footer: {
       registry: "荒坂株式会社 Public Corporate Network",
       cameo: "quiet relay",
@@ -3155,6 +3197,48 @@ const translations = {
         "自律応答保留 // 人間指揮を要求"
       ]
     },
+    accessReview: {
+      aria: "アクセス審査経路",
+      eyebrow: "アクセス審査",
+      clearance: "認証",
+      route: "経路",
+      response: "応答",
+      open: "記録を開く",
+      detail: {
+        executive: {
+          title: "神経保管審査",
+          text: "役員ID保管、レリック継続、神輿証人経路を人間審査へ送ります。",
+          clearance: "AA-90",
+          route: "レリック / 神輿",
+          response: "人間証人",
+          href: "products/relic/"
+        },
+        banking: {
+          title: "ブラック台帳審査",
+          text: "創業者資本、特許重力、非公開継承シグナルを冷却決済分析へ送ります。",
+          clearance: "BL-00",
+          route: "台帳 / 委任",
+          response: "資本デスク",
+          href: "services/black-ledger-mandate/"
+        },
+        security: {
+          title: "自律警備審査",
+          text: "ドローンヴェール、脱出回廊、都市グリッド応答窓をプリンシパル防護向けに採点します。",
+          clearance: "SEC-12",
+          route: "スウォーム / 防護",
+          response: "戦術デスク",
+          href: "services/autonomous-protection/"
+        },
+        intelligence: {
+          title: "ネットランナー情報審査",
+          text: "ブラックICE、ランナー追跡、ブラックウォール隣接接触リスクを対侵入作戦区へ送ります。",
+          clearance: "ICE-77",
+          route: "ICE / 対侵入",
+          response: "ランナーセル",
+          href: "services/counterintrusion/"
+        }
+      }
+    },
     footer: {
       registry: "荒坂株式会社 公開法人ネットワーク",
       cameo: "秘匿中継",
@@ -3448,6 +3532,13 @@ const terminalLines = document.querySelectorAll("[data-terminal-line]");
 const terminalEntropy = document.querySelector("[data-terminal-entropy]");
 const form = document.querySelector("#contact-form");
 const formMessage = document.querySelector("#form-message");
+const clearanceSelect = form?.elements.clearance;
+const accessReviewTitle = document.querySelector("[data-access-review-title]");
+const accessReviewText = document.querySelector("[data-access-review-text]");
+const accessReviewClearance = document.querySelector("[data-access-review-clearance]");
+const accessReviewRoute = document.querySelector("[data-access-review-route]");
+const accessReviewResponse = document.querySelector("[data-access-review-response]");
+const accessReviewLink = document.querySelector("[data-access-review-link]");
 const systemModuleButtons = document.querySelectorAll("[data-system-module]");
 const systemCode = document.querySelector("[data-system-code]");
 const systemTitle = document.querySelector("[data-system-title]");
@@ -4139,6 +4230,7 @@ function setLanguage(language) {
   updateDoctrineToggleLabels();
   updateOperationTheater(activeOperationTheater);
   updateProductPage(activeProductPage, activeProductTab);
+  updateAccessReview(clearanceSelect?.value || "executive");
   updateProductRoute();
   updateServiceRoute();
   updateActiveSection(activeSectionId);
@@ -5045,6 +5137,20 @@ function updateTerminal(forceLine) {
   }
 }
 
+function updateAccessReview(clearanceKey = "executive") {
+  if (!accessReviewTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const detail = dictionary.accessReview.detail[clearanceKey] || dictionary.accessReview.detail.executive;
+
+  accessReviewTitle.textContent = detail.title;
+  if (accessReviewText) accessReviewText.textContent = detail.text;
+  if (accessReviewClearance) accessReviewClearance.textContent = detail.clearance;
+  if (accessReviewRoute) accessReviewRoute.textContent = detail.route;
+  if (accessReviewResponse) accessReviewResponse.textContent = detail.response;
+  if (accessReviewLink) accessReviewLink.href = detail.href;
+}
+
 function updateTopologyLens(lensKey) {
   if (!topologyTitle) return;
   const language = document.documentElement.dataset.language || "en";
@@ -5786,14 +5892,22 @@ operationTheaterButtons.forEach((button) => {
 });
 
 if (form) {
+  clearanceSelect?.addEventListener("change", () => {
+    updateAccessReview(clearanceSelect.value || "executive");
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const language = document.documentElement.dataset.language || "en";
+    const selectedClearance = clearanceSelect?.value || "executive";
     if (formMessage) {
       formMessage.textContent = translations[language].form.success;
     }
+    updateAccessReview(selectedClearance);
     updateTerminal(translations[language].terminal.submitted);
     form.reset();
+    if (clearanceSelect) clearanceSelect.value = selectedClearance;
+    updateAccessReview(selectedClearance);
   });
 }
 
