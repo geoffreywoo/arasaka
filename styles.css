@@ -704,7 +704,7 @@ a,
 
 .brand-wordmark {
   display: block;
-  width: clamp(118px, 12vw, 156px);
+  width: clamp(142px, 15vw, 208px);
   height: auto;
   max-width: 100%;
   filter: drop-shadow(0 0 14px rgba(225, 7, 20, 0.28));
@@ -12245,7 +12245,7 @@ a,
   }
 
   .brand-wordmark {
-    width: 112px;
+    width: 136px;
   }
 
   .site-header {
