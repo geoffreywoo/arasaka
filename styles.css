@@ -4670,6 +4670,7 @@ a,
     "custody meta"
     "auth meta"
     "redteam meta"
+    "forensic meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -4854,6 +4855,8 @@ a,
 .product-route-auth-table article,
 .product-route-redteam-head,
 .product-route-redteam-rail article,
+.product-route-forensic-head,
+.product-route-forensic-grid article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -7551,6 +7554,106 @@ a,
 .product-route-redteam-rail em {
   align-self: end;
   color: var(--cyan);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.product-route-forensic {
+  grid-area: forensic;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.14), rgba(116, 199, 216, 0.12), rgba(209, 177, 107, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-forensic-head,
+.product-route-forensic-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.1), transparent 60%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-forensic-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-forensic-head span,
+.product-route-forensic-grid article > span,
+.product-route-forensic-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-forensic-head span,
+.product-route-forensic-grid article > span {
+  color: var(--acid);
+  font-size: 0.64rem;
+}
+
+.product-route-forensic-head p,
+.product-route-forensic-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-forensic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-forensic-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 174px;
+  padding: 15px;
+}
+
+.product-route-forensic-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.1), transparent 2px) 0 0 / 18px 100%,
+    linear-gradient(180deg, rgba(116, 199, 216, 0.08), transparent 48%);
+}
+
+.product-route-forensic-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-forensic-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-forensic-grid em {
+  align-self: end;
+  color: var(--gold);
   font-size: 0.62rem;
   font-style: normal;
   line-height: 1.2;
@@ -14618,6 +14721,7 @@ a,
       "custody"
       "auth"
       "redteam"
+      "forensic"
       "switcher"
       "ops"
       "panels"
@@ -14668,6 +14772,7 @@ a,
   .product-route-custody,
   .product-route-auth,
   .product-route-redteam,
+  .product-route-forensic,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -14696,6 +14801,7 @@ a,
   .product-route-custody-head,
   .product-route-auth-head,
   .product-route-redteam-head,
+  .product-route-forensic-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -14800,6 +14906,10 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-route-forensic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-route-specsheet {
     grid-template-columns: 1fr;
   }
@@ -14832,7 +14942,8 @@ a,
     grid-template-columns: 1fr;
   }
 
-  .product-route-redteam {
+  .product-route-redteam,
+  .product-route-forensic {
     grid-template-columns: 1fr;
   }
 
@@ -14849,7 +14960,8 @@ a,
   .product-route-private-grid,
   .product-route-custody-rail,
   .product-route-auth-table,
-  .product-route-redteam-rail {
+  .product-route-redteam-rail,
+  .product-route-forensic-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -15587,7 +15699,8 @@ a,
   .product-route-threat-grid,
   .product-route-custody-rail,
   .product-route-auth-table,
-  .product-route-redteam-rail {
+  .product-route-redteam-rail,
+  .product-route-forensic-grid {
     grid-template-columns: 1fr;
   }
 
@@ -15619,7 +15732,8 @@ a,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
   .product-route-auth-table article,
-  .product-route-redteam-rail article {
+  .product-route-redteam-rail article,
+  .product-route-forensic-grid article {
     min-height: 0;
   }
 
@@ -15910,6 +16024,7 @@ a,
   .product-route-custody,
   .product-route-auth,
   .product-route-redteam,
+  .product-route-forensic,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -15930,7 +16045,8 @@ a,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
   .product-route-auth-table article,
-  .product-route-redteam-rail article {
+  .product-route-redteam-rail article,
+  .product-route-forensic-grid article {
     min-height: 0;
   }
 
@@ -15948,7 +16064,8 @@ a,
   .product-route-threat-grid article,
   .product-route-custody-rail article,
   .product-route-auth-table article,
-  .product-route-redteam-rail article {
+  .product-route-redteam-rail article,
+  .product-route-forensic-grid article {
     min-height: 0;
   }
 
@@ -16000,7 +16117,8 @@ a,
     grid-template-columns: 1fr;
   }
 
-  .product-route-redteam-rail {
+  .product-route-redteam-rail,
+  .product-route-forensic-grid {
     grid-template-columns: 1fr;
   }
 

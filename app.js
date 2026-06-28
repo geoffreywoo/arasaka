@@ -2410,6 +2410,13 @@ const translations = {
       countermeasure: "Countermeasure",
       verdict: "Verdict",
       latencyTag: "Latency",
+      forensicReceipt: "Forensic Receipt",
+      forensicReceiptLead: "A sealed post-run receipt for client review: artifact, evidence hash, retention state, and handoff channel after the system closes.",
+      artifact: "Artifact",
+      evidenceHash: "Evidence Hash",
+      retentionState: "Retention State",
+      handoffChannel: "Handoff Channel",
+      checksum: "Checksum",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2600,6 +2607,13 @@ const translations = {
       countermeasure: "Countermeasure",
       verdict: "Verdict",
       latencyTag: "Window",
+      forensicReceipt: "Forensic Receipt",
+      forensicReceiptLead: "A sealed post-run receipt for sponsor review: artifact, evidence hash, retention state, and handoff channel after the mandate closes.",
+      artifact: "Artifact",
+      evidenceHash: "Evidence Hash",
+      retentionState: "Retention State",
+      handoffChannel: "Handoff Channel",
+      checksum: "Checksum",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4905,6 +4919,13 @@ const translations = {
       countermeasure: "対抗措置",
       verdict: "判定",
       latencyTag: "レイテンシ",
+      forensicReceipt: "フォレンジック受領書",
+      forensicReceiptLead: "システム完了後に、アーティファクト、証拠ハッシュ、保持状態、引き渡しチャネルをクライアント審査へ封印する実行後受領書。",
+      artifact: "アーティファクト",
+      evidenceHash: "証拠ハッシュ",
+      retentionState: "保持状態",
+      handoffChannel: "引き渡しチャネル",
+      checksum: "チェックサム",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5095,6 +5116,13 @@ const translations = {
       countermeasure: "対抗措置",
       verdict: "判定",
       latencyTag: "窓口",
+      forensicReceipt: "フォレンジック受領書",
+      forensicReceiptLead: "委任完了後に、アーティファクト、証拠ハッシュ、保持状態、引き渡しチャネルをスポンサー審査へ封印する実行後受領書。",
+      artifact: "アーティファクト",
+      evidenceHash: "証拠ハッシュ",
+      retentionState: "保持状態",
+      handoffChannel: "引き渡しチャネル",
+      checksum: "チェックサム",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5359,6 +5387,7 @@ const routeThreatModel = document.querySelector("[data-route-threat-model]");
 const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
 const routeAuthorizationLedger = document.querySelector("[data-route-authorization-ledger]");
 const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]");
+const routeForensicReceipt = document.querySelector("[data-route-forensic-receipt]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5395,6 +5424,7 @@ const serviceRouteThreatModel = document.querySelector("[data-service-threat-mod
 const serviceRouteCustodyChain = document.querySelector("[data-service-custody-chain]");
 const serviceRouteAuthorizationLedger = document.querySelector("[data-service-authorization-ledger]");
 const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team-replay]");
+const serviceRouteForensicReceipt = document.querySelector("[data-service-forensic-receipt]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -6966,6 +6996,38 @@ function renderRouteRedTeamReplay(target, labels, rows) {
   target.replaceChildren(heading, rail);
 }
 
+function renderRouteForensicReceipt(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-forensic-head";
+  label.textContent = labels.forensicReceipt;
+  lead.textContent = labels.forensicReceiptLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-forensic-grid";
+  rows.forEach(({ label: rowLabel, value, text, checksum }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const seal = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    seal.textContent = `${labels.checksum}: ${checksum}`;
+    article.append(eyebrow, title, copy, seal);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7647,6 +7709,33 @@ function updateProductRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: `${operations.regions.join(" / ")} / ${operations.sla[2] || operations.sla[1] || operations.sla[0]}`,
       latency: file.clearance
+    }
+  ]);
+
+  renderRouteForensicReceipt(routeForensicReceipt, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.artifact,
+      value: `${file.code}-RECEIPT`,
+      text: `${field.incident} / ${file.tabs.deployment.title}`,
+      checksum: file.clearance
+    },
+    {
+      label: dictionary.productRoute.evidenceHash,
+      value: `${file.code}-${productKey.toUpperCase()}-${file.surface.toUpperCase().replace(/\s+/g, "-")}`,
+      text: file.tabs.governance.items.join(" / ") || file.tabs.governance.text,
+      checksum: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.retentionState,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${operations.regions.join(" / ")} / ${field.exposure}`,
+      checksum: file.tabs.governance.title
+    },
+    {
+      label: dictionary.productRoute.handoffChannel,
+      value: operations.packages[0],
+      text: `${dictionary.productRoute.capitalObserver} / G.W. / A-F`,
+      checksum: operations.integrations[0]
     }
   ]);
 
@@ -8408,6 +8497,33 @@ function updateServiceRoute() {
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: `${file.operations.regions.join(" / ")} / ${file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]}`,
       latency: file.clearance
+    }
+  ]);
+
+  renderRouteForensicReceipt(serviceRouteForensicReceipt, routeLabels, [
+    {
+      label: routeLabels.artifact,
+      value: `${file.code}-RECEIPT`,
+      text: `${file.field.incident} / ${file.tabs.deployment.title}`,
+      checksum: file.clearance
+    },
+    {
+      label: routeLabels.evidenceHash,
+      value: `${file.code}-${serviceKey.toUpperCase()}-${file.surface.toUpperCase().replace(/\s+/g, "-")}`,
+      text: file.tabs.governance.items.join(" / ") || file.tabs.governance.text,
+      checksum: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.retentionState,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.operations.regions.join(" / ")} / ${file.field.exposure}`,
+      checksum: file.tabs.governance.title
+    },
+    {
+      label: routeLabels.handoffChannel,
+      value: file.operations.packages[0],
+      text: `${routeLabels.capitalObserver} / G.W. / A-F`,
+      checksum: file.operations.integrations[0]
     }
   ]);
 
