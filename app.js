@@ -295,6 +295,14 @@ const translations = {
         }
       }
     },
+    sourceVault: {
+      aria: "Credited source vault",
+      eyebrow: "Source Vault",
+      title: "Official Cyberpunk press material, sealed into the public archive.",
+      text: "The images below are credited source artifacts used to anchor the fan-made Arasaka interface in the visual language of Night City.",
+      showdown: "Showdown tactical frame",
+      afterlife: "Afterlife reputation market"
+    },
     command: {
       aria: "Corporate command ribbon",
       eyebrow: "Command Ribbon",
@@ -1987,6 +1995,14 @@ const translations = {
           text: "ドローンヴェール、交通拒否、地区応答窓が移動を統治された防護システムへ変えます。"
         }
       }
+    },
+    sourceVault: {
+      aria: "クレジット済みソース保管庫",
+      eyebrow: "ソース保管庫",
+      title: "公式Cyberpunkプレス素材を公開アーカイブへ封印。",
+      text: "以下の画像は、ファン制作の荒坂インターフェースをナイトシティの視覚言語へ接続するための、クレジット済みソースアーティファクトです。",
+      showdown: "ショーダウン戦術フレーム",
+      afterlife: "アフターライフ評価市場"
     },
     command: {
       aria: "企業指揮リボン",
