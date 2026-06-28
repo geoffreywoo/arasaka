@@ -2318,6 +2318,12 @@ const translations = {
       networkPlane: "Network Plane",
       custodyPlane: "Custody Plane",
       proofPlane: "Proof Plane",
+      interfaceContract: "Interface Contract",
+      interfaceContractLead: "A client-facing contract for endpoint shape, authorization, event stream, and fallback behavior before implementation.",
+      endpoint: "Endpoint",
+      authorization: "Authorization",
+      eventStream: "Event Stream",
+      fallback: "Fallback",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2443,6 +2449,12 @@ const translations = {
       networkPlane: "Network Plane",
       custodyPlane: "Custody Plane",
       proofPlane: "Proof Plane",
+      interfaceContract: "Interface Contract",
+      interfaceContractLead: "A client-facing contract for endpoint shape, authorization, event stream, and fallback behavior before service activation.",
+      endpoint: "Endpoint",
+      authorization: "Authorization",
+      eventStream: "Event Stream",
+      fallback: "Fallback",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4683,6 +4695,12 @@ const translations = {
       networkPlane: "ネットワークプレーン",
       custodyPlane: "保管プレーン",
       proofPlane: "証明プレーン",
+      interfaceContract: "インターフェース契約",
+      interfaceContractLead: "実装前に、エンドポイント形状、認可、イベントストリーム、フォールバック動作を定義するクライアント向け契約。",
+      endpoint: "エンドポイント",
+      authorization: "認可",
+      eventStream: "イベントストリーム",
+      fallback: "フォールバック",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -4808,6 +4826,12 @@ const translations = {
       networkPlane: "ネットワークプレーン",
       custodyPlane: "保管プレーン",
       proofPlane: "証明プレーン",
+      interfaceContract: "インターフェース契約",
+      interfaceContractLead: "サービス起動前に、エンドポイント形状、認可、イベントストリーム、フォールバック動作を定義するクライアント向け契約。",
+      endpoint: "エンドポイント",
+      authorization: "認可",
+      eventStream: "イベントストリーム",
+      fallback: "フォールバック",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5086,6 +5110,7 @@ const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeAdapters = document.querySelector("[data-route-adapters]");
+const routeContract = document.querySelector("[data-route-contract]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5113,6 +5138,7 @@ const serviceRouteEvidencePacket = document.querySelector("[data-service-evidenc
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
+const serviceRouteContract = document.querySelector("[data-service-contract]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6203,6 +6229,38 @@ function renderRouteAdapters(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteContract(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-contract-head";
+  label.textContent = labels.interfaceContract;
+  lead.textContent = labels.interfaceContractLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-contract-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `I-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -6687,6 +6745,29 @@ function updateProductRoute() {
       adapter: operations.integrations[2] || operations.integrations[0],
       boundary: file.tabs.governance.items[0] || file.tabs.governance.text,
       assurance: operations.sla[2] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteContract(routeContract, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.endpoint,
+      value: `/arasaka/${productKey}/${file.code.toLowerCase()}`,
+      text: `${operations.integrations[0]} / ${operations.packages[0]}`
+    },
+    {
+      label: dictionary.productRoute.authorization,
+      value: file.clearance,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.eventStream,
+      value: field.exposure,
+      text: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.fallback,
+      value: operations.regions[0],
+      text: operations.sla[2] || operations.sla[1] || operations.sla[0]
     }
   ]);
 
@@ -7205,6 +7286,29 @@ function updateServiceRoute() {
       adapter: file.operations.integrations[2] || file.operations.integrations[0],
       boundary: file.tabs.governance.items[0] || file.tabs.governance.text,
       assurance: file.operations.sla[2] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteContract(serviceRouteContract, routeLabels, [
+    {
+      label: routeLabels.endpoint,
+      value: `/arasaka/service/${file.slug}`,
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[0]}`
+    },
+    {
+      label: routeLabels.authorization,
+      value: file.clearance,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text
+    },
+    {
+      label: routeLabels.eventStream,
+      value: file.field.exposure,
+      text: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.fallback,
+      value: file.operations.regions[0],
+      text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 

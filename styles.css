@@ -4657,6 +4657,7 @@ a,
     "sla meta"
     "topology meta"
     "adapters meta"
+    "contract meta"
     "specsheet meta"
     "config meta"
     "decision meta"
@@ -6115,6 +6116,96 @@ a,
   color: var(--acid);
   font-size: 0.62rem;
   font-style: normal;
+}
+
+.product-route-contract {
+  grid-area: contract;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.18), rgba(182, 243, 91, 0.1), rgba(209, 177, 107, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-contract-head,
+.product-route-contract-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-contract-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-contract-head span,
+.product-route-contract-grid article > span,
+.product-route-contract-grid small {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-contract-head span,
+.product-route-contract-grid article > span {
+  color: var(--cyan);
+  font-size: 0.64rem;
+}
+
+.product-route-contract-head p,
+.product-route-contract-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-contract-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-contract-grid article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 166px;
+  padding: 15px;
+}
+
+.product-route-contract-grid article::before {
+  position: absolute;
+  inset: auto 14px 14px;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--cyan), transparent);
+  opacity: 0.78;
+}
+
+.product-route-contract-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-contract-grid strong {
+  color: var(--paper);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .product-route-specsheet {
@@ -13600,6 +13691,7 @@ a,
       "sla"
       "topology"
       "adapters"
+      "contract"
       "specsheet"
       "config"
       "decision"
@@ -13642,6 +13734,7 @@ a,
   .product-route-packet,
   .product-route-sla,
   .product-route-adapters,
+  .product-route-contract,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
@@ -13661,6 +13754,7 @@ a,
   .product-route-packet-foot,
   .product-route-sla-head,
   .product-route-adapters-head,
+  .product-route-contract-head,
   .product-route-config-head,
   .product-route-decision-head,
   .product-route-runbook-head,
@@ -13685,6 +13779,10 @@ a,
   }
 
   .product-route-adapters {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-contract {
     grid-template-columns: 1fr;
   }
 
@@ -13725,6 +13823,10 @@ a,
   }
 
   .product-route-adapters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-contract-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -14469,6 +14571,7 @@ a,
 
   .product-route-specsheet-grid,
   .product-route-adapters-grid,
+  .product-route-contract-grid,
   .product-route-config-grid,
   .product-route-decision-grid,
   .product-route-runbook-rail {
@@ -14766,6 +14869,7 @@ a,
   .product-route-sla,
   .product-route-topology,
   .product-route-adapters,
+  .product-route-contract,
   .product-route-specsheet,
   .product-route-config,
   .product-route-decision,
@@ -14791,6 +14895,7 @@ a,
 
   .product-route-topology-map article,
   .product-route-adapters-grid article,
+  .product-route-contract-grid article,
   .product-route-specsheet-grid article {
     min-height: 0;
   }
@@ -14816,6 +14921,10 @@ a,
   }
 
   .product-route-adapters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-contract-grid {
     grid-template-columns: 1fr;
   }
 
