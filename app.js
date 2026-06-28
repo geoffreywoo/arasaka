@@ -2431,6 +2431,13 @@ const translations = {
       prohibitedSurface: "Prohibited Surface",
       renewalWindow: "Renewal Window",
       licenseSeal: "Seal",
+      underwritingBond: "Underwriting Bond",
+      underwritingBondLead: "Risk-transfer memo defining liability ceiling, insured surface, claim trigger, and reserve channel before client acceptance.",
+      liabilityCeiling: "Liability Ceiling",
+      insuredSurface: "Insured Surface",
+      claimTrigger: "Claim Trigger",
+      reserveChannel: "Reserve Channel",
+      bondMarker: "Marker",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2642,6 +2649,13 @@ const translations = {
       prohibitedSurface: "Prohibited Surface",
       renewalWindow: "Renewal Window",
       licenseSeal: "Seal",
+      underwritingBond: "Underwriting Bond",
+      underwritingBondLead: "Risk-transfer memo defining liability ceiling, insured surface, claim trigger, and reserve channel before sponsor acceptance.",
+      liabilityCeiling: "Liability Ceiling",
+      insuredSurface: "Insured Surface",
+      claimTrigger: "Claim Trigger",
+      reserveChannel: "Reserve Channel",
+      bondMarker: "Marker",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4968,6 +4982,13 @@ const translations = {
       prohibitedSurface: "禁止領域",
       renewalWindow: "更新窓口",
       licenseSeal: "封印",
+      underwritingBond: "引受債券",
+      underwritingBondLead: "クライアント受領前に、責任上限、被保険領域、請求トリガー、準備金チャネルを定義するリスク移転メモ。",
+      liabilityCeiling: "責任上限",
+      insuredSurface: "被保険領域",
+      claimTrigger: "請求トリガー",
+      reserveChannel: "準備金チャネル",
+      bondMarker: "マーカー",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5179,6 +5200,13 @@ const translations = {
       prohibitedSurface: "禁止領域",
       renewalWindow: "更新窓口",
       licenseSeal: "封印",
+      underwritingBond: "引受債券",
+      underwritingBondLead: "スポンサー受領前に、責任上限、被保険領域、請求トリガー、準備金チャネルを定義するリスク移転メモ。",
+      liabilityCeiling: "責任上限",
+      insuredSurface: "被保険領域",
+      claimTrigger: "請求トリガー",
+      reserveChannel: "準備金チャネル",
+      bondMarker: "マーカー",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5446,6 +5474,7 @@ const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]"
 const routeForensicReceipt = document.querySelector("[data-route-forensic-receipt]");
 const routeBoardDocket = document.querySelector("[data-route-board-docket]");
 const routeExportLicense = document.querySelector("[data-route-export-license]");
+const routeUnderwritingBond = document.querySelector("[data-route-underwriting-bond]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5485,6 +5514,7 @@ const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team
 const serviceRouteForensicReceipt = document.querySelector("[data-service-forensic-receipt]");
 const serviceRouteBoardDocket = document.querySelector("[data-service-board-docket]");
 const serviceRouteExportLicense = document.querySelector("[data-service-export-license]");
+const serviceRouteUnderwritingBond = document.querySelector("[data-service-underwriting-bond]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7152,6 +7182,38 @@ function renderRouteExportLicense(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteUnderwritingBond(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-bond-head";
+  label.textContent = labels.underwritingBond;
+  lead.textContent = labels.underwritingBondLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-bond-grid";
+  rows.forEach(({ label: rowLabel, value, text, marker }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.bondMarker}: ${marker}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -7914,6 +7976,33 @@ function updateProductRoute() {
       value: operations.sla[2] || operations.sla[1] || operations.sla[0],
       text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
       seal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteUnderwritingBond(routeUnderwritingBond, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.liabilityCeiling,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${file.clearance} / ${file.tabs.governance.title}`,
+      marker: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.insuredSurface,
+      value: file.surface,
+      text: `${field.exposure} / ${field.doctrine}`,
+      marker: file.code
+    },
+    {
+      label: dictionary.productRoute.claimTrigger,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      marker: operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.reserveChannel,
+      value: operations.packages[0],
+      text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
+      marker: "G.W. / A-F"
     }
   ]);
 
@@ -8756,6 +8845,33 @@ function updateServiceRoute() {
       value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
       text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
       seal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteUnderwritingBond(serviceRouteUnderwritingBond, routeLabels, [
+    {
+      label: routeLabels.liabilityCeiling,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.clearance} / ${file.tabs.governance.title}`,
+      marker: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.insuredSurface,
+      value: file.surface,
+      text: `${file.field.exposure} / ${file.field.doctrine}`,
+      marker: file.code
+    },
+    {
+      label: routeLabels.claimTrigger,
+      value: file.tabs.deployment.title,
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      marker: file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.reserveChannel,
+      value: file.operations.packages[0],
+      text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
+      marker: "G.W. / A-F"
     }
   ]);
 
