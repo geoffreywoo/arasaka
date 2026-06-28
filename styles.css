@@ -2387,6 +2387,124 @@ a,
   color: var(--muted);
 }
 
+.services-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(116, 199, 216, 0.13), transparent 28%),
+    linear-gradient(180deg, #090b0e, #0d1115);
+}
+
+.services-section::before {
+  position: absolute;
+  inset: 26px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(225, 7, 20, 0.12);
+  clip-path: polygon(0 0, 88% 0, 100% 14%, 100% 100%, 12% 100%, 0 86%);
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.14), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: grid;
+  align-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent),
+    rgba(6, 8, 10, 0.92);
+}
+
+.service-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  content: "";
+  background: linear-gradient(180deg, var(--red), var(--cyan));
+  opacity: 0.72;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card > span {
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.service-card h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.18rem;
+  line-height: 1.08;
+}
+
+.service-card p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.88rem;
+}
+
+.service-card dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.service-card dl div {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.service-card dt {
+  color: var(--dim);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.service-card dd {
+  margin: 0;
+  color: var(--acid);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
 .product-section {
   position: relative;
   overflow: hidden;
@@ -8584,6 +8702,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .command-ribbon {
     gap: 1px;
   }
@@ -9759,8 +9881,13 @@ a,
   }
 
   .operations-theaters,
-  .operations-status dl {
+  .operations-status dl,
+  .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 0;
   }
 
   .operations-theaters {

@@ -5,6 +5,7 @@ const translations = {
     nav: {
       home: "Home",
       divisions: "Divisions",
+      services: "Services",
       products: "Products",
       foundry: "Foundry",
       systems: "Systems",
@@ -381,6 +382,38 @@ const translations = {
       intelligence: {
         title: "Netrunner Intelligence",
         text: "Black ICE, memetic risk analysis, executive memory defense, and hostile AI containment."
+      }
+    },
+    services: {
+      eyebrow: "Services",
+      title: "Deployment teams for sovereign cybernetic operations.",
+      text: "Arasaka services package operators, hardware, counterintelligence, and governance into accountable engagements with measurable response windows.",
+      aria: "Arasaka service offerings",
+      path: "Path",
+      window: "Window",
+      executive: {
+        title: "Executive Continuity Deployment",
+        text: "Board-level identity custody, succession simulation, and memory escrow for founders whose authority must survive disruption.",
+        path: "Relic / Mikoshi",
+        window: "72-hour seal"
+      },
+      counter: {
+        title: "Counterintrusion Theater",
+        text: "Netrunner cells, Black ICE quarantine, and human-witnessed burn authority for sovereign networks under active probe.",
+        path: "Black ICE Mesh",
+        window: "0.9ms trap"
+      },
+      capital: {
+        title: "Black Ledger Mandate",
+        text: "Private settlement rails, patent gravity mapping, and founder custody structures for capital that must move without spectacle.",
+        path: "Black Ledger",
+        window: "T+0 dark rail"
+      },
+      protection: {
+        title: "Autonomous Protection Detail",
+        text: "Drone veils, extraction corridors, and city-grid response choreography for principals crossing hostile districts.",
+        path: "Defense Swarm",
+        window: "00:18 response"
       }
     },
     foundry: {
@@ -1608,6 +1641,7 @@ const translations = {
     nav: {
       home: "ホーム",
       divisions: "事業部門",
+      services: "サービス",
       products: "製品群",
       foundry: "鋳造所",
       systems: "システム",
@@ -1984,6 +2018,38 @@ const translations = {
       intelligence: {
         title: "ネットランナー情報部",
         text: "ブラックICE、ミームリスク分析、役員記憶防衛、敵対AI封じ込めを担います。"
+      }
+    },
+    services: {
+      eyebrow: "サービス",
+      title: "主権的サイバネティック作戦のための配備チーム。",
+      text: "荒坂サービスは、オペレーター、ハードウェア、対情報、統治を、測定可能な応答窓を持つ責任明確なエンゲージメントへ梱包します。",
+      aria: "荒坂サービス提供",
+      path: "経路",
+      window: "窓口",
+      executive: {
+        title: "役員継続配備",
+        text: "権限が破壊を生き延びる必要がある創業者向けの、取締役会レベルID保管、継承シミュレーション、記憶エスクロー。",
+        path: "レリック / 神輿",
+        window: "72時間封印"
+      },
+      counter: {
+        title: "対侵入作戦区",
+        text: "能動探査下の主権ネットワーク向けに、ネットランナーセル、ブラックICE隔離、人間証人付き焼却権限を提供します。",
+        path: "ブラックICEメッシュ",
+        window: "0.9ms 罠"
+      },
+      capital: {
+        title: "ブラック台帳委任",
+        text: "見世物にならずに移動すべき資本のための、私的決済レール、特許重力マッピング、創業者保管構造。",
+        path: "ブラック台帳",
+        window: "T+0 暗黒レール"
+      },
+      protection: {
+        title: "自律防護ディテール",
+        text: "敵対地区を横断するプリンシパル向けの、ドローンヴェール、脱出回廊、都市網応答の振付。",
+        path: "防衛スウォーム",
+        window: "00:18 応答"
       }
     },
     foundry: {
@@ -3312,6 +3378,7 @@ let activeSectionId = "top";
 const sectionLabelKeys = {
   top: "nav.home",
   divisions: "nav.divisions",
+  services: "nav.services",
   products: "nav.products",
   foundry: "nav.foundry",
   systems: "nav.systems",
