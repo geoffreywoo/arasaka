@@ -2324,6 +2324,12 @@ const translations = {
       authorization: "Authorization",
       eventStream: "Event Stream",
       fallback: "Fallback",
+      telemetryEnvelope: "Telemetry Envelope",
+      telemetryEnvelopeLead: "A monitored signal shell for health, drift, intrusion, and audit events once the interface contract is active.",
+      healthSignal: "Health Signal",
+      driftSignal: "Drift Signal",
+      intrusionSignal: "Intrusion Signal",
+      auditSignal: "Audit Signal",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2455,6 +2461,12 @@ const translations = {
       authorization: "Authorization",
       eventStream: "Event Stream",
       fallback: "Fallback",
+      telemetryEnvelope: "Telemetry Envelope",
+      telemetryEnvelopeLead: "A monitored signal shell for health, drift, intrusion, and audit events once the service contract is active.",
+      healthSignal: "Health Signal",
+      driftSignal: "Drift Signal",
+      intrusionSignal: "Intrusion Signal",
+      auditSignal: "Audit Signal",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4701,6 +4713,12 @@ const translations = {
       authorization: "認可",
       eventStream: "イベントストリーム",
       fallback: "フォールバック",
+      telemetryEnvelope: "テレメトリ範囲",
+      telemetryEnvelopeLead: "インターフェース契約が有効化された後に、ヘルス、ドリフト、侵入、監査イベントを監視する信号シェル。",
+      healthSignal: "ヘルス信号",
+      driftSignal: "ドリフト信号",
+      intrusionSignal: "侵入信号",
+      auditSignal: "監査信号",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -4832,6 +4850,12 @@ const translations = {
       authorization: "認可",
       eventStream: "イベントストリーム",
       fallback: "フォールバック",
+      telemetryEnvelope: "テレメトリ範囲",
+      telemetryEnvelopeLead: "サービス契約が有効化された後に、ヘルス、ドリフト、侵入、監査イベントを監視する信号シェル。",
+      healthSignal: "ヘルス信号",
+      driftSignal: "ドリフト信号",
+      intrusionSignal: "侵入信号",
+      auditSignal: "監査信号",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5111,6 +5135,7 @@ const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeAdapters = document.querySelector("[data-route-adapters]");
 const routeContract = document.querySelector("[data-route-contract]");
+const routeTelemetry = document.querySelector("[data-route-telemetry]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5139,6 +5164,7 @@ const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
 const serviceRouteContract = document.querySelector("[data-service-contract]");
+const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6261,6 +6287,40 @@ function renderRouteContract(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteTelemetry(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-telemetry-head";
+  label.textContent = labels.telemetryEnvelope;
+  lead.textContent = labels.telemetryEnvelopeLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-telemetry-grid";
+  rows.forEach(({ label: rowLabel, value, text, channel }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const seal = document.createElement("em");
+
+    code.textContent = `T-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    seal.textContent = channel;
+    article.append(code, eyebrow, title, copy, seal);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -6768,6 +6828,33 @@ function updateProductRoute() {
       label: dictionary.productRoute.fallback,
       value: operations.regions[0],
       text: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
+  renderRouteTelemetry(routeTelemetry, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.healthSignal,
+      value: operations.sla[0],
+      text: operations.integrations[0],
+      channel: file.latency
+    },
+    {
+      label: dictionary.productRoute.driftSignal,
+      value: field.doctrine,
+      text: operations.regions.join(" / "),
+      channel: operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.intrusionSignal,
+      value: field.exposure,
+      text: operations.integrations[1] || operations.integrations[0],
+      channel: file.surface
+    },
+    {
+      label: dictionary.productRoute.auditSignal,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      channel: operations.sla[2] || operations.sla[0]
     }
   ]);
 
@@ -7309,6 +7396,33 @@ function updateServiceRoute() {
       label: routeLabels.fallback,
       value: file.operations.regions[0],
       text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteTelemetry(serviceRouteTelemetry, routeLabels, [
+    {
+      label: routeLabels.healthSignal,
+      value: file.operations.sla[0],
+      text: file.operations.integrations[0],
+      channel: file.window
+    },
+    {
+      label: routeLabels.driftSignal,
+      value: file.field.doctrine,
+      text: file.operations.regions.join(" / "),
+      channel: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.intrusionSignal,
+      value: file.field.exposure,
+      text: file.operations.integrations[1] || file.operations.integrations[0],
+      channel: file.surface
+    },
+    {
+      label: routeLabels.auditSignal,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text,
+      channel: file.operations.sla[2] || file.operations.sla[0]
     }
   ]);
 

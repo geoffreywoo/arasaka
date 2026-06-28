@@ -4658,6 +4658,7 @@ a,
     "topology meta"
     "adapters meta"
     "contract meta"
+    "telemetry meta"
     "specsheet meta"
     "config meta"
     "decision meta"
@@ -4825,6 +4826,8 @@ a,
 .product-route-sla-grid article,
 .product-route-topology-head,
 .product-route-topology-map article,
+.product-route-telemetry-head,
+.product-route-telemetry-grid article,
 .product-route-specsheet-head,
 .product-route-specsheet figure,
 .product-route-specsheet-grid article,
@@ -6205,6 +6208,106 @@ a,
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.82rem;
   line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.product-route-telemetry {
+  grid-area: telemetry;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.17), rgba(116, 199, 216, 0.12), rgba(182, 243, 91, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-telemetry-head,
+.product-route-telemetry-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-telemetry-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-telemetry-head span,
+.product-route-telemetry-grid article > span,
+.product-route-telemetry-grid small,
+.product-route-telemetry-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-telemetry-head span,
+.product-route-telemetry-grid article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-telemetry-head p,
+.product-route-telemetry-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-telemetry-grid article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 166px;
+  padding: 15px;
+}
+
+.product-route-telemetry-grid article::before {
+  position: absolute;
+  inset: auto 14px 14px;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--red), var(--cyan), transparent);
+  opacity: 0.78;
+}
+
+.product-route-telemetry-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-telemetry-grid strong {
+  color: var(--paper);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.product-route-telemetry-grid em {
+  align-self: end;
+  color: var(--acid);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -13692,6 +13795,7 @@ a,
       "topology"
       "adapters"
       "contract"
+      "telemetry"
       "specsheet"
       "config"
       "decision"
@@ -13735,6 +13839,7 @@ a,
   .product-route-sla,
   .product-route-adapters,
   .product-route-contract,
+  .product-route-telemetry,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
@@ -13755,6 +13860,7 @@ a,
   .product-route-sla-head,
   .product-route-adapters-head,
   .product-route-contract-head,
+  .product-route-telemetry-head,
   .product-route-config-head,
   .product-route-decision-head,
   .product-route-runbook-head,
@@ -13783,6 +13889,10 @@ a,
   }
 
   .product-route-contract {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-telemetry {
     grid-template-columns: 1fr;
   }
 
@@ -13827,6 +13937,10 @@ a,
   }
 
   .product-route-contract-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-telemetry-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -14572,6 +14686,7 @@ a,
   .product-route-specsheet-grid,
   .product-route-adapters-grid,
   .product-route-contract-grid,
+  .product-route-telemetry-grid,
   .product-route-config-grid,
   .product-route-decision-grid,
   .product-route-runbook-rail {
@@ -14591,6 +14706,7 @@ a,
   .product-route-sla-grid article,
   .product-route-topology-map article,
   .product-route-specsheet-grid article,
+  .product-route-telemetry-grid article,
   .product-route-runbook-rail article {
     min-height: 0;
   }
@@ -14870,6 +14986,7 @@ a,
   .product-route-topology,
   .product-route-adapters,
   .product-route-contract,
+  .product-route-telemetry,
   .product-route-specsheet,
   .product-route-config,
   .product-route-decision,
@@ -14896,6 +15013,7 @@ a,
   .product-route-topology-map article,
   .product-route-adapters-grid article,
   .product-route-contract-grid article,
+  .product-route-telemetry-grid article,
   .product-route-specsheet-grid article {
     min-height: 0;
   }
@@ -14925,6 +15043,10 @@ a,
   }
 
   .product-route-contract-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-telemetry-grid {
     grid-template-columns: 1fr;
   }
 
