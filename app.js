@@ -2438,6 +2438,13 @@ const translations = {
       claimTrigger: "Claim Trigger",
       reserveChannel: "Reserve Channel",
       bondMarker: "Marker",
+      settlementEscrow: "Settlement Escrow",
+      settlementEscrowLead: "Finance-side closeout ledger for fee rail, reserve account, release condition, and off-network counterparty after acceptance.",
+      feeRail: "Fee Rail",
+      reserveAccount: "Reserve Account",
+      releaseCondition: "Release Condition",
+      counterpartyNode: "Counterparty Node",
+      escrowStamp: "Stamp",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2656,6 +2663,13 @@ const translations = {
       claimTrigger: "Claim Trigger",
       reserveChannel: "Reserve Channel",
       bondMarker: "Marker",
+      settlementEscrow: "Settlement Escrow",
+      settlementEscrowLead: "Finance-side closeout ledger for fee rail, reserve account, release condition, and off-network counterparty after sponsor acceptance.",
+      feeRail: "Fee Rail",
+      reserveAccount: "Reserve Account",
+      releaseCondition: "Release Condition",
+      counterpartyNode: "Counterparty Node",
+      escrowStamp: "Stamp",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -4989,6 +5003,13 @@ const translations = {
       claimTrigger: "請求トリガー",
       reserveChannel: "準備金チャネル",
       bondMarker: "マーカー",
+      settlementEscrow: "決済エスクロー",
+      settlementEscrowLead: "クライアント受領後の手数料レール、準備金口座、解除条件、オフネットワーク相手先を示す財務側クローズアウト台帳。",
+      feeRail: "手数料レール",
+      reserveAccount: "準備金口座",
+      releaseCondition: "解除条件",
+      counterpartyNode: "相手先ノード",
+      escrowStamp: "スタンプ",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5207,6 +5228,13 @@ const translations = {
       claimTrigger: "請求トリガー",
       reserveChannel: "準備金チャネル",
       bondMarker: "マーカー",
+      settlementEscrow: "決済エスクロー",
+      settlementEscrowLead: "スポンサー受領後の手数料レール、準備金口座、解除条件、オフネットワーク相手先を示す財務側クローズアウト台帳。",
+      feeRail: "手数料レール",
+      reserveAccount: "準備金口座",
+      releaseCondition: "解除条件",
+      counterpartyNode: "相手先ノード",
+      escrowStamp: "スタンプ",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5475,6 +5503,7 @@ const routeForensicReceipt = document.querySelector("[data-route-forensic-receip
 const routeBoardDocket = document.querySelector("[data-route-board-docket]");
 const routeExportLicense = document.querySelector("[data-route-export-license]");
 const routeUnderwritingBond = document.querySelector("[data-route-underwriting-bond]");
+const routeSettlementEscrow = document.querySelector("[data-route-settlement-escrow]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5515,6 +5544,7 @@ const serviceRouteForensicReceipt = document.querySelector("[data-service-forens
 const serviceRouteBoardDocket = document.querySelector("[data-service-board-docket]");
 const serviceRouteExportLicense = document.querySelector("[data-service-export-license]");
 const serviceRouteUnderwritingBond = document.querySelector("[data-service-underwriting-bond]");
+const serviceRouteSettlementEscrow = document.querySelector("[data-service-settlement-escrow]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7214,6 +7244,38 @@ function renderRouteUnderwritingBond(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteSettlementEscrow(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-escrow-head";
+  label.textContent = labels.settlementEscrow;
+  lead.textContent = labels.settlementEscrowLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-escrow-grid";
+  rows.forEach(({ label: rowLabel, value, text, stamp }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.escrowStamp}: ${stamp}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -8003,6 +8065,33 @@ function updateProductRoute() {
       value: operations.packages[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
       marker: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteSettlementEscrow(routeSettlementEscrow, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.feeRail,
+      value: operations.packages[0],
+      text: `${file.code} / ${file.tabs.deployment.title}`,
+      stamp: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.reserveAccount,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      stamp: file.clearance
+    },
+    {
+      label: dictionary.productRoute.releaseCondition,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${field.incident} / ${field.exposure}`,
+      stamp: operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.counterpartyNode,
+      value: dictionary.productRoute.capitalObserver,
+      text: `${operations.regions.join(" / ")} / ${operations.packages[0]}`,
+      stamp: "G.W. / A-F"
     }
   ]);
 
@@ -8872,6 +8961,33 @@ function updateServiceRoute() {
       value: file.operations.packages[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
       marker: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteSettlementEscrow(serviceRouteSettlementEscrow, routeLabels, [
+    {
+      label: routeLabels.feeRail,
+      value: file.operations.packages[0],
+      text: `${file.code} / ${file.tabs.deployment.title}`,
+      stamp: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.reserveAccount,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      stamp: file.clearance
+    },
+    {
+      label: routeLabels.releaseCondition,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.field.incident} / ${file.field.exposure}`,
+      stamp: file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.counterpartyNode,
+      value: routeLabels.capitalObserver,
+      text: `${file.operations.regions.join(" / ")} / ${file.operations.packages[0]}`,
+      stamp: "G.W. / A-F"
     }
   ]);
 
