@@ -372,6 +372,13 @@ const translations = {
       evidenceText: "Each plate is a visual proof artifact: a product photo, a mandate route, and a credited source trail bundled into one dossier entry.",
       evidenceOpen: "Open dossier",
       evidenceCredit: "Generated catalog plate",
+      researchAria: "Black research archive",
+      researchEyebrow: "Black Research Archive",
+      researchTitle: "Night City anomalies are filed as future product surfaces.",
+      researchText: "A cold archive of R&D threads that turn public incidents into neural custody, Blackwall containment, capital stealth, and autonomous protection programs.",
+      researchSignal: "Signal",
+      researchRoute: "Route",
+      researchOpen: "Open archive",
       evidence: {
         relic: {
           title: "Relic breach kit",
@@ -388,6 +395,23 @@ const translations = {
         protection: {
           title: "Autonomous protection route",
           text: "City movement turns into drone veil geometry and response choreography."
+        }
+      },
+      research: {
+        construct: {
+          title: "Construct witness chamber",
+          text: "Personality drift, memory partitioning, and succession pressure are modeled before a stored mind is permitted to advise the living board.",
+          signal: "Engram fork variance"
+        },
+        redaction: {
+          title: "Soulkiller redaction chain",
+          text: "Neural extraction is treated as an evidence-minimized incident with witness custody, trace cooling, and post-operation silence clocks.",
+          signal: "Identity severance"
+        },
+        blackwall: {
+          title: "Blackwall edge quarantine",
+          text: "Rogue-machine pressure is mapped as jurisdiction: trap routing, burn authority, and human override paths locked before contact.",
+          signal: "Rogue AI adjacency"
         }
       }
     },
@@ -2486,6 +2510,13 @@ const translations = {
       evidenceText: "各プレートは、製品写真、委任経路、クレジット済みソーストレイルをひとつのドシエ項目に束ねた視覚証明です。",
       evidenceOpen: "ドシエを開く",
       evidenceCredit: "生成カタログプレート",
+      researchAria: "ブラック研究アーカイブ",
+      researchEyebrow: "ブラック研究アーカイブ",
+      researchTitle: "ナイトシティの異常は、未来の製品面として記録されます。",
+      researchText: "公開事案を神経保管、ブラックウォール封じ込め、資本ステルス、自律防護プログラムへ変換する研究開発スレッドの冷却アーカイブ。",
+      researchSignal: "信号",
+      researchRoute: "経路",
+      researchOpen: "アーカイブを開く",
       evidence: {
         relic: {
           title: "レリック侵害キット",
@@ -2502,6 +2533,23 @@ const translations = {
         protection: {
           title: "自律防護経路",
           text: "都市移動は、ドローンヴェール形状と応答振付へ変換されます。"
+        }
+      },
+      research: {
+        construct: {
+          title: "コンストラクト証人室",
+          text: "保存された精神が生きている取締役会へ助言を許可される前に、人格ドリフト、記憶分割、継承圧力がモデル化されます。",
+          signal: "エングラム分岐変動"
+        },
+        redaction: {
+          title: "ソウルキラー秘匿チェーン",
+          text: "神経抽出は、証人保管、痕跡冷却、作戦後の沈黙時計を備えた証拠最小化事案として扱われます。",
+          signal: "身元切断"
+        },
+        blackwall: {
+          title: "ブラックウォール端部隔離",
+          text: "ローグマシン圧力は管轄としてマッピングされ、接触前に罠経路、焼却権限、人間オーバーライド経路がロックされます。",
+          signal: "ローグAI隣接"
         }
       }
     },
