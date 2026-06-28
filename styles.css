@@ -1,6 +1,7 @@
 :root {
   color-scheme: dark;
   --ink: #f3f4f2;
+  --paper: #f3f4f2;
   --muted: #a9aca8;
   --dim: #6e746f;
   --black: #050507;
@@ -2941,6 +2942,7 @@ a,
     "hero meta"
     "field meta"
     "proof meta"
+    "brief meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -3090,6 +3092,8 @@ a,
 
 .product-route-meta div,
 .product-route-proof,
+.product-route-brief-heading,
+.product-route-brief article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -3107,6 +3111,7 @@ a,
 
 .product-route-meta span,
 .product-route-proof > span,
+.product-route-brief-heading > span,
 .product-route-switcher > span,
 .product-route-related > span {
   color: var(--dim);
@@ -3278,6 +3283,96 @@ a,
   max-width: 760px;
   margin: 0;
   color: rgba(243, 244, 242, 0.72);
+}
+
+.product-route-brief {
+  grid-area: brief;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.16);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.16), rgba(225, 7, 20, 0.12), rgba(116, 199, 216, 0.12)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-brief-heading,
+.product-route-brief article {
+  min-width: 0;
+  padding: 16px;
+}
+
+.product-route-brief-heading {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-brief-heading > span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-brief-heading p,
+.product-route-brief p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+}
+
+.product-route-brief-heading p {
+  font-size: 0.88rem;
+}
+
+.product-route-brief article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 190px;
+}
+
+.product-route-brief h2 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.05rem;
+  line-height: 1.08;
+}
+
+.product-route-brief p {
+  font-size: 0.82rem;
+  line-height: 1.38;
+}
+
+.product-route-brief ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-route-brief li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.32;
+}
+
+.product-route-brief li::before {
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border: 1px solid rgba(182, 243, 91, 0.72);
+  background: rgba(182, 243, 91, 0.16);
 }
 
 .product-route-switcher {
@@ -9234,6 +9329,7 @@ a,
       "field"
       "meta"
       "proof"
+      "brief"
       "switcher"
       "ops"
       "panels"
@@ -9256,9 +9352,14 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-brief,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-brief-heading {
+    grid-column: 1 / -1;
   }
 
   .product-route-switcher div {
@@ -9829,6 +9930,14 @@ a,
     grid-auto-columns: minmax(172px, 72vw);
   }
 
+  .product-route-brief {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-brief article {
+    min-height: 0;
+  }
+
   .dossier-relay {
     grid-template-columns: 1fr;
   }
@@ -10017,6 +10126,7 @@ a,
   }
 
   .product-route-meta,
+  .product-route-brief,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;

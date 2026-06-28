@@ -1659,6 +1659,12 @@ const translations = {
       proof: "Deployment Proof",
       proofText: "This standalone system page is rendered from the same bilingual product registry as the public dossier overlay.",
       registry: "Product Registry",
+      brief: "Command Brief",
+      briefLead: "Route this system through a real operating mandate: objective, activation, control surface, and assurance.",
+      objective: "Objective",
+      activation: "Activation",
+      control: "Control Surface",
+      assurance: "Assurance",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -1686,6 +1692,12 @@ const translations = {
       proof: "Deployment Proof",
       proofText: "This standalone service page is rendered from the same bilingual service registry as the public service grid.",
       open: "Open service node",
+      brief: "Mandate Brief",
+      briefLead: "Each engagement is framed like a sealed corporate mandate: objective, activation, control surface, and assurance.",
+      objective: "Objective",
+      activation: "Activation",
+      control: "Control Surface",
+      assurance: "Assurance",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -3240,6 +3252,12 @@ const translations = {
       proof: "配備証明",
       proofText: "この独立システムページは、公開ドシエ・オーバーレイと同じ二言語製品レジストリから描画されています。",
       registry: "製品レジストリ",
+      brief: "指揮ブリーフ",
+      briefLead: "このシステムを、目的、起動、制御面、保証を持つ実運用委任として経路化します。",
+      objective: "目的",
+      activation: "起動",
+      control: "制御面",
+      assurance: "保証",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -3267,6 +3285,12 @@ const translations = {
       proof: "配備証明",
       proofText: "この独立サービスページは、公開サービスグリッドと同じ二言語サービスレジストリから描画されています。",
       open: "サービスノードを開く",
+      brief: "委任ブリーフ",
+      briefLead: "各エンゲージメントは、目的、起動、制御面、保証を持つ封印済み企業委任として設計されます。",
+      objective: "目的",
+      activation: "起動",
+      control: "制御面",
+      assurance: "保証",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -3465,6 +3489,7 @@ const routeLatency = document.querySelector("[data-route-latency]");
 const routeSurface = document.querySelector("[data-route-surface]");
 const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
+const routeBrief = document.querySelector("[data-route-brief]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -3477,6 +3502,7 @@ const serviceRouteWindow = document.querySelector("[data-service-window]");
 const serviceRouteSurface = document.querySelector("[data-service-surface]");
 const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
+const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -4146,6 +4172,39 @@ function initProductPages() {
   openProductFromHash();
 }
 
+function renderRouteBrief(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+
+  heading.className = "product-route-brief-heading";
+  label.textContent = labels.brief;
+  lead.textContent = labels.briefLead;
+  heading.append(label, lead);
+  target.replaceChildren(heading);
+
+  rows.forEach(({ label: rowLabel, text, items = [] }) => {
+    const article = document.createElement("article");
+    const title = document.createElement("h2");
+    const copy = document.createElement("p");
+    const list = document.createElement("ul");
+
+    title.textContent = rowLabel;
+    copy.textContent = text;
+
+    items.slice(0, 3).forEach((item) => {
+      const row = document.createElement("li");
+      row.textContent = item;
+      list.append(row);
+    });
+
+    article.append(title, copy, list);
+    target.append(article);
+  });
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -4153,6 +4212,7 @@ function updateProductRoute() {
   const dictionary = translations[language] || translations.en;
   const file = dictionary.productPage.files[productKey] || dictionary.productPage.files.relic;
   const tabOrder = ["overview", "modules", "specs", "deployment", "governance"];
+  const operations = (productOperations[language] || productOperations.en)[productKey] || productOperations.en.relic;
 
   document.title = `${file.title} | Arasaka Corporation`;
   if (routeKicker) routeKicker.textContent = file.kicker;
@@ -4238,8 +4298,30 @@ function updateProductRoute() {
     routeSwitcher.append(rail);
   }
 
+  renderRouteBrief(routeBrief, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.objective,
+      text: file.tabs.overview.text,
+      items: file.tabs.overview.items
+    },
+    {
+      label: dictionary.productRoute.activation,
+      text: file.tabs.deployment.text,
+      items: file.tabs.deployment.items
+    },
+    {
+      label: dictionary.productRoute.control,
+      text: `${file.surface} / ${operations.integrations.join(" / ")}`,
+      items: operations.packages
+    },
+    {
+      label: dictionary.productRoute.assurance,
+      text: file.tabs.governance.text,
+      items: operations.sla
+    }
+  ]);
+
   if (routeOps) {
-    const operations = (productOperations[language] || productOperations.en)[productKey] || productOperations.en.relic;
     const operationGroups = [
       ["packages", dictionary.productRoute.packages],
       ["integrations", dictionary.productRoute.integrations],
@@ -4409,6 +4491,29 @@ function updateServiceRoute() {
 
     serviceRouteSwitcher.append(rail);
   }
+
+  renderRouteBrief(serviceRouteBrief, routeLabels, [
+    {
+      label: routeLabels.objective,
+      text: file.tabs.overview.text,
+      items: file.tabs.overview.items
+    },
+    {
+      label: routeLabels.activation,
+      text: file.tabs.deployment.text,
+      items: file.tabs.deployment.items
+    },
+    {
+      label: routeLabels.control,
+      text: `${file.surface} / ${file.operations.integrations.join(" / ")}`,
+      items: file.operations.packages
+    },
+    {
+      label: routeLabels.assurance,
+      text: file.tabs.governance.text,
+      items: file.operations.sla
+    }
+  ]);
 
   if (serviceRouteOps) {
     const operationGroups = [
