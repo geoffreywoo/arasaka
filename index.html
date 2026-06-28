@@ -2321,6 +2321,71 @@
         </div>
       </section>
 
+      <section class="section simulation-section" id="simulation">
+        <div class="simulation-copy">
+          <p class="eyebrow" data-i18n="simulation.eyebrow">Threat Simulation Lab</p>
+          <h2 data-i18n="simulation.title">Run the incident before the incident runs the board.</h2>
+          <p data-i18n="simulation.text">
+            A public-safe simulator for mapping threat pressure into Arasaka response paths: continuity, counterintrusion, capital stealth, and autonomous protection.
+          </p>
+        </div>
+
+        <div class="simulation-console" aria-label="Threat simulation lab" data-i18n-aria-label="simulation.aria">
+          <div class="simulation-controls" role="group" aria-label="Threat scenario" data-i18n-aria-label="simulation.scenarioAria">
+            <button class="simulation-scenario is-active" type="button" data-sim-scenario="plaza" aria-pressed="true">
+              <span>01</span>
+              <strong data-i18n="simulation.scenario.plaza">Plaza Breach</strong>
+            </button>
+            <button class="simulation-scenario" type="button" data-sim-scenario="blackwall" aria-pressed="false">
+              <span>02</span>
+              <strong data-i18n="simulation.scenario.blackwall">Blackwall Contact</strong>
+            </button>
+            <button class="simulation-scenario" type="button" data-sim-scenario="capital" aria-pressed="false">
+              <span>03</span>
+              <strong data-i18n="simulation.scenario.capital">Founder Capital Run</strong>
+            </button>
+            <button class="simulation-scenario" type="button" data-sim-scenario="transit" aria-pressed="false">
+              <span>04</span>
+              <strong data-i18n="simulation.scenario.transit">Hostile Transit</strong>
+            </button>
+          </div>
+
+          <div class="simulation-readout">
+            <div class="simulation-seal" aria-hidden="true">
+              <img src="assets/arasaka-mark-white.png" alt="" />
+              <strong data-sim-code>PX-INT</strong>
+            </div>
+            <div class="simulation-brief">
+              <span data-i18n="simulation.active">Active Scenario Model</span>
+              <h3 data-sim-title>Executive Identity Breach</h3>
+              <p data-sim-text>Board principal biometrics and public identity proofs are compromised inside a high-visibility plaza environment.</p>
+              <a class="simulation-link" href="products/relic/" data-sim-link>
+                <span data-i18n="simulation.open">Open routed dossier</span>
+              </a>
+            </div>
+          </div>
+
+          <dl class="simulation-metrics" aria-label="Simulation metrics" data-i18n-aria-label="simulation.metricsAria">
+            <div>
+              <dt data-i18n="simulation.response">Response</dt>
+              <dd data-sim-response>Relic + Executive Continuity</dd>
+            </div>
+            <div>
+              <dt data-i18n="simulation.window">Containment</dt>
+              <dd data-sim-window>72H</dd>
+            </div>
+            <div>
+              <dt data-i18n="simulation.risk">Risk</dt>
+              <dd data-sim-risk>0.91</dd>
+            </div>
+            <div>
+              <dt data-i18n="simulation.proof">Proof</dt>
+              <dd data-sim-proof>Archive integrity</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section class="section doctrine-section" aria-label="Classified doctrine">
         <div class="doctrine-header">
           <p class="eyebrow" data-i18n="doctrine.eyebrow">Classified Doctrine</p>

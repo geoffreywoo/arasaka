@@ -10641,6 +10641,249 @@ a,
   transition: width 220ms ease;
 }
 
+.simulation-section {
+  position: relative;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.36fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.16), transparent 34%, rgba(116, 199, 216, 0.09)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.026) 0 1px, transparent 1px 74px),
+    #050607;
+}
+
+.simulation-section::before {
+  position: absolute;
+  inset: 26px 28px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 2px solid rgba(225, 7, 20, 0.76);
+}
+
+.simulation-section::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 78% 26%, rgba(182, 243, 91, 0.12), transparent 30%),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.28));
+}
+
+.simulation-copy,
+.simulation-console {
+  position: relative;
+  z-index: 1;
+}
+
+.simulation-copy {
+  display: grid;
+  align-content: center;
+}
+
+.simulation-copy h2 {
+  font-size: 2.7rem;
+}
+
+.simulation-copy p {
+  color: var(--muted);
+}
+
+.simulation-console {
+  display: grid;
+  grid-template-rows: auto minmax(240px, 1fr) auto;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.014)),
+    rgba(8, 10, 13, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.simulation-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.simulation-scenario {
+  min-height: 68px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 12px;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+
+.simulation-scenario:last-child {
+  border-right: 0;
+}
+
+.simulation-scenario span {
+  color: rgba(225, 7, 20, 0.82);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+}
+
+.simulation-scenario strong {
+  color: inherit;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.simulation-scenario:hover,
+.simulation-scenario:focus-visible,
+.simulation-scenario.is-active {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.3), rgba(116, 199, 216, 0.09)),
+    rgba(225, 7, 20, 0.12);
+}
+
+.simulation-readout {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+}
+
+.simulation-seal {
+  position: relative;
+  display: grid;
+  width: min(168px, 100%);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: center;
+  border: 1px solid rgba(225, 7, 20, 0.34);
+  background:
+    radial-gradient(circle, rgba(225, 7, 20, 0.12), transparent 52%),
+    rgba(0, 0, 0, 0.38);
+}
+
+.simulation-seal::before,
+.simulation-seal::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(116, 199, 216, 0.26);
+}
+
+.simulation-seal::before {
+  inset: 16px;
+}
+
+.simulation-seal::after {
+  inset: 34px;
+  border-color: rgba(182, 243, 91, 0.22);
+}
+
+.simulation-seal img {
+  width: 58%;
+  max-width: 96px;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 24px rgba(225, 7, 20, 0.28));
+}
+
+.simulation-seal strong {
+  position: absolute;
+  bottom: 14px;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.simulation-brief {
+  display: grid;
+  gap: 12px;
+}
+
+.simulation-brief > span {
+  color: var(--dim);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.simulation-brief h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.04;
+}
+
+.simulation-brief p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.simulation-link {
+  width: fit-content;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(225, 7, 20, 0.42);
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: rgba(225, 7, 20, 0.11);
+}
+
+.simulation-link:hover,
+.simulation-link:focus-visible {
+  border-color: rgba(182, 243, 91, 0.64);
+  color: var(--acid);
+}
+
+.simulation-metrics {
+  display: grid;
+  grid-template-columns: 1.25fr 0.8fr 0.7fr 1fr;
+  gap: 1px;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.simulation-metrics div {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  min-height: 88px;
+  padding: 16px;
+  background: rgba(5, 5, 7, 0.84);
+}
+
+.simulation-metrics dt {
+  color: var(--dim);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.simulation-metrics dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
 .doctrine-section {
   position: relative;
   width: min(1180px, 100%);
@@ -11796,6 +12039,7 @@ a,
   .topology-section,
   .blackwall-section,
   .matrix-section,
+  .simulation-section,
   .doctrine-section,
   .dossier-section,
   .command-ribbon,
@@ -12508,6 +12752,7 @@ a,
   .topology-copy h2,
   .blackwall-copy h2,
   .matrix-copy h2,
+  .simulation-copy h2,
   .dossier-copy h2,
   .doctrine-header h2 {
     font-size: 2.35rem;
@@ -12526,6 +12771,7 @@ a,
   .mikoshi-readout,
   .soulkiller-readout,
   .blackwall-readout,
+  .simulation-readout,
   .systems-console,
   .archive-console,
   .dossier-grid,
@@ -13098,6 +13344,7 @@ a,
   .topology-copy h2,
   .blackwall-copy h2,
   .matrix-copy h2,
+  .simulation-copy h2,
   .dossier-copy h2,
   .doctrine-header h2 {
     font-size: 2rem;
@@ -13572,6 +13819,48 @@ a,
 
   .matrix-readout h3 {
     font-size: 1.45rem;
+  }
+
+  .simulation-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .simulation-scenario {
+    min-height: 72px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .simulation-scenario:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .simulation-scenario:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .simulation-readout {
+    padding: 18px;
+  }
+
+  .simulation-seal {
+    width: min(144px, 72vw);
+  }
+
+  .simulation-brief h3 {
+    font-size: 1.5rem;
+  }
+
+  .simulation-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .simulation-metrics div {
+    min-height: 72px;
+  }
+
+  .simulation-link {
+    width: 100%;
+    justify-content: center;
   }
 
   .dossier-id {

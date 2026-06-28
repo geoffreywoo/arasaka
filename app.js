@@ -1372,6 +1372,68 @@ const translations = {
         }
       }
     },
+    simulation: {
+      aria: "Threat simulation lab",
+      eyebrow: "Threat Simulation Lab",
+      title: "Run the incident before the incident runs the board.",
+      text: "A public-safe simulator for mapping threat pressure into Arasaka response paths: continuity, counterintrusion, capital stealth, and autonomous protection.",
+      scenarioAria: "Threat scenario",
+      metricsAria: "Simulation metrics",
+      active: "Active Scenario Model",
+      open: "Open routed dossier",
+      response: "Response",
+      window: "Containment",
+      risk: "Risk",
+      proof: "Proof",
+      scenario: {
+        plaza: "Plaza Breach",
+        blackwall: "Blackwall Contact",
+        capital: "Founder Capital Run",
+        transit: "Hostile Transit"
+      },
+      detail: {
+        plaza: {
+          code: "PX-INT",
+          title: "Executive Identity Breach",
+          text: "Board principal biometrics and public identity proofs are compromised inside a high-visibility plaza environment.",
+          response: "Relic + Executive Continuity",
+          window: "72H",
+          risk: "0.91",
+          proof: "Archive integrity",
+          href: "products/relic/"
+        },
+        blackwall: {
+          code: "BW-PROBE",
+          title: "Rogue-Machine Probe",
+          text: "An unknown machine intelligence tests a perimeter route through netrunner traffic, implant telemetry, and market rumor.",
+          response: "Black ICE + Counterintrusion",
+          window: "0.9ms",
+          risk: "UNKNOWN",
+          proof: "Trace vault",
+          href: "services/counterintrusion/"
+        },
+        capital: {
+          code: "BL-FOUNDER",
+          title: "Off-Market Leverage Event",
+          text: "Founder-linked voting keys, patent collateral, and exchange exposure begin moving through a hostile rumor window.",
+          response: "Black Ledger Mandate",
+          window: "T+0",
+          risk: "0.44",
+          proof: "Mandate hash",
+          href: "services/black-ledger-mandate/"
+        },
+        transit: {
+          code: "SW-ESCORT",
+          title: "Principal Movement Exposure",
+          text: "A protected client crosses contested city terrain while drone signatures, street optics, and access locks converge.",
+          response: "Swarm + Autonomous Protection",
+          window: "00:18",
+          risk: "0.68",
+          proof: "Force audit",
+          href: "services/autonomous-protection/"
+        }
+      }
+    },
     doctrine: {
       eyebrow: "Classified Doctrine",
       title: "Order is not found. It is manufactured.",
@@ -3595,6 +3657,68 @@ const translations = {
         }
       }
     },
+    simulation: {
+      aria: "脅威シミュレーションラボ",
+      eyebrow: "脅威シミュレーションラボ",
+      title: "インシデントが取締役会を動かす前に、先に実行する。",
+      text: "継続性、対侵入、資本ステルス、自律防護へ脅威圧を写像する、公開安全版の荒坂応答シミュレーター。",
+      scenarioAria: "脅威シナリオ",
+      metricsAria: "シミュレーション指標",
+      active: "稼働シナリオモデル",
+      open: "経路化ドシエを開く",
+      response: "応答",
+      window: "封じ込め",
+      risk: "リスク",
+      proof: "証明",
+      scenario: {
+        plaza: "プラザ侵害",
+        blackwall: "ブラックウォール接触",
+        capital: "創業者資本ラン",
+        transit: "敵対移動"
+      },
+      detail: {
+        plaza: {
+          code: "PX-INT",
+          title: "役員ID侵害",
+          text: "高視認性のプラザ環境内で、取締役会級プリンシパルの生体情報と公開ID証明が侵害されます。",
+          response: "レリック + 役員継続性",
+          window: "72時間",
+          risk: "0.91",
+          proof: "アーカイブ完全性",
+          href: "products/relic/"
+        },
+        blackwall: {
+          code: "BW-PROBE",
+          title: "Rogue Machine 探査",
+          text: "未知の機械知性が、ネットランナー交通、インプラント遠隔測定、市場の噂を通じて境界経路を試験します。",
+          response: "ブラックICE + 対侵入",
+          window: "0.9ミリ秒",
+          risk: "不明",
+          proof: "追跡保管庫",
+          href: "services/counterintrusion/"
+        },
+        capital: {
+          code: "BL-FOUNDER",
+          title: "非公開レバレッジ事象",
+          text: "創業者連動の議決キー、特許担保、取引所露出が、敵対的な噂ウィンドウを通じて移動を開始します。",
+          response: "ブラック台帳マンデート",
+          window: "T+0",
+          risk: "0.44",
+          proof: "マンデートハッシュ",
+          href: "services/black-ledger-mandate/"
+        },
+        transit: {
+          code: "SW-ESCORT",
+          title: "プリンシパル移動露出",
+          text: "保護対象の顧客が、ドローン署名、街頭光学、アクセスロックが収束する係争都市地形を横断します。",
+          response: "スウォーム + 自律防護",
+          window: "00:18",
+          risk: "0.68",
+          proof: "実力監査",
+          href: "services/autonomous-protection/"
+        }
+      }
+    },
     doctrine: {
       eyebrow: "機密ドクトリン",
       title: "秩序は発見されるものではありません。製造されるものです。",
@@ -4446,6 +4570,15 @@ const matrixCode = document.querySelector("[data-matrix-code]");
 const matrixTitle = document.querySelector("[data-matrix-title]");
 const matrixText = document.querySelector("[data-matrix-text]");
 const matrixValues = document.querySelectorAll("[data-matrix-value]");
+const simulationButtons = document.querySelectorAll("[data-sim-scenario]");
+const simulationCode = document.querySelector("[data-sim-code]");
+const simulationTitle = document.querySelector("[data-sim-title]");
+const simulationText = document.querySelector("[data-sim-text]");
+const simulationResponse = document.querySelector("[data-sim-response]");
+const simulationWindow = document.querySelector("[data-sim-window]");
+const simulationRisk = document.querySelector("[data-sim-risk]");
+const simulationProof = document.querySelector("[data-sim-proof]");
+const simulationLink = document.querySelector("[data-sim-link]");
 const archiveButtons = document.querySelectorAll("[data-archive-record]");
 const archiveCode = document.querySelector("[data-archive-code]");
 const archiveTitle = document.querySelector("[data-archive-title]");
@@ -4583,6 +4716,7 @@ let activeTopologyLens = "assets";
 let activeBlackwallProtocol = "quarantine";
 let activeStackLayer = "body";
 let activeMatrixMode = "intrusion";
+let activeSimulationScenario = "plaza";
 let activeArchiveRecord = "relic";
 let activeMikoshiMode = "extract";
 let activeSoulkillerStage = "sever";
@@ -5116,6 +5250,7 @@ function setLanguage(language) {
   updateBlackwallProtocol(activeBlackwallProtocol);
   updateStackLayer(activeStackLayer);
   updateMatrix(activeMatrixMode);
+  updateSimulation(activeSimulationScenario);
   updateArchive(activeArchiveRecord);
   updateMikoshiMode(activeMikoshiMode);
   updateSoulkillerStage(activeSoulkillerStage);
@@ -6720,6 +6855,29 @@ function updateMatrix(mode) {
   });
 }
 
+function updateSimulation(scenarioKey) {
+  if (!simulationTitle) return;
+  const language = document.documentElement.dataset.language || "en";
+  const dictionary = translations[language] || translations.en;
+  const scenario = dictionary.simulation.detail[scenarioKey] || dictionary.simulation.detail.plaza;
+  activeSimulationScenario = scenarioKey;
+
+  simulationButtons.forEach((button) => {
+    const isActive = button.dataset.simScenario === scenarioKey;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (simulationCode) simulationCode.textContent = scenario.code;
+  simulationTitle.textContent = scenario.title;
+  if (simulationText) simulationText.textContent = scenario.text;
+  if (simulationResponse) simulationResponse.textContent = scenario.response;
+  if (simulationWindow) simulationWindow.textContent = scenario.window;
+  if (simulationRisk) simulationRisk.textContent = scenario.risk;
+  if (simulationProof) simulationProof.textContent = scenario.proof;
+  if (simulationLink) simulationLink.href = scenario.href;
+}
+
 function updateArchive(recordKey) {
   if (!archiveTitle) return;
   const language = document.documentElement.dataset.language || "en";
@@ -7269,6 +7427,12 @@ swarmModeButtons.forEach((button) => {
 matrixButtons.forEach((button) => {
   button.addEventListener("click", () => {
     updateMatrix(button.dataset.matrixMode);
+  });
+});
+
+simulationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    updateSimulation(button.dataset.simScenario);
   });
 });
 
