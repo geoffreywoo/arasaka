@@ -1,45 +1,48 @@
-# Arasaka Systems Concept
+# Arasaka
 
-An unofficial, open-source, bilingual corporate website concept for `arasaka.com`.
+An open-source, bilingual corporate website concept for `arasaka.com`.
 
-This is a Geoffrey Woo personal project: a design-fiction study of how a fictional cyberpunk megacorporation might present itself if it behaved like a real multi-trillion-dollar conglomerate with products, services, governance, procurement, security operations, and public accountability surfaces.
+This is a Geoffrey Woo personal project and design-fiction study. It imagines how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
 
-The project is not a fan wiki, lore recap, or marketing homage. It is built as a plausible institutional website: dense, mobile-first, bilingual, restrained, operational, and intentionally corporate.
-
-## Mission
-
-The mission of this site is to explore a single question:
-
-What would a sovereign-scale technology, security, capital, and continuity conglomerate publish if memory, identity, autonomous force, private defense, and institutional custody were real enterprise product lines?
-
-The site treats fictional cyberpunk themes as if they were serious corporate systems:
-
-- Neural continuity and identity custody as regulated infrastructure
-- Black ICE and counterintrusion as enterprise security products
-- Autonomous protection and robotic force as service lines
-- Capital custody and mandate control as board-governed systems
-- Incident archives as institutional evidence packets
-- Japanese and English localization as a first-class interface layer
-
-The intended effect is quiet plausibility. A visitor should feel like they have found the public website of a vast, opaque corporation, not a page explaining the joke.
+The site is intentionally not a fan wiki, lore recap, or homage page. It is designed to feel like the public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
 
 ## Live Site
 
 - Production: https://www.arasaka.com/
 - Repository: https://github.com/geoffreywoo/arasaka
+- License: MIT for original source code and documentation, with asset and IP scope notes
 
-## Project Goals
+## Mission
 
-- Build a mobile-optimized corporate website that feels authentic, operational, and premium.
-- Present fictional products and services with believable enterprise information architecture.
-- Support English and Japanese copy across the main experience.
+The mission of this project is to explore one question:
+
+What would a sovereign-scale technology, security, capital, and continuity conglomerate publish if cybernetic identity, neural persistence, autonomous defense, private intelligence, and institutional custody were real enterprise infrastructure?
+
+The website treats fictional cyberpunk themes as serious corporate systems:
+
+- Neural continuity as an executive succession and identity custody product
+- Black ICE and counterintrusion as enterprise-grade security infrastructure
+- Autonomous protection as a regional command and force-readiness service
+- Capital custody as a board-governed mandate, patent, and settlement rail
+- Incident archives as public evidence packets rather than lore summaries
+- Japanese and English localization as a real interface layer
+
+The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company, not a page explaining the reference.
+
+## Project Principles
+
+- Make every surface feel owned by a large, old, powerful institution.
+- Prefer operational specificity over generic cyberpunk style.
+- Treat fictional products like real procurement, compliance, and governance objects.
+- Keep the mobile experience dense, legible, and fast to scan.
+- Use Japanese localization as product infrastructure, not decorative texture.
 - Keep the Geoffrey Woo authorship signal subtle and personal.
-- Preserve clear attribution and disclaimers around third-party references and assets.
-- Make the code easy to inspect, fork, and modify as an open-source static site.
+- Credit source material clearly.
+- Preserve enough restraint that the fiction feels corporate before it feels theatrical.
 
 ## What Is Inside
 
-This is a static frontend. There is no framework, package install, or build step.
+This is a static website. There is no framework, package install, or build step.
 
 Core files:
 
@@ -47,19 +50,20 @@ Core files:
 - `styles.css` - responsive visual system, route layouts, mobile navigation, product/service dossiers, cyberpunk interface treatment, and reduced-motion support.
 - `app.js` - language switching, interactive console behavior, route hydration, localized product/service data, and casefile content registries.
 - `vercel.json` - static deployment configuration for Vercel.
-- `LICENSE.md` - MIT license for the original source code and documentation, with scope notes.
+- `LICENSE.md` - MIT license for original source code and documentation, with scope notes.
+- `assets/ATTRIBUTION.md` - asset provenance and third-party reference notes.
 
 Route families:
 
-- `technology/` - technical platform overview and subsystem dossiers.
-- `operations/` - command, deployment, and operational readiness surfaces.
-- `archive/` - institutional archive and public casefiles.
-- `governance/` - board authority, custody gates, and control doctrine.
-- `blackwall/` - perimeter doctrine and rogue-machine containment.
-- `divisions/`, `subsidiaries/`, and `regional/` - corporate organization, operating entities, and command geography.
-- `products/*/` - product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems.
-- `services/*/` - service pages for continuity, counterintrusion, mandate, and autonomous protection offerings.
-- `assets/` - generated imagery, user-provided identity assets, credited Cyberpunk 2077 press references, and attribution notes.
+- `technology/` - platform overview and subsystem dossiers
+- `operations/` - command, deployment, and readiness surfaces
+- `archive/` - institutional archive and public casefiles
+- `governance/` - board authority, custody gates, and control doctrine
+- `blackwall/` - perimeter doctrine and rogue-machine containment
+- `divisions/`, `subsidiaries/`, and `regional/` - organization, operating entities, and command geography
+- `products/*/` - product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems
+- `services/*/` - service pages for executive continuity, counterintrusion, mandate, and autonomous protection offerings
+- `assets/` - generated imagery, user-provided identity assets, credited Cyberpunk 2077 press references, and attribution notes
 
 ## Local Development
 
@@ -82,6 +86,9 @@ http://127.0.0.1:4187/
 http://127.0.0.1:4187/technology/
 http://127.0.0.1:4187/technology/neural-substrate/
 http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
+http://127.0.0.1:4187/technology/black-ice-runtime/
+http://127.0.0.1:4187/technology/capital-custody/
+http://127.0.0.1:4187/technology/autonomous-force/
 http://127.0.0.1:4187/divisions/
 http://127.0.0.1:4187/subsidiaries/
 http://127.0.0.1:4187/regional/
@@ -108,20 +115,15 @@ http://127.0.0.1:4187/services/black-ledger-mandate/
 http://127.0.0.1:4187/services/autonomous-protection/
 ```
 
-## Design Principles
+## Deployment
 
-This project intentionally avoids the shape of a normal startup landing page. The website should read as a controlled corporate artifact from a serious institution.
+The production site is deployed on Vercel as a static project. The current production domain is:
 
-Guiding principles:
+```text
+https://www.arasaka.com/
+```
 
-- Make every page feel like it belongs to a large, old, powerful company.
-- Prefer operational specificity over vague cyberpunk flavor.
-- Treat fictional products like real procurement and governance objects.
-- Keep mobile layouts dense, legible, and fast to scan.
-- Use Japanese localization as a real surface, not decorative texture.
-- Keep personal references subtle.
-- Credit source material clearly.
-- Avoid turning the project into a lore explainer.
+The repository is configured so Vercel can serve the static routes directly from the checked-in files.
 
 ## Open Source Scope
 
@@ -144,7 +146,9 @@ Cyberpunk 2077 referenced names and credited press imagery belong to their respe
 
 ## Contributing
 
-Small improvements are welcome, especially:
+Contributions are welcome when they make the project feel more plausible, usable, accessible, or technically clean.
+
+Good contribution areas:
 
 - Mobile layout fixes
 - Accessibility improvements
@@ -152,6 +156,6 @@ Small improvements are welcome, especially:
 - Attribution corrections
 - Performance improvements
 - Cleaner route information architecture
-- Better product/spec imagery that preserves the corporate tone
+- Product/spec imagery that preserves the restrained corporate tone
 
-Please keep the site restrained, corporate, and plausible. The best contribution makes the fiction feel more like a real operating company and less like a fan page.
+Please keep the site controlled, corporate, and believable. The best contribution makes the fiction feel more like a real operating company and less like a fan page.
