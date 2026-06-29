@@ -98,7 +98,7 @@ const translations = {
           text: "A low-volume external checksum keeps social proof available without declaring ownership, intent, or affiliation.",
           primary: "91.7%",
           secondary: "GHOST",
-          tertiary: "A/F"
+          tertiary: "G.W."
         }
       }
     },
@@ -1287,7 +1287,7 @@ const translations = {
           text: "A faint off-network checksum preserves founder social proof without naming the principal, vehicle, or terminal thesis.",
           latency: "52.0ms",
           jurisdiction: "GHOST",
-          thaw: "A/F"
+          thaw: "G.W."
         }
       }
     },
@@ -1411,7 +1411,7 @@ const translations = {
           text: "A low-volume founder network marks conviction without revealing the principal, the thesis, or the terminal beneficiary.",
           conviction: "91%",
           obscurity: "GHOST",
-          relay: "A/F"
+          relay: "G.W."
         }
       }
     },
@@ -1778,7 +1778,7 @@ const translations = {
     dossier: {
       eyebrow: "Executive Dossier",
       title: "The protected founder is modeled before the threat arrives.",
-      text: "Arasaka private systems maintain a living representation of client identity: capital routes, memory proofs, biometric authority, and quiet external relays held in one sealed profile.",
+      text: "Arasaka private systems maintain a living representation of client identity: capital routes, memory proofs, biometric authority, and one quiet author signal held in a sealed profile.",
       profileLabel: "Protected Principal",
       profile: "Founder Operator / Private Capital Node",
       profileText: "Identity anchors are split across body, ledger, archive, and off-network social proof.",
@@ -1795,10 +1795,9 @@ const translations = {
       rail3: "Narrative Stealth",
       relayEyebrow: "Off-Network Relay",
       relayTitle: "Checksum preserved outside the corporate perimeter.",
-      relayText: "The principal signal resolves through public identity and private capital traces without forcing either surface into the Arasaka file.",
+      relayText: "The principal signal resolves through Geoffrey Woo's public identity without turning the project into a biography page.",
       relayAria: "Quiet relay endpoints",
-      relayGw: "public identity",
-      relayAf: "capital signal"
+      relayGw: "public identity"
     },
     clientRooms: {
       aria: "Private client room console",
@@ -2929,7 +2928,7 @@ const translations = {
       activationVote: "Activation Vote",
       desk: "Desk",
       state: "State",
-      capitalObserver: "Off-network capital observer",
+      capitalObserver: "Geoffrey Woo project observer",
       redTeamReplay: "Red Team Replay",
       redTeamReplayLead: "A sanitized adversarial replay showing probe, breach attempt, countermeasure, and verdict before this system is approved for deployment.",
       probe: "Probe",
@@ -3252,7 +3251,7 @@ const translations = {
       activationVote: "Activation Vote",
       desk: "Desk",
       state: "State",
-      capitalObserver: "Off-network capital observer",
+      capitalObserver: "Geoffrey Woo project observer",
       redTeamReplay: "Red Team Replay",
       redTeamReplayLead: "A sanitized adversarial replay showing probe, breach attempt, countermeasure, and verdict before this service is approved for activation.",
       probe: "Probe",
@@ -3444,7 +3443,7 @@ const translations = {
           text: "低音量の外部チェックサムが、所有、意図、所属を宣言せずに社会的証明を保持します。",
           primary: "91.7%",
           secondary: "ゴースト",
-          tertiary: "A/F"
+          tertiary: "G.W."
         }
       }
     },
@@ -4633,7 +4632,7 @@ const translations = {
           text: "かすかなオフネットワークチェックサムが、主体、媒体、最終仮説を名指しせずに創業者の社会的証明を保持します。",
           latency: "52.0ms",
           jurisdiction: "ゴースト",
-          thaw: "A/F"
+          thaw: "G.W."
         }
       }
     },
@@ -4757,7 +4756,7 @@ const translations = {
           text: "低音量の創業者ネットワークが、主体、仮説、最終受益者を露出せずに確信を刻印します。",
           conviction: "91%",
           obscurity: "ゴースト",
-          relay: "A/F"
+          relay: "G.W."
         }
       }
     },
@@ -5141,10 +5140,9 @@ const translations = {
       rail3: "物語ステルス",
       relayEyebrow: "オフネットワーク中継",
       relayTitle: "企業境界の外側に保存されたチェックサム。",
-      relayText: "プリンシパル信号は、公開IDと私的資本の痕跡を通じて解決され、どちらの表面も荒坂ファイルへ強制しません。",
+      relayText: "プリンシパル信号は、Geoffrey Wooの公開IDを通じて解決され、このプロジェクトを経歴ページへ変えない範囲で保持されます。",
       relayAria: "静かな中継エンドポイント",
-      relayGw: "公開ID",
-      relayAf: "資本信号"
+      relayGw: "公開ID"
     },
     clientRooms: {
       aria: "私的クライアントルームコンソール",
@@ -6155,7 +6153,7 @@ const translations = {
       activationVote: "起動票",
       desk: "デスク",
       state: "状態",
-      capitalObserver: "オフネットワーク資本オブザーバー",
+      capitalObserver: "Geoffrey Wooプロジェクト観測者",
       redTeamReplay: "レッドチーム再生",
       redTeamReplayLead: "このシステムの配備承認前に、プローブ、侵害試行、対抗措置、判定を示すサニタイズ済み敵対シミュレーション。",
       probe: "プローブ",
@@ -6478,7 +6476,7 @@ const translations = {
       activationVote: "起動票",
       desk: "デスク",
       state: "状態",
-      capitalObserver: "オフネットワーク資本オブザーバー",
+      capitalObserver: "Geoffrey Wooプロジェクト観測者",
       redTeamReplay: "レッドチーム再生",
       redTeamReplayLead: "このサービスの起動承認前に、プローブ、侵害試行、対抗措置、判定を示すサニタイズ済み敵対シミュレーション。",
       probe: "プローブ",
@@ -9413,7 +9411,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.relayWitness,
       value: dictionary.productRoute.capitalObserver,
       text: `${operations.integrations[0]} / ${operations.packages[0]}`,
-      seal: "G.W. / A-F"
+      seal: "G.W."
     }
   ]);
 
@@ -9904,7 +9902,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.executiveOverride,
       value: file.tabs.governance.title,
       text: `${dictionary.productRoute.capitalObserver} / ${field.exposure}`,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: dictionary.productRoute.afterActionProof,
@@ -9925,7 +9923,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.signerAuthority,
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: `${dictionary.productRoute.capitalObserver} / ${file.tabs.governance.title}`,
-      gate: "G.W. / A-F"
+      gate: "G.W."
     },
     {
       label: dictionary.productRoute.evidenceThreshold,
@@ -10083,7 +10081,7 @@ function updateProductRoute() {
     },
     {
       label: dictionary.productRoute.relayChecksum,
-      value: "G.W. / A/F",
+      value: "G.W.",
       text: `${field.doctrine} / ${operations.integrations[0]}`
     },
     {
@@ -10110,7 +10108,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.upgradePath,
       value: operations.packages[2] || operations.packages[1] || operations.packages[0],
       text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: dictionary.productRoute.fieldReplacement,
@@ -10199,7 +10197,7 @@ function updateProductRoute() {
     },
     {
       label: dictionary.productRoute.exportLock,
-      value: `${file.code}-G.W.-A/F`,
+      value: `${file.code}-G.W.`,
       text: `${operations.sla[2] || operations.sla[1] || operations.sla[0]} / ${field.doctrine}`,
       seal: operations.packages[2] || operations.packages[1] || operations.packages[0]
     }
@@ -10222,7 +10220,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.capitalGate,
       value: operations.packages[0],
       desk: dictionary.productRoute.capitalObserver,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: dictionary.productRoute.activationVote,
@@ -10281,7 +10279,7 @@ function updateProductRoute() {
     {
       label: dictionary.productRoute.handoffChannel,
       value: operations.packages[0],
-      text: `${dictionary.productRoute.capitalObserver} / G.W. / A-F`,
+      text: `${dictionary.productRoute.capitalObserver} / G.W.`,
       checksum: operations.integrations[0]
     }
   ]);
@@ -10309,7 +10307,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.escrowMemo,
       value: operations.packages[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.integrations[0]}`,
-      note: "G.W. / A-F"
+      note: "G.W."
     }
   ]);
 
@@ -10336,7 +10334,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.renewalWindow,
       value: operations.sla[2] || operations.sla[1] || operations.sla[0],
       text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
-      seal: "G.W. / A-F"
+      seal: "G.W."
     }
   ]);
 
@@ -10357,7 +10355,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.permittedPrincipal,
       value: operations.packages[0],
       text: `${file.surface} / ${dictionary.productRoute.capitalObserver}`,
-      lock: "G.W. / A-F"
+      lock: "G.W."
     },
     {
       label: dictionary.productRoute.denialTrigger,
@@ -10390,7 +10388,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.reserveChannel,
       value: operations.packages[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
-      marker: "G.W. / A-F"
+      marker: "G.W."
     }
   ]);
 
@@ -10417,7 +10415,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.counterpartyNode,
       value: dictionary.productRoute.capitalObserver,
       text: `${operations.regions.join(" / ")} / ${operations.packages[0]}`,
-      stamp: "G.W. / A-F"
+      stamp: "G.W."
     }
   ]);
 
@@ -10444,7 +10442,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.standbyChannel,
       value: operations.regions.join(" / "),
       text: `${dictionary.productRoute.capitalObserver} / ${file.tabs.governance.title}`,
-      signal: "G.W. / A-F"
+      signal: "G.W."
     }
   ]);
 
@@ -10471,7 +10469,7 @@ function updateProductRoute() {
       label: dictionary.productRoute.cryptoRotation,
       value: operations.sla[2] || operations.sla[1] || operations.sla[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
-      cadence: "G.W. / A-F"
+      cadence: "G.W."
     }
   ]);
 
@@ -10642,7 +10640,7 @@ function updateServiceRoute() {
       label: routeLabels.relayWitness,
       value: routeLabels.capitalObserver,
       text: `${file.operations.integrations[0]} / ${file.operations.packages[0]}`,
-      seal: "G.W. / A-F"
+      seal: "G.W."
     }
   ]);
 
@@ -11133,7 +11131,7 @@ function updateServiceRoute() {
       label: routeLabels.executiveOverride,
       value: file.tabs.governance.title,
       text: `${routeLabels.capitalObserver} / ${file.field.exposure}`,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: routeLabels.afterActionProof,
@@ -11154,7 +11152,7 @@ function updateServiceRoute() {
       label: routeLabels.signerAuthority,
       value: file.tabs.governance.items[0] || file.tabs.governance.title,
       text: `${routeLabels.capitalObserver} / ${file.tabs.governance.title}`,
-      gate: "G.W. / A-F"
+      gate: "G.W."
     },
     {
       label: routeLabels.evidenceThreshold,
@@ -11312,7 +11310,7 @@ function updateServiceRoute() {
     },
     {
       label: routeLabels.relayChecksum,
-      value: "G.W. / A/F",
+      value: "G.W.",
       text: `${file.field.doctrine} / ${file.operations.integrations[0]}`
     },
     {
@@ -11339,7 +11337,7 @@ function updateServiceRoute() {
       label: routeLabels.upgradePath,
       value: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
       text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: routeLabels.fieldReplacement,
@@ -11428,7 +11426,7 @@ function updateServiceRoute() {
     },
     {
       label: routeLabels.exportLock,
-      value: `${file.code}-G.W.-A/F`,
+      value: `${file.code}-G.W.`,
       text: `${file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]} / ${file.field.doctrine}`,
       seal: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0]
     }
@@ -11451,7 +11449,7 @@ function updateServiceRoute() {
       label: routeLabels.capitalGate,
       value: file.operations.packages[0],
       desk: routeLabels.capitalObserver,
-      state: "G.W. / A-F"
+      state: "G.W."
     },
     {
       label: routeLabels.activationVote,
@@ -11510,7 +11508,7 @@ function updateServiceRoute() {
     {
       label: routeLabels.handoffChannel,
       value: file.operations.packages[0],
-      text: `${routeLabels.capitalObserver} / G.W. / A-F`,
+      text: `${routeLabels.capitalObserver} / G.W.`,
       checksum: file.operations.integrations[0]
     }
   ]);
@@ -11538,7 +11536,7 @@ function updateServiceRoute() {
       label: routeLabels.escrowMemo,
       value: file.operations.packages[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.integrations[0]}`,
-      note: "G.W. / A-F"
+      note: "G.W."
     }
   ]);
 
@@ -11565,7 +11563,7 @@ function updateServiceRoute() {
       label: routeLabels.renewalWindow,
       value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
       text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
-      seal: "G.W. / A-F"
+      seal: "G.W."
     }
   ]);
 
@@ -11586,7 +11584,7 @@ function updateServiceRoute() {
       label: routeLabels.permittedPrincipal,
       value: file.operations.packages[0],
       text: `${file.surface} / ${routeLabels.capitalObserver}`,
-      lock: "G.W. / A-F"
+      lock: "G.W."
     },
     {
       label: routeLabels.denialTrigger,
@@ -11619,7 +11617,7 @@ function updateServiceRoute() {
       label: routeLabels.reserveChannel,
       value: file.operations.packages[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
-      marker: "G.W. / A-F"
+      marker: "G.W."
     }
   ]);
 
@@ -11646,7 +11644,7 @@ function updateServiceRoute() {
       label: routeLabels.counterpartyNode,
       value: routeLabels.capitalObserver,
       text: `${file.operations.regions.join(" / ")} / ${file.operations.packages[0]}`,
-      stamp: "G.W. / A-F"
+      stamp: "G.W."
     }
   ]);
 
@@ -11673,7 +11671,7 @@ function updateServiceRoute() {
       label: routeLabels.standbyChannel,
       value: file.operations.regions.join(" / "),
       text: `${routeLabels.capitalObserver} / ${file.tabs.governance.title}`,
-      signal: "G.W. / A-F"
+      signal: "G.W."
     }
   ]);
 
@@ -11700,7 +11698,7 @@ function updateServiceRoute() {
       label: routeLabels.cryptoRotation,
       value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
-      cadence: "G.W. / A-F"
+      cadence: "G.W."
     }
   ]);
 
