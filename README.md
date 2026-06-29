@@ -1,25 +1,108 @@
-# Arasaka Corporate Site
+# Arasaka Systems Concept
 
-Static bilingual cyberpunk megacorp website for `arasaka.com`, with subtle off-network relay cameos.
+An unofficial, bilingual cyberpunk corporate website for `arasaka.com`.
 
-## Files
+This is a Geoffrey Woo personal project exploring what a fictional megacorporation website could feel like if it were built as a real enterprise product surface: dense, mobile-first, multilingual, operational, and strangely plausible.
 
-- `index.html` - site structure, canonical/social metadata, organization structured data, bilingual content hooks, boot chrome, global signal-weather canvas, persistent public-node dock, signal spine, animated hero signal lattice, hero diagnostics module, mobile field dossier console, grouped mobile command menu, linked service offering layer, product architecture grid, portfolio comparison matrix, enterprise bundle catalog, acquisition matrix, interactive mandate router, assurance ledger, internal product dossier overlay, interactive megacity grid, credited Cyberpunk 2077 lore board with product-linked Night City briefings, incident chronology, source vault, Night City evidence wall, visual evidence deck, black research archive, signal-intelligence mandate board, interactive command ribbon, interactive protocol deck, interactive cyberware foundry, cybertechnology registry, interactive secure systems console, Black ICE crucible, autonomous defense swarm, interactive cybernetic stack, relic archive, Mikoshi continuity engine, Soulkiller redaction lab, orbital vault array, interactive custody board, capital singularity console, netrunner exchange console, threat topology lenses, Blackwall containment console, response matrix, threat simulation lab with routed product/service dossiers, incident case-file console, executive dossier with off-network relay cameo, private client rooms, operations theater console, decryptable doctrine, access-review router, and access terminal
-- `styles.css` - responsive cyberpunk corporate visual system with mobile command-menu grouping, swipeable first-scroll dossier routing, Night City briefing cards, incident chronology ledger, source-vault media records, research archive cards, signal-intelligence mandate cards, route-level command brief and qualification surfaces, product photo/spec sheets, provenance ledgers, commercial readiness ledgers, route control-room consoles, evidence packet manifests, deployment configuration cards, mandate decision matrices, integration adapter matrices, interface contracts, sovereign data-boundary ledgers, telemetry envelopes, route risk registers, failure-mode atlases, escalation ladders, acceptance gates, deployment timelines, deployment runbooks, private-room handoffs, support entitlement cards, operator transcripts, route threat models, custody-chain rails, authorization ledgers, red-team replay rails, forensic receipt cards, board docket ledgers, export-license ledgers, underwriting bond ledgers, settlement escrow ledgers, continuity monitor ledgers, patch cadence ledgers, threat simulation lab controls, incident case-file desk, private client-room portal, access-review console, ambient signal weather, and reduced-motion support
-- `app.js` - English/Japanese language switching, boot/reticle chrome, language-aware signal-weather canvas, public-node dock controls, active-layer signal spine, animated hero signal lattice, hero diagnostics controls, mobile command-menu control, product dossier hash routes and tabs, standalone product and service route hydration with credited and context-aware Night City field files, case-file timelines, provenance ledgers, command/mandate briefs, qualification matrices, procurement-fit readouts, commercial certificates, commercial readiness ledgers, live control-room consoles, evidence packet manifests, deployment configuration cards, mandate decision matrices, integration adapter matrices, interface contracts, sovereign data-boundary ledgers, telemetry envelopes, route risk registers, failure-mode atlases, escalation ladders, acceptance gates, deployment timelines, service-level envelopes, integration topology maps, bitmap visual/spec sheets, deployment runbooks, private-room handoffs with quiet relay checksum, support entitlements, operator transcripts, route threat models, custody chains, authorization ledgers, red-team replays, forensic receipts, board dockets, export licenses, underwriting bonds, settlement escrows, continuity monitors, patch cadences, suite switching, operational matrices, engagement matrices, acquisition matrix routing, mandate router controls, time rail, live telemetry, megacity grid controls, command ribbon controls, protocol deck controls, cyberware foundry controls, secure systems controls, Black ICE crucible controls, autonomous defense swarm controls, cybernetic stack controls, animated topology canvas, topology lens controls, Blackwall protocol controls, relic archive controls, Mikoshi continuity controls, Soulkiller redaction controls, orbital vault array, custody instrument controls, capital singularity controls, netrunner exchange controls, response matrix, threat simulation lab routing, incident case-file routing, private client-room routing, operations theater controls, doctrine reveal controls, secure terminal logs, access-review routing, and encrypted intake feedback
-- `products/*/index.html` - standalone, shareable product system pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller, including canonical/social metadata, product structured data, credited Night City field files, route-level case-file timelines, provenance ledgers, command briefs, qualification matrices, procurement-fit readouts, commercial certificates, commercial readiness ledgers, live control-room consoles, evidence packet manifests, deployment configuration cards, mandate decision matrices, integration adapter matrices, interface contracts, sovereign data-boundary ledgers, telemetry envelopes, route risk registers, failure-mode atlases, escalation ladders, acceptance gates, deployment timelines, service-level envelopes, integration topology maps, bitmap product photos/spec sheets, deployment runbooks, private-room handoffs, support entitlements, operator transcripts, route threat models, custody chains, authorization ledgers, red-team replays, forensic receipts, board dockets, export licenses, underwriting bonds, settlement escrows, continuity monitors, patch cadences, suite switching, and operational matrices
-- `services/*/index.html` - standalone, shareable service dossier pages for Executive Continuity, Counterintrusion, Black Ledger Mandate, and Autonomous Protection, including canonical/social metadata, service structured data, credited Night City field files, route-level case-file timelines, provenance ledgers, mandate briefs, qualification matrices, procurement-fit readouts, commercial certificates, commercial readiness ledgers, live control-room consoles, evidence packet manifests, mandate configuration cards, mandate decision matrices, integration adapter matrices, interface contracts, sovereign data-boundary ledgers, telemetry envelopes, route risk registers, failure-mode atlases, escalation ladders, acceptance gates, deployment timelines, service-level envelopes, integration topology maps, service photos/spec sheets, deployment runbooks, private-room handoffs, support entitlements, operator transcripts, route threat models, custody chains, authorization ledgers, red-team replays, forensic receipts, board dockets, export licenses, underwriting bonds, settlement escrows, continuity monitors, patch cadences, service switching, and engagement matrices
-- `assets/hero-headquarters.png` - original generated headquarters hero image
-- `assets/security-operations.png` - original generated operations image
-- `assets/cyberware-foundry.png` - original generated cyberware foundry image
-- `assets/cyberpunk2077-showdown-press.png` - Cyberpunk 2077 official press screenshot from CD PROJEKT RED Press Center
-- `assets/cyberpunk2077-afterlife-press.png` - Cyberpunk 2077 official press screenshot thumbnail from CD PROJEKT RED Press Center
-- `assets/night-city-evidence-wall.png` - original composite evidence-board image using credited Cyberpunk 2077 press screenshots, generated Arasaka catalog plates, and user-provided Arasaka identity artwork
-- `assets/product-*-catalog.png` - original generated bitmap catalog plates for product visual/spec cards, composited from site source imagery and Arasaka UI treatment
-- `assets/service-*-catalog.png` - original generated bitmap catalog plates for service visual/spec cards, composited from site source imagery and Arasaka UI treatment
-- `assets/arasaka-*-white.png` and `assets/arasaka-mark-favicon.png` - site logo, wordmark, lockup, and favicon assets derived from user-provided Arasaka identity artwork
-- `assets/ATTRIBUTION.md` - source and unofficial fan-work attribution notes
+## Mission
 
-## Preview
+The project asks a simple design question:
 
-Open `index.html` directly in a browser. No build step is required.
+What would a multi-trillion-dollar cyberpunk conglomerate publish if it treated memory, identity, capital, security, and autonomous force as product lines?
+
+The site is not meant to be a fan wiki or lore recap. It is designed as a fictional corporate system of record, with product pages, service pages, procurement surfaces, assurance ledgers, governance gates, deployment runbooks, evidence packets, lifecycle covenants, and Japanese/English language support.
+
+The goal is to make the fiction feel institutional:
+
+- Cyberpunk technologies presented as believable enterprise systems
+- Product and service pages with real information architecture
+- Mobile-first layouts for people encountering the site from a phone
+- Japanese and English interface copy
+- Credited use of Cyberpunk 2077 references and press imagery
+- A subtle Geoffrey Woo authorship signal without turning the site into a biography page
+
+## Live Site
+
+- Production: https://www.arasaka.com/
+- Repository: https://github.com/geoffreywoo/arasaka
+
+## What Is Inside
+
+The site is a static frontend. There is no framework, no package install, and no build step.
+
+Core files:
+
+- `index.html` - homepage structure, metadata, bilingual content hooks, product/service surfaces, operations modules, disclosure sections, and the public-facing corporate experience.
+- `styles.css` - responsive visual system, route layouts, mobile navigation, cyberpunk interface treatment, reduced-motion support, and product/service dossier styling.
+- `app.js` - language switching, interactive consoles, product/service route hydration, route-level information architecture, and localized data registries.
+- `products/*/index.html` - standalone product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems.
+- `services/*/index.html` - standalone service pages for continuity, counterintrusion, mandate, and autonomous protection offerings.
+- `assets/` - generated images, user-provided identity assets, credited Cyberpunk 2077 press references, and attribution notes.
+
+## Local Development
+
+You can open the site directly:
+
+```bash
+open index.html
+```
+
+For route testing, run a local static server from the repo root:
+
+```bash
+python3 -m http.server 4187
+```
+
+Then visit:
+
+```text
+http://127.0.0.1:4187/
+http://127.0.0.1:4187/products/relic/
+http://127.0.0.1:4187/services/counterintrusion/
+```
+
+## Design Principles
+
+This project intentionally avoids a normal startup landing-page feel. The design should read as a controlled corporate artifact, not a marketing splash page.
+
+Guiding principles:
+
+- Make every page feel like it belongs to a serious institution.
+- Prefer operational specificity over vague cyberpunk flavor.
+- Treat fictional products like real procurement objects.
+- Keep mobile layouts dense but readable.
+- Use Japanese localization as a first-class surface, not an afterthought.
+- Keep external personal references subtle.
+- Credit source material clearly.
+
+## Open Source Scope
+
+The original source code in this repository is open-sourced under the MIT License. See [`LICENSE.md`](LICENSE.md).
+
+Important exclusions:
+
+- Cyberpunk 2077 names, references, screenshots, and related intellectual property belong to CD PROJEKT RED / CD PROJEKT.
+- Arasaka and related fictional universe concepts are used here as unofficial fan-work references.
+- User-provided logo and wordmark assets, generated imagery, and composite assets in `assets/` may have separate provenance and are not automatically relicensed for unrestricted reuse.
+- See [`assets/ATTRIBUTION.md`](assets/ATTRIBUTION.md) for asset notes.
+
+If you fork this project, replace or re-clear brand, game, and image assets before using it commercially.
+
+## Attribution And Disclaimer
+
+This site is an unofficial fan-made web concept. It is not affiliated with, approved by, or endorsed by CD PROJEKT RED, CD PROJEKT, Cyberpunk 2077, or any rights holder.
+
+Cyberpunk 2077 referenced names and credited press imagery belong to their respective owners. This project exists as design fiction, interface study, and personal creative production.
+
+## Contributing
+
+Small improvements are welcome, especially:
+
+- Mobile layout fixes
+- Accessibility improvements
+- Japanese copy corrections
+- Attribution corrections
+- Performance improvements
+- Cleaner route information architecture
+
+Please keep the tone restrained, corporate, and plausible. The best contribution makes the fiction feel more like a real operating company and less like a fan page.
