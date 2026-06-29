@@ -19,7 +19,7 @@ const translations = {
       custody: "Custody",
       exchange: "Exchange",
       grid: "Grid",
-      lore: "Lore",
+      lore: "Records",
       topology: "Topology",
       blackwall: "Blackwall",
       matrix: "Matrix",
@@ -43,7 +43,7 @@ const translations = {
     boot: {
       kicker: "荒坂株式会社 Public Node",
       title: "Identity Handshake",
-      text: "Neural custody layer online. Corporate perimeter accepting public signal."
+      text: "Corporate identity layer online. Public gateway accepting regulated signal."
     },
     spine: {
       node: "Public Node",
@@ -54,12 +54,12 @@ const translations = {
       orbit: "Orbital Cold"
     },
     dock: {
-      aria: "Public node signal dock",
-      collapse: "Collapse public node dock",
-      expand: "Expand public node dock",
-      eyebrow: "Public Node",
-      active: "Active Signal",
-      modeAria: "Public node mode",
+      aria: "Corporate gateway signal dock",
+      collapse: "Collapse corporate gateway dock",
+      expand: "Expand corporate gateway dock",
+      eyebrow: "Corporate Gateway",
+      active: "Active Mandate",
+      modeAria: "Corporate gateway mode",
       integrity: "Integrity",
       heat: "Heat",
       trace: "Trace",
@@ -105,11 +105,11 @@ const translations = {
       }
     },
     hero: {
-      eyebrow: "荒坂株式会社 | Neural Security / Autonomous Defense / Capital Systems",
-      title: "Secure the Future Before It Boots.",
-      text: "Arasaka engineers the invisible layer beneath sovereign capital: neural custody, autonomous protection, synthetic intelligence containment, and city-scale continuity for clients operating beyond ordinary law.",
-      ctaPrimary: "Request Black Ledger Access",
-      ctaSecondary: "Enter Systems Layer",
+      eyebrow: "荒坂株式会社 | Sovereign Security / Autonomous Defense / Capital Systems",
+      title: "Securing Sovereign Continuity at Planetary Scale.",
+      text: "Arasaka operates the control layer beneath sovereign capital: neural custody, autonomous protection, synthetic intelligence containment, and city-scale continuity for family offices, states, and systemically important institutions.",
+      ctaPrimary: "Request Institutional Access",
+      ctaSecondary: "View Corporate Systems",
       diagnostics: {
         region: "Core diagnostics",
         aria: "Diagnostic layer",
@@ -148,14 +148,14 @@ const translations = {
       }
     },
     fieldConsole: {
-      aria: "Mobile field dossier console",
-      routesAria: "Priority dossier routes",
-      eyebrow: "Mobile Field Console",
-      title: "Four routes into the private layer.",
-      text: "A first-screen command surface for the dossiers most likely to matter on mobile: continuity, counterintrusion, black-ledger capital, and autonomous protection.",
+      aria: "Mobile mandate console",
+      routesAria: "Priority mandate routes",
+      eyebrow: "Institutional Mandate Console",
+      title: "Four divisions of corporate control.",
+      text: "A first-screen command surface for the mandates most likely to matter on mobile: continuity, counterintrusion, black-ledger capital, and autonomous protection.",
       clearance: "Clearance",
       latency: "Latency",
-      open: "Open dossier",
+      open: "Open mandate",
       relic: {
         title: "Relic Continuity",
         text: "Engram capture and succession custody for authority that cannot stay biological."
@@ -241,10 +241,10 @@ const translations = {
       }
     },
     lore: {
-      eyebrow: "Night City Lore Board",
-      title: "The public story is noise. The incident ledger is product strategy.",
-      text: "Arasaka systems are mapped against the canonical pressure points of 2077: tower trauma, Konpeki Plaza, the Relic, Mikoshi, Afterlife mercenary networks, and Blackwall-adjacent containment.",
-      nodeAria: "Lore incident node",
+      eyebrow: "Corporate Records Office",
+      title: "Public incidents become institutional control doctrine.",
+      text: "Arasaka systems are indexed against material operating events: tower continuity failure, hotel access breach, Relic custody exposure, Mikoshi archival governance, informal mercenary markets, and Blackwall-adjacent containment.",
+      nodeAria: "Corporate incident node",
       creditLabel: "Image credit",
       credit: "CD PROJEKT RED / Cyberpunk 2077 press materials",
       active: "Selected Incident",
@@ -300,7 +300,7 @@ const translations = {
           product: "Netrunner Exchange"
         }
       },
-      briefingsAria: "Night City intelligence briefings",
+      briefingsAria: "Corporate intelligence briefings",
       briefings: {
         open: "Open linked dossier",
         konpeki: {
@@ -321,10 +321,10 @@ const translations = {
         }
       },
       chronology: {
-        aria: "Arasaka incident chronology",
-        eyebrow: "Incident Chronology",
-        title: "Every public disaster becomes an internal product mandate.",
-        text: "A mobile field ledger for the canonical Arasaka pressure points that shape continuity, net defense, capital custody, and autonomous protection.",
+        aria: "Arasaka corporate chronology",
+        eyebrow: "Corporate Chronology",
+        title: "Every material event becomes operating doctrine.",
+        text: "A mobile institutional ledger for the pressure points that shape continuity, net defense, capital custody, and autonomous protection.",
         open: "Trace surface",
         founding: {
           kicker: "Corporate Root",
@@ -354,27 +354,27 @@ const translations = {
       }
     },
     sourceVault: {
-      aria: "Credited source vault",
-      eyebrow: "Source Vault",
-      title: "Official Cyberpunk press material, sealed into the public archive.",
-      text: "The images below are credited source artifacts used to anchor the fan-made Arasaka interface in the visual language of Night City.",
+      aria: "Asset provenance vault",
+      eyebrow: "Asset Provenance",
+      title: "Public media assets sealed into corporate provenance.",
+      text: "The images below are credited external source artifacts used as visual reference material inside the public corporate interface.",
       showdown: "Showdown tactical frame",
       afterlife: "Afterlife reputation market",
       evidenceAria: "Visual evidence deck",
-      wallAria: "Night City evidence wall",
+      wallAria: "Corporate evidence wall",
       wallEyebrow: "Evidence Wall",
       wallTitle: "Public source frames resolve into private product mandates.",
-      wallText: "A composite intelligence board tying credited Cyberpunk 2077 press material to Arasaka continuity, counterintrusion, capital, and protection dossiers.",
+      wallText: "A composite intelligence board tying credited external media to Arasaka continuity, counterintrusion, capital, and protection mandates.",
       wallCredit: "Composite built from credited CD PROJEKT RED press material and generated Arasaka catalog plates.",
       wallOpen: "Open source dossiers",
       evidenceEyebrow: "Visual Evidence",
-      evidenceTitle: "Generated product plates turn lore pressure into corporate collateral.",
+      evidenceTitle: "Generated product plates turn public risk into corporate collateral.",
       evidenceText: "Each plate is a visual proof artifact: a product photo, a mandate route, and a credited source trail bundled into one dossier entry.",
       evidenceOpen: "Open dossier",
       evidenceCredit: "Generated catalog plate",
       researchAria: "Black research archive",
       researchEyebrow: "Black Research Archive",
-      researchTitle: "Night City anomalies are filed as future product surfaces.",
+      researchTitle: "Jurisdictional anomalies are filed as future product surfaces.",
       researchText: "A cold archive of R&D threads that turn public incidents into neural custody, Blackwall containment, capital stealth, and autonomous protection programs.",
       researchSignal: "Signal",
       researchRoute: "Route",
@@ -418,8 +418,8 @@ const translations = {
     signalIntel: {
       aria: "Signal intelligence mandates",
       eyebrow: "Signal Intelligence",
-      title: "Public lore becomes private mandate routing.",
-      text: "Each pressure point resolves into a product owner, a board risk, and a sealed dossier path.",
+      title: "Public signal becomes private mandate routing.",
+      text: "Each pressure point resolves into a product owner, a board risk, and a sealed corporate file path.",
       owner: "Owner",
       risk: "Risk",
       open: "Open mandate",
@@ -536,8 +536,8 @@ const translations = {
     },
     divisions: {
       eyebrow: "Divisions",
-      title: "Cybernetic infrastructure for people who own the future.",
-      text: "Arasaka unifies body, network, weapon, and balance sheet into a single protected operating system. Our clients do not outsource risk. They acquire control."
+      title: "A sovereign industrial group for the post-human balance sheet.",
+      text: "Arasaka unifies body, network, force, and capital into one protected operating system for institutions that treat continuity as a strategic asset."
     },
     division: {
       security: {
@@ -1609,9 +1609,9 @@ const translations = {
       }
     },
     operations: {
-      eyebrow: "Night City Operations",
-      title: "Every access point is an executable threat model.",
-      text: "The Night City tower network coordinates kinetic response, counter-AI isolation, biometric capital access, and autonomous mobility across corporate districts.",
+      eyebrow: "Global Operations",
+      title: "Every access point is an executable control surface.",
+      text: "The Arasaka operations network coordinates kinetic response, counter-AI isolation, biometric capital access, and autonomous mobility across strategic districts.",
       item1: "Neuroprint access gates with live deception detection",
       item2: "Encrypted custody corridors from plaza vault to orbital relay",
       item3: "Netrunner cells for Blackwall-adjacent threat isolation",
@@ -1655,8 +1655,8 @@ const translations = {
     },
     governance: {
       eyebrow: "Governance",
-      title: "Old blood. New substrate. Absolute continuity.",
-      text: "Arasaka remains a family-led global institution, but the control surface has evolved: neural archives, private defense networks, and capital systems that survive regime change."
+      title: "Family control. Institutional scale. Continuous authority.",
+      text: "Arasaka remains a family-led global institution, but the control surface has evolved into neural archives, private defense networks, and capital systems designed to survive regime change."
     },
     timeline: {
       1915: {
@@ -1770,12 +1770,12 @@ const translations = {
     footer: {
       registry: "荒坂株式会社 Public Corporate Network",
       cameo: "quiet relay",
-      notice: "Unofficial fan-made web concept. Cyberpunk 2077 names and credited press imagery belong to CD PROJEKT RED / CD PROJEKT."
+      notice: "Independent corporate systems concept. Referenced Cyberpunk 2077 names and credited press imagery belong to CD PROJEKT RED / CD PROJEKT."
     },
     products: {
       eyebrow: "Product Architecture",
-      title: "Each service is a deployable corporate weapon system.",
-      text: "Arasaka products are sold as sealed operating environments: hardware, custody, intelligence, response, and governance bundled into auditable client deployments.",
+      title: "Each division is a deployable corporate control system.",
+      text: "Arasaka products are offered as sealed operating environments: hardware, custody, intelligence, response, and governance bundled into auditable client deployments.",
       aria: "Arasaka product pages",
       open: "Open product page",
       route: "Full system page",
@@ -2235,13 +2235,13 @@ const translations = {
       architecture: "Information Architecture",
       operations: "Operational Matrix",
       suite: "Product Suite",
-      field: "Night City Field File",
+      field: "Operating Field Record",
       incident: "Incident",
       exposure: "Exposure",
       doctrine: "Doctrine",
       imageCredit: "Image credit",
-      caseFile: "Night City Case File",
-      caseLead: "A deployment narrative tying the public lore incident to Arasaka product control, containment, and proof.",
+      caseFile: "Corporate Case File",
+      caseLead: "A deployment narrative tying the material event to Arasaka product control, containment, and proof.",
       signal: "Signal Origin",
       phase: "Activation Phase",
       containment: "Containment Layer",
@@ -2294,7 +2294,7 @@ const translations = {
       redline: "Red-Line",
       controlFooter: "Operator telemetry is simulated from sealed product-route records and does not expose client systems.",
       evidencePacket: "Evidence Packet",
-      evidencePacketLead: "A sealed export manifest tying field lore, buyer proof, operator telemetry, and internal assurance into one review artifact.",
+      evidencePacketLead: "A sealed export manifest tying event record, buyer proof, operator telemetry, and internal assurance into one review artifact.",
       sourceLineage: "Source Lineage",
       assuranceMaterial: "Assurance Material",
       buyerRoomArtifact: "Buyer Room",
@@ -2495,7 +2495,7 @@ const translations = {
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
       provenanceLedger: "Provenance Ledger",
-      provenanceLedgerLead: "Source and attestation record binding the Night City field file, credited media, internal registry, and off-network witness before procurement.",
+      provenanceLedgerLead: "Source and attestation record binding the operating field record, credited media, internal registry, and off-network witness before procurement.",
       canonSignal: "Canon Signal",
       mediaSource: "Media Source",
       registryAuthority: "Registry Authority",
@@ -2523,13 +2523,13 @@ const translations = {
       architecture: "Service Information Architecture",
       operations: "Engagement Matrix",
       suite: "Service Suite",
-      field: "Night City Service Field File",
+      field: "Service Operating Record",
       incident: "Incident",
       exposure: "Exposure",
       doctrine: "Doctrine",
       imageCredit: "Image credit",
-      caseFile: "Night City Case File",
-      caseLead: "A mandate narrative tying the public lore incident to Arasaka service teams, containment, and proof.",
+      caseFile: "Corporate Case File",
+      caseLead: "A mandate narrative tying the material event to Arasaka service teams, containment, and proof.",
       signal: "Signal Origin",
       phase: "Activation Phase",
       containment: "Containment Layer",
@@ -2582,7 +2582,7 @@ const translations = {
       redline: "Red-Line",
       controlFooter: "Operator telemetry is simulated from sealed service-route records and does not expose client systems.",
       evidencePacket: "Evidence Packet",
-      evidencePacketLead: "A sealed mandate manifest tying field lore, sponsor proof, operator telemetry, and internal assurance into one review artifact.",
+      evidencePacketLead: "A sealed mandate manifest tying event record, sponsor proof, operator telemetry, and internal assurance into one review artifact.",
       sourceLineage: "Source Lineage",
       assuranceMaterial: "Assurance Material",
       buyerRoomArtifact: "Mandate Room",
@@ -2783,7 +2783,7 @@ const translations = {
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
       provenanceLedger: "Provenance Ledger",
-      provenanceLedgerLead: "Source and attestation record binding the Night City service file, credited media, mandate registry, and off-network witness before sponsor review.",
+      provenanceLedgerLead: "Source and attestation record binding the service operating record, credited media, mandate registry, and off-network witness before sponsor review.",
       canonSignal: "Canon Signal",
       mediaSource: "Media Source",
       registryAuthority: "Registry Authority",
@@ -2830,7 +2830,7 @@ const translations = {
       custody: "保管",
       exchange: "交換所",
       grid: "都市網",
-      lore: "記録盤",
+      lore: "記録",
       topology: "位相図",
       blackwall: "ブラックウォール",
       matrix: "行列",
@@ -2854,7 +2854,7 @@ const translations = {
     boot: {
       kicker: "荒坂株式会社 公開ノード",
       title: "IDハンドシェイク",
-      text: "神経保管層オンライン。企業境界は公開シグナルを受理中。"
+      text: "法人IDレイヤーがオンライン。公開ゲートウェイが規制済み信号を受け入れています。"
     },
     spine: {
       node: "公開ノード",
@@ -2865,12 +2865,12 @@ const translations = {
       orbit: "軌道冷却"
     },
     dock: {
-      aria: "公開ノード信号ドック",
-      collapse: "公開ノードドックを折りたたむ",
-      expand: "公開ノードドックを展開",
-      eyebrow: "公開ノード",
-      active: "稼働シグナル",
-      modeAria: "公開ノードモード",
+      aria: "法人ゲートウェイ信号ドック",
+      collapse: "法人ゲートウェイドックを折りたたむ",
+      expand: "法人ゲートウェイドックを展開",
+      eyebrow: "法人ゲートウェイ",
+      active: "稼働委任",
+      modeAria: "法人ゲートウェイモード",
       integrity: "整合性",
       heat: "熱量",
       trace: "痕跡",
@@ -2916,11 +2916,11 @@ const translations = {
       }
     },
     hero: {
-      eyebrow: "荒坂株式会社 | 神経警備 / 自律防衛 / 資本システム",
-      title: "未来が起動する前に、掌握する。",
-      text: "荒坂は主権的資本の下層にある不可視の基盤を設計します。神経保管、自律防衛、合成知能の封じ込め、そして通常法の外側で動く顧客の都市規模の継続性を守ります。",
-      ctaPrimary: "ブラック台帳アクセスを申請",
-      ctaSecondary: "システム層へ",
+      eyebrow: "荒坂株式会社 | 主権警備 / 自律防衛 / 資本システム",
+      title: "惑星規模で主権的継続性を保全する。",
+      text: "荒坂は主権資本の下層にある制御レイヤーを運用します。神経保管、自律防衛、合成知能の封じ込め、都市規模の継続性を、ファミリーオフィス、国家、システム上重要な機関へ提供します。",
+      ctaPrimary: "機関アクセスを申請",
+      ctaSecondary: "法人システムを見る",
       diagnostics: {
         region: "コア診断",
         aria: "診断レイヤー",
@@ -2959,14 +2959,14 @@ const translations = {
       }
     },
     fieldConsole: {
-      aria: "モバイル現地ドシエ・コンソール",
-      routesAria: "優先ドシエ経路",
-      eyebrow: "モバイル現地コンソール",
-      title: "プライベート層へ入る四つの経路。",
-      text: "モバイルで最初に必要になる継続性、対侵入、ブラック台帳資本、自律保護のドシエへ接続する第一画面の指揮面。",
+      aria: "モバイル委任コンソール",
+      routesAria: "優先委任経路",
+      eyebrow: "機関委任コンソール",
+      title: "法人制御を担う四つの事業部門。",
+      text: "モバイルで最初に必要になる継続性、対侵入、ブラック台帳資本、自律保護の委任へ接続する第一画面の指揮面。",
       clearance: "権限",
       latency: "遅延",
-      open: "ドシエを開く",
+      open: "委任を開く",
       relic: {
         title: "レリック継続性",
         text: "生体に留められない権限のためのエングラム取得と継承保管。"
@@ -3052,10 +3052,10 @@ const translations = {
       }
     },
     lore: {
-      eyebrow: "ナイトシティ記録盤",
-      title: "公開された物語はノイズ。インシデント台帳こそ製品戦略です。",
-      text: "荒坂システムは、2077年の正史上の圧力点へ対応して設計されています。タワーの傷跡、紺碧プラザ、レリック、神輿、アフターライフ傭兵網、ブラックウォール隣接封じ込め。",
-      nodeAria: "ロア・インシデントノード",
+      eyebrow: "法人記録室",
+      title: "公開事案は制度的制御ドクトリンへ変換されます。",
+      text: "荒坂システムは、重要な運用事象へ対応して索引化されています。タワー継続性障害、ホテルアクセス侵害、レリック保管露出、神輿アーカイブ統治、非公式傭兵市場、ブラックウォール隣接封じ込め。",
+      nodeAria: "法人インシデントノード",
       creditLabel: "画像クレジット",
       credit: "CD PROJEKT RED / Cyberpunk 2077 プレス素材",
       active: "選択中のインシデント",
@@ -3111,7 +3111,7 @@ const translations = {
           product: "ネットランナー交換所"
         }
       },
-      briefingsAria: "ナイトシティ情報ブリーフィング",
+      briefingsAria: "法人情報ブリーフィング",
       briefings: {
         open: "関連記録を開く",
         konpeki: {
@@ -3132,10 +3132,10 @@ const translations = {
         }
       },
       chronology: {
-        aria: "荒坂インシデント年表",
-        eyebrow: "インシデント年表",
-        title: "すべての公開災害は、内部製品委任へ変換されます。",
-        text: "継続性、ネット防衛、資本保管、自律防護を形作る、正史上の荒坂圧力点をまとめたモバイル現地台帳です。",
+        aria: "荒坂法人年表",
+        eyebrow: "法人年表",
+        title: "すべての重要事象は、運用ドクトリンへ変換されます。",
+        text: "継続性、ネット防衛、資本保管、自律防護を形作る圧力点をまとめたモバイル機関台帳です。",
         open: "表面を追跡",
         founding: {
           kicker: "企業ルート",
@@ -3165,27 +3165,27 @@ const translations = {
       }
     },
     sourceVault: {
-      aria: "クレジット済みソース保管庫",
-      eyebrow: "ソース保管庫",
-      title: "公式Cyberpunkプレス素材を公開アーカイブへ封印。",
-      text: "以下の画像は、ファン制作の荒坂インターフェースをナイトシティの視覚言語へ接続するための、クレジット済みソースアーティファクトです。",
+      aria: "資産来歴保管庫",
+      eyebrow: "資産来歴",
+      title: "公開メディア資産を法人来歴へ封印。",
+      text: "以下の画像は、公開法人インターフェース内で視覚参照として使用されるクレジット済み外部ソースアーティファクトです。",
       showdown: "ショーダウン戦術フレーム",
       afterlife: "アフターライフ評価市場",
       evidenceAria: "ビジュアル証拠デッキ",
-      wallAria: "ナイトシティ証拠ウォール",
+      wallAria: "法人証拠ウォール",
       wallEyebrow: "証拠ウォール",
       wallTitle: "公開ソースフレームは、私的製品委任へ解決されます。",
-      wallText: "クレジット付きCyberpunk 2077プレス素材を、荒坂の継続、対侵入、資本、防護ドシエへ接続する複合インテリジェンスボード。",
+      wallText: "クレジット済み外部メディアを、荒坂の継続、対侵入、資本、防護委任へ接続する複合インテリジェンスボード。",
       wallCredit: "クレジット付きCD PROJEKT REDプレス素材と生成済み荒坂カタログプレートから構成された複合画像。",
-      wallOpen: "ソースドシエを開く",
+      wallOpen: "ソース委任を開く",
       evidenceEyebrow: "ビジュアル証拠",
-      evidenceTitle: "生成された製品プレートが、ロア圧力を企業担保資料へ変換します。",
+      evidenceTitle: "生成された製品プレートが、公開リスクを企業担保資料へ変換します。",
       evidenceText: "各プレートは、製品写真、委任経路、クレジット済みソーストレイルをひとつのドシエ項目に束ねた視覚証明です。",
-      evidenceOpen: "ドシエを開く",
+      evidenceOpen: "委任を開く",
       evidenceCredit: "生成カタログプレート",
       researchAria: "ブラック研究アーカイブ",
       researchEyebrow: "ブラック研究アーカイブ",
-      researchTitle: "ナイトシティの異常は、未来の製品面として記録されます。",
+      researchTitle: "管轄上の異常は、未来の製品面として記録されます。",
       researchText: "公開事案を神経保管、ブラックウォール封じ込め、資本ステルス、自律防護プログラムへ変換する研究開発スレッドの冷却アーカイブ。",
       researchSignal: "信号",
       researchRoute: "経路",
@@ -4191,7 +4191,7 @@ const translations = {
       scenarioAria: "脅威シナリオ",
       metricsAria: "シミュレーション指標",
       active: "稼働シナリオモデル",
-      open: "経路化ドシエを開く",
+      open: "経路化委任を開く",
       response: "応答",
       window: "封じ込め",
       risk: "リスク",
@@ -4256,7 +4256,7 @@ const translations = {
       evidence: "証拠",
       owner: "所有者",
       severity: "深刻度",
-      open: "内部ドシエを開く",
+      open: "内部委任を開く",
       tab: {
         konpeki: "紺碧",
         tower: "タワー",
@@ -4369,7 +4369,7 @@ const translations = {
       clearance: "認証",
       proof: "証明オブジェクト",
       response: "応答",
-      open: "ルームドシエを開く",
+      open: "ルーム委任を開く",
       option: {
         board: "取締役会継続",
         soc: "対侵入SOC",
@@ -4581,11 +4581,11 @@ const translations = {
     footer: {
       registry: "荒坂株式会社 公開法人ネットワーク",
       cameo: "秘匿中継",
-      notice: "非公式ファン制作ウェブコンセプトです。Cyberpunk 2077 の名称およびクレジット表記されたプレス画像は CD PROJEKT RED / CD PROJEKT に帰属します。"
+      notice: "独立した法人システム構想です。参照された Cyberpunk 2077 の名称およびクレジット表記されたプレス画像は CD PROJEKT RED / CD PROJEKT に帰属します。"
     },
     products: {
       eyebrow: "製品アーキテクチャ",
-      title: "各サービスは配備可能な企業兵器システムです。",
+      title: "各事業部門は配備可能な法人制御システムです。",
       text: "荒坂製品は、ハードウェア、保管、情報、即応、統治を監査可能な顧客配備へ束ねた密閉型オペレーティング環境として提供されます。",
       aria: "荒坂製品ページ",
       open: "製品ページを開く",
@@ -4696,7 +4696,7 @@ const translations = {
       routerSystem: "システム",
       routerProof: "証明",
       routerWindow: "窓",
-      routerOpen: "経路化ドシエを開く",
+      routerOpen: "経路化委任を開く",
       router: {
         continuity: {
           button: "継続性",
@@ -4926,13 +4926,13 @@ const translations = {
       architecture: "情報アーキテクチャ",
       operations: "運用マトリクス",
       suite: "製品スイート",
-      field: "ナイトシティ現地ファイル",
+      field: "運用現地記録",
       incident: "事案",
       exposure: "露出",
       doctrine: "ドクトリン",
       imageCredit: "画像クレジット",
       caseFile: "ナイトシティ事例ファイル",
-      caseLead: "公開ロア事案を荒坂の製品制御、封じ込め、証明へ接続する配備ナラティブ。",
+      caseLead: "重要事象を荒坂の製品制御、封じ込め、証明へ接続する配備ナラティブ。",
       signal: "信号起点",
       phase: "起動段階",
       containment: "封じ込め層",
@@ -4985,7 +4985,7 @@ const translations = {
       redline: "レッドライン",
       controlFooter: "オペレーターテレメトリは封印済み製品経路レコードからシミュレートされ、クライアントシステムを露出しません。",
       evidencePacket: "証拠パケット",
-      evidencePacketLead: "現地ロア、購入者証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済みエクスポート・マニフェスト。",
+      evidencePacketLead: "事象記録、購入者証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済みエクスポート・マニフェスト。",
       sourceLineage: "ソース系譜",
       assuranceMaterial: "保証資料",
       buyerRoomArtifact: "購入者ルーム",
@@ -5220,7 +5220,7 @@ const translations = {
       doctrine: "ドクトリン",
       imageCredit: "画像クレジット",
       caseFile: "ナイトシティ事例ファイル",
-      caseLead: "公開ロア事案を荒坂のサービスチーム、封じ込め、証明へ接続する委任ナラティブ。",
+      caseLead: "重要事象を荒坂のサービスチーム、封じ込め、証明へ接続する委任ナラティブ。",
       signal: "信号起点",
       phase: "起動段階",
       containment: "封じ込め層",
@@ -5273,7 +5273,7 @@ const translations = {
       redline: "レッドライン",
       controlFooter: "オペレーターテレメトリは封印済みサービス経路レコードからシミュレートされ、クライアントシステムを露出しません。",
       evidencePacket: "証拠パケット",
-      evidencePacketLead: "現地ロア、スポンサー証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済み委任マニフェスト。",
+      evidencePacketLead: "事象記録、スポンサー証明、オペレーターテレメトリ、内部保証を単一審査アーティファクトへ接続する封印済み委任マニフェスト。",
       sourceLineage: "ソース系譜",
       assuranceMaterial: "保証資料",
       buyerRoomArtifact: "委任ルーム",
