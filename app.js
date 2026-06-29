@@ -1781,6 +1781,34 @@ const translations = {
       proof: "Proof Object",
       response: "Response",
       open: "Open room dossier",
+      packetAria: "Private room packet index",
+      packetEyebrow: "Room Packet Index",
+      packetTitle: "A qualified room opens evidence, not marketing material.",
+      packetText: "Every private room is provisioned with sealed files that bind authority, system state, proof objects, and post-deployment obligations before a principal signs.",
+      packetStatus: "Status",
+      packetRelease: "Release",
+      packet: {
+        authority: {
+          title: "Authority Binder",
+          text: "Signer identity, board quorum, mandate class, and jurisdictional authority are resolved before the room exposes live controls.",
+          status: "Witnessed"
+        },
+        system: {
+          title: "System Evidence",
+          text: "Topology, custody state, red-team digest, and integration contract are exposed as sanitized proof artifacts.",
+          status: "Redacted"
+        },
+        capital: {
+          title: "Capital and Relay",
+          text: "Settlement rail, counterparty exposure, off-network checksum, and reputation collateral are shown without public attribution.",
+          status: "Dark rail"
+        },
+        obligation: {
+          title: "Obligation Ledger",
+          text: "SLA covenants, patch cadence, escalation ladder, and continuity monitor are attached before acceptance.",
+          status: "Bound"
+        }
+      },
       option: {
         board: "Board Continuity",
         soc: "Counterintrusion SOC",
@@ -5035,6 +5063,34 @@ const translations = {
       proof: "証明オブジェクト",
       response: "応答",
       open: "ルーム委任を開く",
+      packetAria: "私的ルームパケット索引",
+      packetEyebrow: "ルームパケット索引",
+      packetTitle: "適格ルームが開くのはマーケティング資料ではなく証拠です。",
+      packetText: "各私的ルームには、プリンシパルが署名する前に、権限、システム状態、証明オブジェクト、配備後義務を結合する封印済みファイルが割り当てられます。",
+      packetStatus: "状態",
+      packetRelease: "解除",
+      packet: {
+        authority: {
+          title: "権限バインダー",
+          text: "署名者ID、取締役会クォーラム、委任分類、管轄権限は、ルームがライブ制御を露出する前に解決されます。",
+          status: "立会い済み"
+        },
+        system: {
+          title: "システム証拠",
+          text: "位相図、保管状態、レッドチーム要約、統合契約を、サニタイズ済み証明アーティファクトとして露出します。",
+          status: "編集済み"
+        },
+        capital: {
+          title: "資本と中継",
+          text: "決済レール、カウンターパーティ露出、オフネットワークチェックサム、評判担保を、公開帰属なしに表示します。",
+          status: "秘匿レール"
+        },
+        obligation: {
+          title: "義務台帳",
+          text: "SLA条項、パッチ周期、エスカレーション階梯、継続性モニターを、受諾前に添付します。",
+          status: "拘束済み"
+        }
+      },
       option: {
         board: "取締役会継続",
         soc: "対侵入SOC",

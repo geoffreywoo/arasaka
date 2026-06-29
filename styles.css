@@ -16318,6 +16318,138 @@ a,
   color: var(--acid);
 }
 
+.clientroom-packets {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.38fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(209, 177, 107, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(209, 177, 107, 0.18), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: var(--shadow);
+}
+
+.clientroom-packet-head,
+.clientroom-packets article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(209, 177, 107, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.94);
+}
+
+.clientroom-packet-head {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--gold);
+}
+
+.clientroom-packet-head::after {
+  width: 52px;
+  height: 52px;
+  content: "";
+  background: url("assets/arasaka-mark-white.png") center / contain no-repeat;
+  opacity: 0.2;
+  filter: drop-shadow(0 0 16px rgba(209, 177, 107, 0.4));
+}
+
+.clientroom-packet-head span,
+.clientroom-packets article > span,
+.clientroom-packets dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.63rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clientroom-packet-head span,
+.clientroom-packets article > span {
+  color: var(--gold);
+}
+
+.clientroom-packet-head strong {
+  color: var(--paper);
+  font-size: 1.2rem;
+  line-height: 1.04;
+}
+
+.clientroom-packet-head p,
+.clientroom-packets article p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.clientroom-packets article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 238px;
+  padding: 16px;
+}
+
+.clientroom-packets article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(209, 177, 107, 0.12), transparent 48%),
+    repeating-linear-gradient(90deg, transparent 0 24px, rgba(255, 255, 255, 0.035) 24px 25px);
+}
+
+.clientroom-packets article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.clientroom-packets h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.clientroom-packets dl {
+  display: grid;
+  gap: 1px;
+  align-self: end;
+  margin: 4px 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.clientroom-packets dl div {
+  display: grid;
+  gap: 4px;
+  padding: 9px;
+  background: rgba(5, 5, 7, 0.74);
+}
+
+.clientroom-packets dt {
+  color: rgba(209, 177, 107, 0.72);
+}
+
+.clientroom-packets dd {
+  margin: 0;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
 .dossier-section {
   position: relative;
   width: min(1180px, 100%);
@@ -17780,6 +17912,14 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .clientroom-packets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clientroom-packet-head {
+    grid-column: 1 / -1;
+  }
+
   .field-console-routes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -18947,6 +19087,7 @@ a,
   .casefile-readout,
   .clientroom-console,
   .clientroom-readout,
+  .clientroom-packets,
   .systems-console,
   .archive-console,
   .dossier-grid,
@@ -20548,6 +20689,10 @@ a,
 
   .clientroom-console {
     grid-template-rows: auto minmax(280px, auto) auto;
+    min-height: 0;
+  }
+
+  .clientroom-packets article {
     min-height: 0;
   }
 
