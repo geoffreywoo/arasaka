@@ -6442,6 +6442,40 @@ a,
   text-transform: uppercase;
 }
 
+.watchfloor-route-page .archive-route-hero,
+.watchfloor-route-page .archive-route-readout,
+.watchfloor-route-page .archive-route-incidents,
+.watchfloor-route-page .archive-route-map {
+  background:
+    linear-gradient(135deg, rgba(116, 199, 216, 0.11), transparent 40%, rgba(225, 7, 20, 0.11)),
+    rgba(7, 9, 12, 0.92);
+}
+
+.watchfloor-route-hero {
+  position: relative;
+}
+
+.watchfloor-route-hero::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 76% 18%, rgba(116, 199, 216, 0.18), transparent 32%),
+    repeating-linear-gradient(120deg, transparent 0 30px, rgba(182, 243, 91, 0.035) 30px 31px);
+  opacity: 0.8;
+}
+
+.watchfloor-route-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.watchfloor-route-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.05);
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;

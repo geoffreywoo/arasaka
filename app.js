@@ -10,6 +10,7 @@ const translations = {
       products: "Products",
       technology: "Technology",
       opsArchive: "Archive",
+      watchfloor: "Watchfloor",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -96,6 +97,54 @@ const translations = {
       creditTitle: "Unofficial fan concept with credited source imagery.",
       creditCopy: "Cyberpunk 2077 press screenshots are credited to CD PROJEKT RED. Product plates, service plates, and the evidence wall are generated fan-concept assets for this unofficial Arasaka website.",
       creditOpen: "Open attribution ledger"
+    },
+    opsWatch: {
+      back: "Return to operations",
+      kicker: "NIGHT CITY WATCHFLOOR",
+      title: "Every mandate receives a desk before it becomes a deployment.",
+      summary: "A live command surface for continuity, counterintrusion, capital custody, and autonomous protection mandates before private systems are released into Night City operating theaters.",
+      openContinuity: "Open continuity service",
+      openTech: "Open technology library",
+      visualCaption: "Night City operations center, generated Arasaka watchfloor image.",
+      readouts: {
+        desks: {
+          label: "Mandate desks",
+          copy: "Continuity, ICE, capital, and protection desks assigned before activation."
+        },
+        response: {
+          label: "Response window",
+          copy: "Median first theater response from signed authorization to command acknowledgment."
+        },
+        coverage: {
+          label: "District coverage",
+          copy: "Night City corporate corridors covered by active telemetry, patrol, and custody routing."
+        }
+      },
+      deskEyebrow: "Operational Desks",
+      deskTitle: "Theater command is split by proof object.",
+      deskCopy: "Each desk owns a different evidence trail: construct hash, quarantine receipt, mandate seal, or exclusion-map vote. The watchfloor exists so those trails converge before escalation.",
+      openDesk: "Open desk route",
+      desks: {
+        continuity: {
+          title: "Continuity Desk",
+          copy: "Board quorum, Relic custody, successor authority, and Mikoshi witness paths are held in one escalation surface."
+        },
+        ice: {
+          title: "Counterintrusion Desk",
+          copy: "Blackwall-adjacent signatures, hostile route burn, and quarantine receipts route through human burn authority."
+        },
+        capital: {
+          title: "Capital Desk",
+          copy: "Blind settlement, collateral lock, and disclosure switches are watched before private capital moves."
+        },
+        protection: {
+          title: "Protection Desk",
+          copy: "Drone veils, exclusion-map votes, and convoy corridors remain bound to named escalation officers."
+        }
+      },
+      mapEyebrow: "Theater Routing",
+      mapTitle: "The watchfloor routes incidents into services, products, and technical doctrine.",
+      mapCopy: "Service teams receive the mandate. Product systems hold the control surface. Technical dossiers define the proof object and failure boundary."
     },
     tech: {
       back: "Return to corporate grid",
@@ -3817,6 +3866,7 @@ const translations = {
       products: "製品群",
       technology: "技術",
       opsArchive: "記録庫",
+      watchfloor: "監視室",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -3903,6 +3953,54 @@ const translations = {
       creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
       creditCopy: "Cyberpunk 2077プレススクリーンショットはCD PROJEKT REDに帰属します。製品プレート、サービスプレート、証拠ウォールはこの非公式荒坂サイト用の生成ファンコンセプト資産です。",
       creditOpen: "帰属台帳を開く"
+    },
+    opsWatch: {
+      back: "運用へ戻る",
+      kicker: "ナイトシティ監視室",
+      title: "すべての委任は配備になる前にデスクを受け取る。",
+      summary: "継続、対侵入、資本保管、自律警護の委任を、私的システムがナイトシティ運用劇場へ解放される前に保持するライブ指揮面。",
+      openContinuity: "継続サービスを開く",
+      openTech: "技術ライブラリを開く",
+      visualCaption: "ナイトシティ運用センター、生成された荒坂監視室画像。",
+      readouts: {
+        desks: {
+          label: "委任デスク",
+          copy: "継続、ICE、資本、警護デスクは起動前に割り当てられます。"
+        },
+        response: {
+          label: "応答窓口",
+          copy: "署名済み承認から指揮確認までの初回劇場応答中央値。"
+        },
+        coverage: {
+          label: "地区カバレッジ",
+          copy: "稼働テレメトリー、巡回、保管ルーティングで覆われるナイトシティ企業回廊。"
+        }
+      },
+      deskEyebrow: "運用デスク",
+      deskTitle: "劇場指揮は証跡オブジェクト別に分割されます。",
+      deskCopy: "各デスクは異なる証跡を所有します。構成体ハッシュ、隔離レシート、委任印、排除地図投票。監視室はエスカレーション前にそれらを収束させます。",
+      openDesk: "デスク経路を開く",
+      desks: {
+        continuity: {
+          title: "継続デスク",
+          copy: "取締役会クォーラム、Relic保管、継承者権限、神輿立会経路を単一エスカレーション面に保持します。"
+        },
+        ice: {
+          title: "対侵入デスク",
+          copy: "ブラックウォール隣接署名、敵対経路焼却、隔離レシートは人間の焼却権限を経由します。"
+        },
+        capital: {
+          title: "資本デスク",
+          copy: "盲目決済、担保ロック、開示スイッチは私的資本が移動する前に監視されます。"
+        },
+        protection: {
+          title: "警護デスク",
+          copy: "ドローン遮蔽、排除地図投票、護送回廊は指名済みエスカレーション責任者へ結合されたままです。"
+        }
+      },
+      mapEyebrow: "劇場ルーティング",
+      mapTitle: "監視室は事象をサービス、製品、技術ドクトリンへルーティングします。",
+      mapCopy: "サービスチームが委任を受け取り、製品システムが制御面を保持し、技術記録が証跡オブジェクトと障害境界を定義します。"
     },
     tech: {
       back: "企業グリッドへ戻る",
