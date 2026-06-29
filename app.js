@@ -650,6 +650,69 @@ const translations = {
       mapTitle: "Swarm routes autonomous protection through force governance, regional command, operations watchfloor, and board evidence.",
       mapCopy: "The product file makes the formation purchasable. The governance dossier constrains machine action. The service route places human operators around the moving principal."
     },
+    continuityProtocol: {
+      productCta: "Open activation protocol",
+      back: "Return to Executive Continuity",
+      kicker: "SV-01 / ACTIVATION PROTOCOL",
+      title: "A principal is never missing until authority fails to answer.",
+      summary: "Executive Continuity activates when a principal disruption threatens command authority: verified biological loss, hostile disappearance, memory compromise, or succession paralysis. The protocol routes capture, custody, rehearsal, and release through board-readable proof.",
+      openRelic: "Open Relic specification",
+      openCustody: "Open engram custody",
+      visualCaption: "Executive Continuity deployment plate, generated Arasaka catalog image.",
+      readouts: {
+        window: {
+          label: "Activation window",
+          copy: "Maximum disruption interval before identity, authority, and capital custody move into emergency continuity review."
+        },
+        quorum: {
+          label: "Witness quorum",
+          copy: "Board threshold required before a construct can speak, sign, rehearse, or return with principal authority."
+        },
+        drift: {
+          label: "Drift tolerance",
+          copy: "Behavioral variance ceiling between witnessed principal state and continuity release candidate."
+        }
+      },
+      modulesEyebrow: "Activation Chain",
+      modulesTitle: "Continuity is a service because authority needs operators.",
+      modulesCopy: "The activation protocol coordinates families, boards, physicians, net security, and capital custodians before any construct is treated as a living executive surface.",
+      modules: {
+        trigger: {
+          title: "Principal Disruption Trigger",
+          copy: "Classifies biological loss, hostile absence, cognitive compromise, or market-moving incapacitation before capture authority opens."
+        },
+        custody: {
+          title: "Mikoshi Custody Handoff",
+          copy: "Transfers signed engram material into partitioned cold custody with lineage, revocation, and successor challenge keys separated."
+        },
+        rehearsal: {
+          title: "Succession Rehearsal Room",
+          copy: "Runs board, family, market shock, and hostile counterparty simulations before a release candidate receives authority."
+        },
+        release: {
+          title: "Authority Release Gate",
+          copy: "Binds board quorum, capital custody, export corridor, and public silence posture into one reversible release decision."
+        }
+      },
+      envelopeEyebrow: "Activation Envelope",
+      envelopeTitle: "Authority continuity is the product.",
+      envelopeCopy: "The service cannot activate until Arasaka can prove the principal, sponsor, witness quorum, custody object, release condition, and abort path across the same mandate.",
+      matrix: {
+        trigger: "Trigger class",
+        triggerValue: "Biological discontinuity, hostile disappearance, neural compromise, or succession deadlock",
+        sponsor: "Sponsor authority",
+        sponsorValue: "Board motion, family quorum, sovereign instrument, or sealed founder covenant",
+        custody: "Custody object",
+        custodyValue: "Relic capture package, Mikoshi construct partition, witness manifest, and authority graph",
+        release: "Release condition",
+        releaseValue: "Board quorum, drift clearance, capital lock, export license, and successor challenge closure",
+        abort: "Abort path",
+        abortValue: "Cold rollback, construct silence, family injunction, board stay, or permanent vault seal"
+      },
+      mapEyebrow: "Continuity Routing",
+      mapTitle: "Executive Continuity routes authority through Relic capture, Mikoshi custody, board governance, and Black Ledger control.",
+      mapCopy: "The service is the human operating layer around the continuity stack: it decides when evidence is enough, when silence is safer, and when authority may speak again."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5408,6 +5471,69 @@ const translations = {
       mapEyebrow: "警護経路",
       mapTitle: "Swarmは自律警護を戦力統治、地域指揮、運用監視室、取締役会証拠へルーティングします。",
       mapCopy: "製品ファイルは編隊を購入可能にします。統治ドシエは機械行動を制約します。サービス経路は移動主体の周囲に人間オペレーターを配置します。"
+    },
+    continuityProtocol: {
+      productCta: "起動プロトコルを開く",
+      back: "役員継続へ戻る",
+      kicker: "SV-01 / 起動プロトコル",
+      title: "権限が応答を失うまで、主体は不在ではありません。",
+      summary: "Executive Continuityは、確認済み生物学的喪失、敵対的失踪、記憶侵害、継承麻痺など、主体の途絶が指揮権限を脅かす時に起動します。このプロトコルは取得、保管、演習、リリースを取締役会可読の証明へルーティングします。",
+      openRelic: "Relic仕様を開く",
+      openCustody: "エングラム保管を開く",
+      visualCaption: "Executive Continuity配備プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        window: {
+          label: "起動窓",
+          copy: "同一性、権限、資本保管が緊急継続レビューへ移行する前の最大途絶間隔。"
+        },
+        quorum: {
+          label: "立会クォーラム",
+          copy: "構成体が主体権限で発話、署名、演習、復帰する前に必要な取締役会しきい値。"
+        },
+        drift: {
+          label: "ドリフト許容値",
+          copy: "立会済み主体状態と継続リリース候補の間で許容される行動分散上限。"
+        }
+      },
+      modulesEyebrow: "起動チェーン",
+      modulesTitle: "権限にはオペレーターが必要なため、継続性はサービスです。",
+      modulesCopy: "起動プロトコルは、構成体が生きた役員面として扱われる前に、家族、取締役会、医師、ネット警備、資本保管者を調整します。",
+      modules: {
+        trigger: {
+          title: "主体途絶トリガー",
+          copy: "取得権限が開く前に、生物学的喪失、敵対的不在、認知侵害、市場を動かす不能状態を分類します。"
+        },
+        custody: {
+          title: "Mikoshi保管引継",
+          copy: "署名済みエングラム素材を、系譜、取消、後継者異議キーを分離した分割低温保管へ移送します。"
+        },
+        rehearsal: {
+          title: "継承演習室",
+          copy: "リリース候補が権限を受ける前に、取締役会、家族、市場ショック、敵対的相手方シミュレーションを実行します。"
+        },
+        release: {
+          title: "権限リリースゲート",
+          copy: "取締役会クォーラム、資本保管、輸出回廊、公開沈黙姿勢を一つの可逆的リリース判断へ結合します。"
+        }
+      },
+      envelopeEyebrow: "起動範囲",
+      envelopeTitle: "権限継続が製品です。",
+      envelopeCopy: "このサービスは、同一の委任内で主体、スポンサー、立会クォーラム、保管オブジェクト、リリース条件、中止経路を荒坂が証明できるまで起動できません。",
+      matrix: {
+        trigger: "トリガークラス",
+        triggerValue: "生物学的途絶、敵対的失踪、神経侵害、または継承デッドロック",
+        sponsor: "スポンサー権限",
+        sponsorValue: "取締役会動議、家族クォーラム、主権文書、または封印済み創業者コベナント",
+        custody: "保管オブジェクト",
+        custodyValue: "Relic取得パッケージ、Mikoshi構成体区画、立会マニフェスト、権限グラフ",
+        release: "リリース条件",
+        releaseValue: "取締役会クォーラム、ドリフト認可、資本ロック、輸出ライセンス、後継者異議終結",
+        abort: "中止経路",
+        abortValue: "低温ロールバック、構成体沈黙、家族差止、取締役会停止、または恒久保管庫封印"
+      },
+      mapEyebrow: "継続経路",
+      mapTitle: "Executive Continuityは権限をRelic取得、Mikoshi保管、取締役会統治、Black Ledger制御へルーティングします。",
+      mapCopy: "このサービスは継続スタックを囲む人間運用レイヤーです。証拠がいつ十分か、沈黙がいつ安全か、権限がいつ再び発話できるかを決定します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
