@@ -2352,6 +2352,13 @@ const translations = {
       degradedMode: "Degraded Mode",
       recoveryPath: "Recovery Path",
       failoverState: "State",
+      escalationLadder: "Escalation Ladder",
+      escalationLadderLead: "Severity ladder for duty desk, witness path, executive override, and post-incident proof before the file leaves operations.",
+      dutyDesk: "Duty Desk",
+      witnessPath: "Witness Path",
+      executiveOverride: "Executive Override",
+      afterActionProof: "After-Action Proof",
+      escalationState: "Escalation",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2612,6 +2619,13 @@ const translations = {
       degradedMode: "Degraded Mode",
       recoveryPath: "Recovery Path",
       failoverState: "State",
+      escalationLadder: "Escalation Ladder",
+      escalationLadderLead: "Severity ladder for duty desk, witness path, sponsor override, and post-incident proof during live service operations.",
+      dutyDesk: "Duty Desk",
+      witnessPath: "Witness Path",
+      executiveOverride: "Sponsor Override",
+      afterActionProof: "After-Action Proof",
+      escalationState: "Escalation",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4987,6 +5001,13 @@ const translations = {
       degradedMode: "縮退モード",
       recoveryPath: "復旧経路",
       failoverState: "状態",
+      escalationLadder: "エスカレーション階梯",
+      escalationLadderLead: "ファイルが運用を離れる前のデューティデスク、証人経路、役員オーバーライド、事後証明を示す重大度階梯。",
+      dutyDesk: "デューティデスク",
+      witnessPath: "証人経路",
+      executiveOverride: "役員オーバーライド",
+      afterActionProof: "事後証明",
+      escalationState: "エスカレーション",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -5247,6 +5268,13 @@ const translations = {
       degradedMode: "縮退モード",
       recoveryPath: "復旧経路",
       failoverState: "状態",
+      escalationLadder: "エスカレーション階梯",
+      escalationLadderLead: "ライブサービス運用中のデューティデスク、証人経路、スポンサーオーバーライド、事後証明を示す重大度階梯。",
+      dutyDesk: "デューティデスク",
+      witnessPath: "証人経路",
+      executiveOverride: "スポンサーオーバーライド",
+      afterActionProof: "事後証明",
+      escalationState: "エスカレーション",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5632,6 +5660,7 @@ const routeDataBoundary = document.querySelector("[data-route-data-boundary]");
 const routeTelemetry = document.querySelector("[data-route-telemetry]");
 const routeRiskRegister = document.querySelector("[data-route-risk-register]");
 const routeFailureAtlas = document.querySelector("[data-route-failure-atlas]");
+const routeEscalationLadder = document.querySelector("[data-route-escalation-ladder]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5678,6 +5707,7 @@ const serviceRouteDataBoundary = document.querySelector("[data-service-data-boun
 const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]");
 const serviceRouteRiskRegister = document.querySelector("[data-service-risk-register]");
 const serviceRouteFailureAtlas = document.querySelector("[data-service-failure-atlas]");
+const serviceRouteEscalationLadder = document.querySelector("[data-service-escalation-ladder]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6997,6 +7027,40 @@ function renderRouteFailureAtlas(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteEscalationLadder(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-escalation-head";
+  label.textContent = labels.escalationLadder;
+  lead.textContent = labels.escalationLadderLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-escalation-grid";
+  rows.forEach(({ label: rowLabel, value, text, state }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `E-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.escalationState}: ${state}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -8097,6 +8161,33 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteEscalationLadder(routeEscalationLadder, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.dutyDesk,
+      value: operations.integrations[0],
+      text: `${operations.regions[0]} / ${operations.sla[0]}`,
+      state: file.clearance
+    },
+    {
+      label: dictionary.productRoute.witnessPath,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${operations.packages[1] || operations.packages[0]} / ${field.doctrine}`,
+      state: operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.executiveOverride,
+      value: file.tabs.governance.title,
+      text: `${dictionary.productRoute.capitalObserver} / ${field.exposure}`,
+      state: "G.W. / A-F"
+    },
+    {
+      label: dictionary.productRoute.afterActionProof,
+      value: operations.sla[2] || operations.sla[0],
+      text: `${file.tabs.deployment.title} / ${file.tabs.governance.title}`,
+      state: operations.regions.join(" / ")
+    }
+  ]);
+
   renderRouteSpecsheet(routeSpecsheet, dictionary.productRoute, {
     image: `../../assets/${routeVisualImages.product[productKey] || routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
     alt: `${file.title} ${dictionary.productRoute.productPhoto}`,
@@ -9126,6 +9217,33 @@ function updateServiceRoute() {
       value: file.operations.regions[0],
       text: `${file.field.doctrine} / ${file.tabs.governance.title}`,
       state: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteEscalationLadder(serviceRouteEscalationLadder, routeLabels, [
+    {
+      label: routeLabels.dutyDesk,
+      value: file.operations.integrations[0],
+      text: `${file.operations.regions[0]} / ${file.operations.sla[0]}`,
+      state: file.clearance
+    },
+    {
+      label: routeLabels.witnessPath,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.operations.packages[1] || file.operations.packages[0]} / ${file.field.doctrine}`,
+      state: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.executiveOverride,
+      value: file.tabs.governance.title,
+      text: `${routeLabels.capitalObserver} / ${file.field.exposure}`,
+      state: "G.W. / A-F"
+    },
+    {
+      label: routeLabels.afterActionProof,
+      value: file.operations.sla[2] || file.operations.sla[0],
+      text: `${file.tabs.deployment.title} / ${file.tabs.governance.title}`,
+      state: file.operations.regions.join(" / ")
     }
   ]);
 
