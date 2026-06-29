@@ -8,6 +8,7 @@ const translations = {
       subsidiaries: "Subsidiaries",
       services: "Services",
       products: "Products",
+      technology: "Technology",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -42,6 +43,78 @@ const translations = {
       groupCorporate: "Corporate",
       groupSystems: "Systems",
       groupDossiers: "Dossiers"
+    },
+    tech: {
+      back: "Return to corporate grid",
+      kicker: "ARASAKA TECHNICAL LIBRARY",
+      title: "Technology Dossiers",
+      summary: "Engineering notes, control surfaces, and operational envelopes for systems reserved for sovereign clients, treaty families, and infrastructure operators.",
+      openProducts: "Open product index",
+      indexEyebrow: "Library Index",
+      indexTitle: "Reference architectures for private power.",
+      indexCopy: "Each dossier links a product surface to the governing protocol, evidence object, and failure boundary expected by a client board or national command authority.",
+      labels: {
+        surface: "Surface",
+        latency: "Latency",
+        proof: "Proof"
+      },
+      cards: {
+        neural: {
+          title: "Neural Substrate Protocol",
+          copy: "Construct capture, biometric escrow, and engram drift controls for continuity systems that must outlive the body without outpacing consent.",
+          surface: "Relic / Mikoshi",
+          proof: "Witnessed construct hash"
+        },
+        ice: {
+          title: "Black ICE Runtime",
+          copy: "Trap partitioning, hostile route burn, and quarantine witness logic for networks where intrusion is treated as a board-level event.",
+          surface: "Mesh / Counterintrusion",
+          proof: "Quarantine receipt"
+        },
+        swarm: {
+          title: "Autonomous Force Governance",
+          copy: "Drone veil geometry, exclusion map compilation, and human escalation guarantees for private cities and convoy corridors.",
+          surface: "Swarm / Protection",
+          proof: "Civilian exclusion ledger"
+        },
+        capital: {
+          title: "Capital Custody Rail",
+          copy: "Settlement silence, patent collateral custody, and private reputation proofs for capital that must move without advertising intent.",
+          surface: "Ledger / Mandate",
+          proof: "Board escrow seal"
+        }
+      },
+      matrixEyebrow: "Engineering Matrix",
+      matrixTitle: "Control plane comparison.",
+      matrix: {
+        system: "System",
+        control: "Control plane",
+        object: "Proof object",
+        boundary: "Failure boundary",
+        neural: {
+          control: "Biometric consent quorum",
+          object: "Construct drift certificate",
+          boundary: "Identity divergence above 0.7%"
+        },
+        ice: {
+          control: "Disposable hostile-route partition",
+          object: "Trace burn receipt",
+          boundary: "Collateral route exposure"
+        },
+        swarm: {
+          control: "Human escalation governor",
+          object: "Exclusion-map vote log",
+          boundary: "Civilian uncertainty zone"
+        },
+        capital: {
+          control: "Blind settlement notary",
+          object: "Escrowed mandate seal",
+          boundary: "Jurisdictional disclosure trigger"
+        }
+      },
+      networkEyebrow: "Networked Pages",
+      networkTitle: "A public map of private infrastructure.",
+      networkCopy: "The library is designed as a connective layer: product files hold commercial packaging, service files hold procurement fit, and this page holds the engineering language that binds them together."
     },
     spine: {
       node: "Public Node",
@@ -3393,6 +3466,7 @@ const translations = {
       subsidiaries: "子会社",
       services: "サービス",
       products: "製品群",
+      technology: "技術",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -3427,6 +3501,78 @@ const translations = {
       groupCorporate: "企業",
       groupSystems: "システム",
       groupDossiers: "記録"
+    },
+    tech: {
+      back: "企業グリッドへ戻る",
+      kicker: "荒坂技術ライブラリ",
+      title: "技術記録",
+      summary: "主権顧客、条約家系、基幹インフラ運営者に限定されるシステムの工学ノート、制御面、運用範囲。",
+      openProducts: "製品索引を開く",
+      indexEyebrow: "ライブラリ索引",
+      indexTitle: "私的権力の参照アーキテクチャ。",
+      indexCopy: "各記録は、製品面、統治プロトコル、証跡オブジェクト、取締役会または国家指揮権限が求める障害境界を接続します。",
+      labels: {
+        surface: "表面",
+        latency: "遅延",
+        proof: "証跡"
+      },
+      cards: {
+        neural: {
+          title: "神経基盤プロトコル",
+          copy: "身体の寿命を超えても同意を追い越さない継続性システムのための構成体取得、生体エスクロー、エングラム偏移制御。",
+          surface: "レリック / 神輿",
+          proof: "立会済み構成体ハッシュ"
+        },
+        ice: {
+          title: "ブラックICEランタイム",
+          copy: "侵入を取締役会レベルの事象として扱うネットワーク向けの罠区画、敵対経路焼却、隔離立会ロジック。",
+          surface: "メッシュ / 対侵入",
+          proof: "隔離レシート"
+        },
+        swarm: {
+          title: "自律戦力統治",
+          copy: "私設都市と護送回廊向けのドローン遮蔽幾何、排除地図コンパイル、人間へのエスカレーション保証。",
+          surface: "スウォーム / 警護",
+          proof: "民間人排除台帳"
+        },
+        capital: {
+          title: "資本保管レール",
+          copy: "意図を公開せずに移動しなければならない資本のための沈黙決済、特許担保保管、私的評判証明。",
+          surface: "台帳 / 委任",
+          proof: "取締役会エスクロー印"
+        }
+      },
+      matrixEyebrow: "工学行列",
+      matrixTitle: "制御面比較。",
+      matrix: {
+        system: "システム",
+        control: "制御面",
+        object: "証跡",
+        boundary: "障害境界",
+        neural: {
+          control: "生体同意クォーラム",
+          object: "構成体偏移証明書",
+          boundary: "同一性偏差0.7%以上"
+        },
+        ice: {
+          control: "使い捨て敵対経路区画",
+          object: "追跡焼却レシート",
+          boundary: "副次経路露出"
+        },
+        swarm: {
+          control: "人間エスカレーション統治",
+          object: "排除地図投票ログ",
+          boundary: "民間不確実領域"
+        },
+        capital: {
+          control: "盲目決済公証",
+          object: "エスクロー済み委任印",
+          boundary: "管轄開示トリガー"
+        }
+      },
+      networkEyebrow: "接続ページ",
+      networkTitle: "私的インフラの公開地図。",
+      networkCopy: "このライブラリは接続層として設計されています。製品ファイルは商用パッケージを、サービスファイルは調達適合を、このページはそれらを結ぶ工学言語を保持します。"
     },
     spine: {
       node: "公開ノード",

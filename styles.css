@@ -5696,6 +5696,221 @@ a,
   font-size: 1.05rem;
 }
 
+.tech-route-main {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  padding: 22px 0 42px;
+}
+
+.tech-route-main::before {
+  position: fixed;
+  inset: 28px;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(116, 199, 216, 0.12);
+  clip-path: polygon(0 0, 92% 0, 100% 15%, 100% 100%, 8% 100%, 0 84%);
+}
+
+.tech-route-main > .product-route-header,
+.tech-route-hero {
+  grid-area: auto;
+}
+
+.tech-route-hero {
+  min-height: 430px;
+}
+
+.tech-section-shell,
+.tech-spec-panel,
+.tech-network-panel {
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.1), transparent 40%, rgba(116, 199, 216, 0.08)),
+    rgba(7, 9, 12, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.tech-section-shell {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.32fr) minmax(0, 0.68fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.tech-section-intro {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 14px;
+}
+
+.tech-section-intro > span,
+.tech-network-panel > div > span,
+.tech-dossier-card > span,
+.tech-spec-head span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.tech-section-intro h2,
+.tech-network-panel h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3.4rem);
+  line-height: 0.96;
+}
+
+.tech-section-intro p,
+.tech-network-panel p,
+.tech-dossier-card p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+}
+
+.tech-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tech-dossier-card {
+  display: grid;
+  min-height: 100%;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.tech-dossier-card h3 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.65rem);
+  line-height: 1;
+}
+
+.tech-dossier-card dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.18);
+  border-radius: 4px;
+}
+
+.tech-dossier-card dl div {
+  display: grid;
+  grid-template-columns: minmax(82px, 0.34fr) minmax(0, 0.66fr);
+  gap: 10px;
+  padding: 9px 10px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.tech-dossier-card dt,
+.tech-dossier-card dd {
+  margin: 0;
+}
+
+.tech-dossier-card dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: rgba(182, 243, 91, 0.82);
+}
+
+.tech-dossier-card dd {
+  color: rgba(243, 244, 242, 0.82);
+}
+
+.tech-dossier-card nav,
+.tech-network-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-dossier-card nav a,
+.tech-network-links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 4px;
+  color: var(--cyan);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tech-dossier-card nav a:hover,
+.tech-dossier-card nav a:focus-visible,
+.tech-network-links a:hover,
+.tech-network-links a:focus-visible {
+  color: #07090c;
+  background: var(--cyan);
+}
+
+.tech-spec-panel,
+.tech-network-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.tech-spec-matrix {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.18);
+  border-radius: 5px;
+}
+
+.tech-spec-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 0.14fr) repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(116, 199, 216, 0.12);
+}
+
+.tech-spec-row > * {
+  min-width: 0;
+  padding: 12px;
+  background: rgba(7, 9, 12, 0.88);
+  overflow-wrap: anywhere;
+}
+
+.tech-spec-row strong {
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.tech-network-panel {
+  grid-template-columns: minmax(250px, 0.38fr) minmax(0, 0.62fr);
+  align-items: start;
+}
+
+.tech-network-panel > div:first-child {
+  display: grid;
+  gap: 12px;
+}
+
+.tech-network-links {
+  align-content: start;
+  justify-content: end;
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;
@@ -21435,5 +21650,69 @@ a,
   }
   50% {
     transform: translateY(168px);
+  }
+}
+
+@media (max-width: 1040px) {
+  .tech-section-shell,
+  .tech-network-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-network-links {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .tech-route-main {
+    width: min(100% - 22px, 1180px);
+    padding-top: 12px;
+  }
+
+  .tech-route-main::before {
+    inset: 12px;
+  }
+
+  .tech-route-hero {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .tech-section-shell,
+  .tech-spec-panel,
+  .tech-network-panel {
+    padding: 10px;
+  }
+
+  .tech-section-intro {
+    padding: 8px;
+  }
+
+  .tech-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-dossier-card {
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .tech-dossier-card dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .tech-spec-row,
+  .tech-spec-head {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-spec-head {
+    display: none;
+  }
+
+  .tech-spec-row > * {
+    padding: 10px;
   }
 }
