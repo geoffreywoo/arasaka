@@ -1858,6 +1858,34 @@ const translations = {
       aria: "Arasaka product pages",
       open: "Open product page",
       route: "Full system page",
+      api: {
+        aria: "Protocol API surface",
+        eyebrow: "Protocol API Surface",
+        title: "Every product exposes a controlled command contract.",
+        text: "Public-safe protocol shapes for buyers evaluating how Arasaka systems bind identity, memory, force, and capital to auditable machine interfaces.",
+        auth: "Auth",
+        output: "Output",
+        relic: {
+          title: "Engram Custody Handshake",
+          text: "Captures executive memory state, binds biometric witness, and returns a cold archive integrity token.",
+          output: "Archive token"
+        },
+        mikoshi: {
+          title: "Construct Partition Control",
+          text: "Routes persona forks into governed simulation chambers with quorum and thaw constraints.",
+          output: "Witness hash"
+        },
+        ice: {
+          title: "Black ICE Counterfield",
+          text: "Mirrors hostile runner signatures into disposable trap geometry before Blackwall-adjacent drift spreads.",
+          output: "Trace vault"
+        },
+        swarm: {
+          title: "Autonomous Corridor Lock",
+          text: "Coordinates drone veils, route denial, and human-command escalation for principals in hostile transit.",
+          output: "Force audit"
+        }
+      },
       matrixAria: "Arasaka portfolio comparison matrix",
       matrixEyebrow: "Portfolio Matrix",
       matrixTitle: "Route the mandate before the meeting starts.",
@@ -4762,6 +4790,34 @@ const translations = {
       aria: "荒坂製品ページ",
       open: "製品ページを開く",
       route: "フルシステムページ",
+      api: {
+        aria: "プロトコルAPI面",
+        eyebrow: "プロトコルAPI面",
+        title: "すべての製品は、制御済み指揮契約を公開します。",
+        text: "荒坂システムが身元、記憶、武力、資本を監査可能な機械インターフェースへ結合する方法を、買い手が評価するための公開安全なプロトコル形状。",
+        auth: "認証",
+        output: "出力",
+        relic: {
+          title: "エングラム保管ハンドシェイク",
+          text: "役員記憶状態を取得し、生体証人を結合し、冷却アーカイブ完全性トークンを返します。",
+          output: "アーカイブトークン"
+        },
+        mikoshi: {
+          title: "コンストラクト分割制御",
+          text: "人格フォークを、定足数と解凍制約を持つ統治済みシミュレーション室へ経路化します。",
+          output: "証人ハッシュ"
+        },
+        ice: {
+          title: "ブラックICE対抗場",
+          text: "ブラックウォール隣接ドリフトが拡散する前に、敵対ランナー署名を使い捨て罠ジオメトリへミラーします。",
+          output: "追跡保管庫"
+        },
+        swarm: {
+          title: "自律回廊ロック",
+          text: "敵対通行中のプリンシパル向けに、ドローンヴェール、経路拒否、人間指揮エスカレーションを調整します。",
+          output: "武力監査"
+        }
+      },
       matrixAria: "荒坂ポートフォリオ比較マトリクス",
       matrixEyebrow: "ポートフォリオ・マトリクス",
       matrixTitle: "会議が始まる前に委任を経路化します。",

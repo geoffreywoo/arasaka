@@ -4078,6 +4078,144 @@ a,
   font-size: 0.92rem;
 }
 
+.protocol-api {
+  width: min(1180px, 100%);
+  margin: 14px auto 0;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.46fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.16), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.12)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.protocol-api-head,
+.protocol-api article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.08), transparent 58%),
+    rgba(6, 8, 10, 0.94);
+}
+
+.protocol-api-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.protocol-api-head span,
+.protocol-api article > span,
+.protocol-api dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.protocol-api-head span,
+.protocol-api article > span {
+  color: var(--acid);
+}
+
+.protocol-api-head strong {
+  color: var(--paper);
+  font-size: 1.16rem;
+  line-height: 1.06;
+}
+
+.protocol-api-head p,
+.protocol-api p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.8rem;
+  line-height: 1.42;
+}
+
+.protocol-api article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 268px;
+  padding: 15px;
+}
+
+.protocol-api article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, transparent 0 24px, rgba(182, 243, 91, 0.04) 24px 25px),
+    linear-gradient(135deg, rgba(116, 199, 216, 0.08), transparent 58%);
+}
+
+.protocol-api article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.protocol-api h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.protocol-api dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: auto 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.protocol-api dl div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.protocol-api dt {
+  color: var(--dim);
+}
+
+.protocol-api dd {
+  margin: 0;
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.protocol-api code {
+  display: block;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(182, 243, 91, 0.18);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.36);
+  color: var(--gold);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  line-height: 1.28;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .portfolio-matrix {
   width: min(1180px, 100%);
   margin: 14px auto 0;
@@ -16415,6 +16553,14 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .protocol-api {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .protocol-api-head {
+    grid-column: 1 / -1;
+  }
+
   .portfolio-matrix-head {
     grid-template-columns: 1fr;
   }
@@ -17927,6 +18073,19 @@ a,
     min-height: 70px;
   }
 
+  .protocol-api {
+    grid-template-columns: 1fr;
+  }
+
+  .protocol-api article {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .protocol-api dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .assurance-ledger {
     grid-template-columns: 1fr;
   }
@@ -18226,6 +18385,8 @@ a,
   .signal-intel,
   .lore-readout dl,
   .product-grid,
+  .protocol-api,
+  .protocol-api dl,
   .node-dock-readouts,
   .megacity-readout dl,
   .foundry-readout dl,
