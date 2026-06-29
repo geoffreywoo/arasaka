@@ -777,6 +777,70 @@ const translations = {
       mapTitle: "Counterintrusion routes hostile netpaths through ICE runtime, Blackwall perimeter, Soulkiller quarantine, and board evidence.",
       mapCopy: "The service page provides operators. The product file defines the appliance. The runtime dossier defines the trap. The governance docket decides what can be burned."
     },
+    ledgerMandateProtocol: {
+      productCta: "Open settlement protocol",
+      openProtocol: "Open settlement protocol",
+      back: "Return to Black Ledger Mandate",
+      kicker: "SV-03 / SETTLEMENT PROTOCOL",
+      title: "Capital moves only after authority becomes proof.",
+      summary: "Black Ledger Mandate activates when capital, patents, founder identity, or sovereign instruments must move without public intent leakage. The protocol routes mandate intake, blind counterparty matching, collateral proof, escrow release, and selective disclosure through board-readable custody evidence.",
+      openLedger: "Open ledger custody spec",
+      openRail: "Open capital custody rail",
+      visualCaption: "Black Ledger Mandate settlement plate, generated Arasaka catalog image.",
+      readouts: {
+        window: {
+          label: "Settlement window",
+          copy: "Private execution path from mandate match to sealed counterparty receipt."
+        },
+        quorum: {
+          label: "Custody quorum",
+          copy: "Required custodian threshold before escrow can release capital, patent, identity, or key material."
+        },
+        disclosure: {
+          label: "Disclosure gate",
+          copy: "Jurisdiction trigger that converts silent custody into regulator-readable evidence."
+        }
+      },
+      modulesEyebrow: "Settlement Chain",
+      modulesTitle: "The mandate is the operator layer around private capital.",
+      modulesCopy: "The protocol decides when money can move, who can know, and which evidence survives public silence.",
+      modules: {
+        intake: {
+          title: "Mandate Intake Desk",
+          copy: "Normalizes sponsor authority, asset class, silence posture, fee rail, and release condition before any match occurs."
+        },
+        match: {
+          title: "Blind Counterparty Match",
+          copy: "Tests compatibility without exposing beneficial owners, strategy timing, or full inventory to either side."
+        },
+        patent: {
+          title: "Patent Collateral Proof",
+          copy: "Binds claim-level IP, licensing encumbrance, enforcement venue, and financing pressure into custody evidence."
+        },
+        release: {
+          title: "Escrow Release Switch",
+          copy: "Releases capital only after quorum, legal corridor, counterparty delivery, and selective disclosure rules align."
+        }
+      },
+      envelopeEyebrow: "Settlement Envelope",
+      envelopeTitle: "Private capital still needs an authority trail.",
+      envelopeCopy: "The mandate cannot settle until Arasaka can prove sponsor authority, collateral existence, counterparty compatibility, release condition, and disclosure posture across the same sealed record.",
+      matrix: {
+        sponsor: "Sponsor authority",
+        sponsorValue: "Board office, sovereign desk, family office, controlled operating company, or founder covenant",
+        asset: "Asset class",
+        assetValue: "Patent estate, treasury reserve, founder liquidity, settlement key, or identity-linked collateral",
+        counterparty: "Counterparty mode",
+        counterpartyValue: "Blind principal, sealed counterparty, delayed market signal, private receipt, and off-network witness",
+        release: "Release condition",
+        releaseValue: "Quorum motion, lawful corridor, covenant renewal, counterparty delivery, or succession event",
+        exclusion: "Excluded use",
+        exclusionValue: "Sanctions evasion, fabricated collateral, unwitnessed capital flight, uncontrolled market manipulation"
+      },
+      mapEyebrow: "Settlement Routing",
+      mapTitle: "Black Ledger Mandate routes capital through custody proof, regional command, board governance, and selective disclosure.",
+      mapCopy: "The service is the operator layer around the capital rail: it decides when money can move, who can know, and which evidence survives public silence."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5662,6 +5726,70 @@ const translations = {
       mapEyebrow: "対侵入経路",
       mapTitle: "Counterintrusionは敵対ネット経路をICEランタイム、Blackwall境界、Soulkiller隔離、取締役会証拠へルーティングします。",
       mapCopy: "サービスページはオペレーターを提供します。製品ファイルはアプライアンスを定義します。ランタイムドシエはトラップを定義します。統治ドケットは何を焼却できるかを決定します。"
+    },
+    ledgerMandateProtocol: {
+      productCta: "決済プロトコルを開く",
+      openProtocol: "決済プロトコルを開く",
+      back: "Black Ledger Mandateへ戻る",
+      kicker: "SV-03 / 決済プロトコル",
+      title: "資本は、権限が証明になった後にのみ動きます。",
+      summary: "Black Ledger Mandateは、資本、特許、創業者同一性、主権文書が公開意図漏洩なしに移動しなければならない時に起動します。このプロトコルは、委任受領、盲目相手方照合、担保証明、エスクロー解放、選択的開示を取締役会可読の保管証拠へ経路化します。",
+      openLedger: "台帳保管仕様を開く",
+      openRail: "資本保管レールを開く",
+      visualCaption: "Black Ledger Mandate決済プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        window: {
+          label: "決済窓",
+          copy: "委任照合から封印済み相手方受領書までの私的実行経路。"
+        },
+        quorum: {
+          label: "保管クォーラム",
+          copy: "エスクローが資本、特許、同一性、またはキー素材を解放する前に必要な保管者しきい値。"
+        },
+        disclosure: {
+          label: "開示ゲート",
+          copy: "沈黙した保管を規制当局可読の証拠へ変換する管轄トリガー。"
+        }
+      },
+      modulesEyebrow: "決済チェーン",
+      modulesTitle: "委任は私的資本を囲む運用者レイヤーです。",
+      modulesCopy: "このプロトコルは、資金がいつ動けるか、誰が知れるか、どの証拠が公開沈黙の後も残るかを決定します。",
+      modules: {
+        intake: {
+          title: "委任受領デスク",
+          copy: "照合前に、スポンサー権限、資産クラス、沈黙姿勢、手数料レール、リリース条件を正規化します。"
+        },
+        match: {
+          title: "盲目相手方照合",
+          copy: "実質所有者、戦略タイミング、全在庫をどちらにも露出せずに互換性を検査します。"
+        },
+        patent: {
+          title: "特許担保証明",
+          copy: "クレーム単位IP、ライセンス負担、執行法廷、資金調達圧力を保管証拠へ結合します。"
+        },
+        release: {
+          title: "エスクロー解放スイッチ",
+          copy: "クォーラム、法的回廊、相手方引渡、選択的開示ルールが整列した後にのみ資本を解放します。"
+        }
+      },
+      envelopeEyebrow: "決済範囲",
+      envelopeTitle: "私的資本にも権限の軌跡が必要です。",
+      envelopeCopy: "スポンサー権限、担保存在、相手方互換性、リリース条件、開示姿勢を同一の封印済み記録で荒坂が証明できるまで、委任は決済できません。",
+      matrix: {
+        sponsor: "スポンサー権限",
+        sponsorValue: "取締役会室、主権デスク、ファミリーオフィス、制御済み事業会社、または創業者コベナント",
+        asset: "資産クラス",
+        assetValue: "特許資産、財務準備、創業者流動性、決済キー、または同一性連動担保",
+        counterparty: "相手方モード",
+        counterpartyValue: "盲目主体、封印済み相手方、遅延市場信号、私的受領書、オフネットワーク立会",
+        release: "リリース条件",
+        releaseValue: "クォーラム動議、合法回廊、コベナント更新、相手方引渡、または継承イベント",
+        exclusion: "除外用途",
+        exclusionValue: "制裁回避、捏造担保、非立会資本逃避、非制御市場操作"
+      },
+      mapEyebrow: "決済経路",
+      mapTitle: "Black Ledger Mandateは資本を保管証明、地域指揮、取締役会統治、選択的開示へ経路化します。",
+      mapCopy: "このサービスは資本レールを囲む運用者レイヤーです。資金がいつ動けるか、誰が知れるか、どの証拠が公開沈黙の後も残るかを決定します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
