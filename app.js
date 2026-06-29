@@ -26,6 +26,7 @@ const translations = {
       dossier: "Dossier",
       operations: "Operations",
       governance: "Governance",
+      disclosures: "Disclosures",
       careers: "Careers",
       contact: "Contact"
     },
@@ -1761,6 +1762,50 @@ const translations = {
       title: "Family control. Institutional scale. Continuous authority.",
       text: "Arasaka remains a family-led global institution, but the control surface has evolved into neural archives, private defense networks, and capital systems designed to survive regime change."
     },
+    disclosures: {
+      eyebrow: "Public Disclosures",
+      title: "A regulated public surface for systems that cannot be fully public.",
+      text: "Arasaka publishes only the portion of a mandate that a sovereign client, board committee, or exchange counterparty can safely inspect without exposing operational geometry.",
+      status: "Disclosure Status",
+      statusValue: "Current / Redacted",
+      jurisdiction: "Jurisdiction",
+      jurisdictionValue: "Tokyo Root / Night City Relay",
+      assurance: "Assurance Clock",
+      assuranceValue: "72h attestation window",
+      filing: "Filing",
+      owner: "Owner",
+      control: "Control",
+      updated: "Updated",
+      item1: {
+        title: "Neural Custody Safe Harbor",
+        text: "Public statement for engram storage, principal consent, construct drift, and post-biological continuity rights.",
+        owner: "Mikoshi Governance",
+        control: "Human witness quorum",
+        updated: "2077-Q4"
+      },
+      item2: {
+        title: "Black Ledger Mandate Notice",
+        text: "Institutional capital disclosure for settlement rails, patent collateral, founder-identity exposure, and off-market order flow.",
+        owner: "Capital Systems",
+        control: "No-public-claim covenant",
+        updated: "2077-Q4"
+      },
+      item3: {
+        title: "Autonomous Force Escalation",
+        text: "Rules of engagement for drone veils, district denial, armored corridor clearance, and human kill-chain authorization.",
+        owner: "Security Operations",
+        control: "Board override ladder",
+        updated: "2077-Q3"
+      },
+      item4: {
+        title: "Blackwall Adjacency Statement",
+        text: "Restricted assurance for rogue-machine contact, Black ICE burn authority, quarantine partitions, and memory-safe isolation.",
+        owner: "Counterintrusion Theater",
+        control: "Witnessed burn desk",
+        updated: "2077-Q3"
+      },
+      foot: "No public pricing, no public claims, no technical export beyond sanitized assurance material."
+    },
     timeline: {
       1915: {
         title: "Tokyo Incorporation",
@@ -3023,6 +3068,7 @@ const translations = {
       dossier: "記録",
       operations: "運用拠点",
       governance: "統治体制",
+      disclosures: "開示",
       careers: "採用情報",
       contact: "連絡先"
     },
@@ -4758,6 +4804,50 @@ const translations = {
       title: "古い血統。新しい基層。絶対的な継続性。",
       text: "荒坂は一族主導の世界的機関であり続けます。しかし制御面は進化しました。神経アーカイブ、民間防衛網、政権交代を越えて存続する資本システムへ。"
     },
+    disclosures: {
+      eyebrow: "公開開示",
+      title: "完全公開できないシステムのための、規制済み公開面。",
+      text: "荒坂は、主権顧客、取締役会委員会、取引所相手方が運用幾何を露出せず安全に検査できる委任部分のみを公開します。",
+      status: "開示状態",
+      statusValue: "現行 / 編集済み",
+      jurisdiction: "管轄",
+      jurisdictionValue: "東京ルート / NC中継",
+      assurance: "保証時計",
+      assuranceValue: "72時間証明窓",
+      filing: "提出書類",
+      owner: "所有者",
+      control: "制御",
+      updated: "更新",
+      item1: {
+        title: "神経保管セーフハーバー",
+        text: "エングラム保管、プリンシパル同意、構成体偏移、死後継続権に関する公開声明。",
+        owner: "神輿統治",
+        control: "人間証人定足数",
+        updated: "2077-Q4"
+      },
+      item2: {
+        title: "ブラック台帳委任通知",
+        text: "決済レール、特許担保、創業者ID露出、非公開注文フローに関する機関資本開示。",
+        owner: "資本システム",
+        control: "公開主張禁止契約",
+        updated: "2077-Q4"
+      },
+      item3: {
+        title: "自律武力エスカレーション",
+        text: "ドローンヴェール、地区拒否、装甲回廊認可、人間キルチェーン承認の交戦規則。",
+        owner: "警備運用",
+        control: "取締役会上書きラダー",
+        updated: "2077-Q3"
+      },
+      item4: {
+        title: "ブラックウォール隣接声明",
+        text: "ローグマシン接触、ブラックICE焼却権限、隔離区画、記憶安全隔離に関する限定保証。",
+        owner: "対侵入作戦区",
+        control: "証人付き焼却デスク",
+        updated: "2077-Q3"
+      },
+      foot: "公開価格なし、公開主張なし、サニタイズ済み保証資料を超える技術輸出なし。"
+    },
     timeline: {
       1915: {
         title: "東京での法人設立",
@@ -6261,6 +6351,7 @@ const sectionLabelKeys = {
   dossier: "nav.dossier",
   operations: "nav.operations",
   governance: "nav.governance",
+  disclosures: "nav.disclosures",
   careers: "nav.careers",
   contact: "nav.contact"
 };
