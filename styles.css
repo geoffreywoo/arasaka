@@ -61,6 +61,22 @@ body.has-product-page {
   overflow: hidden;
 }
 
+[data-scramble-lock] {
+  display: inline-block;
+  text-rendering: geometricPrecision;
+}
+
+[data-scramble-lock].is-scrambling {
+  color: var(--paper);
+  text-shadow:
+    0 0 18px rgba(116, 199, 216, 0.22),
+    0 0 34px rgba(225, 7, 20, 0.12);
+}
+
+[data-scramble-lock].is-scramble-locked {
+  text-shadow: 0 0 20px rgba(182, 243, 91, 0.08);
+}
+
 .signal-weather {
   position: fixed;
   inset: 0;

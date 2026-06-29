@@ -5747,6 +5747,7 @@ const translations = {
 
 const languageButtons = document.querySelectorAll("[data-language-option]");
 const translatedNodes = document.querySelectorAll("[data-i18n]");
+const scrambleLockNodes = document.querySelectorAll("[data-scramble-lock]");
 const ariaNodes = document.querySelectorAll("[data-i18n-aria-label]");
 const placeholderNodes = document.querySelectorAll("[data-i18n-placeholder]");
 const timeNodes = document.querySelectorAll("[data-time-zone]");
@@ -6572,6 +6573,129 @@ function getSavedLanguage() {
   }
 }
 
+const scrambleGlyphSets = {
+  en: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+  ja: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワ零壱弐参四五六七八九"
+};
+const scrambleAnimations = new WeakMap();
+const scrambleReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+let scrambleObserver;
+
+function getScrambleGlyph() {
+  const language = document.documentElement.dataset.language || "en";
+  const glyphs = language === "ja" ? scrambleGlyphSets.ja : scrambleGlyphSets.en;
+  return glyphs[Math.floor(Math.random() * glyphs.length)];
+}
+
+function canScrambleCharacter(character) {
+  return /[\p{L}\p{N}]/u.test(character);
+}
+
+function isNodeInViewport(node) {
+  const rect = node.getBoundingClientRect();
+  return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+}
+
+function cancelScramble(node) {
+  const animationFrame = scrambleAnimations.get(node);
+  if (animationFrame) {
+    cancelAnimationFrame(animationFrame);
+    scrambleAnimations.delete(node);
+  }
+}
+
+function setScrambleFinal(node, target) {
+  cancelScramble(node);
+  node.textContent = target;
+  node.dataset.scrambleState = "locked";
+  node.classList.remove("is-scrambling");
+  node.classList.add("is-scramble-locked");
+}
+
+function lockScrambleText(node, options = {}) {
+  if (!node) return;
+  if (!options.force && node.dataset.scrambleState === "locked") return;
+
+  const target = node.dataset.scrambleTarget || node.textContent;
+  if (!target) return;
+
+  node.dataset.scrambleTarget = target;
+  node.setAttribute("aria-label", target);
+
+  if (scrambleReducedMotion?.matches) {
+    setScrambleFinal(node, target);
+    return;
+  }
+
+  cancelScramble(node);
+  node.dataset.scrambleState = "scrambling";
+  node.classList.add("is-scrambling");
+  node.classList.remove("is-scramble-locked");
+
+  const characters = Array.from(target);
+  const duration = Number(node.dataset.scrambleDuration) || 980;
+  const startedAt = performance.now();
+
+  function draw(now) {
+    const elapsed = now - startedAt;
+    const progress = Math.min(elapsed / duration, 1);
+    const locked = characters.map((character, index) => {
+      if (!canScrambleCharacter(character)) return character;
+      const characterProgress = Math.min(Math.max((progress - index / characters.length * 0.42) / 0.58, 0), 1);
+      return characterProgress >= 1 ? character : getScrambleGlyph();
+    });
+
+    node.textContent = locked.join("");
+
+    if (progress < 1) {
+      scrambleAnimations.set(node, requestAnimationFrame(draw));
+      return;
+    }
+
+    setScrambleFinal(node, target);
+  }
+
+  scrambleAnimations.set(node, requestAnimationFrame(draw));
+}
+
+function refreshScrambleLocks(options = {}) {
+  scrambleLockNodes.forEach((node) => {
+    cancelScramble(node);
+    node.dataset.scrambleState = "";
+    node.dataset.scrambleTarget = node.textContent;
+    node.classList.remove("is-scrambling", "is-scramble-locked");
+    if (isNodeInViewport(node)) {
+      lockScrambleText(node, { force: true });
+    }
+  });
+}
+
+function initScrambleLocks() {
+  if (!scrambleLockNodes.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    refreshScrambleLocks({ force: true });
+    return;
+  }
+
+  scrambleObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        lockScrambleText(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "0px 0px -12% 0px",
+    threshold: 0.28
+  });
+
+  scrambleLockNodes.forEach((node) => {
+    node.dataset.scrambleTarget = node.textContent;
+    scrambleObserver.observe(node);
+  });
+  refreshScrambleLocks({ force: true });
+}
+
 function setLanguage(language) {
   const dictionary = translations[language] || translations.en;
   document.documentElement.lang = language === "ja" ? "ja" : "en";
@@ -6643,6 +6767,7 @@ function setLanguage(language) {
   updateServiceRoute();
   updateActiveSection(activeSectionId);
   updateMenuButtonLabel();
+  refreshScrambleLocks({ force: true });
   saveLanguage(language);
 }
 
@@ -11902,6 +12027,7 @@ function initTopologyCanvas() {
 }
 
 setLanguage(getSavedLanguage() || "en");
+initScrambleLocks();
 updateTimes();
 updateTelemetry();
 updateTerminal();
