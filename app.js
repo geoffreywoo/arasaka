@@ -2359,6 +2359,13 @@ const translations = {
       executiveOverride: "Executive Override",
       afterActionProof: "After-Action Proof",
       escalationState: "Escalation",
+      acceptanceGate: "Acceptance Gate",
+      acceptanceGateLead: "Final go/no-go surface for acceptance criteria, signer authority, evidence threshold, and live cutover before configuration is sealed.",
+      acceptanceCriteria: "Acceptance Criteria",
+      signerAuthority: "Signer Authority",
+      evidenceThreshold: "Evidence Threshold",
+      liveCutover: "Live Cutover",
+      acceptanceState: "Gate",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2626,6 +2633,13 @@ const translations = {
       executiveOverride: "Sponsor Override",
       afterActionProof: "After-Action Proof",
       escalationState: "Escalation",
+      acceptanceGate: "Acceptance Gate",
+      acceptanceGateLead: "Final go/no-go surface for acceptance criteria, sponsor authority, evidence threshold, and live cutover before the mandate is sealed.",
+      acceptanceCriteria: "Acceptance Criteria",
+      signerAuthority: "Sponsor Authority",
+      evidenceThreshold: "Evidence Threshold",
+      liveCutover: "Live Cutover",
+      acceptanceState: "Gate",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -5008,6 +5022,13 @@ const translations = {
       executiveOverride: "役員オーバーライド",
       afterActionProof: "事後証明",
       escalationState: "エスカレーション",
+      acceptanceGate: "受領ゲート",
+      acceptanceGateLead: "構成封印前に、受領基準、署名権限、証拠しきい値、ライブ切替を確認する最終ゴー/ノーゴー面。",
+      acceptanceCriteria: "受領基準",
+      signerAuthority: "署名権限",
+      evidenceThreshold: "証拠しきい値",
+      liveCutover: "ライブ切替",
+      acceptanceState: "ゲート",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -5275,6 +5296,13 @@ const translations = {
       executiveOverride: "スポンサーオーバーライド",
       afterActionProof: "事後証明",
       escalationState: "エスカレーション",
+      acceptanceGate: "受領ゲート",
+      acceptanceGateLead: "委任封印前に、受領基準、スポンサー権限、証拠しきい値、ライブ切替を確認する最終ゴー/ノーゴー面。",
+      acceptanceCriteria: "受領基準",
+      signerAuthority: "スポンサー権限",
+      evidenceThreshold: "証拠しきい値",
+      liveCutover: "ライブ切替",
+      acceptanceState: "ゲート",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5661,6 +5689,7 @@ const routeTelemetry = document.querySelector("[data-route-telemetry]");
 const routeRiskRegister = document.querySelector("[data-route-risk-register]");
 const routeFailureAtlas = document.querySelector("[data-route-failure-atlas]");
 const routeEscalationLadder = document.querySelector("[data-route-escalation-ladder]");
+const routeAcceptanceGate = document.querySelector("[data-route-acceptance-gate]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5708,6 +5737,7 @@ const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]")
 const serviceRouteRiskRegister = document.querySelector("[data-service-risk-register]");
 const serviceRouteFailureAtlas = document.querySelector("[data-service-failure-atlas]");
 const serviceRouteEscalationLadder = document.querySelector("[data-service-escalation-ladder]");
+const serviceRouteAcceptanceGate = document.querySelector("[data-service-acceptance-gate]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -7061,6 +7091,40 @@ function renderRouteEscalationLadder(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteAcceptanceGate(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-acceptance-head";
+  label.textContent = labels.acceptanceGate;
+  lead.textContent = labels.acceptanceGateLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-acceptance-grid";
+  rows.forEach(({ label: rowLabel, value, text, gate }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `G-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.acceptanceState}: ${gate}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -8188,6 +8252,33 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteAcceptanceGate(routeAcceptanceGate, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.acceptanceCriteria,
+      value: operations.sla[0],
+      text: `${file.tabs.deployment.title} / ${field.exposure}`,
+      gate: file.clearance
+    },
+    {
+      label: dictionary.productRoute.signerAuthority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${dictionary.productRoute.capitalObserver} / ${file.tabs.governance.title}`,
+      gate: "G.W. / A-F"
+    },
+    {
+      label: dictionary.productRoute.evidenceThreshold,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${operations.integrations[0]} / ${operations.packages[0]}`,
+      gate: operations.regions[0]
+    },
+    {
+      label: dictionary.productRoute.liveCutover,
+      value: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      text: `${operations.regions.join(" / ")} / ${file.surface}`,
+      gate: operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
   renderRouteSpecsheet(routeSpecsheet, dictionary.productRoute, {
     image: `../../assets/${routeVisualImages.product[productKey] || routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
     alt: `${file.title} ${dictionary.productRoute.productPhoto}`,
@@ -9244,6 +9335,33 @@ function updateServiceRoute() {
       value: file.operations.sla[2] || file.operations.sla[0],
       text: `${file.tabs.deployment.title} / ${file.tabs.governance.title}`,
       state: file.operations.regions.join(" / ")
+    }
+  ]);
+
+  renderRouteAcceptanceGate(serviceRouteAcceptanceGate, routeLabels, [
+    {
+      label: routeLabels.acceptanceCriteria,
+      value: file.operations.sla[0],
+      text: `${file.tabs.deployment.title} / ${file.field.exposure}`,
+      gate: file.clearance
+    },
+    {
+      label: routeLabels.signerAuthority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${routeLabels.capitalObserver} / ${file.tabs.governance.title}`,
+      gate: "G.W. / A-F"
+    },
+    {
+      label: routeLabels.evidenceThreshold,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[0]}`,
+      gate: file.operations.regions[0]
+    },
+    {
+      label: routeLabels.liveCutover,
+      value: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      text: `${file.operations.regions.join(" / ")} / ${file.surface}`,
+      gate: file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 

@@ -4664,6 +4664,7 @@ a,
     "risk meta"
     "failure meta"
     "escalation meta"
+    "acceptance meta"
     "specsheet meta"
     "config meta"
     "decision meta"
@@ -4856,6 +4857,8 @@ a,
 .product-route-failure-grid article,
 .product-route-escalation-head,
 .product-route-escalation-grid article,
+.product-route-acceptance-head,
+.product-route-acceptance-grid article,
 .product-route-specsheet-head,
 .product-route-specsheet figure,
 .product-route-specsheet-grid article,
@@ -6903,6 +6906,112 @@ a,
 .product-route-escalation-grid em {
   align-self: end;
   color: var(--acid);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.product-route-acceptance {
+  grid-area: acceptance;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.15), rgba(209, 177, 107, 0.12), rgba(116, 199, 216, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-acceptance-head,
+.product-route-acceptance-grid article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.1), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-acceptance-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-acceptance-head span,
+.product-route-acceptance-grid article > span,
+.product-route-acceptance-grid small,
+.product-route-acceptance-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-acceptance-head span,
+.product-route-acceptance-grid article > span {
+  color: var(--acid);
+  font-size: 0.64rem;
+}
+
+.product-route-acceptance-head p,
+.product-route-acceptance-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-acceptance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-acceptance-grid article {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 174px;
+  padding: 15px;
+}
+
+.product-route-acceptance-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, transparent 0 16px, rgba(182, 243, 91, 0.045) 16px 17px),
+    linear-gradient(135deg, rgba(182, 243, 91, 0.08), transparent 58%);
+}
+
+.product-route-acceptance-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-acceptance-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-acceptance-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-acceptance-grid em {
+  align-self: end;
+  color: var(--cyan);
   font-size: 0.62rem;
   font-style: normal;
   line-height: 1.2;
@@ -15773,6 +15882,7 @@ a,
       "risk"
       "failure"
       "escalation"
+      "acceptance"
       "specsheet"
       "config"
       "decision"
@@ -15842,6 +15952,7 @@ a,
   .product-route-risk,
   .product-route-failure,
   .product-route-escalation,
+  .product-route-acceptance,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
@@ -15880,6 +15991,7 @@ a,
   .product-route-risk-head,
   .product-route-failure-head,
   .product-route-escalation-head,
+  .product-route-acceptance-head,
   .product-route-config-head,
   .product-route-decision-head,
   .product-route-runbook-head,
@@ -16001,6 +16113,10 @@ a,
   }
 
   .product-route-escalation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-acceptance-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -16856,6 +16972,7 @@ a,
   .product-route-risk-table,
   .product-route-failure-grid,
   .product-route-escalation-grid,
+  .product-route-acceptance-grid,
   .product-route-config-grid,
   .product-route-decision-grid,
   .product-route-runbook-rail,
@@ -17194,6 +17311,7 @@ a,
   .product-route-risk,
   .product-route-failure,
   .product-route-escalation,
+  .product-route-acceptance,
   .product-route-specsheet,
   .product-route-config,
   .product-route-decision,
@@ -17241,7 +17359,8 @@ a,
   .product-route-monitor-grid article,
   .product-route-patch-grid article,
   .product-route-failure-grid article,
-  .product-route-escalation-grid article {
+  .product-route-escalation-grid article,
+  .product-route-acceptance-grid article {
     min-height: 0;
   }
 
@@ -17316,6 +17435,10 @@ a,
   }
 
   .product-route-escalation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-acceptance-grid {
     grid-template-columns: 1fr;
   }
 
