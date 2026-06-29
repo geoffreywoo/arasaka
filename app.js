@@ -157,6 +157,62 @@ const translations = {
       mapTitle: "The divisions resolve into products, services, casefiles, and technical doctrine.",
       mapCopy: "A megacorporation becomes believable when every public page answers the same question: which operating group owns the risk, proof object, and authorization path?"
     },
+    corpSubsidiaries: {
+      back: "Return to operating company preview",
+      kicker: "ARASAKA OPERATING COMPANY REGISTRY",
+      title: "The empire is distributed through controlled shells.",
+      summary: "Each operating company carries a legal perimeter, mandate lane, clearance class, and routed technology surface while remaining bound to Tokyo root authority.",
+      openDivisions: "Open divisions map",
+      openBoard: "Open board docket",
+      visualCaption: "Operating company command registry, generated Arasaka watchfloor image.",
+      readouts: {
+        entities: {
+          label: "Registry entities",
+          copy: "Public-safe operating companies mapped to mandate lanes, proof objects, and route owners."
+        },
+        escrow: {
+          label: "Disclosure escrow",
+          copy: "Beneficial counterparties remain sealed until board quorum or lawful corridor release."
+        },
+        boundary: {
+          label: "Jurisdiction fences",
+          copy: "Regional, orbital, and Blackwall-adjacent legal boundaries resolved before mandate activation."
+        }
+      },
+      registryEyebrow: "Registry Extract",
+      registryTitle: "Every subsidiary is a legal container for a dangerous capability.",
+      registryCopy: "The group does not expose raw control ledgers. It exposes public-safe registry surfaces that show enough jurisdiction, clearance, and routing to make the enterprise legible.",
+      openEntity: "Open registry route",
+      entities: {
+        security: {
+          title: "Arasaka Security K.K.",
+          copy: "Executive protection, autonomous response, and theater command for physical assets under hostile pressure."
+        },
+        capital: {
+          title: "Arasaka Capital Systems",
+          copy: "Black Ledger custody, founder liquidity, patent gravity, and quiet settlement rails for sovereign counterparties."
+        },
+        cybernetics: {
+          title: "Arasaka Cybernetics Foundry",
+          copy: "Neural ports, implant firmware, combat prosthetics, and identity hardware for sanctioned operators."
+        },
+        intelligence: {
+          title: "Arasaka Netrunner Bureau",
+          copy: "Black ICE, rogue-machine quarantine, hostile signature markets, and memory-safe counterintrusion cells."
+        },
+        continuity: {
+          title: "Mikoshi Continuity Office",
+          copy: "Engram custody, construct partitioning, succession rehearsal, and post-biological governance proofs."
+        },
+        orbital: {
+          title: "Orbital Cold Custody Trust",
+          copy: "Off-world custody for engram archives, settlement keys, succession instruments, and board-sealed continuity collateral."
+        }
+      },
+      mapEyebrow: "Entity Routing",
+      mapTitle: "Subsidiaries bind legal shells to live systems, regional command, and board authority.",
+      mapCopy: "The registry is a public surface for private control: each company answers for a mandate, each mandate routes to a product or service, and each route carries a board-readable proof object."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4422,6 +4478,62 @@ const translations = {
       mapEyebrow: "権限経路",
       mapTitle: "部門は製品、サービス、ケースファイル、技術ドクトリンへ解決されます。",
       mapCopy: "巨大企業は、すべての公開ページが同じ問いに答えるとき信じられるものになります。どの運用グループがリスク、証跡オブジェクト、認可経路を所有するのか。"
+    },
+    corpSubsidiaries: {
+      back: "運用会社プレビューへ戻る",
+      kicker: "荒坂運用会社登録簿",
+      title: "帝国は制御されたシェルを通じて分散されます。",
+      summary: "各運用会社は、東京ルート権限へ結合されたまま、法的境界、委任レーン、認証クラス、ルーティング済み技術面を保持します。",
+      openDivisions: "部門マップを開く",
+      openBoard: "取締役会記録を開く",
+      visualCaption: "運用会社指揮登録簿、生成された荒坂監視室画像。",
+      readouts: {
+        entities: {
+          label: "登録エンティティ",
+          copy: "公開安全な運用会社を委任レーン、証跡オブジェクト、経路所有者へ対応付けます。"
+        },
+        escrow: {
+          label: "開示エスクロー",
+          copy: "実質的相手方は、取締役会クォーラムまたは合法的回廊リリースまで封印されます。"
+        },
+        boundary: {
+          label: "管轄フェンス",
+          copy: "地域、軌道、ブラックウォール隣接の法的境界は委任起動前に解決されます。"
+        }
+      },
+      registryEyebrow: "登録簿抜粋",
+      registryTitle: "すべての子会社は危険な能力のための法的コンテナです。",
+      registryCopy: "グループは生の制御台帳を公開しません。企業を判読可能にするための管轄、認証、経路だけを示す公開安全な登録面を公開します。",
+      openEntity: "登録経路を開く",
+      entities: {
+        security: {
+          title: "荒坂警備株式会社",
+          copy: "敵対圧力下の物理資産向けに、要人防護、自律応答、戦域指揮を提供します。"
+        },
+        capital: {
+          title: "荒坂資本システム",
+          copy: "主権的相手方のためのブラック台帳保管、創業者流動性、特許重力、静かな決済レール。"
+        },
+        cybernetics: {
+          title: "荒坂サイバネティクス鋳造所",
+          copy: "認可オペレーター向けの神経ポート、インプラントファームウェア、戦闘義肢、IDハードウェア。"
+        },
+        intelligence: {
+          title: "荒坂ネットランナー局",
+          copy: "ブラックICE、ローグマシン隔離、敵対署名市場、記憶安全対侵入セルを運用します。"
+        },
+        continuity: {
+          title: "神輿継続性オフィス",
+          copy: "エングラム保管、構成体分割、継承演習、死後統治証明を扱います。"
+        },
+        orbital: {
+          title: "軌道低温保管信託",
+          copy: "エングラム記録庫、決済キー、継承機器、取締役会封印済み継続担保のための軌道外保管。"
+        }
+      },
+      mapEyebrow: "エンティティ経路",
+      mapTitle: "子会社は法的シェルをライブシステム、地域指揮、取締役会権限へ結合します。",
+      mapCopy: "登録簿は私的制御のための公開面です。各会社は委任に責任を持ち、各委任は製品またはサービスへルーティングされ、各経路は取締役会が読める証跡オブジェクトを保持します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",

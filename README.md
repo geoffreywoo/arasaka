@@ -82,6 +82,7 @@ http://127.0.0.1:4187/technology/
 http://127.0.0.1:4187/technology/neural-substrate/
 http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
 http://127.0.0.1:4187/divisions/
+http://127.0.0.1:4187/subsidiaries/
 http://127.0.0.1:4187/operations/
 http://127.0.0.1:4187/archive/
 http://127.0.0.1:4187/archive/tower/

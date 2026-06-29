@@ -6526,6 +6526,10 @@ a,
 .divisions-route-page .archive-route-readout,
 .divisions-route-page .archive-route-incidents,
 .divisions-route-page .archive-route-map,
+.subsidiaries-route-page .archive-route-hero,
+.subsidiaries-route-page .archive-route-readout,
+.subsidiaries-route-page .archive-route-incidents,
+.subsidiaries-route-page .archive-route-map,
 .casefile-route-page .archive-route-hero,
 .casefile-route-page .archive-route-readout,
 .casefile-route-page .archive-route-incidents,
@@ -6647,6 +6651,37 @@ a,
 .divisions-route-visual img {
   object-position: center center;
   filter: saturate(1.04) contrast(1.08) brightness(0.9);
+}
+
+.subsidiaries-route-page .archive-route-hero,
+.subsidiaries-route-page .archive-route-readout,
+.subsidiaries-route-page .archive-route-incidents,
+.subsidiaries-route-page .archive-route-map {
+  border-color: rgba(116, 199, 216, 0.3);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(116, 199, 216, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.12), transparent 40%, rgba(221, 184, 94, 0.1)),
+    rgba(7, 9, 12, 0.94);
+}
+
+.subsidiaries-route-hero::before {
+  background:
+    linear-gradient(120deg, transparent 0 47%, rgba(116, 199, 216, 0.13) 47% 49%, transparent 49%),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(221, 184, 94, 0.035) 30px 31px),
+    repeating-linear-gradient(90deg, transparent 0 86px, rgba(225, 7, 20, 0.035) 86px 87px);
+}
+
+.subsidiaries-route-page .archive-route-readout strong {
+  color: var(--cyan);
+}
+
+.subsidiaries-route-page .archive-incident-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.subsidiaries-route-visual img {
+  object-position: center center;
+  filter: saturate(1.06) contrast(1.08) brightness(0.9);
 }
 
 .casefile-route-visual img {
@@ -22531,6 +22566,10 @@ a,
   .divisions-route-page .archive-incident-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .subsidiaries-route-page .archive-incident-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -22660,6 +22699,10 @@ a,
   }
 
   .divisions-route-page .archive-incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsidiaries-route-page .archive-incident-grid {
     grid-template-columns: 1fr;
   }
 
