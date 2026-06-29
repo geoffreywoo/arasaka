@@ -6664,10 +6664,26 @@ function refreshScrambleLocks(options = {}) {
     node.dataset.scrambleState = "";
     node.dataset.scrambleTarget = node.textContent;
     node.classList.remove("is-scrambling", "is-scramble-locked");
-    if (isNodeInViewport(node)) {
+    if (scrambleReducedMotion?.matches) {
+      setScrambleFinal(node, node.dataset.scrambleTarget);
+    } else if (isNodeInViewport(node)) {
       lockScrambleText(node, { force: true });
     }
   });
+}
+
+function setScrambleText(node, value, options = {}) {
+  if (!node) return;
+  cancelScramble(node);
+  node.textContent = value;
+  node.dataset.scrambleState = "";
+  node.dataset.scrambleTarget = value;
+  node.classList.remove("is-scrambling", "is-scramble-locked");
+  if (options.skipAnimation) {
+    setScrambleFinal(node, value);
+    return;
+  }
+  lockScrambleText(node, { force: true });
 }
 
 function initScrambleLocks() {
@@ -10661,8 +10677,8 @@ function updateDockMode(modeKey) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  if (dockCode) dockCode.textContent = detail.code;
-  dockTitle.textContent = detail.title;
+  setScrambleText(dockCode, detail.code);
+  setScrambleText(dockTitle, detail.title);
   if (dockText) dockText.textContent = detail.text;
   if (dockPrimary) dockPrimary.textContent = detail.primary;
   if (dockSecondary) dockSecondary.textContent = detail.secondary;
