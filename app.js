@@ -2381,6 +2381,13 @@ const translations = {
       configurationBlack: "Black",
       configurationScope: "Scope",
       configurationEscalation: "Escalation",
+      deploymentTimeline: "Deployment Timeline",
+      deploymentTimelineLead: "Phase cadence for intake, simulation, pilot, and production handoff after the package is selected.",
+      intakePhase: "Intake",
+      simulationPhase: "Simulation",
+      pilotPhase: "Pilot",
+      productionPhase: "Production",
+      timelineWindow: "Window",
       decisionMatrix: "Mandate Decision Matrix",
       decisionMatrixLead: "A final executive read on signer, blocker, readiness signal, and room routing before activation is authorized.",
       signer: "Signer",
@@ -2655,6 +2662,13 @@ const translations = {
       configurationBlack: "Black",
       configurationScope: "Scope",
       configurationEscalation: "Escalation",
+      deploymentTimeline: "Mandate Timeline",
+      deploymentTimelineLead: "Phase cadence for intake, simulation, pilot, and production handoff after the service package is selected.",
+      intakePhase: "Intake",
+      simulationPhase: "Simulation",
+      pilotPhase: "Pilot",
+      productionPhase: "Production",
+      timelineWindow: "Window",
       decisionMatrix: "Mandate Decision Matrix",
       decisionMatrixLead: "A final sponsor read on signer, blocker, readiness signal, and room routing before the service team activates.",
       signer: "Signer",
@@ -5044,6 +5058,13 @@ const translations = {
       configurationBlack: "ブラック",
       configurationScope: "範囲",
       configurationEscalation: "エスカレーション",
+      deploymentTimeline: "配備タイムライン",
+      deploymentTimelineLead: "パッケージ選択後のインテーク、シミュレーション、パイロット、本番ハンドオフのフェーズ進行。",
+      intakePhase: "インテーク",
+      simulationPhase: "シミュレーション",
+      pilotPhase: "パイロット",
+      productionPhase: "本番",
+      timelineWindow: "ウィンドウ",
       decisionMatrix: "委任判断マトリクス",
       decisionMatrixLead: "起動承認前に、署名者、阻害要因、準備信号、ルーム経路を確認する最終役員判定。",
       signer: "署名者",
@@ -5318,6 +5339,13 @@ const translations = {
       configurationBlack: "ブラック",
       configurationScope: "範囲",
       configurationEscalation: "エスカレーション",
+      deploymentTimeline: "委任タイムライン",
+      deploymentTimelineLead: "サービスパッケージ選択後のインテーク、シミュレーション、パイロット、本番ハンドオフのフェーズ進行。",
+      intakePhase: "インテーク",
+      simulationPhase: "シミュレーション",
+      pilotPhase: "パイロット",
+      productionPhase: "本番",
+      timelineWindow: "ウィンドウ",
       decisionMatrix: "委任判断マトリクス",
       decisionMatrixLead: "サービスチーム起動前に、署名者、阻害要因、準備信号、ルーム経路を確認する最終スポンサー判定。",
       signer: "署名者",
@@ -5692,6 +5720,7 @@ const routeEscalationLadder = document.querySelector("[data-route-escalation-lad
 const routeAcceptanceGate = document.querySelector("[data-route-acceptance-gate]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
+const routeTimeline = document.querySelector("[data-route-timeline]");
 const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routePrivateRoom = document.querySelector("[data-route-private-room]");
@@ -5740,6 +5769,7 @@ const serviceRouteEscalationLadder = document.querySelector("[data-service-escal
 const serviceRouteAcceptanceGate = document.querySelector("[data-service-acceptance-gate]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
+const serviceRouteTimeline = document.querySelector("[data-service-timeline]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
@@ -7207,6 +7237,40 @@ function renderRouteConfiguration(target, labels, tiers) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteTimeline(target, labels, phases) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-timeline-head";
+  label.textContent = labels.deploymentTimeline;
+  lead.textContent = labels.deploymentTimelineLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-timeline-rail";
+  phases.forEach(({ phase, window, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `T-${index + 1}`;
+    eyebrow.textContent = phase;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.timelineWindow}: ${window}`;
+    article.append(code, eyebrow, title, copy, tag);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
+}
+
 function renderRouteDecision(target, labels, rows) {
   if (!target) return;
 
@@ -8331,6 +8395,33 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteTimeline(routeTimeline, dictionary.productRoute, [
+    {
+      phase: dictionary.productRoute.intakePhase,
+      window: operations.sla[0],
+      value: file.tabs.overview.items[0] || file.tabs.overview.title,
+      text: `${field.exposure} / ${operations.regions[0]}`
+    },
+    {
+      phase: dictionary.productRoute.simulationPhase,
+      window: operations.sla[1] || operations.sla[0],
+      value: operations.integrations[0],
+      text: `${field.doctrine} / ${operations.packages[0]}`
+    },
+    {
+      phase: dictionary.productRoute.pilotPhase,
+      window: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      value: operations.packages[1] || operations.packages[0],
+      text: `${file.tabs.deployment.title} / ${file.surface}`
+    },
+    {
+      phase: dictionary.productRoute.productionPhase,
+      window: file.window,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${operations.regions.join(" / ")} / ${dictionary.productRoute.capitalObserver}`
+    }
+  ]);
+
   renderRouteDecision(routeDecision, dictionary.productRoute, [
     {
       label: dictionary.productRoute.signer,
@@ -9414,6 +9505,33 @@ function updateServiceRoute() {
       scope: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
       escalation: file.operations.integrations.slice(1).join(" / ") || file.operations.integrations[0],
       proof: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteTimeline(serviceRouteTimeline, routeLabels, [
+    {
+      phase: routeLabels.intakePhase,
+      window: file.operations.sla[0],
+      value: file.tabs.overview.items[0] || file.tabs.overview.title,
+      text: `${file.field.exposure} / ${file.operations.regions[0]}`
+    },
+    {
+      phase: routeLabels.simulationPhase,
+      window: file.operations.sla[1] || file.operations.sla[0],
+      value: file.operations.integrations[0],
+      text: `${file.field.doctrine} / ${file.operations.packages[0]}`
+    },
+    {
+      phase: routeLabels.pilotPhase,
+      window: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      value: file.operations.packages[1] || file.operations.packages[0],
+      text: `${file.tabs.deployment.title} / ${file.surface}`
+    },
+    {
+      phase: routeLabels.productionPhase,
+      window: file.window,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.operations.regions.join(" / ")} / ${routeLabels.capitalObserver}`
     }
   ]);
 
