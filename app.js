@@ -26,6 +26,7 @@ const translations = {
       matrix: "Matrix",
       dossier: "Dossier",
       operations: "Operations",
+      regional: "Regional",
       governance: "Governance",
       disclosures: "Disclosures",
       careers: "Careers",
@@ -1815,6 +1816,64 @@ const translations = {
         }
       }
     },
+    regional: {
+      eyebrow: "Regional Command Grid",
+      title: "Jurisdiction is an operating system.",
+      text: "Arasaka command authority is partitioned across sovereign corridors, tower districts, off-world custody routes, and Blackwall-adjacent isolation cells.",
+      summaryAria: "Regional command summary",
+      gridAria: "Regional command facilities",
+      summary1Label: "Command Tier",
+      summary1Value: "Board Sealed",
+      summary2Label: "Network Posture",
+      summary2Value: "Compartmented",
+      summary3Label: "Disclosure",
+      summary3Value: "Public Surface Only",
+      jurisdiction: "Jurisdiction",
+      coverage: "Coverage",
+      system: "Primary System",
+      proof: "Proof",
+      open: "Open command file",
+      tokyo: {
+        title: "Tokyo Root Campus",
+        text: "Family authority, sovereign relations, board continuity, and root certificate governance for global deployment.",
+        jurisdiction: "Japan / Root Charter",
+        coverage: "Global command attestation",
+        system: "Mikoshi Board Continuity",
+        proof: "Quorum witness hash"
+      },
+      night: {
+        title: "Night City Tower",
+        text: "Urban protection, executive extraction, capital custody, and private security operations inside contested corporate terrain.",
+        jurisdiction: "Night City / Corporate District",
+        coverage: "Tower, plaza, convoy, airspace",
+        system: "Autonomous Protection Grid",
+        proof: "Force audit chain"
+      },
+      osaka: {
+        title: "Osaka Cybernetics Foundry",
+        text: "Classified fabrication for neural routing, prosthetic control surfaces, and combat-grade cyberware integration.",
+        jurisdiction: "Kansai Industrial Corridor",
+        coverage: "Prototype, validation, field repair",
+        system: "Neural Systems Foundry",
+        proof: "Implant telemetry seal"
+      },
+      orbital: {
+        title: "Orbital Cold Vault",
+        text: "Off-world custody for engram archives, settlement keys, and continuity instruments that cannot remain planet-bound.",
+        jurisdiction: "Orbital Custody Corridor",
+        coverage: "Memory, capital, succession keys",
+        system: "Black Ledger Vault",
+        proof: "Cold route attestation"
+      },
+      blackwall: {
+        title: "Blackwall Edge Cell",
+        text: "Counterintrusion command for rogue-machine drift, hostile netrunner signatures, and quarantine burn authority.",
+        jurisdiction: "Restricted Net Perimeter",
+        coverage: "AI contact, trace heat, ICE burn",
+        system: "Counterintrusion SOC",
+        proof: "Quarantine witness log"
+      }
+    },
     governance: {
       eyebrow: "Governance",
       title: "Family control. Institutional scale. Continuous authority.",
@@ -3126,6 +3185,7 @@ const translations = {
       matrix: "行列",
       dossier: "記録",
       operations: "運用拠点",
+      regional: "地域指揮",
       governance: "統治体制",
       disclosures: "開示",
       careers: "採用情報",
@@ -4915,6 +4975,64 @@ const translations = {
         }
       }
     },
+    regional: {
+      eyebrow: "地域指揮グリッド",
+      title: "管轄はオペレーティングシステムです。",
+      text: "荒坂の指揮権限は、主権回廊、タワー地区、オフワールド保管経路、ブラックウォール隣接隔離セルへ分割されています。",
+      summaryAria: "地域指揮サマリー",
+      gridAria: "地域指揮施設",
+      summary1Label: "指揮階層",
+      summary1Value: "取締役会封印",
+      summary2Label: "ネットワーク姿勢",
+      summary2Value: "区画化済み",
+      summary3Label: "開示",
+      summary3Value: "公開面のみ",
+      jurisdiction: "管轄",
+      coverage: "被覆範囲",
+      system: "主要システム",
+      proof: "証明",
+      open: "指揮ファイルを開く",
+      tokyo: {
+        title: "東京ルートキャンパス",
+        text: "一族権限、主権関係、取締役会継続性、世界配備のためのルート証明書統治を保持します。",
+        jurisdiction: "日本 / ルート憲章",
+        coverage: "世界指揮証明",
+        system: "ミコシ取締役会継続",
+        proof: "クォーラム証人ハッシュ"
+      },
+      night: {
+        title: "ナイトシティタワー",
+        text: "係争中の企業地形における都市保護、役員抽出、資本保管、民間警備運用を統括します。",
+        jurisdiction: "ナイトシティ / 企業地区",
+        coverage: "タワー、プラザ、車列、空域",
+        system: "自律保護グリッド",
+        proof: "実力監査チェーン"
+      },
+      osaka: {
+        title: "大阪サイバネティクス鋳造所",
+        text: "神経ルーティング、義体制御面、戦闘級サイバーウェア統合のための機密製造拠点です。",
+        jurisdiction: "関西産業回廊",
+        coverage: "試作、検証、現地修復",
+        system: "神経システム鋳造所",
+        proof: "インプラント遠隔測定封印"
+      },
+      orbital: {
+        title: "軌道コールド保管庫",
+        text: "地上に残せないエングラムアーカイブ、決済鍵、継続性証書をオフワールドで保管します。",
+        jurisdiction: "軌道保管回廊",
+        coverage: "記憶、資本、継承鍵",
+        system: "ブラック台帳保管庫",
+        proof: "コールド経路証明"
+      },
+      blackwall: {
+        title: "ブラックウォール縁セル",
+        text: "rogue machine 偏移、敵対ネットランナー署名、隔離焼却権限のための対侵入指揮セルです。",
+        jurisdiction: "制限ネット境界",
+        coverage: "AI接触、追跡熱、ICE焼却",
+        system: "対侵入SOC",
+        proof: "隔離証人ログ"
+      }
+    },
     governance: {
       eyebrow: "統治体制",
       title: "古い血統。新しい基層。絶対的な継続性。",
@@ -6467,6 +6585,7 @@ const sectionLabelKeys = {
   matrix: "nav.matrix",
   dossier: "nav.dossier",
   operations: "nav.operations",
+  regional: "nav.regional",
   governance: "nav.governance",
   disclosures: "nav.disclosures",
   careers: "nav.careers",
