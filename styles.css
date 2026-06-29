@@ -6178,6 +6178,28 @@ a,
   filter: saturate(1.08) contrast(1.04) hue-rotate(4deg);
 }
 
+.swarm-tech-hero::before {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(182, 243, 91, 0.18), transparent 34%),
+    radial-gradient(circle at 16% 74%, rgba(225, 7, 20, 0.16), transparent 28%),
+    repeating-linear-gradient(120deg, transparent 0 28px, rgba(116, 199, 216, 0.04) 28px 29px);
+}
+
+.swarm-tech-page .deep-tech-hero,
+.swarm-tech-page .deep-tech-system,
+.swarm-tech-page .deep-tech-schematic,
+.swarm-tech-page .deep-tech-specs,
+.swarm-tech-page .deep-tech-network-panel {
+  background:
+    linear-gradient(135deg, rgba(182, 243, 91, 0.08), transparent 42%, rgba(225, 7, 20, 0.1)),
+    rgba(7, 9, 12, 0.91);
+}
+
+.swarm-tech-visual img {
+  object-position: center center;
+  filter: saturate(1.12) contrast(1.06);
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;

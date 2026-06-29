@@ -264,6 +264,80 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier binds the continuity product suite to the Mikoshi custody layer."
     },
+    techSwarm: {
+      back: "Return to technology library",
+      kicker: "TECH-SW-12 / AUTONOMOUS PROTECTION GOVERNANCE",
+      title: "Machine speed held inside human authority.",
+      summary: "A command framework for drone swarms, perimeter veils, convoy corridors, and private-city defense where every autonomous decision remains bounded by exclusion maps and named escalation officers.",
+      openProduct: "Open Swarm product file",
+      openService: "Open protection service",
+      visualCaption: "SWARM tactical veil render, public catalog crop.",
+      readouts: {
+        vote: {
+          label: "Threat vote",
+          copy: "Median time from sensor consensus to permitted formation adjustment."
+        },
+        exclusion: {
+          label: "Exclusion map",
+          copy: "Civilian uncertainty coverage required before autonomous force may narrow a corridor."
+        },
+        command: {
+          label: "Human override",
+          copy: "Maximum authority handoff window before the system freezes into deterrence posture."
+        }
+      },
+      stackEyebrow: "Governance Stack",
+      stackTitle: "Autonomy is useful only when command can audit it.",
+      stackCopy: "The governance stack separates sensing, formation selection, exclusion enforcement, and human escalation so a fast machine response never becomes an unowned act of force.",
+      layers: {
+        sense: {
+          title: "Sensor fusion veil",
+          copy: "Drone, street, biometric, and convoy telemetry are merged into a single threat field before any unit changes posture."
+        },
+        exclusion: {
+          title: "Civilian exclusion map",
+          copy: "The swarm must prove where not to act before it can prove where force is permitted."
+        },
+        formation: {
+          title: "Formation governor",
+          copy: "Veil, overwatch, denial, and extraction formations are selected against mandate limits and local rules of engagement."
+        },
+        escalation: {
+          title: "Escalation officer",
+          copy: "Every force-bearing state binds to a named human officer, timestamp, and audit receipt before persistence."
+        }
+      },
+      schematicEyebrow: "Command Path",
+      schematicTitle: "Protection corridors are computed as governance objects.",
+      signal: {
+        fusion: "Sensor field",
+        exclusion: "Exclusion proof",
+        formation: "Formation gate",
+        override: "Human override"
+      },
+      specEyebrow: "Engineering Envelope",
+      specTitle: "Force constraints.",
+      specs: {
+        mesh: {
+          label: "Mesh command",
+          copy: "Formation instructions are accepted only after signed agreement across vehicle, street, and command nodes."
+        },
+        geo: {
+          label: "Geofence lattice",
+          copy: "Corridors are compiled from private property boundaries, treaty zones, civil routes, and live civilian uncertainty."
+        },
+        weapon: {
+          label: "Force limiter",
+          copy: "The default action set prioritizes veil, obstruction, extraction, and sensory denial before escalation."
+        },
+        audit: {
+          label: "Audit receipt",
+          copy: "Every autonomous posture change writes a board-readable receipt with operator, location, confidence, and rule basis."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "This dossier binds the protection suite to Arasaka city-grid operations."
+    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -3869,6 +3943,80 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録は継続製品群を神輿保管層へ結合します。"
+    },
+    techSwarm: {
+      back: "技術ライブラリへ戻る",
+      kicker: "TECH-SW-12 / 自律警護統治",
+      title: "機械速度を人間の権限内に保持する。",
+      summary: "ドローンスウォーム、境界遮蔽、護送回廊、私設都市防衛のための指揮フレームワーク。すべての自律判断は排除地図と指名済みエスカレーション責任者により境界づけられます。",
+      openProduct: "Swarm製品ファイルを開く",
+      openService: "警護サービスを開く",
+      visualCaption: "SWARM戦術遮蔽レンダー、公開カタログ切り抜き。",
+      readouts: {
+        vote: {
+          label: "脅威投票",
+          copy: "センサー合意から許可済み編隊調整までの中央値。"
+        },
+        exclusion: {
+          label: "排除地図",
+          copy: "自律戦力が回廊を狭める前に必要な民間不確実性カバレッジ。"
+        },
+        command: {
+          label: "人間上書き",
+          copy: "システムが抑止姿勢へ凍結する前の最大権限引継ぎ時間。"
+        }
+      },
+      stackEyebrow: "統治スタック",
+      stackTitle: "自律性は指揮が監査できる場合にのみ有用です。",
+      stackCopy: "統治スタックは、感知、編隊選択、排除執行、人間へのエスカレーションを分離し、高速な機械応答が所有者不明の力の行使にならないようにします。",
+      layers: {
+        sense: {
+          title: "センサー融合遮蔽",
+          copy: "ドローン、街路、生体、護送テレメトリーは、部隊が姿勢を変える前に単一の脅威場へ統合されます。"
+        },
+        exclusion: {
+          title: "民間人排除地図",
+          copy: "スウォームは、力が許可される場所を証明する前に、作用してはならない場所を証明しなければなりません。"
+        },
+        formation: {
+          title: "編隊ガバナー",
+          copy: "遮蔽、上空監視、拒否、抽出の編隊は、委任限界と地域交戦規則に照らして選択されます。"
+        },
+        escalation: {
+          title: "エスカレーション責任者",
+          copy: "すべての力を伴う状態は、永続化の前に指名済み人間責任者、時刻、監査レシートへ結合されます。"
+        }
+      },
+      schematicEyebrow: "指揮経路",
+      schematicTitle: "警護回廊は統治オブジェクトとして計算されます。",
+      signal: {
+        fusion: "センサー場",
+        exclusion: "排除証明",
+        formation: "編隊ゲート",
+        override: "人間上書き"
+      },
+      specEyebrow: "工学範囲",
+      specTitle: "戦力制約。",
+      specs: {
+        mesh: {
+          label: "メッシュ指揮",
+          copy: "編隊指示は、車両、街路、指揮ノード間の署名済み合意後にのみ受理されます。"
+        },
+        geo: {
+          label: "ジオフェンス格子",
+          copy: "回廊は、私有地境界、条約区域、民間経路、ライブ民間不確実性からコンパイルされます。"
+        },
+        weapon: {
+          label: "戦力リミッター",
+          copy: "標準アクションセットは、エスカレーション前に遮蔽、妨害、抽出、感覚拒否を優先します。"
+        },
+        audit: {
+          label: "監査レシート",
+          copy: "すべての自律姿勢変更は、オペレーター、位置、信頼度、規則根拠を含む取締役会向けレシートを書き込みます。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "この記録は警護製品群を荒坂都市グリッド運用へ結合します。"
     },
     spine: {
       node: "公開ノード",
