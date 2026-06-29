@@ -11,6 +11,7 @@ const translations = {
       technology: "Technology",
       opsArchive: "Archive",
       watchfloor: "Watchfloor",
+      board: "Board",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -145,6 +146,54 @@ const translations = {
       mapEyebrow: "Theater Routing",
       mapTitle: "The watchfloor routes incidents into services, products, and technical doctrine.",
       mapCopy: "Service teams receive the mandate. Product systems hold the control surface. Technical dossiers define the proof object and failure boundary."
+    },
+    governanceDocket: {
+      back: "Return to governance",
+      kicker: "ARASAKA GOVERNANCE DOCKET",
+      title: "Authority is the product surface.",
+      summary: "A board-facing control plane for mandate approval, export corridors, capital escrow, renewal covenants, and evidence retention before any Arasaka system receives client authority.",
+      openWatchfloor: "Open watchfloor",
+      openTech: "Open technology library",
+      visualCaption: "Tokyo command authority, generated Arasaka headquarters image.",
+      readouts: {
+        quorum: {
+          label: "Board quorum",
+          copy: "Minimum witness threshold before continuity, force, or capital systems can leave sealed review."
+        },
+        export: {
+          label: "Export corridors",
+          copy: "Jurisdictional lanes bound to named license class, prohibited surface, and renewal window."
+        },
+        covenant: {
+          label: "Renewal covenant",
+          copy: "Annual evidence review covering authority, retention, escalation, disclosure, and termination."
+        }
+      },
+      docketEyebrow: "Mandate Control",
+      docketTitle: "Deployments become legal objects before they become operational systems.",
+      docketCopy: "Every high-authority Arasaka engagement is converted into a board docket with sponsor review, export classification, escrow release logic, and post-launch audit obligations.",
+      openDocket: "Open governed route",
+      cards: {
+        board: {
+          title: "Board Docket",
+          copy: "Sponsor review, activation motion, quorum state, capital escrow, and named accountability are reconciled before field delivery."
+        },
+        export: {
+          title: "Export License",
+          copy: "Black ICE, counterintrusion, and autonomous systems are bound to corridors, prohibited surfaces, and human escalation limits."
+        },
+        bond: {
+          title: "Underwriting Bond",
+          copy: "Founder identity, patent collateral, blind settlement, and disclosure switches are priced before private capital moves."
+        },
+        covenant: {
+          title: "Renewal Audit Covenant",
+          copy: "Construct custody, memory retention, successor authority, and evidence survival are reviewed before the mandate renews."
+        }
+      },
+      mapEyebrow: "Authority Routing",
+      mapTitle: "The docket connects board approval to live command, archive evidence, and technical doctrine.",
+      mapCopy: "A mandate can enter through a service, product, incident file, or technical dossier. It does not activate until the same authority object exists across all four surfaces."
     },
     tech: {
       back: "Return to corporate grid",
@@ -3867,6 +3916,7 @@ const translations = {
       technology: "技術",
       opsArchive: "記録庫",
       watchfloor: "監視室",
+      board: "取締役会",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -4001,6 +4051,54 @@ const translations = {
       mapEyebrow: "劇場ルーティング",
       mapTitle: "監視室は事象をサービス、製品、技術ドクトリンへルーティングします。",
       mapCopy: "サービスチームが委任を受け取り、製品システムが制御面を保持し、技術記録が証跡オブジェクトと障害境界を定義します。"
+    },
+    governanceDocket: {
+      back: "統治体制へ戻る",
+      kicker: "荒坂統治ドケット",
+      title: "権限そのものが製品面である。",
+      summary: "荒坂システムが顧客権限を受け取る前に、委任承認、輸出回廊、資本エスクロー、更新契約、証拠保持を管理する取締役会向け制御面。",
+      openWatchfloor: "監視室を開く",
+      openTech: "技術ライブラリを開く",
+      visualCaption: "東京指揮権限、生成された荒坂本社画像。",
+      readouts: {
+        quorum: {
+          label: "取締役会定足数",
+          copy: "継続、戦力、資本システムが封印審査を離れる前に必要な最低立会しきい値。"
+        },
+        export: {
+          label: "輸出回廊",
+          copy: "指定ライセンス区分、禁止領域、更新窓口へ結合された管轄レーン。"
+        },
+        covenant: {
+          label: "更新契約",
+          copy: "権限、保持、エスカレーション、開示、終了を対象にする年次証拠レビュー。"
+        }
+      },
+      docketEyebrow: "委任制御",
+      docketTitle: "配備は運用システムになる前に法的オブジェクトになります。",
+      docketCopy: "すべての高権限荒坂契約は、スポンサー審査、輸出分類、エスクロー解放ロジック、ローンチ後監査義務を持つ取締役会ドケットへ変換されます。",
+      openDocket: "統治済み経路を開く",
+      cards: {
+        board: {
+          title: "取締役会ドケット",
+          copy: "現場納入前に、スポンサー審査、起動動議、定足数状態、資本エスクロー、指名責任を照合します。"
+        },
+        export: {
+          title: "輸出ライセンス",
+          copy: "ブラックICE、対侵入、自律システムは、回廊、禁止領域、人間エスカレーション制限へ結合されます。"
+        },
+        bond: {
+          title: "引受保証",
+          copy: "私的資本が移動する前に、創業者ID、特許担保、盲目決済、開示スイッチを価格付けします。"
+        },
+        covenant: {
+          title: "更新監査契約",
+          copy: "委任更新前に、構成体保管、記憶保持、後継者権限、証拠存続を審査します。"
+        }
+      },
+      mapEyebrow: "権限ルーティング",
+      mapTitle: "ドケットは取締役会承認をライブ指揮、記録証拠、技術ドクトリンへ接続します。",
+      mapCopy: "委任はサービス、製品、事象ファイル、技術記録から入ることができます。同じ権限オブジェクトが四つの面すべてに存在するまで起動しません。"
     },
     tech: {
       back: "企業グリッドへ戻る",

@@ -6445,7 +6445,11 @@ a,
 .watchfloor-route-page .archive-route-hero,
 .watchfloor-route-page .archive-route-readout,
 .watchfloor-route-page .archive-route-incidents,
-.watchfloor-route-page .archive-route-map {
+.watchfloor-route-page .archive-route-map,
+.governance-route-page .archive-route-hero,
+.governance-route-page .archive-route-readout,
+.governance-route-page .archive-route-incidents,
+.governance-route-page .archive-route-map {
   background:
     linear-gradient(135deg, rgba(116, 199, 216, 0.11), transparent 40%, rgba(225, 7, 20, 0.11)),
     rgba(7, 9, 12, 0.92);
@@ -6474,6 +6478,54 @@ a,
 .watchfloor-route-visual img {
   object-position: center center;
   filter: saturate(1.08) contrast(1.05);
+}
+
+.governance-route-hero {
+  position: relative;
+}
+
+.governance-route-hero::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 72% 18%, rgba(225, 7, 20, 0.16), transparent 30%),
+    linear-gradient(120deg, transparent 0 48%, rgba(221, 184, 94, 0.12) 48% 50%, transparent 50%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.028) 0 1px, transparent 1px 18px);
+  opacity: 0.82;
+}
+
+.governance-route-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.governance-route-page .archive-route-readout article strong {
+  color: #ddb85e;
+}
+
+.governance-route-page .archive-route-map {
+  grid-template-columns: minmax(0, 0.58fr) minmax(250px, 0.42fr);
+}
+
+.governance-route-page .archive-route-map h2 {
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+}
+
+.governance-route-visual img {
+  object-position: center center;
+  filter: saturate(0.95) contrast(1.12) brightness(0.88);
+}
+
+@media (max-width: 760px) {
+  .governance-route-page .archive-route-map {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-route-page .archive-route-map h2 {
+    font-size: clamp(1.85rem, 9vw, 2.55rem);
+  }
 }
 
 .product-route-actions {
