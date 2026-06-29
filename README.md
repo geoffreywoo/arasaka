@@ -95,6 +95,7 @@ http://127.0.0.1:4187/blackwall/
 http://127.0.0.1:4187/products/relic/
 http://127.0.0.1:4187/products/relic/technical-specification/
 http://127.0.0.1:4187/products/mikoshi/
+http://127.0.0.1:4187/products/mikoshi/runtime-specification/
 http://127.0.0.1:4187/products/ice/
 http://127.0.0.1:4187/products/ledger/
 http://127.0.0.1:4187/products/swarm/

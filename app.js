@@ -332,6 +332,69 @@ const translations = {
       mapTitle: "Relic routes identity through neural substrate, custody law, regional command, and executive continuity service.",
       mapCopy: "A buyer does not acquire immortality. A buyer acquires a governed continuity path with measurable evidence, named operators, reversible gates, and a sealed board docket."
     },
+    mikoshiSpec: {
+      productCta: "Open runtime specification",
+      back: "Return to Mikoshi dossier",
+      kicker: "MIKOSHI-IX / RUNTIME SPECIFICATION",
+      title: "A construct is only sovereign when its prison has governance.",
+      summary: "Mikoshi is specified as Arasaka's post-biological continuity runtime: partitioned construct vaulting, memory thaw control, rehearsal chambers, witness-bound drift suppression, and release gates for authority that must survive the body.",
+      openCustody: "Open engram custody",
+      openRelic: "Open Relic spec",
+      visualCaption: "Mikoshi continuity engine product plate, generated Arasaka catalog image.",
+      readouts: {
+        cells: {
+          label: "Vault partitions",
+          copy: "Constructs are split across sealed cells so memory, persona, and authority can be governed as separate custody objects."
+        },
+        thaw: {
+          label: "Thaw control",
+          copy: "Release requires biological proof, board quorum, and regional custody witness before any construct enters simulation or interface state."
+        },
+        drift: {
+          label: "Drift window",
+          copy: "Persona variance is bounded against witness material, signed decision priors, and continuity rehearsal baselines."
+        }
+      },
+      modulesEyebrow: "Runtime Modules",
+      modulesTitle: "Mikoshi turns the afterlife into infrastructure.",
+      modulesCopy: "The runtime separates construct storage from construct use. Capture arrives as evidence; simulation runs as a governed workload; release remains a legal event.",
+      modules: {
+        vault: {
+          title: "Partitioned Construct Vault",
+          copy: "Stores engram shards in isolated custody cells with separate keys for memory trace, authority record, and persona execution state."
+        },
+        thaw: {
+          title: "Biometric Thaw Gate",
+          copy: "Allows controlled interface only after a living proof, discontinuity proof, or board-sealed succession trigger matches the custody ledger."
+        },
+        sim: {
+          title: "Succession Rehearsal Chamber",
+          copy: "Runs high-pressure board, market, family, and hostile-counterparty scenarios before any construct is trusted with authority."
+        },
+        isolation: {
+          title: "Hostile Construct Isolation",
+          copy: "Quarantines coercive payloads, rogue AI hooks, blackmail vectors, and self-modifying persona fragments before they reach the custody core."
+        }
+      },
+      envelopeEyebrow: "Runtime Envelope",
+      envelopeTitle: "Storage is cheap. Governed resurrection is not.",
+      envelopeCopy: "Mikoshi only enters client scope when Arasaka can prove custody lineage, legal release authority, construct stability, and a reversible failure path.",
+      matrix: {
+        intake: "Intake object",
+        intakeValue: "Signed engram shard, Relic capture package, or Soulkiller extraction receipt",
+        partition: "Partition model",
+        partitionValue: "Memory, affect, authority, and execution state separated by quorum keys",
+        simulation: "Simulation mode",
+        simulationValue: "Board room, market shock, family succession, hostile interrogation, silent archive",
+        release: "Release authority",
+        releaseValue: "Tokyo root quorum with regional custody witness and export license",
+        abort: "Abort path",
+        abortValue: "Cold rollback, partition freeze, witness challenge, construct silence order"
+      },
+      mapEyebrow: "Continuity Routing",
+      mapTitle: "Mikoshi is the custody layer beneath Relic, Soulkiller, executive continuity, and board succession.",
+      mapCopy: "The runtime does not promise escape from death. It converts identity into a governed asset class with custody evidence, simulated authority, and release conditions that can survive institutional shock."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4772,6 +4835,69 @@ const translations = {
       mapEyebrow: "ルーティング済みアーキテクチャ",
       mapTitle: "Relicは同一性を神経基盤、保管法、地域指揮、役員継続サービスへルーティングします。",
       mapCopy: "買い手が取得するのは不死ではありません。測定可能な証拠、指名オペレーター、可逆ゲート、封印済み取締役会ドケットを持つ統治された継続経路です。"
+    },
+    mikoshiSpec: {
+      productCta: "ランタイム仕様を開く",
+      back: "Mikoshiドシエへ戻る",
+      kicker: "MIKOSHI-IX / ランタイム仕様",
+      title: "構成体は、その檻に統治があるときだけ主権を持ちます。",
+      summary: "Mikoshiは荒坂の死後継続ランタイムとして仕様化されます。分割構成体保管、記憶解凍制御、演習室、立会拘束ドリフト抑制、身体を超えて存続すべき権限のためのリリースゲートです。",
+      openCustody: "エングラム保管を開く",
+      openRelic: "Relic仕様を開く",
+      visualCaption: "Mikoshi継続エンジン製品プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        cells: {
+          label: "保管区画",
+          copy: "構成体は封印セルへ分割され、記憶、人格、権限を別個の保管オブジェクトとして統治できます。"
+        },
+        thaw: {
+          label: "解凍制御",
+          copy: "構成体がシミュレーションまたはインターフェース状態へ入る前に、生物学的証明、取締役会クォーラム、地域保管立会が必要です。"
+        },
+        drift: {
+          label: "ドリフト窓",
+          copy: "人格分散は、立会資料、署名済み意思決定事前分布、継続演習ベースラインに対して境界付けられます。"
+        }
+      },
+      modulesEyebrow: "ランタイムモジュール",
+      modulesTitle: "Mikoshiは死後世界をインフラへ変換します。",
+      modulesCopy: "ランタイムは構成体保管と構成体利用を分離します。キャプチャは証拠として到着し、シミュレーションは統治されたワークロードとして実行され、リリースは法的イベントのままです。",
+      modules: {
+        vault: {
+          title: "分割構成体保管庫",
+          copy: "エングラムシャードを、記憶トレース、権限記録、人格実行状態ごとに異なるキーを持つ隔離保管セルへ保存します。"
+        },
+        thaw: {
+          title: "生体解凍ゲート",
+          copy: "生存証明、途絶証明、または取締役会封印済み継承トリガーが保管台帳と一致した後にのみ、制御されたインターフェースを許可します。"
+        },
+        sim: {
+          title: "継承演習室",
+          copy: "構成体が権限を信頼される前に、取締役会、市場、家族、敵対的相手方の高圧シナリオを実行します。"
+        },
+        isolation: {
+          title: "敵対構成体隔離",
+          copy: "強制ペイロード、ローグAIフック、恐喝ベクトル、自己改変人格断片を保管コアへ到達する前に隔離します。"
+        }
+      },
+      envelopeEyebrow: "ランタイム範囲",
+      envelopeTitle: "ストレージは安い。統治された復活は違います。",
+      envelopeCopy: "Mikoshiは、荒坂が保管系譜、法的リリース権限、構成体安定性、可逆的障害経路を証明できる場合にのみクライアント範囲へ入ります。",
+      matrix: {
+        intake: "取込オブジェクト",
+        intakeValue: "署名済みエングラムシャード、Relicキャプチャパッケージ、またはSoulkiller抽出受領書",
+        partition: "分割モデル",
+        partitionValue: "記憶、情動、権限、実行状態をクォーラムキーで分離",
+        simulation: "シミュレーションモード",
+        simulationValue: "取締役会、市場ショック、家族継承、敵対尋問、静的アーカイブ",
+        release: "リリース権限",
+        releaseValue: "地域保管立会および輸出ライセンス付き東京ルートクォーラム",
+        abort: "中止経路",
+        abortValue: "低温ロールバック、区画凍結、立会異議、構成体沈黙命令"
+      },
+      mapEyebrow: "継続性経路",
+      mapTitle: "MikoshiはRelic、Soulkiller、役員継続、取締役会継承の下にある保管レイヤーです。",
+      mapCopy: "ランタイムは死からの脱出を約束しません。同一性を、保管証拠、シミュレートされた権限、組織的衝撃に耐えるリリース条件を持つ統治済み資産クラスへ変換します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",

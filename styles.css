@@ -6758,6 +6758,11 @@ a,
   filter: saturate(1.06) contrast(1.1) brightness(0.9);
 }
 
+.mikoshi-spec-route-visual img {
+  object-position: center center;
+  filter: saturate(1.04) contrast(1.1) brightness(0.9);
+}
+
 .spec-route-matrix {
   overflow: hidden;
   display: grid;
