@@ -6200,6 +6200,28 @@ a,
   filter: saturate(1.12) contrast(1.06);
 }
 
+.capital-tech-hero::before {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(229, 196, 106, 0.18), transparent 34%),
+    radial-gradient(circle at 18% 72%, rgba(116, 199, 216, 0.12), transparent 28%),
+    repeating-linear-gradient(90deg, transparent 0 34px, rgba(229, 196, 106, 0.035) 34px 35px);
+}
+
+.capital-tech-page .deep-tech-hero,
+.capital-tech-page .deep-tech-system,
+.capital-tech-page .deep-tech-schematic,
+.capital-tech-page .deep-tech-specs,
+.capital-tech-page .deep-tech-network-panel {
+  background:
+    linear-gradient(135deg, rgba(229, 196, 106, 0.09), transparent 42%, rgba(116, 199, 216, 0.08)),
+    rgba(7, 9, 12, 0.91);
+}
+
+.capital-tech-visual img {
+  object-position: center center;
+  filter: saturate(1.05) contrast(1.05);
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;

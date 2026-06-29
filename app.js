@@ -338,6 +338,80 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier binds the protection suite to Arasaka city-grid operations."
     },
+    techCapital: {
+      back: "Return to technology library",
+      kicker: "TECH-BL-03 / SOVEREIGN CAPITAL CUSTODY",
+      title: "Capital movement without public intent leakage.",
+      summary: "A blind settlement and collateral custody rail for family offices, patent vaults, and treaty counterparties that need institutional proof without broadcasting strategy to the market.",
+      openProduct: "Open Ledger product file",
+      openService: "Open mandate service",
+      visualCaption: "BL-00 custody rail render, public catalog crop.",
+      readouts: {
+        close: {
+          label: "Blind close",
+          copy: "Median settlement window from mandate match to notary-sealed escrow receipt."
+        },
+        collateral: {
+          label: "Collateral lock",
+          copy: "Required custodian quorum for patent vault release or cross-border mandate amendment."
+        },
+        disclosure: {
+          label: "Disclosure gate",
+          copy: "Jurisdiction trigger that converts silent custody into regulator-readable board evidence."
+        }
+      },
+      stackEyebrow: "Custody Stack",
+      stackTitle: "The asset moves only after the mandate proves it should exist.",
+      stackCopy: "The rail separates intent matching, collateral proof, notary sealing, and disclosure routing so capital can settle privately without becoming unverifiable.",
+      layers: {
+        intent: {
+          title: "Intent blind",
+          copy: "Counterparties expose mandate shape, not identity, until compatibility is proven by a private reputation circuit."
+        },
+        collateral: {
+          title: "Collateral vault",
+          copy: "Patent rights, equity warrants, and restricted digital assets are locked behind custodian quorum before pricing is released."
+        },
+        notary: {
+          title: "Settlement notary",
+          copy: "A blind notary signs the receipt, escrow route, and lawful basis without exposing the full strategy graph."
+        },
+        disclosure: {
+          title: "Disclosure switch",
+          copy: "Jurisdiction triggers determine when silent capital becomes regulator-readable evidence instead of public signal."
+        }
+      },
+      schematicEyebrow: "Settlement Path",
+      schematicTitle: "Privacy is preserved by proving custody, not by hiding it.",
+      signal: {
+        intent: "Intent blind",
+        collateral: "Collateral vault",
+        notary: "Settlement notary",
+        disclosure: "Disclosure gate"
+      },
+      specEyebrow: "Engineering Envelope",
+      specTitle: "Custody constraints.",
+      specs: {
+        privacy: {
+          label: "Privacy circuit",
+          copy: "Mandates prove compatibility without revealing identity, full inventory, or strategic timing."
+        },
+        escrow: {
+          label: "Escrow seal",
+          copy: "Settlement cannot release until custodians sign asset existence, encumbrance status, and lawful transfer basis."
+        },
+        patent: {
+          label: "Patent collateral",
+          copy: "Intellectual property is tracked at claim granularity so financing can attach to enforceable fragments."
+        },
+        jurisdiction: {
+          label: "Jurisdiction router",
+          copy: "Regulatory events route the minimum required proof to the correct authority while preserving private strategy state."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "This dossier binds the Black Ledger product to the mandate service and exchange grid."
+    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -4017,6 +4091,80 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録は警護製品群を荒坂都市グリッド運用へ結合します。"
+    },
+    techCapital: {
+      back: "技術ライブラリへ戻る",
+      kicker: "TECH-BL-03 / 主権資本保管",
+      title: "公開意図漏洩のない資本移動。",
+      summary: "市場へ戦略を放送せず機関投資家向け証明を必要とするファミリーオフィス、特許保管庫、条約相手方のための盲目決済および担保保管レール。",
+      openProduct: "Ledger製品ファイルを開く",
+      openService: "委任サービスを開く",
+      visualCaption: "BL-00保管レールレンダー、公開カタログ切り抜き。",
+      readouts: {
+        close: {
+          label: "盲目決済",
+          copy: "委任一致から公証封印済みエスクローレシートまでの中央値。"
+        },
+        collateral: {
+          label: "担保ロック",
+          copy: "特許保管庫解放または越境委任修正に必要な保管者クォーラム。"
+        },
+        disclosure: {
+          label: "開示ゲート",
+          copy: "沈黙保管を規制当局が読める取締役会証跡へ変換する管轄トリガー。"
+        }
+      },
+      stackEyebrow: "保管スタック",
+      stackTitle: "資産は委任が存在を証明した後にのみ移動します。",
+      stackCopy: "このレールは、意図照合、担保証明、公証封印、開示ルーティングを分離し、資本が検証不能にならず私的に決済できるようにします。",
+      layers: {
+        intent: {
+          title: "意図ブラインド",
+          copy: "相手方は、私的評判回路で互換性が証明されるまで、身元ではなく委任形状を公開します。"
+        },
+        collateral: {
+          title: "担保保管庫",
+          copy: "特許権、株式ワラント、制限付きデジタル資産は、価格公開前に保管者クォーラムの背後でロックされます。"
+        },
+        notary: {
+          title: "決済公証",
+          copy: "盲目公証者が、完全な戦略グラフを公開せずレシート、エスクロー経路、法的根拠に署名します。"
+        },
+        disclosure: {
+          title: "開示スイッチ",
+          copy: "管轄トリガーは、沈黙資本が公開シグナルではなく規制当局向け証跡になる時点を決定します。"
+        }
+      },
+      schematicEyebrow: "決済経路",
+      schematicTitle: "プライバシーは隠蔽ではなく保管証明によって維持されます。",
+      signal: {
+        intent: "意図ブラインド",
+        collateral: "担保保管庫",
+        notary: "決済公証",
+        disclosure: "開示ゲート"
+      },
+      specEyebrow: "工学範囲",
+      specTitle: "保管制約。",
+      specs: {
+        privacy: {
+          label: "プライバシー回路",
+          copy: "委任は、身元、全在庫、戦略的タイミングを明かさず互換性を証明します。"
+        },
+        escrow: {
+          label: "エスクロー封印",
+          copy: "保管者が資産存在、負担状況、合法移転根拠に署名するまで決済は解放されません。"
+        },
+        patent: {
+          label: "特許担保",
+          copy: "知的財産は請求項粒度で追跡され、金融が執行可能な断片へ接続できるようにします。"
+        },
+        jurisdiction: {
+          label: "管轄ルーター",
+          copy: "規制事象は、私的戦略状態を保持しながら必要最小限の証明を正しい権限へルーティングします。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "この記録はBlack Ledger製品を委任サービスと交換グリッドへ結合します。"
     },
     spine: {
       node: "公開ノード",
