@@ -6553,6 +6553,33 @@ a,
   color: var(--acid);
 }
 
+.tower-casefile-page .archive-route-hero,
+.tower-casefile-page .archive-route-readout,
+.tower-casefile-page .archive-route-incidents,
+.tower-casefile-page .archive-route-map {
+  border-color: rgba(225, 7, 20, 0.34);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(116, 199, 216, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.18), transparent 40%, rgba(221, 184, 94, 0.1)),
+    rgba(7, 9, 12, 0.95);
+}
+
+.tower-casefile-hero::before {
+  background:
+    linear-gradient(120deg, transparent 0 45%, rgba(225, 7, 20, 0.15) 45% 47%, transparent 47%),
+    repeating-linear-gradient(0deg, transparent 0 24px, rgba(116, 199, 216, 0.04) 24px 25px),
+    repeating-linear-gradient(90deg, transparent 0 96px, rgba(221, 184, 94, 0.035) 96px 97px);
+}
+
+.tower-casefile-page .archive-route-readout strong {
+  color: var(--red);
+}
+
+.tower-casefile-page .casefile-route-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.14) brightness(0.88);
+}
+
 .casefile-route-visual img {
   object-position: center center;
   filter: saturate(1.05) contrast(1.12) brightness(0.92);

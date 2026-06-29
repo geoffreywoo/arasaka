@@ -81,6 +81,7 @@ http://127.0.0.1:4187/
 http://127.0.0.1:4187/technology/
 http://127.0.0.1:4187/operations/
 http://127.0.0.1:4187/archive/
+http://127.0.0.1:4187/archive/tower/
 http://127.0.0.1:4187/archive/konpeki/
 http://127.0.0.1:4187/archive/afterlife/
 http://127.0.0.1:4187/governance/

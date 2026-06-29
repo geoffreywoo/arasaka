@@ -101,6 +101,54 @@ const translations = {
       creditCopy: "Cyberpunk 2077 press screenshots are credited to CD PROJEKT RED. Product plates, service plates, and the evidence wall are generated fan-concept assets for this unofficial Arasaka website.",
       creditOpen: "Open attribution ledger"
     },
+    towerFile: {
+      back: "Return to operations archive",
+      kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
+      title: "Site loss becomes continuity architecture.",
+      summary: "The tower event is filed as an origin model for sovereign redundancy: offsite command, identity escrow, rumor control, and succession authority that must remain live after any physical headquarters failure.",
+      openContinuity: "Open continuity service",
+      openTech: "Open neural substrate",
+      visualCaption: "Credited Cyberpunk 2077 press frame used as public source evidence.",
+      readouts: {
+        site: {
+          label: "Site loss model",
+          copy: "Every command site must resolve into multiple successor surfaces before the first public narrative forms."
+        },
+        escrow: {
+          label: "Identity escrow",
+          copy: "Witness threshold required before offsite continuity releases successor authority or construct access."
+        },
+        rumor: {
+          label: "Rumor half-life",
+          copy: "Public myth is converted into a sealed evidence window before it contaminates board-level decision paths."
+        }
+      },
+      chainEyebrow: "Continuity Chain",
+      chainTitle: "Tower loss becomes four permanent system requirements.",
+      chainCopy: "This casefile treats the public shock of headquarters loss as an engineering pressure model: facilities fail, authority must not.",
+      openRoute: "Open routed system",
+      chain: {
+        loss: {
+          title: "Physical loss becomes a redundancy problem.",
+          copy: "The tower event is no longer filed as real estate or kinetic damage. It becomes a standing requirement for offsite command and survivable authority."
+        },
+        continuity: {
+          title: "Continuity services pre-stage authority.",
+          copy: "Successor identity, family quorum, witness cells, and command cutover are prepared before a principal can become unreachable."
+        },
+        identity: {
+          title: "Identity custody must survive the body.",
+          copy: "Construct archives, neural substrate hashes, and Relic custody rules keep executive continuity from collapsing into rumor or impersonation."
+        },
+        deterrence: {
+          title: "Deterrence requires a live command surface.",
+          copy: "Private response authority, disclosure silence, and evidence custody stay operational after public infrastructure is compromised."
+        }
+      },
+      mapEyebrow: "Doctrine Routing",
+      mapTitle: "Tower trauma resolves into continuity, neural custody, Watchfloor, and Board systems.",
+      mapCopy: "The casefile is not biography. It is the pressure model behind executive continuity, Mikoshi partitioning, neural substrate certification, and readiness governance."
+    },
     konpekiFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE KP-RELIC / KONPEKI PLAZA",
@@ -4188,6 +4236,54 @@ const translations = {
       creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
       creditCopy: "Cyberpunk 2077プレススクリーンショットはCD PROJEKT REDに帰属します。製品プレート、サービスプレート、証拠ウォールはこの非公式荒坂サイト用の生成ファンコンセプト資産です。",
       creditOpen: "帰属台帳を開く"
+    },
+    towerFile: {
+      back: "運用記録庫へ戻る",
+      kicker: "ケースファイル AT-2023 / タワー・トラウマ",
+      title: "拠点喪失は継続アーキテクチャになる。",
+      summary: "タワー事象は、主権的冗長性の起点モデルとして記録されます。物理的本社障害の後も稼働し続ける遠隔指揮、同一性エスクロー、噂制御、継承権限です。",
+      openContinuity: "継続サービスを開く",
+      openTech: "神経基盤を開く",
+      visualCaption: "公開ソース証拠として使用されるクレジット済みCyberpunk 2077プレス画像。",
+      readouts: {
+        site: {
+          label: "拠点喪失モデル",
+          copy: "すべての指揮拠点は、最初の公開物語が形成される前に複数の後継面へ解決されなければなりません。"
+        },
+        escrow: {
+          label: "同一性エスクロー",
+          copy: "遠隔継続が継承者権限または構成体アクセスを解放する前に必要な立会しきい値。"
+        },
+        rumor: {
+          label: "噂の半減期",
+          copy: "公開神話は、取締役会級判断経路を汚染する前に封印証拠窓口へ変換されます。"
+        }
+      },
+      chainEyebrow: "継続チェーン",
+      chainTitle: "タワー喪失は四つの恒久的システム要件になります。",
+      chainCopy: "このケースファイルは本社喪失の公開衝撃を工学的圧力モデルとして扱います。施設は失敗しても、権限は失敗できません。",
+      openRoute: "ルーティング済みシステムを開く",
+      chain: {
+        loss: {
+          title: "物理的喪失は冗長性問題になります。",
+          copy: "タワー事象は不動産やキネティック損害としてだけ記録されません。遠隔指揮と生存可能な権限の常設要件になります。"
+        },
+        continuity: {
+          title: "継続サービスは権限を事前配置します。",
+          copy: "本人が到達不能になる前に、継承者ID、家族クォーラム、立会セル、指揮切替を準備します。"
+        },
+        identity: {
+          title: "同一性保管は身体を超えて生存しなければなりません。",
+          copy: "構成体記録庫、神経基盤ハッシュ、Relic保管規則が、役員継続を噂やなりすましへ崩壊させません。"
+        },
+        deterrence: {
+          title: "抑止にはライブ指揮面が必要です。",
+          copy: "公開インフラが侵害された後も、私的応答権限、開示沈黙、証拠保管は稼働を維持します。"
+        }
+      },
+      mapEyebrow: "ドクトリン経路",
+      mapTitle: "タワー・トラウマは継続、神経保管、監視室、取締役会システムへ解決されます。",
+      mapCopy: "このケースファイルは伝記ではありません。役員継続、神輿分割、神経基盤認証、即応統治の背後にある圧力モデルです。"
     },
     konpekiFile: {
       back: "運用記録庫へ戻る",
