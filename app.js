@@ -2072,6 +2072,27 @@ const translations = {
       assuranceEvidence: "Evidence",
       assuranceOpen: "Review access",
       assuranceSeal: "Authenticated by Arasaka Internal Assurance",
+      assuranceDataAria: "Diligence data room index",
+      assuranceDataEyebrow: "Data Room Index",
+      assuranceDataTitle: "Qualified files expose proof without exposing clients.",
+      assuranceData: {
+        architecture: {
+          title: "Architecture map",
+          text: "System boundaries, custody flows, and command surfaces."
+        },
+        redteam: {
+          title: "Red-team digest",
+          text: "Counterintrusion findings with hostile signatures redacted."
+        },
+        command: {
+          title: "Command attestation",
+          text: "Human witness chain, escalation limits, and force audit paths."
+        },
+        retention: {
+          title: "Retention schedule",
+          text: "Cold partition clocks, disclosure windows, and deletion proofs."
+        }
+      },
       assurance: {
         custody: {
           code: "AS-01",
@@ -5033,6 +5054,27 @@ const translations = {
       assuranceEvidence: "証拠",
       assuranceOpen: "アクセス審査",
       assuranceSeal: "荒坂内部保証により認証",
+      assuranceDataAria: "デューデリジェンス・データルーム索引",
+      assuranceDataEyebrow: "データルーム索引",
+      assuranceDataTitle: "適格ファイルは、顧客を露出せずに証明を露出します。",
+      assuranceData: {
+        architecture: {
+          title: "アーキテクチャマップ",
+          text: "システム境界、保管フロー、指揮面。"
+        },
+        redteam: {
+          title: "レッドチーム要約",
+          text: "敵対署名を伏せた対侵入所見。"
+        },
+        command: {
+          title: "指揮証明",
+          text: "人間証人鎖、エスカレーション制限、武力監査経路。"
+        },
+        retention: {
+          title: "保持スケジュール",
+          text: "冷却パーティション時計、開示窓、削除証明。"
+        }
+      },
       assurance: {
         custody: {
           code: "AS-01",
