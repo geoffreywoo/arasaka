@@ -2452,6 +2452,13 @@ const translations = {
       escalationRule: "Escalation Rule",
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
+      patchCadence: "Patch Cadence",
+      patchCadenceLead: "Lifecycle update ledger for release ring, canary corridor, rollback authority, and cryptographic rotation after live acceptance.",
+      releaseRing: "Release Ring",
+      canaryCorridor: "Canary Corridor",
+      rollbackAuthority: "Rollback Authority",
+      cryptoRotation: "Crypto Rotation",
+      cadenceStamp: "Cadence",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -2684,6 +2691,13 @@ const translations = {
       escalationRule: "Escalation Rule",
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
+      patchCadence: "Patch Cadence",
+      patchCadenceLead: "Lifecycle update ledger for release ring, canary corridor, rollback authority, and cryptographic rotation after mandate acceptance.",
+      releaseRing: "Release Ring",
+      canaryCorridor: "Canary Corridor",
+      rollbackAuthority: "Rollback Authority",
+      cryptoRotation: "Crypto Rotation",
+      cadenceStamp: "Cadence",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -5031,6 +5045,13 @@ const translations = {
       escalationRule: "エスカレーション規則",
       standbyChannel: "スタンバイチャネル",
       monitorSignal: "シグナル",
+      patchCadence: "パッチ周期",
+      patchCadenceLead: "ライブ受領後のリリースリング、カナリア回廊、ロールバック権限、暗号ローテーションを示すライフサイクル更新台帳。",
+      releaseRing: "リリースリング",
+      canaryCorridor: "カナリア回廊",
+      rollbackAuthority: "ロールバック権限",
+      cryptoRotation: "暗号ローテーション",
+      cadenceStamp: "周期",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -5263,6 +5284,13 @@ const translations = {
       escalationRule: "エスカレーション規則",
       standbyChannel: "スタンバイチャネル",
       monitorSignal: "シグナル",
+      patchCadence: "パッチ周期",
+      patchCadenceLead: "委任受領後のリリースリング、カナリア回廊、ロールバック権限、暗号ローテーションを示すライフサイクル更新台帳。",
+      releaseRing: "リリースリング",
+      canaryCorridor: "カナリア回廊",
+      rollbackAuthority: "ロールバック権限",
+      cryptoRotation: "暗号ローテーション",
+      cadenceStamp: "周期",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -5533,6 +5561,7 @@ const routeExportLicense = document.querySelector("[data-route-export-license]")
 const routeUnderwritingBond = document.querySelector("[data-route-underwriting-bond]");
 const routeSettlementEscrow = document.querySelector("[data-route-settlement-escrow]");
 const routeContinuityMonitor = document.querySelector("[data-route-continuity-monitor]");
+const routePatchCadence = document.querySelector("[data-route-patch-cadence]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -5575,6 +5604,7 @@ const serviceRouteExportLicense = document.querySelector("[data-service-export-l
 const serviceRouteUnderwritingBond = document.querySelector("[data-service-underwriting-bond]");
 const serviceRouteSettlementEscrow = document.querySelector("[data-service-settlement-escrow]");
 const serviceRouteContinuityMonitor = document.querySelector("[data-service-continuity-monitor]");
+const serviceRoutePatchCadence = document.querySelector("[data-service-patch-cadence]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -7338,6 +7368,38 @@ function renderRouteContinuityMonitor(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRoutePatchCadence(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-patch-head";
+  label.textContent = labels.patchCadence;
+  lead.textContent = labels.patchCadenceLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-patch-grid";
+  rows.forEach(({ label: rowLabel, value, text, cadence }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.cadenceStamp}: ${cadence}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -8181,6 +8243,33 @@ function updateProductRoute() {
       value: operations.regions.join(" / "),
       text: `${dictionary.productRoute.capitalObserver} / ${file.tabs.governance.title}`,
       signal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRoutePatchCadence(routePatchCadence, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.releaseRing,
+      value: operations.packages[0],
+      text: `${file.tabs.deployment.title} / ${file.tabs.specs.title}`,
+      cadence: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.canaryCorridor,
+      value: operations.regions[0],
+      text: `${operations.integrations[0]} / ${field.exposure}`,
+      cadence: file.latency
+    },
+    {
+      label: dictionary.productRoute.rollbackAuthority,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      cadence: file.clearance
+    },
+    {
+      label: dictionary.productRoute.cryptoRotation,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
+      cadence: "G.W. / A-F"
     }
   ]);
 
@@ -9104,6 +9193,33 @@ function updateServiceRoute() {
       value: file.operations.regions.join(" / "),
       text: `${routeLabels.capitalObserver} / ${file.tabs.governance.title}`,
       signal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRoutePatchCadence(serviceRoutePatchCadence, routeLabels, [
+    {
+      label: routeLabels.releaseRing,
+      value: file.operations.packages[0],
+      text: `${file.tabs.deployment.title} / ${file.tabs.stack.title}`,
+      cadence: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.canaryCorridor,
+      value: file.operations.regions[0],
+      text: `${file.operations.integrations[0]} / ${file.field.exposure}`,
+      cadence: file.window
+    },
+    {
+      label: routeLabels.rollbackAuthority,
+      value: file.tabs.governance.title,
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      cadence: file.clearance
+    },
+    {
+      label: routeLabels.cryptoRotation,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
+      cadence: "G.W. / A-F"
     }
   ]);
 
