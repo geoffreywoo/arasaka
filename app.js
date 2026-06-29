@@ -188,6 +188,35 @@ const translations = {
         text: "Board-grade neural custody, succession rehearsal, and construct governance under sealed assurance."
       }
     },
+    mandateExchange: {
+      aria: "Sovereign mandate exchange",
+      ledgerAria: "Mandate routing ledger",
+      eyebrow: "Sovereign Mandate Exchange",
+      title: "Qualified authority is routed before any product is disclosed.",
+      text: "Public access resolves into a mandate class, command sponsor, risk posture, and sealed deployment envelope before Arasaka opens a private room.",
+      sponsor: "Sponsor",
+      envelope: "Envelope",
+      continuity: {
+        title: "Continuity Authority",
+        text: "Founder succession, engram witness, and post-biological command rights routed through Relic and Mikoshi custody.",
+        sponsor: "Family command"
+      },
+      counter: {
+        title: "Counterintrusion Authority",
+        text: "Hostile runner traces, Blackwall-adjacent contact, and burn authorization resolved into human-witnessed theater control.",
+        sponsor: "Netrunner cell"
+      },
+      capital: {
+        title: "Capital Authority",
+        text: "Patent leverage, reputation collateral, and founder liquidity routed beneath public market visibility.",
+        sponsor: "Black ledger desk"
+      },
+      force: {
+        title: "Protection Authority",
+        text: "Drone veils, extraction corridors, and city-grid denial routed through accountable human command.",
+        sponsor: "Tactical director"
+      }
+    },
     fieldConsole: {
       aria: "Mobile mandate console",
       routesAria: "Priority mandate routes",
@@ -3118,6 +3147,35 @@ const translations = {
         label: "継続性委任",
         value: "AA-90",
         text: "封印済み保証下の取締役会級神経保管、継承リハーサル、コンストラクト統治。"
+      }
+    },
+    mandateExchange: {
+      aria: "主権委任取引所",
+      ledgerAria: "委任経路台帳",
+      eyebrow: "主権委任取引所",
+      title: "適格な権限は、製品開示の前に経路化されます。",
+      text: "公開アクセスは、荒坂が private room を開く前に、委任分類、指揮スポンサー、リスク姿勢、封印済み配備エンベロープへ解決されます。",
+      sponsor: "スポンサー",
+      envelope: "エンベロープ",
+      continuity: {
+        title: "継続性権限",
+        text: "創業者継承、エングラム証人、ポスト生体指揮権を、レリックと神輿保管へ経路化。",
+        sponsor: "一族指揮"
+      },
+      counter: {
+        title: "対侵入権限",
+        text: "敵対ランナー痕跡、ブラックウォール隣接接触、焼却承認を、人間証人付きの作戦域制御へ解決。",
+        sponsor: "ネットランナーセル"
+      },
+      capital: {
+        title: "資本権限",
+        text: "特許レバレッジ、評判担保、創業者流動性を、公開市場の可視性の下層へ経路化。",
+        sponsor: "ブラック台帳デスク"
+      },
+      force: {
+        title: "保護権限",
+        text: "ドローン遮蔽、抽出回廊、都市網拒否を、説明責任ある人間指揮へ経路化。",
+        sponsor: "戦術責任者"
       }
     },
     fieldConsole: {
