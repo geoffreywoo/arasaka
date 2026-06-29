@@ -13930,7 +13930,8 @@ a,
 }
 
 .capital-copy,
-.capital-console {
+.capital-console,
+.treasury-stack {
   position: relative;
   z-index: 1;
 }
@@ -14197,6 +14198,126 @@ a,
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.82rem;
   font-weight: 900;
+}
+
+.treasury-stack {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.38fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(209, 177, 107, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(209, 177, 107, 0.2), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.treasury-stack-head,
+.treasury-stack article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(209, 177, 107, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.94);
+}
+
+.treasury-stack-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--gold);
+}
+
+.treasury-stack-head span,
+.treasury-stack article > span,
+.treasury-stack dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.63rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.treasury-stack-head span,
+.treasury-stack article > span {
+  color: var(--gold);
+}
+
+.treasury-stack-head strong {
+  color: var(--paper);
+  font-size: 1.18rem;
+  line-height: 1.05;
+}
+
+.treasury-stack-head p,
+.treasury-stack article p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.treasury-stack article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 244px;
+  padding: 16px;
+}
+
+.treasury-stack article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(209, 177, 107, 0.12), transparent 48%),
+    repeating-linear-gradient(0deg, transparent 0 24px, rgba(255, 255, 255, 0.035) 24px 25px);
+}
+
+.treasury-stack article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.treasury-stack h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.treasury-stack dl {
+  display: grid;
+  gap: 1px;
+  align-self: end;
+  margin: 4px 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.treasury-stack dl div {
+  display: grid;
+  gap: 4px;
+  padding: 9px;
+  background: rgba(5, 5, 7, 0.74);
+}
+
+.treasury-stack dt {
+  color: rgba(209, 177, 107, 0.72);
+}
+
+.treasury-stack dd {
+  margin: 0;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.18;
+  text-transform: uppercase;
 }
 
 .exchange-section {
@@ -17912,6 +18033,14 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .treasury-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .treasury-stack-head {
+    grid-column: 1 / -1;
+  }
+
   .clientroom-packets {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -18989,6 +19118,19 @@ a,
 
   .status-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .treasury-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .treasury-stack article {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .treasury-stack-head {
+    padding: 14px;
   }
 
   .status-rail div {

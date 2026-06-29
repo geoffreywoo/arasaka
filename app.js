@@ -1343,6 +1343,37 @@ const translations = {
       conviction: "Conviction",
       obscurity: "Obscurity",
       relay: "Relay",
+      treasuryAria: "Sovereign treasury stack",
+      treasuryEyebrow: "Sovereign Treasury Stack",
+      treasuryTitle: "Balance-sheet control is treated as a weapons system.",
+      treasuryText: "A public-safe ledger of the capital instruments Arasaka can bind to identity, jurisdiction, and narrative silence before a mandate is released.",
+      treasuryAsset: "Asset",
+      treasuryControl: "Control",
+      treasury: {
+        reserve: {
+          title: "Cold Liquidity Reserve",
+          text: "Sovereign cash, stable settlement, and orbital key material are held outside ordinary exchange pressure.",
+          asset: "Liquidity shadow",
+          control: "Cold route"
+        },
+        patent: {
+          title: "Patent Gravity Collateral",
+          text: "Strategic claims and enforcement surfaces are priced before hostile acquisition paths can form.",
+          asset: "Claim field",
+          control: "IP lock"
+        },
+        identity: {
+          title: "Identity Escrow",
+          text: "Founder authority, biometric witness, and construct custody convert reputation into executable collateral.",
+          asset: "Principal signal",
+          control: "Dual-key"
+        },
+        relay: {
+          title: "Off-Network Relay Exposure",
+          text: "External conviction traces are retained as checksum, never as public ownership claim or declared thesis.",
+          asset: "Quiet checksum"
+        }
+      },
       mode: {
         signal: "Signal Pricing",
         patent: "Patent Gravity",
@@ -4625,6 +4656,37 @@ const translations = {
       conviction: "確信度",
       obscurity: "秘匿度",
       relay: "中継",
+      treasuryAria: "主権トレジャリースタック",
+      treasuryEyebrow: "主権トレジャリースタック",
+      treasuryTitle: "貸借対照表の制御は、兵器システムとして扱われます。",
+      treasuryText: "委任が解除される前に、荒坂がID、管轄、物語上の沈黙へ結合できる資本器具の公開安全台帳。",
+      treasuryAsset: "資産",
+      treasuryControl: "制御",
+      treasury: {
+        reserve: {
+          title: "冷却流動性準備",
+          text: "主権現金、安定決済、軌道キー材料は通常の取引所圧力の外側に保持されます。",
+          asset: "流動性の影",
+          control: "冷却経路"
+        },
+        patent: {
+          title: "特許重力担保",
+          text: "敵対的買収経路が形成される前に、戦略的請求権と執行面を価格化します。",
+          asset: "請求フィールド",
+          control: "知財ロック"
+        },
+        identity: {
+          title: "IDエスクロー",
+          text: "創業者権限、生体証人、コンストラクト保管が、評判を実行可能な担保へ変換します。",
+          asset: "プリンシパル信号",
+          control: "二重鍵"
+        },
+        relay: {
+          title: "オフネットワーク中継エクスポージャー",
+          text: "外部確信の痕跡はチェックサムとして保持され、公開所有主張や宣言済み仮説にはしません。",
+          asset: "静かなチェックサム"
+        }
+      },
       mode: {
         signal: "シグナル価格化",
         patent: "特許重力",
