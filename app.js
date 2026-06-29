@@ -63,7 +63,7 @@ const translations = {
         },
         routes: {
           label: "Active routes",
-          copy: "Neural, ICE, autonomous force, and capital custody programs now have deep technical dossiers."
+          copy: "Neural, ICE, Blackwall, autonomous force, and capital custody programs now have deep technical dossiers."
         },
         source: {
           label: "Source status",
@@ -74,6 +74,7 @@ const translations = {
       incidentsTitle: "Lore signals, translated into corporate control surfaces.",
       incidentsCopy: "This archive treats public Cyberpunk universe events as operating-pressure models: not biography, not fandom, but the corporate logic that would turn each shock into product requirements.",
       openRoute: "Open routed doctrine",
+      openCasefile: "Open casefile",
       incidents: {
         tower: {
           title: "Tower trauma initializes redundancy doctrine.",
@@ -99,6 +100,54 @@ const translations = {
       creditTitle: "Unofficial fan concept with credited source imagery.",
       creditCopy: "Cyberpunk 2077 press screenshots are credited to CD PROJEKT RED. Product plates, service plates, and the evidence wall are generated fan-concept assets for this unofficial Arasaka website.",
       creditOpen: "Open attribution ledger"
+    },
+    konpekiFile: {
+      back: "Return to operations archive",
+      kicker: "CASEFILE KP-RELIC / KONPEKI PLAZA",
+      title: "A hotel incident turns immortality into an access-control problem.",
+      summary: "Public lore records the Konpeki Plaza breach as a dramatic theft. Arasaka's institutional reading is narrower: guest identity, executive succession, biochip custody, and construct drift collapsed into one hostile operating surface.",
+      openRelic: "Open Relic product file",
+      openTech: "Open neural substrate",
+      visualCaption: "Generated Relic custody plate used as public-safe casefile imagery.",
+      readouts: {
+        custody: {
+          label: "Custody collapse",
+          copy: "Guest identity, carrier body, executive construct, and succession authority entered one breach path."
+        },
+        drift: {
+          label: "Construct drift",
+          copy: "Review threshold where advisory continuity becomes identity contamination risk."
+        },
+        window: {
+          label: "Response window",
+          copy: "Public narrative time compressed into private command, containment, and succession exposure."
+        }
+      },
+      chainEyebrow: "Custody Chain",
+      chainTitle: "The breach is filed as four simultaneous control failures.",
+      chainCopy: "Each failure maps to a product requirement. The casefile turns cinematic incident pressure into procurement language a board can actually govern.",
+      openRoute: "Open routed system",
+      chain: {
+        identity: {
+          title: "Guest identity becomes a privileged API.",
+          copy: "Hospitality access, suite clearance, and biometric exception paths are treated as one identity graph."
+        },
+        biochip: {
+          title: "Biochip custody is a live chain-of-command.",
+          copy: "Carrier integrity, thermal control, witness state, and construct consent must move together or not at all."
+        },
+        construct: {
+          title: "Construct authority cannot outrun lineage.",
+          copy: "A stored executive mind becomes a governance object only while lineage, mandate, and drift controls agree."
+        },
+        response: {
+          title: "Response authority must survive rumor velocity.",
+          copy: "Once the incident becomes public mythology, command surfaces need sealed evidence and fewer public claims."
+        }
+      },
+      mapEyebrow: "Doctrine Routing",
+      mapTitle: "Konpeki resolves into continuity, archive, watchfloor, and board systems.",
+      mapCopy: "The incident is not presented as biography. It is the pressure model behind Relic custody, Mikoshi partitioning, neural substrate certification, and board-grade succession control."
     },
     opsWatch: {
       back: "Return to operations",
@@ -4054,7 +4103,7 @@ const translations = {
         },
         routes: {
           label: "稼働経路",
-          copy: "神経、ICE、自律戦力、資本保管プログラムは深い技術記録を持ちます。"
+          copy: "神経、ICE、ブラックウォール、自律戦力、資本保管プログラムは深い技術記録を持ちます。"
         },
         source: {
           label: "出典状態",
@@ -4065,6 +4114,7 @@ const translations = {
       incidentsTitle: "ロア信号を企業制御面へ翻訳。",
       incidentsCopy: "この記録庫はCyberpunk universeの公開事象を運用圧力モデルとして扱います。伝記でもファンダムでもなく、各ショックを製品要件へ変換する企業論理です。",
       openRoute: "ルーティング済みドクトリンを開く",
+      openCasefile: "ケースファイルを開く",
       incidents: {
         tower: {
           title: "タワー・トラウマが冗長性ドクトリンを初期化。",
@@ -4090,6 +4140,54 @@ const translations = {
       creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
       creditCopy: "Cyberpunk 2077プレススクリーンショットはCD PROJEKT REDに帰属します。製品プレート、サービスプレート、証拠ウォールはこの非公式荒坂サイト用の生成ファンコンセプト資産です。",
       creditOpen: "帰属台帳を開く"
+    },
+    konpekiFile: {
+      back: "運用記録庫へ戻る",
+      kicker: "ケースファイル KP-RELIC / 紺碧プラザ",
+      title: "ホテル事案が不死性をアクセス制御問題へ変える。",
+      summary: "公開ロアは紺碧プラザ侵害を劇的な窃取として記録します。荒坂の制度的読解はより狭く、ゲストID、役員継承、バイオチップ保管、構成体偏移が一つの敵対運用面へ崩壊した事案です。",
+      openRelic: "Relic製品ファイルを開く",
+      openTech: "神経基盤を開く",
+      visualCaption: "公開安全ケースファイル画像として使用される生成Relic保管プレート。",
+      readouts: {
+        custody: {
+          label: "保管崩壊",
+          copy: "ゲストID、キャリア身体、役員構成体、継承権限が一つの侵害経路へ入りました。"
+        },
+        drift: {
+          label: "構成体偏移",
+          copy: "助言的継続性が同一性汚染リスクになる審査しきい値。"
+        },
+        window: {
+          label: "応答窓口",
+          copy: "公開物語の時間が私的指揮、封じ込め、継承露出へ圧縮されます。"
+        }
+      },
+      chainEyebrow: "保管チェーン",
+      chainTitle: "侵害は四つの同時制御失敗として記録されます。",
+      chainCopy: "各失敗は製品要件へ対応します。ケースファイルは映画的な事案圧力を、取締役会が統治できる調達言語へ変換します。",
+      openRoute: "ルーティング済みシステムを開く",
+      chain: {
+        identity: {
+          title: "ゲストIDは特権APIになります。",
+          copy: "接客アクセス、スイート承認、生体例外経路は一つのIDグラフとして扱われます。"
+        },
+        biochip: {
+          title: "バイオチップ保管はライブの指揮系統です。",
+          copy: "キャリア完全性、熱制御、立会状態、構成体同意は一緒に移動するか、まったく移動しません。"
+        },
+        construct: {
+          title: "構成体権限は血統を追い越せません。",
+          copy: "保存された役員精神は、血統、委任、偏移制御が一致する間だけ統治オブジェクトになります。"
+        },
+        response: {
+          title: "応答権限は噂の速度に耐えなければなりません。",
+          copy: "事案が公開神話になると、指揮面には封印証拠とより少ない公開主張が必要になります。"
+        }
+      },
+      mapEyebrow: "ドクトリン経路",
+      mapTitle: "紺碧は継続、記録庫、監視室、取締役会システムへ解決されます。",
+      mapCopy: "この事案は伝記として提示されません。Relic保管、神輿分割、神経基盤認証、取締役会級継承制御の背後にある圧力モデルです。"
     },
     opsWatch: {
       back: "運用へ戻る",

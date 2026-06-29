@@ -6487,10 +6487,62 @@ a,
 .governance-route-page .archive-route-hero,
 .governance-route-page .archive-route-readout,
 .governance-route-page .archive-route-incidents,
-.governance-route-page .archive-route-map {
+.governance-route-page .archive-route-map,
+.casefile-route-page .archive-route-hero,
+.casefile-route-page .archive-route-readout,
+.casefile-route-page .archive-route-incidents,
+.casefile-route-page .archive-route-map {
   background:
     linear-gradient(135deg, rgba(116, 199, 216, 0.11), transparent 40%, rgba(225, 7, 20, 0.11)),
     rgba(7, 9, 12, 0.92);
+}
+
+.casefile-route-page .archive-route-hero,
+.casefile-route-page .archive-route-readout,
+.casefile-route-page .archive-route-incidents,
+.casefile-route-page .archive-route-map {
+  border-color: rgba(225, 7, 20, 0.28);
+  background:
+    radial-gradient(circle at 72% 14%, rgba(221, 184, 94, 0.13), transparent 28%),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.16), transparent 42%, rgba(116, 199, 216, 0.08)),
+    rgba(7, 9, 12, 0.94);
+}
+
+.casefile-route-hero {
+  position: relative;
+}
+
+.casefile-route-hero::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(120deg, transparent 0 48%, rgba(221, 184, 94, 0.14) 48% 50%, transparent 50%),
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(255, 255, 255, 0.035) 28px 29px);
+  opacity: 0.8;
+}
+
+.casefile-route-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.casefile-route-page .archive-route-readout strong {
+  color: #ddb85e;
+}
+
+.casefile-route-visual img {
+  object-position: center center;
+  filter: saturate(1.05) contrast(1.12) brightness(0.92);
+}
+
+.casefile-route-map {
+  grid-template-columns: minmax(0, 0.58fr) minmax(250px, 0.42fr);
+}
+
+.casefile-route-map h2 {
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
 }
 
 .watchfloor-route-hero {
@@ -6557,10 +6609,12 @@ a,
 }
 
 @media (max-width: 760px) {
+  .casefile-route-map,
   .governance-route-page .archive-route-map {
     grid-template-columns: 1fr;
   }
 
+  .casefile-route-map h2,
   .governance-route-page .archive-route-map h2 {
     font-size: clamp(1.85rem, 9vw, 2.55rem);
   }
