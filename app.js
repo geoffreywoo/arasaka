@@ -2073,6 +2073,32 @@ const translations = {
       },
       foot: "No public pricing, no public claims, no technical export beyond sanitized assurance material."
     },
+    source: {
+      aria: "Public source dossier",
+      eyebrow: "Public Source Dossier",
+      title: "Design fiction with an auditable source trail.",
+      text: "This public surface is maintained as a Geoffrey Woo personal project: an open-source interface study for fictional corporate systems, bilingual product architecture, and credited cyberpunk media provenance.",
+      repo: {
+        title: "Repository",
+        text: "Source code, route templates, copy systems, and implementation history are maintained in the public project repository.",
+        open: "Open GitHub"
+      },
+      license: {
+        title: "License Boundary",
+        text: "Original code and documentation are MIT licensed; third-party game references, trademarks, screenshots, logos, and generated assets remain separately attributed.",
+        open: "Open license"
+      },
+      attribution: {
+        title: "Asset Provenance",
+        text: "Cyberpunk 2077 press imagery and all composite asset notes are tracked so the fan-work boundary stays visible.",
+        open: "Open attribution"
+      },
+      mission: {
+        title: "Mission",
+        text: "The site asks what a cyberpunk megacorp would publish if memory, identity, capital, security, and autonomous force were treated as enterprise products.",
+        open: "Open mission"
+      }
+    },
     timeline: {
       1915: {
         title: "Tokyo Incorporation",
@@ -5431,6 +5457,32 @@ const translations = {
         updated: "2077-Q3"
       },
       foot: "公開価格なし、公開主張なし、サニタイズ済み保証資料を超える技術輸出なし。"
+    },
+    source: {
+      aria: "公開ソース記録",
+      eyebrow: "公開ソース記録",
+      title: "監査可能なソース証跡を持つデザインフィクション。",
+      text: "この公開面は、Geoffrey Wooの個人プロジェクトとして維持されています。架空の法人システム、二言語プロダクトアーキテクチャ、クレジット済みサイバーパンク媒体来歴のためのオープンソース・インターフェース研究です。",
+      repo: {
+        title: "リポジトリ",
+        text: "ソースコード、ルートテンプレート、コピーシステム、実装履歴は公開プロジェクトリポジトリで管理されます。",
+        open: "GitHubを開く"
+      },
+      license: {
+        title: "ライセンス境界",
+        text: "オリジナルのコードと文書はMITライセンスです。第三者のゲーム参照、商標、スクリーンショット、ロゴ、生成アセットは別途帰属表示されます。",
+        open: "ライセンスを開く"
+      },
+      attribution: {
+        title: "アセット来歴",
+        text: "Cyberpunk 2077のプレス画像と全コンポジットアセット注記は、ファンワーク境界が見えるよう追跡されます。",
+        open: "帰属表示を開く"
+      },
+      mission: {
+        title: "ミッション",
+        text: "記憶、ID、資本、警備、自律武力をエンタープライズ製品として扱うなら、サイバーパンク巨大企業は何を公開するのかを問うサイトです。",
+        open: "ミッションを開く"
+      }
     },
     timeline: {
       1915: {
