@@ -2338,6 +2338,13 @@ const translations = {
       residualExposure: "Residual Exposure",
       severity: "Severity",
       owner: "Owner",
+      failureAtlas: "Failure Mode Atlas",
+      failureAtlasLead: "Emergency behavior map for blast radius, kill switch, degraded mode, and recovery path under hostile conditions.",
+      blastRadius: "Blast Radius",
+      killSwitch: "Kill Switch",
+      degradedMode: "Degraded Mode",
+      recoveryPath: "Recovery Path",
+      failoverState: "State",
       specsheet: "Product Visuals and Specifications",
       specsheetLead: "A buyer-readable product sheet with the physical metaphor, deployment surface, and operating limits.",
       productPhoto: "Product Photo",
@@ -2584,6 +2591,13 @@ const translations = {
       residualExposure: "Residual Exposure",
       severity: "Severity",
       owner: "Owner",
+      failureAtlas: "Failure Mode Atlas",
+      failureAtlasLead: "Emergency behavior map for blast radius, kill switch, degraded mode, and recovery path during live service compromise.",
+      blastRadius: "Blast Radius",
+      killSwitch: "Kill Switch",
+      degradedMode: "Degraded Mode",
+      recoveryPath: "Recovery Path",
+      failoverState: "State",
       specsheet: "Service Visuals and Specifications",
       specsheetLead: "A mandate-readable service sheet with team posture, system surface, and operating limits.",
       productPhoto: "Service Photo",
@@ -4945,6 +4959,13 @@ const translations = {
       residualExposure: "残存露出",
       severity: "重大度",
       owner: "責任者",
+      failureAtlas: "障害モード・アトラス",
+      failureAtlasLead: "敵対条件下のブラスト半径、キルスイッチ、縮退モード、復旧経路を示す緊急挙動マップ。",
+      blastRadius: "ブラスト半径",
+      killSwitch: "キルスイッチ",
+      degradedMode: "縮退モード",
+      recoveryPath: "復旧経路",
+      failoverState: "状態",
       specsheet: "製品ビジュアル・仕様",
       specsheetLead: "物理的メタファー、配備面、運用限界を示す購入者向け製品シート。",
       productPhoto: "製品写真",
@@ -5191,6 +5212,13 @@ const translations = {
       residualExposure: "残存露出",
       severity: "重大度",
       owner: "責任者",
+      failureAtlas: "障害モード・アトラス",
+      failureAtlasLead: "ライブサービス侵害時のブラスト半径、キルスイッチ、縮退モード、復旧経路を示す緊急挙動マップ。",
+      blastRadius: "ブラスト半径",
+      killSwitch: "キルスイッチ",
+      degradedMode: "縮退モード",
+      recoveryPath: "復旧経路",
+      failoverState: "状態",
       specsheet: "サービスビジュアル・仕様",
       specsheetLead: "チーム姿勢、システム面、運用限界を示す委任向けサービスシート。",
       productPhoto: "サービス写真",
@@ -5574,6 +5602,7 @@ const routeAdapters = document.querySelector("[data-route-adapters]");
 const routeContract = document.querySelector("[data-route-contract]");
 const routeTelemetry = document.querySelector("[data-route-telemetry]");
 const routeRiskRegister = document.querySelector("[data-route-risk-register]");
+const routeFailureAtlas = document.querySelector("[data-route-failure-atlas]");
 const routeSpecsheet = document.querySelector("[data-route-specsheet]");
 const routeConfiguration = document.querySelector("[data-route-configuration]");
 const routeDecision = document.querySelector("[data-route-decision]");
@@ -5618,6 +5647,7 @@ const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
 const serviceRouteContract = document.querySelector("[data-service-contract]");
 const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]");
 const serviceRouteRiskRegister = document.querySelector("[data-service-risk-register]");
+const serviceRouteFailureAtlas = document.querySelector("[data-service-failure-atlas]");
 const serviceRouteSpecsheet = document.querySelector("[data-service-specsheet]");
 const serviceRouteConfiguration = document.querySelector("[data-service-configuration]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
@@ -6869,6 +6899,40 @@ function renderRouteRiskRegister(target, labels, rows) {
   target.replaceChildren(heading, table);
 }
 
+function renderRouteFailureAtlas(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-failure-head";
+  label.textContent = labels.failureAtlas;
+  lead.textContent = labels.failureAtlasLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-failure-grid";
+  rows.forEach(({ label: rowLabel, value, text, state }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `F-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.failoverState}: ${state}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteSpecsheet(target, labels, sheet) {
   if (!target) return;
 
@@ -7915,6 +7979,33 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteFailureAtlas(routeFailureAtlas, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.blastRadius,
+      value: field.exposure,
+      text: `${file.surface} / ${operations.regions.join(" / ")}`,
+      state: file.clearance
+    },
+    {
+      label: dictionary.productRoute.killSwitch,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${operations.integrations[0]} / ${operations.packages[1] || operations.packages[0]}`,
+      state: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.degradedMode,
+      value: operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      state: operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.recoveryPath,
+      value: operations.regions[0],
+      text: `${field.doctrine} / ${file.tabs.governance.title}`,
+      state: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
   renderRouteSpecsheet(routeSpecsheet, dictionary.productRoute, {
     image: `../../assets/${routeVisualImages.product[productKey] || routeFieldImages.product[productKey] || routeFieldImages.fallback}`,
     alt: `${file.title} ${dictionary.productRoute.productPhoto}`,
@@ -8890,6 +8981,33 @@ function updateServiceRoute() {
       text: file.operations.regions.join(" / "),
       severity: file.operations.sla[1] || file.operations.sla[0],
       owner: file.operations.packages[0]
+    }
+  ]);
+
+  renderRouteFailureAtlas(serviceRouteFailureAtlas, routeLabels, [
+    {
+      label: routeLabels.blastRadius,
+      value: file.field.exposure,
+      text: `${file.surface} / ${file.operations.regions.join(" / ")}`,
+      state: file.clearance
+    },
+    {
+      label: routeLabels.killSwitch,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[1] || file.operations.packages[0]}`,
+      state: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.degradedMode,
+      value: file.operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      state: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.recoveryPath,
+      value: file.operations.regions[0],
+      text: `${file.field.doctrine} / ${file.tabs.governance.title}`,
+      state: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 

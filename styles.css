@@ -4661,6 +4661,7 @@ a,
     "contract meta"
     "telemetry meta"
     "risk meta"
+    "failure meta"
     "specsheet meta"
     "config meta"
     "decision meta"
@@ -4847,6 +4848,8 @@ a,
 .product-route-telemetry-grid article,
 .product-route-risk-head,
 .product-route-risk-table article,
+.product-route-failure-head,
+.product-route-failure-grid article,
 .product-route-specsheet-head,
 .product-route-specsheet figure,
 .product-route-specsheet-grid article,
@@ -6579,6 +6582,112 @@ a,
 .product-route-risk-table dd {
   color: var(--acid);
   font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.product-route-failure {
+  grid-area: failure;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.14), rgba(225, 7, 20, 0.14), rgba(209, 177, 107, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-failure-head,
+.product-route-failure-grid article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.12), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-failure-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-failure-head span,
+.product-route-failure-grid article > span,
+.product-route-failure-grid small,
+.product-route-failure-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-failure-head span,
+.product-route-failure-grid article > span {
+  color: var(--cyan);
+  font-size: 0.64rem;
+}
+
+.product-route-failure-head p,
+.product-route-failure-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-failure-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-failure-grid article {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 174px;
+  padding: 15px;
+}
+
+.product-route-failure-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(135deg, transparent 0 16px, rgba(116, 199, 216, 0.05) 16px 17px),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.1), transparent 58%);
+}
+
+.product-route-failure-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-failure-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-failure-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-failure-grid em {
+  align-self: end;
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -15443,6 +15552,7 @@ a,
       "contract"
       "telemetry"
       "risk"
+      "failure"
       "specsheet"
       "config"
       "decision"
@@ -15509,6 +15619,7 @@ a,
   .product-route-contract,
   .product-route-telemetry,
   .product-route-risk,
+  .product-route-failure,
   .product-route-config,
   .product-route-decision,
   .product-route-runbook,
@@ -15544,6 +15655,7 @@ a,
   .product-route-contract-head,
   .product-route-telemetry-head,
   .product-route-risk-head,
+  .product-route-failure-head,
   .product-route-config-head,
   .product-route-decision-head,
   .product-route-runbook-head,
@@ -15596,6 +15708,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-failure {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-sla {
     grid-template-columns: 1fr;
   }
@@ -15645,6 +15761,10 @@ a,
   }
 
   .product-route-risk-table {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-failure-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -16497,6 +16617,7 @@ a,
   .product-route-contract-grid,
   .product-route-telemetry-grid,
   .product-route-risk-table,
+  .product-route-failure-grid,
   .product-route-config-grid,
   .product-route-decision-grid,
   .product-route-runbook-rail,
@@ -16832,6 +16953,7 @@ a,
   .product-route-contract,
   .product-route-telemetry,
   .product-route-risk,
+  .product-route-failure,
   .product-route-specsheet,
   .product-route-config,
   .product-route-decision,
@@ -16877,7 +16999,8 @@ a,
   .product-route-bond-grid article,
   .product-route-escrow-grid article,
   .product-route-monitor-grid article,
-  .product-route-patch-grid article {
+  .product-route-patch-grid article,
+  .product-route-failure-grid article {
     min-height: 0;
   }
 
@@ -16939,6 +17062,10 @@ a,
   }
 
   .product-route-risk-table {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-failure-grid {
     grid-template-columns: 1fr;
   }
 
