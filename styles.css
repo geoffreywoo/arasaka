@@ -15234,7 +15234,8 @@ a,
 }
 
 .casefile-copy,
-.casefile-console {
+.casefile-console,
+.material-ledger {
   position: relative;
   z-index: 1;
 }
@@ -15432,6 +15433,164 @@ a,
 .casefile-link:focus-visible {
   border-color: rgba(225, 7, 20, 0.72);
   color: var(--red);
+}
+
+.material-ledger {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(209, 177, 107, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(209, 177, 107, 0.16), rgba(225, 7, 20, 0.12), rgba(116, 199, 216, 0.1)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.material-ledger-head,
+.material-ledger article {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(209, 177, 107, 0.08), transparent 48%),
+    rgba(5, 7, 9, 0.94);
+}
+
+.material-ledger-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+}
+
+.material-ledger-head::after,
+.material-ledger article::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(0deg, transparent 0 24px, rgba(255, 255, 255, 0.028) 24px 25px),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 45%);
+}
+
+.material-ledger article::before {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 34px;
+  height: 34px;
+  content: "";
+  border: 1px solid rgba(209, 177, 107, 0.24);
+  background: url("assets/arasaka-mark-white.png") center / 20px 20px no-repeat;
+  opacity: 0.13;
+}
+
+.material-ledger-head > *,
+.material-ledger article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.material-ledger-head span,
+.material-ledger article > span,
+.material-ledger dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.material-ledger-head span,
+.material-ledger article > span {
+  color: var(--gold);
+  font-size: 0.64rem;
+}
+
+.material-ledger-head strong {
+  color: var(--paper);
+  font-size: 1.28rem;
+  line-height: 1.05;
+}
+
+.material-ledger-head p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.material-ledger article {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 286px;
+  padding: 16px;
+}
+
+.material-ledger h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.12rem;
+  line-height: 1.06;
+}
+
+.material-ledger dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.material-ledger dl div {
+  display: grid;
+  gap: 5px;
+  min-height: 66px;
+  align-content: center;
+  padding: 9px 10px;
+  background: rgba(3, 5, 7, 0.76);
+}
+
+.material-ledger dt {
+  color: var(--dim);
+  font-size: 0.58rem;
+}
+
+.material-ledger dd {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.86);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.24;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.material-ledger a {
+  align-self: end;
+  justify-self: start;
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid rgba(209, 177, 107, 0.3);
+  border-radius: 3px;
+  color: var(--paper);
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.material-ledger a:hover,
+.material-ledger a:focus-visible {
+  border-color: rgba(182, 243, 91, 0.66);
+  color: var(--acid);
 }
 
 .doctrine-section {
@@ -18411,6 +18570,7 @@ a,
   .archive-console,
   .dossier-grid,
   .regional-grid,
+  .material-ledger,
   .disclosure-ledger,
   .capital-readout,
   .exchange-readout,
@@ -18465,6 +18625,18 @@ a,
   .regional-grid dl div {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+
+  .material-ledger {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .material-ledger-head {
+    grid-column: 1 / -1;
+  }
+
+  .material-ledger article {
+    min-height: 0;
   }
 
   .disclosure-section {
@@ -18876,6 +19048,15 @@ a,
   .product-route-provenance-rail article,
   .product-route-command-card dl div {
     min-height: 0;
+  }
+
+  .material-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .material-ledger article,
+  .material-ledger-head {
+    padding: 14px;
   }
 
   .product-route-switcher {

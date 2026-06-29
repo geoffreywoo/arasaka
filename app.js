@@ -1609,6 +1609,14 @@ const translations = {
       owner: "Owner",
       severity: "Severity",
       open: "Open internal dossier",
+      ledgerAria: "Material event ledger",
+      ledgerEyebrow: "Material Event Ledger",
+      ledgerTitle: "Every public myth is assigned a control owner.",
+      ledgerText: "The public record is not treated as story. It is indexed as operating evidence, assigned to a command authority, and routed into a controlled product surface.",
+      ledgerMateriality: "Materiality",
+      ledgerCommand: "Command",
+      ledgerRoute: "Route",
+      ledgerOpen: "Open evidence route",
       tab: {
         konpeki: "Konpeki",
         tower: "Tower",
@@ -1655,6 +1663,24 @@ const translations = {
           severity: "Market Stealth",
           image: "assets/service-capital-catalog.png",
           href: "services/black-ledger-mandate/"
+        }
+      },
+      ledger: {
+        konpeki: {
+          title: "Konpeki Plaza custody failure",
+          materiality: "Succession continuity"
+        },
+        tower: {
+          title: "Tower loss and memory sovereignty",
+          materiality: "Offsite authority"
+        },
+        blackwall: {
+          title: "Blackwall contact perimeter",
+          materiality: "Machine-intelligence quarantine"
+        },
+        afterlife: {
+          title: "Afterlife reputation market",
+          materiality: "Private capital signal"
         }
       }
     },
@@ -4784,6 +4810,14 @@ const translations = {
       owner: "所有者",
       severity: "深刻度",
       open: "内部委任を開く",
+      ledgerAria: "重要事象台帳",
+      ledgerEyebrow: "重要事象台帳",
+      ledgerTitle: "すべての公開神話には、制御所有者が割り当てられます。",
+      ledgerText: "公開記録は物語として扱われません。運用証拠として索引化され、指揮権限へ割り当てられ、制御済み製品面へ経路化されます。",
+      ledgerMateriality: "重要性",
+      ledgerCommand: "指揮",
+      ledgerRoute: "経路",
+      ledgerOpen: "証拠経路を開く",
       tab: {
         konpeki: "紺碧",
         tower: "タワー",
@@ -4830,6 +4864,24 @@ const translations = {
           severity: "市場ステルス",
           image: "assets/service-capital-catalog.png",
           href: "services/black-ledger-mandate/"
+        }
+      },
+      ledger: {
+        konpeki: {
+          title: "紺碧プラザ保管障害",
+          materiality: "継承継続性"
+        },
+        tower: {
+          title: "タワー喪失と記憶主権",
+          materiality: "オフサイト権限"
+        },
+        blackwall: {
+          title: "ブラックウォール接触境界",
+          materiality: "機械知能隔離"
+        },
+        afterlife: {
+          title: "アフターライフ評判市場",
+          materiality: "私的資本シグナル"
         }
       }
     },
