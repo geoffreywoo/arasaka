@@ -4813,6 +4813,7 @@ a,
     "forensic meta"
     "docket meta"
     "license meta"
+    "corridor meta"
     "bond meta"
     "escrow meta"
     "monitor meta"
@@ -8786,6 +8787,125 @@ a,
 .product-route-license-grid em {
   align-self: end;
   color: var(--acid);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.product-route-corridor {
+  grid-area: corridor;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.18), rgba(209, 177, 107, 0.12), rgba(116, 199, 216, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-corridor-head,
+.product-route-corridor-grid article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.11), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-corridor-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-corridor-head span,
+.product-route-corridor-grid article > span,
+.product-route-corridor-grid small,
+.product-route-corridor-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-corridor-head span,
+.product-route-corridor-grid article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-corridor-head p,
+.product-route-corridor-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-corridor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-corridor-grid article {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 176px;
+  padding: 15px;
+}
+
+.product-route-corridor-grid article::before,
+.product-route-corridor-grid article::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.product-route-corridor-grid article::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.16), transparent 2px) 0 0 / 22px 100%,
+    linear-gradient(135deg, rgba(209, 177, 107, 0.1), transparent 56%);
+}
+
+.product-route-corridor-grid article::after {
+  right: 13px;
+  bottom: 13px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(209, 177, 107, 0.38);
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+}
+
+.product-route-corridor-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-corridor-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-corridor-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-corridor-grid em {
+  align-self: end;
+  color: var(--gold);
   font-size: 0.62rem;
   font-style: normal;
   line-height: 1.2;
@@ -16268,6 +16388,7 @@ a,
       "forensic"
       "docket"
       "license"
+      "corridor"
       "bond"
       "escrow"
       "monitor"
@@ -16339,6 +16460,7 @@ a,
   .product-route-forensic,
   .product-route-docket,
   .product-route-license,
+  .product-route-corridor,
   .product-route-bond,
   .product-route-escrow,
   .product-route-monitor,
@@ -16380,6 +16502,7 @@ a,
   .product-route-forensic-head,
   .product-route-docket-head,
   .product-route-license-head,
+  .product-route-corridor-head,
   .product-route-bond-head,
   .product-route-escrow-head,
   .product-route-monitor-head,
@@ -16584,6 +16707,7 @@ a,
   .product-route-forensic,
   .product-route-docket,
   .product-route-license,
+  .product-route-corridor,
   .product-route-bond,
   .product-route-escrow,
   .product-route-monitor {
@@ -17437,6 +17561,7 @@ a,
   .product-route-forensic-grid article,
   .product-route-docket-rail article,
   .product-route-license-grid article,
+  .product-route-corridor-grid article,
   .product-route-bond-grid article,
   .product-route-escrow-grid article,
   .product-route-monitor-grid article,
@@ -17906,6 +18031,7 @@ a,
   .product-route-forensic-grid,
   .product-route-docket-rail,
   .product-route-license-grid,
+  .product-route-corridor-grid,
   .product-route-bond-grid,
   .product-route-escrow-grid,
   .product-route-monitor-grid,

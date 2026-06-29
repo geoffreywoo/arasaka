@@ -2514,6 +2514,13 @@ const translations = {
       prohibitedSurface: "Prohibited Surface",
       renewalWindow: "Renewal Window",
       licenseSeal: "Seal",
+      clearanceCorridor: "Sovereign Clearance Corridor",
+      clearanceCorridorLead: "Controlled buyer-routing path for jurisdiction root, command authority, permitted principal, and denial trigger before the system is released.",
+      jurisdictionRoot: "Jurisdiction Root",
+      commandAuthority: "Command Authority",
+      permittedPrincipal: "Permitted Principal",
+      denialTrigger: "Denial Trigger",
+      corridorLock: "Lock",
       underwritingBond: "Underwriting Bond",
       underwritingBondLead: "Risk-transfer memo defining liability ceiling, insured surface, claim trigger, and reserve channel before client acceptance.",
       liabilityCeiling: "Liability Ceiling",
@@ -2802,6 +2809,13 @@ const translations = {
       prohibitedSurface: "Prohibited Surface",
       renewalWindow: "Renewal Window",
       licenseSeal: "Seal",
+      clearanceCorridor: "Sovereign Clearance Corridor",
+      clearanceCorridorLead: "Controlled sponsor-routing path for jurisdiction root, command authority, permitted principal, and denial trigger before the field team activates.",
+      jurisdictionRoot: "Jurisdiction Root",
+      commandAuthority: "Command Authority",
+      permittedPrincipal: "Permitted Principal",
+      denialTrigger: "Denial Trigger",
+      corridorLock: "Lock",
       underwritingBond: "Underwriting Bond",
       underwritingBondLead: "Risk-transfer memo defining liability ceiling, insured surface, claim trigger, and reserve channel before sponsor acceptance.",
       liabilityCeiling: "Liability Ceiling",
@@ -5246,6 +5260,13 @@ const translations = {
       prohibitedSurface: "禁止領域",
       renewalWindow: "更新窓口",
       licenseSeal: "封印",
+      clearanceCorridor: "主権認証回廊",
+      clearanceCorridorLead: "システム解放前に、管轄ルート、指揮権限、許可主体、拒否トリガーを確認する制御済み買い手経路。",
+      jurisdictionRoot: "管轄ルート",
+      commandAuthority: "指揮権限",
+      permittedPrincipal: "許可主体",
+      denialTrigger: "拒否トリガー",
+      corridorLock: "ロック",
       underwritingBond: "引受債券",
       underwritingBondLead: "クライアント受領前に、責任上限、被保険領域、請求トリガー、準備金チャネルを定義するリスク移転メモ。",
       liabilityCeiling: "責任上限",
@@ -5534,6 +5555,13 @@ const translations = {
       prohibitedSurface: "禁止領域",
       renewalWindow: "更新窓口",
       licenseSeal: "封印",
+      clearanceCorridor: "主権認証回廊",
+      clearanceCorridorLead: "現場チーム起動前に、管轄ルート、指揮権限、許可主体、拒否トリガーを確認する制御済みスポンサー経路。",
+      jurisdictionRoot: "管轄ルート",
+      commandAuthority: "指揮権限",
+      permittedPrincipal: "許可主体",
+      denialTrigger: "拒否トリガー",
+      corridorLock: "ロック",
       underwritingBond: "引受債券",
       underwritingBondLead: "スポンサー受領前に、責任上限、被保険領域、請求トリガー、準備金チャネルを定義するリスク移転メモ。",
       liabilityCeiling: "責任上限",
@@ -5843,6 +5871,7 @@ const routeRedTeamReplay = document.querySelector("[data-route-red-team-replay]"
 const routeForensicReceipt = document.querySelector("[data-route-forensic-receipt]");
 const routeBoardDocket = document.querySelector("[data-route-board-docket]");
 const routeExportLicense = document.querySelector("[data-route-export-license]");
+const routeClearanceCorridor = document.querySelector("[data-route-clearance-corridor]");
 const routeUnderwritingBond = document.querySelector("[data-route-underwriting-bond]");
 const routeSettlementEscrow = document.querySelector("[data-route-settlement-escrow]");
 const routeContinuityMonitor = document.querySelector("[data-route-continuity-monitor]");
@@ -5893,6 +5922,7 @@ const serviceRouteRedTeamReplay = document.querySelector("[data-service-red-team
 const serviceRouteForensicReceipt = document.querySelector("[data-service-forensic-receipt]");
 const serviceRouteBoardDocket = document.querySelector("[data-service-board-docket]");
 const serviceRouteExportLicense = document.querySelector("[data-service-export-license]");
+const serviceRouteClearanceCorridor = document.querySelector("[data-service-clearance-corridor]");
 const serviceRouteUnderwritingBond = document.querySelector("[data-service-underwriting-bond]");
 const serviceRouteSettlementEscrow = document.querySelector("[data-service-settlement-escrow]");
 const serviceRouteContinuityMonitor = document.querySelector("[data-service-continuity-monitor]");
@@ -7805,6 +7835,40 @@ function renderRouteExportLicense(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteClearanceCorridor(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-corridor-head";
+  label.textContent = labels.clearanceCorridor;
+  lead.textContent = labels.clearanceCorridorLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-corridor-grid";
+  rows.forEach(({ label: rowLabel, value, text, lock }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `CC-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.corridorLock}: ${lock}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteUnderwritingBond(target, labels, rows) {
   if (!target) return;
 
@@ -8885,6 +8949,33 @@ function updateProductRoute() {
       value: operations.sla[2] || operations.sla[1] || operations.sla[0],
       text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
       seal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteClearanceCorridor(routeClearanceCorridor, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.jurisdictionRoot,
+      value: operations.regions[0],
+      text: `${operations.regions.join(" / ")} / ${file.clearance}`,
+      lock: file.code
+    },
+    {
+      label: dictionary.productRoute.commandAuthority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.tabs.governance.title} / ${operations.integrations[0]}`,
+      lock: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.permittedPrincipal,
+      value: operations.packages[0],
+      text: `${file.surface} / ${dictionary.productRoute.capitalObserver}`,
+      lock: "G.W. / A-F"
+    },
+    {
+      label: dictionary.productRoute.denialTrigger,
+      value: field.exposure,
+      text: `${field.doctrine} / ${file.tabs.deployment.title}`,
+      lock: operations.sla[1] || operations.sla[0]
     }
   ]);
 
@@ -10025,6 +10116,33 @@ function updateServiceRoute() {
       value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
       text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
       seal: "G.W. / A-F"
+    }
+  ]);
+
+  renderRouteClearanceCorridor(serviceRouteClearanceCorridor, routeLabels, [
+    {
+      label: routeLabels.jurisdictionRoot,
+      value: file.operations.regions[0],
+      text: `${file.operations.regions.join(" / ")} / ${file.clearance}`,
+      lock: file.code
+    },
+    {
+      label: routeLabels.commandAuthority,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.tabs.governance.title} / ${file.operations.integrations[0]}`,
+      lock: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.permittedPrincipal,
+      value: file.operations.packages[0],
+      text: `${file.surface} / ${routeLabels.capitalObserver}`,
+      lock: "G.W. / A-F"
+    },
+    {
+      label: routeLabels.denialTrigger,
+      value: file.field.exposure,
+      text: `${file.field.doctrine} / ${file.tabs.deployment.title}`,
+      lock: file.operations.sla[1] || file.operations.sla[0]
     }
   ]);
 
