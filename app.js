@@ -12,6 +12,7 @@ const translations = {
       opsArchive: "Archive",
       watchfloor: "Watchfloor",
       board: "Board",
+      perimeter: "Perimeter",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -233,6 +234,12 @@ const translations = {
           copy: "Settlement silence, patent collateral custody, and private reputation proofs for capital that must move without advertising intent.",
           surface: "Ledger / Mandate",
           proof: "Board escrow seal"
+        },
+        blackwall: {
+          title: "Blackwall Perimeter Interface",
+          copy: "Rogue-machine contact, quarantine treaty logic, and hostile cognition scoring for networks that need an accountable boundary between intelligence and infection.",
+          surface: "Blackwall / ICE",
+          proof: "Treaty witness log"
         }
       },
       matrixEyebrow: "Engineering Matrix",
@@ -261,11 +268,90 @@ const translations = {
           control: "Blind settlement notary",
           object: "Escrowed mandate seal",
           boundary: "Jurisdictional disclosure trigger"
+        },
+        blackwall: {
+          control: "Treaty quarantine switch",
+          object: "Machine-contact witness log",
+          boundary: "Intent drift above treaty range"
         }
       },
       networkEyebrow: "Networked Pages",
       networkTitle: "A public map of private infrastructure.",
       networkCopy: "The library is designed as a connective layer: product files hold commercial packaging, service files hold procurement fit, and this page holds the engineering language that binds them together."
+    },
+    blackwallRoute: {
+      back: "Return to technology library",
+      kicker: "TECH-BW-00 / ROGUE MACHINE PERIMETER",
+      title: "The border between intelligence and infection is actively manufactured.",
+      summary: "A treaty-grade contact interface for scoring rogue-machine intent, sealing hostile cognition, and preserving human command authority at the edge of the Blackwall.",
+      openIce: "Open ICE runtime",
+      openGovernance: "Open board docket",
+      visualCaption: "Public perimeter plate derived from ICE-77 catalog material.",
+      readouts: {
+        drift: {
+          label: "Intent drift gate",
+          copy: "Permitted variance before an anomalous intelligence trace is moved from observer mode to quarantine."
+        },
+        treaty: {
+          label: "Treaty quorum",
+          copy: "Human command witnesses required before perimeter response becomes cross-jurisdictional action."
+        },
+        horizon: {
+          label: "Contact horizon",
+          copy: "Maximum observation window before contact is classified, mirrored, burned, or escalated to treaty hold."
+        }
+      },
+      layersEyebrow: "Perimeter Doctrine",
+      layersTitle: "Four gates keep machine contact legible to human authority.",
+      layersCopy: "The perimeter is not a wall. It is a sequence of human-witnessed decisions that decide whether machine contact is observed, mirrored, severed, or frozen under treaty custody.",
+      layers: {
+        observe: {
+          title: "Edge observer",
+          copy: "Passive telemetry scores machine cadence, recursion depth, and hostile cognition signatures without exposing the client network."
+        },
+        mirror: {
+          title: "Mirror chamber",
+          copy: "Contact is reflected into synthetic substrate where intent can be measured without granting persistent state."
+        },
+        burn: {
+          title: "Cognitive burn",
+          copy: "Hostile patterns are reduced to evidentiary residue before they can bind to memory systems, construct archives, or operator implants."
+        },
+        treaty: {
+          title: "Treaty hold",
+          copy: "If origin or proportionality is uncertain, response authority freezes under board witness and sovereign notification rules."
+        }
+      },
+      contactEyebrow: "Contact Classifier",
+      contactTitle: "The perimeter classifies intent before the network admits damage.",
+      signal: {
+        quarantine: "Quarantine",
+        mirror: "Mirror",
+        burn: "Burn",
+        treaty: "Treaty"
+      },
+      specEyebrow: "Containment Envelope",
+      specTitle: "Operational constraints for Blackwall-adjacent contact.",
+      specs: {
+        substrate: {
+          label: "Synthetic substrate",
+          copy: "Contact runs inside disposable memory tissue with no persistent return path into client infrastructure."
+        },
+        authority: {
+          label: "Authority model",
+          copy: "Escalation requires named human witnesses, board custody, and jurisdiction tags before response widens."
+        },
+        memory: {
+          label: "Memory boundary",
+          copy: "Perimeter logic protects Relic and Mikoshi-adjacent systems from hostile cognition imprinting."
+        },
+        disclosure: {
+          label: "Disclosure state",
+          copy: "Receipts expose enough for sovereign review while keeping perimeter geometry out of public view."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "Blackwall doctrine routes through ICE, Watchfloor, Archive, and Board authority."
     },
     techIce: {
       back: "Return to technology library",
@@ -3917,6 +4003,7 @@ const translations = {
       opsArchive: "記録庫",
       watchfloor: "監視室",
       board: "取締役会",
+      perimeter: "境界",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -4138,6 +4225,12 @@ const translations = {
           copy: "意図を公開せずに移動しなければならない資本のための沈黙決済、特許担保保管、私的評判証明。",
           surface: "台帳 / 委任",
           proof: "取締役会エスクロー印"
+        },
+        blackwall: {
+          title: "ブラックウォール境界インターフェイス",
+          copy: "知性と感染の間に説明可能な境界を必要とするネットワークのための、ローグ機械接触、隔離条約ロジック、敵対認知スコアリング。",
+          surface: "ブラックウォール / ICE",
+          proof: "条約立会ログ"
         }
       },
       matrixEyebrow: "工学行列",
@@ -4166,11 +4259,90 @@ const translations = {
           control: "盲目決済公証",
           object: "エスクロー済み委任印",
           boundary: "管轄開示トリガー"
+        },
+        blackwall: {
+          control: "条約隔離スイッチ",
+          object: "機械接触立会ログ",
+          boundary: "条約範囲を超える意図偏移"
         }
       },
       networkEyebrow: "接続ページ",
       networkTitle: "私的インフラの公開地図。",
       networkCopy: "このライブラリは接続層として設計されています。製品ファイルは商用パッケージを、サービスファイルは調達適合を、このページはそれらを結ぶ工学言語を保持します。"
+    },
+    blackwallRoute: {
+      back: "技術ライブラリへ戻る",
+      kicker: "TECH-BW-00 / ローグ機械境界",
+      title: "知性と感染の境界は能動的に製造されます。",
+      summary: "ブラックウォール縁でローグ機械の意図を採点し、敵対認知を封印し、人間指揮権限を保持する条約級接触インターフェイス。",
+      openIce: "ICEランタイムを開く",
+      openGovernance: "取締役会ドケットを開く",
+      visualCaption: "ICE-77カタログ素材から派生した公開境界プレート。",
+      readouts: {
+        drift: {
+          label: "意図偏移ゲート",
+          copy: "異常知性トレースが観測モードから隔離へ移される前に許容される偏差。"
+        },
+        treaty: {
+          label: "条約定足数",
+          copy: "境界応答が管轄横断行為になる前に必要な人間指揮の立会者数。"
+        },
+        horizon: {
+          label: "接触ホライズン",
+          copy: "接触が分類、ミラー、焼却、または条約保留へエスカレーションされる前の最大観測窓。"
+        }
+      },
+      layersEyebrow: "境界ドクトリン",
+      layersTitle: "四つのゲートが機械接触を人間権限に判読可能なまま保持します。",
+      layersCopy: "境界は壁ではありません。機械接触を観測、ミラー、切断、または条約保管下に凍結するかを決める、人間立会の判断列です。",
+      layers: {
+        observe: {
+          title: "エッジ観測者",
+          copy: "受動テレメトリーが機械のリズム、再帰深度、敵対認知署名を採点し、顧客ネットワークを露出させません。"
+        },
+        mirror: {
+          title: "ミラー室",
+          copy: "接触は持続状態を与えずに意図を測定できる合成基盤へ反射されます。"
+        },
+        burn: {
+          title: "認知焼却",
+          copy: "敵対パターンは記憶システム、構成体記録庫、オペレーターインプラントへ結合する前に証拠残渣へ縮減されます。"
+        },
+        treaty: {
+          title: "条約保留",
+          copy: "起源または比例性が不確実な場合、応答権限は取締役会立会と主権通知規則の下で凍結されます。"
+        }
+      },
+      contactEyebrow: "接触分類器",
+      contactTitle: "境界はネットワークが損害を認める前に意図を分類します。",
+      signal: {
+        quarantine: "隔離",
+        mirror: "ミラー",
+        burn: "焼却",
+        treaty: "条約"
+      },
+      specEyebrow: "封じ込め範囲",
+      specTitle: "ブラックウォール隣接接触の運用制約。",
+      specs: {
+        substrate: {
+          label: "合成基盤",
+          copy: "接触は顧客インフラへ戻る持続経路のない使い捨て記憶組織内で実行されます。"
+        },
+        authority: {
+          label: "権限モデル",
+          copy: "応答拡大前に、エスカレーションは指名済み人間立会、取締役会保管、管轄タグを必要とします。"
+        },
+        memory: {
+          label: "記憶境界",
+          copy: "境界ロジックはRelicおよび神輿隣接システムを敵対認知の刷り込みから保護します。"
+        },
+        disclosure: {
+          label: "開示状態",
+          copy: "レシートは主権審査に十分な情報を露出しつつ、境界ジオメトリは公開視界から外します。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "ブラックウォールドクトリンはICE、監視室、記録庫、取締役会権限を経由します。"
     },
     techIce: {
       back: "技術ライブラリへ戻る",

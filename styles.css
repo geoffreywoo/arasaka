@@ -5792,6 +5792,10 @@ a,
   background: rgba(255, 255, 255, 0.045);
 }
 
+.tech-dossier-card-wide {
+  grid-column: 1 / -1;
+}
+
 .tech-dossier-card h3 {
   margin: 0;
   font-size: clamp(1.1rem, 2.2vw, 1.65rem);
@@ -6019,6 +6023,40 @@ a,
   min-height: 460px;
   object-fit: cover;
   filter: saturate(1.05) contrast(1.05);
+}
+
+.blackwall-route-page .deep-tech-hero,
+.blackwall-route-page .deep-tech-system,
+.blackwall-route-page .deep-tech-schematic,
+.blackwall-route-page .deep-tech-specs,
+.blackwall-route-page .deep-tech-network-panel {
+  border-color: rgba(182, 243, 91, 0.22);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(182, 243, 91, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(116, 199, 216, 0.13), transparent 40%, rgba(225, 7, 20, 0.1)),
+    rgba(5, 8, 10, 0.93);
+}
+
+.blackwall-route-hero::before {
+  background:
+    radial-gradient(circle at 70% 20%, rgba(182, 243, 91, 0.2), transparent 30%),
+    repeating-linear-gradient(90deg, transparent 0 26px, rgba(116, 199, 216, 0.035) 26px 27px),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(255, 255, 255, 0.032) 34px 35px);
+}
+
+.blackwall-route-visual img {
+  object-position: center center;
+  filter: saturate(1.15) contrast(1.16) brightness(0.86);
+}
+
+.blackwall-route-readout strong {
+  color: var(--acid);
+}
+
+.blackwall-contact-panel .deep-tech-signal article {
+  background:
+    linear-gradient(150deg, rgba(182, 243, 91, 0.08), transparent 46%, rgba(225, 7, 20, 0.08)),
+    rgba(7, 9, 12, 0.92);
 }
 
 .deep-tech-visual figcaption {

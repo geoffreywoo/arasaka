@@ -35,7 +35,7 @@ Core files:
 - `index.html` - homepage structure, metadata, bilingual content hooks, product/service surfaces, operations modules, disclosure sections, and the public-facing corporate experience.
 - `styles.css` - responsive visual system, route layouts, mobile navigation, cyberpunk interface treatment, reduced-motion support, and product/service dossier styling.
 - `app.js` - language switching, interactive consoles, product/service route hydration, route-level information architecture, and localized data registries.
-- `technology/`, `operations/`, `archive/`, and `governance/` - standalone institutional routes for technical dossiers, live command, incident doctrine, and board authority controls.
+- `technology/`, `operations/`, `archive/`, `governance/`, and `blackwall/` - standalone institutional routes for technical dossiers, live command, incident doctrine, board authority controls, and rogue-machine perimeter doctrine.
 - `products/*/index.html` - standalone product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems.
 - `services/*/index.html` - standalone service pages for continuity, counterintrusion, mandate, and autonomous protection offerings.
 - `assets/` - generated images, user-provided identity assets, credited Cyberpunk 2077 press references, and attribution notes.
@@ -62,6 +62,7 @@ http://127.0.0.1:4187/technology/
 http://127.0.0.1:4187/operations/
 http://127.0.0.1:4187/archive/
 http://127.0.0.1:4187/governance/
+http://127.0.0.1:4187/blackwall/
 http://127.0.0.1:4187/products/relic/
 http://127.0.0.1:4187/services/counterintrusion/
 ```
