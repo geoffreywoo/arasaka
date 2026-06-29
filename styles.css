@@ -279,145 +279,6 @@ body.has-product-page {
   padding-right: 48px;
 }
 
-.boot-sequence {
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 45%, rgba(225, 7, 20, 0.2), transparent 32%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 72px),
-    rgba(3, 4, 5, 0.96);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 420ms ease, visibility 420ms ease;
-}
-
-.boot-sequence.is-complete {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.boot-panel {
-  position: relative;
-  overflow: hidden;
-  width: min(520px, 100%);
-  min-height: 260px;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: 18px;
-  padding: 32px;
-  border: 1px solid rgba(225, 7, 20, 0.36);
-  border-radius: 6px;
-  background:
-    linear-gradient(135deg, rgba(225, 7, 20, 0.18), transparent 42%),
-    rgba(8, 10, 12, 0.94);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.62);
-}
-
-.boot-panel::before,
-.boot-panel::after {
-  position: absolute;
-  pointer-events: none;
-  content: "";
-}
-
-.boot-panel::before {
-  inset: 0;
-  background:
-    linear-gradient(90deg, transparent, rgba(182, 243, 91, 0.18), transparent),
-    repeating-linear-gradient(0deg, transparent 0 28px, rgba(255, 255, 255, 0.04) 28px 29px);
-  transform: translateX(-100%);
-  animation: consoleSweep 1.8s ease-in-out infinite;
-}
-
-.boot-panel::after {
-  inset: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  clip-path: polygon(0 0, 100% 0, 100% 76%, 88% 100%, 0 100%);
-}
-
-.boot-mark,
-.boot-copy,
-.boot-progress {
-  position: relative;
-  z-index: 1;
-}
-
-.boot-mark {
-  display: grid;
-  width: 92px;
-  height: 92px;
-  place-items: center;
-  border: 1px solid rgba(225, 7, 20, 0.74);
-  background:
-    radial-gradient(circle, rgba(182, 243, 91, 0.1), transparent 52%),
-    rgba(5, 5, 7, 0.82);
-  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
-}
-
-.boot-mark span {
-  position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(182, 243, 91, 0.52);
-  clip-path: inherit;
-  animation: coreSpin 2.2s linear infinite;
-}
-
-.boot-mark strong {
-  color: var(--ink);
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.boot-copy {
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  text-align: center;
-}
-
-.boot-copy span {
-  color: var(--cyan);
-  font-size: 0.72rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.boot-copy strong {
-  color: var(--ink);
-  font-size: 1.45rem;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.boot-copy p {
-  max-width: 360px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.boot-progress {
-  width: min(320px, 100%);
-  height: 5px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.boot-progress i {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, var(--red), var(--acid), var(--cyan));
-  transform-origin: left;
-  animation: bootLoad 720ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-}
-
 .cursor-reticle {
   position: fixed;
   left: 0;
@@ -17484,15 +17345,6 @@ a,
     gap: 14px;
   }
 
-  .boot-panel {
-    min-height: 240px;
-    padding: 26px 22px;
-  }
-
-  .boot-copy strong {
-    font-size: 1.18rem;
-  }
-
   .brand-sub,
   .access-link {
     display: none;
@@ -19309,11 +19161,6 @@ a,
     transition-duration: 0.001ms !important;
   }
 
-  .boot-sequence {
-    opacity: 0;
-    visibility: hidden;
-  }
-
   .cursor-reticle {
     display: none;
   }
@@ -19369,15 +19216,6 @@ a,
 @keyframes coreSpin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes bootLoad {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
   }
 }
 

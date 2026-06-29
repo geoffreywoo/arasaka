@@ -40,11 +40,6 @@ const translations = {
       groupSystems: "Systems",
       groupDossiers: "Dossiers"
     },
-    boot: {
-      kicker: "荒坂株式会社 Public Node",
-      title: "Identity Handshake",
-      text: "Corporate identity layer online. Public gateway accepting regulated signal."
-    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -3041,11 +3036,6 @@ const translations = {
       groupCorporate: "企業",
       groupSystems: "システム",
       groupDossiers: "記録"
-    },
-    boot: {
-      kicker: "荒坂株式会社 公開ノード",
-      title: "IDハンドシェイク",
-      text: "法人IDレイヤーがオンライン。公開ゲートウェイが規制済み信号を受け入れています。"
     },
     spine: {
       node: "公開ノード",
@@ -6205,7 +6195,6 @@ const serviceRoutePatchCadence = document.querySelector("[data-service-patch-cad
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
-const bootSequence = document.querySelector("[data-boot-sequence]");
 const cursorReticle = document.querySelector("[data-cursor-reticle]");
 const spineMeter = document.querySelector("[data-spine-meter]");
 const spineProgress = document.querySelector("[data-spine-progress]");
@@ -11516,35 +11505,6 @@ function updateOperationTheater(theaterKey) {
   if (operationCoverage) operationCoverage.textContent = detail.coverage;
 }
 
-function initBootSequence() {
-  if (!bootSequence) return;
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const storageKey = "arasaka-access-confirmed";
-  let hasConfirmedAccess = false;
-
-  try {
-    hasConfirmedAccess = localStorage.getItem(storageKey) === "true";
-  } catch {
-    hasConfirmedAccess = false;
-  }
-
-  if (hasConfirmedAccess || prefersReducedMotion) {
-    bootSequence.classList.add("is-complete");
-    return;
-  }
-
-  const delay = 760;
-
-  window.setTimeout(() => {
-    bootSequence.classList.add("is-complete");
-    try {
-      localStorage.setItem(storageKey, "true");
-    } catch {
-      return undefined;
-    }
-  }, delay);
-}
-
 function initCursorReticle() {
   if (!cursorReticle) return;
   const finePointer = window.matchMedia("(pointer: fine)");
@@ -12325,7 +12285,6 @@ setInterval(updateTerminal, 3200);
 initHeroCanvas();
 initTopologyCanvas();
 initSignalWeather();
-initBootSequence();
 initCursorReticle();
 syncDockForViewport();
 initSignalSpine();
