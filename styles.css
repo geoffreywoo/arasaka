@@ -6777,6 +6777,16 @@ a,
   filter: saturate(1.08) contrast(1.12) brightness(0.9);
 }
 
+.ledger-spec-route-visual img {
+  object-position: center center;
+  filter: saturate(1.07) contrast(1.1) brightness(0.9);
+}
+
+.ledger-spec-route-hero .archive-route-copy h1 {
+  font-size: clamp(2.85rem, 5.15vw, 4.55rem);
+  overflow-wrap: normal;
+}
+
 .spec-route-matrix {
   overflow: hidden;
   display: grid;

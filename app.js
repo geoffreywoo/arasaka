@@ -522,6 +522,70 @@ const translations = {
       mapTitle: "Black ICE routes counterintrusion through runtime doctrine, netrunner service, Blackwall perimeter, and board evidence.",
       mapCopy: "The product file makes the appliance purchasable. The runtime dossier defines the trap. The service route provides operators. The board record decides what can be burned."
     },
+    ledgerSpec: {
+      productCta: "Open custody specification",
+      openSpec: "Open ledger custody spec",
+      back: "Return to Black Ledger dossier",
+      kicker: "BL-00 / CUSTODY SPECIFICATION",
+      title: "Capital is quietest when custody becomes infrastructure.",
+      summary: "Black Ledger is specified as a private capital custody system: blind settlement rails, patent collateral maps, mandate escrow, and board-readable liquidity proofs for founders, sovereigns, and controlled shells.",
+      openRail: "Open capital custody rail",
+      openService: "Open mandate service",
+      visualCaption: "Black Ledger custody product plate, generated Arasaka catalog image.",
+      readouts: {
+        settlement: {
+          label: "Settlement rail",
+          copy: "Private execution path from mandate approval to sealed counterparty receipt."
+        },
+        proofs: {
+          label: "Custody proofs",
+          copy: "Board-readable proof families covering patents, equity, treasury, identity, and orbital key material."
+        },
+        disclosure: {
+          label: "Disclosure mode",
+          copy: "Counterparties, beneficial owners, and patent gravity remain sealed until release conditions fire."
+        }
+      },
+      modulesEyebrow: "Custody Modules",
+      modulesTitle: "The ledger converts capital intent into governed proof.",
+      modulesCopy: "Black Ledger separates authority, collateral, counterparty, and disclosure so private markets can move without becoming unverifiable shadow theater.",
+      modules: {
+        escrow: {
+          title: "Mandate Escrow Kernel",
+          copy: "Holds authority, fee rail, release condition, and legal corridor until quorum unlocks private settlement."
+        },
+        patent: {
+          title: "Patent Gravity Map",
+          copy: "Models collateral pressure across implant IP, neural substrate claims, defense systems, and hidden licensing obligations."
+        },
+        settlement: {
+          title: "Blind Settlement Rail",
+          copy: "Executes dark counterparty settlement with hash receipts, off-network witness, and disclosure switches."
+        },
+        vault: {
+          title: "Founder Risk Vault",
+          copy: "Binds identity custody, board succession, private liquidity, and reputation heat into one sealed capital surface."
+        }
+      },
+      envelopeEyebrow: "Custody Envelope",
+      envelopeTitle: "Private markets still need proof.",
+      envelopeCopy: "Black Ledger deployment requires a mandate owner, collateral class, release condition, disclosure posture, and renewal covenant before any capital route opens.",
+      matrix: {
+        owner: "Mandate owner",
+        ownerValue: "Board authority office, sovereign desk, family office, or controlled operating company",
+        collateral: "Collateral class",
+        collateralValue: "Patent estate, treasury reserve, founder liquidity, settlement key, or engram collateral",
+        release: "Release condition",
+        releaseValue: "Quorum motion, lawful corridor, succession event, counterparty delivery, or covenant renewal",
+        disclosure: "Disclosure posture",
+        disclosureValue: "Blind principal, sealed counterparty, delayed market signal, and private receipt",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed capital flight, sanctions evasion, fabricated collateral, uncontrolled market manipulation"
+      },
+      mapEyebrow: "Capital Routing",
+      mapTitle: "Black Ledger routes capital custody through mandate service, regional command, patent collateral, and board governance.",
+      mapCopy: "The system makes money legible without making it loud: every private movement resolves to authority, collateral, counterparty, and proof."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5152,6 +5216,70 @@ const translations = {
       mapEyebrow: "セキュリティ経路",
       mapTitle: "Black ICEは対侵入をランタイムドクトリン、ネットランナーサービス、Blackwall境界、取締役会証拠へルーティングします。",
       mapCopy: "製品ファイルはアプライアンスを購入可能にします。ランタイムドシエはトラップを定義します。サービス経路はオペレーターを提供します。取締役会記録は何を焼却できるかを決定します。"
+    },
+    ledgerSpec: {
+      productCta: "保管仕様を開く",
+      openSpec: "台帳保管仕様を開く",
+      back: "Black Ledgerドシエへ戻る",
+      kicker: "BL-00 / 保管仕様",
+      title: "資本は、保管がインフラになるとき最も静かです。",
+      summary: "Black Ledgerは私的資本保管システムとして仕様化されます。盲目決済レール、特許担保マップ、委任エスクロー、創業者、主権者、制御済みシェル向けの取締役会可読流動性証明です。",
+      openRail: "資本保管レールを開く",
+      openService: "委任サービスを開く",
+      visualCaption: "Black Ledger保管製品プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        settlement: {
+          label: "決済レール",
+          copy: "委任承認から封印済み相手方受領書までの私的実行経路。"
+        },
+        proofs: {
+          label: "保管証明",
+          copy: "特許、持分、財務、同一性、軌道キー素材を覆う取締役会可読の証明ファミリー。"
+        },
+        disclosure: {
+          label: "開示モード",
+          copy: "相手方、実質所有者、特許重力は、リリース条件が発火するまで封印されます。"
+        }
+      },
+      modulesEyebrow: "保管モジュール",
+      modulesTitle: "台帳は資本意図を統治済み証明へ変換します。",
+      modulesCopy: "Black Ledgerは権限、担保、相手方、開示を分離し、私的市場が検証不能な影の劇場にならずに動けるようにします。",
+      modules: {
+        escrow: {
+          title: "委任エスクロー・カーネル",
+          copy: "クォーラムが私的決済を解錠するまで、権限、手数料レール、リリース条件、法的回廊を保持します。"
+        },
+        patent: {
+          title: "特許重力マップ",
+          copy: "インプラントIP、神経基盤クレーム、防衛システム、隠れたライセンス義務にまたがる担保圧力をモデル化します。"
+        },
+        settlement: {
+          title: "盲目決済レール",
+          copy: "ハッシュ受領書、オフネットワーク立会、開示スイッチを備えた暗黒相手方決済を実行します。"
+        },
+        vault: {
+          title: "創業者リスク保管庫",
+          copy: "同一性保管、取締役会継承、私的流動性、評判熱量を一つの封印済み資本面へ結合します。"
+        }
+      },
+      envelopeEyebrow: "保管範囲",
+      envelopeTitle: "私的市場にも証明が必要です。",
+      envelopeCopy: "Black Ledger配備では、資本経路が開く前に、委任所有者、担保クラス、リリース条件、開示姿勢、更新コベナントが必要です。",
+      matrix: {
+        owner: "委任所有者",
+        ownerValue: "取締役会権限室、主権デスク、ファミリーオフィス、または制御済み事業会社",
+        collateral: "担保クラス",
+        collateralValue: "特許資産、財務準備、創業者流動性、決済キー、またはエングラム担保",
+        release: "リリース条件",
+        releaseValue: "クォーラム動議、合法回廊、継承イベント、相手方引渡、またはコベナント更新",
+        disclosure: "開示姿勢",
+        disclosureValue: "盲目主体、封印済み相手方、遅延市場信号、私的受領書",
+        exclusion: "除外用途",
+        exclusionValue: "非立会資本逃避、制裁回避、捏造担保、非制御市場操作"
+      },
+      mapEyebrow: "資本経路",
+      mapTitle: "Black Ledgerは資本保管を委任サービス、地域指揮、特許担保、取締役会統治へルーティングします。",
+      mapCopy: "このシステムは資金を騒がせずに読み取れるものにします。すべての私的移動は権限、担保、相手方、証明へ解決されます。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
