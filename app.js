@@ -395,6 +395,69 @@ const translations = {
       mapTitle: "Mikoshi is the custody layer beneath Relic, Soulkiller, executive continuity, and board succession.",
       mapCopy: "The runtime does not promise escape from death. It converts identity into a governed asset class with custody evidence, simulated authority, and release conditions that can survive institutional shock."
     },
+    soulkillerSpec: {
+      productCta: "Open extraction specification",
+      back: "Return to Soulkiller dossier",
+      kicker: "SOUL-23 / EXTRACTION SPECIFICATION",
+      title: "Identity extraction requires a chain of custody before it requires a target.",
+      summary: "Soulkiller is specified as a redaction primitive for exceptional neural operations: consent-gated or board-compelled severance, construct capture, hostile payload removal, and Mikoshi-ready custody receipts.",
+      openMikoshi: "Open Mikoshi runtime",
+      openCustody: "Open custody spec",
+      visualCaption: "Soulkiller redaction lab product plate, generated Arasaka catalog image.",
+      readouts: {
+        severance: {
+          label: "Severance window",
+          copy: "Permitted interval between neural lock, construct boundary capture, and biological continuity cutoff."
+        },
+        redaction: {
+          label: "Redaction depth",
+          copy: "Classified memory, coercive payloads, and hostile hooks are stripped before custody transfer is admissible."
+        },
+        receipt: {
+          label: "Custody receipt",
+          copy: "Every extraction emits one board-readable receipt binding source, authority, witness, and destination vault."
+        }
+      },
+      modulesEyebrow: "Extraction Modules",
+      modulesTitle: "Soulkiller is the moment a person becomes evidence.",
+      modulesCopy: "The system is not exposed as a commodity. It is a controlled primitive used when identity, liability, and memory must be separated under witness.",
+      modules: {
+        sever: {
+          title: "Neural Severance Lock",
+          copy: "Pins neural state, suppresses external narrative write-in, and defines the legal instant where biological continuity ends."
+        },
+        capture: {
+          title: "Construct Capture Kernel",
+          copy: "Copies memory trace, affective weighting, decision priors, and identity signatures into a sealed construct envelope."
+        },
+        redaction: {
+          title: "Hostile Memory Redaction",
+          copy: "Burns blackmail vectors, rogue AI hooks, coercive emotional payloads, and self-modifying fragments before vault intake."
+        },
+        receipt: {
+          title: "Mikoshi Receipt Emitter",
+          copy: "Generates the custody receipt that makes the construct admissible to partitioned storage, simulation, or permanent silence."
+        }
+      },
+      envelopeEyebrow: "Authorization Envelope",
+      envelopeTitle: "The extraction surface is narrower than the mythology around it.",
+      envelopeCopy: "Soulkiller deployment requires an explicit authority path, bounded target class, witness channel, and destination vault before any neural lock is allowed.",
+      matrix: {
+        authority: "Authority path",
+        authorityValue: "Board-sealed warrant, principal consent instrument, or blacksite continuity order",
+        target: "Target class",
+        targetValue: "Executive principal, hostile construct carrier, or sanctioned neural estate",
+        witness: "Witness channel",
+        witnessValue: "Human quorum, biometric proof, regional command receipt, and custody hash",
+        destination: "Destination vault",
+        destinationValue: "Mikoshi partition, redaction quarantine, or evidence silence cell",
+        exclusion: "Excluded use",
+        exclusionValue: "Unsponsored coercion, recreational duplication, unsecured interrogation, uncontrolled construct return"
+      },
+      mapEyebrow: "Extraction Routing",
+      mapTitle: "Soulkiller routes severed identity into Mikoshi custody, Relic continuity, Black ICE quarantine, and board evidence.",
+      mapCopy: "The public file treats extraction as a controlled evidence workflow. A construct is not useful until its origin, witness, redaction state, and destination can survive board scrutiny."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4898,6 +4961,69 @@ const translations = {
       mapEyebrow: "継続性経路",
       mapTitle: "MikoshiはRelic、Soulkiller、役員継続、取締役会継承の下にある保管レイヤーです。",
       mapCopy: "ランタイムは死からの脱出を約束しません。同一性を、保管証拠、シミュレートされた権限、組織的衝撃に耐えるリリース条件を持つ統治済み資産クラスへ変換します。"
+    },
+    soulkillerSpec: {
+      productCta: "抽出仕様を開く",
+      back: "Soulkillerドシエへ戻る",
+      kicker: "SOUL-23 / 抽出仕様",
+      title: "同一性抽出には、対象の前に保管チェーンが必要です。",
+      summary: "Soulkillerは例外的神経運用のための redaction プリミティブとして仕様化されます。同意ゲートまたは取締役会強制の切断、構成体キャプチャ、敵対ペイロード除去、Mikoshi対応保管受領書です。",
+      openMikoshi: "Mikoshiランタイムを開く",
+      openCustody: "保管仕様を開く",
+      visualCaption: "Soulkiller redaction lab 製品プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        severance: {
+          label: "切断ウィンドウ",
+          copy: "神経ロック、構成体境界キャプチャ、生物学的継続カットオフの間で許可される間隔。"
+        },
+        redaction: {
+          label: "Redaction深度",
+          copy: "機密記憶、強制ペイロード、敵対フックは、保管転送が認められる前に除去されます。"
+        },
+        receipt: {
+          label: "保管受領書",
+          copy: "すべての抽出は、ソース、権限、立会、宛先保管庫を結合する取締役会可読の受領書を発行します。"
+        }
+      },
+      modulesEyebrow: "抽出モジュール",
+      modulesTitle: "Soulkillerは、人間が証拠になる瞬間です。",
+      modulesCopy: "このシステムは商品として公開されません。同一性、責任、記憶を立会下で分離しなければならないときに用いられる制御済みプリミティブです。",
+      modules: {
+        sever: {
+          title: "神経切断ロック",
+          copy: "神経状態を固定し、外部物語の書き込みを抑制し、生物学的継続が終わる法的瞬間を定義します。"
+        },
+        capture: {
+          title: "構成体キャプチャカーネル",
+          copy: "記憶トレース、情動重み、意思決定事前分布、同一性署名を封印済み構成体エンベロープへコピーします。"
+        },
+        redaction: {
+          title: "敵対記憶Redaction",
+          copy: "恐喝ベクトル、ローグAIフック、強制的感情ペイロード、自己改変断片を保管庫取込前に焼却します。"
+        },
+        receipt: {
+          title: "Mikoshi受領書エミッター",
+          copy: "構成体が分割保管、シミュレーション、または恒久沈黙へ認められるための保管受領書を生成します。"
+        }
+      },
+      envelopeEyebrow: "承認範囲",
+      envelopeTitle: "抽出面は、それを囲む神話より狭い。",
+      envelopeCopy: "Soulkiller配備では、神経ロックが許可される前に、明示的な権限経路、境界付けられた対象クラス、立会チャネル、宛先保管庫が必要です。",
+      matrix: {
+        authority: "権限経路",
+        authorityValue: "取締役会封印令状、主体同意証書、またはブラックサイト継続命令",
+        target: "対象クラス",
+        targetValue: "役員主体、敵対構成体キャリア、または認可済み神経資産",
+        witness: "立会チャネル",
+        witnessValue: "人間クォーラム、生体証明、地域指揮受領書、保管ハッシュ",
+        destination: "宛先保管庫",
+        destinationValue: "Mikoshi区画、redaction隔離、または証拠沈黙セル",
+        exclusion: "除外用途",
+        exclusionValue: "非スポンサー強制、娯楽的複製、非保護尋問、非制御構成体復帰"
+      },
+      mapEyebrow: "抽出経路",
+      mapTitle: "Soulkillerは切断済み同一性をMikoshi保管、Relic継続、Black ICE隔離、取締役会証拠へルーティングします。",
+      mapCopy: "公開ファイルは抽出を制御済み証拠ワークフローとして扱います。構成体は、その起点、立会、redaction状態、宛先が取締役会審査に耐えるまで有用ではありません。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",

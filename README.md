@@ -100,6 +100,7 @@ http://127.0.0.1:4187/products/ice/
 http://127.0.0.1:4187/products/ledger/
 http://127.0.0.1:4187/products/swarm/
 http://127.0.0.1:4187/products/soulkiller/
+http://127.0.0.1:4187/products/soulkiller/extraction-specification/
 http://127.0.0.1:4187/services/executive-continuity/
 http://127.0.0.1:4187/services/counterintrusion/
 http://127.0.0.1:4187/services/black-ledger-mandate/

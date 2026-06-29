@@ -6763,6 +6763,11 @@ a,
   filter: saturate(1.04) contrast(1.1) brightness(0.9);
 }
 
+.soulkiller-spec-route-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.12) brightness(0.88);
+}
+
 .spec-route-matrix {
   overflow: hidden;
   display: grid;
