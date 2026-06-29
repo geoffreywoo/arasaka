@@ -6534,6 +6534,10 @@ a,
 .regional-route-page .archive-route-readout,
 .regional-route-page .archive-route-incidents,
 .regional-route-page .archive-route-map,
+.spec-route-page .archive-route-hero,
+.spec-route-page .archive-route-readout,
+.spec-route-page .archive-route-incidents,
+.spec-route-page .archive-route-map,
 .casefile-route-page .archive-route-hero,
 .casefile-route-page .archive-route-readout,
 .casefile-route-page .archive-route-incidents,
@@ -6717,6 +6721,75 @@ a,
 .regional-route-visual img {
   object-position: center center;
   filter: saturate(1.07) contrast(1.1) brightness(0.88);
+}
+
+.spec-route-page .archive-route-hero,
+.spec-route-page .archive-route-readout,
+.spec-route-page .archive-route-incidents,
+.spec-route-page .archive-route-map {
+  border-color: rgba(182, 243, 91, 0.28);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(182, 243, 91, 0.1), transparent 28%),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.14), transparent 40%, rgba(116, 199, 216, 0.1)),
+    rgba(7, 9, 12, 0.94);
+}
+
+.spec-route-hero::before {
+  background:
+    linear-gradient(120deg, transparent 0 46%, rgba(182, 243, 91, 0.13) 46% 48%, transparent 48%),
+    repeating-linear-gradient(90deg, transparent 0 70px, rgba(116, 199, 216, 0.04) 70px 71px),
+    repeating-linear-gradient(0deg, transparent 0 24px, rgba(225, 7, 20, 0.035) 24px 25px);
+}
+
+.spec-route-page .archive-route-readout strong {
+  color: var(--acid);
+}
+
+.spec-route-page .archive-incident-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.spec-route-page .archive-incident-grid article img {
+  aspect-ratio: 16 / 9;
+}
+
+.relic-spec-route-visual img {
+  object-position: center center;
+  filter: saturate(1.06) contrast(1.1) brightness(0.9);
+}
+
+.spec-route-matrix {
+  overflow: hidden;
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.16);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.22), rgba(182, 243, 91, 0.14)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.spec-route-matrix div {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 14px;
+  background: rgba(5, 6, 8, 0.88);
+}
+
+.spec-route-matrix span {
+  color: var(--dim);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.spec-route-matrix strong {
+  color: var(--paper);
+  font-size: 0.96rem;
+  line-height: 1.35;
 }
 
 .casefile-route-visual img {
@@ -22609,6 +22682,10 @@ a,
   .regional-route-page .archive-incident-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .spec-route-page .archive-incident-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -22746,6 +22823,11 @@ a,
   }
 
   .regional-route-page .archive-incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-route-page .archive-incident-grid,
+  .spec-route-matrix div {
     grid-template-columns: 1fr;
   }
 

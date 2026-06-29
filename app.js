@@ -269,6 +269,69 @@ const translations = {
       mapTitle: "Regional command binds divisions, subsidiaries, products, custody systems, and board authority.",
       mapCopy: "A command node is not an office. It is the place where legal permission, machine authority, human quorum, and operational risk become a single executable mandate."
     },
+    relicSpec: {
+      productCta: "Open technical specification",
+      back: "Return to Relic dossier",
+      kicker: "AR-RELIC / TECHNICAL SPECIFICATION",
+      title: "Continuity becomes deployable when memory has an interface.",
+      summary: "Relic is specified as a governed identity substrate: a shard-class capture device, custody protocol, construct stabilization layer, and board-witnessed activation path for principals whose authority cannot terminate with biology.",
+      openCustody: "Open custody spec",
+      openService: "Open continuity service",
+      visualCaption: "Relic continuity suite product plate, generated Arasaka catalog image.",
+      readouts: {
+        latency: {
+          label: "Engram handoff",
+          copy: "Maximum acceptable governance-path delay between neural capture, checksum lock, and Mikoshi custody acknowledgment."
+        },
+        integrity: {
+          label: "Identity integrity",
+          copy: "Continuity confidence is measured against witness memory, behavioral drift, signature entropy, and construct response variance."
+        },
+        clearance: {
+          label: "Activation class",
+          copy: "Board-sealed deployment class for principals with market-moving authority, sovereign exposure, or succession risk."
+        }
+      },
+      modulesEyebrow: "System Modules",
+      modulesTitle: "Relic is not a chip. It is a custody architecture with a physical endpoint.",
+      modulesCopy: "The public product plate compresses four controlled systems: neural acquisition, shard containment, construct stabilization, and succession authorization. Each module carries its own audit primitive.",
+      modules: {
+        capture: {
+          title: "Neural Acquisition Kernel",
+          copy: "Captures executive memory deltas through a witnessed neural path, then freezes the capture state before narrative contamination can enter the record."
+        },
+        custody: {
+          title: "Mikoshi Custody Bridge",
+          copy: "Routes signed engram fragments into partitioned cold storage with quorum locks, identity seals, and board-readable custody receipts."
+        },
+        stabilization: {
+          title: "Construct Stabilization Layer",
+          copy: "Runs behavioral pressure tests against authorized witness material until the construct is stable enough for succession simulation."
+        },
+        activation: {
+          title: "Succession Activation Gate",
+          copy: "Binds construct release to board quorum, capital custody, export license, and a dead-man condition that cannot be self-certified."
+        }
+      },
+      envelopeEyebrow: "Operating Envelope",
+      envelopeTitle: "Procurement sees limits before it sees miracles.",
+      envelopeCopy: "Relic deployment is only approved when the buyer can prove authority, witness coverage, biological access, and a jurisdictional path into custody infrastructure.",
+      matrix: {
+        input: "Input surface",
+        inputValue: "Living principal, terminal principal, or board-approved neural estate",
+        storage: "Storage class",
+        storageValue: "Partitioned Mikoshi cold cell with regional quorum witness",
+        drift: "Drift control",
+        driftValue: "Behavioral checksum, witness replay, memory entropy bounds",
+        release: "Release condition",
+        releaseValue: "Board motion, sovereign license, biological discontinuity event",
+        exclusion: "Excluded use",
+        exclusionValue: "Unsponsored personality duplication, coercive witness extraction, unsanctioned body migration"
+      },
+      mapEyebrow: "Routed Architecture",
+      mapTitle: "Relic routes identity through neural substrate, custody law, regional command, and executive continuity service.",
+      mapCopy: "A buyer does not acquire immortality. A buyer acquires a governed continuity path with measurable evidence, named operators, reversible gates, and a sealed board docket."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4646,6 +4709,69 @@ const translations = {
       mapEyebrow: "管轄経路",
       mapTitle: "地域指揮は部門、子会社、製品、保管システム、取締役会権限を結合します。",
       mapCopy: "指揮ノードはオフィスではありません。法的許可、機械権限、人間のクォーラム、運用リスクが単一の実行可能な委任になる場所です。"
+    },
+    relicSpec: {
+      productCta: "技術仕様を開く",
+      back: "Relicドシエへ戻る",
+      kicker: "AR-RELIC / 技術仕様",
+      title: "記憶にインターフェースがあるとき、継続性は配備可能になります。",
+      summary: "Relicは統治された同一性基盤として仕様化されます。シャード級キャプチャ装置、保管プロトコル、構成体安定化レイヤー、生物学で終わらせられない権限を持つ主体のための取締役会立会起動経路です。",
+      openCustody: "保管仕様を開く",
+      openService: "継続サービスを開く",
+      visualCaption: "Relic継続スイート製品プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        latency: {
+          label: "エングラム引継",
+          copy: "神経キャプチャ、チェックサムロック、Mikoshi保管承認の間で許容される統治経路の最大遅延。"
+        },
+        integrity: {
+          label: "同一性完全性",
+          copy: "継続性信頼度は、立会記憶、行動ドリフト、署名エントロピー、構成体応答分散に対して測定されます。"
+        },
+        clearance: {
+          label: "起動クラス",
+          copy: "市場を動かす権限、主権露出、継承リスクを持つ主体向けの取締役会封印済み配備クラス。"
+        }
+      },
+      modulesEyebrow: "システムモジュール",
+      modulesTitle: "Relicはチップではありません。物理エンドポイントを持つ保管アーキテクチャです。",
+      modulesCopy: "公開製品プレートは、神経取得、シャード封じ込め、構成体安定化、継承承認という四つの制御システムを圧縮しています。各モジュールは独自の監査プリミティブを保持します。",
+      modules: {
+        capture: {
+          title: "神経取得カーネル",
+          copy: "立会済み神経経路を通じて役員記憶デルタを取得し、物語汚染が記録に入る前にキャプチャ状態を凍結します。"
+        },
+        custody: {
+          title: "Mikoshi保管ブリッジ",
+          copy: "署名済みエングラム断片を、クォーラムロック、同一性シール、取締役会が読める保管受領書を持つ分割冷蔵保管へルーティングします。"
+        },
+        stabilization: {
+          title: "構成体安定化レイヤー",
+          copy: "構成体が継承シミュレーションに十分安定するまで、承認済み立会資料に対して行動圧力テストを実行します。"
+        },
+        activation: {
+          title: "継承起動ゲート",
+          copy: "構成体リリースを取締役会クォーラム、資本保管、輸出ライセンス、自己認証できないデッドマン条件へ結合します。"
+        }
+      },
+      envelopeEyebrow: "運用範囲",
+      envelopeTitle: "調達は奇跡を見る前に限界を見ます。",
+      envelopeCopy: "Relic配備は、買い手が権限、立会範囲、生物学的アクセス、保管インフラへの管轄経路を証明できる場合にのみ承認されます。",
+      matrix: {
+        input: "入力面",
+        inputValue: "生存主体、終末主体、または取締役会承認済み神経資産",
+        storage: "保管クラス",
+        storageValue: "地域クォーラム立会付き分割Mikoshi低温セル",
+        drift: "ドリフト制御",
+        driftValue: "行動チェックサム、立会再生、記憶エントロピー境界",
+        release: "リリース条件",
+        releaseValue: "取締役会動議、主権ライセンス、生物学的途絶イベント",
+        exclusion: "除外用途",
+        exclusionValue: "非スポンサー人格複製、強制的立会抽出、非認可身体移行"
+      },
+      mapEyebrow: "ルーティング済みアーキテクチャ",
+      mapTitle: "Relicは同一性を神経基盤、保管法、地域指揮、役員継続サービスへルーティングします。",
+      mapCopy: "買い手が取得するのは不死ではありません。測定可能な証拠、指名オペレーター、可逆ゲート、封印済み取締役会ドケットを持つ統治された継続経路です。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
