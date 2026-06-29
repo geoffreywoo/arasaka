@@ -11266,10 +11266,29 @@ function updateOperationTheater(theaterKey) {
 function initBootSequence() {
   if (!bootSequence) return;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const delay = prefersReducedMotion ? 80 : 1650;
+  const storageKey = "arasaka-access-confirmed";
+  let hasConfirmedAccess = false;
+
+  try {
+    hasConfirmedAccess = localStorage.getItem(storageKey) === "true";
+  } catch {
+    hasConfirmedAccess = false;
+  }
+
+  if (hasConfirmedAccess || prefersReducedMotion) {
+    bootSequence.classList.add("is-complete");
+    return;
+  }
+
+  const delay = 760;
 
   window.setTimeout(() => {
     bootSequence.classList.add("is-complete");
+    try {
+      localStorage.setItem(storageKey, "true");
+    } catch {
+      return undefined;
+    }
   }, delay);
 }
 
