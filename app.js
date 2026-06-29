@@ -94,7 +94,7 @@ const translations = {
         }
       },
       mapEyebrow: "Program Routing",
-      mapTitle: "The archive now resolves into four technical branches.",
+      mapTitle: "The archive now resolves into casefiles and five technical branches.",
       mapCopy: "Each route turns an incident pattern into a procurement-grade engineering surface with its own specifications, failure boundaries, and connected product pages.",
       creditEyebrow: "Source Trail",
       creditTitle: "Unofficial fan concept with credited source imagery.",
@@ -148,6 +148,54 @@ const translations = {
       mapEyebrow: "Doctrine Routing",
       mapTitle: "Konpeki resolves into continuity, archive, watchfloor, and board systems.",
       mapCopy: "The incident is not presented as biography. It is the pressure model behind Relic custody, Mikoshi partitioning, neural substrate certification, and board-grade succession control."
+    },
+    afterlifeFile: {
+      back: "Return to operations archive",
+      kicker: "CASEFILE AF-MARKET / AFTERLIFE SIGNAL",
+      title: "Street reputation prices capital before markets admit the risk.",
+      summary: "The Afterlife is filed as an informal exchange where mercenary credibility, founder myth, and rumor velocity become collateral signals before regulated markets can see the mandate forming.",
+      openMandate: "Open Black Ledger mandate",
+      openTech: "Open capital custody rail",
+      visualCaption: "Credited Cyberpunk 2077 press frame used as public source evidence.",
+      readouts: {
+        signal: {
+          label: "Signal spread",
+          copy: "Informal mentions, fixer trails, and crew references condensed into a private reputation graph."
+        },
+        collateral: {
+          label: "Collateral gravity",
+          copy: "Median blind-close window once mandate intent and asset gravity match."
+        },
+        silence: {
+          label: "Disclosure silence",
+          copy: "Jurisdiction switch that keeps private leverage sealed until a lawful disclosure trigger appears."
+        }
+      },
+      chainEyebrow: "Market Chain",
+      chainTitle: "Informal power becomes legible capital through four control surfaces.",
+      chainCopy: "This casefile treats Night City reputation as pre-market evidence: not social noise, but a volatility surface that can underwrite or poison a mandate.",
+      openRoute: "Open routed system",
+      chain: {
+        reputation: {
+          title: "Reputation trades before equity does.",
+          copy: "Fixer confidence, crew survival, and bar mythology become early indicators of who can move capital safely."
+        },
+        ledger: {
+          title: "Black Ledger converts rumor into mandate proof.",
+          copy: "A private rail binds sponsor intent, collateral state, and disclosure silence before counterparties see the full graph."
+        },
+        mandate: {
+          title: "Founder signal becomes an underwriting surface.",
+          copy: "Founder custody, patent gravity, and reputation heat are priced before the public market can front-run intent."
+        },
+        watchfloor: {
+          title: "Capital custody needs a live desk.",
+          copy: "When leverage moves quietly, watchfloor authority keeps evidence, escalation, and silence aligned."
+        }
+      },
+      mapEyebrow: "Doctrine Routing",
+      mapTitle: "Afterlife resolves into Black Ledger, capital custody, Watchfloor, and Board systems.",
+      mapCopy: "The casefile turns reputation mythology into enterprise finance architecture: blind settlement, mandate escrow, collateral custody, and governed disclosure."
     },
     opsWatch: {
       back: "Return to operations",
@@ -4134,7 +4182,7 @@ const translations = {
         }
       },
       mapEyebrow: "プログラム経路",
-      mapTitle: "記録庫は四つの技術枝へ解決されます。",
+      mapTitle: "記録庫はケースファイルと五つの技術枝へ解決されます。",
       mapCopy: "各経路は事象パターンを、仕様、障害境界、接続製品ページを持つ調達級工学面へ変換します。",
       creditEyebrow: "出典経路",
       creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
@@ -4188,6 +4236,54 @@ const translations = {
       mapEyebrow: "ドクトリン経路",
       mapTitle: "紺碧は継続、記録庫、監視室、取締役会システムへ解決されます。",
       mapCopy: "この事案は伝記として提示されません。Relic保管、神輿分割、神経基盤認証、取締役会級継承制御の背後にある圧力モデルです。"
+    },
+    afterlifeFile: {
+      back: "運用記録庫へ戻る",
+      kicker: "ケースファイル AF-MARKET / Afterlifeシグナル",
+      title: "ストリート評判は市場がリスクを認める前に資本を価格付けします。",
+      summary: "Afterlifeは、マーセナリー信用、創業者神話、噂の速度が、規制市場が委任形成を見る前に担保シグナルになる非公式交換所として記録されます。",
+      openMandate: "Black Ledger委任を開く",
+      openTech: "資本保管レールを開く",
+      visualCaption: "公開ソース証拠として使用されるクレジット済みCyberpunk 2077プレス画像。",
+      readouts: {
+        signal: {
+          label: "信号拡散",
+          copy: "非公式言及、フィクサー経路、クルー参照を私的評判グラフへ圧縮します。"
+        },
+        collateral: {
+          label: "担保重力",
+          copy: "委任意図と資産重力が一致した後の盲目クローズ中央値。"
+        },
+        silence: {
+          label: "開示沈黙",
+          copy: "合法的な開示トリガーが現れるまで私的レバレッジを封印する管轄スイッチ。"
+        }
+      },
+      chainEyebrow: "市場チェーン",
+      chainTitle: "非公式権力は四つの制御面を通じて判読可能な資本になります。",
+      chainCopy: "このケースファイルはナイトシティ評判を市場前証拠として扱います。社会的ノイズではなく、委任を引き受けるか汚染するボラティリティ面です。",
+      openRoute: "ルーティング済みシステムを開く",
+      chain: {
+        reputation: {
+          title: "評判は株式より先に取引されます。",
+          copy: "フィクサー信用、クルー生存、バー神話は、誰が安全に資本を動かせるかの早期指標になります。"
+        },
+        ledger: {
+          title: "Black Ledgerは噂を委任証明へ変換します。",
+          copy: "私的レールは、相手方が完全なグラフを見る前にスポンサー意図、担保状態、開示沈黙を結合します。"
+        },
+        mandate: {
+          title: "創業者シグナルは引受面になります。",
+          copy: "創業者保管、特許重力、評判熱は、公開市場が意図を先回りする前に価格付けされます。"
+        },
+        watchfloor: {
+          title: "資本保管にはライブデスクが必要です。",
+          copy: "レバレッジが静かに動くとき、監視室権限が証拠、エスカレーション、沈黙を整合させます。"
+        }
+      },
+      mapEyebrow: "ドクトリン経路",
+      mapTitle: "AfterlifeはBlack Ledger、資本保管、監視室、取締役会システムへ解決されます。",
+      mapCopy: "ケースファイルは評判神話を企業金融アーキテクチャへ変換します。盲目決済、委任エスクロー、担保保管、統治済み開示です。"
     },
     opsWatch: {
       back: "運用へ戻る",

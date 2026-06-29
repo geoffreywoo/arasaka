@@ -6532,6 +6532,27 @@ a,
   color: #ddb85e;
 }
 
+.afterlife-casefile-page .archive-route-hero,
+.afterlife-casefile-page .archive-route-readout,
+.afterlife-casefile-page .archive-route-incidents,
+.afterlife-casefile-page .archive-route-map {
+  border-color: rgba(221, 184, 94, 0.3);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(182, 243, 91, 0.1), transparent 26%),
+    linear-gradient(135deg, rgba(221, 184, 94, 0.12), transparent 42%, rgba(116, 199, 216, 0.1)),
+    rgba(7, 9, 12, 0.94);
+}
+
+.afterlife-casefile-hero::before {
+  background:
+    linear-gradient(120deg, transparent 0 48%, rgba(182, 243, 91, 0.12) 48% 50%, transparent 50%),
+    repeating-linear-gradient(90deg, transparent 0 34px, rgba(221, 184, 94, 0.04) 34px 35px);
+}
+
+.afterlife-casefile-page .archive-route-readout strong {
+  color: var(--acid);
+}
+
 .casefile-route-visual img {
   object-position: center center;
   filter: saturate(1.05) contrast(1.12) brightness(0.92);
