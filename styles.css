@@ -6222,6 +6222,226 @@ a,
   filter: saturate(1.05) contrast(1.05);
 }
 
+.archive-route-main {
+  gap: 16px;
+}
+
+.archive-route-hero,
+.archive-route-readout,
+.archive-route-incidents,
+.archive-route-map,
+.archive-route-credit {
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.12), transparent 42%, rgba(116, 199, 216, 0.09)),
+    rgba(7, 9, 12, 0.91);
+  box-shadow: var(--shadow);
+}
+
+.archive-route-hero {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.48fr) minmax(320px, 0.52fr);
+  min-height: 620px;
+}
+
+.archive-route-copy {
+  display: grid;
+  align-content: end;
+  gap: 14px;
+  padding: 28px;
+}
+
+.archive-route-copy > span,
+.archive-route-copy > strong,
+.archive-route-readout span,
+.archive-route-incidents .tech-section-intro > span,
+.archive-incident-grid article > span,
+.archive-route-map > div > span,
+.archive-route-credit span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.archive-route-copy > span,
+.archive-route-map > div > span,
+.archive-route-credit span {
+  color: var(--cyan);
+}
+
+.archive-route-copy > strong,
+.archive-route-readout strong,
+.archive-incident-grid article > span {
+  color: var(--acid);
+}
+
+.archive-route-copy h1 {
+  max-width: 740px;
+  margin: 0;
+  font-size: clamp(3rem, 5.8vw, 5rem);
+  line-height: 0.86;
+  overflow-wrap: anywhere;
+}
+
+.archive-route-copy p,
+.archive-route-map p,
+.archive-route-credit p,
+.archive-incident-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+}
+
+.archive-route-visual {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  border-left: 1px solid rgba(116, 199, 216, 0.18);
+}
+
+.archive-route-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.archive-route-visual figcaption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  max-width: min(360px, calc(100% - 28px));
+  padding: 8px 10px;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 4px;
+  color: rgba(243, 244, 242, 0.78);
+  background: rgba(0, 0, 0, 0.62);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.archive-route-readout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: rgba(116, 199, 216, 0.16);
+}
+
+.archive-route-readout article {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  background: rgba(7, 9, 12, 0.92);
+}
+
+.archive-route-readout strong {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 0.9;
+}
+
+.archive-route-readout p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+}
+
+.archive-route-incidents {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.3fr) minmax(0, 0.7fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.archive-incident-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.archive-incident-grid article {
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.archive-incident-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(116, 199, 216, 0.16);
+  filter: saturate(1.06) contrast(1.05);
+}
+
+.archive-incident-grid article > span,
+.archive-incident-grid h3,
+.archive-incident-grid p,
+.archive-incident-grid a {
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.archive-incident-grid h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  line-height: 1;
+}
+
+.archive-incident-grid a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.archive-route-map,
+.archive-route-credit {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.36fr) minmax(0, 0.64fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.archive-route-map > div,
+.archive-route-credit > div {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.archive-route-map h2,
+.archive-route-credit h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3.25rem);
+  line-height: 0.96;
+}
+
+.archive-route-credit a {
+  align-self: end;
+  justify-self: start;
+  color: var(--cyan);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;
@@ -21995,6 +22215,23 @@ a,
   .deep-tech-signal article:not(:last-child)::after {
     display: none;
   }
+
+  .archive-route-hero,
+  .archive-route-incidents,
+  .archive-route-map,
+  .archive-route-credit {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-route-visual {
+    min-height: 360px;
+    border-top: 1px solid rgba(116, 199, 216, 0.18);
+    border-left: 0;
+  }
+
+  .archive-route-map .tech-network-links {
+    justify-content: start;
+  }
 }
 
 @media (max-width: 720px) {
@@ -22095,6 +22332,45 @@ a,
   }
 
   .deep-tech-readout strong {
+    font-size: 2.4rem;
+  }
+
+  .archive-route-copy {
+    padding: 18px;
+  }
+
+  .archive-route-copy h1 {
+    font-size: 2.75rem;
+  }
+
+  .archive-route-copy p {
+    font-size: 0.98rem;
+  }
+
+  .archive-route-visual {
+    min-height: 280px;
+  }
+
+  .archive-route-visual img {
+    min-height: 280px;
+  }
+
+  .archive-route-readout,
+  .archive-incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-route-incidents,
+  .archive-route-map,
+  .archive-route-credit {
+    padding: 10px;
+  }
+
+  .archive-route-readout article {
+    padding: 13px;
+  }
+
+  .archive-route-readout strong {
     font-size: 2.4rem;
   }
 }

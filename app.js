@@ -9,6 +9,7 @@ const translations = {
       services: "Services",
       products: "Products",
       technology: "Technology",
+      opsArchive: "Archive",
       foundry: "Foundry",
       systems: "Systems",
       ice: "ICE",
@@ -43,6 +44,58 @@ const translations = {
       groupCorporate: "Corporate",
       groupSystems: "Systems",
       groupDossiers: "Dossiers"
+    },
+    opsArchive: {
+      back: "Return to public records",
+      kicker: "NIGHT CITY OPERATIONS ARCHIVE",
+      title: "Every public incident becomes operating doctrine.",
+      summary: "A corporate archive of tower trauma, Konpeki continuity risk, Blackwall pressure, Afterlife reputation markets, and private-city response systems routed into Arasaka technical programs.",
+      openTech: "Open technology library",
+      openAttribution: "Open source credits",
+      visualCaption: "Composite evidence wall with credited Cyberpunk 2077 press frames and generated dossier plates.",
+      readouts: {
+        records: {
+          label: "Records indexed",
+          copy: "Public incidents resolved into technology routes and governance surfaces."
+        },
+        routes: {
+          label: "Active routes",
+          copy: "Neural, ICE, autonomous force, and capital custody programs now have deep technical dossiers."
+        },
+        source: {
+          label: "Source status",
+          copy: "Credited game press materials and generated fan-concept assets remain traceable."
+        }
+      },
+      incidentsEyebrow: "Incident Doctrine",
+      incidentsTitle: "Lore signals, translated into corporate control surfaces.",
+      incidentsCopy: "This archive treats public Cyberpunk universe events as operating-pressure models: not biography, not fandom, but the corporate logic that would turn each shock into product requirements.",
+      openRoute: "Open routed doctrine",
+      incidents: {
+        tower: {
+          title: "Tower trauma initializes redundancy doctrine.",
+          copy: "Site loss, legend risk, and body absence become board-grade requirements for offsite command and identity custody."
+        },
+        konpeki: {
+          title: "Konpeki makes immortality an access-control problem.",
+          copy: "A carrier event reframes executive survival around consent locks, construct drift, and succession authority."
+        },
+        afterlife: {
+          title: "Afterlife reputation prices capital before markets react.",
+          copy: "Street mythology, founder signal, and off-ledger liquidity become inputs to private mandate routing."
+        },
+        blackwall: {
+          title: "Blackwall pressure turns defense into jurisdiction.",
+          copy: "Rogue-machine pressure requires witnessed quarantine, hostile-route burn, and memory-safe evidence receipts."
+        }
+      },
+      mapEyebrow: "Program Routing",
+      mapTitle: "The archive now resolves into four technical branches.",
+      mapCopy: "Each route turns an incident pattern into a procurement-grade engineering surface with its own specifications, failure boundaries, and connected product pages.",
+      creditEyebrow: "Source Trail",
+      creditTitle: "Unofficial fan concept with credited source imagery.",
+      creditCopy: "Cyberpunk 2077 press screenshots are credited to CD PROJEKT RED. Product plates, service plates, and the evidence wall are generated fan-concept assets for this unofficial Arasaka website.",
+      creditOpen: "Open attribution ledger"
     },
     tech: {
       back: "Return to corporate grid",
@@ -3763,6 +3816,7 @@ const translations = {
       services: "サービス",
       products: "製品群",
       technology: "技術",
+      opsArchive: "記録庫",
       foundry: "鋳造所",
       systems: "システム",
       ice: "ICE",
@@ -3797,6 +3851,58 @@ const translations = {
       groupCorporate: "企業",
       groupSystems: "システム",
       groupDossiers: "記録"
+    },
+    opsArchive: {
+      back: "公開記録へ戻る",
+      kicker: "ナイトシティ運用記録庫",
+      title: "すべての公開事象は運用ドクトリンになる。",
+      summary: "タワー・トラウマ、紺碧プラザ継続リスク、ブラックウォール圧力、Afterlife評判市場、私設都市応答システムを荒坂技術プログラムへルーティングする企業記録庫。",
+      openTech: "技術ライブラリを開く",
+      openAttribution: "出典クレジットを開く",
+      visualCaption: "クレジット済みCyberpunk 2077プレス画像と生成ドシエプレートを含む複合証拠ウォール。",
+      readouts: {
+        records: {
+          label: "索引済み記録",
+          copy: "公開事象を技術経路と統治面へ解決します。"
+        },
+        routes: {
+          label: "稼働経路",
+          copy: "神経、ICE、自律戦力、資本保管プログラムは深い技術記録を持ちます。"
+        },
+        source: {
+          label: "出典状態",
+          copy: "クレジット済みゲームプレス素材と生成ファンコンセプト資産は追跡可能です。"
+        }
+      },
+      incidentsEyebrow: "事象ドクトリン",
+      incidentsTitle: "ロア信号を企業制御面へ翻訳。",
+      incidentsCopy: "この記録庫はCyberpunk universeの公開事象を運用圧力モデルとして扱います。伝記でもファンダムでもなく、各ショックを製品要件へ変換する企業論理です。",
+      openRoute: "ルーティング済みドクトリンを開く",
+      incidents: {
+        tower: {
+          title: "タワー・トラウマが冗長性ドクトリンを初期化。",
+          copy: "拠点喪失、伝説リスク、身体不在は、遠隔指揮と同一性保管の取締役会要件になります。"
+        },
+        konpeki: {
+          title: "紺碧は不死性をアクセス制御問題にする。",
+          copy: "キャリア事象は、役員生存を同意ロック、構成体偏移、継承権限として再定義します。"
+        },
+        afterlife: {
+          title: "Afterlife評判は市場より先に資本を価格付けする。",
+          copy: "ストリート神話、創業者信号、オフレジャー流動性は私的委任ルーティングの入力になります。"
+        },
+        blackwall: {
+          title: "ブラックウォール圧力は防衛を管轄へ変える。",
+          copy: "ローグ機械圧力は、立会済み隔離、敵対経路焼却、メモリ安全な証拠レシートを必要とします。"
+        }
+      },
+      mapEyebrow: "プログラム経路",
+      mapTitle: "記録庫は四つの技術枝へ解決されます。",
+      mapCopy: "各経路は事象パターンを、仕様、障害境界、接続製品ページを持つ調達級工学面へ変換します。",
+      creditEyebrow: "出典経路",
+      creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
+      creditCopy: "Cyberpunk 2077プレススクリーンショットはCD PROJEKT REDに帰属します。製品プレート、サービスプレート、証拠ウォールはこの非公式荒坂サイト用の生成ファンコンセプト資産です。",
+      creditOpen: "帰属台帳を開く"
     },
     tech: {
       back: "企業グリッドへ戻る",
