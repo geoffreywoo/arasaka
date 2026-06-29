@@ -160,6 +160,39 @@ const translations = {
         value: "AA-90"
       }
     },
+    statusTape: {
+      aria: "Live corporate status",
+      gridAria: "Live systems telemetry",
+      eyebrow: "Live Corporate Status",
+      title: "Global control surfaces are online across custody, counterintrusion, capital, and autonomous protection.",
+      text: "Public telemetry is intentionally narrow. Each signal below represents a board-witnessed operating surface with private routing, human authorization, and regional command authority behind it.",
+      state: "State",
+      node: "Node",
+      custody: {
+        title: "Neural Custody",
+        text: "Construct storage, succession rehearsal, and Mikoshi witness are maintained under sealed family command.",
+        state: "COLD",
+        node: "Tokyo Root"
+      },
+      ice: {
+        title: "Black ICE Mesh",
+        text: "Hostile runner traces, Blackwall-adjacent pressure, and intrusion burn rights are held in witnessed control.",
+        state: "SEALED",
+        node: "Edge Cell"
+      },
+      ledger: {
+        title: "Black Ledger",
+        text: "Patent leverage, settlement silence, and reputation collateral are routed below public-market visibility.",
+        state: "DARK",
+        node: "Orbital Vault"
+      },
+      protection: {
+        title: "Autonomous Protection",
+        text: "Drone veils, extraction corridors, and perimeter denial remain armed behind accountable human command.",
+        state: "ARMED",
+        node: "Night City"
+      }
+    },
     scale: {
       aria: "Institutional scale",
       eyebrow: "Institutional Scale",
@@ -3359,6 +3392,39 @@ const translations = {
       mandate: {
         label: "継続性委任",
         value: "AA-90"
+      }
+    },
+    statusTape: {
+      aria: "ライブ法人ステータス",
+      gridAria: "ライブシステムテレメトリ",
+      eyebrow: "ライブ法人ステータス",
+      title: "保管、対侵入、資本、自律防衛にわたるグローバル制御面は稼働中です。",
+      text: "公開テレメトリは意図的に狭く設計されています。以下の各信号は、非公開経路、人間承認、地域指揮権限を背後に持つ、取締役会立会い済みの運用面を表します。",
+      state: "状態",
+      node: "ノード",
+      custody: {
+        title: "神経保管",
+        text: "コンストラクト保管、継承リハーサル、ミコシ立会いを、封印済み一族指揮下で維持します。",
+        state: "冷却",
+        node: "東京ルート"
+      },
+      ice: {
+        title: "ブラックICE網",
+        text: "敵対ランナー痕跡、ブラックウォール隣接圧力、侵入焼却権限を立会い済み制御内に保持します。",
+        state: "封鎖",
+        node: "エッジセル"
+      },
+      ledger: {
+        title: "ブラック台帳",
+        text: "特許レバレッジ、決済沈黙、評判担保を公開市場の可視性より下層で経路化します。",
+        state: "秘匿",
+        node: "軌道保管庫"
+      },
+      protection: {
+        title: "自律防衛",
+        text: "ドローンヴェール、抽出回廊、境界拒否を、説明責任ある人間指揮の背後で武装維持します。",
+        state: "武装",
+        node: "ナイトシティ"
       }
     },
     scale: {

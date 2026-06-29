@@ -1214,6 +1214,186 @@ a,
   color: var(--ink);
 }
 
+.status-tape {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.36fr) minmax(0, 1fr);
+  gap: 1px;
+  width: min(1180px, calc(100% - 36px));
+  margin: -22px auto 18px;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.16), rgba(225, 7, 20, 0.16), rgba(209, 177, 107, 0.12)),
+    rgba(255, 255, 255, 0.07);
+  box-shadow: var(--shadow);
+}
+
+.status-tape::before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent, rgba(182, 243, 91, 0.24), transparent),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(255, 255, 255, 0.045) 42px 43px);
+  opacity: 0.36;
+  animation: statusTapeSweep 8s linear infinite;
+}
+
+.status-tape-head,
+.status-tape-card {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.08), transparent 56%),
+    rgba(4, 8, 10, 0.94);
+}
+
+.status-tape-head {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 20px;
+  border-left: 3px solid var(--red);
+}
+
+.status-tape-head::after {
+  width: 70px;
+  height: 70px;
+  margin-top: 4px;
+  content: "";
+  background: url("assets/arasaka-mark-white.png") center / contain no-repeat;
+  opacity: 0.22;
+  filter: drop-shadow(0 0 18px rgba(225, 7, 20, 0.42));
+}
+
+.status-tape-head .eyebrow,
+.status-tape-code,
+.status-tape-card dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.status-tape-head .eyebrow,
+.status-tape-code {
+  color: var(--cyan);
+}
+
+.status-tape-head h2 {
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(1.38rem, 2.7vw, 2.45rem);
+  line-height: 1;
+}
+
+.status-tape-head p:not(.eyebrow),
+.status-tape-card p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.status-tape-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.status-tape-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 260px;
+  padding: 18px;
+  color: var(--ink);
+}
+
+.status-tape-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(225, 7, 20, 0.12), transparent 42%),
+    repeating-linear-gradient(0deg, transparent 0 26px, rgba(116, 199, 216, 0.055) 26px 27px);
+  opacity: 0.75;
+}
+
+.status-tape-card::after {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--acid);
+  box-shadow: 0 0 18px rgba(182, 243, 91, 0.78);
+}
+
+.status-tape-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.status-tape-card:hover,
+.status-tape-card:focus-visible {
+  outline: 0;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.16), rgba(116, 199, 216, 0.08) 56%),
+    rgba(7, 10, 12, 0.98);
+}
+
+.status-tape-card strong {
+  color: var(--paper);
+  font-size: 1.18rem;
+  line-height: 1.04;
+}
+
+.status-tape-card dl {
+  display: grid;
+  gap: 1px;
+  align-self: end;
+  margin: 6px 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.status-tape-card dl div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 38px;
+  padding: 8px 10px;
+  background: rgba(5, 5, 7, 0.78);
+}
+
+.status-tape-card dt {
+  color: rgba(243, 244, 242, 0.5);
+}
+
+.status-tape-card dd {
+  margin: 0;
+  color: var(--acid);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
 .corporate-scale {
   position: relative;
   z-index: 2;
@@ -17380,6 +17560,7 @@ a,
   }
 
   .hero-shell,
+  .status-tape,
   .corporate-scale,
   .mandate-exchange,
   .field-console,
@@ -17432,6 +17613,14 @@ a,
 
   .field-console {
     margin-top: -12px;
+  }
+
+  .status-tape {
+    margin-top: -12px;
+  }
+
+  .status-tape-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .field-console-routes {
@@ -18405,6 +18594,35 @@ a,
   .corporate-scale {
     width: calc(100% - 24px);
     margin: -4px auto 18px;
+  }
+
+  .status-tape {
+    width: calc(100% - 24px);
+    margin: -4px auto 18px;
+  }
+
+  .status-tape-head {
+    padding: 16px;
+  }
+
+  .status-tape-head h2 {
+    font-size: 1.58rem;
+  }
+
+  .status-tape-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(238px, 78vw);
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .status-tape-card {
+    min-height: 246px;
+    padding: 16px;
+    scroll-snap-align: start;
   }
 
   .mandate-exchange {
@@ -20256,6 +20474,16 @@ a,
   }
   50% {
     transform: translateY(360px);
+  }
+}
+
+@keyframes statusTapeSweep {
+  from {
+    transform: translateX(-52%);
+  }
+
+  to {
+    transform: translateX(52%);
   }
 }
 
