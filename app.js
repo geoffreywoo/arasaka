@@ -2452,6 +2452,13 @@ const translations = {
       escalationRule: "Escalation Rule",
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
+      provenanceLedger: "Provenance Ledger",
+      provenanceLedgerLead: "Source and attestation record binding the Night City field file, credited media, internal registry, and off-network witness before procurement.",
+      canonSignal: "Canon Signal",
+      mediaSource: "Media Source",
+      registryAuthority: "Registry Authority",
+      relayWitness: "Relay Witness",
+      provenanceSeal: "Seal",
       patchCadence: "Patch Cadence",
       patchCadenceLead: "Lifecycle update ledger for release ring, canary corridor, rollback authority, and cryptographic rotation after live acceptance.",
       releaseRing: "Release Ring",
@@ -2691,6 +2698,13 @@ const translations = {
       escalationRule: "Escalation Rule",
       standbyChannel: "Standby Channel",
       monitorSignal: "Signal",
+      provenanceLedger: "Provenance Ledger",
+      provenanceLedgerLead: "Source and attestation record binding the Night City service file, credited media, mandate registry, and off-network witness before sponsor review.",
+      canonSignal: "Canon Signal",
+      mediaSource: "Media Source",
+      registryAuthority: "Registry Authority",
+      relayWitness: "Relay Witness",
+      provenanceSeal: "Seal",
       patchCadence: "Patch Cadence",
       patchCadenceLead: "Lifecycle update ledger for release ring, canary corridor, rollback authority, and cryptographic rotation after mandate acceptance.",
       releaseRing: "Release Ring",
@@ -5045,6 +5059,13 @@ const translations = {
       escalationRule: "エスカレーション規則",
       standbyChannel: "スタンバイチャネル",
       monitorSignal: "シグナル",
+      provenanceLedger: "来歴台帳",
+      provenanceLedgerLead: "調達前にナイトシティ現地ファイル、クレジット済みメディア、内部レジストリ、オフネットワーク証人を結合する出所と証明の記録。",
+      canonSignal: "正史シグナル",
+      mediaSource: "メディア出所",
+      registryAuthority: "レジストリ権限",
+      relayWitness: "中継証人",
+      provenanceSeal: "シール",
       patchCadence: "パッチ周期",
       patchCadenceLead: "ライブ受領後のリリースリング、カナリア回廊、ロールバック権限、暗号ローテーションを示すライフサイクル更新台帳。",
       releaseRing: "リリースリング",
@@ -5284,6 +5305,13 @@ const translations = {
       escalationRule: "エスカレーション規則",
       standbyChannel: "スタンバイチャネル",
       monitorSignal: "シグナル",
+      provenanceLedger: "来歴台帳",
+      provenanceLedgerLead: "スポンサー審査前にナイトシティサービスファイル、クレジット済みメディア、委任レジストリ、オフネットワーク証人を結合する出所と証明の記録。",
+      canonSignal: "正史シグナル",
+      mediaSource: "メディア出所",
+      registryAuthority: "レジストリ権限",
+      relayWitness: "中継証人",
+      provenanceSeal: "シール",
       patchCadence: "パッチ周期",
       patchCadenceLead: "委任受領後のリリースリング、カナリア回廊、ロールバック権限、暗号ローテーションを示すライフサイクル更新台帳。",
       releaseRing: "リリースリング",
@@ -5532,6 +5560,7 @@ const routeSurface = document.querySelector("[data-route-surface]");
 const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
 const routeCaseFile = document.querySelector("[data-route-case-file]");
+const routeProvenance = document.querySelector("[data-route-provenance]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
@@ -5575,6 +5604,7 @@ const serviceRouteSurface = document.querySelector("[data-service-surface]");
 const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
 const serviceRouteCaseFile = document.querySelector("[data-service-case-file]");
+const serviceRouteProvenance = document.querySelector("[data-service-provenance]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
@@ -6339,6 +6369,43 @@ function renderRouteBrief(target, labels, rows) {
     article.append(title, copy, list);
     target.append(article);
   });
+}
+
+function renderRouteProvenance(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const rail = document.createElement("div");
+
+  heading.className = "product-route-provenance-head";
+  label.textContent = labels.provenanceLedger;
+  lead.textContent = labels.provenanceLedgerLead;
+  heading.append(label, lead);
+
+  rail.className = "product-route-provenance-rail";
+  rows.forEach(({ label: rowLabel, value, text, seal, href }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = href ? document.createElement("a") : document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    if (href) {
+      title.href = href;
+      title.target = "_blank";
+      title.rel = "noreferrer";
+    }
+    copy.textContent = text;
+    tag.textContent = `${labels.provenanceSeal}: ${seal}`;
+    article.append(eyebrow, title, copy, tag);
+    rail.append(article);
+  });
+
+  target.replaceChildren(heading, rail);
 }
 
 function renderRouteQualification(target, labels, rows) {
@@ -7466,6 +7533,34 @@ function updateProductRoute() {
     routeField.replaceChildren(figure, content);
   }
 
+  renderRouteProvenance(routeProvenance, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.canonSignal,
+      value: field.label,
+      text: `${field.incident} / ${field.doctrine}`,
+      seal: file.code
+    },
+    {
+      label: dictionary.productRoute.mediaSource,
+      value: "CD PROJEKT RED / Cyberpunk 2077",
+      text: `${dictionary.productRoute.imageCredit}: Cyberpunk 2077 press materials`,
+      seal: routeFieldImages.product[productKey] || routeFieldImages.fallback,
+      href: "https://press.cdprojektred.com/en/224/797"
+    },
+    {
+      label: dictionary.productRoute.registryAuthority,
+      value: file.tabs.governance.title,
+      text: `${file.clearance} / ${file.surface} / ${operations.regions[0]}`,
+      seal: file.tabs.governance.items[0] || file.tabs.governance.title
+    },
+    {
+      label: dictionary.productRoute.relayWitness,
+      value: dictionary.productRoute.capitalObserver,
+      text: `${operations.integrations[0]} / ${operations.packages[0]}`,
+      seal: "G.W. / A-F"
+    }
+  ]);
+
   if (routeSwitcher) {
     const label = document.createElement("span");
     const rail = document.createElement("div");
@@ -8415,6 +8510,34 @@ function updateServiceRoute() {
     content.append(label, heading, copy, readouts);
     serviceRouteField.replaceChildren(figure, content);
   }
+
+  renderRouteProvenance(serviceRouteProvenance, routeLabels, [
+    {
+      label: routeLabels.canonSignal,
+      value: file.field.label,
+      text: `${file.field.incident} / ${file.field.doctrine}`,
+      seal: file.code
+    },
+    {
+      label: routeLabels.mediaSource,
+      value: "CD PROJEKT RED / Cyberpunk 2077",
+      text: `${routeLabels.imageCredit}: Cyberpunk 2077 press materials`,
+      seal: routeFieldImages.service[serviceKey] || routeFieldImages.fallback,
+      href: "https://press.cdprojektred.com/en/224/797"
+    },
+    {
+      label: routeLabels.registryAuthority,
+      value: file.tabs.governance.title,
+      text: `${file.clearance} / ${file.surface} / ${file.operations.regions[0]}`,
+      seal: file.tabs.governance.items[0] || file.tabs.governance.title
+    },
+    {
+      label: routeLabels.relayWitness,
+      value: routeLabels.capitalObserver,
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[0]}`,
+      seal: "G.W. / A-F"
+    }
+  ]);
 
   if (serviceRouteSwitcher) {
     const label = document.createElement("span");

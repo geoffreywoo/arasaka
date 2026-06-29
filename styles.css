@@ -4646,6 +4646,7 @@ a,
     "hero meta"
     "field meta"
     "case meta"
+    "provenance meta"
     "proof meta"
     "brief meta"
     "qualification meta"
@@ -4828,6 +4829,8 @@ a,
 .product-route-proof,
 .product-route-case-head,
 .product-route-case-rail article,
+.product-route-provenance-head,
+.product-route-provenance-rail article,
 .product-route-brief-heading,
 .product-route-brief article,
 .product-route-qualification-head,
@@ -5155,6 +5158,116 @@ a,
   color: var(--paper);
   font-size: 1rem;
   line-height: 1.08;
+}
+
+.product-route-provenance {
+  grid-area: provenance;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.15), rgba(209, 177, 107, 0.12), rgba(116, 199, 216, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-provenance-head,
+.product-route-provenance-rail article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.12), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-provenance-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-provenance-head::after,
+.product-route-provenance-rail article::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(225, 7, 20, 0.04) 13px 14px),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 45%);
+}
+
+.product-route-provenance-head > *,
+.product-route-provenance-rail article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-provenance-head span,
+.product-route-provenance-rail article > span,
+.product-route-provenance-rail em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-provenance-head span,
+.product-route-provenance-rail article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-provenance-head p,
+.product-route-provenance-rail p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-provenance-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-provenance-rail article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 168px;
+  padding: 15px;
+}
+
+.product-route-provenance-rail strong,
+.product-route-provenance-rail a {
+  color: var(--paper);
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.product-route-provenance-rail a:hover,
+.product-route-provenance-rail a:focus-visible {
+  color: var(--cyan);
+}
+
+.product-route-provenance-rail em {
+  align-self: end;
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .product-route-brief {
@@ -15314,6 +15427,7 @@ a,
       "hero"
       "field"
       "case"
+      "provenance"
       "meta"
       "proof"
       "brief"
@@ -15368,7 +15482,15 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-provenance {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-case-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-provenance-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -16275,7 +16397,15 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-provenance-rail {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-case-rail article {
+    min-height: 0;
+  }
+
+  .product-route-provenance-rail article {
     min-height: 0;
   }
 
@@ -16688,6 +16818,7 @@ a,
 
   .product-route-meta,
   .product-route-case-file,
+  .product-route-provenance,
   .product-route-brief,
   .product-route-qualification,
   .product-route-procurement,
@@ -16726,6 +16857,7 @@ a,
   .product-route-ops article,
   .product-route-panels article,
   .product-route-case-rail article,
+  .product-route-provenance-rail article,
   .product-route-procurement-matrix article,
   .product-route-readiness-grid article,
   .product-route-control-deck article,
