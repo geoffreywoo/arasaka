@@ -2324,6 +2324,13 @@ const translations = {
       authorization: "Authorization",
       eventStream: "Event Stream",
       fallback: "Fallback",
+      sovereignBoundary: "Sovereign Data Boundary",
+      sovereignBoundaryLead: "Residency, retention, purge authority, and isolation posture before telemetry leaves the client envelope.",
+      residencyCell: "Residency Cell",
+      retentionSeal: "Retention Seal",
+      purgeAuthority: "Purge Authority",
+      isolationPosture: "Isolation Posture",
+      boundaryState: "Boundary",
       telemetryEnvelope: "Telemetry Envelope",
       telemetryEnvelopeLead: "A monitored signal shell for health, drift, intrusion, and audit events once the interface contract is active.",
       healthSignal: "Health Signal",
@@ -2577,6 +2584,13 @@ const translations = {
       authorization: "Authorization",
       eventStream: "Event Stream",
       fallback: "Fallback",
+      sovereignBoundary: "Sovereign Data Boundary",
+      sovereignBoundaryLead: "Residency, retention, purge authority, and isolation posture before service telemetry leaves the sponsor envelope.",
+      residencyCell: "Residency Cell",
+      retentionSeal: "Retention Seal",
+      purgeAuthority: "Purge Authority",
+      isolationPosture: "Isolation Posture",
+      boundaryState: "Boundary",
       telemetryEnvelope: "Telemetry Envelope",
       telemetryEnvelopeLead: "A monitored signal shell for health, drift, intrusion, and audit events once the service contract is active.",
       healthSignal: "Health Signal",
@@ -4945,6 +4959,13 @@ const translations = {
       authorization: "認可",
       eventStream: "イベントストリーム",
       fallback: "フォールバック",
+      sovereignBoundary: "主権データ境界",
+      sovereignBoundaryLead: "テレメトリがクライアント範囲を離れる前の所在地、保持、削除権限、隔離姿勢。",
+      residencyCell: "所在地セル",
+      retentionSeal: "保持シール",
+      purgeAuthority: "削除権限",
+      isolationPosture: "隔離姿勢",
+      boundaryState: "境界",
       telemetryEnvelope: "テレメトリ範囲",
       telemetryEnvelopeLead: "インターフェース契約が有効化された後に、ヘルス、ドリフト、侵入、監査イベントを監視する信号シェル。",
       healthSignal: "ヘルス信号",
@@ -5198,6 +5219,13 @@ const translations = {
       authorization: "認可",
       eventStream: "イベントストリーム",
       fallback: "フォールバック",
+      sovereignBoundary: "主権データ境界",
+      sovereignBoundaryLead: "サービステレメトリがスポンサー範囲を離れる前の所在地、保持、削除権限、隔離姿勢。",
+      residencyCell: "所在地セル",
+      retentionSeal: "保持シール",
+      purgeAuthority: "削除権限",
+      isolationPosture: "隔離姿勢",
+      boundaryState: "境界",
       telemetryEnvelope: "テレメトリ範囲",
       telemetryEnvelopeLead: "サービス契約が有効化された後に、ヘルス、ドリフト、侵入、監査イベントを監視する信号シェル。",
       healthSignal: "ヘルス信号",
@@ -5600,6 +5628,7 @@ const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeAdapters = document.querySelector("[data-route-adapters]");
 const routeContract = document.querySelector("[data-route-contract]");
+const routeDataBoundary = document.querySelector("[data-route-data-boundary]");
 const routeTelemetry = document.querySelector("[data-route-telemetry]");
 const routeRiskRegister = document.querySelector("[data-route-risk-register]");
 const routeFailureAtlas = document.querySelector("[data-route-failure-atlas]");
@@ -5645,6 +5674,7 @@ const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
 const serviceRouteContract = document.querySelector("[data-service-contract]");
+const serviceRouteDataBoundary = document.querySelector("[data-service-data-boundary]");
 const serviceRouteTelemetry = document.querySelector("[data-service-telemetry]");
 const serviceRouteRiskRegister = document.querySelector("[data-service-risk-register]");
 const serviceRouteFailureAtlas = document.querySelector("[data-service-failure-atlas]");
@@ -6820,6 +6850,40 @@ function renderRouteContract(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteDataBoundary(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-boundary-head";
+  label.textContent = labels.sovereignBoundary;
+  lead.textContent = labels.sovereignBoundaryLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-boundary-grid";
+  rows.forEach(({ label: rowLabel, value, text, state }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `B-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.boundaryState}: ${state}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteTelemetry(target, labels, rows) {
   if (!target) return;
 
@@ -7921,6 +7985,33 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteDataBoundary(routeDataBoundary, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.residencyCell,
+      value: operations.regions[0],
+      text: `${operations.regions.join(" / ")} / ${file.surface}`,
+      state: file.clearance
+    },
+    {
+      label: dictionary.productRoute.retentionSeal,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      state: field.doctrine
+    },
+    {
+      label: dictionary.productRoute.purgeAuthority,
+      value: file.tabs.governance.title,
+      text: `${operations.packages[0]} / ${field.exposure}`,
+      state: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.isolationPosture,
+      value: operations.integrations[1] || operations.integrations[0],
+      text: `${operations.integrations[0]} / ${operations.packages[1] || operations.packages[0]}`,
+      state: operations.regions[0]
+    }
+  ]);
+
   renderRouteTelemetry(routeTelemetry, dictionary.productRoute, [
     {
       label: dictionary.productRoute.healthSignal,
@@ -8923,6 +9014,33 @@ function updateServiceRoute() {
       label: routeLabels.fallback,
       value: file.operations.regions[0],
       text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
+
+  renderRouteDataBoundary(serviceRouteDataBoundary, routeLabels, [
+    {
+      label: routeLabels.residencyCell,
+      value: file.operations.regions[0],
+      text: `${file.operations.regions.join(" / ")} / ${file.surface}`,
+      state: file.clearance
+    },
+    {
+      label: routeLabels.retentionSeal,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: file.tabs.governance.items[0] || file.tabs.governance.text,
+      state: file.field.doctrine
+    },
+    {
+      label: routeLabels.purgeAuthority,
+      value: file.tabs.governance.title,
+      text: `${file.operations.packages[0]} / ${file.field.exposure}`,
+      state: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.isolationPosture,
+      value: file.operations.integrations[1] || file.operations.integrations[0],
+      text: `${file.operations.integrations[0]} / ${file.operations.packages[1] || file.operations.packages[0]}`,
+      state: file.operations.regions[0]
     }
   ]);
 

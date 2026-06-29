@@ -4659,6 +4659,7 @@ a,
     "topology meta"
     "adapters meta"
     "contract meta"
+    "boundary meta"
     "telemetry meta"
     "risk meta"
     "failure meta"
@@ -4844,6 +4845,8 @@ a,
 .product-route-sla-grid article,
 .product-route-topology-head,
 .product-route-topology-map article,
+.product-route-boundary-head,
+.product-route-boundary-grid article,
 .product-route-telemetry-head,
 .product-route-telemetry-grid article,
 .product-route-risk-head,
@@ -6366,6 +6369,113 @@ a,
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.82rem;
   line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.product-route-boundary {
+  grid-area: boundary;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.13), rgba(116, 199, 216, 0.13), rgba(225, 7, 20, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-boundary-head,
+.product-route-boundary-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.09), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-boundary-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-boundary-head span,
+.product-route-boundary-grid article > span,
+.product-route-boundary-grid small,
+.product-route-boundary-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-boundary-head span,
+.product-route-boundary-grid article > span {
+  color: var(--acid);
+  font-size: 0.64rem;
+}
+
+.product-route-boundary-head p,
+.product-route-boundary-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-boundary-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 166px;
+  padding: 15px;
+}
+
+.product-route-boundary-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, transparent 0 20px, rgba(182, 243, 91, 0.045) 20px 21px),
+    linear-gradient(135deg, rgba(116, 199, 216, 0.08), transparent 54%);
+}
+
+.product-route-boundary-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-boundary-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-boundary-grid strong {
+  color: var(--paper);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.product-route-boundary-grid em {
+  align-self: end;
+  color: var(--cyan);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -15550,6 +15660,7 @@ a,
       "topology"
       "adapters"
       "contract"
+      "boundary"
       "telemetry"
       "risk"
       "failure"
@@ -15617,6 +15728,7 @@ a,
   .product-route-sla,
   .product-route-adapters,
   .product-route-contract,
+  .product-route-boundary,
   .product-route-telemetry,
   .product-route-risk,
   .product-route-failure,
@@ -15653,6 +15765,7 @@ a,
   .product-route-sla-head,
   .product-route-adapters-head,
   .product-route-contract-head,
+  .product-route-boundary-head,
   .product-route-telemetry-head,
   .product-route-risk-head,
   .product-route-failure-head,
@@ -15697,6 +15810,10 @@ a,
   }
 
   .product-route-contract {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-boundary {
     grid-template-columns: 1fr;
   }
 
@@ -15753,6 +15870,10 @@ a,
   }
 
   .product-route-contract-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-boundary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -16615,6 +16736,7 @@ a,
   .product-route-specsheet-grid,
   .product-route-adapters-grid,
   .product-route-contract-grid,
+  .product-route-boundary-grid,
   .product-route-telemetry-grid,
   .product-route-risk-table,
   .product-route-failure-grid,
@@ -16951,6 +17073,7 @@ a,
   .product-route-topology,
   .product-route-adapters,
   .product-route-contract,
+  .product-route-boundary,
   .product-route-telemetry,
   .product-route-risk,
   .product-route-failure,
@@ -17011,6 +17134,7 @@ a,
   .product-route-topology-map article,
   .product-route-adapters-grid article,
   .product-route-contract-grid article,
+  .product-route-boundary-grid article,
   .product-route-telemetry-grid article,
   .product-route-risk-table article,
   .product-route-transcript-log article,
@@ -17054,6 +17178,10 @@ a,
   }
 
   .product-route-contract-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-boundary-grid {
     grid-template-columns: 1fr;
   }
 
