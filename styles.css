@@ -5568,6 +5568,7 @@ a,
     "escrow meta"
     "monitor meta"
     "patch meta"
+    "covenant meta"
     "switcher meta"
     "ops meta"
     "panels panels"
@@ -5784,6 +5785,8 @@ a,
 .product-route-monitor-grid article,
 .product-route-patch-head,
 .product-route-patch-grid article,
+.product-route-covenant-head,
+.product-route-covenant-grid article,
 .product-route-ops article,
 .product-route-panels article,
 .product-route-related {
@@ -10510,6 +10513,106 @@ a,
 .product-route-patch-grid em {
   align-self: end;
   color: var(--acid);
+  font-size: 0.62rem;
+  font-style: normal;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.product-route-covenant {
+  grid-area: covenant;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.28);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.16), rgba(116, 199, 216, 0.1), rgba(209, 177, 107, 0.08)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-covenant-head,
+.product-route-covenant-grid article {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.12), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-covenant-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--red);
+}
+
+.product-route-covenant-head span,
+.product-route-covenant-grid article > span,
+.product-route-covenant-grid em {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-covenant-head span,
+.product-route-covenant-grid article > span {
+  color: var(--red);
+  font-size: 0.64rem;
+}
+
+.product-route-covenant-head p,
+.product-route-covenant-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-covenant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-covenant-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 176px;
+  padding: 15px;
+}
+
+.product-route-covenant-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(225, 7, 20, 0.045) 18px 19px),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.1), transparent 52%);
+}
+
+.product-route-covenant-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-covenant-grid strong {
+  color: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-covenant-grid em {
+  align-self: end;
+  color: var(--cyan);
   font-size: 0.62rem;
   font-style: normal;
   line-height: 1.2;
@@ -18630,6 +18733,7 @@ a,
       "escrow"
       "monitor"
       "patch"
+      "covenant"
       "switcher"
       "ops"
       "panels"
@@ -18713,6 +18817,7 @@ a,
   .product-route-escrow,
   .product-route-monitor,
   .product-route-patch,
+  .product-route-covenant,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -18758,6 +18863,7 @@ a,
   .product-route-escrow-head,
   .product-route-monitor-head,
   .product-route-patch-head,
+  .product-route-covenant-head,
   .product-route-procurement > p,
   .product-route-procurement-intake {
     grid-column: 1 / -1;
@@ -18934,6 +19040,10 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-route-covenant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-route-specsheet {
     grid-template-columns: 1fr;
   }
@@ -18985,6 +19095,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-covenant {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-config-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -19006,6 +19120,10 @@ a,
   .product-route-escrow-grid,
   .product-route-monitor-grid,
   .product-route-patch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-covenant-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -20004,7 +20122,8 @@ a,
   .product-route-bond-grid,
   .product-route-escrow-grid,
   .product-route-monitor-grid,
-  .product-route-patch-grid {
+  .product-route-patch-grid,
+  .product-route-covenant-grid {
     grid-template-columns: 1fr;
   }
 
@@ -20044,7 +20163,8 @@ a,
   .product-route-bond-grid article,
   .product-route-escrow-grid article,
   .product-route-monitor-grid article,
-  .product-route-patch-grid article {
+  .product-route-patch-grid article,
+  .product-route-covenant-grid article {
     min-height: 0;
   }
 
@@ -20415,6 +20535,7 @@ a,
   .product-route-escrow,
   .product-route-monitor,
   .product-route-patch,
+  .product-route-covenant,
   .product-route-ops,
   .product-route-panels {
     grid-template-columns: 1fr;
@@ -20447,6 +20568,7 @@ a,
   .product-route-escrow-grid article,
   .product-route-monitor-grid article,
   .product-route-patch-grid article,
+  .product-route-covenant-grid article,
   .product-route-failure-grid article,
   .product-route-escalation-grid article,
   .product-route-acceptance-grid article,
@@ -20477,7 +20599,8 @@ a,
   .product-route-bond-grid article,
   .product-route-escrow-grid article,
   .product-route-monitor-grid article,
-  .product-route-patch-grid article {
+  .product-route-patch-grid article,
+  .product-route-covenant-grid article {
     min-height: 0;
   }
 
@@ -20565,7 +20688,8 @@ a,
   .product-route-bond-grid,
   .product-route-escrow-grid,
   .product-route-monitor-grid,
-  .product-route-patch-grid {
+  .product-route-patch-grid,
+  .product-route-covenant-grid {
     grid-template-columns: 1fr;
   }
 

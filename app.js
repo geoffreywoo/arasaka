@@ -3007,6 +3007,13 @@ const translations = {
       rollbackAuthority: "Rollback Authority",
       cryptoRotation: "Crypto Rotation",
       cadenceStamp: "Cadence",
+      renewalAuditCovenant: "Renewal Audit Covenant",
+      renewalAuditCovenantLead: "Post-launch governance terms defining who reviews the system, what evidence survives, and which conditions renew or terminate authority.",
+      auditOwner: "Audit Owner",
+      renewalTrigger: "Renewal Trigger",
+      evidenceRetention: "Evidence Retention",
+      terminationLock: "Termination Lock",
+      covenantTerm: "Term",
       sections: {
         overview: "Overview",
         modules: "Modules",
@@ -3330,6 +3337,13 @@ const translations = {
       rollbackAuthority: "Rollback Authority",
       cryptoRotation: "Crypto Rotation",
       cadenceStamp: "Cadence",
+      renewalAuditCovenant: "Renewal Audit Covenant",
+      renewalAuditCovenantLead: "Post-launch governance terms defining who reviews the mandate, what evidence survives, and which conditions renew or terminate authority.",
+      auditOwner: "Audit Owner",
+      renewalTrigger: "Renewal Trigger",
+      evidenceRetention: "Evidence Retention",
+      terminationLock: "Termination Lock",
+      covenantTerm: "Term",
       meta: {
         clearance: "Clearance",
         window: "Window",
@@ -6232,6 +6246,13 @@ const translations = {
       rollbackAuthority: "ロールバック権限",
       cryptoRotation: "暗号ローテーション",
       cadenceStamp: "周期",
+      renewalAuditCovenant: "更新監査コベナント",
+      renewalAuditCovenantLead: "ローンチ後に誰がシステムを審査し、どの証拠を残し、どの条件で権限を更新または終了するかを定義する統治条件。",
+      auditOwner: "監査責任者",
+      renewalTrigger: "更新トリガー",
+      evidenceRetention: "証拠保持",
+      terminationLock: "終了ロック",
+      covenantTerm: "条件",
       sections: {
         overview: "概要",
         modules: "モジュール",
@@ -6555,6 +6576,13 @@ const translations = {
       rollbackAuthority: "ロールバック権限",
       cryptoRotation: "暗号ローテーション",
       cadenceStamp: "周期",
+      renewalAuditCovenant: "更新監査コベナント",
+      renewalAuditCovenantLead: "ローンチ後に誰が委任を審査し、どの証拠を残し、どの条件で権限を更新または終了するかを定義する統治条件。",
+      auditOwner: "監査責任者",
+      renewalTrigger: "更新トリガー",
+      evidenceRetention: "証拠保持",
+      terminationLock: "終了ロック",
+      covenantTerm: "条件",
       meta: {
         clearance: "クリアランス",
         window: "窓口",
@@ -6838,6 +6866,7 @@ const routeUnderwritingBond = document.querySelector("[data-route-underwriting-b
 const routeSettlementEscrow = document.querySelector("[data-route-settlement-escrow]");
 const routeContinuityMonitor = document.querySelector("[data-route-continuity-monitor]");
 const routePatchCadence = document.querySelector("[data-route-patch-cadence]");
+const routeRenewalCovenant = document.querySelector("[data-route-renewal-covenant]");
 const routeOps = document.querySelector("[data-route-ops]");
 const routePanels = document.querySelector("[data-route-panels]");
 const routeRelated = document.querySelector("[data-route-related]");
@@ -6892,6 +6921,7 @@ const serviceRouteUnderwritingBond = document.querySelector("[data-service-under
 const serviceRouteSettlementEscrow = document.querySelector("[data-service-settlement-escrow]");
 const serviceRouteContinuityMonitor = document.querySelector("[data-service-continuity-monitor]");
 const serviceRoutePatchCadence = document.querySelector("[data-service-patch-cadence]");
+const serviceRouteRenewalCovenant = document.querySelector("[data-service-renewal-covenant]");
 const serviceRouteOps = document.querySelector("[data-service-ops]");
 const serviceRoutePanels = document.querySelector("[data-service-panels]");
 const serviceRouteRelated = document.querySelector("[data-service-related]");
@@ -9321,6 +9351,38 @@ function renderRoutePatchCadence(target, labels, rows) {
   target.replaceChildren(heading, grid);
 }
 
+function renderRouteRenewalCovenant(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-covenant-head";
+  label.textContent = labels.renewalAuditCovenant;
+  lead.textContent = labels.renewalAuditCovenantLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-covenant-grid";
+  rows.forEach(({ label: rowLabel, value, text, term }) => {
+    const article = document.createElement("article");
+    const eyebrow = document.createElement("span");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.covenantTerm}: ${term}`;
+    article.append(eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function updateProductRoute() {
   if (!productRoute || !routeTitle) return;
   const productKey = productRoute.dataset.productRoute || "relic";
@@ -10470,6 +10532,33 @@ function updateProductRoute() {
       value: operations.sla[2] || operations.sla[1] || operations.sla[0],
       text: `${dictionary.productRoute.capitalObserver} / ${operations.regions.join(" / ")}`,
       cadence: "G.W."
+    }
+  ]);
+
+  renderRouteRenewalCovenant(routeRenewalCovenant, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.auditOwner,
+      value: file.tabs.governance.title,
+      text: `${operations.regions[0]} / ${operations.integrations[0]}`,
+      term: file.clearance
+    },
+    {
+      label: dictionary.productRoute.renewalTrigger,
+      value: operations.sla[2] || operations.sla[1] || operations.sla[0],
+      text: `${field.exposure} / ${file.tabs.deployment.title}`,
+      term: operations.packages[0]
+    },
+    {
+      label: dictionary.productRoute.evidenceRetention,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${field.incident} / ${operations.regions.join(" / ")}`,
+      term: operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.terminationLock,
+      value: dictionary.productRoute.capitalObserver,
+      text: `${file.code} / ${file.surface} / ${file.tabs.governance.title}`,
+      term: "G.W."
     }
   ]);
 
@@ -11699,6 +11788,33 @@ function updateServiceRoute() {
       value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
       text: `${routeLabels.capitalObserver} / ${file.operations.regions.join(" / ")}`,
       cadence: "G.W."
+    }
+  ]);
+
+  renderRouteRenewalCovenant(serviceRouteRenewalCovenant, routeLabels, [
+    {
+      label: routeLabels.auditOwner,
+      value: file.tabs.governance.title,
+      text: `${file.operations.regions[0]} / ${file.operations.integrations[0]}`,
+      term: file.clearance
+    },
+    {
+      label: routeLabels.renewalTrigger,
+      value: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0],
+      text: `${file.field.exposure} / ${file.tabs.deployment.title}`,
+      term: file.operations.packages[0]
+    },
+    {
+      label: routeLabels.evidenceRetention,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: `${file.field.incident} / ${file.operations.regions.join(" / ")}`,
+      term: file.operations.sla[0]
+    },
+    {
+      label: routeLabels.terminationLock,
+      value: routeLabels.capitalObserver,
+      text: `${file.code} / ${file.surface} / ${file.tabs.governance.title}`,
+      term: "G.W."
     }
   ]);
 
