@@ -101,6 +101,62 @@ const translations = {
       creditCopy: "Cyberpunk 2077 press screenshots are credited to CD PROJEKT RED. Product plates, service plates, and the evidence wall are generated fan-concept assets for this unofficial Arasaka website.",
       creditOpen: "Open attribution ledger"
     },
+    corpDivisions: {
+      back: "Return to corporate systems",
+      kicker: "ARASAKA OPERATING GROUPS",
+      title: "A corporation large enough to behave like terrain.",
+      summary: "Arasaka is organized as a sovereign-scale corporate stack: family authority, private security, neural custody, capital mandate, industrial autonomy, and black research routed through one operating doctrine.",
+      openBoard: "Open board docket",
+      openOps: "Open watchfloor",
+      visualCaption: "Tokyo headquarters authority layer, generated Arasaka corporate image.",
+      readouts: {
+        groups: {
+          label: "Operating groups",
+          copy: "Security, neural, capital, industrial, research, and board authority groups share one mandate graph."
+        },
+        assets: {
+          label: "Controlled assets",
+          copy: "Fictional consolidated exposure across private force, continuity custody, patents, orbital contracts, and capital rails."
+        },
+        corridors: {
+          label: "Jurisdiction lanes",
+          copy: "Export, protection, custody, and disclosure corridors resolved before systems activate."
+        }
+      },
+      groupsEyebrow: "Operating Stack",
+      groupsTitle: "Each division owns a form of control.",
+      groupsCopy: "The public website should never look like an org chart. It should look like a power map: who owns force, identity, money, machines, research, and authorization.",
+      openGroup: "Open division route",
+      groups: {
+        security: {
+          title: "Security Operations",
+          copy: "Private force, counterintrusion, executive protection, convoy routing, and theater response under watchfloor command."
+        },
+        neural: {
+          title: "Neural Custody Group",
+          copy: "Relic, Mikoshi, Soulkiller, engram custody, construct drift, and post-body governance programs."
+        },
+        capital: {
+          title: "Capital Systems",
+          copy: "Black Ledger custody, mandate escrow, blind settlement, patent collateral, and founder-risk underwriting."
+        },
+        industrial: {
+          title: "Industrial Autonomy",
+          copy: "Drone veils, autonomous protection, robotic manufacturing, exclusion maps, and governed machine-speed logistics."
+        },
+        research: {
+          title: "Black Research Directorate",
+          copy: "Black ICE runtime, rogue-machine containment, source vault research, quarantine geometry, and hostile-route burn authority."
+        },
+        board: {
+          title: "Board Authority Office",
+          copy: "Quorum, export corridors, succession authority, disclosure silence, renewal covenants, and family-command continuity."
+        }
+      },
+      mapEyebrow: "Authority Routing",
+      mapTitle: "The divisions resolve into products, services, casefiles, and technical doctrine.",
+      mapCopy: "A megacorporation becomes believable when every public page answers the same question: which operating group owns the risk, proof object, and authorization path?"
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4310,6 +4366,62 @@ const translations = {
       creditTitle: "出典画像をクレジットした非公式ファンコンセプト。",
       creditCopy: "Cyberpunk 2077プレススクリーンショットはCD PROJEKT REDに帰属します。製品プレート、サービスプレート、証拠ウォールはこの非公式荒坂サイト用の生成ファンコンセプト資産です。",
       creditOpen: "帰属台帳を開く"
+    },
+    corpDivisions: {
+      back: "企業システムへ戻る",
+      kicker: "荒坂オペレーティンググループ",
+      title: "地形のように振る舞える規模の企業。",
+      summary: "荒坂は、家族権限、私設警備、神経保管、資本委任、産業自律、黒色研究を一つの運用ドクトリンへルーティングする主権規模の企業スタックとして構成されます。",
+      openBoard: "取締役会記録を開く",
+      openOps: "監視室を開く",
+      visualCaption: "東京本社権限レイヤー、生成された荒坂企業画像。",
+      readouts: {
+        groups: {
+          label: "運用グループ",
+          copy: "警備、神経、資本、産業、研究、取締役会権限グループが一つの委任グラフを共有します。"
+        },
+        assets: {
+          label: "管理資産",
+          copy: "私設戦力、継続保管、特許、軌道契約、資本レールにわたる架空の連結エクスポージャー。"
+        },
+        corridors: {
+          label: "管轄レーン",
+          copy: "システム起動前に輸出、警護、保管、開示回廊を解決します。"
+        }
+      },
+      groupsEyebrow: "運用スタック",
+      groupsTitle: "各部門は一つの制御形態を所有します。",
+      groupsCopy: "公開サイトは単なる組織図に見えてはいけません。力、同一性、資金、機械、研究、認可を誰が所有するかを示す権力地図であるべきです。",
+      openGroup: "部門経路を開く",
+      groups: {
+        security: {
+          title: "警備運用",
+          copy: "私設戦力、対侵入、役員警護、護送経路、劇場応答を監視室指揮下に保持します。"
+        },
+        neural: {
+          title: "神経保管グループ",
+          copy: "Relic、神輿、Soulkiller、エングラム保管、構成体偏移、身体後統治プログラム。"
+        },
+        capital: {
+          title: "資本システム",
+          copy: "Black Ledger保管、委任エスクロー、盲目決済、特許担保、創業者リスク引受。"
+        },
+        industrial: {
+          title: "産業自律",
+          copy: "ドローン遮蔽、自律警護、ロボット製造、排除地図、統治済み機械速度物流。"
+        },
+        research: {
+          title: "黒色研究局",
+          copy: "Black ICEランタイム、ローグ機械封じ込め、ソース保管庫研究、隔離ジオメトリ、敵対経路焼却権限。"
+        },
+        board: {
+          title: "取締役会権限室",
+          copy: "クォーラム、輸出回廊、継承権限、開示沈黙、更新コベナント、家族指揮継続。"
+        }
+      },
+      mapEyebrow: "権限経路",
+      mapTitle: "部門は製品、サービス、ケースファイル、技術ドクトリンへ解決されます。",
+      mapCopy: "巨大企業は、すべての公開ページが同じ問いに答えるとき信じられるものになります。どの運用グループがリスク、証跡オブジェクト、認可経路を所有するのか。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
