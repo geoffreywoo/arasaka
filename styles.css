@@ -6753,6 +6753,10 @@ a,
   aspect-ratio: 16 / 9;
 }
 
+.spec-route-table .tech-section-intro h2 {
+  overflow-wrap: anywhere;
+}
+
 .relic-spec-route-visual img {
   object-position: center center;
   filter: saturate(1.06) contrast(1.1) brightness(0.9);
@@ -6766,6 +6770,11 @@ a,
 .soulkiller-spec-route-visual img {
   object-position: center center;
   filter: saturate(1.08) contrast(1.12) brightness(0.88);
+}
+
+.ice-spec-route-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.12) brightness(0.9);
 }
 
 .spec-route-matrix {

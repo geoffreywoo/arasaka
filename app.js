@@ -458,6 +458,70 @@ const translations = {
       mapTitle: "Soulkiller routes severed identity into Mikoshi custody, Relic continuity, Black ICE quarantine, and board evidence.",
       mapCopy: "The public file treats extraction as a controlled evidence workflow. A construct is not useful until its origin, witness, redaction state, and destination can survive board scrutiny."
     },
+    iceSpec: {
+      productCta: "Open mesh specification",
+      openMesh: "Open ICE mesh spec",
+      back: "Return to Black ICE dossier",
+      kicker: "ICE-77 / MESH SPECIFICATION",
+      title: "Intrusion becomes evidence before it becomes damage.",
+      summary: "Black ICE Mesh is specified as a governed counterintrusion appliance: sentry membranes, disposable trap partitions, branch-burn logic, and quarantine receipts that make hostile netpaths attributable.",
+      openRuntime: "Open runtime dossier",
+      openService: "Open counterintrusion service",
+      visualCaption: "Black ICE Mesh product plate, generated Arasaka catalog image.",
+      readouts: {
+        response: {
+          label: "Route burn response",
+          copy: "Median branch isolation from hostile signature confirmation to dead-route allocation."
+        },
+        quorum: {
+          label: "Witness quorum",
+          copy: "Minimum independent custody nodes required before a quarantine receipt is signed."
+        },
+        memory: {
+          label: "Cold memory",
+          copy: "Default retention for hostile path fragments before statutory vaulting or destruction rules apply."
+        }
+      },
+      modulesEyebrow: "Mesh Modules",
+      modulesTitle: "The mesh converts an unauthorized path into a governed trap.",
+      modulesCopy: "Black ICE is not a single wall. It is a timed sequence of suspicion, mimicry, isolation, and proof that preserves tactical advantage without losing accountability.",
+      modules: {
+        sentry: {
+          title: "Sentry Membrane",
+          copy: "Scores credential geometry, packet cadence, signature drift, and impossible route behavior before the intruder reaches value."
+        },
+        trap: {
+          title: "Disposable Trap Partition",
+          copy: "Mirrors suspect traffic into expendable compute where decoy assets measure intent, toolchain, and escalation appetite."
+        },
+        burn: {
+          title: "Branch Burn Logic",
+          copy: "Severs confirmed hostile paths, caps memory writeback, and prevents pivot into neural, custody, or capital systems."
+        },
+        receipt: {
+          title: "Quarantine Receipt Ledger",
+          copy: "Binds time, path, signature, proportional response, and witness quorum into a board-readable evidence object."
+        }
+      },
+      envelopeEyebrow: "Deployment Envelope",
+      envelopeTitle: "Traps must be faster than damage and slower than panic.",
+      envelopeCopy: "ICE-77 deployment requires clear proportionality policy, named human escalation, Blackwall adjacency limits, and a retention path before trap activation.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Sovereign net, vault corridor, executive room, industrial command, or custody API",
+        trigger: "Trigger condition",
+        triggerValue: "Impossible credential geometry, hostile toolchain, rogue-machine intent, or live pivot attempt",
+        response: "Response class",
+        responseValue: "Observe, mirror, trap, burn, quarantine, or manual lock captain",
+        blackwall: "Blackwall posture",
+        blackwallValue: "Sealed edge observer with no direct client dependency or autonomous release authority",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed burn, civilian dragnet, self-learning punishment loop, uncontrolled Blackwall contact"
+      },
+      mapEyebrow: "Security Routing",
+      mapTitle: "Black ICE routes counterintrusion through runtime doctrine, netrunner service, Blackwall perimeter, and board evidence.",
+      mapCopy: "The product file makes the appliance purchasable. The runtime dossier defines the trap. The service route provides operators. The board record decides what can be burned."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5024,6 +5088,70 @@ const translations = {
       mapEyebrow: "抽出経路",
       mapTitle: "Soulkillerは切断済み同一性をMikoshi保管、Relic継続、Black ICE隔離、取締役会証拠へルーティングします。",
       mapCopy: "公開ファイルは抽出を制御済み証拠ワークフローとして扱います。構成体は、その起点、立会、redaction状態、宛先が取締役会審査に耐えるまで有用ではありません。"
+    },
+    iceSpec: {
+      productCta: "メッシュ仕様を開く",
+      openMesh: "ICEメッシュ仕様を開く",
+      back: "Black ICEドシエへ戻る",
+      kicker: "ICE-77 / メッシュ仕様",
+      title: "侵入は、損害になる前に証拠になります。",
+      summary: "Black ICE Meshは統治された対侵入アプライアンスとして仕様化されます。セントリ膜、使い捨てトラップ区画、分岐焼却ロジック、敵対ネット経路を帰属可能にする隔離受領書です。",
+      openRuntime: "ランタイムドシエを開く",
+      openService: "対侵入サービスを開く",
+      visualCaption: "Black ICE Mesh製品プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        response: {
+          label: "経路焼却応答",
+          copy: "敵対署名確認からデッドルート割当までの分岐隔離中央値。"
+        },
+        quorum: {
+          label: "立会クォーラム",
+          copy: "隔離受領書が署名される前に必要な独立保管ノードの最小数。"
+        },
+        memory: {
+          label: "低温メモリ",
+          copy: "法定保管または破棄ルールが適用される前の敵対経路断片の既定保持期間。"
+        }
+      },
+      modulesEyebrow: "メッシュモジュール",
+      modulesTitle: "メッシュは非認可経路を統治済みトラップへ変換します。",
+      modulesCopy: "Black ICEは単一の壁ではありません。戦術的優位を保ちながら説明責任を失わないための、疑念、模倣、隔離、証明の時限シーケンスです。",
+      modules: {
+        sentry: {
+          title: "セントリ膜",
+          copy: "侵入者が価値面に到達する前に、資格情報ジオメトリ、パケット周期、署名ドリフト、不可能経路挙動を採点します。"
+        },
+        trap: {
+          title: "使い捨てトラップ区画",
+          copy: "疑わしい通信を消耗可能な計算資源へミラーし、デコイ資産が意図、ツールチェーン、エスカレーション欲求を測定します。"
+        },
+        burn: {
+          title: "分岐焼却ロジック",
+          copy: "確認済み敵対経路を切断し、メモリ書き戻しを制限し、神経、保管、資本システムへのピボットを防止します。"
+        },
+        receipt: {
+          title: "隔離受領台帳",
+          copy: "時刻、経路、署名、比例応答、立会クォーラムを取締役会が読める証拠オブジェクトへ結合します。"
+        }
+      },
+      envelopeEyebrow: "配備範囲",
+      envelopeTitle: "トラップは損害より速く、パニックより遅くなければなりません。",
+      envelopeCopy: "ICE-77配備では、トラップ起動前に明確な比例性ポリシー、指名された人間エスカレーション、Blackwall隣接制限、保持経路が必要です。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "主権ネット、保管庫回廊、役員室、産業指揮、または保管API",
+        trigger: "トリガー条件",
+        triggerValue: "不可能資格情報ジオメトリ、敵対ツールチェーン、ローグ機械意図、またはライブピボット試行",
+        response: "応答クラス",
+        responseValue: "観測、ミラー、トラップ、焼却、隔離、または手動ロックキャプテン",
+        blackwall: "Blackwall姿勢",
+        blackwallValue: "直接的なクライアント依存または自律リリース権限を持たない封印済み境界オブザーバー",
+        exclusion: "除外用途",
+        exclusionValue: "非立会焼却、市民ドラグネット、自己学習懲罰ループ、非制御Blackwall接触"
+      },
+      mapEyebrow: "セキュリティ経路",
+      mapTitle: "Black ICEは対侵入をランタイムドクトリン、ネットランナーサービス、Blackwall境界、取締役会証拠へルーティングします。",
+      mapCopy: "製品ファイルはアプライアンスを購入可能にします。ランタイムドシエはトラップを定義します。サービス経路はオペレーターを提供します。取締役会記録は何を焼却できるかを決定します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
