@@ -213,6 +213,62 @@ const translations = {
       mapTitle: "Subsidiaries bind legal shells to live systems, regional command, and board authority.",
       mapCopy: "The registry is a public surface for private control: each company answers for a mandate, each mandate routes to a product or service, and each route carries a board-readable proof object."
     },
+    corpRegional: {
+      back: "Return to regional preview",
+      kicker: "ARASAKA REGIONAL COMMAND GRID",
+      title: "Jurisdiction is an operating system.",
+      summary: "Regional command nodes bind Arasaka mandates to physical authority: Tokyo root, Night City theater, Osaka fabrication, orbital cold custody, Frankfurt capital corridor, and Blackwall edge cells.",
+      openWatchfloor: "Open watchfloor",
+      openBoard: "Open board docket",
+      visualCaption: "Tokyo root authority and regional command perimeter, generated Arasaka image.",
+      readouts: {
+        nodes: {
+          label: "Command nodes",
+          copy: "Public command facilities bound to operating companies, routed products, and board-readable proof objects."
+        },
+        posture: {
+          label: "Disclosure posture",
+          copy: "Public surfaces disclose mandate lanes only. Private command maps, principals, and active corridors remain sealed."
+        },
+        cadence: {
+          label: "Proof cadence",
+          copy: "Command receipts renew across jurisdiction fences before autonomous force, custody, or continuity lanes activate."
+        }
+      },
+      gridEyebrow: "Command Extract",
+      gridTitle: "A global corporation is only as real as the places where authority lands.",
+      gridCopy: "The regional grid turns abstract mandates into physical command: each site owns a jurisdiction fence, clearance regime, primary system, and escalation route.",
+      openNode: "Open command file",
+      nodes: {
+        tokyo: {
+          title: "Tokyo Root Campus",
+          copy: "Family authority, sovereign relations, board continuity, and root certificate governance for global deployment."
+        },
+        night: {
+          title: "Night City Tower",
+          copy: "Urban protection, executive extraction, capital custody, and private security operations inside contested corporate terrain."
+        },
+        osaka: {
+          title: "Osaka Cybernetics Foundry",
+          copy: "Classified fabrication for neural routing, prosthetic control surfaces, and combat-grade cyberware integration."
+        },
+        orbital: {
+          title: "Orbital Cold Vault",
+          copy: "Off-world custody for engram archives, settlement keys, succession instruments, and board-sealed continuity collateral."
+        },
+        frankfurt: {
+          title: "Frankfurt Capital Corridor",
+          copy: "Settlement proofs, blind custody, patent collateral, and disclosure switching for sovereign-grade capital lanes."
+        },
+        blackwall: {
+          title: "Blackwall Edge Cell",
+          copy: "Counterintrusion command for rogue-machine drift, hostile netrunner signatures, and quarantine burn authority."
+        }
+      },
+      mapEyebrow: "Jurisdiction Routing",
+      mapTitle: "Regional command binds divisions, subsidiaries, products, custody systems, and board authority.",
+      mapCopy: "A command node is not an office. It is the place where legal permission, machine authority, human quorum, and operational risk become a single executable mandate."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -4534,6 +4590,62 @@ const translations = {
       mapEyebrow: "エンティティ経路",
       mapTitle: "子会社は法的シェルをライブシステム、地域指揮、取締役会権限へ結合します。",
       mapCopy: "登録簿は私的制御のための公開面です。各会社は委任に責任を持ち、各委任は製品またはサービスへルーティングされ、各経路は取締役会が読める証跡オブジェクトを保持します。"
+    },
+    corpRegional: {
+      back: "地域指揮プレビューへ戻る",
+      kicker: "荒坂地域指揮グリッド",
+      title: "管轄はオペレーティングシステムです。",
+      summary: "地域指揮ノードは荒坂の委任を物理的権限へ結合します。東京ルート、ナイトシティ戦域、大阪製造、軌道低温保管、フランクフルト資本回廊、ブラックウォール境界セル。",
+      openWatchfloor: "監視室を開く",
+      openBoard: "取締役会記録を開く",
+      visualCaption: "東京ルート権限と地域指揮境界、生成された荒坂画像。",
+      readouts: {
+        nodes: {
+          label: "指揮ノード",
+          copy: "運用会社、ルーティング済み製品、取締役会が読める証跡オブジェクトに結合された公開指揮施設。"
+        },
+        posture: {
+          label: "開示姿勢",
+          copy: "公開面は委任レーンのみを開示します。私的指揮地図、主体、稼働中の回廊は封印されたままです。"
+        },
+        cadence: {
+          label: "証跡周期",
+          copy: "自律戦力、保管、継続レーンが起動する前に、指揮受領証は管轄フェンスをまたいで更新されます。"
+        }
+      },
+      gridEyebrow: "指揮抜粋",
+      gridTitle: "グローバル企業は、権限が着地する場所があって初めて実在します。",
+      gridCopy: "地域グリッドは抽象的な委任を物理指揮へ変換します。各拠点は管轄フェンス、認証体制、主要システム、エスカレーション経路を所有します。",
+      openNode: "指揮ファイルを開く",
+      nodes: {
+        tokyo: {
+          title: "東京ルートキャンパス",
+          copy: "グローバル展開のための家族権限、主権関係、取締役会継続性、ルート証明書統治。"
+        },
+        night: {
+          title: "ナイトシティタワー",
+          copy: "係争中の企業地形における都市防護、要人抽出、資本保管、民間警備運用。"
+        },
+        osaka: {
+          title: "大阪サイバネティクス鋳造所",
+          copy: "神経ルーティング、義肢制御面、戦闘級サイバーウェア統合のための機密製造。"
+        },
+        orbital: {
+          title: "軌道低温保管庫",
+          copy: "エングラム記録庫、決済キー、継承機器、取締役会封印済み継続担保のための軌道外保管。"
+        },
+        frankfurt: {
+          title: "フランクフルト資本回廊",
+          copy: "主権級資本レーンのための決済証跡、盲目保管、特許担保、開示切替。"
+        },
+        blackwall: {
+          title: "ブラックウォール境界セル",
+          copy: "ローグマシン漂流、敵対ネットランナー署名、隔離焼却権限のための対侵入指揮。"
+        }
+      },
+      mapEyebrow: "管轄経路",
+      mapTitle: "地域指揮は部門、子会社、製品、保管システム、取締役会権限を結合します。",
+      mapCopy: "指揮ノードはオフィスではありません。法的許可、機械権限、人間のクォーラム、運用リスクが単一の実行可能な委任になる場所です。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",

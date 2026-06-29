@@ -56,6 +56,7 @@ Route families:
 - `archive/` - institutional archive and public casefiles.
 - `governance/` - board authority, custody gates, and control doctrine.
 - `blackwall/` - perimeter doctrine and rogue-machine containment.
+- `divisions/`, `subsidiaries/`, and `regional/` - corporate organization, operating entities, and command geography.
 - `products/*/` - product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems.
 - `services/*/` - service pages for continuity, counterintrusion, mandate, and autonomous protection offerings.
 - `assets/` - generated imagery, user-provided identity assets, credited Cyberpunk 2077 press references, and attribution notes.
@@ -83,6 +84,7 @@ http://127.0.0.1:4187/technology/neural-substrate/
 http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
 http://127.0.0.1:4187/divisions/
 http://127.0.0.1:4187/subsidiaries/
+http://127.0.0.1:4187/regional/
 http://127.0.0.1:4187/operations/
 http://127.0.0.1:4187/archive/
 http://127.0.0.1:4187/archive/tower/

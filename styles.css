@@ -6530,6 +6530,10 @@ a,
 .subsidiaries-route-page .archive-route-readout,
 .subsidiaries-route-page .archive-route-incidents,
 .subsidiaries-route-page .archive-route-map,
+.regional-route-page .archive-route-hero,
+.regional-route-page .archive-route-readout,
+.regional-route-page .archive-route-incidents,
+.regional-route-page .archive-route-map,
 .casefile-route-page .archive-route-hero,
 .casefile-route-page .archive-route-readout,
 .casefile-route-page .archive-route-incidents,
@@ -6682,6 +6686,37 @@ a,
 .subsidiaries-route-visual img {
   object-position: center center;
   filter: saturate(1.06) contrast(1.08) brightness(0.9);
+}
+
+.regional-route-page .archive-route-hero,
+.regional-route-page .archive-route-readout,
+.regional-route-page .archive-route-incidents,
+.regional-route-page .archive-route-map {
+  border-color: rgba(225, 7, 20, 0.32);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(221, 184, 94, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(225, 7, 20, 0.14), transparent 39%, rgba(116, 199, 216, 0.11)),
+    rgba(7, 9, 12, 0.94);
+}
+
+.regional-route-hero::before {
+  background:
+    linear-gradient(120deg, transparent 0 46%, rgba(225, 7, 20, 0.14) 46% 48%, transparent 48%),
+    repeating-linear-gradient(90deg, transparent 0 80px, rgba(221, 184, 94, 0.035) 80px 81px),
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(116, 199, 216, 0.04) 28px 29px);
+}
+
+.regional-route-page .archive-route-readout strong {
+  color: var(--red);
+}
+
+.regional-route-page .archive-incident-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.regional-route-visual img {
+  object-position: center center;
+  filter: saturate(1.07) contrast(1.1) brightness(0.88);
 }
 
 .casefile-route-visual img {
@@ -22570,6 +22605,10 @@ a,
   .subsidiaries-route-page .archive-incident-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .regional-route-page .archive-incident-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -22703,6 +22742,10 @@ a,
   }
 
   .subsidiaries-route-page .archive-incident-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .regional-route-page .archive-incident-grid {
     grid-template-columns: 1fr;
   }
 
