@@ -586,6 +586,70 @@ const translations = {
       mapTitle: "Black Ledger routes capital custody through mandate service, regional command, patent collateral, and board governance.",
       mapCopy: "The system makes money legible without making it loud: every private movement resolves to authority, collateral, counterparty, and proof."
     },
+    swarmSpec: {
+      productCta: "Open formation specification",
+      openSpec: "Open swarm formation spec",
+      back: "Return to Swarm dossier",
+      kicker: "SWARM-12 / FORMATION SPECIFICATION",
+      title: "Autonomous force is a formation before it is a weapon.",
+      summary: "Autonomous Defense Swarm is specified as a governed protection platform: drone veil geometry, convoy extraction corridors, civilian exclusion maps, and human-authorized force states for principals crossing hostile districts.",
+      openGovernance: "Open force governance",
+      openService: "Open protection service",
+      visualCaption: "Autonomous Defense Swarm tactical veil plate, generated Arasaka catalog image.",
+      readouts: {
+        vote: {
+          label: "Formation vote",
+          copy: "Median sensor consensus window before veil, denial, or extraction formation can reconfigure."
+        },
+        exclusion: {
+          label: "Civilian exclusion",
+          copy: "Required noncombatant uncertainty coverage before autonomous force narrows a corridor."
+        },
+        override: {
+          label: "Human override",
+          copy: "Maximum escalation handoff window before the system freezes into visible deterrence posture."
+        }
+      },
+      modulesEyebrow: "Formation Modules",
+      modulesTitle: "The swarm turns district pressure into controlled geometry.",
+      modulesCopy: "The product is not a cloud of drones. It is a moving command perimeter that computes where to see, where to block, where to extract, and where never to act.",
+      modules: {
+        veil: {
+          title: "Drone Veil Geometry",
+          copy: "Wraps a principal in sensor-bearing aerial nodes that obscure route intent while maintaining board-readable position authority."
+        },
+        corridor: {
+          title: "Extraction Corridor Compiler",
+          copy: "Compiles street telemetry, tower access, traffic denial, and regional command into a temporary movement lane."
+        },
+        exclusion: {
+          title: "Civilian Exclusion Map",
+          copy: "Proves where the swarm cannot act before it can narrow a threat surface or move into obstruction posture."
+        },
+        receipt: {
+          title: "Human Force Receipt",
+          copy: "Binds escalation officer, formation state, rule basis, and after-action evidence into a sealed command receipt."
+        }
+      },
+      envelopeEyebrow: "Force Envelope",
+      envelopeTitle: "The fastest asset in the street still needs a slower authority.",
+      envelopeCopy: "SWARM-12 deployment requires named command, mapped exclusions, permitted formations, escalation limits, and after-action evidence retention before any autonomous detail enters live route coverage.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Executive convoy, tower perimeter, private district, port crossing, or emergency extraction lane",
+        formation: "Permitted formation",
+        formationValue: "Soft veil, sensor ring, traffic denial, hard corridor, overwatch, or extraction gate",
+        command: "Command authority",
+        commandValue: "Principal marshal, regional watchfloor, rules-of-force witness, and named escalation officer",
+        limit: "Force limit",
+        limitValue: "Visibility, obstruction, sensory denial, vehicle disablement, or manual lethal review only",
+        exclusion: "Excluded use",
+        exclusionValue: "Unmapped crowd pressure, unsponsored pursuit, autonomous lethal closure, unlogged district denial"
+      },
+      mapEyebrow: "Protection Routing",
+      mapTitle: "Swarm routes autonomous protection through force governance, regional command, operations watchfloor, and board evidence.",
+      mapCopy: "The product file makes the formation purchasable. The governance dossier constrains machine action. The service route places human operators around the moving principal."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5280,6 +5344,70 @@ const translations = {
       mapEyebrow: "資本経路",
       mapTitle: "Black Ledgerは資本保管を委任サービス、地域指揮、特許担保、取締役会統治へルーティングします。",
       mapCopy: "このシステムは資金を騒がせずに読み取れるものにします。すべての私的移動は権限、担保、相手方、証明へ解決されます。"
+    },
+    swarmSpec: {
+      productCta: "編隊仕様を開く",
+      openSpec: "スウォーム編隊仕様を開く",
+      back: "Swarmドシエへ戻る",
+      kicker: "SWARM-12 / 編隊仕様",
+      title: "自律戦力は、武器である前に編隊です。",
+      summary: "Autonomous Defense Swarmは統治された警護プラットフォームとして仕様化されます。ドローン遮蔽ジオメトリ、護送抽出回廊、民間人排除地図、敵対地区を横断する主体のための人間承認済み戦力状態です。",
+      openGovernance: "戦力統治を開く",
+      openService: "警護サービスを開く",
+      visualCaption: "Autonomous Defense Swarm戦術遮蔽プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        vote: {
+          label: "編隊投票",
+          copy: "遮蔽、拒否、または抽出編隊が再構成できる前のセンサー合意窓中央値。"
+        },
+        exclusion: {
+          label: "民間人排除",
+          copy: "自律戦力が回廊を狭める前に必要な非戦闘員不確実性カバレッジ。"
+        },
+        override: {
+          label: "人間上書き",
+          copy: "システムが可視抑止姿勢へ凍結する前の最大エスカレーション引継ぎ窓。"
+        }
+      },
+      modulesEyebrow: "編隊モジュール",
+      modulesTitle: "スウォームは地区圧力を制御済みジオメトリへ変換します。",
+      modulesCopy: "この製品はドローンの雲ではありません。どこを見るか、どこを遮断するか、どこで抽出するか、どこで決して作用しないかを計算する移動指揮境界です。",
+      modules: {
+        veil: {
+          title: "ドローン遮蔽ジオメトリ",
+          copy: "主体をセンサー搭載航空ノードで包み、取締役会可読の位置権限を維持しながら経路意図を不明瞭化します。"
+        },
+        corridor: {
+          title: "抽出回廊コンパイラ",
+          copy: "街路テレメトリー、タワーアクセス、交通拒否、地域指揮を一時的な移動レーンへコンパイルします。"
+        },
+        exclusion: {
+          title: "民間人排除地図",
+          copy: "スウォームが脅威面を狭めたり妨害姿勢へ移行する前に、作用できない場所を証明します。"
+        },
+        receipt: {
+          title: "人間戦力レシート",
+          copy: "エスカレーション責任者、編隊状態、規則根拠、事後証拠を封印済み指揮レシートへ結合します。"
+        }
+      },
+      envelopeEyebrow: "戦力範囲",
+      envelopeTitle: "街路で最速の資産にも、より遅い権限が必要です。",
+      envelopeCopy: "SWARM-12配備では、自律警護がライブ経路カバレッジへ入る前に、指名済み指揮、地図化済み排除、許可済み編隊、エスカレーション制限、事後証拠保持が必要です。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "役員護送、タワー境界、私設地区、港湾横断、または緊急抽出レーン",
+        formation: "許可済み編隊",
+        formationValue: "ソフト遮蔽、センサーリング、交通拒否、ハード回廊、上空監視、または抽出ゲート",
+        command: "指揮権限",
+        commandValue: "プリンシパル・マーシャル、地域監視室、戦力規則立会、指名済みエスカレーション責任者",
+        limit: "戦力制限",
+        limitValue: "可視化、妨害、感覚拒否、車両無力化、または手動致死レビューのみ",
+        exclusion: "除外用途",
+        exclusionValue: "未地図化群衆圧力、非スポンサー追跡、自律致死閉鎖、非記録地区拒否"
+      },
+      mapEyebrow: "警護経路",
+      mapTitle: "Swarmは自律警護を戦力統治、地域指揮、運用監視室、取締役会証拠へルーティングします。",
+      mapCopy: "製品ファイルは編隊を購入可能にします。統治ドシエは機械行動を制約します。サービス経路は移動主体の周囲に人間オペレーターを配置します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",

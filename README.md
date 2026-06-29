@@ -108,6 +108,7 @@ http://127.0.0.1:4187/products/ice/mesh-specification/
 http://127.0.0.1:4187/products/ledger/
 http://127.0.0.1:4187/products/ledger/custody-specification/
 http://127.0.0.1:4187/products/swarm/
+http://127.0.0.1:4187/products/swarm/formation-specification/
 http://127.0.0.1:4187/products/soulkiller/
 http://127.0.0.1:4187/products/soulkiller/extraction-specification/
 http://127.0.0.1:4187/services/executive-continuity/
