@@ -5347,6 +5347,7 @@ a,
     "field meta"
     "case meta"
     "provenance meta"
+    "command meta"
     "proof meta"
     "brief meta"
     "qualification meta"
@@ -5988,6 +5989,158 @@ a,
   font-style: normal;
   line-height: 1.2;
   overflow-wrap: anywhere;
+}
+
+.product-route-command {
+  grid-area: command;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 1fr);
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.15), rgba(225, 7, 20, 0.12), rgba(209, 177, 107, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-command-head,
+.product-route-command-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.1), transparent 54%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-command-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-command-head::after,
+.product-route-command-card::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(116, 199, 216, 0.04) 18px 19px),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 45%);
+}
+
+.product-route-command-card::before {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 42px;
+  height: 42px;
+  content: "";
+  border: 1px solid rgba(116, 199, 216, 0.22);
+  background: url("assets/arasaka-mark-white.png") center / 24px 24px no-repeat;
+  opacity: 0.14;
+}
+
+.product-route-command-head > *,
+.product-route-command-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-command-head span,
+.product-route-command-card > span,
+.product-route-command-card dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-command-head span,
+.product-route-command-card > span {
+  color: var(--cyan);
+  font-size: 0.64rem;
+}
+
+.product-route-command-head p,
+.product-route-command-card p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.38;
+}
+
+.product-route-command-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.product-route-command-card h2 {
+  max-width: 620px;
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 0.98;
+}
+
+.product-route-command-card dl {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 2px 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.product-route-command-card dl div {
+  display: grid;
+  gap: 5px;
+  min-height: 82px;
+  align-content: start;
+  padding: 10px;
+  background: rgba(2, 4, 6, 0.72);
+}
+
+.product-route-command-card dt {
+  color: var(--dim);
+  font-size: 0.58rem;
+}
+
+.product-route-command-card dd {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.86);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.24;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.product-route-command-card a {
+  justify-self: start;
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid rgba(116, 199, 216, 0.3);
+  border-radius: 3px;
+  color: var(--paper);
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.product-route-command-card a:hover,
+.product-route-command-card a:focus-visible {
+  border-color: rgba(182, 243, 91, 0.66);
+  color: var(--acid);
 }
 
 .product-route-brief {
@@ -17531,6 +17684,7 @@ a,
       "field"
       "case"
       "provenance"
+      "command"
       "meta"
       "proof"
       "brief"
@@ -17597,6 +17751,10 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-command {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-case-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -17605,11 +17763,16 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .product-route-command-card dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-route-field dl {
     grid-template-columns: 1fr;
   }
 
   .product-route-brief,
+  .product-route-command,
   .product-route-qualification,
   .product-route-procurement,
   .product-route-readiness,
@@ -17650,6 +17813,7 @@ a,
   }
 
   .product-route-brief-heading,
+  .product-route-command-head,
   .product-route-qualification-head,
   .product-route-procurement-head,
   .product-route-readiness-head,
@@ -18697,11 +18861,20 @@ a,
     grid-template-columns: 1fr;
   }
 
+  .product-route-command {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-command-card dl {
+    grid-template-columns: 1fr;
+  }
+
   .product-route-case-rail article {
     min-height: 0;
   }
 
-  .product-route-provenance-rail article {
+  .product-route-provenance-rail article,
+  .product-route-command-card dl div {
     min-height: 0;
   }
 
@@ -19243,6 +19416,8 @@ a,
   .product-route-panels article,
   .product-route-case-rail article,
   .product-route-provenance-rail article,
+  .product-route-command-head,
+  .product-route-command-card,
   .product-route-procurement-matrix article,
   .product-route-readiness-grid article,
   .product-route-control-deck article,

@@ -2827,6 +2827,14 @@ const translations = {
       monitorSignal: "Signal",
       provenanceLedger: "Provenance Ledger",
       provenanceLedgerLead: "Source and attestation record binding the operating field record, credited media, internal registry, and off-network witness before procurement.",
+      regionalCommand: "Regional Command Authority",
+      regionalCommandLead: "Operating authority binding this deployment to a physical command node, jurisdiction fence, primary system, and public command file.",
+      commandNode: "Command Node",
+      commandFacility: "Facility",
+      commandCoverage: "Coverage",
+      commandSystem: "Primary System",
+      commandProof: "Proof Object",
+      commandFile: "Open regional grid",
       canonSignal: "Canon Signal",
       mediaSource: "Media Source",
       registryAuthority: "Registry Authority",
@@ -3132,6 +3140,14 @@ const translations = {
       monitorSignal: "Signal",
       provenanceLedger: "Provenance Ledger",
       provenanceLedgerLead: "Source and attestation record binding the service operating record, credited media, mandate registry, and off-network witness before sponsor review.",
+      regionalCommand: "Regional Command Authority",
+      regionalCommandLead: "Operating authority binding this mandate to a physical command node, jurisdiction fence, primary system, and public command file.",
+      commandNode: "Command Node",
+      commandFacility: "Facility",
+      commandCoverage: "Coverage",
+      commandSystem: "Primary System",
+      commandProof: "Proof Object",
+      commandFile: "Open regional grid",
       canonSignal: "Canon Signal",
       mediaSource: "Media Source",
       registryAuthority: "Registry Authority",
@@ -5866,6 +5882,14 @@ const translations = {
       monitorSignal: "シグナル",
       provenanceLedger: "来歴台帳",
       provenanceLedgerLead: "調達前にナイトシティ現地ファイル、クレジット済みメディア、内部レジストリ、オフネットワーク証人を結合する出所と証明の記録。",
+      regionalCommand: "地域指揮権限",
+      regionalCommandLead: "この配備を物理指揮ノード、管轄フェンス、主要システム、公開指揮ファイルへ結合する運用権限。",
+      commandNode: "指揮ノード",
+      commandFacility: "施設",
+      commandCoverage: "被覆範囲",
+      commandSystem: "主要システム",
+      commandProof: "証明オブジェクト",
+      commandFile: "地域グリッドを開く",
       canonSignal: "正史シグナル",
       mediaSource: "メディア出所",
       registryAuthority: "レジストリ権限",
@@ -6171,6 +6195,14 @@ const translations = {
       monitorSignal: "シグナル",
       provenanceLedger: "来歴台帳",
       provenanceLedgerLead: "スポンサー審査前にナイトシティサービスファイル、クレジット済みメディア、委任レジストリ、オフネットワーク証人を結合する出所と証明の記録。",
+      regionalCommand: "地域指揮権限",
+      regionalCommandLead: "この委任を物理指揮ノード、管轄フェンス、主要システム、公開指揮ファイルへ結合する運用権限。",
+      commandNode: "指揮ノード",
+      commandFacility: "施設",
+      commandCoverage: "被覆範囲",
+      commandSystem: "主要システム",
+      commandProof: "証明オブジェクト",
+      commandFile: "地域グリッドを開く",
       canonSignal: "正史シグナル",
       mediaSource: "メディア出所",
       registryAuthority: "レジストリ権限",
@@ -6426,6 +6458,7 @@ const routeSwitcher = document.querySelector("[data-route-switcher]");
 const routeField = document.querySelector("[data-route-field]");
 const routeCaseFile = document.querySelector("[data-route-case-file]");
 const routeProvenance = document.querySelector("[data-route-provenance]");
+const routeRegionalCommand = document.querySelector("[data-route-regional-command]");
 const routeBrief = document.querySelector("[data-route-brief]");
 const routeQualification = document.querySelector("[data-route-qualification]");
 const routeProcurement = document.querySelector("[data-route-procurement]");
@@ -6478,6 +6511,7 @@ const serviceRouteSwitcher = document.querySelector("[data-service-switcher]");
 const serviceRouteField = document.querySelector("[data-service-field]");
 const serviceRouteCaseFile = document.querySelector("[data-service-case-file]");
 const serviceRouteProvenance = document.querySelector("[data-service-provenance]");
+const serviceRouteRegionalCommand = document.querySelector("[data-service-regional-command]");
 const serviceRouteBrief = document.querySelector("[data-service-brief]");
 const serviceRouteQualification = document.querySelector("[data-service-qualification]");
 const serviceRouteProcurement = document.querySelector("[data-service-procurement]");
@@ -6624,6 +6658,85 @@ const routeVisualImages = {
     protection: "service-protection-catalog.png"
   }
 };
+
+const regionalCommandProfiles = {
+  tokyo: {
+    code: "CMD-01",
+    facility: "Tokyo Root Campus",
+    jurisdiction: "Japan / Root Charter",
+    coverage: "Global command attestation",
+    system: "Mikoshi Board Continuity",
+    proof: "Quorum witness hash",
+    href: "../../#regional"
+  },
+  night: {
+    code: "CMD-02",
+    facility: "Night City Tower",
+    jurisdiction: "Night City / Corporate District",
+    coverage: "Tower, plaza, convoy, airspace",
+    system: "Autonomous Protection Grid",
+    proof: "Force audit chain",
+    href: "../../#regional"
+  },
+  osaka: {
+    code: "CMD-03",
+    facility: "Osaka Cybernetics Foundry",
+    jurisdiction: "Kansai Industrial Corridor",
+    coverage: "Prototype, validation, field repair",
+    system: "Neural Systems Foundry",
+    proof: "Implant telemetry seal",
+    href: "../../#regional"
+  },
+  orbital: {
+    code: "CMD-04",
+    facility: "Orbital Cold Vault",
+    jurisdiction: "Orbital Custody Corridor",
+    coverage: "Memory, capital, succession keys",
+    system: "Black Ledger Vault",
+    proof: "Cold route attestation",
+    href: "../../#regional"
+  },
+  blackwall: {
+    code: "CMD-05",
+    facility: "Blackwall Edge Cell",
+    jurisdiction: "Restricted Net Perimeter",
+    coverage: "AI contact, trace heat, ICE burn",
+    system: "Counterintrusion SOC",
+    proof: "Quarantine witness log",
+    href: "../../#regional"
+  }
+};
+
+const routeRegionalAssignments = {
+  product: {
+    relic: "tokyo",
+    mikoshi: "tokyo",
+    ice: "blackwall",
+    ledger: "orbital",
+    swarm: "night",
+    soulkiller: "blackwall"
+  },
+  service: {
+    executive: "tokyo",
+    counter: "blackwall",
+    capital: "orbital",
+    protection: "night"
+  }
+};
+
+function getRegionalCommandProfile(profileKey, dictionary) {
+  const regional = dictionary.regional || translations.en.regional;
+  const profile = regionalCommandProfiles[profileKey] || regionalCommandProfiles.tokyo;
+  const localized = regional[profileKey] || translations.en.regional[profileKey] || {};
+  return {
+    ...profile,
+    facility: localized.title || profile.facility,
+    jurisdiction: localized.jurisdiction || profile.jurisdiction,
+    coverage: localized.coverage || profile.coverage,
+    system: localized.system || profile.system,
+    proof: localized.proof || profile.proof
+  };
+}
 
 const productOperations = {
   en: {
@@ -7429,6 +7542,52 @@ function renderRouteProvenance(target, labels, rows) {
   });
 
   target.replaceChildren(heading, rail);
+}
+
+function renderRouteRegionalCommand(target, labels, profile, file, operations) {
+  if (!target || !profile) return;
+
+  const heading = document.createElement("div");
+  const eyebrow = document.createElement("span");
+  const lead = document.createElement("p");
+  const command = document.createElement("article");
+  const commandCode = document.createElement("span");
+  const title = document.createElement("h2");
+  const copy = document.createElement("p");
+  const details = document.createElement("dl");
+  const link = document.createElement("a");
+
+  heading.className = "product-route-command-head";
+  eyebrow.textContent = labels.regionalCommand;
+  lead.textContent = labels.regionalCommandLead;
+  heading.append(eyebrow, lead);
+
+  command.className = "product-route-command-card";
+  commandCode.textContent = profile.code;
+  title.textContent = profile.facility;
+  copy.textContent = `${labels.regions}: ${operations.regions.join(" / ")}`;
+
+  [
+    [labels.commandNode, profile.code],
+    [labels.jurisdiction, profile.jurisdiction],
+    [labels.commandCoverage, profile.coverage],
+    [labels.commandSystem, profile.system],
+    [labels.commandProof, profile.proof]
+  ].forEach(([label, value]) => {
+    const row = document.createElement("div");
+    const term = document.createElement("dt");
+    const description = document.createElement("dd");
+    term.textContent = label;
+    description.textContent = value;
+    row.append(term, description);
+    details.append(row);
+  });
+
+  link.href = profile.href;
+  link.textContent = labels.commandFile;
+  command.append(commandCode, title, copy, details, link);
+
+  target.replaceChildren(heading, command);
 }
 
 function renderRouteQualification(target, labels, rows) {
@@ -8871,6 +9030,14 @@ function updateProductRoute() {
     }
   ]);
 
+  renderRouteRegionalCommand(
+    routeRegionalCommand,
+    dictionary.productRoute,
+    getRegionalCommandProfile(routeRegionalAssignments.product[productKey] || "tokyo", dictionary),
+    file,
+    operations
+  );
+
   if (routeSwitcher) {
     const label = document.createElement("span");
     const rail = document.createElement("div");
@@ -10068,6 +10235,14 @@ function updateServiceRoute() {
       seal: "G.W. / A-F"
     }
   ]);
+
+  renderRouteRegionalCommand(
+    serviceRouteRegionalCommand,
+    routeLabels,
+    getRegionalCommandProfile(routeRegionalAssignments.service[serviceKey] || "night", dictionary),
+    file,
+    file.operations
+  );
 
   if (serviceRouteSwitcher) {
     const label = document.createElement("span");
