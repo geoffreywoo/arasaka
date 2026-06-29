@@ -646,6 +646,80 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier binds the continuity product suite to the Mikoshi custody layer."
     },
+    techEngram: {
+      back: "Return to Neural Substrate",
+      kicker: "TECH-NS-01A / ENGRAM CUSTODY INTERFACE",
+      title: "A construct is not an asset until custody can prove it.",
+      summary: "The Engram Custody Interface defines the evidence envelope between Relic capture, Soulkiller extraction tooling, Mikoshi vault admission, and board-authorized continuity release.",
+      openRelic: "Open Relic product file",
+      openMikoshi: "Open Mikoshi system",
+      visualCaption: "MIKOSHI-IX continuity engine, public catalog plate.",
+      readouts: {
+        hash: {
+          label: "Hash witness",
+          copy: "Minimum independent witness signatures before an engram becomes an admissible custody object."
+        },
+        jitter: {
+          label: "Synaptic jitter",
+          copy: "Permitted capture variance before memory weighting is marked for operator review."
+        },
+        quarantine: {
+          label: "Quarantine SLA",
+          copy: "Maximum time from drift alarm to non-interactive vault state."
+        }
+      },
+      chainEyebrow: "Custody Chain",
+      chainTitle: "The interface turns cognition into governed infrastructure.",
+      chainCopy: "Each stage produces a proof object. If any proof fails, the construct cannot move forward, even when a sponsor requests acceleration.",
+      layers: {
+        intake: {
+          title: "Capture intake",
+          copy: "Relic hardware binds cortical trace, biometric state, and operator identity before the first construct hash is issued."
+        },
+        extraction: {
+          title: "Extraction attestation",
+          copy: "Soulkiller-class tooling may extract only when mandate, consent, and emergency authority resolve to the same custody graph."
+        },
+        partition: {
+          title: "Partition seal",
+          copy: "Mikoshi admission writes the construct into a cold partition with lineage, revocation, and arbitration keys separated."
+        },
+        release: {
+          title: "Continuity release",
+          copy: "Executive continuity services can activate a construct only after board quorum and successor authority produce a signed release."
+        }
+      },
+      schematicEyebrow: "Interface State Machine",
+      schematicTitle: "No construct crosses a boundary without a machine-readable witness.",
+      signal: {
+        intake: "Intake hash",
+        attest: "Attestation",
+        vault: "Vault seal",
+        release: "Release gate"
+      },
+      specEyebrow: "Engineering Contract",
+      specTitle: "Custody fields and failure gates.",
+      specs: {
+        hash: {
+          label: "Primary hash",
+          copy: "Binds capture device, neural session, witness quorum, and active biometric state into one immutable root."
+        },
+        manifest: {
+          label: "Custody manifest",
+          copy: "Carries consent terms, export boundary, lineal authority, revocation scope, and continuity release conditions."
+        },
+        drift: {
+          label: "Drift gate",
+          copy: "Blocks release when the active construct diverges from the witnessed baseline beyond mandate tolerance."
+        },
+        fail: {
+          label: "Failure mode",
+          copy: "Any hash conflict, consent mismatch, or lineage dispute collapses the construct into sealed cold review."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "The interface sits between capture product, extraction toolchain, vault system, and continuity service."
+    },
     techSwarm: {
       back: "Return to technology library",
       kicker: "TECH-SW-12 / AUTONOMOUS PROTECTION GOVERNANCE",
@@ -4781,6 +4855,80 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録は継続製品群を神輿保管層へ結合します。"
+    },
+    techEngram: {
+      back: "神経基盤へ戻る",
+      kicker: "TECH-NS-01A / エングラム保管インターフェース",
+      title: "保管が証明できるまで、構成体は資産ではありません。",
+      summary: "エングラム保管インターフェースは、Relic取得、Soulkiller抽出ツール、神輿保管庫受入、取締役会承認済み継続リリースの間の証拠エンベロープを定義します。",
+      openRelic: "Relic製品ファイルを開く",
+      openMikoshi: "神輿システムを開く",
+      visualCaption: "MIKOSHI-IX継続エンジン、公開カタログプレート。",
+      readouts: {
+        hash: {
+          label: "ハッシュ立会",
+          copy: "エングラムが許容可能な保管オブジェクトになる前に必要な独立立会署名の最小数。"
+        },
+        jitter: {
+          label: "シナプスジッター",
+          copy: "記憶重み付けがオペレーターレビューへ送られる前に許可される取得分散。"
+        },
+        quarantine: {
+          label: "隔離SLA",
+          copy: "偏移警報から非対話型保管状態までの最大時間。"
+        }
+      },
+      chainEyebrow: "保管チェーン",
+      chainTitle: "このインターフェースは認知を統治済みインフラへ変換します。",
+      chainCopy: "各段階は証明オブジェクトを生成します。いずれかの証明が失敗した場合、スポンサーが加速を要求しても構成体は前進できません。",
+      layers: {
+        intake: {
+          title: "取得取込",
+          copy: "Relicハードウェアは、最初の構成体ハッシュが発行される前に皮質トレース、生体状態、オペレーターIDを結合します。"
+        },
+        extraction: {
+          title: "抽出証明",
+          copy: "Soulkiller級ツールは、委任、同意、緊急権限が同じ保管グラフへ解決される場合にのみ抽出できます。"
+        },
+        partition: {
+          title: "パーティション封印",
+          copy: "神輿受入は、系譜、取消、仲裁キーを分離したまま構成体を低温パーティションへ書き込みます。"
+        },
+        release: {
+          title: "継続リリース",
+          copy: "役員継続サービスは、取締役会クォーラムと継承者権限が署名済みリリースを生成した後にのみ構成体を起動できます。"
+        }
+      },
+      schematicEyebrow: "インターフェース状態機械",
+      schematicTitle: "機械可読の立会なしに境界を越える構成体はありません。",
+      signal: {
+        intake: "取込ハッシュ",
+        attest: "証明",
+        vault: "保管庫封印",
+        release: "リリースゲート"
+      },
+      specEyebrow: "工学契約",
+      specTitle: "保管フィールドと失敗ゲート。",
+      specs: {
+        hash: {
+          label: "プライマリハッシュ",
+          copy: "取得デバイス、神経セッション、立会クォーラム、稼働中の生体状態を一つの不変ルートへ結合します。"
+        },
+        manifest: {
+          label: "保管マニフェスト",
+          copy: "同意条件、輸出境界、系譜権限、取消範囲、継続リリース条件を保持します。"
+        },
+        drift: {
+          label: "偏移ゲート",
+          copy: "稼働構成体が立会済み基準から委任許容値を超えて乖離した場合、リリースを遮断します。"
+        },
+        fail: {
+          label: "失敗モード",
+          copy: "ハッシュ競合、同意不一致、系譜紛争はすべて構成体を封印済み低温レビューへ縮退させます。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "このインターフェースは取得製品、抽出ツールチェーン、保管庫システム、継続サービスの間に位置します。"
     },
     techSwarm: {
       back: "技術ライブラリへ戻る",
