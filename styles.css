@@ -6156,6 +6156,28 @@ a,
   color: var(--cyan);
 }
 
+.neural-tech-hero::before {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(116, 199, 216, 0.22), transparent 34%),
+    radial-gradient(circle at 20% 70%, rgba(182, 243, 91, 0.11), transparent 26%),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(255, 255, 255, 0.035) 30px 31px);
+}
+
+.neural-tech-page .deep-tech-hero,
+.neural-tech-page .deep-tech-system,
+.neural-tech-page .deep-tech-schematic,
+.neural-tech-page .deep-tech-specs,
+.neural-tech-page .deep-tech-network-panel {
+  background:
+    linear-gradient(135deg, rgba(116, 199, 216, 0.1), transparent 42%, rgba(182, 243, 91, 0.075)),
+    rgba(7, 9, 12, 0.91);
+}
+
+.neural-tech-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.04) hue-rotate(4deg);
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;

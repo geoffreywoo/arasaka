@@ -190,6 +190,80 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier sits inside the broader Arasaka security stack."
     },
+    techNeural: {
+      back: "Return to technology library",
+      kicker: "TECH-NS-01 / NEURAL CUSTODY PROTOCOL",
+      title: "Identity continuity for bodies that cannot be trusted to last.",
+      summary: "A controlled construct pipeline for capturing, hashing, storing, and auditing executive cognition without allowing the archive to outrun consent, lineage, or board authority.",
+      openProduct: "Open Relic product file",
+      openMikoshi: "Open Mikoshi system",
+      visualCaption: "AR-RELIC construct carrier, public catalog crop.",
+      readouts: {
+        latency: {
+          label: "Mirror quorum",
+          copy: "Median interval for biometric escrow to confirm a witnessed construct hash."
+        },
+        drift: {
+          label: "Drift budget",
+          copy: "Maximum authorized identity divergence before the construct enters board review."
+        },
+        custody: {
+          label: "Custody term",
+          copy: "Default cold-vault continuity term for family office and succession mandates."
+        }
+      },
+      stackEyebrow: "Continuity Pipeline",
+      stackTitle: "The person becomes a governed asset before they become a file.",
+      stackCopy: "The Neural Substrate Protocol separates capture, legal authority, behavioral drift, and post-body storage so no single operator can convert a living identity into an unmanaged copy.",
+      layers: {
+        capture: {
+          title: "Cortical capture",
+          copy: "High-resolution engram sampling binds memory trace, affective weighting, and executive decision priors to a sealed intake hash."
+        },
+        consent: {
+          title: "Consent quorum",
+          copy: "Biometric proof, board mandate, and lineage authority must agree before the construct leaves the capture environment."
+        },
+        drift: {
+          title: "Drift arbitration",
+          copy: "A behavioral witness model measures divergence from the living baseline and freezes any construct that exceeds mandate tolerance."
+        },
+        vault: {
+          title: "Cold-vault custody",
+          copy: "Mikoshi-grade storage partitions the construct from operational networks while preserving succession-trigger access rules."
+        }
+      },
+      schematicEyebrow: "Continuity Path",
+      schematicTitle: "The archive is valuable only while the chain of authority remains intact.",
+      signal: {
+        capture: "Cortical trace",
+        quorum: "Biometric quorum",
+        drift: "Drift audit",
+        vault: "Mikoshi vault"
+      },
+      specEyebrow: "Engineering Envelope",
+      specTitle: "Custody constraints.",
+      specs: {
+        hash: {
+          label: "Construct hash",
+          copy: "Every construct receives a witnessed hash that binds capture hardware, operator authority, and biometric state."
+        },
+        memory: {
+          label: "Memory lattice",
+          copy: "Memory traces are stored with affective weighting so continuity is measured by behavior, not raw recall density."
+        },
+        consent: {
+          label: "Consent lock",
+          copy: "Activation requires a live mandate, successor authority, and a non-expired biometric consent envelope."
+        },
+        revocation: {
+          label: "Revocation mode",
+          copy: "Disputed constructs are suspended into non-interactive vault state until arbitration unlocks or destroys the archive."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "This dossier binds the continuity product suite to the Mikoshi custody layer."
+    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -3721,6 +3795,80 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録は荒坂セキュリティスタック全体の内部に位置します。"
+    },
+    techNeural: {
+      back: "技術ライブラリへ戻る",
+      kicker: "TECH-NS-01 / 神経保管プロトコル",
+      title: "持続を信頼できない身体のための同一性継続。",
+      summary: "アーカイブが同意、系譜、取締役会権限を追い越さないよう、役員認知を取得、ハッシュ化、保管、監査する制御済み構成体パイプライン。",
+      openProduct: "Relic製品ファイルを開く",
+      openMikoshi: "神輿システムを開く",
+      visualCaption: "AR-RELIC構成体キャリア、公開カタログ切り抜き。",
+      readouts: {
+        latency: {
+          label: "ミラークォーラム",
+          copy: "生体エスクローが立会済み構成体ハッシュを確認するまでの中央値。"
+        },
+        drift: {
+          label: "偏移予算",
+          copy: "構成体が取締役会レビューに入る前の許可済み同一性偏差の最大値。"
+        },
+        custody: {
+          label: "保管期間",
+          copy: "ファミリーオフィスおよび継承委任の標準低温保管継続期間。"
+        }
+      },
+      stackEyebrow: "継続パイプライン",
+      stackTitle: "人物はファイルになる前に統治された資産になる。",
+      stackCopy: "神経基盤プロトコルは、取得、法的権限、行動偏移、身体後保管を分離し、単一オペレーターが生きた同一性を未管理コピーへ変換できないようにします。",
+      layers: {
+        capture: {
+          title: "皮質取得",
+          copy: "高解像度エングラムサンプリングが、記憶痕跡、感情重み、役員判断事前分布を封印済み取込ハッシュへ結合します。"
+        },
+        consent: {
+          title: "同意クォーラム",
+          copy: "構成体が取得環境を離れる前に、生体証明、取締役会委任、系譜権限が一致しなければなりません。"
+        },
+        drift: {
+          title: "偏移仲裁",
+          copy: "行動立会モデルが生存基準からの乖離を測定し、委任許容値を超えた構成体を凍結します。"
+        },
+        vault: {
+          title: "低温保管",
+          copy: "神輿級ストレージが、継承トリガーアクセス規則を保持しつつ構成体を運用ネットワークから分離します。"
+        }
+      },
+      schematicEyebrow: "継続経路",
+      schematicTitle: "権限の連鎖が損なわれない間だけ、アーカイブには価値があります。",
+      signal: {
+        capture: "皮質トレース",
+        quorum: "生体クォーラム",
+        drift: "偏移監査",
+        vault: "神輿保管庫"
+      },
+      specEyebrow: "工学範囲",
+      specTitle: "保管制約。",
+      specs: {
+        hash: {
+          label: "構成体ハッシュ",
+          copy: "すべての構成体は、取得ハードウェア、オペレーター権限、生体状態を結合する立会済みハッシュを受け取ります。"
+        },
+        memory: {
+          label: "記憶格子",
+          copy: "記憶痕跡は感情重み付きで保管され、継続性は生の想起密度ではなく行動で測定されます。"
+        },
+        consent: {
+          label: "同意ロック",
+          copy: "起動には、有効な委任、継承者権限、期限切れでない生体同意エンベロープが必要です。"
+        },
+        revocation: {
+          label: "取消モード",
+          copy: "係争中の構成体は、仲裁がアーカイブを解錠または破棄するまで非対話型保管状態へ停止されます。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "この記録は継続製品群を神輿保管層へ結合します。"
     },
     spine: {
       node: "公開ノード",
