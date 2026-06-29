@@ -2673,6 +2673,16 @@ const translations = {
       buyerRoomArtifact: "Buyer Room",
       exportState: "Export State",
       packetFooter: "Packet export is staged for private-room review; public pages show only sanitized manifest fields.",
+      assuranceDossier: "Assurance Dossier",
+      assuranceDossierLead: "A procurement-grade file binding attestation, jurisdiction, operator proof, and board review before implementation materials are released.",
+      dossierId: "Dossier ID",
+      attestation: "Attestation",
+      jurisdictionReview: "Jurisdiction Review",
+      operatorProof: "Operator Proof",
+      boardReview: "Board Review",
+      evidenceClass: "Evidence Class",
+      releaseCondition: "Release Condition",
+      dossierFooter: "Assurance dossier is sanitized for public review; sealed exhibits require protected access.",
       billOfMaterials: "Deployment Bill of Materials",
       billOfMaterialsLead: "A sanitized implementation ledger for runtime, integration, evidence, and governance components.",
       runtimeComponent: "Runtime Component",
@@ -2986,6 +2996,16 @@ const translations = {
       buyerRoomArtifact: "Mandate Room",
       exportState: "Export State",
       packetFooter: "Packet export is staged for private-room review; public pages show only sanitized mandate fields.",
+      assuranceDossier: "Assurance Dossier",
+      assuranceDossierLead: "A mandate-grade file binding sponsor authority, jurisdiction, operator proof, and board review before implementation materials are released.",
+      dossierId: "Dossier ID",
+      attestation: "Attestation",
+      jurisdictionReview: "Jurisdiction Review",
+      operatorProof: "Operator Proof",
+      boardReview: "Board Review",
+      evidenceClass: "Evidence Class",
+      releaseCondition: "Release Condition",
+      dossierFooter: "Assurance dossier is sanitized for public review; sealed exhibits require protected access.",
       billOfMaterials: "Deployment Bill of Materials",
       billOfMaterialsLead: "A sanitized implementation ledger for runtime, integration, evidence, and governance components.",
       runtimeComponent: "Runtime Component",
@@ -5787,6 +5807,16 @@ const translations = {
       buyerRoomArtifact: "購入者ルーム",
       exportState: "エクスポート状態",
       packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済みマニフェスト項目のみ表示されます。",
+      assuranceDossier: "保証ドシエ",
+      assuranceDossierLead: "実装部材の開示前に、証明、管轄審査、オペレーター証跡、取締役会レビューを結合する調達級ファイル。",
+      dossierId: "ドシエID",
+      attestation: "証明",
+      jurisdictionReview: "管轄審査",
+      operatorProof: "オペレーター証跡",
+      boardReview: "取締役会レビュー",
+      evidenceClass: "証拠分類",
+      releaseCondition: "解除条件",
+      dossierFooter: "保証ドシエは公開審査用にサニタイズ済みです。封印済み別紙には保護アクセスが必要です。",
       billOfMaterials: "配備部材表",
       billOfMaterialsLead: "ランタイム、統合、証拠、統治コンポーネントのサニタイズ済み実装台帳。",
       runtimeComponent: "ランタイム部材",
@@ -6100,6 +6130,16 @@ const translations = {
       buyerRoomArtifact: "委任ルーム",
       exportState: "エクスポート状態",
       packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済み委任項目のみ表示されます。",
+      assuranceDossier: "保証ドシエ",
+      assuranceDossierLead: "実装部材の開示前に、スポンサー権限、管轄審査、オペレーター証跡、取締役会レビューを結合する委任級ファイル。",
+      dossierId: "ドシエID",
+      attestation: "証明",
+      jurisdictionReview: "管轄審査",
+      operatorProof: "オペレーター証跡",
+      boardReview: "取締役会レビュー",
+      evidenceClass: "証拠分類",
+      releaseCondition: "解除条件",
+      dossierFooter: "保証ドシエは公開審査用にサニタイズ済みです。封印済み別紙には保護アクセスが必要です。",
       billOfMaterials: "配備部材表",
       billOfMaterialsLead: "ランタイム、統合、証拠、統治コンポーネントのサニタイズ済みサービス実装台帳。",
       runtimeComponent: "ランタイム部材",
@@ -6584,6 +6624,7 @@ const routeCertificate = document.querySelector("[data-route-certificate]");
 const routeReadiness = document.querySelector("[data-route-readiness]");
 const routeControlRoom = document.querySelector("[data-route-control-room]");
 const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]");
+const routeAssuranceDossier = document.querySelector("[data-route-assurance-dossier]");
 const routeBillOfMaterials = document.querySelector("[data-route-bom]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
@@ -6637,6 +6678,7 @@ const serviceRouteCertificate = document.querySelector("[data-service-certificat
 const serviceRouteReadiness = document.querySelector("[data-service-readiness]");
 const serviceRouteControlRoom = document.querySelector("[data-service-control-room]");
 const serviceRouteEvidencePacket = document.querySelector("[data-service-evidence-packet]");
+const serviceRouteAssuranceDossier = document.querySelector("[data-service-assurance-dossier]");
 const serviceRouteBillOfMaterials = document.querySelector("[data-service-bom]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
@@ -7960,6 +8002,49 @@ function renderRouteEvidencePacket(target, labels, rows, packetId, footerText) {
   footer.className = "product-route-packet-foot";
   footer.textContent = footerText;
   target.replaceChildren(heading, manifest, grid, footer);
+}
+
+function renderRouteAssuranceDossier(target, labels, rows, dossierId, footerText) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const stamp = document.createElement("div");
+  const stampLabel = document.createElement("span");
+  const stampValue = document.createElement("strong");
+  const grid = document.createElement("div");
+  const footer = document.createElement("p");
+
+  heading.className = "product-route-assurance-head";
+  label.textContent = labels.assuranceDossier;
+  lead.textContent = labels.assuranceDossierLead;
+  heading.append(label, lead);
+
+  stamp.className = "product-route-assurance-stamp";
+  stampLabel.textContent = labels.dossierId;
+  stampValue.textContent = dossierId;
+  stamp.append(stampLabel, stampValue);
+
+  grid.className = "product-route-assurance-grid";
+  rows.forEach(({ label: rowLabel, value, text }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+
+    code.textContent = `A-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    article.append(code, eyebrow, title, copy);
+    grid.append(article);
+  });
+
+  footer.className = "product-route-assurance-foot";
+  footer.textContent = footerText;
+  target.replaceChildren(heading, stamp, grid, footer);
 }
 
 function renderRouteBillOfMaterials(target, labels, rows, stamp) {
@@ -9356,6 +9441,29 @@ function updateProductRoute() {
     }
   ], `${file.code}-PACKET-${file.clearance}`, dictionary.productRoute.packetFooter);
 
+  renderRouteAssuranceDossier(routeAssuranceDossier, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.attestation,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text
+    },
+    {
+      label: dictionary.productRoute.jurisdictionReview,
+      value: operations.regions.join(" / "),
+      text: `${field.exposure} / ${field.doctrine}`
+    },
+    {
+      label: dictionary.productRoute.operatorProof,
+      value: operations.integrations[0],
+      text: `${operations.sla[0]} / ${operations.packages[0]} / ${operations.integrations[0]}`
+    },
+    {
+      label: dictionary.productRoute.boardReview,
+      value: file.clearance,
+      text: `${dictionary.productRoute.releaseCondition}: ${file.tabs.deployment.items[0] || file.tabs.deployment.title}. ${dictionary.productRoute.evidenceClass}: ${field.label}.`
+    }
+  ], `${file.code}-DOSSIER-${file.clearance}`, dictionary.productRoute.dossierFooter);
+
   renderRouteBillOfMaterials(routeBillOfMaterials, dictionary.productRoute, [
     {
       label: dictionary.productRoute.runtimeComponent,
@@ -10561,6 +10669,29 @@ function updateServiceRoute() {
       text: file.operations.sla.join(" / ")
     }
   ], `${file.code}-PACKET-${file.clearance}`, routeLabels.packetFooter);
+
+  renderRouteAssuranceDossier(serviceRouteAssuranceDossier, routeLabels, [
+    {
+      label: routeLabels.attestation,
+      value: file.tabs.governance.items[0] || file.tabs.governance.title,
+      text: file.tabs.governance.text
+    },
+    {
+      label: routeLabels.jurisdictionReview,
+      value: file.operations.regions.join(" / "),
+      text: `${file.field.exposure} / ${file.field.doctrine}`
+    },
+    {
+      label: routeLabels.operatorProof,
+      value: file.operations.integrations[0],
+      text: `${file.operations.sla[0]} / ${file.operations.packages[0]} / ${file.operations.integrations[0]}`
+    },
+    {
+      label: routeLabels.boardReview,
+      value: file.clearance,
+      text: `${routeLabels.releaseCondition}: ${file.tabs.deployment.items[0] || file.tabs.deployment.title}. ${routeLabels.evidenceClass}: ${file.field.label}.`
+    }
+  ], `${file.code}-DOSSIER-${file.clearance}`, routeLabels.dossierFooter);
 
   renderRouteBillOfMaterials(serviceRouteBillOfMaterials, routeLabels, [
     {

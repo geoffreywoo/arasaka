@@ -5536,6 +5536,7 @@ a,
     "readiness meta"
     "control meta"
     "packet meta"
+    "assurance meta"
     "bom meta"
     "sla meta"
     "topology meta"
@@ -5728,6 +5729,10 @@ a,
 .product-route-procurement-matrix article,
 .product-route-procurement > p,
 .product-route-procurement-intake,
+.product-route-assurance-head,
+.product-route-assurance-stamp,
+.product-route-assurance-grid article,
+.product-route-assurance-foot,
 .product-route-sla-head,
 .product-route-sla-grid article,
 .product-route-topology-head,
@@ -7046,6 +7051,158 @@ a,
   min-height: 88px;
   padding: 16px;
   border-left: 3px solid rgba(209, 177, 107, 0.5);
+}
+
+.product-route-assurance {
+  grid-area: assurance;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 0.66fr);
+  grid-template-areas:
+    "head grid"
+    "stamp grid"
+    "foot grid";
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(116, 199, 216, 0.18), rgba(225, 7, 20, 0.12), rgba(182, 243, 91, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-assurance-head,
+.product-route-assurance-stamp,
+.product-route-assurance-grid article,
+.product-route-assurance-foot {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(116, 199, 216, 0.08), transparent 58%),
+    rgba(4, 8, 10, 0.95);
+}
+
+.product-route-assurance-head {
+  grid-area: head;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+
+.product-route-assurance-head span,
+.product-route-assurance-stamp span,
+.product-route-assurance-stamp strong,
+.product-route-assurance-grid small,
+.product-route-assurance-grid article > span,
+.product-route-assurance-foot {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-assurance-head span,
+.product-route-assurance-grid article > span,
+.product-route-assurance-stamp span {
+  color: var(--cyan);
+  font-size: 0.64rem;
+}
+
+.product-route-assurance-head p,
+.product-route-assurance-grid p,
+.product-route-assurance-foot {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.78rem;
+  line-height: 1.38;
+}
+
+.product-route-assurance-stamp {
+  position: relative;
+  overflow: hidden;
+  grid-area: stamp;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  min-height: 132px;
+  padding: 18px;
+}
+
+.product-route-assurance-stamp::before {
+  position: absolute;
+  inset: 18px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(116, 199, 216, 0.32);
+  background: url("assets/arasaka-mark-white.png") center / 58px 58px no-repeat;
+  opacity: 0.24;
+  transform: rotate(8deg);
+}
+
+.product-route-assurance-stamp > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-assurance-stamp strong {
+  color: var(--paper);
+  font-size: 0.72rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.product-route-assurance-grid {
+  grid-area: grid;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-assurance-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 178px;
+  padding: 15px;
+}
+
+.product-route-assurance-grid article::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(116, 199, 216, 0.13), transparent 46%),
+    repeating-linear-gradient(90deg, transparent 0 22px, rgba(255, 255, 255, 0.035) 22px 23px);
+}
+
+.product-route-assurance-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-assurance-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-assurance-grid strong {
+  color: var(--paper);
+  font-size: 0.94rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-assurance-foot {
+  grid-area: foot;
+  display: grid;
+  align-content: end;
+  min-height: 86px;
+  padding: 16px;
+  border-left: 3px solid rgba(116, 199, 216, 0.5);
 }
 
 .product-route-bom {
@@ -18042,6 +18199,7 @@ a,
       "readiness"
       "control"
       "packet"
+      "assurance"
       "bom"
       "sla"
       "topology"
@@ -18126,6 +18284,7 @@ a,
   .product-route-readiness,
   .product-route-control,
   .product-route-packet,
+  .product-route-assurance,
   .product-route-bom,
   .product-route-sla,
   .product-route-adapters,
@@ -18417,6 +18576,10 @@ a,
   .product-route-escrow,
   .product-route-monitor {
     grid-template-columns: 1fr;
+  }
+
+  .product-route-assurance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-route-patch {
@@ -19260,6 +19423,24 @@ a,
   }
 
   .product-route-case-rail article {
+    min-height: 0;
+  }
+
+  .product-route-assurance {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "stamp"
+      "grid"
+      "foot";
+  }
+
+  .product-route-assurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-assurance-stamp,
+  .product-route-assurance-grid article {
     min-height: 0;
   }
 
