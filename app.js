@@ -147,6 +147,47 @@ const translations = {
         }
       }
     },
+    heroMetrics: {
+      aria: "Corporate scale summary",
+      asset: {
+        label: "Protected Asset Surface",
+        value: "¥42.7T"
+      },
+      theaters: {
+        label: "Jurisdictions",
+        value: "128"
+      },
+      mandate: {
+        label: "Continuity Mandate",
+        value: "AA-90"
+      }
+    },
+    scale: {
+      aria: "Institutional scale",
+      eyebrow: "Institutional Scale",
+      title: "A private sovereign infrastructure group with balance-sheet discipline.",
+      text: "Arasaka operates security, custody, manufacturing, intelligence, and capital systems as one integrated corporate estate.",
+      metric1: {
+        label: "Protected Asset Surface",
+        value: "¥42.7T",
+        text: "Capital, memory, patents, facilities, and executive identity secured under family command."
+      },
+      metric2: {
+        label: "Jurisdictions",
+        value: "128",
+        text: "Operating theaters routed through Tokyo root, regional subsidiaries, and orbital cold custody."
+      },
+      metric3: {
+        label: "Autonomous Response Windows",
+        value: "00:18",
+        text: "Human-authorized tactical escalation from tower perimeter to drone corridor."
+      },
+      metric4: {
+        label: "Continuity Mandates",
+        value: "AA-90",
+        text: "Board-grade neural custody, succession rehearsal, and construct governance under sealed assurance."
+      }
+    },
     fieldConsole: {
       aria: "Mobile mandate console",
       routesAria: "Priority mandate routes",
@@ -2956,6 +2997,47 @@ const translations = {
             secondaryValue: "正常"
           }
         }
+      }
+    },
+    heroMetrics: {
+      aria: "法人規模概要",
+      asset: {
+        label: "保護資産面",
+        value: "42.7兆円"
+      },
+      theaters: {
+        label: "管轄地域",
+        value: "128"
+      },
+      mandate: {
+        label: "継続性委任",
+        value: "AA-90"
+      }
+    },
+    scale: {
+      aria: "機関規模",
+      eyebrow: "機関規模",
+      title: "貸借対照表規律を持つ民間主権インフラグループ。",
+      text: "荒坂は、警備、保管、製造、情報、資本システムを単一の統合企業資産として運用します。",
+      metric1: {
+        label: "保護資産面",
+        value: "42.7兆円",
+        text: "資本、記憶、特許、施設、役員IDを一族指揮下で保全。"
+      },
+      metric2: {
+        label: "管轄地域",
+        value: "128",
+        text: "東京ルート、地域子会社、軌道冷却保管を通じて運用地域を経路化。"
+      },
+      metric3: {
+        label: "自律応答窓",
+        value: "00:18",
+        text: "タワー境界からドローン回廊まで、人間承認の戦術エスカレーション。"
+      },
+      metric4: {
+        label: "継続性委任",
+        value: "AA-90",
+        text: "封印済み保証下の取締役会級神経保管、継承リハーサル、コンストラクト統治。"
       }
     },
     fieldConsole: {

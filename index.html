@@ -72,16 +72,16 @@
         <span data-i18n="spine.orbit">Orbital Cold</span>
       </div>
     </aside>
-    <aside class="public-node-dock" data-node-dock aria-label="Public node signal dock" data-i18n-aria-label="dock.aria">
+    <aside class="public-node-dock is-collapsed" data-node-dock aria-label="Public node signal dock" data-i18n-aria-label="dock.aria">
       <button
         class="node-dock-toggle"
         type="button"
         data-node-dock-toggle
-        data-i18n-aria-label="dock.collapse"
-        aria-label="Collapse public node dock"
-        aria-expanded="true"
+        data-i18n-aria-label="dock.expand"
+        aria-label="Expand public node dock"
+        aria-expanded="false"
       >
-        <span data-dock-toggle-glyph>−</span>
+        <span data-dock-toggle-glyph>+</span>
       </button>
       <div class="node-dock-status">
         <span data-i18n="dock.eyebrow">Corporate Gateway</span>
@@ -245,6 +245,20 @@
             <p class="hero-text" data-i18n="hero.text">
               Arasaka operates the control layer beneath sovereign capital: neural custody, autonomous protection, synthetic intelligence containment, and city-scale continuity for family offices, states, and systemically important institutions.
             </p>
+            <div class="hero-metrics" aria-label="Corporate scale summary" data-i18n-aria-label="heroMetrics.aria">
+              <div>
+                <span data-i18n="heroMetrics.asset.label">Protected Asset Surface</span>
+                <strong data-i18n="heroMetrics.asset.value">¥42.7T</strong>
+              </div>
+              <div>
+                <span data-i18n="heroMetrics.theaters.label">Jurisdictions</span>
+                <strong data-i18n="heroMetrics.theaters.value">128</strong>
+              </div>
+              <div>
+                <span data-i18n="heroMetrics.mandate.label">Continuity Mandate</span>
+                <strong data-i18n="heroMetrics.mandate.value">AA-90</strong>
+              </div>
+            </div>
             <div class="hero-actions" aria-label="Primary actions">
               <a class="button button-primary" href="#contact">
                 <span data-i18n="hero.ctaPrimary">Request Institutional Access</span>
@@ -318,6 +332,38 @@
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="corporate-scale" aria-label="Institutional scale" data-i18n-aria-label="scale.aria">
+        <div class="scale-head">
+          <p class="eyebrow" data-i18n="scale.eyebrow">Institutional Scale</p>
+          <h2 data-i18n="scale.title">A private sovereign infrastructure group with balance-sheet discipline.</h2>
+          <p data-i18n="scale.text">
+            Arasaka operates security, custody, manufacturing, intelligence, and capital systems as one integrated corporate estate.
+          </p>
+        </div>
+        <div class="scale-grid">
+          <article>
+            <span data-i18n="scale.metric1.label">Protected Asset Surface</span>
+            <strong data-i18n="scale.metric1.value">¥42.7T</strong>
+            <p data-i18n="scale.metric1.text">Capital, memory, patents, facilities, and executive identity secured under family command.</p>
+          </article>
+          <article>
+            <span data-i18n="scale.metric2.label">Jurisdictions</span>
+            <strong data-i18n="scale.metric2.value">128</strong>
+            <p data-i18n="scale.metric2.text">Operating theaters routed through Tokyo root, regional subsidiaries, and orbital cold custody.</p>
+          </article>
+          <article>
+            <span data-i18n="scale.metric3.label">Autonomous Response Windows</span>
+            <strong data-i18n="scale.metric3.value">00:18</strong>
+            <p data-i18n="scale.metric3.text">Human-authorized tactical escalation from tower perimeter to drone corridor.</p>
+          </article>
+          <article>
+            <span data-i18n="scale.metric4.label">Continuity Mandates</span>
+            <strong data-i18n="scale.metric4.value">AA-90</strong>
+            <p data-i18n="scale.metric4.text">Board-grade neural custody, succession rehearsal, and construct governance under sealed assurance.</p>
+          </article>
         </div>
       </section>
 
