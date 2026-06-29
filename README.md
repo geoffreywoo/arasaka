@@ -114,6 +114,7 @@ http://127.0.0.1:4187/products/soulkiller/extraction-specification/
 http://127.0.0.1:4187/services/executive-continuity/
 http://127.0.0.1:4187/services/executive-continuity/activation-protocol/
 http://127.0.0.1:4187/services/counterintrusion/
+http://127.0.0.1:4187/services/counterintrusion/response-protocol/
 http://127.0.0.1:4187/services/black-ledger-mandate/
 http://127.0.0.1:4187/services/autonomous-protection/
 ```

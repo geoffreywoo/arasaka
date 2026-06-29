@@ -713,6 +713,70 @@ const translations = {
       mapTitle: "Executive Continuity routes authority through Relic capture, Mikoshi custody, board governance, and Black Ledger control.",
       mapCopy: "The service is the human operating layer around the continuity stack: it decides when evidence is enough, when silence is safer, and when authority may speak again."
     },
+    counterProtocol: {
+      productCta: "Open response protocol",
+      openProtocol: "Open response protocol",
+      back: "Return to Counterintrusion Theater",
+      kicker: "SV-02 / RESPONSE PROTOCOL",
+      title: "A breach is contained when it becomes evidence.",
+      summary: "Counterintrusion Theater activates when sovereign networks are under live probe. The protocol routes hostile signatures through operator triage, trap mirroring, branch burn, Blackwall-adjacent quarantine, and board-readable forensic receipts.",
+      openIce: "Open ICE mesh spec",
+      openRuntime: "Open runtime dossier",
+      visualCaption: "Counterintrusion Theater response plate, generated Arasaka catalog image.",
+      readouts: {
+        burn: {
+          label: "Burn window",
+          copy: "Median interval from hostile signature confirmation to dead-route allocation."
+        },
+        quorum: {
+          label: "Witness quorum",
+          copy: "Minimum independent custody nodes required before quarantine receipts become board-admissible."
+        },
+        memory: {
+          label: "Trace vault",
+          copy: "Default retention window for hostile path fragments before statutory vaulting or destruction."
+        }
+      },
+      modulesEyebrow: "Response Chain",
+      modulesTitle: "The theater converts intrusion pressure into governed counteraction.",
+      modulesCopy: "The service is the human operating layer around Black ICE. Operators decide when to watch, when to mirror, when to burn, and when the evidence must leave the live network.",
+      modules: {
+        triage: {
+          title: "Netrunner Triage Cell",
+          copy: "Scores credential geometry, route heat, hostile toolchain, and live-pivot probability before automated response escalates."
+        },
+        mirror: {
+          title: "Trap Mirror Partition",
+          copy: "Mirrors suspect traffic into disposable compute so decoys can measure intent without exposing the protected surface."
+        },
+        burn: {
+          title: "Branch Burn Authorization",
+          copy: "Severs confirmed hostile paths only after proportionality, witness, and protected-surface rules resolve to the same mandate."
+        },
+        receipt: {
+          title: "Forensic Receipt Vault",
+          copy: "Binds path, signature, operator, burn class, and quarantine state into a board-readable evidence object."
+        }
+      },
+      envelopeEyebrow: "Response Envelope",
+      envelopeTitle: "Counterforce needs governed authority.",
+      envelopeCopy: "The service cannot enter burn posture until the protected surface, trigger class, Blackwall posture, human escalation path, and evidence retention rule are all named.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Sovereign net, custody API, executive room, industrial command, or neural vault corridor",
+        trigger: "Trigger class",
+        triggerValue: "Impossible credential geometry, rogue-machine intent, hostile toolchain, or live pivot attempt",
+        response: "Response class",
+        responseValue: "Observe, mirror, trap, burn, quarantine, manual lock captain, or board hold",
+        blackwall: "Blackwall posture",
+        blackwallValue: "Sealed edge observer with no autonomous release authority and no client dependency",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed burn, civilian dragnet, retaliatory self-learning loop, uncontrolled Blackwall contact"
+      },
+      mapEyebrow: "Counterintrusion Routing",
+      mapTitle: "Counterintrusion routes hostile netpaths through ICE runtime, Blackwall perimeter, Soulkiller quarantine, and board evidence.",
+      mapCopy: "The service page provides operators. The product file defines the appliance. The runtime dossier defines the trap. The governance docket decides what can be burned."
+    },
     towerFile: {
       back: "Return to operations archive",
       kicker: "CASEFILE AT-2023 / TOWER TRAUMA",
@@ -5534,6 +5598,70 @@ const translations = {
       mapEyebrow: "継続経路",
       mapTitle: "Executive Continuityは権限をRelic取得、Mikoshi保管、取締役会統治、Black Ledger制御へルーティングします。",
       mapCopy: "このサービスは継続スタックを囲む人間運用レイヤーです。証拠がいつ十分か、沈黙がいつ安全か、権限がいつ再び発話できるかを決定します。"
+    },
+    counterProtocol: {
+      productCta: "応答プロトコルを開く",
+      openProtocol: "応答プロトコルを開く",
+      back: "Counterintrusion Theaterへ戻る",
+      kicker: "SV-02 / 応答プロトコル",
+      title: "侵害は証拠になったとき封じ込められます。",
+      summary: "Counterintrusion Theaterは、主権ネットワークがライブ探査下にある時に起動します。このプロトコルは敵対署名をオペレーター選別、トラップミラー、分岐焼却、Blackwall隣接隔離、取締役会可読フォレンジック受領書へ経路化します。",
+      openIce: "ICEメッシュ仕様を開く",
+      openRuntime: "ランタイムドシエを開く",
+      visualCaption: "Counterintrusion Theater応答プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        burn: {
+          label: "焼却窓",
+          copy: "敵対署名確認からデッドルート割当までの中央値。"
+        },
+        quorum: {
+          label: "立会クォーラム",
+          copy: "隔離受領書が取締役会証拠として認められる前に必要な独立保管ノードの最小数。"
+        },
+        memory: {
+          label: "追跡保管庫",
+          copy: "法定保管または破棄の前に敵対経路断片を保持する既定窓。"
+        }
+      },
+      modulesEyebrow: "応答チェーン",
+      modulesTitle: "シアターは侵入圧力を統治済み対抗行動へ変換します。",
+      modulesCopy: "このサービスはBlack ICEを囲む人間運用レイヤーです。オペレーターは、いつ監視し、いつミラーし、いつ焼却し、いつ証拠をライブネットワークから離すかを決定します。",
+      modules: {
+        triage: {
+          title: "ネットランナー選別セル",
+          copy: "自動応答がエスカレートする前に、資格情報ジオメトリ、経路熱量、敵対ツールチェーン、ライブピボット確率を採点します。"
+        },
+        mirror: {
+          title: "トラップミラー区画",
+          copy: "疑わしい通信を使い捨て計算資源へミラーし、保護面を露出せずにデコイが意図を測定できるようにします。"
+        },
+        burn: {
+          title: "分岐焼却承認",
+          copy: "比例性、立会、保護面ルールが同一の委任へ解決された後にのみ、確認済み敵対経路を切断します。"
+        },
+        receipt: {
+          title: "フォレンジック受領保管庫",
+          copy: "経路、署名、オペレーター、焼却クラス、隔離状態を取締役会可読の証拠オブジェクトへ結合します。"
+        }
+      },
+      envelopeEyebrow: "応答範囲",
+      envelopeTitle: "対抗戦力には統治された権限が必要です。",
+      envelopeCopy: "保護面、トリガークラス、Blackwall姿勢、人間エスカレーション経路、証拠保持ルールがすべて指名されるまで、このサービスは焼却姿勢へ入れません。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "主権ネット、保管API、役員室、産業指揮、または神経保管庫回廊",
+        trigger: "トリガークラス",
+        triggerValue: "不可能資格情報ジオメトリ、ローグ機械意図、敵対ツールチェーン、またはライブピボット試行",
+        response: "応答クラス",
+        responseValue: "観測、ミラー、トラップ、焼却、隔離、手動ロックキャプテン、または取締役会保留",
+        blackwall: "Blackwall姿勢",
+        blackwallValue: "自律リリース権限とクライアント依存を持たない封印済み境界オブザーバー",
+        exclusion: "除外用途",
+        exclusionValue: "非立会焼却、市民ドラグネット、報復的自己学習ループ、非制御Blackwall接触"
+      },
+      mapEyebrow: "対侵入経路",
+      mapTitle: "Counterintrusionは敵対ネット経路をICEランタイム、Blackwall境界、Soulkiller隔離、取締役会証拠へルーティングします。",
+      mapCopy: "サービスページはオペレーターを提供します。製品ファイルはアプライアンスを定義します。ランタイムドシエはトラップを定義します。統治ドケットは何を焼却できるかを決定します。"
     },
     towerFile: {
       back: "運用記録庫へ戻る",
