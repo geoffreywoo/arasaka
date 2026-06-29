@@ -2407,6 +2407,13 @@ const translations = {
       relayChecksum: "Relay Checksum",
       auditTrail: "Audit Trail",
       handoffAction: "Request sealed room",
+      supportEntitlements: "Support Entitlements",
+      supportEntitlementsLead: "Post-handoff service rights for duty window, response class, upgrade path, and field replacement once the room is live.",
+      dutyWindow: "Duty Window",
+      responseClass: "Response Class",
+      upgradePath: "Upgrade Path",
+      fieldReplacement: "Field Replacement",
+      entitlementState: "Entitlement",
       operatorTranscript: "Operator Transcript",
       operatorTranscriptLead: "A sanitized internal command log showing how the sealed room interprets signal, witness, escalation, and closeout.",
       commandLog: "Command Log",
@@ -2688,6 +2695,13 @@ const translations = {
       relayChecksum: "Relay Checksum",
       auditTrail: "Audit Trail",
       handoffAction: "Request sealed room",
+      supportEntitlements: "Service Entitlements",
+      supportEntitlementsLead: "Post-handoff mandate rights for duty window, response class, escalation path, and field reinforcement once the room is live.",
+      dutyWindow: "Duty Window",
+      responseClass: "Response Class",
+      upgradePath: "Escalation Path",
+      fieldReplacement: "Field Reinforcement",
+      entitlementState: "Entitlement",
       operatorTranscript: "Operator Transcript",
       operatorTranscriptLead: "A sanitized internal command log showing how the mandate room interprets signal, witness, escalation, and closeout.",
       commandLog: "Command Log",
@@ -5084,6 +5098,13 @@ const translations = {
       relayChecksum: "中継チェックサム",
       auditTrail: "監査証跡",
       handoffAction: "封印ルームを申請",
+      supportEntitlements: "サポート権限",
+      supportEntitlementsLead: "ルーム稼働後のデューティウィンドウ、応答クラス、アップグレード経路、現場交換に関するポスト引継サービス権限。",
+      dutyWindow: "デューティウィンドウ",
+      responseClass: "応答クラス",
+      upgradePath: "アップグレード経路",
+      fieldReplacement: "現場交換",
+      entitlementState: "権限",
       operatorTranscript: "オペレーター記録",
       operatorTranscriptLead: "封印ルームが信号、証人、エスカレーション、完了をどう解釈したかを示すサニタイズ済み内部コマンドログ。",
       commandLog: "コマンドログ",
@@ -5365,6 +5386,13 @@ const translations = {
       relayChecksum: "中継チェックサム",
       auditTrail: "監査証跡",
       handoffAction: "封印ルームを申請",
+      supportEntitlements: "サービス権限",
+      supportEntitlementsLead: "ルーム稼働後のデューティウィンドウ、応答クラス、エスカレーション経路、現場増援に関するポスト引継委任権限。",
+      dutyWindow: "デューティウィンドウ",
+      responseClass: "応答クラス",
+      upgradePath: "エスカレーション経路",
+      fieldReplacement: "現場増援",
+      entitlementState: "権限",
       operatorTranscript: "オペレーター記録",
       operatorTranscriptLead: "委任ルームが信号、証人、エスカレーション、完了をどう解釈したかを示すサニタイズ済み内部コマンドログ。",
       commandLog: "コマンドログ",
@@ -5724,6 +5752,7 @@ const routeTimeline = document.querySelector("[data-route-timeline]");
 const routeDecision = document.querySelector("[data-route-decision]");
 const routeRunbook = document.querySelector("[data-route-runbook]");
 const routePrivateRoom = document.querySelector("[data-route-private-room]");
+const routeSupport = document.querySelector("[data-route-support]");
 const routeTranscript = document.querySelector("[data-route-transcript]");
 const routeThreatModel = document.querySelector("[data-route-threat-model]");
 const routeCustodyChain = document.querySelector("[data-route-custody-chain]");
@@ -5773,6 +5802,7 @@ const serviceRouteTimeline = document.querySelector("[data-service-timeline]");
 const serviceRouteDecision = document.querySelector("[data-service-decision]");
 const serviceRouteRunbook = document.querySelector("[data-service-runbook]");
 const serviceRoutePrivateRoom = document.querySelector("[data-service-private-room]");
+const serviceRouteSupport = document.querySelector("[data-service-support]");
 const serviceRouteTranscript = document.querySelector("[data-service-transcript]");
 const serviceRouteThreatModel = document.querySelector("[data-service-threat-model]");
 const serviceRouteCustodyChain = document.querySelector("[data-service-custody-chain]");
@@ -7379,6 +7409,40 @@ function renderRoutePrivateRoom(target, labels, rows, href) {
   target.replaceChildren(heading, grid, action);
 }
 
+function renderRouteSupport(target, labels, rows) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+
+  heading.className = "product-route-support-head";
+  label.textContent = labels.supportEntitlements;
+  lead.textContent = labels.supportEntitlementsLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-support-grid";
+  rows.forEach(({ label: rowLabel, value, text, state }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const copy = document.createElement("p");
+    const tag = document.createElement("em");
+
+    code.textContent = `S-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+    copy.textContent = text;
+    tag.textContent = `${labels.entitlementState}: ${state}`;
+    article.append(code, eyebrow, title, copy, tag);
+    grid.append(article);
+  });
+
+  target.replaceChildren(heading, grid);
+}
+
 function renderRouteTranscript(target, labels, rows) {
   if (!target) return;
 
@@ -8495,6 +8559,33 @@ function updateProductRoute() {
     }
   ], "../../#contact");
 
+  renderRouteSupport(routeSupport, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.dutyWindow,
+      value: operations.sla[0],
+      text: `${operations.regions[0]} / ${operations.integrations[0]}`,
+      state: file.clearance
+    },
+    {
+      label: dictionary.productRoute.responseClass,
+      value: operations.packages[1] || operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      state: operations.sla[1] || operations.sla[0]
+    },
+    {
+      label: dictionary.productRoute.upgradePath,
+      value: operations.packages[2] || operations.packages[1] || operations.packages[0],
+      text: `${file.tabs.governance.title} / ${dictionary.productRoute.capitalObserver}`,
+      state: "G.W. / A-F"
+    },
+    {
+      label: dictionary.productRoute.fieldReplacement,
+      value: file.surface,
+      text: `${field.doctrine} / ${operations.regions.join(" / ")}`,
+      state: operations.sla[2] || operations.sla[1] || operations.sla[0]
+    }
+  ]);
+
   renderRouteTranscript(routeTranscript, dictionary.productRoute, [
     {
       label: dictionary.productRoute.commandLog,
@@ -9607,6 +9698,33 @@ function updateServiceRoute() {
       text: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
     }
   ], "../../#contact");
+
+  renderRouteSupport(serviceRouteSupport, routeLabels, [
+    {
+      label: routeLabels.dutyWindow,
+      value: file.operations.sla[0],
+      text: `${file.operations.regions[0]} / ${file.operations.integrations[0]}`,
+      state: file.clearance
+    },
+    {
+      label: routeLabels.responseClass,
+      value: file.operations.packages[1] || file.operations.packages[0],
+      text: file.tabs.deployment.items[0] || file.tabs.deployment.text,
+      state: file.operations.sla[1] || file.operations.sla[0]
+    },
+    {
+      label: routeLabels.upgradePath,
+      value: file.operations.packages[2] || file.operations.packages[1] || file.operations.packages[0],
+      text: `${file.tabs.governance.title} / ${routeLabels.capitalObserver}`,
+      state: "G.W. / A-F"
+    },
+    {
+      label: routeLabels.fieldReplacement,
+      value: file.surface,
+      text: `${file.field.doctrine} / ${file.operations.regions.join(" / ")}`,
+      state: file.operations.sla[2] || file.operations.sla[1] || file.operations.sla[0]
+    }
+  ]);
 
   renderRouteTranscript(serviceRouteTranscript, routeLabels, [
     {
