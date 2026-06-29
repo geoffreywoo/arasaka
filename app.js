@@ -1901,6 +1901,39 @@ const translations = {
       activeTheater: "Active Theater",
       response: "Response",
       coverage: "Coverage",
+      watchfloorAria: "Operations watchfloor",
+      watchfloorEyebrow: "Integrated Watchfloor",
+      watchfloorTitle: "Every mandate receives a desk before it becomes a deployment.",
+      watchfloorText: "Arasaka assigns live operational custody to continuity, counterintrusion, capital, and route-protection desks before any private system is activated.",
+      watchfloorStatus: "Status",
+      watchfloorProof: "Proof",
+      watchfloorOpen: "Open mandate",
+      watchfloor: {
+        continuity: {
+          title: "Continuity Desk",
+          text: "Board quorum, Relic custody, successor authority, and Mikoshi witness paths are held in a single escalation surface.",
+          status: "Quorum warm",
+          proof: "Witness hash"
+        },
+        counter: {
+          title: "Counterintrusion Watch",
+          text: "Netrunner heat, rogue AI drift, black ICE traps, and burn authority are reconciled before exposure reaches memory systems.",
+          status: "Trace hot",
+          proof: "Burn ledger"
+        },
+        capital: {
+          title: "Capital Custody Desk",
+          text: "Founder identity, patent collateral, dark settlement rail, and private reputation signals are sealed before market contact.",
+          status: "Rail cold",
+          proof: "Mandate hash"
+        },
+        route: {
+          title: "Route Protection Desk",
+          text: "District scans, drone veils, convoy windows, and human escalation authority are modeled around the protected principal.",
+          status: "Corridor green",
+          proof: "Force audit"
+        }
+      },
       theater: {
         plaza: "Plaza",
         orbital: "Orbital",
@@ -5214,6 +5247,39 @@ const translations = {
       activeTheater: "稼働戦域",
       response: "応答",
       coverage: "被覆率",
+      watchfloorAria: "運用ウォッチフロア",
+      watchfloorEyebrow: "統合ウォッチフロア",
+      watchfloorTitle: "すべての委任は、配備になる前に担当デスクへ割り当てられます。",
+      watchfloorText: "荒坂は私的システムを起動する前に、継続性、対侵入、資本、経路防護の各デスクへライブ運用保管を割り当てます。",
+      watchfloorStatus: "状態",
+      watchfloorProof: "証明",
+      watchfloorOpen: "委任を開く",
+      watchfloor: {
+        continuity: {
+          title: "継続性デスク",
+          text: "取締役会クォーラム、Relic保管、後継権限、Mikoshi証人経路を、単一のエスカレーション面に保持します。",
+          status: "クォーラム温存",
+          proof: "証人ハッシュ"
+        },
+        counter: {
+          title: "対侵入ウォッチ",
+          text: "ネットランナー熱量、敵対AIドリフト、ブラックICE罠、焼却権限を、記憶システムへ露出が届く前に照合します。",
+          status: "追跡高温",
+          proof: "焼却台帳"
+        },
+        capital: {
+          title: "資本保管デスク",
+          text: "創業者ID、特許担保、秘匿決済レール、私的評判シグナルを、市場接触前に封印します。",
+          status: "レール冷却",
+          proof: "委任ハッシュ"
+        },
+        route: {
+          title: "経路防護デスク",
+          text: "地区スキャン、ドローンヴェール、車列窓、人間のエスカレーション権限を、保護対象プリンシパルの周囲でモデル化します。",
+          status: "回廊グリーン",
+          proof: "実力監査"
+        }
+      },
       theater: {
         plaza: "プラザ",
         orbital: "軌道",
