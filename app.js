@@ -2457,6 +2457,16 @@ const translations = {
       buyerRoomArtifact: "Buyer Room",
       exportState: "Export State",
       packetFooter: "Packet export is staged for private-room review; public pages show only sanitized manifest fields.",
+      billOfMaterials: "Deployment Bill of Materials",
+      billOfMaterialsLead: "A sanitized implementation ledger for runtime, integration, evidence, and governance components.",
+      runtimeComponent: "Runtime Component",
+      integrationComponent: "Integration Component",
+      evidenceComponent: "Evidence Component",
+      governanceComponent: "Governance Component",
+      materialSource: "Source",
+      materialControl: "Control",
+      materialProof: "Proof",
+      materialStamp: "BOM stamp",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -2752,6 +2762,16 @@ const translations = {
       buyerRoomArtifact: "Mandate Room",
       exportState: "Export State",
       packetFooter: "Packet export is staged for private-room review; public pages show only sanitized mandate fields.",
+      billOfMaterials: "Deployment Bill of Materials",
+      billOfMaterialsLead: "A sanitized implementation ledger for runtime, integration, evidence, and governance components.",
+      runtimeComponent: "Runtime Component",
+      integrationComponent: "Integration Component",
+      evidenceComponent: "Evidence Component",
+      governanceComponent: "Governance Component",
+      materialSource: "Source",
+      materialControl: "Control",
+      materialProof: "Proof",
+      materialStamp: "BOM stamp",
       slaEnvelope: "Service-Level Envelope",
       slaEnvelopeLead: "Commercial commitments written as response, availability, retention, and jurisdiction boundaries before deployment begins.",
       responseCovenant: "Response Covenant",
@@ -5319,6 +5339,16 @@ const translations = {
       buyerRoomArtifact: "購入者ルーム",
       exportState: "エクスポート状態",
       packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済みマニフェスト項目のみ表示されます。",
+      billOfMaterials: "配備部材表",
+      billOfMaterialsLead: "ランタイム、統合、証拠、統治コンポーネントのサニタイズ済み実装台帳。",
+      runtimeComponent: "ランタイム部材",
+      integrationComponent: "統合部材",
+      evidenceComponent: "証拠部材",
+      governanceComponent: "統治部材",
+      materialSource: "ソース",
+      materialControl: "制御",
+      materialProof: "証明",
+      materialStamp: "BOM刻印",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -5614,6 +5644,16 @@ const translations = {
       buyerRoomArtifact: "委任ルーム",
       exportState: "エクスポート状態",
       packetFooter: "パケットエクスポートはプライベートルーム審査用にステージングされ、公開ページではサニタイズ済み委任項目のみ表示されます。",
+      billOfMaterials: "配備部材表",
+      billOfMaterialsLead: "ランタイム、統合、証拠、統治コンポーネントのサニタイズ済みサービス実装台帳。",
+      runtimeComponent: "ランタイム部材",
+      integrationComponent: "統合部材",
+      evidenceComponent: "証拠部材",
+      governanceComponent: "統治部材",
+      materialSource: "ソース",
+      materialControl: "制御",
+      materialProof: "証明",
+      materialStamp: "BOM刻印",
       slaEnvelope: "サービスレベル範囲",
       slaEnvelopeLead: "配備開始前に、応答、可用性、保持、管轄境界として記録される商用コミットメント。",
       responseCovenant: "応答契約",
@@ -6079,6 +6119,7 @@ const routeCertificate = document.querySelector("[data-route-certificate]");
 const routeReadiness = document.querySelector("[data-route-readiness]");
 const routeControlRoom = document.querySelector("[data-route-control-room]");
 const routeEvidencePacket = document.querySelector("[data-route-evidence-packet]");
+const routeBillOfMaterials = document.querySelector("[data-route-bom]");
 const routeSla = document.querySelector("[data-route-sla]");
 const routeTopology = document.querySelector("[data-route-topology]");
 const routeAdapters = document.querySelector("[data-route-adapters]");
@@ -6130,6 +6171,7 @@ const serviceRouteCertificate = document.querySelector("[data-service-certificat
 const serviceRouteReadiness = document.querySelector("[data-service-readiness]");
 const serviceRouteControlRoom = document.querySelector("[data-service-control-room]");
 const serviceRouteEvidencePacket = document.querySelector("[data-service-evidence-packet]");
+const serviceRouteBillOfMaterials = document.querySelector("[data-service-bom]");
 const serviceRouteSla = document.querySelector("[data-service-sla]");
 const serviceRouteTopology = document.querySelector("[data-service-topology]");
 const serviceRouteAdapters = document.querySelector("[data-service-adapters]");
@@ -7325,6 +7367,55 @@ function renderRouteEvidencePacket(target, labels, rows, packetId, footerText) {
   footer.className = "product-route-packet-foot";
   footer.textContent = footerText;
   target.replaceChildren(heading, manifest, grid, footer);
+}
+
+function renderRouteBillOfMaterials(target, labels, rows, stamp) {
+  if (!target) return;
+
+  const heading = document.createElement("div");
+  const label = document.createElement("span");
+  const lead = document.createElement("p");
+  const grid = document.createElement("div");
+  const footer = document.createElement("p");
+
+  heading.className = "product-route-bom-head";
+  label.textContent = labels.billOfMaterials;
+  lead.textContent = labels.billOfMaterialsLead;
+  heading.append(label, lead);
+
+  grid.className = "product-route-bom-grid";
+  rows.forEach(({ label: rowLabel, value, source, control, proof }, index) => {
+    const article = document.createElement("article");
+    const code = document.createElement("span");
+    const eyebrow = document.createElement("small");
+    const title = document.createElement("strong");
+    const list = document.createElement("dl");
+
+    code.textContent = `M-${index + 1}`;
+    eyebrow.textContent = rowLabel;
+    title.textContent = value;
+
+    [
+      [labels.materialSource, source],
+      [labels.materialControl, control],
+      [labels.materialProof, proof]
+    ].forEach(([term, detail]) => {
+      const row = document.createElement("div");
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      dt.textContent = term;
+      dd.textContent = detail;
+      row.append(dt, dd);
+      list.append(row);
+    });
+
+    article.append(code, eyebrow, title, list);
+    grid.append(article);
+  });
+
+  footer.className = "product-route-bom-foot";
+  footer.textContent = `${labels.materialStamp}: ${stamp}`;
+  target.replaceChildren(heading, grid, footer);
 }
 
 function renderRouteSla(target, labels, rows) {
@@ -8664,6 +8755,37 @@ function updateProductRoute() {
     }
   ], `${file.code}-PACKET-${file.clearance}`, dictionary.productRoute.packetFooter);
 
+  renderRouteBillOfMaterials(routeBillOfMaterials, dictionary.productRoute, [
+    {
+      label: dictionary.productRoute.runtimeComponent,
+      value: operations.packages[0],
+      source: file.surface,
+      control: operations.sla[0],
+      proof: file.tabs.specs.items[0] || file.tabs.specs.title
+    },
+    {
+      label: dictionary.productRoute.integrationComponent,
+      value: operations.integrations[0],
+      source: operations.regions[0],
+      control: file.tabs.deployment.items[0] || file.tabs.deployment.title,
+      proof: operations.integrations[1] || operations.integrations[0]
+    },
+    {
+      label: dictionary.productRoute.evidenceComponent,
+      value: `${file.code}-PACKET-${file.clearance}`,
+      source: field.label,
+      control: file.tabs.governance.items[0] || file.tabs.governance.title,
+      proof: dictionary.productRoute.assuranceMaterial
+    },
+    {
+      label: dictionary.productRoute.governanceComponent,
+      value: file.tabs.governance.title,
+      source: dictionary.productRoute.capitalObserver,
+      control: operations.sla[2] || operations.sla[0],
+      proof: file.tabs.governance.items[1] || file.tabs.governance.items[0] || file.clearance
+    }
+  ], `${file.code}-BOM-${file.clearance}`);
+
   renderRouteSla(routeSla, dictionary.productRoute, [
     {
       label: dictionary.productRoute.responseCovenant,
@@ -9830,6 +9952,37 @@ function updateServiceRoute() {
       text: file.operations.sla.join(" / ")
     }
   ], `${file.code}-PACKET-${file.clearance}`, routeLabels.packetFooter);
+
+  renderRouteBillOfMaterials(serviceRouteBillOfMaterials, routeLabels, [
+    {
+      label: routeLabels.runtimeComponent,
+      value: file.operations.packages[0],
+      source: file.surface,
+      control: file.operations.sla[0],
+      proof: file.tabs.stack.items[0] || file.tabs.stack.title
+    },
+    {
+      label: routeLabels.integrationComponent,
+      value: file.operations.integrations[0],
+      source: file.operations.regions[0],
+      control: file.tabs.deployment.items[0] || file.tabs.deployment.title,
+      proof: file.operations.integrations[1] || file.operations.integrations[0]
+    },
+    {
+      label: routeLabels.evidenceComponent,
+      value: `${file.code}-PACKET-${file.clearance}`,
+      source: file.field.label,
+      control: file.tabs.governance.items[0] || file.tabs.governance.title,
+      proof: routeLabels.assuranceMaterial
+    },
+    {
+      label: routeLabels.governanceComponent,
+      value: file.tabs.governance.title,
+      source: routeLabels.capitalObserver,
+      control: file.operations.sla[2] || file.operations.sla[0],
+      proof: file.tabs.governance.items[1] || file.tabs.governance.items[0] || file.clearance
+    }
+  ], `${file.code}-BOM-${file.clearance}`);
 
   renderRouteSla(serviceRouteSla, routeLabels, [
     {

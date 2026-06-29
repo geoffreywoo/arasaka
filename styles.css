@@ -5297,6 +5297,7 @@ a,
     "readiness meta"
     "control meta"
     "packet meta"
+    "bom meta"
     "sla meta"
     "topology meta"
     "adapters meta"
@@ -6654,6 +6655,152 @@ a,
   min-height: 88px;
   padding: 16px;
   border-left: 3px solid rgba(209, 177, 107, 0.5);
+}
+
+.product-route-bom {
+  grid-area: bom;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.28fr) minmax(0, 0.72fr);
+  grid-template-areas:
+    "head grid"
+    "foot grid";
+  gap: 1px;
+  min-width: 0;
+  padding: 1px;
+  border: 1px solid rgba(182, 243, 91, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(182, 243, 91, 0.16), rgba(116, 199, 216, 0.12), rgba(225, 7, 20, 0.1)),
+    rgba(255, 255, 255, 0.07);
+}
+
+.product-route-bom-head,
+.product-route-bom-grid article,
+.product-route-bom-foot {
+  min-width: 0;
+  background:
+    linear-gradient(145deg, rgba(182, 243, 91, 0.075), transparent 56%),
+    rgba(3, 9, 8, 0.95);
+}
+
+.product-route-bom-head {
+  grid-area: head;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-left: 3px solid var(--acid);
+}
+
+.product-route-bom-head span,
+.product-route-bom-grid small,
+.product-route-bom-grid article > span,
+.product-route-bom-grid dt,
+.product-route-bom-foot {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-route-bom-head span,
+.product-route-bom-grid article > span {
+  color: var(--acid);
+  font-size: 0.64rem;
+}
+
+.product-route-bom-head p,
+.product-route-bom-grid dd,
+.product-route-bom-foot {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.76rem;
+  line-height: 1.38;
+}
+
+.product-route-bom-grid {
+  grid-area: grid;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  min-width: 0;
+}
+
+.product-route-bom-grid article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 214px;
+  padding: 15px;
+}
+
+.product-route-bom-grid article::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(182, 243, 91, 0.14), transparent 48%),
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(255, 255, 255, 0.035) 18px 19px);
+}
+
+.product-route-bom-grid article::after {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 42px;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--acid));
+  opacity: 0.7;
+}
+
+.product-route-bom-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.product-route-bom-grid small {
+  color: var(--dim);
+  font-size: 0.62rem;
+}
+
+.product-route-bom-grid strong {
+  color: var(--paper);
+  font-size: 0.96rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.product-route-bom-grid dl {
+  display: grid;
+  gap: 7px;
+  margin: 2px 0 0;
+}
+
+.product-route-bom-grid dl div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.product-route-bom-grid dt {
+  color: rgba(182, 243, 91, 0.72);
+  font-size: 0.56rem;
+}
+
+.product-route-bom-grid dd {
+  overflow-wrap: anywhere;
+}
+
+.product-route-bom-foot {
+  grid-area: foot;
+  display: grid;
+  align-content: end;
+  min-height: 84px;
+  padding: 16px;
+  border-left: 3px solid rgba(182, 243, 91, 0.48);
 }
 
 .product-route-sla {
@@ -16901,6 +17048,7 @@ a,
       "readiness"
       "control"
       "packet"
+      "bom"
       "sla"
       "topology"
       "adapters"
@@ -16975,6 +17123,7 @@ a,
   .product-route-readiness,
   .product-route-control,
   .product-route-packet,
+  .product-route-bom,
   .product-route-sla,
   .product-route-adapters,
   .product-route-contract,
@@ -17017,6 +17166,8 @@ a,
   .product-route-packet-head,
   .product-route-packet-manifest,
   .product-route-packet-foot,
+  .product-route-bom-head,
+  .product-route-bom-foot,
   .product-route-sla-head,
   .product-route-adapters-head,
   .product-route-contract-head,
@@ -17114,6 +17265,18 @@ a,
   }
 
   .product-route-packet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-route-bom {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "grid"
+      "foot";
+  }
+
+  .product-route-bom-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -18036,6 +18199,14 @@ a,
       "foot";
   }
 
+  .product-route-bom {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "grid"
+      "foot";
+  }
+
   .product-route-readiness-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -18053,6 +18224,10 @@ a,
   }
 
   .product-route-packet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-bom-grid {
     grid-template-columns: 1fr;
   }
 
@@ -18472,6 +18647,7 @@ a,
   .product-route-readiness,
   .product-route-control,
   .product-route-packet,
+  .product-route-bom,
   .product-route-sla,
   .product-route-topology,
   .product-route-adapters,
@@ -18514,6 +18690,7 @@ a,
   .product-route-readiness-grid article,
   .product-route-control-deck article,
   .product-route-packet-grid article,
+  .product-route-bom-grid article,
   .product-route-sla-grid article,
   .product-route-config-grid article,
   .product-route-decision-grid article,
@@ -18573,6 +18750,10 @@ a,
   }
 
   .product-route-packet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-route-bom-grid {
     grid-template-columns: 1fr;
   }
 
