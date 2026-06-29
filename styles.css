@@ -2025,6 +2025,7 @@ a,
 .lore-console,
 .lore-briefings,
 .lore-chronology,
+.counterparty-registry,
 .source-vault,
 .visual-evidence,
 .signal-intel {
@@ -2463,6 +2464,140 @@ a,
 .lore-chronology a:focus-visible {
   border-color: currentColor;
   outline: 0;
+}
+
+.counterparty-registry {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 1px;
+  border: 1px solid rgba(225, 7, 20, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(225, 7, 20, 0.18), rgba(116, 199, 216, 0.14), rgba(209, 177, 107, 0.12)),
+    rgba(255, 255, 255, 0.08);
+}
+
+.counterparty-head,
+.counterparty-registry article {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(225, 7, 20, 0.09), transparent 58%),
+    rgba(6, 8, 10, 0.93);
+}
+
+.counterparty-head {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-left: 3px solid var(--red);
+}
+
+.counterparty-head span,
+.counterparty-registry article > span,
+.counterparty-registry dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.counterparty-head span,
+.counterparty-registry article > span {
+  color: var(--red);
+}
+
+.counterparty-head strong {
+  color: var(--paper);
+  font-size: 1.2rem;
+  line-height: 1.06;
+}
+
+.counterparty-head p,
+.counterparty-registry p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.counterparty-registry article {
+  display: grid;
+  align-content: start;
+  gap: 11px;
+  min-height: 210px;
+  padding: 16px;
+}
+
+.counterparty-registry article::before,
+.counterparty-registry article::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.counterparty-registry article::before {
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 26px, rgba(225, 7, 20, 0.045) 26px 27px),
+    linear-gradient(135deg, rgba(116, 199, 216, 0.08), transparent 58%);
+}
+
+.counterparty-registry article::after {
+  right: 13px;
+  top: 13px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(209, 177, 107, 0.34);
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+}
+
+.counterparty-registry article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.counterparty-registry h3 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.08rem;
+  line-height: 1.05;
+}
+
+.counterparty-registry dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: auto 0 0;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.counterparty-registry dl div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  padding: 9px;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.counterparty-registry dt {
+  color: var(--dim);
+}
+
+.counterparty-registry dd {
+  margin: 0;
+  color: var(--gold);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.18;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .source-vault {
@@ -16026,6 +16161,14 @@ a,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .counterparty-registry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .counterparty-head {
+    grid-column: 1 / -1;
+  }
+
   .source-vault {
     grid-template-columns: 1fr 1fr;
   }
@@ -17086,6 +17229,14 @@ a,
     min-height: 0;
   }
 
+  .counterparty-registry {
+    grid-template-columns: 1fr;
+  }
+
+  .counterparty-registry article {
+    min-height: 0;
+  }
+
   .source-vault figure,
   .source-vault img {
     min-height: 190px;
@@ -18067,6 +18218,7 @@ a,
   .lore-briefings,
   .lore-chronology,
   .lore-chronology ol,
+  .counterparty-registry,
   .source-vault,
   .evidence-wall,
   .visual-evidence,

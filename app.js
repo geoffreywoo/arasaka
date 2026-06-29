@@ -392,6 +392,44 @@ const translations = {
           title: "Street reputation prices capital before markets can react.",
           text: "Legends, fixers, founders, and off-ledger liquidity become a single influence rail."
         }
+      },
+      counterparty: {
+        aria: "Material counterparty registry",
+        eyebrow: "Material Counterparty Registry",
+        title: "Named pressure points are resolved as corporate risk surfaces.",
+        text: "Public record entities from the Cyberpunk 2077 universe are indexed here as controlled Arasaka operating signals, not fan biography.",
+        signal: "Signal",
+        route: "Route",
+        saburo: {
+          title: "Saburo Arasaka",
+          text: "Founder authority, succession gravity, and family-command continuity define the corporate root.",
+          signal: "Dynastic command"
+        },
+        yorinobu: {
+          title: "Yorinobu Arasaka",
+          text: "Internal volatility makes succession politics a live operating risk, not a family footnote.",
+          signal: "Succession rupture"
+        },
+        smasher: {
+          title: "Adam Smasher",
+          text: "Full-conversion deterrence turns executive protection into a sovereign-force theater.",
+          signal: "Kinetic intimidation"
+        },
+        alt: {
+          title: "Alt Cunningham",
+          text: "Construct intelligence beyond ordinary custody turns the net into a contested jurisdiction.",
+          signal: "Blackwall adjacency"
+        },
+        silverhand: {
+          title: "Johnny Silverhand",
+          text: "Anti-corporate myth is treated as blast-radius evidence for tower resilience and memory custody.",
+          signal: "Legend risk"
+        },
+        v: {
+          title: "Konpeki Relic Host",
+          text: "A mercenary carrier event proves that immortality infrastructure fails first at access control.",
+          signal: "Biochip escape"
+        }
       }
     },
     sourceVault: {
@@ -3257,6 +3295,44 @@ const translations = {
           kicker: "アフターライフ市場",
           title: "ストリート評価は、市場より先に資本を価格付けします。",
           text: "伝説、フィクサー、創業者、オフ台帳流動性が単一の影響レールになります。"
+        }
+      },
+      counterparty: {
+        aria: "重要カウンターパーティ登録簿",
+        eyebrow: "重要カウンターパーティ登録簿",
+        title: "名指しの圧力点は、企業リスク面として解決されます。",
+        text: "Cyberpunk 2077ユニバースの公開記録エンティティは、ファン向け略歴ではなく、制御済み荒坂運用シグナルとして索引化されています。",
+        signal: "シグナル",
+        route: "経路",
+        saburo: {
+          title: "サブロウ・アラサカ",
+          text: "創業者権限、継承重力、一族指揮の継続性が企業ルートを定義します。",
+          signal: "王朝的指揮"
+        },
+        yorinobu: {
+          title: "ヨリノブ・アラサカ",
+          text: "内部変動性は継承政治を一族の脚注ではなく、稼働中の運用リスクに変えます。",
+          signal: "継承断裂"
+        },
+        smasher: {
+          title: "アダム・スマッシャー",
+          text: "全身換装型の抑止力は、役員防護を主権武力シアターへ変えます。",
+          signal: "動的威圧"
+        },
+        alt: {
+          title: "オルト・カニンガム",
+          text: "通常保管を超えるコンストラクト知能は、ネットを係争管轄へ変えます。",
+          signal: "ブラックウォール隣接"
+        },
+        silverhand: {
+          title: "ジョニー・シルヴァーハンド",
+          text: "反企業神話は、タワー耐性と記憶保管のための爆風半径証拠として扱われます。",
+          signal: "伝説リスク"
+        },
+        v: {
+          title: "紺碧レリック宿主",
+          text: "傭兵キャリア事案は、不死性インフラが最初にアクセス制御で失敗することを証明します。",
+          signal: "バイオチップ流出"
         }
       }
     },
