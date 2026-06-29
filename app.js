@@ -116,6 +116,80 @@ const translations = {
       networkTitle: "A public map of private infrastructure.",
       networkCopy: "The library is designed as a connective layer: product files hold commercial packaging, service files hold procurement fit, and this page holds the engineering language that binds them together."
     },
+    techIce: {
+      back: "Return to technology library",
+      kicker: "TECH-ICE-77 / COUNTERINTRUSION RUNTIME",
+      title: "Hostile-route computation for sovereign networks.",
+      summary: "A compartmentalized counterintrusion runtime that turns every unauthorized netpath into a witnessed, disposable, and legally attributable quarantine event.",
+      openProduct: "Open ICE product file",
+      openService: "Open counterintrusion service",
+      visualCaption: "ICE-77 appliance render, public catalog crop.",
+      readouts: {
+        response: {
+          label: "Route burn response",
+          copy: "Median branch isolation from first hostile signature to dead-route allocation."
+        },
+        witness: {
+          label: "Witness quorum",
+          copy: "Minimum independent custody nodes required before a quarantine receipt is signed."
+        },
+        memory: {
+          label: "Cold memory",
+          copy: "Default retention for hostile path fragments before statutory vaulting rules apply."
+        }
+      },
+      stackEyebrow: "Runtime Stack",
+      stackTitle: "Four containment layers, one accountable receipt.",
+      stackCopy: "The runtime treats an intrusion as both a systems event and a governance event. Every computation is designed to preserve tactical advantage without leaving the client unable to prove what happened.",
+      layers: {
+        sentry: {
+          title: "Sentry membrane",
+          copy: "Passive signature drift, impossible credential geometry, and deep packet cadence are scored before the intruder reaches a valuable surface."
+        },
+        trap: {
+          title: "Trap partition",
+          copy: "Suspect paths are mirrored into disposable compute where decoy assets measure intent, toolchain, and escalation appetite."
+        },
+        burn: {
+          title: "Route burn",
+          copy: "Confirmed hostile paths are severed, memory-capped, and mapped to an evidence object before the attacker can pivot."
+        },
+        receipt: {
+          title: "Quarantine receipt",
+          copy: "A board-readable receipt binds time, path, signature, and proportional response into a sovereign custody ledger."
+        }
+      },
+      schematicEyebrow: "Signal Path",
+      schematicTitle: "Intrusion becomes evidence before it becomes damage.",
+      signal: {
+        ingress: "Ingress probe",
+        spoof: "Spoof corridor",
+        burn: "Branch burn",
+        receipt: "Quarantine receipt"
+      },
+      specEyebrow: "Engineering Envelope",
+      specTitle: "Deployable constraints.",
+      specs: {
+        compute: {
+          label: "Compute isolation",
+          copy: "Ephemeral execution pools with one-way forensic export and no persistent hostile-write surface."
+        },
+        policy: {
+          label: "Policy plane",
+          copy: "Rulesets are compiled from approved escalation policies, export controls, and client-specific proportionality limits."
+        },
+        blackwall: {
+          label: "Blackwall adjacency",
+          copy: "An observer process scores anomalous machine intent without granting the client network a direct Blackwall dependency."
+        },
+        failover: {
+          label: "Failover mode",
+          copy: "If witness quorum fails, authority collapses to named human operators and records the reason for board review."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "This dossier sits inside the broader Arasaka security stack."
+    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -3573,6 +3647,80 @@ const translations = {
       networkEyebrow: "接続ページ",
       networkTitle: "私的インフラの公開地図。",
       networkCopy: "このライブラリは接続層として設計されています。製品ファイルは商用パッケージを、サービスファイルは調達適合を、このページはそれらを結ぶ工学言語を保持します。"
+    },
+    techIce: {
+      back: "技術ライブラリへ戻る",
+      kicker: "TECH-ICE-77 / 対侵入ランタイム",
+      title: "主権ネットワークの敵対経路計算。",
+      summary: "すべての未許可ネット経路を、立会済み、使い捨て、法的帰属可能な隔離事象へ変換する区画化された対侵入ランタイム。",
+      openProduct: "ICE製品ファイルを開く",
+      openService: "対侵入サービスを開く",
+      visualCaption: "ICE-77機器レンダー、公開カタログ切り抜き。",
+      readouts: {
+        response: {
+          label: "経路焼却応答",
+          copy: "初回敵対署名から死経路割当までの中央値。"
+        },
+        witness: {
+          label: "立会クォーラム",
+          copy: "隔離レシート署名前に必要な独立保管ノードの最小数。"
+        },
+        memory: {
+          label: "低温メモリ",
+          copy: "法定保管規則が適用される前の敵対経路断片の標準保持期間。"
+        }
+      },
+      stackEyebrow: "ランタイムスタック",
+      stackTitle: "四つの封じ込め層、一つの説明責任あるレシート。",
+      stackCopy: "このランタイムは侵入をシステム事象であると同時に統治事象として扱います。すべての計算は、顧客が事実を証明できない状態に陥らず戦術優位を維持するよう設計されています。",
+      layers: {
+        sentry: {
+          title: "哨戒膜",
+          copy: "侵入者が価値面へ到達する前に、受動署名偏移、不可能な認証情報幾何、深層パケット cadence を採点します。"
+        },
+        trap: {
+          title: "罠区画",
+          copy: "疑わしい経路を使い捨て計算へミラー化し、囮資産で意図、ツールチェーン、エスカレーション意欲を測定します。"
+        },
+        burn: {
+          title: "経路焼却",
+          copy: "確定した敵対経路を切断し、メモリを制限し、攻撃者が横展開する前に証跡オブジェクトへ写像します。"
+        },
+        receipt: {
+          title: "隔離レシート",
+          copy: "取締役会が読めるレシートが、時刻、経路、署名、比例対応を主権保管台帳へ結合します。"
+        }
+      },
+      schematicEyebrow: "信号経路",
+      schematicTitle: "侵入は損害になる前に証拠になる。",
+      signal: {
+        ingress: "入口プローブ",
+        spoof: "偽装回廊",
+        burn: "分岐焼却",
+        receipt: "隔離レシート"
+      },
+      specEyebrow: "工学範囲",
+      specTitle: "配備可能な制約。",
+      specs: {
+        compute: {
+          label: "計算隔離",
+          copy: "一方向フォレンジック出力を持ち、永続的な敵対書込面を持たない一時実行プール。"
+        },
+        policy: {
+          label: "ポリシー面",
+          copy: "承認済みエスカレーション方針、輸出管理、顧客固有の比例性限界からルールセットをコンパイルします。"
+        },
+        blackwall: {
+          label: "ブラックウォール隣接",
+          copy: "観測プロセスが、顧客ネットワークへ直接的なブラックウォール依存を与えず異常な機械意図を採点します。"
+        },
+        failover: {
+          label: "フェイルオーバーモード",
+          copy: "立会クォーラムが失敗した場合、権限は指名済み人間オペレーターへ縮退し、取締役会レビュー用に理由を記録します。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "この記録は荒坂セキュリティスタック全体の内部に位置します。"
     },
     spine: {
       node: "公開ノード",

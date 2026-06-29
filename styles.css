@@ -5911,6 +5911,251 @@ a,
   justify-content: end;
 }
 
+.deep-tech-main {
+  gap: 16px;
+}
+
+.deep-tech-hero,
+.deep-tech-system,
+.deep-tech-schematic,
+.deep-tech-specs,
+.deep-tech-network-panel {
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(225, 7, 20, 0.12), transparent 44%, rgba(116, 199, 216, 0.09)),
+    rgba(7, 9, 12, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.deep-tech-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.56fr) minmax(280px, 0.44fr);
+  min-height: 620px;
+}
+
+.deep-tech-hero::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 76% 18%, rgba(225, 7, 20, 0.2), transparent 32%),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(255, 255, 255, 0.035) 30px 31px);
+  opacity: 0.84;
+}
+
+.deep-tech-hero-copy,
+.deep-tech-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.deep-tech-hero-copy {
+  display: grid;
+  align-content: end;
+  gap: 14px;
+  padding: 28px;
+}
+
+.deep-tech-hero-copy > span,
+.deep-tech-hero-copy > strong,
+.deep-tech-readout span,
+.deep-tech-layer-grid article > span,
+.deep-tech-schematic > div > span,
+.deep-tech-signal article > span,
+.deep-tech-spec-grid article > span,
+.deep-tech-network-panel > div > span {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.deep-tech-hero-copy > span,
+.deep-tech-schematic > div > span,
+.deep-tech-network-panel > div > span {
+  color: var(--cyan);
+}
+
+.deep-tech-hero-copy > strong,
+.deep-tech-readout strong,
+.deep-tech-layer-grid article > span,
+.deep-tech-signal article > span {
+  color: var(--acid);
+}
+
+.deep-tech-hero-copy h1 {
+  max-width: 840px;
+  margin: 0;
+  font-size: clamp(3rem, 5.8vw, 5rem);
+  line-height: 0.86;
+  overflow-wrap: anywhere;
+}
+
+.deep-tech-hero-copy p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(243, 244, 242, 0.76);
+  font-size: 1.05rem;
+}
+
+.deep-tech-visual {
+  display: grid;
+  align-content: stretch;
+  min-height: 100%;
+  margin: 0;
+  border-left: 1px solid rgba(116, 199, 216, 0.18);
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.58)),
+    rgba(255, 255, 255, 0.035);
+}
+
+.deep-tech-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.deep-tech-visual figcaption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  max-width: min(340px, calc(100% - 28px));
+  padding: 8px 10px;
+  border: 1px solid rgba(116, 199, 216, 0.24);
+  border-radius: 4px;
+  color: rgba(243, 244, 242, 0.78);
+  background: rgba(0, 0, 0, 0.58);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.deep-tech-readout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.2);
+  border-radius: 6px;
+  background: rgba(116, 199, 216, 0.16);
+}
+
+.deep-tech-readout article,
+.deep-tech-layer-grid article,
+.deep-tech-signal article,
+.deep-tech-spec-grid article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 16px;
+  background: rgba(7, 9, 12, 0.9);
+}
+
+.deep-tech-readout p,
+.deep-tech-layer-grid p,
+.deep-tech-spec-grid p {
+  margin: 0;
+  color: rgba(243, 244, 242, 0.7);
+}
+
+.deep-tech-readout strong {
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
+  line-height: 0.9;
+}
+
+.deep-tech-system,
+.deep-tech-specs {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.33fr) minmax(0, 0.67fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.deep-tech-layer-grid,
+.deep-tech-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.deep-tech-layer-grid h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.85rem);
+  line-height: 0.98;
+}
+
+.deep-tech-schematic,
+.deep-tech-network-panel {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 0.66fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.deep-tech-schematic > div:first-child,
+.deep-tech-network-panel > div:first-child {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.deep-tech-schematic h2,
+.deep-tech-network-panel h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 0.96;
+}
+
+.deep-tech-signal {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 199, 216, 0.18);
+  border-radius: 5px;
+  background: rgba(116, 199, 216, 0.18);
+}
+
+.deep-tech-signal article {
+  position: relative;
+}
+
+.deep-tech-signal article:not(:last-child)::after {
+  position: absolute;
+  right: -9px;
+  top: 50%;
+  z-index: 2;
+  width: 17px;
+  height: 17px;
+  content: "";
+  border-top: 1px solid rgba(182, 243, 91, 0.7);
+  border-right: 1px solid rgba(182, 243, 91, 0.7);
+  transform: translateY(-50%) rotate(45deg);
+  background: rgba(7, 9, 12, 0.9);
+}
+
+.deep-tech-signal strong,
+.deep-tech-spec-grid strong {
+  color: rgba(243, 244, 242, 0.9);
+  font-size: 1rem;
+}
+
+.deep-tech-signal small {
+  color: rgba(116, 199, 216, 0.86);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+}
+
+.deep-tech-spec-grid article > span {
+  color: var(--cyan);
+}
+
 .product-route-actions {
   display: flex;
   flex-wrap: wrap;
@@ -21662,6 +21907,28 @@ a,
   .tech-network-links {
     justify-content: start;
   }
+
+  .deep-tech-hero,
+  .deep-tech-system,
+  .deep-tech-schematic,
+  .deep-tech-specs,
+  .deep-tech-network-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .deep-tech-visual {
+    min-height: 360px;
+    border-top: 1px solid rgba(116, 199, 216, 0.18);
+    border-left: 0;
+  }
+
+  .deep-tech-signal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deep-tech-signal article:not(:last-child)::after {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -21714,5 +21981,54 @@ a,
 
   .tech-spec-row > * {
     padding: 10px;
+  }
+
+  .deep-tech-hero {
+    min-height: 0;
+  }
+
+  .deep-tech-hero-copy {
+    padding: 18px;
+  }
+
+  .deep-tech-hero-copy h1 {
+    font-size: 2.75rem;
+  }
+
+  .deep-tech-hero-copy p {
+    font-size: 0.98rem;
+  }
+
+  .deep-tech-visual {
+    min-height: 270px;
+  }
+
+  .deep-tech-visual img {
+    min-height: 270px;
+  }
+
+  .deep-tech-readout,
+  .deep-tech-layer-grid,
+  .deep-tech-spec-grid,
+  .deep-tech-signal {
+    grid-template-columns: 1fr;
+  }
+
+  .deep-tech-system,
+  .deep-tech-schematic,
+  .deep-tech-specs,
+  .deep-tech-network-panel {
+    padding: 10px;
+  }
+
+  .deep-tech-readout article,
+  .deep-tech-layer-grid article,
+  .deep-tech-signal article,
+  .deep-tech-spec-grid article {
+    padding: 13px;
+  }
+
+  .deep-tech-readout strong {
+    font-size: 2.4rem;
   }
 }
