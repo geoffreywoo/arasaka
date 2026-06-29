@@ -5,6 +5,7 @@ const translations = {
     nav: {
       home: "Home",
       divisions: "Divisions",
+      subsidiaries: "Subsidiaries",
       services: "Services",
       products: "Products",
       foundry: "Foundry",
@@ -660,6 +661,63 @@ const translations = {
         title: "Netrunner Intelligence",
         text: "Black ICE, memetic risk analysis, executive memory defense, and hostile AI containment."
       }
+    },
+    subsidiaries: {
+      eyebrow: "Operating Companies",
+      title: "The group is structured as a sovereign-grade control stack.",
+      text: "Each operating company carries its own jurisdiction, mandate lane, and assurance route while remaining bound to the Tokyo root.",
+      aria: "Arasaka operating company registry",
+      jurisdiction: "Jurisdiction",
+      mandate: "Mandate",
+      clearance: "Clearance",
+      route: "Route",
+      open: "Open registry route",
+      security: {
+        title: "Arasaka Security K.K.",
+        text: "Executive protection, autonomous response, and theater command for physical assets under hostile pressure.",
+        jurisdiction: "Tokyo / Night City",
+        mandate: "Autonomous protection",
+        clearance: "SEC-12",
+        route: "SV-04",
+        href: "services/autonomous-protection/"
+      },
+      banking: {
+        title: "Arasaka Capital Systems",
+        text: "Black Ledger custody, founder liquidity, patent gravity, and quiet settlement rails for sovereign counterparties.",
+        jurisdiction: "Tokyo / Frankfurt",
+        mandate: "Capital continuity",
+        clearance: "BL-00",
+        route: "SV-03",
+        href: "services/black-ledger-mandate/"
+      },
+      cybernetics: {
+        title: "Arasaka Cybernetics Foundry",
+        text: "Neural ports, implant firmware, combat prosthetics, and identity hardware for sanctioned operators.",
+        jurisdiction: "Osaka / Orbital",
+        mandate: "Body substrate",
+        clearance: "CY-19",
+        route: "Foundry",
+        href: "#foundry"
+      },
+      intelligence: {
+        title: "Arasaka Netrunner Bureau",
+        text: "Black ICE, rogue-machine quarantine, hostile signature markets, and memory-safe counterintrusion cells.",
+        jurisdiction: "Night City / Blackwall Edge",
+        mandate: "Counterintrusion",
+        clearance: "ICE-77",
+        route: "SV-02",
+        href: "services/counterintrusion/"
+      },
+      continuity: {
+        title: "Mikoshi Continuity Office",
+        text: "Engram custody, construct partitioning, succession rehearsal, and post-biological governance proofs.",
+        jurisdiction: "Orbital Cold / Tokyo",
+        mandate: "Neural continuity",
+        clearance: "AA-90",
+        route: "AR-RELIC",
+        href: "products/relic/"
+      },
+      foot: "Registry extracts are public-safe summaries. Control ledgers, beneficial counterparties, and deployment maps remain private-room material."
     },
     services: {
       eyebrow: "Services",
@@ -3047,6 +3105,7 @@ const translations = {
     nav: {
       home: "ホーム",
       divisions: "事業部門",
+      subsidiaries: "子会社",
       services: "サービス",
       products: "製品群",
       foundry: "鋳造所",
@@ -3702,6 +3761,63 @@ const translations = {
         title: "ネットランナー情報部",
         text: "ブラックICE、ミームリスク分析、役員記憶防衛、敵対AI封じ込めを担います。"
       }
+    },
+    subsidiaries: {
+      eyebrow: "運用会社",
+      title: "グループは主権級の制御スタックとして構成されています。",
+      text: "各運用会社は独自の管轄、委任レーン、保証経路を持ちながら、東京ルートへ結合されています。",
+      aria: "荒坂運用会社登録簿",
+      jurisdiction: "管轄",
+      mandate: "委任",
+      clearance: "認証",
+      route: "経路",
+      open: "登録経路を開く",
+      security: {
+        title: "荒坂警備株式会社",
+        text: "敵対圧力下の物理資産向けに、要人防護、自律応答、戦域指揮を提供します。",
+        jurisdiction: "東京 / ナイトシティ",
+        mandate: "自律防護",
+        clearance: "SEC-12",
+        route: "SV-04",
+        href: "services/autonomous-protection/"
+      },
+      banking: {
+        title: "荒坂資本システム",
+        text: "主権的相手方のためのブラック台帳保管、創業者流動性、特許重力、静かな決済レール。",
+        jurisdiction: "東京 / フランクフルト",
+        mandate: "資本継続",
+        clearance: "BL-00",
+        route: "SV-03",
+        href: "services/black-ledger-mandate/"
+      },
+      cybernetics: {
+        title: "荒坂サイバネティクス鋳造所",
+        text: "認可オペレーター向けの神経ポート、インプラントファームウェア、戦闘義肢、IDハードウェア。",
+        jurisdiction: "大阪 / 軌道",
+        mandate: "身体基層",
+        clearance: "CY-19",
+        route: "鋳造所",
+        href: "#foundry"
+      },
+      intelligence: {
+        title: "荒坂ネットランナー局",
+        text: "ブラックICE、ローグマシン隔離、敵対署名市場、記憶安全対侵入セルを運用します。",
+        jurisdiction: "ナイトシティ / ブラックウォール端",
+        mandate: "対侵入",
+        clearance: "ICE-77",
+        route: "SV-02",
+        href: "services/counterintrusion/"
+      },
+      continuity: {
+        title: "神輿継続性オフィス",
+        text: "エングラム保管、構成体分割、継承演習、死後統治証明を扱います。",
+        jurisdiction: "軌道冷却 / 東京",
+        mandate: "神経継続",
+        clearance: "AA-90",
+        route: "AR-RELIC",
+        href: "products/relic/"
+      },
+      foot: "登録簿抜粋は公開安全な要約です。制御台帳、実質的相手方、配備地図はプライベートルーム資料として保持されます。"
     },
     services: {
       eyebrow: "サービス",
@@ -6330,6 +6446,7 @@ let activeSectionId = "top";
 const sectionLabelKeys = {
   top: "nav.home",
   divisions: "nav.divisions",
+  subsidiaries: "nav.subsidiaries",
   services: "nav.services",
   products: "nav.products",
   foundry: "nav.foundry",
