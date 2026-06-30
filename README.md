@@ -118,6 +118,7 @@ http://127.0.0.1:4187/services/counterintrusion/response-protocol/
 http://127.0.0.1:4187/services/black-ledger-mandate/
 http://127.0.0.1:4187/services/black-ledger-mandate/settlement-protocol/
 http://127.0.0.1:4187/services/autonomous-protection/
+http://127.0.0.1:4187/services/autonomous-protection/route-protocol/
 ```
 
 ## Deployment

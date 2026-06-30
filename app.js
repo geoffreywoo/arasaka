@@ -650,6 +650,70 @@ const translations = {
       mapTitle: "Swarm routes autonomous protection through force governance, regional command, operations watchfloor, and board evidence.",
       mapCopy: "The product file makes the formation purchasable. The governance dossier constrains machine action. The service route places human operators around the moving principal."
     },
+    protectionProtocol: {
+      productCta: "Open route protocol",
+      openProtocol: "Open route protocol",
+      back: "Return to Autonomous Protection",
+      kicker: "SV-04 / ROUTE PROTOCOL",
+      title: "A protected route is a temporary sovereign border.",
+      summary: "Autonomous Protection activates when a principal, convoy, or custody object must cross hostile urban terrain without turning machine speed into unowned force. The protocol binds route intake, drone veil staging, civilian exclusion proof, escalation freeze, extraction gates, and after-action receipts into one command surface.",
+      openSwarm: "Open swarm formation spec",
+      openGovernance: "Open force governance",
+      visualCaption: "Autonomous Protection route plate, generated Arasaka catalog image.",
+      readouts: {
+        staging: {
+          label: "Route staging",
+          copy: "Default watchfloor interval from principal confirmation to district veil pre-positioning."
+        },
+        exclusion: {
+          label: "Exclusion proof",
+          copy: "Required civilian uncertainty coverage before the corridor can narrow around the protected object."
+        },
+        override: {
+          label: "Command freeze",
+          copy: "Maximum handoff window before autonomous assets hold posture and wait for human escalation."
+        }
+      },
+      modulesEyebrow: "Route Chain",
+      modulesTitle: "The detail turns movement into a governed command object.",
+      modulesCopy: "Protection is not simply a drone escort. It is a temporary city contract between a principal, regional command, street telemetry, and a named officer who owns every visible act of force.",
+      modules: {
+        intake: {
+          title: "Principal Intake Cell",
+          copy: "Classifies the protected person, vehicle, construct, or custody object before route authority leaves the watchfloor."
+        },
+        veil: {
+          title: "Drone Veil Staging",
+          copy: "Pre-positions sensor nodes, decoys, and obstruction assets without exposing the intended route to hostile observers."
+        },
+        exclusion: {
+          title: "Civilian Exclusion Proof",
+          copy: "Marks where the detail cannot act, then compresses the live corridor only after noncombatant uncertainty clears threshold."
+        },
+        extraction: {
+          title: "Extraction Gate Receipt",
+          copy: "Binds route closure, force posture, escalation officer, public exposure, and after-action evidence into a sealed receipt."
+        }
+      },
+      envelopeEyebrow: "Route Envelope",
+      envelopeTitle: "The corridor is legal before it is tactical.",
+      envelopeCopy: "Autonomous Protection cannot enter live posture until the principal class, corridor, permitted formations, exclusion map, escalation authority, and abort path are named in the same mandate.",
+      matrix: {
+        principal: "Principal class",
+        principalValue: "Executive, sovereign envoy, construct carrier, patent courier, or capital custody object",
+        corridor: "Corridor type",
+        corridorValue: "Tower perimeter, hostile district crossing, port transfer, medical extraction, or private-city transit lane",
+        formation: "Permitted formation",
+        formationValue: "Soft veil, sensor ring, traffic denial, hard corridor, overwatch, extraction gate, or visible deterrence",
+        command: "Command authority",
+        commandValue: "Principal marshal, regional watchfloor, rules-of-force witness, and named escalation officer",
+        exclusion: "Excluded use",
+        exclusionValue: "Unmapped crowd pressure, unsponsored pursuit, autonomous lethal closure, unlogged district denial"
+      },
+      mapEyebrow: "Protection Routing",
+      mapTitle: "Autonomous Protection routes principal movement through Swarm formations, force governance, regional command, and board evidence.",
+      mapCopy: "The service page supplies the operators. The product file defines formation geometry. The governance dossier constrains machine speed. The board docket decides which acts of force survive as proof."
+    },
     continuityProtocol: {
       productCta: "Open activation protocol",
       back: "Return to Executive Continuity",
@@ -5599,6 +5663,70 @@ const translations = {
       mapEyebrow: "警護経路",
       mapTitle: "Swarmは自律警護を戦力統治、地域指揮、運用監視室、取締役会証拠へルーティングします。",
       mapCopy: "製品ファイルは編隊を購入可能にします。統治ドシエは機械行動を制約します。サービス経路は移動主体の周囲に人間オペレーターを配置します。"
+    },
+    protectionProtocol: {
+      productCta: "経路プロトコルを開く",
+      openProtocol: "経路プロトコルを開く",
+      back: "Autonomous Protectionへ戻る",
+      kicker: "SV-04 / 経路プロトコル",
+      title: "保護された経路は一時的な主権境界です。",
+      summary: "Autonomous Protectionは、主体、護送、または保管対象が、機械速度を所有者不明の戦力へ変えずに敵対的都市地形を横断しなければならない時に起動します。このプロトコルは経路受領、ドローン遮蔽配置、民間人排除証明、エスカレーション凍結、抽出ゲート、事後受領書を一つの指揮面へ結合します。",
+      openSwarm: "スウォーム編隊仕様を開く",
+      openGovernance: "戦力統治を開く",
+      visualCaption: "Autonomous Protection経路プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        staging: {
+          label: "経路配置",
+          copy: "主体確認から地区遮蔽の事前配置までの既定監視室間隔。"
+        },
+        exclusion: {
+          label: "排除証明",
+          copy: "保護対象の周囲で回廊を狭める前に必要な民間人不確実性カバレッジ。"
+        },
+        override: {
+          label: "指揮凍結",
+          copy: "自律資産が姿勢を保持し、人間エスカレーションを待つ前の最大引継ぎ窓。"
+        }
+      },
+      modulesEyebrow: "経路チェーン",
+      modulesTitle: "警護詳細は移動を統治済み指揮オブジェクトへ変換します。",
+      modulesCopy: "警護は単なるドローン護衛ではありません。主体、地域指揮、街路テレメトリー、すべての可視戦力行為を所有する指名済み責任者の間に結ばれる一時的な都市契約です。",
+      modules: {
+        intake: {
+          title: "主体受領セル",
+          copy: "経路権限が監視室を離れる前に、保護対象の人物、車両、構成体、または保管オブジェクトを分類します。"
+        },
+        veil: {
+          title: "ドローン遮蔽配置",
+          copy: "意図された経路を敵対観測者へ露出せずに、センサーノード、デコイ、妨害資産を事前配置します。"
+        },
+        exclusion: {
+          title: "民間人排除証明",
+          copy: "詳細が作用できない場所を標示し、非戦闘員不確実性がしきい値を下回った後にのみライブ回廊を圧縮します。"
+        },
+        extraction: {
+          title: "抽出ゲート受領書",
+          copy: "経路閉鎖、戦力姿勢、エスカレーション責任者、公開露出、事後証拠を封印済み受領書へ結合します。"
+        }
+      },
+      envelopeEyebrow: "経路範囲",
+      envelopeTitle: "回廊は戦術的である前に合法です。",
+      envelopeCopy: "Autonomous Protectionは、主体クラス、回廊、許可済み編隊、排除地図、エスカレーション権限、中止経路が同一の委任で指名されるまでライブ姿勢へ入れません。",
+      matrix: {
+        principal: "主体クラス",
+        principalValue: "役員、主権使節、構成体運搬者、特許クーリエ、または資本保管オブジェクト",
+        corridor: "回廊タイプ",
+        corridorValue: "タワー境界、敵対地区横断、港湾移送、医療抽出、または私設都市通行レーン",
+        formation: "許可済み編隊",
+        formationValue: "ソフト遮蔽、センサーリング、交通拒否、ハード回廊、上空監視、抽出ゲート、または可視抑止",
+        command: "指揮権限",
+        commandValue: "プリンシパル・マーシャル、地域監視室、戦力規則立会、指名済みエスカレーション責任者",
+        exclusion: "除外用途",
+        exclusionValue: "未地図化群衆圧力、非スポンサー追跡、自律致死閉鎖、非記録地区拒否"
+      },
+      mapEyebrow: "警護経路",
+      mapTitle: "Autonomous Protectionは主体移動をSwarm編隊、戦力統治、地域指揮、取締役会証拠へルーティングします。",
+      mapCopy: "サービスページはオペレーターを提供します。製品ファイルは編隊ジオメトリを定義します。統治ドシエは機械速度を制約します。取締役会ドケットはどの戦力行為が証明として残るかを決定します。"
     },
     continuityProtocol: {
       productCta: "起動プロトコルを開く",

@@ -6802,6 +6802,11 @@ a,
   filter: saturate(1.08) contrast(1.1) brightness(0.9);
 }
 
+.protection-protocol-visual img {
+  object-position: center center;
+  filter: saturate(1.12) contrast(1.08) brightness(0.9);
+}
+
 .ledger-spec-route-hero .archive-route-copy h1 {
   font-size: clamp(2.85rem, 5.15vw, 4.55rem);
   overflow-wrap: normal;
