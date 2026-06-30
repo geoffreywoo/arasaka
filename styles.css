@@ -6812,6 +6812,25 @@ a,
   filter: saturate(1.1) contrast(1.12) brightness(0.88);
 }
 
+.blackwall-containment-visual img {
+  object-position: center center;
+  filter: saturate(1.12) contrast(1.14) brightness(0.86);
+}
+
+.blackwall-containment-hero .archive-route-copy h1,
+.blackwall-containment-page .spec-route-table .tech-section-intro h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.blackwall-containment-hero .archive-route-copy h1 {
+  font-size: clamp(2.9rem, 4.65vw, 4.55rem);
+}
+
+.blackwall-containment-page .spec-route-table .tech-section-intro h2 {
+  font-size: clamp(2.35rem, 3vw, 3.15rem);
+}
+
 .mikoshi-arbitration-visual img {
   object-position: center center;
   filter: saturate(1.06) contrast(1.1) brightness(0.9);

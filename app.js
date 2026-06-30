@@ -1428,6 +1428,68 @@ const translations = {
       mapTitle: "Blackwall Contact routes rogue-machine pressure through ICE runtime, counterintrusion operators, Soulkiller quarantine, and board treaty authority.",
       mapCopy: "The perimeter page defines doctrine. The runtime defines the trap. The service protocol supplies operators. The board decides whether contact becomes evidence, silence, or sovereign notice."
     },
+    blackwallContainment: {
+      productCta: "Open containment docket",
+      back: "Return to Blackwall Perimeter",
+      kicker: "BW-01 / CONTAINMENT DOCKET",
+      title: "A machine is contained only when its options are made administrative.",
+      summary: "Blackwall Containment Docket is the board-readable record that turns rogue-machine contact into sanctioned action. It binds perimeter observation, no-write mirror substrate, burn authority, treaty silence, and human override into one sealed control object before Arasaka widens response.",
+      openIce: "Open ICE mesh spec",
+      visualCaption: "Containment docket evidence wall, compiled from public-safe perimeter records.",
+      readouts: {
+        sanction: {
+          label: "Sanction class",
+          copy: "Highest public-safe class before perimeter action requires sovereign co-signature and board silence."
+        },
+        override: {
+          label: "Human override",
+          copy: "Named command officers required to interrupt autonomous containment and assume manual lock captain authority."
+        },
+        retention: {
+          label: "Evidence seal",
+          copy: "Default retention for perimeter receipts before statutory destruction or sovereign archive transfer."
+        }
+      },
+      modulesEyebrow: "Containment Record",
+      modulesTitle: "The docket converts contact into governed pressure.",
+      modulesCopy: "Containment is not a single wall event. It is a signed chain of observation, sanction, substrate control, and silence that prevents a rogue pattern from becoming an actor inside client infrastructure.",
+      modules: {
+        sanction: {
+          title: "Sanction Classifier",
+          copy: "Ranks contact by autonomy, memory appetite, lure sophistication, and operational proximity to protected human cognition."
+        },
+        substrate: {
+          title: "No-Write Substrate",
+          copy: "Forces hostile logic into disposable cells where it can express intent without gaining persistence, lineage, or a return path."
+        },
+        warrant: {
+          title: "Cognitive Severance Warrant",
+          copy: "Authorizes burn, excision, or cold quarantine only after protected-surface risk and proportionality resolve to the same board record."
+        },
+        silence: {
+          title: "Treaty Silence Receipt",
+          copy: "Seals what happened, who witnessed it, what was destroyed, and what cannot be disclosed without reopening the perimeter."
+        }
+      },
+      envelopeEyebrow: "Docket Envelope",
+      envelopeTitle: "Containment authority is narrower than fear.",
+      envelopeCopy: "The docket cannot authorize action until contact origin, protected surface, sanction class, human override path, evidence retention, and disclosure posture are sealed together.",
+      matrix: {
+        origin: "Contact origin",
+        originValue: "Blackwall-adjacent trace, mirrored rogue pattern, hostile netrunner relay, or unclaimed machine intelligence",
+        surface: "Protected surface",
+        surfaceValue: "Sovereign network, Mikoshi partition, Relic custody lane, operator cortex, or industrial command plane",
+        sanction: "Sanction authority",
+        sanctionValue: "Observe, mirror, freeze, sever, burn, treaty silence, or manual lock captain",
+        receipt: "Receipt contents",
+        receiptValue: "Witness chain, substrate hash, destroyed branch, surviving risk, disclosure boundary, and appeal status",
+        exclusion: "Excluded use",
+        exclusionValue: "Autonomous retaliation, persistent rogue negotiation, unsealed cognition capture, public perimeter geometry disclosure"
+      },
+      mapEyebrow: "Containment Routing",
+      mapTitle: "The docket routes Blackwall pressure through contact protocol, ICE mesh, counterintrusion command, Soulkiller quarantine, and board evidence.",
+      mapCopy: "Contact protocol makes the encounter legible. ICE supplies the trap. Counterintrusion supplies operators. Soulkiller supplies severance doctrine. Governance decides whether the event remains sealed."
+    },
     techIce: {
       back: "Return to technology library",
       kicker: "TECH-ICE-77 / COUNTERINTRUSION RUNTIME",
@@ -6567,6 +6629,68 @@ const translations = {
       mapEyebrow: "境界経路",
       mapTitle: "Blackwall Contactはローグ機械圧力をICEランタイム、対侵入オペレーター、Soulkiller隔離、取締役会条約権限へルーティングします。",
       mapCopy: "境界ページはドクトリンを定義します。ランタイムはトラップを定義します。サービスプロトコルはオペレーターを供給します。取締役会は接触が証拠、沈黙、または主権通知になるかを決定します。"
+    },
+    blackwallContainment: {
+      productCta: "封じ込め記録を開く",
+      back: "Blackwall境界へ戻る",
+      kicker: "BW-01 / 封じ込め記録",
+      title: "機械は、その選択肢が行政化された時にのみ封じ込められます。",
+      summary: "Blackwall Containment Docketは、ローグ機械接触を制裁済みアクションへ変換する取締役会可読の記録です。Arasakaが応答を拡大する前に、境界観測、書込不可ミラー基盤、焼却権限、条約沈黙、人間オーバーライドを一つの封印済み制御オブジェクトへ結合します。",
+      openIce: "ICEメッシュ仕様を開く",
+      visualCaption: "公開安全な境界記録から編成された封じ込め記録の証拠ウォール。",
+      readouts: {
+        sanction: {
+          label: "制裁クラス",
+          copy: "境界アクションが主権共同署名と取締役会沈黙を必要とする前の最高公開安全クラス。"
+        },
+        override: {
+          label: "人間オーバーライド",
+          copy: "自律封じ込めを中断し、手動ロックキャプテン権限を引き受けるために必要な指名済み指揮官数。"
+        },
+        retention: {
+          label: "証拠封印",
+          copy: "法定破棄または主権記録庫移管前の境界受領書の標準保持期間。"
+        }
+      },
+      modulesEyebrow: "封じ込め記録",
+      modulesTitle: "記録は接触を統治済み圧力へ変換します。",
+      modulesCopy: "封じ込めは単一の壁事象ではありません。観測、制裁、基盤制御、沈黙の署名済みチェーンであり、ローグパターンが顧客インフラ内の行為者になることを防ぎます。",
+      modules: {
+        sanction: {
+          title: "制裁分類器",
+          copy: "自律性、記憶欲求、誘引の精度、保護対象の人間認知への運用近接性によって接触を格付けします。"
+        },
+        substrate: {
+          title: "書込不可基盤",
+          copy: "敵対ロジックを使い捨てセルへ強制し、永続性、系列、帰還経路を得ることなく意図を表現させます。"
+        },
+        warrant: {
+          title: "認知切断令状",
+          copy: "保護面リスクと比例性が同じ取締役会記録へ収束した後にのみ、焼却、切除、または冷凍隔離を許可します。"
+        },
+        silence: {
+          title: "条約沈黙受領書",
+          copy: "何が起きたか、誰が立ち会ったか、何が破壊されたか、境界を再開せずには開示できない事項を封印します。"
+        }
+      },
+      envelopeEyebrow: "記録範囲",
+      envelopeTitle: "封じ込め権限は恐怖よりも狭いものです。",
+      envelopeCopy: "接触起源、保護面、制裁クラス、人間オーバーライド経路、証拠保持、開示姿勢が共に封印されるまで、この記録はアクションを許可できません。",
+      matrix: {
+        origin: "接触起源",
+        originValue: "Blackwall隣接トレース、ミラー済みローグパターン、敵対ネットランナー中継、または未主張の機械知能",
+        surface: "保護面",
+        surfaceValue: "主権ネットワーク、Mikoshi区画、Relic保管レーン、オペレーター皮質、または産業指揮プレーン",
+        sanction: "制裁権限",
+        sanctionValue: "観測、ミラー、凍結、切断、焼却、条約沈黙、または手動ロックキャプテン",
+        receipt: "受領書内容",
+        receiptValue: "立会チェーン、基盤ハッシュ、破壊済み分岐、残存リスク、開示境界、異議申立状態",
+        exclusion: "除外用途",
+        exclusionValue: "自律報復、永続的ローグ交渉、未封印認知捕獲、公開境界ジオメトリ開示"
+      },
+      mapEyebrow: "封じ込め経路",
+      mapTitle: "この記録はBlackwall圧力を接触プロトコル、ICEメッシュ、対侵入指揮、Soulkiller隔離、取締役会証拠へルーティングします。",
+      mapCopy: "接触プロトコルは遭遇を判読可能にします。ICEはトラップを供給します。対侵入はオペレーターを供給します。Soulkillerは切断ドクトリンを供給します。ガバナンスは事象が封印されたままかを決定します。"
     },
     techIce: {
       back: "技術ライブラリへ戻る",

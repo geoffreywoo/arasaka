@@ -98,6 +98,7 @@ http://127.0.0.1:4187/archive/afterlife/
 http://127.0.0.1:4187/governance/
 http://127.0.0.1:4187/blackwall/
 http://127.0.0.1:4187/blackwall/contact-protocol/
+http://127.0.0.1:4187/blackwall/containment-docket/
 http://127.0.0.1:4187/products/relic/
 http://127.0.0.1:4187/products/relic/technical-specification/
 http://127.0.0.1:4187/products/mikoshi/
