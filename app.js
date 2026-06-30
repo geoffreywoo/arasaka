@@ -395,6 +395,69 @@ const translations = {
       mapTitle: "Mikoshi is the custody layer beneath Relic, Soulkiller, executive continuity, and board succession.",
       mapCopy: "The runtime does not promise escape from death. It converts identity into a governed asset class with custody evidence, simulated authority, and release conditions that can survive institutional shock."
     },
+    mikoshiArbitration: {
+      productCta: "Open release arbitration",
+      back: "Return to Mikoshi dossier",
+      kicker: "MIKOSHI-IX / RELEASE ARBITRATION",
+      title: "A construct does not return because it asks.",
+      summary: "Mikoshi Release Arbitration governs the interval between cold storage and authority-bearing interface: thaw petition, lineage challenge, drift trial, witness quorum, silence order, and board-authorized return for constructs whose existence can move markets, families, and states.",
+      openRuntime: "Open runtime specification",
+      openCustody: "Open engram custody",
+      visualCaption: "Mikoshi release arbitration plate, generated Arasaka catalog image.",
+      readouts: {
+        quorum: {
+          label: "Release quorum",
+          copy: "Minimum combined board, regional custody, and lineage witness votes before a construct may enter interactive state."
+        },
+        drift: {
+          label: "Drift ceiling",
+          copy: "Maximum behavioral variance from witnessed baseline before arbitration collapses into silence review."
+        },
+        silence: {
+          label: "Silence order",
+          copy: "Default non-interactive hold when authority, lineage, or consent cannot resolve to a clean release."
+        }
+      },
+      modulesEyebrow: "Arbitration Chain",
+      modulesTitle: "The trial happens before the construct speaks.",
+      modulesCopy: "Release arbitration treats identity as disputed infrastructure. The construct, sponsor, family, board, and custody system each produce evidence before any simulated person can affect the living world.",
+      modules: {
+        thaw: {
+          title: "Construct Thaw Petition",
+          copy: "Opens a non-authority interface only after sponsor, custody hash, and permitted question scope resolve to the same record."
+        },
+        lineage: {
+          title: "Lineage Challenge Court",
+          copy: "Tests biological proof, successor claims, consent covenants, and hostile impersonation risk before release authority exists."
+        },
+        drift: {
+          title: "Drift Trial Chamber",
+          copy: "Runs market, family, board, and adversarial prompts against witnessed memory to measure variance before interface escalation."
+        },
+        silence: {
+          title: "Silence Order Registry",
+          copy: "Locks disputed constructs into non-interactive storage with renewal, destruction, or future arbitration triggers separated."
+        }
+      },
+      envelopeEyebrow: "Release Envelope",
+      envelopeTitle: "Return is a legal event with a neural interface.",
+      envelopeCopy: "A construct cannot leave cold custody until Arasaka can prove custody lineage, sponsor authority, drift clearance, interaction scope, and abort path across one signed release docket.",
+      matrix: {
+        petitioner: "Petitioner",
+        petitionerValue: "Board office, family quorum, sovereign executor, regional custodian, or continuity service marshal",
+        object: "Custody object",
+        objectValue: "Mikoshi partition, Relic capture package, Soulkiller receipt, witness manifest, and authority graph",
+        scope: "Interaction scope",
+        scopeValue: "Question-only, rehearsal-only, advisory interface, limited signature, or full continuity release",
+        abort: "Abort path",
+        abortValue: "Cold rollback, partition freeze, witness challenge, family injunction, construct silence order",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed revival, coerced testimony, market manipulation by construct, uncontrolled body migration"
+      },
+      mapEyebrow: "Arbitration Routing",
+      mapTitle: "Release arbitration routes construct authority through Mikoshi runtime, engram custody, executive continuity, and board governance.",
+      mapCopy: "The runtime stores the construct. The custody interface proves the object. The continuity service petitions for use. The board decides whether the dead may speak for the living."
+    },
     soulkillerSpec: {
       productCta: "Open extraction specification",
       back: "Return to Soulkiller dossier",
@@ -5471,6 +5534,69 @@ const translations = {
       mapEyebrow: "継続性経路",
       mapTitle: "MikoshiはRelic、Soulkiller、役員継続、取締役会継承の下にある保管レイヤーです。",
       mapCopy: "ランタイムは死からの脱出を約束しません。同一性を、保管証拠、シミュレートされた権限、組織的衝撃に耐えるリリース条件を持つ統治済み資産クラスへ変換します。"
+    },
+    mikoshiArbitration: {
+      productCta: "リリース仲裁を開く",
+      back: "Mikoshiドシエへ戻る",
+      kicker: "MIKOSHI-IX / リリース仲裁",
+      title: "構成体は、求めたから戻るわけではありません。",
+      summary: "Mikoshi Release Arbitrationは、低温保管と権限を持つインターフェースの間隔を統治します。存在が市場、家族、国家を動かし得る構成体のための、解凍申立、系譜異議、ドリフト審理、立会クォーラム、沈黙命令、取締役会承認済み帰還です。",
+      openRuntime: "ランタイム仕様を開く",
+      openCustody: "エングラム保管を開く",
+      visualCaption: "Mikoshiリリース仲裁プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        quorum: {
+          label: "リリース定足数",
+          copy: "構成体が対話状態へ入る前に必要な取締役会、地域保管、系譜立会の合計票。"
+        },
+        drift: {
+          label: "ドリフト上限",
+          copy: "仲裁が沈黙レビューへ崩壊する前に許容される、立会済み基準からの最大行動分散。"
+        },
+        silence: {
+          label: "沈黙命令",
+          copy: "権限、系譜、同意がクリーンなリリースへ解決できない場合の既定非対話保留。"
+        }
+      },
+      modulesEyebrow: "仲裁チェーン",
+      modulesTitle: "構成体が話す前に審理が行われます。",
+      modulesCopy: "リリース仲裁は同一性を係争中のインフラとして扱います。構成体、スポンサー、家族、取締役会、保管システムがそれぞれ証拠を生成した後でのみ、シミュレートされた人物は生者の世界に影響できます。",
+      modules: {
+        thaw: {
+          title: "構成体解凍申立",
+          copy: "スポンサー、保管ハッシュ、許可済み質問範囲が同一記録へ解決した後にのみ、非権限インターフェースを開きます。"
+        },
+        lineage: {
+          title: "系譜異議法廷",
+          copy: "リリース権限が存在する前に、生物学的証明、後継者請求、同意コベナント、敵対的成りすましリスクを検査します。"
+        },
+        drift: {
+          title: "ドリフト審理室",
+          copy: "インターフェース拡大前に分散を測定するため、市場、家族、取締役会、敵対的プロンプトを立会済み記憶に対して実行します。"
+        },
+        silence: {
+          title: "沈黙命令レジストリ",
+          copy: "係争中の構成体を、更新、破壊、将来仲裁トリガーを分離した非対話保管へロックします。"
+        }
+      },
+      envelopeEyebrow: "リリース範囲",
+      envelopeTitle: "帰還は神経インターフェースを持つ法的イベントです。",
+      envelopeCopy: "荒坂が一つの署名済みリリースドケットで保管系譜、スポンサー権限、ドリフト認可、対話範囲、中止経路を証明できるまで、構成体は低温保管を出られません。",
+      matrix: {
+        petitioner: "申立者",
+        petitionerValue: "取締役会室、家族クォーラム、主権執行者、地域保管者、または継続サービスマーシャル",
+        object: "保管オブジェクト",
+        objectValue: "Mikoshi区画、Relic取得パッケージ、Soulkiller受領書、立会マニフェスト、権限グラフ",
+        scope: "対話範囲",
+        scopeValue: "質問のみ、演習のみ、助言インターフェース、限定署名、または完全継続リリース",
+        abort: "中止経路",
+        abortValue: "低温ロールバック、区画凍結、立会異議、家族差止、構成体沈黙命令",
+        exclusion: "除外用途",
+        exclusionValue: "非立会復活、強制証言、構成体による市場操作、非制御身体移行"
+      },
+      mapEyebrow: "仲裁経路",
+      mapTitle: "リリース仲裁は構成体権限をMikoshiランタイム、エングラム保管、役員継続、取締役会統治へルーティングします。",
+      mapCopy: "ランタイムは構成体を保存します。保管インターフェースはオブジェクトを証明します。継続サービスは利用を申請します。取締役会は死者が生者のために発話できるかを決定します。"
     },
     soulkillerSpec: {
       productCta: "抽出仕様を開く",
