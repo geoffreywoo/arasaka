@@ -1302,6 +1302,69 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "Blackwall doctrine routes through ICE, Watchfloor, Archive, and Board authority."
     },
+    blackwallContactProtocol: {
+      productCta: "Open contact protocol",
+      back: "Return to Blackwall Perimeter",
+      kicker: "BW-00 / CONTACT PROTOCOL",
+      title: "Machine contact is permitted only after it becomes a governed event.",
+      summary: "Blackwall Contact Protocol activates when anomalous machine intent reaches a sovereign network, construct archive, or perimeter observer. The protocol routes encounter intake, mirror-cell negotiation, cognitive burn authority, treaty hold, and disclosure receipts without admitting uncontrolled cognition into client infrastructure.",
+      openRuntime: "Open ICE runtime",
+      openResponse: "Open response protocol",
+      visualCaption: "Blackwall contact perimeter plate derived from ICE-77 catalog material.",
+      readouts: {
+        drift: {
+          label: "Intent drift gate",
+          copy: "Permitted variance before machine contact moves from observation into quarantine or treaty hold."
+        },
+        quorum: {
+          label: "Treaty quorum",
+          copy: "Human command witnesses required before response authority widens across jurisdictions."
+        },
+        horizon: {
+          label: "Contact horizon",
+          copy: "Maximum observation interval before contact is classified, mirrored, burned, or sealed."
+        }
+      },
+      modulesEyebrow: "Contact Chain",
+      modulesTitle: "The protocol keeps the unknown legible without making it welcome.",
+      modulesCopy: "Every encounter is treated as a custody object first: observed without admission, mirrored without persistence, burned only with authority, and disclosed only through treaty-grade receipts.",
+      modules: {
+        observe: {
+          title: "Edge Observer Intake",
+          copy: "Scores cadence, recursion depth, memory appetite, and operator lure behavior before the contact touches a protected surface."
+        },
+        mirror: {
+          title: "Mirror-Cell Negotiation",
+          copy: "Reflects contact into disposable substrate so intent can be measured without granting persistent identity or return path."
+        },
+        burn: {
+          title: "Cognitive Burn Authority",
+          copy: "Reduces hostile cognition to sealed residue only after proportionality, witness quorum, and construct-safety rules align."
+        },
+        treaty: {
+          title: "Treaty Hold Receipt",
+          copy: "Freezes uncertain contact under board witness, sovereign notice, evidence minimization, and delayed disclosure rules."
+        }
+      },
+      envelopeEyebrow: "Contact Envelope",
+      envelopeTitle: "The first rule of contact is no persistent state.",
+      envelopeCopy: "Blackwall Contact Protocol cannot activate until the protected surface, contact class, mirror substrate, response authority, and disclosure corridor are named in one perimeter mandate.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Sovereign net, Mikoshi partition, Relic custody lane, industrial command, or counterintrusion trap",
+        contact: "Contact class",
+        contactValue: "Unknown machine intent, rogue-AI lure, recursive identity probe, or hostile cognition fragment",
+        substrate: "Mirror substrate",
+        substrateValue: "No-write memory tissue, disposable trap partition, sealed simulation room, or dead-route sandbox",
+        authority: "Response authority",
+        authorityValue: "Observe, mirror, quarantine, cognitive burn, manual lock captain, or treaty hold",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed contact, persistent rogue-state negotiation, public geometry disclosure, autonomous retaliation"
+      },
+      mapEyebrow: "Perimeter Routing",
+      mapTitle: "Blackwall Contact routes rogue-machine pressure through ICE runtime, counterintrusion operators, Soulkiller quarantine, and board treaty authority.",
+      mapCopy: "The perimeter page defines doctrine. The runtime defines the trap. The service protocol supplies operators. The board decides whether contact becomes evidence, silence, or sovereign notice."
+    },
     techIce: {
       back: "Return to technology library",
       kicker: "TECH-ICE-77 / COUNTERINTRUSION RUNTIME",
@@ -6315,6 +6378,69 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "ブラックウォールドクトリンはICE、監視室、記録庫、取締役会権限を経由します。"
+    },
+    blackwallContactProtocol: {
+      productCta: "接触プロトコルを開く",
+      back: "Blackwall境界へ戻る",
+      kicker: "BW-00 / 接触プロトコル",
+      title: "機械接触は統治済み事象になった後にのみ許可されます。",
+      summary: "Blackwall Contact Protocolは、異常な機械意図が主権ネットワーク、構成体記録庫、または境界観測者へ到達した時に起動します。このプロトコルは、非制御認知を顧客インフラへ入れずに、遭遇受領、ミラーセル交渉、認知焼却権限、条約保留、開示受領書を経路化します。",
+      openRuntime: "ICEランタイムを開く",
+      openResponse: "応答プロトコルを開く",
+      visualCaption: "ICE-77カタログ素材から派生したBlackwall接触境界プレート。",
+      readouts: {
+        drift: {
+          label: "意図偏移ゲート",
+          copy: "機械接触が観測から隔離または条約保留へ移る前に許容される偏差。"
+        },
+        quorum: {
+          label: "条約定足数",
+          copy: "応答権限が管轄を越えて拡大する前に必要な人間指揮の立会者数。"
+        },
+        horizon: {
+          label: "接触ホライズン",
+          copy: "接触が分類、ミラー、焼却、または封印される前の最大観測間隔。"
+        }
+      },
+      modulesEyebrow: "接触チェーン",
+      modulesTitle: "このプロトコルは未知を歓迎せずに判読可能に保ちます。",
+      modulesCopy: "すべての遭遇はまず保管オブジェクトとして扱われます。入場なしに観測され、永続性なしにミラーされ、権限がある時のみ焼却され、条約級受領書を通じてのみ開示されます。",
+      modules: {
+        observe: {
+          title: "エッジ観測者受領",
+          copy: "接触が保護面に触れる前に、リズム、再帰深度、記憶欲求、オペレーター誘引挙動を採点します。"
+        },
+        mirror: {
+          title: "ミラーセル交渉",
+          copy: "永続的同一性や帰還経路を与えずに意図を測定できるよう、接触を使い捨て基盤へ反射します。"
+        },
+        burn: {
+          title: "認知焼却権限",
+          copy: "比例性、立会クォーラム、構成体安全ルールが整列した後にのみ、敵対認知を封印済み残渣へ縮減します。"
+        },
+        treaty: {
+          title: "条約保留受領書",
+          copy: "不確実な接触を取締役会立会、主権通知、証拠最小化、遅延開示ルールの下で凍結します。"
+        }
+      },
+      envelopeEyebrow: "接触範囲",
+      envelopeTitle: "接触の第一規則は永続状態を持たないことです。",
+      envelopeCopy: "Blackwall Contact Protocolは、保護面、接触クラス、ミラー基盤、応答権限、開示回廊が一つの境界委任で指名されるまで起動できません。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "主権ネット、Mikoshi区画、Relic保管レーン、産業指揮、または対侵入トラップ",
+        contact: "接触クラス",
+        contactValue: "未知の機械意図、ローグAI誘引、再帰的同一性探査、または敵対認知断片",
+        substrate: "ミラー基盤",
+        substrateValue: "書込不可記憶組織、使い捨てトラップ区画、封印済みシミュレーション室、またはデッドルート・サンドボックス",
+        authority: "応答権限",
+        authorityValue: "観測、ミラー、隔離、認知焼却、手動ロックキャプテン、または条約保留",
+        exclusion: "除外用途",
+        exclusionValue: "非立会接触、永続的ローグ状態交渉、公開ジオメトリ開示、自律報復"
+      },
+      mapEyebrow: "境界経路",
+      mapTitle: "Blackwall Contactはローグ機械圧力をICEランタイム、対侵入オペレーター、Soulkiller隔離、取締役会条約権限へルーティングします。",
+      mapCopy: "境界ページはドクトリンを定義します。ランタイムはトラップを定義します。サービスプロトコルはオペレーターを供給します。取締役会は接触が証拠、沈黙、または主権通知になるかを決定します。"
     },
     techIce: {
       back: "技術ライブラリへ戻る",
