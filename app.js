@@ -583,6 +583,68 @@ const translations = {
       mapTitle: "Soulkiller routes severed identity into Mikoshi custody, Relic continuity, Black ICE quarantine, and board evidence.",
       mapCopy: "The public file treats extraction as a controlled evidence workflow. A construct is not useful until its origin, witness, redaction state, and destination can survive board scrutiny."
     },
+    soulkillerWarrant: {
+      productCta: "Open redaction warrant",
+      back: "Return to Soulkiller dossier",
+      kicker: "SOUL-23 / REDACTION WARRANT",
+      title: "A mind can be seized only after the warrant names what must survive.",
+      summary: "Soulkiller Redaction Warrant is the board-sealed control surface that authorizes exceptional neural seizure. It defines target authority, extraction scope, memory redaction depth, construct disposition, silence order, and appeal path before Soulkiller may touch a living or archived identity.",
+      openExtraction: "Open extraction specification",
+      visualCaption: "Soulkiller redaction warrant plate, generated Arasaka catalog image.",
+      readouts: {
+        quorum: {
+          label: "Warrant quorum",
+          copy: "Minimum board, legal, medical, and custody witnesses before neural seizure can proceed."
+        },
+        depth: {
+          label: "Redaction depth",
+          copy: "Maximum memory scope that may be excised before the extraction becomes a permanent silence case."
+        },
+        appeal: {
+          label: "Appeal hold",
+          copy: "Default interval before a seized construct may enter Mikoshi partition, evidence vault, or destruction queue."
+        }
+      },
+      modulesEyebrow: "Warrant Chain",
+      modulesTitle: "The warrant keeps extraction from becoming appetite.",
+      modulesCopy: "Every compelled extraction is split into authority, target, redaction, and disposition records. The system may be fast, but the decision surface is deliberately slow.",
+      modules: {
+        authority: {
+          title: "Target Authority Review",
+          copy: "Confirms who can name the target, what jurisdiction binds the body or archive, and which witnesses can challenge the seizure."
+        },
+        scope: {
+          title: "Memory Seizure Scope",
+          copy: "Bounds the extraction to named memories, identity signatures, hostile payloads, or full construct capture."
+        },
+        firewall: {
+          title: "Redaction Firewall",
+          copy: "Filters privileged material, sovereign secrets, rogue-machine hooks, and coercive payloads before custody intake."
+        },
+        disposition: {
+          title: "Construct Disposition Order",
+          copy: "Determines whether the seized identity is released to Mikoshi, held as evidence, silenced, destroyed, or returned to arbitration."
+        }
+      },
+      envelopeEyebrow: "Warrant Envelope",
+      envelopeTitle: "Redaction is lawful only when the remainder is named.",
+      envelopeCopy: "The warrant cannot execute until authority source, target status, permitted memory scope, custody destination, appeal hold, and silence condition resolve to one sealed docket.",
+      matrix: {
+        source: "Authority source",
+        sourceValue: "Board warrant, sovereign instrument, principal consent, counterintrusion seizure, or continuity emergency",
+        target: "Target status",
+        targetValue: "Living subject, hostile construct carrier, archived construct, rogue-machine relay, or contested neural estate",
+        scope: "Permitted scope",
+        scopeValue: "Memory fragment, identity signature, hostile payload, full construct, or evidence-only capture",
+        destination: "Custody destination",
+        destinationValue: "Mikoshi partition, Blackwall quarantine, legal evidence vault, silence cell, or destruction queue",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed seizure, commercial personality resale, punitive duplication, unsanctioned interrogation, proxy body release"
+      },
+      mapEyebrow: "Warrant Routing",
+      mapTitle: "Redaction warrant routes Soulkiller through extraction spec, Mikoshi custody, Relic host trial, Blackwall containment, and board governance.",
+      mapCopy: "Extraction creates the object. The warrant decides whether the object may exist, what must be removed, and who is allowed to know that it happened."
+    },
     iceSpec: {
       productCta: "Open mesh specification",
       openMesh: "Open ICE mesh spec",
@@ -5846,6 +5908,68 @@ const translations = {
       mapEyebrow: "抽出経路",
       mapTitle: "Soulkillerは切断済み同一性をMikoshi保管、Relic継続、Black ICE隔離、取締役会証拠へルーティングします。",
       mapCopy: "公開ファイルは抽出を制御済み証拠ワークフローとして扱います。構成体は、その起点、立会、redaction状態、宛先が取締役会審査に耐えるまで有用ではありません。"
+    },
+    soulkillerWarrant: {
+      productCta: "Redaction令状を開く",
+      back: "Soulkillerドシエへ戻る",
+      kicker: "SOUL-23 / REDACTION令状",
+      title: "精神は、何を残すべきかを令状が指名した後にのみ押収できます。",
+      summary: "Soulkiller Redaction Warrantは、例外的な神経押収を承認する取締役会封印済み制御面です。Soulkillerが生存または記録済み同一性に触れる前に、対象権限、抽出範囲、記憶redaction深度、構成体処分、沈黙命令、異議経路を定義します。",
+      openExtraction: "抽出仕様を開く",
+      visualCaption: "Soulkiller redaction令状プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        quorum: {
+          label: "令状定足数",
+          copy: "神経押収が進行できる前に必要な取締役会、法務、医療、保管の最低立会者数。"
+        },
+        depth: {
+          label: "Redaction深度",
+          copy: "抽出が恒久沈黙案件になる前に切除できる最大記憶範囲。"
+        },
+        appeal: {
+          label: "異議保留",
+          copy: "押収済み構成体がMikoshi区画、証拠保管庫、または破壊キューへ入る前の既定間隔。"
+        }
+      },
+      modulesEyebrow: "令状チェーン",
+      modulesTitle: "令状は抽出が欲望になることを防ぎます。",
+      modulesCopy: "すべての強制抽出は、権限、対象、redaction、処分記録へ分離されます。システムは高速でも、意思決定面は意図的に遅く設計されています。",
+      modules: {
+        authority: {
+          title: "対象権限審査",
+          copy: "誰が対象を指名できるか、身体または記録庫を拘束する管轄、押収に異議を唱えられる立会者を確認します。"
+        },
+        scope: {
+          title: "記憶押収範囲",
+          copy: "抽出を指名済み記憶、同一性署名、敵対ペイロード、または完全構成体キャプチャに境界付けます。"
+        },
+        firewall: {
+          title: "Redactionファイアウォール",
+          copy: "保管取込前に、特権資料、主権機密、ローグ機械フック、強制ペイロードをフィルタリングします。"
+        },
+        disposition: {
+          title: "構成体処分命令",
+          copy: "押収済み同一性をMikoshiへリリースするか、証拠として保留するか、沈黙させるか、破壊するか、仲裁へ戻すかを決定します。"
+        }
+      },
+      envelopeEyebrow: "令状範囲",
+      envelopeTitle: "Redactionは、残余が指名されている場合にのみ合法です。",
+      envelopeCopy: "権限ソース、対象状態、許可記憶範囲、保管宛先、異議保留、沈黙条件が一つの封印済みドケットへ解決するまで、令状は実行できません。",
+      matrix: {
+        source: "権限ソース",
+        sourceValue: "取締役会令状、主権証書、本人同意、対侵入押収、または継続緊急事態",
+        target: "対象状態",
+        targetValue: "生存対象、敵対構成体キャリア、記録済み構成体、ローグ機械中継、または係争中神経資産",
+        scope: "許可範囲",
+        scopeValue: "記憶断片、同一性署名、敵対ペイロード、完全構成体、または証拠のみキャプチャ",
+        destination: "保管宛先",
+        destinationValue: "Mikoshi区画、Blackwall隔離、法的証拠保管庫、沈黙セル、または破壊キュー",
+        exclusion: "除外用途",
+        exclusionValue: "非立会押収、商用人格転売、懲罰的複製、非認可尋問、代理身体リリース"
+      },
+      mapEyebrow: "令状経路",
+      mapTitle: "Redaction令状はSoulkillerを抽出仕様、Mikoshi保管、Relicホスト試験、Blackwall封じ込め、取締役会統治へルーティングします。",
+      mapCopy: "抽出はオブジェクトを生成します。令状はそのオブジェクトが存在してよいか、何を除去すべきか、そして誰が出来事を知ってよいかを決定します。"
     },
     iceSpec: {
       productCta: "メッシュ仕様を開く",
