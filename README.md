@@ -1,20 +1,24 @@
 # Arasaka
 
-An open-source, bilingual corporate website concept for `arasaka.com`.
+An open-source, bilingual design-fiction corporate website for `arasaka.com`.
 
-This is a Geoffrey Woo personal project and design-fiction study. It imagines how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
+This is a Geoffrey Woo personal project. It imagines how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
 
-The site is intentionally not a wiki, recap, or reference explainer. It is designed to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
+The site is intentionally not a wiki, recap, reference explainer, or fanpage. It is designed to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
 
-## Live Site
+## Status
 
 - Production: https://www.arasaka.com/
 - Repository: https://github.com/geoffreywoo/arasaka
-- License: MIT for original source code and documentation, with separate asset and IP scope notes
+- License: MIT for original source code and documentation
+- Deployment: static site on Vercel
+- Scope note: brand, universe, press, generated, and composite assets have separate provenance notes
 
 ## Mission
 
-The project explores one question:
+Arasaka is a public-web thought experiment about institutional power.
+
+The project starts from one question:
 
 > What would a sovereign-scale technology, security, capital, and continuity conglomerate publish if cybernetic identity, neural persistence, autonomous defense, private intelligence, and institutional custody were real enterprise infrastructure?
 
@@ -27,7 +31,22 @@ The website treats speculative cyberpunk themes as serious corporate systems:
 - Incident archives as public evidence packets rather than lore summaries
 - Japanese and English localization as a real operating layer, not decorative texture
 
-The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company.
+The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company rather than a page describing one.
+
+## Why Open Source
+
+The repository is open so people can inspect how the illusion is built: the copy system, route architecture, bilingual content model, responsive layout, asset attribution, and static deployment setup.
+
+Good forks and contributions should improve the craft of the site:
+
+- More credible corporate information architecture
+- Better mobile reading and navigation
+- Cleaner Japanese localization
+- Stronger accessibility and performance
+- Better attribution and asset provenance
+- More restrained product, service, and governance surfaces
+
+The project is open source as code and documentation. It is not a blanket license to reuse third-party intellectual property, trademarks, screenshots, fictional universe concepts, or generated/composite identity assets.
 
 ## Design Principles
 
@@ -151,7 +170,7 @@ If you fork this project, replace or re-clear brand, game, and image assets befo
 
 This site is an unofficial, independent web concept. It is not affiliated with, approved by, sponsored by, or endorsed by CD PROJEKT RED, CD PROJEKT, Cyberpunk 2077, or any rights holder.
 
-Cyberpunk 2077 referenced names and credited press imagery belong to their respective owners. This project exists as design fiction, interface study, and personal creative production.
+Cyberpunk 2077 referenced names and credited press imagery belong to their respective owners. This project exists as design fiction, interface study, and personal creative production by Geoffrey Woo.
 
 ## Contributing
 
