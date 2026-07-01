@@ -67,7 +67,7 @@ This is a static website. There is no framework, package install, compile step, 
 - `styles.css` - responsive visual system, route layouts, mobile navigation, product/service dossiers, cyberpunk interface treatment, and reduced-motion support
 - `app.js` - language switching, interactive console behavior, route hydration, localized product/service data, and casefile content registries
 - `vercel.json` - static deployment configuration for Vercel
-- `LICENSE.md` - MIT license for original source code and documentation, with scope notes
+- `LICENSE` - MIT license for original source code and documentation, with scope notes
 - `assets/ATTRIBUTION.md` - asset provenance and third-party reference notes
 
 ## Site Map
@@ -155,7 +155,7 @@ Vercel serves the checked-in static files directly. There are no required enviro
 
 ## Open Source Scope
 
-The original source code and documentation in this repository are open-sourced under the MIT License. See `LICENSE.md`.
+The original source code and documentation in this repository are open-sourced under the MIT License. See `LICENSE`.
 
 Important exclusions:
 
