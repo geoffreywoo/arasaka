@@ -101,6 +101,7 @@ http://127.0.0.1:4187/blackwall/contact-protocol/
 http://127.0.0.1:4187/blackwall/containment-docket/
 http://127.0.0.1:4187/products/relic/
 http://127.0.0.1:4187/products/relic/technical-specification/
+http://127.0.0.1:4187/products/relic/host-compatibility/
 http://127.0.0.1:4187/products/mikoshi/
 http://127.0.0.1:4187/products/mikoshi/runtime-specification/
 http://127.0.0.1:4187/products/mikoshi/release-arbitration/

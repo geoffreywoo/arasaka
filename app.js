@@ -332,6 +332,68 @@ const translations = {
       mapTitle: "Relic routes identity through neural substrate, custody law, regional command, and executive continuity service.",
       mapCopy: "A buyer does not acquire immortality. A buyer acquires a governed continuity path with measurable evidence, named operators, reversible gates, and a sealed board docket."
     },
+    relicHost: {
+      productCta: "Open host trial",
+      back: "Return to Relic dossier",
+      kicker: "AR-RELIC / HOST COMPATIBILITY",
+      title: "The host is not a vessel until the trial proves it can refuse.",
+      summary: "Relic Host Compatibility Trial governs the interval between shard insertion and construct pressure. The trial measures neural load, immune drift, memory boundary stability, overwrite risk, and abort authority before any continuity package is cleared for living-interface deployment.",
+      openSpec: "Open technical specification",
+      visualCaption: "Relic host compatibility trial plate, generated Arasaka catalog image.",
+      readouts: {
+        viability: {
+          label: "Host viability",
+          copy: "Minimum composite score across neural plasticity, immune tolerance, metabolic reserve, and behavioral consent continuity."
+        },
+        drift: {
+          label: "Boundary drift",
+          copy: "Maximum permitted identity-boundary movement before the shard is forced into cold abort posture."
+        },
+        abort: {
+          label: "Abort window",
+          copy: "Human-supervised interval in which the host, sponsor, or custody officer may halt construct pressure."
+        }
+      },
+      modulesEyebrow: "Trial Stack",
+      modulesTitle: "Compatibility is a right to stop, not a promise to continue.",
+      modulesCopy: "The trial treats biological survival, identity integrity, sponsor authority, and construct pressure as separate evidence objects. A host may pass one surface and still fail the mandate.",
+      modules: {
+        load: {
+          title: "Neural Load Induction",
+          copy: "Measures how much shard traffic the living cortex can carry before attention, motor control, or memory access degrade."
+        },
+        immune: {
+          title: "Immune Drift Calibration",
+          copy: "Tracks inflammatory response, implant rejection, tissue heat, and endocrine shock against construct-pressure thresholds."
+        },
+        pressure: {
+          title: "Construct Pressure Rehearsal",
+          copy: "Introduces non-authority persona load in controlled pulses so Arasaka can measure overwrite vector, mimicry, and host resistance."
+        },
+        abort: {
+          title: "Abort Authority Gate",
+          copy: "Binds host refusal, sponsor halt, clinician stop, and board hold into a single command that can freeze the shard."
+        }
+      },
+      envelopeEyebrow: "Trial Envelope",
+      envelopeTitle: "A compatible host is still not an authorized host.",
+      envelopeCopy: "The trial clears a body for controlled interface only when biological tolerance, identity boundary, construct class, custody witness, and abort path resolve to the same mandate.",
+      matrix: {
+        host: "Host class",
+        hostValue: "Living principal, terminal principal, authorized surrogate, or post-trauma continuity candidate",
+        construct: "Construct class",
+        constructValue: "Witness construct, authority construct, advisory construct, or sealed succession construct",
+        boundary: "Boundary control",
+        boundaryValue: "Memory firewall, affect governor, motor veto, and reversible shard freeze",
+        clearance: "Clearance condition",
+        clearanceValue: "Viability score, consent chain, custody witness, export license, and board release gate",
+        exclusion: "Excluded use",
+        exclusionValue: "Coercive implantation, nonconsensual overwrite, market-facing proxy body, unsponsored construct migration"
+      },
+      mapEyebrow: "Compatibility Routing",
+      mapTitle: "Host trial routes Relic through neural custody, Mikoshi arbitration, executive continuity, and board release authority.",
+      mapCopy: "The technical spec describes the product. The host trial decides whether the product can touch a living system without becoming an unauthorized succession event."
+    },
     mikoshiSpec: {
       productCta: "Open runtime specification",
       back: "Return to Mikoshi dossier",
@@ -5533,6 +5595,68 @@ const translations = {
       mapEyebrow: "ルーティング済みアーキテクチャ",
       mapTitle: "Relicは同一性を神経基盤、保管法、地域指揮、役員継続サービスへルーティングします。",
       mapCopy: "買い手が取得するのは不死ではありません。測定可能な証拠、指名オペレーター、可逆ゲート、封印済み取締役会ドケットを持つ統治された継続経路です。"
+    },
+    relicHost: {
+      productCta: "ホスト試験を開く",
+      back: "Relicドシエへ戻る",
+      kicker: "AR-RELIC / ホスト適合性",
+      title: "ホストは、拒否できると試験が証明するまで器ではありません。",
+      summary: "Relic Host Compatibility Trialは、シャード挿入と構成体圧力の間隔を統治します。継続パッケージが生体インターフェース配備に承認される前に、神経負荷、免疫ドリフト、記憶境界安定性、上書きリスク、中止権限を測定します。",
+      openSpec: "技術仕様を開く",
+      visualCaption: "Relicホスト適合性試験プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        viability: {
+          label: "ホスト生存性",
+          copy: "神経可塑性、免疫許容、代謝予備力、行動同意継続性にまたがる最低複合スコア。"
+        },
+        drift: {
+          label: "境界ドリフト",
+          copy: "シャードが低温中止姿勢へ強制される前に許容される同一性境界移動の最大値。"
+        },
+        abort: {
+          label: "中止窓",
+          copy: "ホスト、スポンサー、または保管担当者が構成体圧力を停止できる人間監督下の間隔。"
+        }
+      },
+      modulesEyebrow: "試験スタック",
+      modulesTitle: "適合性は継続の約束ではなく、停止する権利です。",
+      modulesCopy: "試験は生物学的生存、同一性完全性、スポンサー権限、構成体圧力を別個の証拠オブジェクトとして扱います。ホストは一つの面で合格しても委任に失敗し得ます。",
+      modules: {
+        load: {
+          title: "神経負荷誘導",
+          copy: "注意、運動制御、記憶アクセスが劣化する前に、生体皮質がどれだけのシャード通信を運べるかを測定します。"
+        },
+        immune: {
+          title: "免疫ドリフト較正",
+          copy: "炎症反応、インプラント拒絶、組織熱、内分泌ショックを構成体圧力しきい値に対して追跡します。"
+        },
+        pressure: {
+          title: "構成体圧力演習",
+          copy: "非権限人格負荷を制御パルスで導入し、上書きベクトル、模倣、ホスト抵抗を測定します。"
+        },
+        abort: {
+          title: "中止権限ゲート",
+          copy: "ホスト拒否、スポンサー停止、臨床停止、取締役会保留をシャードを凍結できる単一コマンドへ結合します。"
+        }
+      },
+      envelopeEyebrow: "試験範囲",
+      envelopeTitle: "適合ホストは、それでも承認済みホストではありません。",
+      envelopeCopy: "試験は、生物学的許容、同一性境界、構成体クラス、保管立会、中止経路が同じ委任へ解決した時にのみ、身体を制御されたインターフェースに承認します。",
+      matrix: {
+        host: "ホストクラス",
+        hostValue: "生存主体、終末主体、承認済み代理体、または外傷後継続候補",
+        construct: "構成体クラス",
+        constructValue: "立会構成体、権限構成体、助言構成体、または封印済み継承構成体",
+        boundary: "境界制御",
+        boundaryValue: "記憶ファイアウォール、情動ガバナー、運動拒否、可逆シャード凍結",
+        clearance: "承認条件",
+        clearanceValue: "生存性スコア、同意チェーン、保管立会、輸出ライセンス、取締役会リリースゲート",
+        exclusion: "除外用途",
+        exclusionValue: "強制移植、非同意上書き、市場向け代理身体、非スポンサー構成体移行"
+      },
+      mapEyebrow: "適合性経路",
+      mapTitle: "ホスト試験はRelicを神経保管、Mikoshi仲裁、役員継続、取締役会リリース権限へルーティングします。",
+      mapCopy: "技術仕様は製品を説明します。ホスト試験は、その製品が非承認継承イベントにならずに生体システムへ触れられるかを決定します。"
     },
     mikoshiSpec: {
       productCta: "ランタイム仕様を開く",

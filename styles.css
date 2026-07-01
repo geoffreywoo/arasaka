@@ -6762,6 +6762,15 @@ a,
   filter: saturate(1.06) contrast(1.1) brightness(0.9);
 }
 
+.relic-host-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.12) brightness(0.9);
+}
+
+.relic-host-hero .archive-route-copy h1 {
+  font-size: clamp(2.8rem, 4.85vw, 4.65rem);
+}
+
 .mikoshi-spec-route-visual img {
   object-position: center center;
   filter: saturate(1.04) contrast(1.1) brightness(0.9);
