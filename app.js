@@ -1150,6 +1150,69 @@ const translations = {
       mapTitle: "Executive Continuity routes authority through Relic capture, Mikoshi custody, board governance, and Black Ledger control.",
       mapCopy: "The service is the human operating layer around the continuity stack: it decides when evidence is enough, when silence is safer, and when authority may speak again."
     },
+    continuityRehearsal: {
+      productCta: "Open succession rehearsal",
+      back: "Return to Executive Continuity",
+      kicker: "SV-01 / SUCCESSION REHEARSAL ROOM",
+      title: "Authority is rehearsed before it is inherited.",
+      summary: "Succession Rehearsal Room converts principal disruption, board quorum, family challenge, market shock, construct drift, and capital-custody exposure into simulated release trials before any successor, construct, or continuity candidate can speak for the institution.",
+      openActivation: "Open activation protocol",
+      openCustody: "Open engram custody",
+      visualCaption: "Executive Continuity succession rehearsal plate, generated Arasaka catalog image.",
+      readouts: {
+        quorum: {
+          label: "Board quorum",
+          copy: "Minimum voting surface before a rehearsal candidate receives mandate state or market-facing authority."
+        },
+        drift: {
+          label: "Drift ceiling",
+          copy: "Maximum permitted behavioral variance during board, family, capital, and hostile-counterparty simulations."
+        },
+        shocks: {
+          label: "Shock library",
+          copy: "Scenario set spanning market panic, founder challenge, sovereign demand, proxy dispute, and construct refusal."
+        }
+      },
+      modulesEyebrow: "Rehearsal Stack",
+      modulesTitle: "A successor is tested against the institution before the institution is handed over.",
+      modulesCopy: "The room simulates signature authority, family challenge, market panic, hostile counterparty pressure, and construct drift before continuity becomes public action.",
+      modules: {
+        board: {
+          title: "Board Shock Simulator",
+          copy: "Tests how the candidate answers deadlock, emergency motion, founder veto, and hostile director challenge under quorum observation."
+        },
+        family: {
+          title: "Family Challenge Court",
+          copy: "Runs lineage, consent, medical custody, and private-office disputes before a successor can inherit founder voice."
+        },
+        drift: {
+          title: "Construct Drift Bench",
+          copy: "Measures whether an archived construct preserves decision posture when exposed to contradiction, loss, pressure, and new market information."
+        },
+        capital: {
+          title: "Capital Authority Mirror",
+          copy: "Mirrors signature rights against custody locks, escrow rails, disclosure windows, and Black Ledger abort conditions."
+        }
+      },
+      envelopeEyebrow: "Release Envelope",
+      envelopeTitle: "The candidate can speak only after the simulation proves what would break.",
+      envelopeCopy: "Succession rehearsal cannot open release authority until candidate class, rehearsal scope, witness model, release gate, and exclusion boundary are named.",
+      matrix: {
+        candidate: "Candidate class",
+        candidateValue: "Biological successor, archived construct, Relic carrier, emergency proxy, or board-appointed marshal",
+        scope: "Rehearsal scope",
+        scopeValue: "Signature authority, market disclosure, family dispute, hostile counterparty, or sovereign demand",
+        witness: "Witness model",
+        witnessValue: "Board quorum, family office, medical custodian, regional command, and capital custody observer",
+        release: "Release gate",
+        releaseValue: "Drift ceiling, quorum motion, lawful corridor, capital lock, and communications embargo",
+        exclusion: "Excluded use",
+        exclusionValue: "Vanity resurrection, unwitnessed proxy authority, market manipulation, or coerced family consent"
+      },
+      mapEyebrow: "Continuity Routing",
+      mapTitle: "Succession rehearsal routes continuity through activation protocol, engram custody, Relic host trial, Mikoshi arbitration, capital custody, and board governance.",
+      mapCopy: "Activation starts the emergency. Custody proves the object. Rehearsal decides whether authority can survive contact with the living institution."
+    },
     counterProtocol: {
       productCta: "Open response protocol",
       openProtocol: "Open response protocol",
@@ -6661,6 +6724,69 @@ const translations = {
       mapEyebrow: "継続経路",
       mapTitle: "Executive Continuityは権限をRelic取得、Mikoshi保管、取締役会統治、Black Ledger制御へルーティングします。",
       mapCopy: "このサービスは継続スタックを囲む人間運用レイヤーです。証拠がいつ十分か、沈黙がいつ安全か、権限がいつ再び発話できるかを決定します。"
+    },
+    continuityRehearsal: {
+      productCta: "継承演習を開く",
+      back: "役員継続へ戻る",
+      kicker: "SV-01 / 継承演習室",
+      title: "権限は継承される前に演習されます。",
+      summary: "継承演習室は、主体途絶、取締役会クォーラム、家族異議、市場ショック、構成体ドリフト、資本保管露出を、後継者、構成体、または継続候補が機関を代表して発話する前のリリース試験へ変換します。",
+      openActivation: "起動プロトコルを開く",
+      openCustody: "エングラム保管を開く",
+      visualCaption: "Executive Continuity継承演習プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        quorum: {
+          label: "取締役会クォーラム",
+          copy: "演習候補が委任状態または市場向け権限を受ける前の最小投票面。"
+        },
+        drift: {
+          label: "ドリフト上限",
+          copy: "取締役会、家族、資本、敵対的相手方シミュレーション中に許可される最大行動分散。"
+        },
+        shocks: {
+          label: "ショックライブラリ",
+          copy: "市場パニック、創業者異議、主権要求、代理紛争、構成体拒否を含むシナリオ群。"
+        }
+      },
+      modulesEyebrow: "演習スタック",
+      modulesTitle: "後継者は機関を引き渡される前に、機関に対して試験されます。",
+      modulesCopy: "この室は、継続性が公開行動になる前に、署名権限、家族異議、市場パニック、敵対的相手方圧力、構成体ドリフトをシミュレートします。",
+      modules: {
+        board: {
+          title: "取締役会ショックシミュレータ",
+          copy: "デッドロック、緊急動議、創業者拒否権、敵対的取締役異議へ候補がどう応答するかをクォーラム監視下で試験します。"
+        },
+        family: {
+          title: "家族異議法廷",
+          copy: "後継者が創業者の声を継承できる前に、系譜、同意、医療保管、プライベートオフィス紛争を実行します。"
+        },
+        drift: {
+          title: "構成体ドリフトベンチ",
+          copy: "アーカイブ済み構成体が矛盾、喪失、圧力、新しい市場情報にさらされた時、意思決定姿勢を保持するか測定します。"
+        },
+        capital: {
+          title: "資本権限ミラー",
+          copy: "署名権限を保管ロック、エスクローレール、開示窓、Black Ledger中止条件に対してミラーリングします。"
+        }
+      },
+      envelopeEyebrow: "リリース範囲",
+      envelopeTitle: "候補は、何が破綻するかをシミュレーションが証明した後にのみ発話できます。",
+      envelopeCopy: "継承演習は、候補クラス、演習範囲、立会モデル、リリースゲート、除外境界が指名されるまでリリース権限を開けません。",
+      matrix: {
+        candidate: "候補クラス",
+        candidateValue: "生物学的後継者、アーカイブ済み構成体、Relic運搬者、緊急代理、または取締役会任命マーシャル",
+        scope: "演習範囲",
+        scopeValue: "署名権限、市場開示、家族紛争、敵対的相手方、または主権要求",
+        witness: "立会モデル",
+        witnessValue: "取締役会クォーラム、ファミリーオフィス、医療保管者、地域指揮、資本保管オブザーバー",
+        release: "リリースゲート",
+        releaseValue: "ドリフト上限、クォーラム動議、合法回廊、資本ロック、通信禁輸",
+        exclusion: "除外用途",
+        exclusionValue: "虚栄的復活、非立会代理権限、市場操作、または強制された家族同意"
+      },
+      mapEyebrow: "継続経路",
+      mapTitle: "継承演習は継続性を起動プロトコル、エングラム保管、Relicホスト試験、Mikoshi仲裁、資本保管、取締役会統治へルーティングします。",
+      mapCopy: "起動が緊急事態を開始します。保管がオブジェクトを証明します。演習は権限が生きた機関との接触に耐えられるかを判断します。"
     },
     counterProtocol: {
       productCta: "応答プロトコルを開く",

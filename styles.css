@@ -6825,6 +6825,15 @@ a,
   filter: saturate(1.08) contrast(1.1) brightness(0.9);
 }
 
+.continuity-rehearsal-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.1) brightness(0.9);
+}
+
+.continuity-rehearsal-hero .archive-route-copy h1 {
+  font-size: clamp(2.8rem, 4.7vw, 4.5rem);
+}
+
 .counter-protocol-visual img {
   object-position: center center;
   filter: saturate(1.08) contrast(1.12) brightness(0.88);
