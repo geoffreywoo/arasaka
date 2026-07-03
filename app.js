@@ -709,6 +709,68 @@ const translations = {
       mapTitle: "Black ICE routes counterintrusion through runtime doctrine, netrunner service, Blackwall perimeter, and board evidence.",
       mapCopy: "The product file makes the appliance purchasable. The runtime dossier defines the trap. The service route provides operators. The board record decides what can be burned."
     },
+    iceGeometry: {
+      productCta: "Open credential geometry",
+      back: "Return to Black ICE dossier",
+      kicker: "ICE-77 / CREDENTIAL GEOMETRY",
+      title: "A credential becomes hostile when its shape cannot exist.",
+      summary: "Black ICE Credential Geometry models impossible identity paths, signature drift, privilege curvature, toolchain heat, and false-positive risk before ICE-77 is allowed to mirror, trap, burn, or quarantine a netrunner session.",
+      openMesh: "Open mesh specification",
+      visualCaption: "Credential geometry counterintrusion plate, generated Arasaka catalog image.",
+      readouts: {
+        curvature: {
+          label: "Privilege curvature",
+          copy: "Maximum deviation from known authority path before a credential is mirrored into trap compute."
+        },
+        falsePositive: {
+          label: "False-positive hold",
+          copy: "Evidence retention window for ambiguous credentials before burn authority can be escalated."
+        },
+        witness: {
+          label: "Witness quorum",
+          copy: "Minimum independent custody nodes required before credential geometry can become board evidence."
+        }
+      },
+      modulesEyebrow: "Geometry Stack",
+      modulesTitle: "The runtime scores the shape of authority before it scores the attacker.",
+      modulesCopy: "Credential Geometry treats access as a moving vector: role, device, behavior, route, cadence, and toolchain must resolve to one plausible corporate body before ICE responds.",
+      modules: {
+        vector: {
+          title: "Authority Vector Field",
+          copy: "Compares role, session origin, biometric cadence, device lineage, and regional clearance against expected movement geometry."
+        },
+        drift: {
+          title: "Signature Drift Membrane",
+          copy: "Measures packet timing, command grammar, memory write rhythm, and spoof pressure before the credential reaches value."
+        },
+        falsePositive: {
+          title: "False-Positive Quarantine",
+          copy: "Holds ambiguous sessions in mirrored compute so human operators can distinguish compromised staff from hostile netrunners."
+        },
+        receipt: {
+          title: "Credential Receipt Ledger",
+          copy: "Binds the credential shape, operator decision, trap class, proportionality rule, and witness quorum into admissible evidence."
+        }
+      },
+      envelopeEyebrow: "Geometry Envelope",
+      envelopeTitle: "A trap cannot fire until the identity problem has a lawful shape.",
+      envelopeCopy: "Credential Geometry requires a protected surface, credential class, drift threshold, response limit, and false-positive hold before an ICE mesh can move beyond observation.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Sovereign net, custody API, executive room, industrial command, or neural vault corridor",
+        credential: "Credential class",
+        credentialValue: "Staff identity, machine relay, privileged toolchain, contractor path, construct interface, or emergency override",
+        drift: "Drift threshold",
+        driftValue: "Impossible region hop, cadence mismatch, privilege curvature, memory rhythm, or route heat anomaly",
+        response: "Response limit",
+        responseValue: "Observe, mirror, soft trap, hard trap, quarantine, manual lock captain, or board hold",
+        exclusion: "Excluded use",
+        exclusionValue: "Unwitnessed burn, employee dragnet, punitive credential scoring, uncontrolled Blackwall contact"
+      },
+      mapEyebrow: "Counterintrusion Routing",
+      mapTitle: "Credential Geometry routes Black ICE decisions through mesh specification, runtime doctrine, response protocol, Blackwall containment, and board evidence.",
+      mapCopy: "The geometry dossier decides whether access is possible. The mesh decides how to trap it. The response protocol decides when operators may burn the path."
+    },
     ledgerSpec: {
       productCta: "Open custody specification",
       openSpec: "Open ledger custody spec",
@@ -6158,6 +6220,68 @@ const translations = {
       mapEyebrow: "セキュリティ経路",
       mapTitle: "Black ICEは対侵入をランタイムドクトリン、ネットランナーサービス、Blackwall境界、取締役会証拠へルーティングします。",
       mapCopy: "製品ファイルはアプライアンスを購入可能にします。ランタイムドシエはトラップを定義します。サービス経路はオペレーターを提供します。取締役会記録は何を焼却できるかを決定します。"
+    },
+    iceGeometry: {
+      productCta: "資格情報ジオメトリを開く",
+      back: "Black ICEドシエへ戻る",
+      kicker: "ICE-77 / 資格情報ジオメトリ",
+      title: "資格情報は、その形状が存在不可能なとき敵対的になります。",
+      summary: "Black ICE Credential Geometryは、ICE-77がネットランナーセッションをミラー、トラップ、焼却、隔離する前に、不可能な同一性経路、署名ドリフト、権限曲率、ツールチェーン熱量、誤検知リスクをモデル化します。",
+      openMesh: "メッシュ仕様を開く",
+      visualCaption: "資格情報ジオメトリ対侵入プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        curvature: {
+          label: "権限曲率",
+          copy: "資格情報がトラップ計算資源へミラーされる前に許可される既知権限経路からの最大逸脱。"
+        },
+        falsePositive: {
+          label: "誤検知保留",
+          copy: "焼却権限がエスカレーション可能になる前の曖昧な資格情報に対する証拠保持窓。"
+        },
+        witness: {
+          label: "立会クォーラム",
+          copy: "資格情報ジオメトリが取締役会証拠になれる前に必要な独立保管ノードの最小数。"
+        }
+      },
+      modulesEyebrow: "ジオメトリスタック",
+      modulesTitle: "ランタイムは攻撃者を採点する前に、権限の形状を採点します。",
+      modulesCopy: "Credential Geometryはアクセスを移動ベクトルとして扱います。役割、デバイス、挙動、経路、周期、ツールチェーンが、ICE応答前に一つのあり得る企業身体へ解決されなければなりません。",
+      modules: {
+        vector: {
+          title: "権限ベクトルフィールド",
+          copy: "役割、セッション起点、生体周期、デバイス系譜、地域クリアランスを期待される移動ジオメトリと比較します。"
+        },
+        drift: {
+          title: "署名ドリフト膜",
+          copy: "資格情報が価値面に到達する前に、パケットタイミング、命令文法、メモリ書込リズム、スプーフ圧力を測定します。"
+        },
+        falsePositive: {
+          title: "誤検知隔離",
+          copy: "人間オペレーターが侵害されたスタッフと敵対ネットランナーを区別できるよう、曖昧なセッションをミラー計算資源で保持します。"
+        },
+        receipt: {
+          title: "資格情報受領台帳",
+          copy: "資格情報形状、オペレーター判断、トラップクラス、比例性ルール、立会クォーラムを証拠として認められる形へ結合します。"
+        }
+      },
+      envelopeEyebrow: "ジオメトリ範囲",
+      envelopeTitle: "同一性問題に合法な形状が与えられるまで、トラップは発火できません。",
+      envelopeCopy: "Credential Geometryでは、ICEメッシュが観測を超えて動く前に、保護面、資格情報クラス、ドリフト閾値、応答制限、誤検知保留が必要です。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "主権ネット、保管API、役員室、産業指揮、または神経保管庫回廊",
+        credential: "資格情報クラス",
+        credentialValue: "スタッフ同一性、機械中継、特権ツールチェーン、契約者経路、構成体インターフェース、または緊急上書き",
+        drift: "ドリフト閾値",
+        driftValue: "不可能な地域ホップ、周期不一致、権限曲率、メモリリズム、または経路熱量異常",
+        response: "応答制限",
+        responseValue: "観測、ミラー、ソフトトラップ、ハードトラップ、隔離、手動ロックキャプテン、または取締役会保留",
+        exclusion: "除外用途",
+        exclusionValue: "非立会焼却、従業員ドラグネット、懲罰的資格情報採点、非制御Blackwall接触"
+      },
+      mapEyebrow: "対侵入経路",
+      mapTitle: "Credential GeometryはBlack ICE判断をメッシュ仕様、ランタイムドクトリン、応答プロトコル、Blackwall封じ込め、取締役会証拠へルーティングします。",
+      mapCopy: "ジオメトリドシエはアクセスが可能かを決定します。メッシュはそれをどうトラップするかを決定します。応答プロトコルはオペレーターがいつ経路を焼却できるかを決定します。"
     },
     ledgerSpec: {
       productCta: "保管仕様を開く",
