@@ -2362,6 +2362,67 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier binds the Black Ledger product to the mandate service and exchange grid."
     },
+    disclosureSwitch: {
+      productCta: "Open disclosure switch",
+      back: "Return to Capital Custody",
+      kicker: "TECH-BL-03A / SELECTIVE DISCLOSURE SWITCH",
+      title: "Silence is lawful only while disclosure can prove itself.",
+      summary: "Selective Disclosure Switch converts private capital custody into regulator-readable evidence only when jurisdiction, covenant, counterparty, or board triggers fire. It reveals the minimum lawful proof while preserving strategy state, beneficial-owner masking, and sealed collateral geometry.",
+      visualCaption: "Selective disclosure switch plate, generated Arasaka Black Ledger catalog image.",
+      readouts: {
+        trigger: {
+          label: "Trigger classes",
+          copy: "Jurisdiction, covenant, counterparty, tax, succession, sanctions, default, subpoena, and board-release events."
+        },
+        proof: {
+          label: "Proof aperture",
+          copy: "Default release profile exposes only lawful basis, custody state, collateral existence, and receipt hash."
+        },
+        lag: {
+          label: "Disclosure lag",
+          copy: "Maximum sealed interval before a qualifying demand must become regulator-readable evidence."
+        }
+      },
+      modulesEyebrow: "Disclosure Stack",
+      modulesTitle: "The switch separates proof from exposure.",
+      modulesCopy: "Black Ledger can remain silent only because every silent surface is pre-routed to a disclosure packet, jurisdiction corridor, redaction boundary, and board custody witness.",
+      modules: {
+        trigger: {
+          title: "Jurisdiction Trigger Router",
+          copy: "Classifies regulator demand, covenant breach, court order, tax event, sanctions hit, or counterparty default before proof opens."
+        },
+        aperture: {
+          title: "Proof Aperture Compiler",
+          copy: "Compiles the smallest admissible evidence set: custody receipt, lawful basis, collateral existence, release condition, and witness chain."
+        },
+        redaction: {
+          title: "Collateral Redaction Boundary",
+          copy: "Masks strategy timing, beneficial-owner graph, patent gravity, and unrelated collateral while preserving verifiable compliance."
+        },
+        receipt: {
+          title: "Board Release Receipt",
+          copy: "Seals what was disclosed, why it opened, which authority witnessed it, and which private surfaces remained silent."
+        }
+      },
+      envelopeEyebrow: "Disclosure Envelope",
+      envelopeTitle: "A private mandate must know how it will become public before it moves.",
+      envelopeCopy: "The switch cannot arm until trigger class, authority recipient, proof aperture, redaction boundary, release witness, and exclusion boundary are named.",
+      matrix: {
+        trigger: "Trigger class",
+        triggerValue: "Regulator demand, covenant breach, tax event, subpoena, sanctions hit, counterparty default, or board release",
+        recipient: "Authority recipient",
+        recipientValue: "Regulator, treaty desk, court officer, tax authority, custodian quorum, or board evidence room",
+        aperture: "Proof aperture",
+        apertureValue: "Custody state, collateral existence, lawful basis, mandate hash, counterparty receipt, and release condition",
+        redaction: "Redaction boundary",
+        redactionValue: "Beneficial-owner mask, strategy graph seal, patent gravity silence, and unrelated collateral exclusion",
+        exclusion: "Excluded use",
+        exclusionValue: "False compliance, evidence laundering, sanctions concealment, fabricated collateral, or selective truth manipulation"
+      },
+      mapEyebrow: "Capital Routing",
+      mapTitle: "Selective Disclosure routes Black Ledger custody through mandate settlement, patent gravity, regional command, and board governance.",
+      mapCopy: "Custody proves the object. Patent gravity prices the pressure. The mandate moves capital. The disclosure switch decides what the outside world is allowed to know."
+    },
     spine: {
       node: "Public Node",
       depth: "Scroll Depth",
@@ -8065,6 +8126,67 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録はBlack Ledger製品を委任サービスと交換グリッドへ結合します。"
+    },
+    disclosureSwitch: {
+      productCta: "開示スイッチを開く",
+      back: "資本保管へ戻る",
+      kicker: "TECH-BL-03A / 選択的開示スイッチ",
+      title: "沈黙は、開示が自らを証明できる間だけ合法です。",
+      summary: "Selective Disclosure Switchは、管轄、契約、相手方、または取締役会トリガーが発火した場合にのみ、私的資本保管を規制当局が読める証拠へ変換します。戦略状態、実質所有者マスク、封印済み担保ジオメトリを保持しながら、最小限の合法証明だけを開示します。",
+      visualCaption: "選択的開示スイッチプレート、生成された荒坂Black Ledgerカタログ画像。",
+      readouts: {
+        trigger: {
+          label: "トリガークラス",
+          copy: "管轄、契約、相手方、税務、継承、制裁、債務不履行、召喚、取締役会リリース事象。"
+        },
+        proof: {
+          label: "証明開口",
+          copy: "標準リリースプロファイルは、法的根拠、保管状態、担保存在、レシートハッシュのみを公開します。"
+        },
+        lag: {
+          label: "開示遅延",
+          copy: "適格な要求が規制当局可読の証拠になる前の最大封印間隔。"
+        }
+      },
+      modulesEyebrow: "開示スタック",
+      modulesTitle: "スイッチは証明を露出から分離します。",
+      modulesCopy: "Black Ledgerが沈黙を維持できるのは、すべての沈黙面が開示パケット、管轄回廊、編集境界、取締役会保管立会へ事前ルーティングされるためです。",
+      modules: {
+        trigger: {
+          title: "管轄トリガールーター",
+          copy: "証明が開く前に、規制当局要求、契約違反、裁判所命令、税務事象、制裁ヒット、相手方不履行を分類します。"
+        },
+        aperture: {
+          title: "証明開口コンパイラ",
+          copy: "保管レシート、法的根拠、担保存在、リリース条件、立会チェーンという最小の許容証拠セットをコンパイルします。"
+        },
+        redaction: {
+          title: "担保編集境界",
+          copy: "検証可能なコンプライアンスを保持しながら、戦略タイミング、実質所有者グラフ、特許重力、無関係担保をマスクします。"
+        },
+        receipt: {
+          title: "取締役会リリースレシート",
+          copy: "何が開示され、なぜ開き、どの権限が立会い、どの私的面が沈黙を維持したかを封印します。"
+        }
+      },
+      envelopeEyebrow: "開示範囲",
+      envelopeTitle: "私的委任は、移動する前にどう公開されるかを知っていなければなりません。",
+      envelopeCopy: "このスイッチは、トリガークラス、権限受領者、証明開口、編集境界、リリース立会、除外境界が指名されるまで武装できません。",
+      matrix: {
+        trigger: "トリガークラス",
+        triggerValue: "規制当局要求、契約違反、税務事象、召喚、制裁ヒット、相手方不履行、または取締役会リリース",
+        recipient: "権限受領者",
+        recipientValue: "規制当局、条約デスク、裁判所職員、税務当局、保管者クォーラム、または取締役会証拠室",
+        aperture: "証明開口",
+        apertureValue: "保管状態、担保存在、法的根拠、委任ハッシュ、相手方レシート、リリース条件",
+        redaction: "編集境界",
+        redactionValue: "実質所有者マスク、戦略グラフ封印、特許重力沈黙、無関係担保除外",
+        exclusion: "除外用途",
+        exclusionValue: "虚偽コンプライアンス、証拠ロンダリング、制裁隠蔽、偽造担保、または選択的真実操作"
+      },
+      mapEyebrow: "資本経路",
+      mapTitle: "選択的開示はBlack Ledger保管を委任決済、特許重力、地域指揮、取締役会統治へルーティングします。",
+      mapCopy: "保管がオブジェクトを証明します。特許重力が圧力を価格付けします。委任が資本を動かします。開示スイッチが外部世界に何を知らせるかを決定します。"
     },
     spine: {
       node: "公開ノード",

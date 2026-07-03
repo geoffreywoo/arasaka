@@ -1,12 +1,14 @@
 # Arasaka
 
-An open-source, bilingual design-fiction corporate website for `arasaka.com`.
+An open-source, bilingual, design-fiction corporate website for `arasaka.com`.
 
-Arasaka is a Geoffrey Woo personal project exploring how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
+Arasaka is a Geoffrey Woo personal project: a public-web artifact exploring how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate. The site treats products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures as the primary material of the fiction.
 
-The site is intentionally not a wiki, recap, reference explainer, or fanpage. It is built to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
+This is intentionally not a wiki, recap, reference explainer, or fanpage. It is built to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
 
-The repository is public so the craft is inspectable: information architecture, bilingual copy systems, static deployment, responsive layout, generated/composite asset handling, and the small details that make speculative fiction feel operationally real.
+The repository is public so the craft is inspectable: information architecture, bilingual copy systems, static deployment, responsive layout, generated/composite asset handling, licensing boundaries, and the small details that make speculative fiction feel operationally real.
+
+This project is unofficial and unaffiliated with CD PROJEKT RED, CD PROJEKT, or Cyberpunk 2077.
 
 ## Status
 
@@ -18,7 +20,7 @@ The repository is public so the craft is inspectable: information architecture, 
 
 ## Mission
 
-Arasaka is a public-web thought experiment about institutional power.
+Arasaka is a public-web thought experiment about institutional power, corporate myth, and the way speculative technology becomes more believable when it is expressed through ordinary enterprise surfaces.
 
 The project starts from one question:
 
@@ -33,7 +35,7 @@ The website treats speculative cyberpunk themes as serious corporate systems:
 - Incident archives as public evidence packets rather than lore summaries
 - Japanese and English localization as a real operating layer, not decorative texture
 
-The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company rather than a page describing one.
+The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company rather than a page describing one. The project succeeds when the fiction feels institutional before it feels theatrical.
 
 ## Project Goals
 
@@ -57,7 +59,7 @@ Good forks and contributions should improve the craft of the site:
 - Better attribution and asset provenance
 - More restrained product, service, and governance surfaces
 
-The project is open source as code and documentation. It is not a blanket license to reuse third-party intellectual property, trademarks, screenshots, fictional universe concepts, or generated/composite identity assets.
+The project is open source as original code and documentation. It is not a blanket license to reuse third-party intellectual property, trademarks, screenshots, fictional universe concepts, user-provided identity assets, or generated/composite imagery.
 
 ## Repository Philosophy
 
@@ -142,6 +144,7 @@ http://127.0.0.1:4187/technology/neural-substrate/
 http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
 http://127.0.0.1:4187/technology/black-ice-runtime/
 http://127.0.0.1:4187/technology/capital-custody/
+http://127.0.0.1:4187/technology/capital-custody/selective-disclosure-switch/
 http://127.0.0.1:4187/technology/autonomous-force/
 http://127.0.0.1:4187/technology/autonomous-force/rules-of-force-ledger/
 http://127.0.0.1:4187/divisions/

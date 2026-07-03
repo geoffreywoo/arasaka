@@ -6810,6 +6810,15 @@ a,
   filter: saturate(1.08) contrast(1.12) brightness(0.9);
 }
 
+.disclosure-switch-visual img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.12) brightness(0.88);
+}
+
+.disclosure-switch-hero .archive-route-copy h1 {
+  font-size: clamp(2.8rem, 4.7vw, 4.5rem);
+}
+
 .swarm-spec-route-visual img {
   object-position: center center;
   filter: saturate(1.12) contrast(1.08) brightness(0.9);
