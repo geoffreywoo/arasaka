@@ -143,6 +143,7 @@ http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
 http://127.0.0.1:4187/technology/black-ice-runtime/
 http://127.0.0.1:4187/technology/capital-custody/
 http://127.0.0.1:4187/technology/autonomous-force/
+http://127.0.0.1:4187/technology/autonomous-force/rules-of-force-ledger/
 http://127.0.0.1:4187/divisions/
 http://127.0.0.1:4187/subsidiaries/
 http://127.0.0.1:4187/regional/

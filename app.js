@@ -1575,6 +1575,10 @@ const translations = {
         covenant: {
           title: "Renewal Audit Covenant",
           copy: "Construct custody, memory retention, successor authority, and evidence survival are reviewed before the mandate renews."
+        },
+        force: {
+          title: "Rules-of-Force Ledger",
+          copy: "Autonomous posture changes, exclusion maps, officer seals, and replay artifacts are bound before force survives audit."
         }
       },
       mapEyebrow: "Authority Routing",
@@ -2158,6 +2162,70 @@ const translations = {
       },
       networkEyebrow: "Connected Records",
       networkTitle: "This dossier binds the protection suite to Arasaka city-grid operations."
+    },
+    forceLedger: {
+      productCta: "Open rules-of-force ledger",
+      back: "Return to Autonomous Force",
+      kicker: "TECH-SW-12A / RULES-OF-FORCE LEDGER",
+      title: "Autonomous force is accountable only when it leaves a receipt.",
+      summary: "Rules-of-Force Ledger binds every SWARM-12 posture change to a named officer, permitted formation, civilian exclusion proof, rule basis, confidence field, and after-action evidence object before a machine act can persist as authorized force.",
+      openProtocol: "Open route protocol",
+      openExclusion: "Open exclusion map",
+      openFormation: "Open formation spec",
+      visualCaption: "Rules-of-Force receipt plate, generated Arasaka protection catalog image.",
+      readouts: {
+        receipt: {
+          label: "Receipt write",
+          copy: "Maximum interval from autonomous posture change to operator-bound board evidence."
+        },
+        officer: {
+          label: "Officer binding",
+          copy: "Every force-bearing state resolves to one named escalation officer before persistence."
+        },
+        retention: {
+          label: "Evidence retention",
+          copy: "Default sealed retention window for route proof, exclusion cells, sensor quorum, and after-action replay."
+        }
+      },
+      modulesEyebrow: "Ledger Stack",
+      modulesTitle: "The ledger converts speed into an accountable chain of command.",
+      modulesCopy: "Machine action becomes authorized force only after formation, exclusion, rule basis, officer binding, and evidence retention resolve to the same mandate.",
+      modules: {
+        formation: {
+          title: "Formation State Hash",
+          copy: "Captures the exact veil, denial, overwatch, or extraction geometry the swarm occupied when authority changed."
+        },
+        exclusion: {
+          title: "Exclusion Proof Anchor",
+          copy: "Attaches noncombatant uncertainty, medical lanes, property boundaries, and protected route cells to the force receipt."
+        },
+        officer: {
+          title: "Escalation Officer Seal",
+          copy: "Binds a live human authority, command watchfloor, jurisdiction, and revocation window to each force-bearing state."
+        },
+        replay: {
+          title: "After-Action Replay Object",
+          copy: "Packages sensor quorum, route state, exposure map, and command messages into a board-readable replay artifact."
+        }
+      },
+      envelopeEyebrow: "Receipt Envelope",
+      envelopeTitle: "A machine act is not authorized until the ledger can name its owner.",
+      envelopeCopy: "The ledger refuses persistence when formation, civilian exclusion, officer authority, permitted force class, or retention policy cannot be proven inside the same mandate.",
+      matrix: {
+        event: "Event class",
+        eventValue: "Observation, veil shift, route denial, vehicle disablement, extraction closure, or manual lethal review",
+        rule: "Rule basis",
+        ruleValue: "Mandate clause, regional corridor, protected route, civilian exclusion proof, and escalation threshold",
+        owner: "Named owner",
+        ownerValue: "Escalation officer, watchfloor commander, principal marshal, regional witness, and board docket observer",
+        evidence: "Evidence object",
+        evidenceValue: "Sensor quorum, formation hash, exclusion cell map, command transcript, and after-action replay",
+        exclusion: "Excluded use",
+        exclusionValue: "Anonymous force, missing exclusion proof, unlogged escalation, spoofed officer seal, or retroactive authorization"
+      },
+      mapEyebrow: "Force Routing",
+      mapTitle: "Rules-of-Force Ledger routes SWARM-12 through formation geometry, civilian exclusion, route protocol, operations watchfloor, and board governance.",
+      mapCopy: "Formation defines the machine. Exclusion defines the negative space. The route protocol defines the movement. The ledger decides whether the resulting force can survive audit."
     },
     techCapital: {
       back: "Return to technology library",
@@ -7150,6 +7218,10 @@ const translations = {
         covenant: {
           title: "更新監査契約",
           copy: "委任更新前に、構成体保管、記憶保持、後継者権限、証拠存続を審査します。"
+        },
+        force: {
+          title: "戦力規則台帳",
+          copy: "自律姿勢変更、排除地図、責任者封印、リプレイ成果物は、戦力が監査に耐える前に結合されます。"
         }
       },
       mapEyebrow: "権限ルーティング",
@@ -7733,6 +7805,70 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "この記録は警護製品群を荒坂都市グリッド運用へ結合します。"
+    },
+    forceLedger: {
+      productCta: "戦力規則台帳を開く",
+      back: "自律戦力へ戻る",
+      kicker: "TECH-SW-12A / 戦力規則台帳",
+      title: "自律戦力は、レシートを残す時にのみ説明責任を持ちます。",
+      summary: "Rules-of-Force Ledgerは、機械行為が承認済み戦力として永続化できる前に、すべてのSWARM-12姿勢変更を、指名済み責任者、許可済み編隊、民間人排除証明、規則根拠、信頼度フィールド、事後証拠オブジェクトへ結合します。",
+      openProtocol: "経路プロトコルを開く",
+      openExclusion: "排除地図を開く",
+      openFormation: "編隊仕様を開く",
+      visualCaption: "Rules-of-Forceレシートプレート、生成された荒坂警護カタログ画像。",
+      readouts: {
+        receipt: {
+          label: "レシート書込",
+          copy: "自律姿勢変更からオペレーター結合済み取締役会証拠までの最大間隔。"
+        },
+        officer: {
+          label: "責任者結合",
+          copy: "すべての戦力を伴う状態は、永続化前に一名の指名済みエスカレーション責任者へ解決されます。"
+        },
+        retention: {
+          label: "証拠保持",
+          copy: "経路証明、排除セル、センサークォーラム、事後リプレイの標準封印保持期間。"
+        }
+      },
+      modulesEyebrow: "台帳スタック",
+      modulesTitle: "台帳は速度を説明可能な指揮系統へ変換します。",
+      modulesCopy: "機械行為は、編隊、排除、規則根拠、責任者結合、証拠保持が同じ委任へ解決した後にのみ承認済み戦力になります。",
+      modules: {
+        formation: {
+          title: "編隊状態ハッシュ",
+          copy: "権限が変化した時にスウォームが占有した遮蔽、拒否、上空監視、抽出ジオメトリを正確に捕捉します。"
+        },
+        exclusion: {
+          title: "排除証明アンカー",
+          copy: "非戦闘員不確実性、医療レーン、財産境界、保護経路セルを戦力レシートへ添付します。"
+        },
+        officer: {
+          title: "エスカレーション責任者封印",
+          copy: "生きた人間権限、指揮監視室、管轄、取消窓を各戦力状態へ結合します。"
+        },
+        replay: {
+          title: "事後リプレイオブジェクト",
+          copy: "センサークォーラム、経路状態、露出地図、指揮メッセージを取締役会可読のリプレイ成果物へパッケージ化します。"
+        }
+      },
+      envelopeEyebrow: "レシート範囲",
+      envelopeTitle: "機械行為は、台帳が所有者を指名できるまで承認されません。",
+      envelopeCopy: "編隊、民間人排除、責任者権限、許可済み戦力クラス、保持方針が同じ委任内で証明できない場合、台帳は永続化を拒否します。",
+      matrix: {
+        event: "イベントクラス",
+        eventValue: "観測、遮蔽変更、経路拒否、車両無力化、抽出閉鎖、または手動致死レビュー",
+        rule: "規則根拠",
+        ruleValue: "委任条項、地域回廊、保護経路、民間人排除証明、エスカレーションしきい値",
+        owner: "指名所有者",
+        ownerValue: "エスカレーション責任者、監視室指揮官、主体マーシャル、地域立会、取締役会ドケット監視者",
+        evidence: "証拠オブジェクト",
+        evidenceValue: "センサークォーラム、編隊ハッシュ、排除セル地図、指揮記録、事後リプレイ",
+        exclusion: "除外用途",
+        exclusionValue: "匿名戦力、排除証明欠落、非記録エスカレーション、責任者封印偽装、または遡及承認"
+      },
+      mapEyebrow: "戦力経路",
+      mapTitle: "Rules-of-Force LedgerはSWARM-12を編隊ジオメトリ、民間人排除、経路プロトコル、作戦監視室、取締役会統治へルーティングします。",
+      mapCopy: "編隊は機械を定義します。排除は負の空間を定義します。経路プロトコルは移動を定義します。台帳は結果として生じた戦力が監査に耐えられるかを判断します。"
     },
     techCapital: {
       back: "技術ライブラリへ戻る",

@@ -6820,6 +6820,15 @@ a,
   filter: saturate(1.1) contrast(1.12) brightness(0.88);
 }
 
+.force-ledger-visual img {
+  object-position: center center;
+  filter: saturate(1.12) contrast(1.1) brightness(0.88);
+}
+
+.force-ledger-hero .archive-route-copy h1 {
+  font-size: clamp(2.8rem, 4.75vw, 4.55rem);
+}
+
 .continuity-protocol-visual img {
   object-position: center center;
   filter: saturate(1.08) contrast(1.1) brightness(0.9);
