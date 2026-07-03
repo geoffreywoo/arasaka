@@ -6863,6 +6863,15 @@ a,
   filter: saturate(1.1) contrast(1.12) brightness(0.88);
 }
 
+.blackwall-mirror-visual img {
+  object-position: center center;
+  filter: saturate(1.12) contrast(1.14) brightness(0.86);
+}
+
+.blackwall-mirror-hero .archive-route-copy h1 {
+  font-size: clamp(2.8rem, 4.75vw, 4.55rem);
+}
+
 .blackwall-containment-visual img {
   object-position: center center;
   filter: saturate(1.12) contrast(1.14) brightness(0.86);

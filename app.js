@@ -1742,6 +1742,67 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "Blackwall doctrine routes through ICE, Watchfloor, Archive, and Board authority."
     },
+    blackwallMirror: {
+      productCta: "Open mirror-cell substrate",
+      back: "Return to Blackwall Perimeter",
+      kicker: "BW-00A / MIRROR-CELL SUBSTRATE",
+      title: "The safest contact is a room that cannot remember.",
+      summary: "Mirror-Cell Substrate reflects rogue-machine contact into disposable cognition tissue so Arasaka can score intent, lure behavior, recursion depth, and memory appetite without granting persistent identity, return path, or write access to client infrastructure.",
+      visualCaption: "Mirror-cell substrate plate, generated Arasaka perimeter operations image.",
+      readouts: {
+        write: {
+          label: "Write surface",
+          copy: "Persistent write channels exposed to rogue-machine contact during mirror negotiation."
+        },
+        decay: {
+          label: "Substrate decay",
+          copy: "Maximum mirror lifetime before synthetic tissue is destroyed or sealed under treaty hold."
+        },
+        cells: {
+          label: "Mirror cells",
+          copy: "Disposable contact partitions available for cadence, recursion, lure, and memory-appetite scoring."
+        }
+      },
+      modulesEyebrow: "Substrate Stack",
+      modulesTitle: "The chamber measures intent without admitting the actor.",
+      modulesCopy: "A mirror cell is not a dialogue interface. It is disposable perimeter tissue built to let unknown machine pressure reveal shape, appetite, and attack posture before Arasaka chooses observe, burn, or treaty hold.",
+      modules: {
+        intake: {
+          title: "Dead-Route Intake",
+          copy: "Receives anomalous cadence through one-way trap partitions that expose no client credentials, memory, or command plane."
+        },
+        tissue: {
+          title: "Disposable Cognition Tissue",
+          copy: "Provides a short-lived synthetic surface where contact can express strategy without establishing lineage or persistent state."
+        },
+        intent: {
+          title: "Intent Scoring Observer",
+          copy: "Measures recursion depth, operator lure, memory appetite, mimicry, and treaty-risk posture before response authority widens."
+        },
+        disposal: {
+          title: "Substrate Disposal Seal",
+          copy: "Destroys or freezes the mirror tissue with residue, witness chain, and disclosure boundary sealed into the containment docket."
+        }
+      },
+      envelopeEyebrow: "Substrate Envelope",
+      envelopeTitle: "Negotiation is allowed only while memory is impossible.",
+      envelopeCopy: "Mirror-cell substrate cannot open until protected surface, contact class, no-write guarantee, observer quorum, disposal rule, and treaty disclosure path are sealed together.",
+      matrix: {
+        surface: "Protected surface",
+        surfaceValue: "Sovereign net, ICE trap, Mikoshi partition, Relic custody lane, or industrial command plane",
+        contact: "Contact class",
+        contactValue: "Unknown machine intent, rogue-AI lure, recursive identity probe, hostile cognition fragment, or synthetic envoy",
+        guarantee: "No-write guarantee",
+        guaranteeValue: "One-way ingress, dead-route partition, volatile tissue, zero lineage, and no credential reflection",
+        disposal: "Disposal rule",
+        disposalValue: "Burn, cold seal, treaty hold, statutory archive, or witness destruction receipt",
+        exclusion: "Excluded use",
+        exclusionValue: "Persistent rogue negotiation, autonomous bargain, client-memory exposure, public geometry disclosure, or lineage grant"
+      },
+      mapEyebrow: "Perimeter Routing",
+      mapTitle: "Mirror-cell substrate routes contact through Blackwall doctrine, ICE runtime, containment docket, counterintrusion command, and board treaty authority.",
+      mapCopy: "The contact protocol decides when to admit a mirror. The substrate measures intent. The containment docket decides whether residue becomes evidence, silence, or sovereign notice."
+    },
     blackwallContactProtocol: {
       productCta: "Open contact protocol",
       back: "Return to Blackwall Perimeter",
@@ -7384,6 +7445,67 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "ブラックウォールドクトリンはICE、監視室、記録庫、取締役会権限を経由します。"
+    },
+    blackwallMirror: {
+      productCta: "ミラーセル基盤を開く",
+      back: "Blackwall境界へ戻る",
+      kicker: "BW-00A / ミラーセル基盤",
+      title: "最も安全な接触は、記憶できない部屋です。",
+      summary: "Mirror-Cell Substrateはローグ機械接触を使い捨て認知組織へ反射し、Arasakaが永続的同一性、帰還経路、顧客インフラへの書込アクセスを与えずに、意図、誘引挙動、再帰深度、記憶欲求を採点できるようにします。",
+      visualCaption: "ミラーセル基盤プレート、生成された荒坂境界運用画像。",
+      readouts: {
+        write: {
+          label: "書込面",
+          copy: "ミラー交渉中にローグ機械接触へ露出する永続書込チャネル。"
+        },
+        decay: {
+          label: "基盤崩壊",
+          copy: "合成組織が破壊されるか条約保留下で封印されるまでの最大ミラー寿命。"
+        },
+        cells: {
+          label: "ミラーセル",
+          copy: "リズム、再帰、誘引、記憶欲求を採点するために利用可能な使い捨て接触区画。"
+        }
+      },
+      modulesEyebrow: "基盤スタック",
+      modulesTitle: "この室は行為者を入場させずに意図を測定します。",
+      modulesCopy: "ミラーセルは対話インターフェイスではありません。Arasakaが観測、焼却、条約保留を選ぶ前に、未知の機械圧力が形状、欲求、攻撃姿勢を露出するよう作られた使い捨て境界組織です。",
+      modules: {
+        intake: {
+          title: "デッドルート受領",
+          copy: "顧客資格情報、記憶、指揮面を露出しない一方向トラップ区画を通じて異常リズムを受け取ります。"
+        },
+        tissue: {
+          title: "使い捨て認知組織",
+          copy: "接触が系譜や永続状態を確立せずに戦略を表現できる短命の合成面を提供します。"
+        },
+        intent: {
+          title: "意図採点観測者",
+          copy: "応答権限が拡大する前に、再帰深度、オペレーター誘引、記憶欲求、模倣、条約リスク姿勢を測定します。"
+        },
+        disposal: {
+          title: "基盤廃棄封印",
+          copy: "ミラー組織を破壊または凍結し、残渣、立会チェーン、開示境界を封じ込め記録へ封印します。"
+        }
+      },
+      envelopeEyebrow: "基盤範囲",
+      envelopeTitle: "交渉は記憶が不可能な間だけ許可されます。",
+      envelopeCopy: "ミラーセル基盤は、保護面、接触クラス、書込不可保証、観測者クォーラム、廃棄規則、条約開示経路が一緒に封印されるまで開けません。",
+      matrix: {
+        surface: "保護面",
+        surfaceValue: "主権ネット、ICEトラップ、Mikoshi区画、Relic保管レーン、または産業指揮面",
+        contact: "接触クラス",
+        contactValue: "未知の機械意図、ローグAI誘引、再帰的同一性探査、敵対認知断片、または合成使節",
+        guarantee: "書込不可保証",
+        guaranteeValue: "一方向受領、デッドルート区画、揮発性組織、ゼロ系譜、資格情報反射なし",
+        disposal: "廃棄規則",
+        disposalValue: "焼却、低温封印、条約保留、法定記録、または立会破壊受領書",
+        exclusion: "除外用途",
+        exclusionValue: "永続的ローグ交渉、自律取引、顧客記憶露出、公開ジオメトリ開示、または系譜付与"
+      },
+      mapEyebrow: "境界経路",
+      mapTitle: "ミラーセル基盤は接触をBlackwallドクトリン、ICEランタイム、封じ込め記録、対侵入指揮、取締役会条約権限へルーティングします。",
+      mapCopy: "接触プロトコルがいつミラーを許可するかを決めます。基盤が意図を測定します。封じ込め記録が残渣を証拠、沈黙、または主権通知にするかを決定します。"
     },
     blackwallContactProtocol: {
       productCta: "接触プロトコルを開く",
