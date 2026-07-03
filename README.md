@@ -2,9 +2,11 @@
 
 An open-source, bilingual design-fiction corporate website for `arasaka.com`.
 
-This is a Geoffrey Woo personal project. It imagines how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
+Arasaka is a Geoffrey Woo personal project exploring how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate: products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures.
 
-The site is intentionally not a wiki, recap, reference explainer, or fanpage. It is designed to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
+The site is intentionally not a wiki, recap, reference explainer, or fanpage. It is built to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
+
+The repository is public so the craft is inspectable: information architecture, bilingual copy systems, static deployment, responsive layout, generated/composite asset handling, and the small details that make speculative fiction feel operationally real.
 
 ## Status
 
@@ -33,6 +35,15 @@ The website treats speculative cyberpunk themes as serious corporate systems:
 
 The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company rather than a page describing one.
 
+## Project Goals
+
+- Build the most plausible public website a fictional sovereign-scale conglomerate would publish.
+- Keep English and Japanese localization central to the operating model.
+- Treat every route as a real corporate surface: product, service, governance, archive, region, or protocol.
+- Preserve mobile-first usability for visitors arriving from social links, search, or direct domain entry.
+- Make the repo understandable enough that other designers, writers, and engineers can study or improve the illusion.
+- Maintain clear attribution and licensing boundaries around third-party IP, trademarks, press images, user-provided brand assets, and generated/composite imagery.
+
 ## Why Open Source
 
 The repository is open so people can inspect how the illusion is built: the copy system, route architecture, bilingual content model, responsive layout, asset attribution, and static deployment setup.
@@ -47,6 +58,12 @@ Good forks and contributions should improve the craft of the site:
 - More restrained product, service, and governance surfaces
 
 The project is open source as code and documentation. It is not a blanket license to reuse third-party intellectual property, trademarks, screenshots, fictional universe concepts, or generated/composite identity assets.
+
+## Repository Philosophy
+
+This project is open source in the spirit of a design studio case file: the implementation is visible, reusable, and critiqueable, while the referenced fictional universe and visual identity remain bounded by their respective rights.
+
+Contributions should make the public website more credible, not louder. The best change usually removes friction, sharpens language, improves localization, fixes an accessibility issue, clarifies attribution, or adds a route that feels like it could have passed through a corporate communications department.
 
 ## Design Principles
 
@@ -69,6 +86,26 @@ This is a static website. There is no framework, package install, compile step, 
 - `vercel.json` - static deployment configuration for Vercel
 - `LICENSE` - MIT license for original source code and documentation, with scope notes
 - `assets/ATTRIBUTION.md` - asset provenance and third-party reference notes
+
+## Repository Structure
+
+```text
+.
+├── index.html                 # primary corporate homepage
+├── app.js                     # localization, route data, and interactions
+├── styles.css                 # responsive visual system
+├── vercel.json                # static Vercel deployment configuration
+├── assets/                    # identity, generated, composite, and credited media
+├── products/                  # product-line routes and specification dossiers
+├── services/                  # service-line routes and protocol dossiers
+├── technology/                # platform and subsystem routes
+├── archive/                   # public casefiles and evidence surfaces
+├── blackwall/                 # perimeter and containment routes
+├── .github/                   # issue and pull request templates
+├── CONTRIBUTING.md            # contribution guidelines
+├── SECURITY.md                # security reporting scope
+└── LICENSE                    # MIT license for original code and docs
+```
 
 ## Site Map
 
@@ -155,6 +192,14 @@ https://www.arasaka.com/
 ```
 
 Vercel serves the checked-in static files directly. There are no required environment variables.
+
+## Maintainer Notes
+
+- Keep `.vercel/` local and untracked.
+- Update `assets/ATTRIBUTION.md` whenever adding or replacing imagery.
+- Run `node --check app.js` after JavaScript or localization edits.
+- Spot-check changed routes on a narrow mobile viewport before publishing.
+- Keep public copy restrained, institutional, and procurement-grade.
 
 ## Open Source Scope
 

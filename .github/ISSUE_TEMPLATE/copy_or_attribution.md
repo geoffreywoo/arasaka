@@ -9,6 +9,14 @@ assignees: ""
 ## Correction
 
 
+## Correction Type
+
+- [ ] English copy
+- [ ] Japanese localization
+- [ ] Asset attribution
+- [ ] Licensing / provenance
+- [ ] Corporate tone / plausibility
+
 ## Current Text Or Asset
 
 
@@ -16,5 +24,4 @@ assignees: ""
 
 
 ## Source Or Rationale
-
 
