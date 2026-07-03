@@ -142,6 +142,7 @@ http://127.0.0.1:4187/
 http://127.0.0.1:4187/technology/
 http://127.0.0.1:4187/technology/neural-substrate/
 http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
+http://127.0.0.1:4187/technology/neural-substrate/identity-escrow/
 http://127.0.0.1:4187/technology/black-ice-runtime/
 http://127.0.0.1:4187/technology/capital-custody/
 http://127.0.0.1:4187/technology/capital-custody/selective-disclosure-switch/

@@ -2150,6 +2150,80 @@ const translations = {
       networkEyebrow: "Connected Records",
       networkTitle: "The interface sits between capture product, extraction toolchain, vault system, and continuity service."
     },
+    identityEscrow: {
+      productCta: "Open identity escrow",
+      back: "Return to Neural Substrate",
+      kicker: "TECH-NS-01B / IDENTITY ESCROW LEDGER",
+      title: "The right to persist is a ledgered authority, not a memory file.",
+      summary: "Identity Escrow Ledger binds biometric consent, successor authority, construct revocation, and board-witnessed release into one audit surface before a principal can be captured, preserved, simulated, or restored.",
+      openCustody: "Open engram custody",
+      visualCaption: "Identity escrow ledger plate, generated Arasaka continuity catalog image.",
+      readouts: {
+        consent: {
+          label: "Consent quorum",
+          copy: "Minimum biometric, board, successor, and custodian signatures before continuity rights can arm."
+        },
+        revocation: {
+          label: "Revocation window",
+          copy: "Maximum time for emergency freeze after a lineage dispute, coercion signal, or custody witness conflict."
+        },
+        lineage: {
+          label: "Lineage depth",
+          copy: "Standard succession graph depth maintained for family office, board estate, and sovereign mandate clients."
+        }
+      },
+      chainEyebrow: "Escrow Chain",
+      chainTitle: "Continuity is denied by default until authority survives contact with evidence.",
+      chainCopy: "The ledger does not decide whether a construct is useful. It decides whether anyone is allowed to treat the construct as the same authority that entered custody.",
+      layers: {
+        consent: {
+          title: "Consent intake",
+          copy: "Living-principal biometric proof is paired with mandate language, jurisdiction, coercion scan, and revocation instructions."
+        },
+        lineage: {
+          title: "Lineage authority",
+          copy: "Successor graphs, board seals, family-office controls, and sovereign exceptions are compiled into a release order."
+        },
+        witness: {
+          title: "Custody witness",
+          copy: "Independent custody nodes record who saw the construct enter, who may inspect it, and who can force a freeze."
+        },
+        release: {
+          title: "Release arbitration",
+          copy: "Mikoshi release, host trial, simulation, or destruction requires a signed ledger state that can be read by governance."
+        }
+      },
+      schematicEyebrow: "Authority State Machine",
+      schematicTitle: "Identity cannot leave custody as a rumor.",
+      signal: {
+        consent: "Consent order",
+        lineage: "Lineage graph",
+        witness: "Witness field",
+        release: "Release authority"
+      },
+      specEyebrow: "Ledger Contract",
+      specTitle: "Escrow fields and denial states.",
+      specs: {
+        consent: {
+          label: "Consent envelope",
+          copy: "Binds a living principal's consent to capture device, mandate version, revocation rules, and regional authority."
+        },
+        successor: {
+          label: "Successor graph",
+          copy: "Prevents circular inheritance, duplicate claimants, and unauthorized private-room activation."
+        },
+        freeze: {
+          label: "Emergency freeze",
+          copy: "Any named custodian can force a non-interactive hold when coercion, identity drift, or legal conflict is detected."
+        },
+        deny: {
+          label: "Denial state",
+          copy: "A denied construct cannot simulate, negotiate, authorize, or communicate until the ledger is repaired."
+        }
+      },
+      networkEyebrow: "Connected Records",
+      networkTitle: "The ledger is the legal memory between Relic capture, Mikoshi release, and continuity command."
+    },
     techSwarm: {
       back: "Return to technology library",
       kicker: "TECH-SW-12 / AUTONOMOUS PROTECTION GOVERNANCE",
@@ -7914,6 +7988,80 @@ const translations = {
       },
       networkEyebrow: "接続記録",
       networkTitle: "このインターフェースは取得製品、抽出ツールチェーン、保管庫システム、継続サービスの間に位置します。"
+    },
+    identityEscrow: {
+      productCta: "同一性エスクローを開く",
+      back: "神経基盤へ戻る",
+      kicker: "TECH-NS-01B / 同一性エスクロー台帳",
+      title: "存続する権利は記憶ファイルではなく、台帳化された権限です。",
+      summary: "Identity Escrow Ledgerは、本人が取得、保存、シミュレーション、復元される前に、生体同意、継承者権限、構成体取消、取締役会立会リリースを一つの監査面へ結合します。",
+      openCustody: "エングラム保管を開く",
+      visualCaption: "同一性エスクロー台帳プレート、生成された荒坂継続カタログ画像。",
+      readouts: {
+        consent: {
+          label: "同意クォーラム",
+          copy: "継続権限を武装する前に必要な生体、取締役会、継承者、保管者署名の最小数。"
+        },
+        revocation: {
+          label: "取消ウィンドウ",
+          copy: "系譜紛争、強制シグナル、または保管立会競合後の緊急凍結までの最大時間。"
+        },
+        lineage: {
+          label: "系譜深度",
+          copy: "ファミリーオフィス、取締役会資産、主権委任顧客向けに保持される標準継承グラフ深度。"
+        }
+      },
+      chainEyebrow: "エスクローチェーン",
+      chainTitle: "継続は、権限が証拠との接触に耐えるまで標準で拒否されます。",
+      chainCopy: "この台帳は構成体が有用かどうかを決めません。構成体を保管に入った同じ権限として扱うことを誰に許すかを決めます。",
+      layers: {
+        consent: {
+          title: "同意取込",
+          copy: "生存本人の生体証明を、委任文言、管轄、強制スキャン、取消指示と組み合わせます。"
+        },
+        lineage: {
+          title: "系譜権限",
+          copy: "継承者グラフ、取締役会封印、ファミリーオフィス管理、主権例外をリリース順序へコンパイルします。"
+        },
+        witness: {
+          title: "保管立会",
+          copy: "独立保管ノードが、構成体の入庫を誰が見たか、誰が検査できるか、誰が凍結を強制できるかを記録します。"
+        },
+        release: {
+          title: "リリース仲裁",
+          copy: "神輿リリース、ホスト試験、シミュレーション、または破棄には、統治が読める署名済み台帳状態が必要です。"
+        }
+      },
+      schematicEyebrow: "権限状態機械",
+      schematicTitle: "同一性は噂として保管から出ることはできません。",
+      signal: {
+        consent: "同意命令",
+        lineage: "系譜グラフ",
+        witness: "立会フィールド",
+        release: "リリース権限"
+      },
+      specEyebrow: "台帳契約",
+      specTitle: "エスクローフィールドと拒否状態。",
+      specs: {
+        consent: {
+          label: "同意エンベロープ",
+          copy: "生存本人の同意を取得デバイス、委任版、取消規則、地域権限へ結合します。"
+        },
+        successor: {
+          label: "継承者グラフ",
+          copy: "循環継承、重複請求者、未承認のプライベートルーム起動を防止します。"
+        },
+        freeze: {
+          label: "緊急凍結",
+          copy: "指名済み保管者は、強制、同一性偏移、法的競合が検出された場合に非対話型保留を強制できます。"
+        },
+        deny: {
+          label: "拒否状態",
+          copy: "拒否された構成体は、台帳が修復されるまでシミュレーション、交渉、承認、通信を行えません。"
+        }
+      },
+      networkEyebrow: "接続記録",
+      networkTitle: "この台帳はRelic取得、神輿リリース、継続指揮の間にある法的記憶です。"
     },
     techSwarm: {
       back: "技術ライブラリへ戻る",
