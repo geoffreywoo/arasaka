@@ -899,6 +899,68 @@ const translations = {
       mapTitle: "Swarm routes autonomous protection through force governance, regional command, operations watchfloor, and board evidence.",
       mapCopy: "The product file makes the formation purchasable. The governance dossier constrains machine action. The service route places human operators around the moving principal."
     },
+    swarmExclusion: {
+      productCta: "Open civilian exclusion map",
+      back: "Return to Swarm dossier",
+      kicker: "SWARM-12 / CIVILIAN EXCLUSION MAP",
+      title: "Autonomous force begins with the places it is forbidden to touch.",
+      summary: "Civilian Exclusion Map converts street telemetry, crowd uncertainty, protected-person movement, property boundaries, emergency corridors, and rules-of-force constraints into a live denial lattice that prevents SWARM-12 assets from mistaking speed for authority.",
+      openFormation: "Open formation specification",
+      visualCaption: "Civilian exclusion operations plate, generated Arasaka command image.",
+      readouts: {
+        coverage: {
+          label: "Coverage threshold",
+          copy: "Minimum noncombatant uncertainty coverage before a corridor can narrow around a principal."
+        },
+        freeze: {
+          label: "Freeze window",
+          copy: "Maximum unresolved ambiguity interval before autonomous assets hold posture and wait for human command."
+        },
+        cells: {
+          label: "Denial cells",
+          copy: "Live geofence cells compiled from crowd motion, civil routes, medical lanes, and property boundaries."
+        }
+      },
+      modulesEyebrow: "Exclusion Stack",
+      modulesTitle: "The map proves where the swarm cannot act before it decides where it can.",
+      modulesCopy: "Exclusion is computed as a live civic surface: bodies, vehicles, property, jurisdiction, optics, and command liability all become force-denial geometry.",
+      modules: {
+        uncertainty: {
+          title: "Noncombatant Uncertainty Field",
+          copy: "Tracks pedestrian density, shelter movement, wounded status, and identity ambiguity before any force-bearing formation can compress."
+        },
+        lattice: {
+          title: "Corridor Denial Lattice",
+          copy: "Compiles streets, towers, restricted property, medical lanes, and evacuation vectors into no-act cells around the route."
+        },
+        throttle: {
+          title: "Formation Throttle Gate",
+          copy: "Limits the swarm to veil, obstruction, or visible deterrence until exclusion confidence clears operational threshold."
+        },
+        receipt: {
+          title: "After-Action Exclusion Receipt",
+          copy: "Binds force posture, denied cells, command officer, civilian uncertainty, and public exposure into board-readable evidence."
+        }
+      },
+      envelopeEyebrow: "Exclusion Envelope",
+      envelopeTitle: "Machine speed is permitted only inside a named negative space.",
+      envelopeCopy: "Civilian Exclusion Map cannot enter live route coverage until noncombatant class, denial geometry, permitted posture, freeze condition, and evidence retention are defined.",
+      matrix: {
+        civilian: "Civilian class",
+        civilianValue: "Pedestrian, worker, medical convoy, emergency responder, dependent vehicle, or unverified biometric cluster",
+        geometry: "Denial geometry",
+        geometryValue: "Crowd shadow, shelter vector, medical lane, property edge, tower ingress, or evacuation channel",
+        posture: "Permitted posture",
+        postureValue: "Observation, soft veil, obstruction hold, sensor denial, route freeze, or manual escalation review",
+        freeze: "Freeze condition",
+        freezeValue: "Unresolved identity, medical marker conflict, protected route drift, crowd compression, or command-link loss",
+        exclusion: "Excluded use",
+        exclusionValue: "Autonomous lethal closure, unlogged crowd denial, pursuit through medical lanes, or force without named officer receipt"
+      },
+      mapEyebrow: "Force Routing",
+      mapTitle: "Civilian Exclusion routes SWARM-12 through formation spec, route protocol, force governance, regional command, and board evidence.",
+      mapCopy: "The formation spec defines machine geometry. The exclusion map defines negative space. The route protocol decides when a protected corridor can move through the city."
+    },
     protectionProtocol: {
       productCta: "Open route protocol",
       openProtocol: "Open route protocol",
@@ -6286,6 +6348,68 @@ const translations = {
       mapEyebrow: "警護経路",
       mapTitle: "Swarmは自律警護を戦力統治、地域指揮、運用監視室、取締役会証拠へルーティングします。",
       mapCopy: "製品ファイルは編隊を購入可能にします。統治ドシエは機械行動を制約します。サービス経路は移動主体の周囲に人間オペレーターを配置します。"
+    },
+    swarmExclusion: {
+      productCta: "民間人排除マップを開く",
+      back: "Swarmドシエへ戻る",
+      kicker: "SWARM-12 / 民間人排除マップ",
+      title: "自律戦力は、触れてはならない場所から始まります。",
+      summary: "Civilian Exclusion Mapは、街路テレメトリー、群衆不確実性、保護対象移動、敷地境界、緊急回廊、戦力規則制約をライブ拒否ラティスへ変換し、SWARM-12資産が速度を権限と取り違えないようにします。",
+      openFormation: "編隊仕様を開く",
+      visualCaption: "民間人排除運用プレート、生成された荒坂指揮画像。",
+      readouts: {
+        coverage: {
+          label: "カバレッジ閾値",
+          copy: "主体の周囲で回廊を狭める前に必要な最小非戦闘員不確実性カバレッジ。"
+        },
+        freeze: {
+          label: "凍結窓",
+          copy: "自律資産が姿勢を保持し、人間指揮を待つ前の最大未解決曖昧性間隔。"
+        },
+        cells: {
+          label: "拒否セル",
+          copy: "群衆移動、民間経路、医療レーン、敷地境界からコンパイルされるライブ・ジオフェンスセル。"
+        }
+      },
+      modulesEyebrow: "排除スタック",
+      modulesTitle: "このマップは、スウォームが作用できる場所を決める前に、作用できない場所を証明します。",
+      modulesCopy: "排除はライブな都市表面として計算されます。身体、車両、敷地、管轄、視覚露出、指揮責任がすべて戦力拒否ジオメトリになります。",
+      modules: {
+        uncertainty: {
+          title: "非戦闘員不確実性フィールド",
+          copy: "歩行者密度、避難移動、負傷状態、同一性曖昧性を追跡し、戦力を帯びる編隊が圧縮される前に評価します。"
+        },
+        lattice: {
+          title: "回廊拒否ラティス",
+          copy: "街路、タワー、制限敷地、医療レーン、避難ベクトルを、経路周辺の非作用セルへコンパイルします。"
+        },
+        throttle: {
+          title: "編隊スロットルゲート",
+          copy: "排除信頼度が運用閾値を超えるまで、スウォームを遮蔽、妨害、または可視抑止へ制限します。"
+        },
+        receipt: {
+          title: "事後排除レシート",
+          copy: "戦力姿勢、拒否セル、指揮責任者、民間人不確実性、公開露出を取締役会可読証拠へ結合します。"
+        }
+      },
+      envelopeEyebrow: "排除範囲",
+      envelopeTitle: "機械速度は、命名された負の空間の内部でのみ許可されます。",
+      envelopeCopy: "Civilian Exclusion Mapは、非戦闘員クラス、拒否ジオメトリ、許可済み姿勢、凍結条件、証拠保持が定義されるまで、ライブ経路カバレッジへ入れません。",
+      matrix: {
+        civilian: "民間人クラス",
+        civilianValue: "歩行者、労働者、医療護送、緊急対応者、従属車両、または未検証生体クラスタ",
+        geometry: "拒否ジオメトリ",
+        geometryValue: "群衆影、避難ベクトル、医療レーン、敷地境界、タワー入口、または退避チャネル",
+        posture: "許可済み姿勢",
+        postureValue: "観測、ソフト遮蔽、妨害保持、センサー拒否、経路凍結、または手動エスカレーションレビュー",
+        freeze: "凍結条件",
+        freezeValue: "未解決同一性、医療マーカー競合、保護経路ドリフト、群衆圧縮、または指揮リンク喪失",
+        exclusion: "除外用途",
+        exclusionValue: "自律致死閉鎖、非記録群衆拒否、医療レーン通過追跡、または指名責任者レシートなしの戦力"
+      },
+      mapEyebrow: "戦力経路",
+      mapTitle: "Civilian ExclusionはSWARM-12を編隊仕様、経路プロトコル、戦力統治、地域指揮、取締役会証拠へルーティングします。",
+      mapCopy: "編隊仕様は機械ジオメトリを定義します。排除マップは負の空間を定義します。経路プロトコルは、保護回廊がいつ都市を移動できるかを決定します。"
     },
     protectionProtocol: {
       productCta: "経路プロトコルを開く",
