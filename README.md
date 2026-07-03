@@ -128,6 +128,7 @@ http://127.0.0.1:4187/products/ice/
 http://127.0.0.1:4187/products/ice/mesh-specification/
 http://127.0.0.1:4187/products/ledger/
 http://127.0.0.1:4187/products/ledger/custody-specification/
+http://127.0.0.1:4187/products/ledger/patent-gravity/
 http://127.0.0.1:4187/products/swarm/
 http://127.0.0.1:4187/products/swarm/formation-specification/
 http://127.0.0.1:4187/products/soulkiller/

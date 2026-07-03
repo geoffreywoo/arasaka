@@ -773,6 +773,68 @@ const translations = {
       mapTitle: "Black Ledger routes capital custody through mandate service, regional command, patent collateral, and board governance.",
       mapCopy: "The system makes money legible without making it loud: every private movement resolves to authority, collateral, counterparty, and proof."
     },
+    ledgerGravity: {
+      productCta: "Open patent gravity map",
+      back: "Return to Black Ledger dossier",
+      kicker: "BL-00 / PATENT GRAVITY MAP",
+      title: "A patent is collateral only after its shadow can be priced.",
+      summary: "Black Ledger Patent Gravity Map converts intellectual property, founder exposure, licensing obligations, neural-platform dependencies, and hostile claim pressure into a custody object that can be financed without exposing the strategy graph.",
+      openLedger: "Open custody specification",
+      visualCaption: "Black Ledger patent gravity collateral plate, generated Arasaka catalog image.",
+      readouts: {
+        fields: {
+          label: "Patent fields",
+          copy: "Claim families normalized across implant firmware, neural substrate, defense autonomy, and identity custody methods."
+        },
+        heat: {
+          label: "Collateral heat",
+          copy: "Board-readable risk band combining injunction probability, licensing drag, dependency exposure, and acquisition pressure."
+        },
+        disclosure: {
+          label: "Disclosure lag",
+          copy: "Maximum silent window before jurisdictional demand converts sealed patent value into regulator-readable proof."
+        }
+      },
+      modulesEyebrow: "Gravity Stack",
+      modulesTitle: "Patent value is not owned until its dependencies are mapped.",
+      modulesCopy: "The map treats intellectual property as a living pressure system: claims pull revenue, dependencies pull risk, founders pull liquidity, and hostile actors pull disclosure.",
+      modules: {
+        claim: {
+          title: "Claim Gravity Index",
+          copy: "Scores each claim by revenue pull, enforceability corridor, technical dependency, and counterclaim exposure."
+        },
+        founder: {
+          title: "Founder Exposure Graph",
+          copy: "Binds founder liquidity, personal guarantees, succession rights, and reputation heat to the patent estate without public filing noise."
+        },
+        license: {
+          title: "License Shadow Rail",
+          copy: "Maps undisclosed options, royalty drag, cross-license pressure, and renewal traps before collateral enters mandate escrow."
+        },
+        hostile: {
+          title: "Hostile Claim Sink",
+          copy: "Absorbs acquisition probes, litigation signals, counterfeit filings, and netrunner discovery attempts into a sealed risk channel."
+        }
+      },
+      envelopeEyebrow: "Collateral Envelope",
+      envelopeTitle: "The map prices what a public filing cannot safely say.",
+      envelopeCopy: "Patent Gravity Map cannot enter a mandate until the asset surface, gravity model, collateral use, disclosure trigger, and exclusion boundary are named.",
+      matrix: {
+        asset: "Asset surface",
+        assetValue: "Patent estate, neural substrate claim, implant firmware, defense autonomy method, or identity-custody process",
+        gravity: "Gravity model",
+        gravityValue: "Revenue pull, injunction risk, licensing shadow, dependency heat, and hostile acquisition pressure",
+        collateral: "Collateral use",
+        collateralValue: "Mandate escrow, founder liquidity, sovereign financing, exchange reserve, or continuity bond",
+        disclosure: "Disclosure trigger",
+        disclosureValue: "Regulatory demand, covenant breach, public filing, board release, or counterparty default",
+        exclusion: "Excluded use",
+        exclusionValue: "Fabricated claim value, circular collateralization, sanctions evasion, undisclosed market manipulation"
+      },
+      mapEyebrow: "Capital Routing",
+      mapTitle: "Patent Gravity routes Black Ledger collateral through custody spec, mandate settlement, capital custody, Relic continuity, and board governance.",
+      mapCopy: "The custody spec stores the object. The patent map prices its pressure. The mandate decides when that pressure can move money."
+    },
     swarmSpec: {
       productCta: "Open formation specification",
       openSpec: "Open swarm formation spec",
@@ -6098,6 +6160,68 @@ const translations = {
       mapEyebrow: "資本経路",
       mapTitle: "Black Ledgerは資本保管を委任サービス、地域指揮、特許担保、取締役会統治へルーティングします。",
       mapCopy: "このシステムは資金を騒がせずに読み取れるものにします。すべての私的移動は権限、担保、相手方、証明へ解決されます。"
+    },
+    ledgerGravity: {
+      productCta: "特許重力マップを開く",
+      back: "Black Ledgerドシエへ戻る",
+      kicker: "BL-00 / 特許重力マップ",
+      title: "特許は、その影を価格化できた後にのみ担保になります。",
+      summary: "Black Ledger特許重力マップは、知的財産、創業者エクスポージャー、ライセンス義務、神経プラットフォーム依存、敵対クレーム圧力を、戦略グラフを露出せずに資金化できる保管オブジェクトへ変換します。",
+      openLedger: "保管仕様を開く",
+      visualCaption: "Black Ledger特許重力担保プレート、生成された荒坂カタログ画像。",
+      readouts: {
+        fields: {
+          label: "特許フィールド",
+          copy: "インプラントファームウェア、神経基盤、防衛自律、同一性保管方法にまたがるクレームファミリーを正規化します。"
+        },
+        heat: {
+          label: "担保熱量",
+          copy: "差止確率、ライセンス摩擦、依存露出、買収圧力を結合する取締役会可読のリスク帯です。"
+        },
+        disclosure: {
+          label: "開示遅延",
+          copy: "管轄要求が封印済み特許価値を規制当局可読証明へ変換する前の最大沈黙窓です。"
+        }
+      },
+      modulesEyebrow: "重力スタック",
+      modulesTitle: "特許価値は、その依存関係がマップされるまで所有されません。",
+      modulesCopy: "このマップは知的財産を生きた圧力系として扱います。クレームは収益を引き、依存はリスクを引き、創業者は流動性を引き、敵対者は開示を引きます。",
+      modules: {
+        claim: {
+          title: "クレーム重力指数",
+          copy: "各クレームを収益牽引力、執行可能回廊、技術依存、反訴露出で採点します。"
+        },
+        founder: {
+          title: "創業者エクスポージャーグラフ",
+          copy: "創業者流動性、個人保証、継承権、評判熱量を、公開 filing ノイズなしに特許資産へ結合します。"
+        },
+        license: {
+          title: "ライセンス影レール",
+          copy: "未開示オプション、ロイヤルティ摩擦、クロスライセンス圧力、更新トラップを、担保が委任エスクローへ入る前にマップします。"
+        },
+        hostile: {
+          title: "敵対クレーム吸収槽",
+          copy: "買収プローブ、訴訟シグナル、偽造 filing、ネットランナー探索を封印済みリスクチャネルへ吸収します。"
+        }
+      },
+      envelopeEyebrow: "担保範囲",
+      envelopeTitle: "このマップは公開 filing が安全に語れないものを価格化します。",
+      envelopeCopy: "Patent Gravity Mapは、資産面、重力モデル、担保用途、開示トリガー、除外境界が命名されるまで委任へ入れません。",
+      matrix: {
+        asset: "資産面",
+        assetValue: "特許資産、神経基盤クレーム、インプラントファームウェア、防衛自律方法、または同一性保管プロセス",
+        gravity: "重力モデル",
+        gravityValue: "収益牽引、差止リスク、ライセンス影、依存熱量、敵対買収圧力",
+        collateral: "担保用途",
+        collateralValue: "委任エスクロー、創業者流動性、主権資金調達、取引所準備、または継続債",
+        disclosure: "開示トリガー",
+        disclosureValue: "規制要求、コベナント違反、公開 filing、取締役会リリース、または相手方不履行",
+        exclusion: "除外用途",
+        exclusionValue: "捏造クレーム価値、循環担保化、制裁回避、未開示市場操作"
+      },
+      mapEyebrow: "資本経路",
+      mapTitle: "Patent GravityはBlack Ledger担保を保管仕様、委任決済、資本保管、Relic継続、取締役会統治へルーティングします。",
+      mapCopy: "保管仕様はオブジェクトを保存します。特許マップはその圧力を価格化します。委任はその圧力がいつ資金を動かせるかを決定します。"
     },
     swarmSpec: {
       productCta: "編隊仕様を開く",
