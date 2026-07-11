@@ -4480,8 +4480,8 @@ const translations = {
     },
     governance: {
       eyebrow: "Governance",
-      title: "Family control. Institutional scale. Continuous authority.",
-      text: "Arasaka remains a family-led global institution, but the control surface has evolved into neural archives, private defense networks, and capital systems designed to survive regime change."
+      title: "A century of family stewardship and institutional continuity.",
+      text: "Since 1915, the Arasaka family has guided the group through war, reconstruction, market fragmentation, and technological change with a single long-term mandate."
     },
     disclosures: {
       eyebrow: "Public Disclosures",
@@ -4498,31 +4498,31 @@ const translations = {
       control: "Control",
       updated: "Updated",
       item1: {
-        title: "Neural Custody Safe Harbor",
-        text: "Public statement for engram storage, principal consent, construct drift, and post-biological continuity rights.",
-        owner: "Mikoshi Governance",
-        control: "Human witness quorum",
+        title: "Cybernetic Product Safety Framework",
+        text: "Group requirements for neural-interface consent, clinical validation, identity integrity, and post-market monitoring.",
+        owner: "Life Sciences Compliance",
+        control: "Independent clinical review",
         updated: "2077-Q4"
       },
       item2: {
-        title: "Black Ledger Mandate Notice",
-        text: "Institutional capital disclosure for settlement rails, patent collateral, founder-identity exposure, and off-market order flow.",
-        owner: "Capital Systems",
-        control: "No-public-claim covenant",
+        title: "Institutional Custody Statement",
+        text: "Capital adequacy, protected settlement, intellectual-property custody, and counterparty continuity controls.",
+        owner: "Arasaka Bank Compliance",
+        control: "Segregated custody audit",
         updated: "2077-Q4"
       },
       item3: {
-        title: "Autonomous Force Escalation",
-        text: "Rules of engagement for drone veils, district denial, armored corridor clearance, and human kill-chain authorization.",
-        owner: "Security Operations",
-        control: "Board override ladder",
+        title: "Autonomous Systems Safety Standard",
+        text: "Human command requirements, civilian exclusion safeguards, operational logging, and incident review for autonomous platforms.",
+        owner: "Security Standards Office",
+        control: "Human command authority",
         updated: "2077-Q3"
       },
       item4: {
-        title: "Blackwall Adjacency Statement",
-        text: "Restricted assurance for rogue-machine contact, Black ICE burn authority, quarantine partitions, and memory-safe isolation.",
-        owner: "Counterintrusion Theater",
-        control: "Witnessed burn desk",
+        title: "Network Security Assurance",
+        text: "Threat containment, credential isolation, resilient network segmentation, and independent incident assurance.",
+        owner: "Information Security Office",
+        control: "Continuous assurance review",
         updated: "2077-Q3"
       },
       foot: "No public pricing, no public claims, no technical export beyond sanitized assurance material."
@@ -4555,52 +4555,56 @@ const translations = {
     },
     timeline: {
       1915: {
-        title: "Tokyo Incorporation",
-        text: "A family industrial concern becomes a security institution built for national volatility."
+        title: "Industrial Foundation",
+        text: "Sasai Arasaka establishes the manufacturing enterprise in Tokyo that will become the foundation of the global group."
       },
       2023: {
-        title: "Reconstruction Mandate",
-        text: "Corporate conflict hardens Arasaka doctrine around redundancy, memory, and private deterrence."
+        title: "Global Reorganization",
+        text: "Following the Fourth Corporate War and destruction of the Night City towers, the group consolidates in Japan and begins a generational reconstruction."
+      },
+      2070: {
+        title: "Return to Night City",
+        text: "A peacekeeping intervention during the Unification War restores Arasaka's permanent presence and opens a new era of regional investment."
       },
       2077: {
-        title: "Night City Ascendancy",
-        text: "Security, finance, cyberware, and intelligence assets anchor the city's corporate nervous system."
+        title: "Integrated Global Group",
+        text: "Security, banking, manufacturing, cybernetics, and advanced research operate as one family-guided institution."
       }
     },
     careers: {
       eyebrow: "Careers",
       title: "Build where law, machine, and capital converge.",
-      text: "We recruit operators who can engineer trust under pressure: cyberneticists, tacticians, cryptographers, and founders who think like sovereigns."
+      text: "Arasaka recruits exceptional engineers, researchers, security professionals, financiers, and operators committed to work measured across generations."
     },
     career: {
-      role1: "Neural Security Architect",
-      role2: "Black ICE Response Lead",
-      role3: "Autonomous Defense Engineer",
-      role4: "Memetic Capital Analyst"
+      role1: "Neural Systems Security Architect",
+      role2: "Threat Response Director",
+      role3: "Autonomous Systems Engineer",
+      role4: "Institutional Risk Analyst"
     },
     contact: {
       eyebrow: "Protected Access",
       title: "Request access to the private layer.",
-      text: "Founders, capital allocators, operators, and sovereign clients may request review through the public intake channel. Weak signals are ignored. Strong signals are escalated."
+      text: "Institutional clients, government partners, and qualified enterprises may request a confidential consultation with an Arasaka regional office."
     },
     form: {
       name: "Name",
-      namePlaceholder: "Takemura Goro",
+      namePlaceholder: "Aiko Tanaka",
       organization: "Organization",
-      organizationPlaceholder: "Private Office / Sovereign Lab / GP Node",
+      organizationPlaceholder: "Institution / Government / Enterprise",
       region: "Region",
       regionPlaceholder: "Select region",
       regionTokyo: "Tokyo",
       regionNightCity: "Night City",
       regionEurope: "Europe",
       regionGlobal: "Global",
-      clearance: "Requested Clearance",
-      clearancePlaceholder: "Select tier",
-      clearanceExecutive: "Neural Custody",
-      clearanceBanking: "Black Ledger Banking",
-      clearanceSecurity: "Autonomous Security",
-      clearanceIntelligence: "Netrunner Intelligence",
-      submit: "Transmit Request",
+      clearance: "Area of Interest",
+      clearancePlaceholder: "Select business area",
+      clearanceExecutive: "Life Sciences & Continuity",
+      clearanceBanking: "Banking & Institutional Custody",
+      clearanceSecurity: "Security Services",
+      clearanceIntelligence: "Network Security",
+      submit: "Submit Consultation Request",
       success: "Signal encrypted. A private systems liaison will review the packet."
     },
     terminal: {
@@ -4629,35 +4633,35 @@ const translations = {
       open: "Open dossier",
       detail: {
         executive: {
-          title: "Neural Custody Review",
-          text: "Executive identity custody, Relic continuity, and Mikoshi witness paths are routed for human review.",
-          clearance: "AA-90",
-          route: "Relic / Mikoshi",
-          response: "Human witness",
+          title: "Life Sciences Consultation",
+          text: "Clinical cybernetics, neural interfaces, and continuity requirements are routed to a regional client advisory team.",
+          clearance: "LS-01",
+          route: "Life Sciences",
+          response: "Client advisory",
           href: "products/relic/"
         },
         banking: {
-          title: "Black Ledger Review",
-          text: "Founder capital, patent gravity, and off-market succession signals are routed into cold settlement analysis.",
-          clearance: "BL-00",
-          route: "Ledger / Mandate",
-          response: "Capital desk",
+          title: "Institutional Custody Consultation",
+          text: "Custody, settlement, intellectual-property, and capital-continuity requirements are routed to Arasaka Bank.",
+          clearance: "BK-02",
+          route: "Arasaka Bank",
+          response: "Institutional desk",
           href: "services/black-ledger-mandate/"
         },
         security: {
-          title: "Autonomous Security Review",
-          text: "Drone veils, extraction corridors, and city-grid response windows are scored for principal protection.",
-          clearance: "SEC-12",
-          route: "Swarm / Protection",
-          response: "Tactical desk",
+          title: "Security Services Consultation",
+          text: "Executive protection, facility security, protected mobility, and regional response needs are routed for review.",
+          clearance: "SEC-01",
+          route: "Security Services",
+          response: "Regional office",
           href: "services/autonomous-protection/"
         },
         intelligence: {
-          title: "Netrunner Intelligence Review",
-          text: "Black ICE, runner traces, and Blackwall-adjacent contact risk are routed into counterintrusion theater.",
-          clearance: "ICE-77",
-          route: "ICE / Counterintrusion",
-          response: "Runner cell",
+          title: "Network Security Consultation",
+          text: "Threat containment, credential protection, resilient segmentation, and incident-response needs are routed for review.",
+          clearance: "NET-01",
+          route: "SecureNet",
+          response: "Security advisory",
           href: "services/counterintrusion/"
         }
       }
@@ -10319,8 +10323,8 @@ const translations = {
     },
     governance: {
       eyebrow: "統治体制",
-      title: "古い血統。新しい基層。絶対的な継続性。",
-      text: "荒坂は一族主導の世界的機関であり続けます。しかし制御面は進化しました。神経アーカイブ、民間防衛網、政権交代を越えて存続する資本システムへ。"
+      title: "一世紀にわたる一族の統轄と制度的継続性。",
+      text: "1915年以来、荒坂家は戦争、復興、市場分断、技術変革を通じ、一貫した長期的使命の下でグループを導いてきました。"
     },
     disclosures: {
       eyebrow: "公開開示",
@@ -10337,31 +10341,31 @@ const translations = {
       control: "制御",
       updated: "更新",
       item1: {
-        title: "神経保管セーフハーバー",
-        text: "エングラム保管、プリンシパル同意、構成体偏移、死後継続権に関する公開声明。",
-        owner: "神輿統治",
-        control: "人間証人定足数",
+        title: "サイバネティック製品安全枠組み",
+        text: "神経インターフェース同意、臨床検証、同一性整合性、市販後監視に関するグループ要件。",
+        owner: "生命科学コンプライアンス",
+        control: "独立臨床審査",
         updated: "2077-Q4"
       },
       item2: {
-        title: "ブラック台帳委任通知",
-        text: "決済レール、特許担保、創業者ID露出、非公開注文フローに関する機関資本開示。",
-        owner: "資本システム",
-        control: "公開主張禁止契約",
+        title: "機関保管声明",
+        text: "自己資本充足、保護決済、知的財産保管、相手方継続性に関する統制。",
+        owner: "荒坂銀行コンプライアンス",
+        control: "分別保管監査",
         updated: "2077-Q4"
       },
       item3: {
-        title: "自律武力エスカレーション",
-        text: "ドローンヴェール、地区拒否、装甲回廊認可、人間キルチェーン承認の交戦規則。",
-        owner: "警備運用",
-        control: "取締役会上書きラダー",
+        title: "自律システム安全基準",
+        text: "自律プラットフォームの人間指揮要件、民間人排除保護、運用記録、事象審査。",
+        owner: "警備基準室",
+        control: "人間指揮権限",
         updated: "2077-Q3"
       },
       item4: {
-        title: "ブラックウォール隣接声明",
-        text: "ローグマシン接触、ブラックICE焼却権限、隔離区画、記憶安全隔離に関する限定保証。",
-        owner: "対侵入作戦区",
-        control: "証人付き焼却デスク",
+        title: "ネットワークセキュリティ保証",
+        text: "脅威封じ込め、資格情報隔離、強靭なネットワーク分割、独立事象保証。",
+        owner: "情報セキュリティ室",
+        control: "継続保証審査",
         updated: "2077-Q3"
       },
       foot: "公開価格なし、公開主張なし、サニタイズ済み保証資料を超える技術輸出なし。"
@@ -10394,52 +10398,56 @@ const translations = {
     },
     timeline: {
       1915: {
-        title: "東京での法人設立",
-        text: "一族の産業組織が、国家的変動に備える警備機関へと進化しました。"
+        title: "産業基盤の創設",
+        text: "荒坂佐々井が東京で製造企業を創設し、後のグローバルグループの礎を築きました。"
       },
       2023: {
-        title: "再建指令",
-        text: "企業紛争により、冗長性、記憶、私的抑止力を中心とする荒坂ドクトリンが強化されました。"
+        title: "グローバル再編",
+        text: "第四次企業戦争とナイトシティタワー崩壊後、グループは日本へ集約し、世代をまたぐ再建を開始しました。"
+      },
+      2070: {
+        title: "ナイトシティへの帰還",
+        text: "統一戦争中の平和維持介入により恒久拠点を回復し、新たな地域投資の時代を開きました。"
       },
       2077: {
-        title: "ナイトシティでの台頭",
-        text: "警備、金融、サイバーウェア、情報資産が都市の企業神経系を支えています。"
+        title: "統合グローバルグループ",
+        text: "警備、銀行、製造、サイバネティクス、先端研究が一族主導の単一機関として運営されています。"
       }
     },
     careers: {
       eyebrow: "採用情報",
       title: "法、機械、資本が交差する場所で構築する。",
-      text: "荒坂は、圧力下で信頼を設計できるオペレーターを求めています。サイバネティシスト、戦術家、暗号技術者、主権者のように思考する創業者を。"
+      text: "荒坂は、世代を超えて評価される仕事に取り組む優秀な技術者、研究者、警備専門家、金融人材、オペレーターを採用します。"
     },
     career: {
-      role1: "神経警備アーキテクト",
-      role2: "ブラックICE即応責任者",
-      role3: "自律防衛エンジニア",
-      role4: "ミーム資本アナリスト"
+      role1: "神経システムセキュリティ設計者",
+      role2: "脅威対応ディレクター",
+      role3: "自律システム技術者",
+      role4: "機関リスクアナリスト"
     },
     contact: {
       eyebrow: "保護アクセス",
       title: "プライベート層へのアクセスを申請する。",
-      text: "創業者、資本配分者、オペレーター、主権的顧客は、公開受付経路から審査を申請できます。弱いシグナルは無視され、強いシグナルは上申されます。"
+      text: "機関顧客、政府パートナー、適格企業は、荒坂地域オフィスとの機密協議を申請できます。"
     },
     form: {
       name: "氏名",
-      namePlaceholder: "竹村 五郎",
+      namePlaceholder: "田中 愛子",
       organization: "組織",
-      organizationPlaceholder: "個人事務所 / 主権ラボ / GPノード",
+      organizationPlaceholder: "機関 / 政府 / 企業",
       region: "地域",
       regionPlaceholder: "地域を選択",
       regionTokyo: "東京",
       regionNightCity: "ナイトシティ",
       regionEurope: "欧州",
       regionGlobal: "グローバル",
-      clearance: "希望認証",
-      clearancePlaceholder: "区分を選択",
-      clearanceExecutive: "神経保管",
-      clearanceBanking: "ブラック台帳銀行",
-      clearanceSecurity: "自律警備",
-      clearanceIntelligence: "ネットランナー情報部",
-      submit: "申請を送信",
+      clearance: "ご関心分野",
+      clearancePlaceholder: "事業分野を選択",
+      clearanceExecutive: "生命科学・継続性",
+      clearanceBanking: "銀行・機関保管",
+      clearanceSecurity: "警備サービス",
+      clearanceIntelligence: "ネットワークセキュリティ",
+      submit: "相談を申し込む",
       success: "シグナルを暗号化しました。プライベートシステム担当者がパケットを審査します。"
     },
     terminal: {
@@ -10468,35 +10476,35 @@ const translations = {
       open: "記録を開く",
       detail: {
         executive: {
-          title: "神経保管審査",
-          text: "役員ID保管、レリック継続、神輿証人経路を人間審査へ送ります。",
-          clearance: "AA-90",
-          route: "レリック / 神輿",
-          response: "人間証人",
+          title: "生命科学相談",
+          text: "臨床サイバネティクス、神経インターフェース、継続性要件を地域顧客アドバイザリーチームへ送ります。",
+          clearance: "LS-01",
+          route: "生命科学",
+          response: "顧客アドバイザリー",
           href: "products/relic/"
         },
         banking: {
-          title: "ブラック台帳審査",
-          text: "創業者資本、特許重力、非公開継承シグナルを冷却決済分析へ送ります。",
-          clearance: "BL-00",
-          route: "台帳 / 委任",
-          response: "資本デスク",
+          title: "機関保管相談",
+          text: "保管、決済、知的財産、資本継続性の要件を荒坂銀行へ送ります。",
+          clearance: "BK-02",
+          route: "荒坂銀行",
+          response: "機関デスク",
           href: "services/black-ledger-mandate/"
         },
         security: {
-          title: "自律警備審査",
-          text: "ドローンヴェール、脱出回廊、都市グリッド応答窓をプリンシパル防護向けに採点します。",
-          clearance: "SEC-12",
-          route: "スウォーム / 防護",
-          response: "戦術デスク",
+          title: "警備サービス相談",
+          text: "役員警護、施設警備、保護移動、地域対応の要件を審査へ送ります。",
+          clearance: "SEC-01",
+          route: "警備サービス",
+          response: "地域オフィス",
           href: "services/autonomous-protection/"
         },
         intelligence: {
-          title: "ネットランナー情報審査",
-          text: "ブラックICE、ランナー追跡、ブラックウォール隣接接触リスクを対侵入作戦区へ送ります。",
-          clearance: "ICE-77",
-          route: "ICE / 対侵入",
-          response: "ランナーセル",
+          title: "ネットワークセキュリティ相談",
+          text: "脅威封じ込め、資格情報保護、強靭な分割、事象対応の要件を審査へ送ります。",
+          clearance: "NET-01",
+          route: "SecureNet",
+          response: "セキュリティ助言",
           href: "services/counterintrusion/"
         }
       }
