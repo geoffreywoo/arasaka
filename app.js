@@ -105,18 +105,18 @@ const translations = {
       back: "Return to corporate systems",
       kicker: "ARASAKA OPERATING GROUPS",
       title: "A corporation large enough to behave like terrain.",
-      summary: "Arasaka is organized as a sovereign-scale corporate stack: family authority, private security, neural custody, capital mandate, industrial autonomy, and black research routed through one operating doctrine.",
+      summary: "Arasaka unifies security, banking, manufacturing, life sciences, and strategic research beneath the long-term stewardship of the Arasaka family.",
       openBoard: "Open board docket",
       openOps: "Open watchfloor",
-      visualCaption: "Tokyo headquarters authority layer, generated Arasaka corporate image.",
+      visualCaption: "Tokyo headquarters and global command campus.",
       readouts: {
         groups: {
           label: "Operating groups",
-          copy: "Security, neural, capital, industrial, research, and board authority groups share one mandate graph."
+          copy: "Security, banking, manufacturing, life sciences, research, and family authority share one command doctrine."
         },
         assets: {
           label: "Controlled assets",
-          copy: "Fictional consolidated exposure across private force, continuity custody, patents, orbital contracts, and capital rails."
+          copy: "Consolidated exposure across private security, banking, industrial production, patents, and orbital contracts."
         },
         corridors: {
           label: "Jurisdiction lanes",
@@ -125,46 +125,46 @@ const translations = {
       },
       groupsEyebrow: "Operating Stack",
       groupsTitle: "Each division owns a form of control.",
-      groupsCopy: "The public website should never look like an org chart. It should look like a power map: who owns force, identity, money, machines, research, and authorization.",
+      groupsCopy: "Each operating group converts a distinct form of institutional authority into durable infrastructure, from protected capital and industrial capacity to identity continuity.",
       openGroup: "Open division route",
       groups: {
         security: {
-          title: "Security Operations",
-          copy: "Private force, counterintrusion, executive protection, convoy routing, and theater response under watchfloor command."
+          title: "Arasaka Security Services",
+          copy: "Corporate security, executive protection, counterintelligence, police contracting, and theater response under regional command."
         },
         neural: {
-          title: "Neural Custody Group",
-          copy: "Relic, Mikoshi, Soulkiller, engram custody, construct drift, and post-body governance programs."
+          title: "Life Sciences & Neural Systems",
+          copy: "Clinical cybernetics, neural interfaces, personality preservation, and the Secure Your Soul continuity portfolio."
         },
         capital: {
-          title: "Capital Systems",
-          copy: "Black Ledger custody, mandate escrow, blind settlement, patent collateral, and founder-risk underwriting."
+          title: "Arasaka Bank & Financial Services",
+          copy: "Commercial banking, institutional custody, reconstruction finance, industrial credit, and protected settlement services."
         },
         industrial: {
-          title: "Industrial Autonomy",
-          copy: "Drone veils, autonomous protection, robotic manufacturing, exclusion maps, and governed machine-speed logistics."
+          title: "Manufacturing & Armaments",
+          copy: "Weapons systems, autonomous platforms, heavy industry, robotic manufacturing, and global defense logistics."
         },
         research: {
-          title: "Black Research Directorate",
-          copy: "Black ICE runtime, rogue-machine containment, source vault research, quarantine geometry, and hostile-route burn authority."
+          title: "Strategic Research Directorate",
+          copy: "Advanced computing, secure networks, artificial intelligence containment, cryptography, and restricted programs."
         },
         board: {
-          title: "Board Authority Office",
-          copy: "Quorum, export corridors, succession authority, disclosure silence, renewal covenants, and family-command continuity."
+          title: "Chairman's Office & Family Council",
+          copy: "Long-range strategy, succession, sovereign relations, group capital allocation, and continuity of family command."
         }
       },
       mapEyebrow: "Authority Routing",
       mapTitle: "The divisions resolve into products, services, casefiles, and technical doctrine.",
-      mapCopy: "A megacorporation becomes believable when every public page answers the same question: which operating group owns the risk, proof object, and authorization path?"
+      mapCopy: "Every mandate resolves to an accountable operating group, a regional authority, and a controlled technology or service portfolio."
     },
     corpSubsidiaries: {
       back: "Return to operating company preview",
       kicker: "ARASAKA OPERATING COMPANY REGISTRY",
-      title: "The empire is distributed through controlled shells.",
-      summary: "Each operating company carries a legal perimeter, mandate lane, clearance class, and routed technology surface while remaining bound to Tokyo root authority.",
+      title: "One group. Specialized companies. Unified stewardship.",
+      summary: "Arasaka operating companies deliver security, banking, manufacturing, cybernetics, and advanced systems under common group standards and Tokyo governance.",
       openDivisions: "Open divisions map",
       openBoard: "Open board docket",
-      visualCaption: "Operating company command registry, generated Arasaka watchfloor image.",
+      visualCaption: "Group operations center and company registry network.",
       readouts: {
         entities: {
           label: "Registry entities",
@@ -180,8 +180,8 @@ const translations = {
         }
       },
       registryEyebrow: "Registry Extract",
-      registryTitle: "Every subsidiary is a legal container for a dangerous capability.",
-      registryCopy: "The group does not expose raw control ledgers. It exposes public-safe registry surfaces that show enough jurisdiction, clearance, and routing to make the enterprise legible.",
+      registryTitle: "Specialized companies extend the group into every strategic market.",
+      registryCopy: "Each company operates within a defined jurisdiction, service mandate, and governance framework while drawing on shared group technology and capital.",
       openEntity: "Open registry route",
       entities: {
         security: {
@@ -220,7 +220,7 @@ const translations = {
       summary: "Regional command nodes bind Arasaka mandates to physical authority: Tokyo root, Night City theater, Osaka fabrication, orbital cold custody, Frankfurt capital corridor, and Blackwall edge cells.",
       openWatchfloor: "Open watchfloor",
       openBoard: "Open board docket",
-      visualCaption: "Tokyo root authority and regional command perimeter, generated Arasaka image.",
+      visualCaption: "Tokyo headquarters and regional coordination perimeter.",
       readouts: {
         nodes: {
           label: "Command nodes",
@@ -277,7 +277,7 @@ const translations = {
       summary: "Relic is specified as a governed identity substrate: a shard-class capture device, custody protocol, construct stabilization layer, and board-witnessed activation path for principals whose authority cannot terminate with biology.",
       openCustody: "Open custody spec",
       openService: "Open continuity service",
-      visualCaption: "Relic continuity suite product plate, generated Arasaka catalog image.",
+      visualCaption: "Relic continuity suite, executive custody configuration.",
       readouts: {
         latency: {
           label: "Engram handoff",
@@ -339,7 +339,7 @@ const translations = {
       title: "The host is not a vessel until the trial proves it can refuse.",
       summary: "Relic Host Compatibility Trial governs the interval between shard insertion and construct pressure. The trial measures neural load, immune drift, memory boundary stability, overwrite risk, and abort authority before any continuity package is cleared for living-interface deployment.",
       openSpec: "Open technical specification",
-      visualCaption: "Relic host compatibility trial plate, generated Arasaka catalog image.",
+      visualCaption: "Relic host compatibility and neural acceptance trial.",
       readouts: {
         viability: {
           label: "Host viability",
@@ -402,7 +402,7 @@ const translations = {
       summary: "Mikoshi is specified as Arasaka's post-biological continuity runtime: partitioned construct vaulting, memory thaw control, rehearsal chambers, witness-bound drift suppression, and release gates for authority that must survive the body.",
       openCustody: "Open engram custody",
       openRelic: "Open Relic spec",
-      visualCaption: "Mikoshi continuity engine product plate, generated Arasaka catalog image.",
+      visualCaption: "Mikoshi continuity engine, sealed custody configuration.",
       readouts: {
         cells: {
           label: "Vault partitions",
@@ -465,7 +465,7 @@ const translations = {
       summary: "Mikoshi Release Arbitration governs the interval between cold storage and authority-bearing interface: thaw petition, lineage challenge, drift trial, witness quorum, silence order, and board-authorized return for constructs whose existence can move markets, families, and states.",
       openRuntime: "Open runtime specification",
       openCustody: "Open engram custody",
-      visualCaption: "Mikoshi release arbitration plate, generated Arasaka catalog image.",
+      visualCaption: "Mikoshi release arbitration and authority witness layer.",
       readouts: {
         quorum: {
           label: "Release quorum",
@@ -528,7 +528,7 @@ const translations = {
       summary: "Soulkiller is specified as a redaction primitive for exceptional neural operations: consent-gated or board-compelled severance, construct capture, hostile payload removal, and Mikoshi-ready custody receipts.",
       openMikoshi: "Open Mikoshi runtime",
       openCustody: "Open custody spec",
-      visualCaption: "Soulkiller redaction lab product plate, generated Arasaka catalog image.",
+      visualCaption: "Soulkiller extraction and redaction laboratory surface.",
       readouts: {
         severance: {
           label: "Severance window",
@@ -590,7 +590,7 @@ const translations = {
       title: "A mind can be seized only after the warrant names what must survive.",
       summary: "Soulkiller Redaction Warrant is the board-sealed control surface that authorizes exceptional neural seizure. It defines target authority, extraction scope, memory redaction depth, construct disposition, silence order, and appeal path before Soulkiller may touch a living or archived identity.",
       openExtraction: "Open extraction specification",
-      visualCaption: "Soulkiller redaction warrant plate, generated Arasaka catalog image.",
+      visualCaption: "Soulkiller redaction warrant and custody authorization layer.",
       readouts: {
         quorum: {
           label: "Warrant quorum",
@@ -654,7 +654,7 @@ const translations = {
       summary: "Black ICE Mesh is specified as a governed counterintrusion appliance: sentry membranes, disposable trap partitions, branch-burn logic, and quarantine receipts that make hostile netpaths attributable.",
       openRuntime: "Open runtime dossier",
       openService: "Open counterintrusion service",
-      visualCaption: "Black ICE Mesh product plate, generated Arasaka catalog image.",
+      visualCaption: "Black ICE Mesh hardened counterintrusion configuration.",
       readouts: {
         response: {
           label: "Route burn response",
@@ -716,7 +716,7 @@ const translations = {
       title: "A credential becomes hostile when its shape cannot exist.",
       summary: "Black ICE Credential Geometry models impossible identity paths, signature drift, privilege curvature, toolchain heat, and false-positive risk before ICE-77 is allowed to mirror, trap, burn, or quarantine a netrunner session.",
       openMesh: "Open mesh specification",
-      visualCaption: "Credential geometry counterintrusion plate, generated Arasaka catalog image.",
+      visualCaption: "Credential geometry and counterintrusion trust surface.",
       readouts: {
         curvature: {
           label: "Privilege curvature",
@@ -780,7 +780,7 @@ const translations = {
       summary: "Black Ledger is specified as a private capital custody system: blind settlement rails, patent collateral maps, mandate escrow, and board-readable liquidity proofs for founders, sovereigns, and controlled shells.",
       openRail: "Open capital custody rail",
       openService: "Open mandate service",
-      visualCaption: "Black Ledger custody product plate, generated Arasaka catalog image.",
+      visualCaption: "Black Ledger institutional custody and settlement surface.",
       readouts: {
         settlement: {
           label: "Settlement rail",
@@ -842,7 +842,7 @@ const translations = {
       title: "A patent is collateral only after its shadow can be priced.",
       summary: "Black Ledger Patent Gravity Map converts intellectual property, founder exposure, licensing obligations, neural-platform dependencies, and hostile claim pressure into a custody object that can be financed without exposing the strategy graph.",
       openLedger: "Open custody specification",
-      visualCaption: "Black Ledger patent gravity collateral plate, generated Arasaka catalog image.",
+      visualCaption: "Black Ledger patent collateral and control map.",
       readouts: {
         fields: {
           label: "Patent fields",
@@ -906,7 +906,7 @@ const translations = {
       summary: "Autonomous Defense Swarm is specified as a governed protection platform: drone veil geometry, convoy extraction corridors, civilian exclusion maps, and human-authorized force states for principals crossing hostile districts.",
       openGovernance: "Open force governance",
       openService: "Open protection service",
-      visualCaption: "Autonomous Defense Swarm tactical veil plate, generated Arasaka catalog image.",
+      visualCaption: "Autonomous Defense Swarm tactical veil configuration.",
       readouts: {
         vote: {
           label: "Formation vote",
@@ -968,7 +968,7 @@ const translations = {
       title: "Autonomous force begins with the places it is forbidden to touch.",
       summary: "Civilian Exclusion Map converts street telemetry, crowd uncertainty, protected-person movement, property boundaries, emergency corridors, and rules-of-force constraints into a live denial lattice that prevents SWARM-12 assets from mistaking speed for authority.",
       openFormation: "Open formation specification",
-      visualCaption: "Civilian exclusion operations plate, generated Arasaka command image.",
+      visualCaption: "Civilian exclusion and protected-corridor command surface.",
       readouts: {
         coverage: {
           label: "Coverage threshold",
@@ -1032,7 +1032,7 @@ const translations = {
       summary: "Autonomous Protection activates when a principal, convoy, or custody object must cross hostile urban terrain without turning machine speed into unowned force. The protocol binds route intake, drone veil staging, civilian exclusion proof, escalation freeze, extraction gates, and after-action receipts into one command surface.",
       openSwarm: "Open swarm formation spec",
       openGovernance: "Open force governance",
-      visualCaption: "Autonomous Protection route plate, generated Arasaka catalog image.",
+      visualCaption: "Autonomous Protection deployment and route-control surface.",
       readouts: {
         staging: {
           label: "Route staging",
@@ -1095,7 +1095,7 @@ const translations = {
       summary: "Executive Continuity activates when a principal disruption threatens command authority: verified biological loss, hostile disappearance, memory compromise, or succession paralysis. The protocol routes capture, custody, rehearsal, and release through board-readable proof.",
       openRelic: "Open Relic specification",
       openCustody: "Open engram custody",
-      visualCaption: "Executive Continuity deployment plate, generated Arasaka catalog image.",
+      visualCaption: "Executive Continuity deployment and succession surface.",
       readouts: {
         window: {
           label: "Activation window",
@@ -1158,7 +1158,7 @@ const translations = {
       summary: "Succession Rehearsal Room converts principal disruption, board quorum, family challenge, market shock, construct drift, and capital-custody exposure into simulated release trials before any successor, construct, or continuity candidate can speak for the institution.",
       openActivation: "Open activation protocol",
       openCustody: "Open engram custody",
-      visualCaption: "Executive Continuity succession rehearsal plate, generated Arasaka catalog image.",
+      visualCaption: "Executive succession rehearsal and authority simulation.",
       readouts: {
         quorum: {
           label: "Board quorum",
@@ -1222,7 +1222,7 @@ const translations = {
       summary: "Counterintrusion Theater activates when sovereign networks are under live probe. The protocol routes hostile signatures through operator triage, trap mirroring, branch burn, Blackwall-adjacent quarantine, and board-readable forensic receipts.",
       openIce: "Open ICE mesh spec",
       openRuntime: "Open runtime dossier",
-      visualCaption: "Counterintrusion Theater response plate, generated Arasaka catalog image.",
+      visualCaption: "Counterintrusion Theater response and isolation surface.",
       readouts: {
         burn: {
           label: "Burn window",
@@ -1286,7 +1286,7 @@ const translations = {
       summary: "Black Ledger Mandate activates when capital, patents, founder identity, or sovereign instruments must move without public intent leakage. The protocol routes mandate intake, blind counterparty matching, collateral proof, escrow release, and selective disclosure through board-readable custody evidence.",
       openLedger: "Open ledger custody spec",
       openRail: "Open capital custody rail",
-      visualCaption: "Black Ledger Mandate settlement plate, generated Arasaka catalog image.",
+      visualCaption: "Black Ledger Mandate settlement and custody surface.",
       readouts: {
         window: {
           label: "Settlement window",
@@ -1492,7 +1492,7 @@ const translations = {
       summary: "A live command surface for continuity, counterintrusion, capital custody, and autonomous protection mandates before private systems are released into Night City operating theaters.",
       openContinuity: "Open continuity service",
       openTech: "Open technology library",
-      visualCaption: "Night City operations center, generated Arasaka watchfloor image.",
+      visualCaption: "Night City regional security operations center.",
       readouts: {
         desks: {
           label: "Mandate desks",
@@ -1536,11 +1536,11 @@ const translations = {
     governanceDocket: {
       back: "Return to governance",
       kicker: "ARASAKA GOVERNANCE DOCKET",
-      title: "Authority is the product surface.",
-      summary: "A board-facing control plane for mandate approval, export corridors, capital escrow, renewal covenants, and evidence retention before any Arasaka system receives client authority.",
+      title: "Stewardship measured in generations.",
+      summary: "The Chairman's Office, Family Council, and Group Board govern long-term strategy, succession, sovereign relations, capital allocation, and controlled technology deployment.",
       openWatchfloor: "Open watchfloor",
       openTech: "Open technology library",
-      visualCaption: "Tokyo command authority, generated Arasaka headquarters image.",
+      visualCaption: "Tokyo headquarters, seat of group and family authority.",
       readouts: {
         quorum: {
           label: "Board quorum",
@@ -1748,7 +1748,7 @@ const translations = {
       kicker: "BW-00A / MIRROR-CELL SUBSTRATE",
       title: "The safest contact is a room that cannot remember.",
       summary: "Mirror-Cell Substrate reflects rogue-machine contact into disposable cognition tissue so Arasaka can score intent, lure behavior, recursion depth, and memory appetite without granting persistent identity, return path, or write access to client infrastructure.",
-      visualCaption: "Mirror-cell substrate plate, generated Arasaka perimeter operations image.",
+      visualCaption: "Mirror-cell substrate and Blackwall isolation surface.",
       readouts: {
         write: {
           label: "Write surface",
@@ -2157,7 +2157,7 @@ const translations = {
       title: "The right to persist is a ledgered authority, not a memory file.",
       summary: "Identity Escrow Ledger binds biometric consent, successor authority, construct revocation, and board-witnessed release into one audit surface before a principal can be captured, preserved, simulated, or restored.",
       openCustody: "Open engram custody",
-      visualCaption: "Identity escrow ledger plate, generated Arasaka continuity catalog image.",
+      visualCaption: "Identity escrow ledger and continuity authority layer.",
       readouts: {
         consent: {
           label: "Consent quorum",
@@ -2307,7 +2307,7 @@ const translations = {
       openProtocol: "Open route protocol",
       openExclusion: "Open exclusion map",
       openFormation: "Open formation spec",
-      visualCaption: "Rules-of-Force receipt plate, generated Arasaka protection catalog image.",
+      visualCaption: "Rules-of-Force receipt and accountable command layer.",
       readouts: {
         receipt: {
           label: "Receipt write",
@@ -2442,7 +2442,7 @@ const translations = {
       kicker: "TECH-BL-03A / SELECTIVE DISCLOSURE SWITCH",
       title: "Silence is lawful only while disclosure can prove itself.",
       summary: "Selective Disclosure Switch converts private capital custody into regulator-readable evidence only when jurisdiction, covenant, counterparty, or board triggers fire. It reveals the minimum lawful proof while preserving strategy state, beneficial-owner masking, and sealed collateral geometry.",
-      visualCaption: "Selective disclosure switch plate, generated Arasaka Black Ledger catalog image.",
+      visualCaption: "Selective disclosure switch and Black Ledger authority layer.",
       readouts: {
         trigger: {
           label: "Trigger classes",
@@ -3130,24 +3130,24 @@ const translations = {
     divisions: {
       eyebrow: "Divisions",
       title: "A sovereign industrial group for the post-human balance sheet.",
-      text: "Arasaka unifies body, network, force, and capital into one protected operating system for institutions that treat continuity as a strategic asset."
+      text: "From its foundations in manufacturing, Arasaka has grown into an integrated group spanning security, banking, heavy industry, cybernetics, and advanced research."
     },
     division: {
       security: {
-        title: "Autonomous Security",
-        text: "Predictive threat scoring, drone overwatch, executive extraction, and response teams synchronized to city surveillance feeds."
+        title: "Security Services",
+        text: "Corporate security, executive protection, counterintelligence, police contracting, and regional response operations."
       },
       banking: {
-        title: "Black Ledger Banking",
-        text: "Private capital rails, sovereign custody, dark-pool settlement, and asset continuity for founders, families, and states."
+        title: "Banking & Financial Services",
+        text: "Commercial banking, reconstruction finance, institutional custody, industrial credit, and protected settlement."
       },
       manufacturing: {
-        title: "Cyberware Platforms",
-        text: "Neural ports, combat prosthetics, sensory overlays, and secure implants manufactured for sanctioned operators."
+        title: "Manufacturing & Armaments",
+        text: "Defense systems, heavy industry, autonomous platforms, cybernetics, and global industrial logistics."
       },
       intelligence: {
-        title: "Netrunner Intelligence",
-        text: "Black ICE, memetic risk analysis, executive memory defense, and hostile AI containment."
+        title: "Advanced Research",
+        text: "Secure computing, neural systems, artificial intelligence containment, cryptography, and restricted programs."
       }
     },
     subsidiaries: {
@@ -5944,18 +5944,18 @@ const translations = {
       back: "企業システムへ戻る",
       kicker: "荒坂オペレーティンググループ",
       title: "地形のように振る舞える規模の企業。",
-      summary: "荒坂は、家族権限、私設警備、神経保管、資本委任、産業自律、黒色研究を一つの運用ドクトリンへルーティングする主権規模の企業スタックとして構成されます。",
+      summary: "荒坂は、警備、銀行、製造、生命科学、戦略研究を荒坂家の長期的統轄の下に統合します。",
       openBoard: "取締役会記録を開く",
       openOps: "監視室を開く",
-      visualCaption: "東京本社権限レイヤー、生成された荒坂企業画像。",
+      visualCaption: "東京本社およびグローバル指揮キャンパス。",
       readouts: {
         groups: {
           label: "運用グループ",
-          copy: "警備、神経、資本、産業、研究、取締役会権限グループが一つの委任グラフを共有します。"
+          copy: "警備、銀行、製造、生命科学、研究、家族権限が一つの指揮ドクトリンを共有します。"
         },
         assets: {
           label: "管理資産",
-          copy: "私設戦力、継続保管、特許、軌道契約、資本レールにわたる架空の連結エクスポージャー。"
+          copy: "私設警備、銀行、産業生産、特許、軌道契約にわたる連結エクスポージャー。"
         },
         corridors: {
           label: "管轄レーン",
@@ -5964,46 +5964,46 @@ const translations = {
       },
       groupsEyebrow: "運用スタック",
       groupsTitle: "各部門は一つの制御形態を所有します。",
-      groupsCopy: "公開サイトは単なる組織図に見えてはいけません。力、同一性、資金、機械、研究、認可を誰が所有するかを示す権力地図であるべきです。",
+      groupsCopy: "各事業グループは、保護資本と産業能力から同一性継続まで、固有の制度的権限を永続的インフラへ変換します。",
       openGroup: "部門経路を開く",
       groups: {
         security: {
-          title: "警備運用",
-          copy: "私設戦力、対侵入、役員警護、護送経路、劇場応答を監視室指揮下に保持します。"
+          title: "荒坂警備サービス",
+          copy: "企業警備、役員警護、防諜、警察業務受託、地域指揮下の作戦対応。"
         },
         neural: {
-          title: "神経保管グループ",
-          copy: "Relic、神輿、Soulkiller、エングラム保管、構成体偏移、身体後統治プログラム。"
+          title: "生命科学・神経システム",
+          copy: "臨床サイバネティクス、神経インターフェース、人格保存、Secure Your Soul継続性ポートフォリオ。"
         },
         capital: {
-          title: "資本システム",
-          copy: "Black Ledger保管、委任エスクロー、盲目決済、特許担保、創業者リスク引受。"
+          title: "荒坂銀行・金融サービス",
+          copy: "商業銀行、機関保管、復興金融、産業信用、保護決済サービス。"
         },
         industrial: {
-          title: "産業自律",
-          copy: "ドローン遮蔽、自律警護、ロボット製造、排除地図、統治済み機械速度物流。"
+          title: "製造・兵器システム",
+          copy: "兵器システム、自律プラットフォーム、重工業、ロボット製造、グローバル防衛物流。"
         },
         research: {
-          title: "黒色研究局",
-          copy: "Black ICEランタイム、ローグ機械封じ込め、ソース保管庫研究、隔離ジオメトリ、敵対経路焼却権限。"
+          title: "戦略研究局",
+          copy: "先端コンピューティング、セキュアネットワーク、人工知能封じ込め、暗号技術、制限プログラム。"
         },
         board: {
-          title: "取締役会権限室",
-          copy: "クォーラム、輸出回廊、継承権限、開示沈黙、更新コベナント、家族指揮継続。"
+          title: "会長室・家族評議会",
+          copy: "長期戦略、継承、主権関係、グループ資本配分、家族指揮の継続。"
         }
       },
       mapEyebrow: "権限経路",
       mapTitle: "部門は製品、サービス、ケースファイル、技術ドクトリンへ解決されます。",
-      mapCopy: "巨大企業は、すべての公開ページが同じ問いに答えるとき信じられるものになります。どの運用グループがリスク、証跡オブジェクト、認可経路を所有するのか。"
+      mapCopy: "すべての委任は、責任ある事業グループ、地域権限、管理された技術またはサービスのポートフォリオへ解決されます。"
     },
     corpSubsidiaries: {
       back: "運用会社プレビューへ戻る",
       kicker: "荒坂運用会社登録簿",
-      title: "帝国は制御されたシェルを通じて分散されます。",
-      summary: "各運用会社は、東京ルート権限へ結合されたまま、法的境界、委任レーン、認証クラス、ルーティング済み技術面を保持します。",
+      title: "一つのグループ。専門企業。統一された統轄。",
+      summary: "荒坂の事業会社は、共通のグループ基準と東京統治の下で、警備、銀行、製造、サイバネティクス、先端システムを提供します。",
       openDivisions: "部門マップを開く",
       openBoard: "取締役会記録を開く",
-      visualCaption: "運用会社指揮登録簿、生成された荒坂監視室画像。",
+      visualCaption: "グループ運用センターおよび企業登録ネットワーク。",
       readouts: {
         entities: {
           label: "登録エンティティ",
@@ -6019,8 +6019,8 @@ const translations = {
         }
       },
       registryEyebrow: "登録簿抜粋",
-      registryTitle: "すべての子会社は危険な能力のための法的コンテナです。",
-      registryCopy: "グループは生の制御台帳を公開しません。企業を判読可能にするための管轄、認証、経路だけを示す公開安全な登録面を公開します。",
+      registryTitle: "専門企業がグループをあらゆる戦略市場へ拡張します。",
+      registryCopy: "各社は、共有されるグループ技術と資本を活用しながら、明確な管轄、サービス委任、統治枠組みの下で運営されます。",
       openEntity: "登録経路を開く",
       entities: {
         security: {
@@ -6059,7 +6059,7 @@ const translations = {
       summary: "地域指揮ノードは荒坂の委任を物理的権限へ結合します。東京ルート、ナイトシティ戦域、大阪製造、軌道低温保管、フランクフルト資本回廊、ブラックウォール境界セル。",
       openWatchfloor: "監視室を開く",
       openBoard: "取締役会記録を開く",
-      visualCaption: "東京ルート権限と地域指揮境界、生成された荒坂画像。",
+      visualCaption: "東京本社および地域調整境界。",
       readouts: {
         nodes: {
           label: "指揮ノード",
@@ -6116,7 +6116,7 @@ const translations = {
       summary: "Relicは統治された同一性基盤として仕様化されます。シャード級キャプチャ装置、保管プロトコル、構成体安定化レイヤー、生物学で終わらせられない権限を持つ主体のための取締役会立会起動経路です。",
       openCustody: "保管仕様を開く",
       openService: "継続サービスを開く",
-      visualCaption: "Relic継続スイート製品プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Relic継続スイート、役員保管構成。",
       readouts: {
         latency: {
           label: "エングラム引継",
@@ -6178,7 +6178,7 @@ const translations = {
       title: "ホストは、拒否できると試験が証明するまで器ではありません。",
       summary: "Relic Host Compatibility Trialは、シャード挿入と構成体圧力の間隔を統治します。継続パッケージが生体インターフェース配備に承認される前に、神経負荷、免疫ドリフト、記憶境界安定性、上書きリスク、中止権限を測定します。",
       openSpec: "技術仕様を開く",
-      visualCaption: "Relicホスト適合性試験プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Relicホスト適合性および神経受容試験。",
       readouts: {
         viability: {
           label: "ホスト生存性",
@@ -6241,7 +6241,7 @@ const translations = {
       summary: "Mikoshiは荒坂の死後継続ランタイムとして仕様化されます。分割構成体保管、記憶解凍制御、演習室、立会拘束ドリフト抑制、身体を超えて存続すべき権限のためのリリースゲートです。",
       openCustody: "エングラム保管を開く",
       openRelic: "Relic仕様を開く",
-      visualCaption: "Mikoshi継続エンジン製品プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Mikoshi継続エンジン、封印保管構成。",
       readouts: {
         cells: {
           label: "保管区画",
@@ -6304,7 +6304,7 @@ const translations = {
       summary: "Mikoshi Release Arbitrationは、低温保管と権限を持つインターフェースの間隔を統治します。存在が市場、家族、国家を動かし得る構成体のための、解凍申立、系譜異議、ドリフト審理、立会クォーラム、沈黙命令、取締役会承認済み帰還です。",
       openRuntime: "ランタイム仕様を開く",
       openCustody: "エングラム保管を開く",
-      visualCaption: "Mikoshiリリース仲裁プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Mikoshiリリース仲裁および権限立会レイヤー。",
       readouts: {
         quorum: {
           label: "リリース定足数",
@@ -6367,7 +6367,7 @@ const translations = {
       summary: "Soulkillerは例外的神経運用のための redaction プリミティブとして仕様化されます。同意ゲートまたは取締役会強制の切断、構成体キャプチャ、敵対ペイロード除去、Mikoshi対応保管受領書です。",
       openMikoshi: "Mikoshiランタイムを開く",
       openCustody: "保管仕様を開く",
-      visualCaption: "Soulkiller redaction lab 製品プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Soulkiller抽出・編集ラボ面。",
       readouts: {
         severance: {
           label: "切断ウィンドウ",
@@ -6429,7 +6429,7 @@ const translations = {
       title: "精神は、何を残すべきかを令状が指名した後にのみ押収できます。",
       summary: "Soulkiller Redaction Warrantは、例外的な神経押収を承認する取締役会封印済み制御面です。Soulkillerが生存または記録済み同一性に触れる前に、対象権限、抽出範囲、記憶redaction深度、構成体処分、沈黙命令、異議経路を定義します。",
       openExtraction: "抽出仕様を開く",
-      visualCaption: "Soulkiller redaction令状プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Soulkiller編集令状および保管認可レイヤー。",
       readouts: {
         quorum: {
           label: "令状定足数",
@@ -6493,7 +6493,7 @@ const translations = {
       summary: "Black ICE Meshは統治された対侵入アプライアンスとして仕様化されます。セントリ膜、使い捨てトラップ区画、分岐焼却ロジック、敵対ネット経路を帰属可能にする隔離受領書です。",
       openRuntime: "ランタイムドシエを開く",
       openService: "対侵入サービスを開く",
-      visualCaption: "Black ICE Mesh製品プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Black ICE Mesh強化対侵入構成。",
       readouts: {
         response: {
           label: "経路焼却応答",
@@ -6555,7 +6555,7 @@ const translations = {
       title: "資格情報は、その形状が存在不可能なとき敵対的になります。",
       summary: "Black ICE Credential Geometryは、ICE-77がネットランナーセッションをミラー、トラップ、焼却、隔離する前に、不可能な同一性経路、署名ドリフト、権限曲率、ツールチェーン熱量、誤検知リスクをモデル化します。",
       openMesh: "メッシュ仕様を開く",
-      visualCaption: "資格情報ジオメトリ対侵入プレート、生成された荒坂カタログ画像。",
+      visualCaption: "資格情報ジオメトリおよび対侵入信頼面。",
       readouts: {
         curvature: {
           label: "権限曲率",
@@ -6619,7 +6619,7 @@ const translations = {
       summary: "Black Ledgerは私的資本保管システムとして仕様化されます。盲目決済レール、特許担保マップ、委任エスクロー、創業者、主権者、制御済みシェル向けの取締役会可読流動性証明です。",
       openRail: "資本保管レールを開く",
       openService: "委任サービスを開く",
-      visualCaption: "Black Ledger保管製品プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Black Ledger機関保管・決済面。",
       readouts: {
         settlement: {
           label: "決済レール",
@@ -6681,7 +6681,7 @@ const translations = {
       title: "特許は、その影を価格化できた後にのみ担保になります。",
       summary: "Black Ledger特許重力マップは、知的財産、創業者エクスポージャー、ライセンス義務、神経プラットフォーム依存、敵対クレーム圧力を、戦略グラフを露出せずに資金化できる保管オブジェクトへ変換します。",
       openLedger: "保管仕様を開く",
-      visualCaption: "Black Ledger特許重力担保プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Black Ledger特許担保・制御マップ。",
       readouts: {
         fields: {
           label: "特許フィールド",
@@ -6745,7 +6745,7 @@ const translations = {
       summary: "Autonomous Defense Swarmは統治された警護プラットフォームとして仕様化されます。ドローン遮蔽ジオメトリ、護送抽出回廊、民間人排除地図、敵対地区を横断する主体のための人間承認済み戦力状態です。",
       openGovernance: "戦力統治を開く",
       openService: "警護サービスを開く",
-      visualCaption: "Autonomous Defense Swarm戦術遮蔽プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Autonomous Defense Swarm戦術遮蔽構成。",
       readouts: {
         vote: {
           label: "編隊投票",
@@ -6807,7 +6807,7 @@ const translations = {
       title: "自律戦力は、触れてはならない場所から始まります。",
       summary: "Civilian Exclusion Mapは、街路テレメトリー、群衆不確実性、保護対象移動、敷地境界、緊急回廊、戦力規則制約をライブ拒否ラティスへ変換し、SWARM-12資産が速度を権限と取り違えないようにします。",
       openFormation: "編隊仕様を開く",
-      visualCaption: "民間人排除運用プレート、生成された荒坂指揮画像。",
+      visualCaption: "民間人排除および保護回廊指揮面。",
       readouts: {
         coverage: {
           label: "カバレッジ閾値",
@@ -6871,7 +6871,7 @@ const translations = {
       summary: "Autonomous Protectionは、主体、護送、または保管対象が、機械速度を所有者不明の戦力へ変えずに敵対的都市地形を横断しなければならない時に起動します。このプロトコルは経路受領、ドローン遮蔽配置、民間人排除証明、エスカレーション凍結、抽出ゲート、事後受領書を一つの指揮面へ結合します。",
       openSwarm: "スウォーム編隊仕様を開く",
       openGovernance: "戦力統治を開く",
-      visualCaption: "Autonomous Protection経路プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Autonomous Protection配備・経路制御面。",
       readouts: {
         staging: {
           label: "経路配置",
@@ -6934,7 +6934,7 @@ const translations = {
       summary: "Executive Continuityは、確認済み生物学的喪失、敵対的失踪、記憶侵害、継承麻痺など、主体の途絶が指揮権限を脅かす時に起動します。このプロトコルは取得、保管、演習、リリースを取締役会可読の証明へルーティングします。",
       openRelic: "Relic仕様を開く",
       openCustody: "エングラム保管を開く",
-      visualCaption: "Executive Continuity配備プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Executive Continuity配備・継承面。",
       readouts: {
         window: {
           label: "起動窓",
@@ -6997,7 +6997,7 @@ const translations = {
       summary: "継承演習室は、主体途絶、取締役会クォーラム、家族異議、市場ショック、構成体ドリフト、資本保管露出を、後継者、構成体、または継続候補が機関を代表して発話する前のリリース試験へ変換します。",
       openActivation: "起動プロトコルを開く",
       openCustody: "エングラム保管を開く",
-      visualCaption: "Executive Continuity継承演習プレート、生成された荒坂カタログ画像。",
+      visualCaption: "役員継承演習および権限シミュレーション。",
       readouts: {
         quorum: {
           label: "取締役会クォーラム",
@@ -7061,7 +7061,7 @@ const translations = {
       summary: "Counterintrusion Theaterは、主権ネットワークがライブ探査下にある時に起動します。このプロトコルは敵対署名をオペレーター選別、トラップミラー、分岐焼却、Blackwall隣接隔離、取締役会可読フォレンジック受領書へ経路化します。",
       openIce: "ICEメッシュ仕様を開く",
       openRuntime: "ランタイムドシエを開く",
-      visualCaption: "Counterintrusion Theater応答プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Counterintrusion Theater応答・隔離面。",
       readouts: {
         burn: {
           label: "焼却窓",
@@ -7125,7 +7125,7 @@ const translations = {
       summary: "Black Ledger Mandateは、資本、特許、創業者同一性、主権文書が公開意図漏洩なしに移動しなければならない時に起動します。このプロトコルは、委任受領、盲目相手方照合、担保証明、エスクロー解放、選択的開示を取締役会可読の保管証拠へ経路化します。",
       openLedger: "台帳保管仕様を開く",
       openRail: "資本保管レールを開く",
-      visualCaption: "Black Ledger Mandate決済プレート、生成された荒坂カタログ画像。",
+      visualCaption: "Black Ledger Mandate決済・保管面。",
       readouts: {
         window: {
           label: "決済窓",
@@ -7331,7 +7331,7 @@ const translations = {
       summary: "継続、対侵入、資本保管、自律警護の委任を、私的システムがナイトシティ運用劇場へ解放される前に保持するライブ指揮面。",
       openContinuity: "継続サービスを開く",
       openTech: "技術ライブラリを開く",
-      visualCaption: "ナイトシティ運用センター、生成された荒坂監視室画像。",
+      visualCaption: "ナイトシティ地域警備運用センター。",
       readouts: {
         desks: {
           label: "委任デスク",
@@ -7375,11 +7375,11 @@ const translations = {
     governanceDocket: {
       back: "統治体制へ戻る",
       kicker: "荒坂統治ドケット",
-      title: "権限そのものが製品面である。",
-      summary: "荒坂システムが顧客権限を受け取る前に、委任承認、輸出回廊、資本エスクロー、更新契約、証拠保持を管理する取締役会向け制御面。",
+      title: "世代を超えて測られる統轄。",
+      summary: "会長室、家族評議会、グループ取締役会が、長期戦略、継承、主権関係、資本配分、管理技術の配備を統治します。",
       openWatchfloor: "監視室を開く",
       openTech: "技術ライブラリを開く",
-      visualCaption: "東京指揮権限、生成された荒坂本社画像。",
+      visualCaption: "グループと家族権限の中枢、東京本社。",
       readouts: {
         quorum: {
           label: "取締役会定足数",
@@ -7587,7 +7587,7 @@ const translations = {
       kicker: "BW-00A / ミラーセル基盤",
       title: "最も安全な接触は、記憶できない部屋です。",
       summary: "Mirror-Cell Substrateはローグ機械接触を使い捨て認知組織へ反射し、Arasakaが永続的同一性、帰還経路、顧客インフラへの書込アクセスを与えずに、意図、誘引挙動、再帰深度、記憶欲求を採点できるようにします。",
-      visualCaption: "ミラーセル基盤プレート、生成された荒坂境界運用画像。",
+      visualCaption: "ミラーセル基盤およびブラックウォール隔離面。",
       readouts: {
         write: {
           label: "書込面",
@@ -7996,7 +7996,7 @@ const translations = {
       title: "存続する権利は記憶ファイルではなく、台帳化された権限です。",
       summary: "Identity Escrow Ledgerは、本人が取得、保存、シミュレーション、復元される前に、生体同意、継承者権限、構成体取消、取締役会立会リリースを一つの監査面へ結合します。",
       openCustody: "エングラム保管を開く",
-      visualCaption: "同一性エスクロー台帳プレート、生成された荒坂継続カタログ画像。",
+      visualCaption: "同一性エスクロー台帳および継続権限レイヤー。",
       readouts: {
         consent: {
           label: "同意クォーラム",
@@ -8146,7 +8146,7 @@ const translations = {
       openProtocol: "経路プロトコルを開く",
       openExclusion: "排除地図を開く",
       openFormation: "編隊仕様を開く",
-      visualCaption: "Rules-of-Forceレシートプレート、生成された荒坂警護カタログ画像。",
+      visualCaption: "Rules-of-Force受領証および責任指揮レイヤー。",
       readouts: {
         receipt: {
           label: "レシート書込",
@@ -8281,7 +8281,7 @@ const translations = {
       kicker: "TECH-BL-03A / 選択的開示スイッチ",
       title: "沈黙は、開示が自らを証明できる間だけ合法です。",
       summary: "Selective Disclosure Switchは、管轄、契約、相手方、または取締役会トリガーが発火した場合にのみ、私的資本保管を規制当局が読める証拠へ変換します。戦略状態、実質所有者マスク、封印済み担保ジオメトリを保持しながら、最小限の合法証明だけを開示します。",
-      visualCaption: "選択的開示スイッチプレート、生成された荒坂Black Ledgerカタログ画像。",
+      visualCaption: "選択的開示スイッチおよびBlack Ledger権限レイヤー。",
       readouts: {
         trigger: {
           label: "トリガークラス",
@@ -8969,24 +8969,24 @@ const translations = {
     divisions: {
       eyebrow: "事業部門",
       title: "未来を所有する者のための、サイバネティック基盤。",
-      text: "荒坂は身体、ネットワーク、兵器、貸借対照表をひとつの保護されたオペレーティングシステムへ統合します。顧客はリスクを外注しません。支配権を取得します。"
+      text: "製造業を起点として、荒坂は警備、銀行、重工業、サイバネティクス、先端研究にまたがる統合企業グループへ成長しました。"
     },
     division: {
       security: {
-        title: "自律警備",
-        text: "予測型脅威スコアリング、ドローン監視、要人抽出、市街監視フィードと同期した即応部隊を提供します。"
+        title: "警備サービス",
+        text: "企業警備、役員警護、防諜、警察業務受託、地域対応オペレーション。"
       },
       banking: {
-        title: "ブラック台帳銀行",
-        text: "創業者、一族、国家向けに、私的資本レール、主権保管、ダークプール決済、資産継続性を運用します。"
+        title: "銀行・金融サービス",
+        text: "商業銀行、復興金融、機関保管、産業信用、保護決済。"
       },
       manufacturing: {
-        title: "サイバーウェア基盤",
-        text: "認可されたオペレーター向けに、神経ポート、戦闘義肢、感覚オーバーレイ、安全なインプラントを製造します。"
+        title: "製造・兵器システム",
+        text: "防衛システム、重工業、自律プラットフォーム、サイバネティクス、グローバル産業物流。"
       },
       intelligence: {
-        title: "ネットランナー情報部",
-        text: "ブラックICE、ミームリスク分析、役員記憶防衛、敵対AI封じ込めを担います。"
+        title: "先端研究",
+        text: "セキュアコンピューティング、神経システム、人工知能封じ込め、暗号技術、制限プログラム。"
       }
     },
     subsidiaries: {
