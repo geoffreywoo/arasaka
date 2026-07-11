@@ -11,7 +11,7 @@ const translations = {
       technology: "Innovation",
       opsArchive: "Archive",
       watchfloor: "Watchfloor",
-      board: "Board",
+      board: "Governance",
       perimeter: "Perimeter",
       foundry: "Foundry",
       systems: "Systems",
@@ -1576,56 +1576,56 @@ const translations = {
       mapCopy: "Service teams receive the mandate. Product systems hold the control surface. Technical dossiers define the proof object and failure boundary."
     },
     governanceDocket: {
-      back: "Return to governance",
-      kicker: "ARASAKA GOVERNANCE DOCKET",
+      back: "Return to corporate home",
+      kicker: "ARASAKA CORPORATE GOVERNANCE",
       title: "Stewardship measured in generations.",
       summary: "The Chairman's Office, Family Council, and Group Board govern long-term strategy, succession, sovereign relations, capital allocation, and controlled technology deployment.",
-      openWatchfloor: "Open watchfloor",
-      openTech: "Open technology library",
+      openWatchfloor: "Explore the group",
+      openTech: "Innovation & research",
       visualCaption: "Tokyo headquarters, seat of group and family authority.",
       readouts: {
         quorum: {
-          label: "Board quorum",
-          copy: "Minimum witness threshold before continuity, force, or capital systems can leave sealed review."
+          label: "Established",
+          copy: "More than a century of family enterprise, industrial development, and institutional service."
         },
         export: {
-          label: "Export corridors",
-          copy: "Jurisdictional lanes bound to named license class, prohibited surface, and renewal window."
+          label: "Ownership",
+          copy: "Long-term family stewardship aligns capital, succession, and group strategy across generations."
         },
         covenant: {
-          label: "Renewal covenant",
-          copy: "Annual evidence review covering authority, retention, escalation, disclosure, and termination."
+          label: "Operating model",
+          copy: "Regional companies remain accountable to shared group standards and local obligations."
         }
       },
-      docketEyebrow: "Mandate Control",
-      docketTitle: "Deployments become legal objects before they become operational systems.",
-      docketCopy: "Every high-authority Arasaka engagement is converted into a board docket with sponsor review, export classification, escrow release logic, and post-launch audit obligations.",
-      openDocket: "Open governed route",
+      docketEyebrow: "Governance Framework",
+      docketTitle: "One group, governed across generations and jurisdictions.",
+      docketCopy: "Arasaka combines family stewardship with group-level oversight, accountable operating companies, disciplined risk management, and defined responsibility for advanced technology.",
+      openDocket: "Learn more",
       cards: {
         board: {
-          title: "Board Docket",
-          copy: "Sponsor review, activation motion, quorum state, capital escrow, and named accountability are reconciled before field delivery."
+          title: "Group Stewardship",
+          copy: "The Chairman's Office and Group Board set long-term direction, allocate capital, and preserve the integrity of the enterprise."
         },
         export: {
-          title: "Export License",
-          copy: "Black ICE, counterintrusion, and autonomous systems are bound to corridors, prohibited surfaces, and human escalation limits."
+          title: "Risk & Assurance",
+          copy: "Group standards govern security, resilience, legal compliance, and escalation across regional companies and client programs."
         },
         bond: {
-          title: "Underwriting Bond",
-          copy: "Founder identity, patent collateral, blind settlement, and disclosure switches are priced before private capital moves."
+          title: "Capital Discipline",
+          copy: "Investment, treasury, and institutional custody decisions are governed for durability, confidentiality, and accountable authority."
         },
         covenant: {
-          title: "Renewal Audit Covenant",
-          copy: "Construct custody, memory retention, successor authority, and evidence survival are reviewed before the mandate renews."
+          title: "Responsible Innovation",
+          copy: "Advanced research is governed through defined human authority, use boundaries, technical validation, and lifecycle accountability."
         },
         force: {
-          title: "Rules-of-Force Ledger",
-          copy: "Autonomous posture changes, exclusion maps, officer seals, and replay artifacts are bound before force survives audit."
+          title: "Regional Accountability",
+          copy: "Operating companies combine local leadership and jurisdictional responsibility with shared group standards and capabilities."
         }
       },
-      mapEyebrow: "Authority Routing",
-      mapTitle: "The docket connects board approval to live command, archive evidence, and technical doctrine.",
-      mapCopy: "A mandate can enter through a service, product, incident file, or technical dossier. It does not activate until the same authority object exists across all four surfaces."
+      mapEyebrow: "Group Governance",
+      mapTitle: "Stewardship connects ownership, strategy, operating companies, and client responsibility.",
+      mapCopy: "The group governance model preserves long-term direction while assigning clear responsibility to the leaders, companies, and specialists closest to each market."
     },
     tech: {
       back: "Return to corporate home",
@@ -5897,7 +5897,7 @@ const translations = {
       technology: "研究開発",
       opsArchive: "記録庫",
       watchfloor: "監視室",
-      board: "取締役会",
+      board: "ガバナンス",
       perimeter: "境界",
       foundry: "鋳造所",
       systems: "システム",
@@ -7462,56 +7462,56 @@ const translations = {
       mapCopy: "サービスチームが委任を受け取り、製品システムが制御面を保持し、技術記録が証跡オブジェクトと障害境界を定義します。"
     },
     governanceDocket: {
-      back: "統治体制へ戻る",
-      kicker: "荒坂統治ドケット",
+      back: "企業ホームへ戻る",
+      kicker: "荒坂コーポレートガバナンス",
       title: "世代を超えて測られる統轄。",
       summary: "会長室、家族評議会、グループ取締役会が、長期戦略、継承、主権関係、資本配分、管理技術の配備を統治します。",
-      openWatchfloor: "監視室を開く",
-      openTech: "技術ライブラリを開く",
+      openWatchfloor: "グループを見る",
+      openTech: "イノベーション＆研究",
       visualCaption: "グループと家族権限の中枢、東京本社。",
       readouts: {
         quorum: {
-          label: "取締役会定足数",
-          copy: "継続、戦力、資本システムが封印審査を離れる前に必要な最低立会しきい値。"
+          label: "創業",
+          copy: "一世紀を超える一族企業、産業開発、機関サービスの歴史。"
         },
         export: {
-          label: "輸出回廊",
-          copy: "指定ライセンス区分、禁止領域、更新窓口へ結合された管轄レーン。"
+          label: "所有形態",
+          copy: "長期的な一族統轄が、世代を超えて資本、継承、グループ戦略を整合させます。"
         },
         covenant: {
-          label: "更新契約",
-          copy: "権限、保持、エスカレーション、開示、終了を対象にする年次証拠レビュー。"
+          label: "運用モデル",
+          copy: "地域企業は、共通のグループ基準と現地義務の双方に責任を負います。"
         }
       },
-      docketEyebrow: "委任制御",
-      docketTitle: "配備は運用システムになる前に法的オブジェクトになります。",
-      docketCopy: "すべての高権限荒坂契約は、スポンサー審査、輸出分類、エスクロー解放ロジック、ローンチ後監査義務を持つ取締役会ドケットへ変換されます。",
-      openDocket: "統治済み経路を開く",
+      docketEyebrow: "統治フレームワーク",
+      docketTitle: "世代と管轄を超えて統治される一つのグループ。",
+      docketCopy: "荒坂は、一族統轄をグループ監督、責任ある事業会社、規律あるリスク管理、先端技術への明確な責任と統合します。",
+      openDocket: "詳しく見る",
       cards: {
         board: {
-          title: "取締役会ドケット",
-          copy: "現場納入前に、スポンサー審査、起動動議、定足数状態、資本エスクロー、指名責任を照合します。"
+          title: "グループ統轄",
+          copy: "会長室とグループ取締役会が長期方針を定め、資本を配分し、企業体の一体性を守ります。"
         },
         export: {
-          title: "輸出ライセンス",
-          copy: "ブラックICE、対侵入、自律システムは、回廊、禁止領域、人間エスカレーション制限へ結合されます。"
+          title: "リスク＆保証",
+          copy: "グループ基準が、地域企業と顧客プログラム全体の安全、強靭性、法令遵守、エスカレーションを統治します。"
         },
         bond: {
-          title: "引受保証",
-          copy: "私的資本が移動する前に、創業者ID、特許担保、盲目決済、開示スイッチを価格付けします。"
+          title: "資本規律",
+          copy: "投資、財務、機関保管の判断を、永続性、機密性、説明可能な権限に基づいて統治します。"
         },
         covenant: {
-          title: "更新監査契約",
-          copy: "委任更新前に、構成体保管、記憶保持、後継者権限、証拠存続を審査します。"
+          title: "責任あるイノベーション",
+          copy: "先端研究は、定義された人間権限、利用境界、技術検証、ライフサイクル責任を通じて統治されます。"
         },
         force: {
-          title: "戦力規則台帳",
-          copy: "自律姿勢変更、排除地図、責任者封印、リプレイ成果物は、戦力が監査に耐える前に結合されます。"
+          title: "地域責任",
+          copy: "事業会社は、現地リーダーシップと管轄責任を、共通のグループ基準・能力と統合します。"
         }
       },
-      mapEyebrow: "権限ルーティング",
-      mapTitle: "ドケットは取締役会承認をライブ指揮、記録証拠、技術ドクトリンへ接続します。",
-      mapCopy: "委任はサービス、製品、事象ファイル、技術記録から入ることができます。同じ権限オブジェクトが四つの面すべてに存在するまで起動しません。"
+      mapEyebrow: "グループガバナンス",
+      mapTitle: "統轄が所有、戦略、事業会社、顧客責任を接続します。",
+      mapCopy: "グループ統治モデルは長期方針を守りながら、各市場に最も近いリーダー、企業、専門家へ明確な責任を割り当てます。"
     },
     tech: {
       back: "企業ホームへ戻る",
