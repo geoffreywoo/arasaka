@@ -8,7 +8,7 @@ const translations = {
       subsidiaries: "Subsidiaries",
       services: "Services",
       products: "Products",
-      technology: "Technology",
+      technology: "Innovation",
       opsArchive: "Archive",
       watchfloor: "Watchfloor",
       board: "Board",
@@ -1628,87 +1628,88 @@ const translations = {
       mapCopy: "A mandate can enter through a service, product, incident file, or technical dossier. It does not activate until the same authority object exists across all four surfaces."
     },
     tech: {
-      back: "Return to corporate grid",
-      kicker: "ARASAKA TECHNICAL LIBRARY",
-      title: "Technology Dossiers",
-      summary: "Engineering notes, control surfaces, and operational envelopes for systems reserved for sovereign clients, treaty families, and infrastructure operators.",
-      openProducts: "Open product index",
-      indexEyebrow: "Library Index",
-      indexTitle: "Reference architectures for private power.",
-      indexCopy: "Each dossier links a product surface to the governing protocol, evidence object, and failure boundary expected by a client board or national command authority.",
+      back: "Return to corporate home",
+      kicker: "ARASAKA INNOVATION & RESEARCH",
+      title: "Engineering for institutions measured in generations.",
+      summary: "Arasaka develops trusted systems at the intersection of human capability, resilient infrastructure, autonomous operations, and advanced industrial production.",
+      request: "Request a consultation",
+      openProducts: "Explore solutions",
+      indexEyebrow: "Research Platforms",
+      indexTitle: "Foundational technology for a more durable world.",
+      indexCopy: "Our research groups combine long-horizon science with production engineering, regional assurance, and accountable human oversight.",
       labels: {
-        surface: "Surface",
-        latency: "Latency",
-        proof: "Proof"
+        surface: "Focus",
+        latency: "Program",
+        proof: "Assurance"
       },
       cards: {
         neural: {
-          title: "Neural Substrate Protocol",
-          copy: "Construct capture, biometric escrow, and engram drift controls for continuity systems that must outlive the body without outpacing consent.",
-          surface: "Relic / Mikoshi",
-          proof: "Witnessed construct hash"
+          title: "Neural Interfaces & Human Continuity",
+          copy: "Biocompatible interfaces, adaptive assistive systems, and continuity research designed around identity, consent, and clinical accountability.",
+          surface: "Neural systems / Cybernetics",
+          proof: "Human identity and consent"
         },
         ice: {
-          title: "Black ICE Runtime",
-          copy: "Trap partitioning, hostile route burn, and quarantine witness logic for networks where intrusion is treated as a board-level event.",
-          surface: "Mesh / Counterintrusion",
-          proof: "Quarantine receipt"
+          title: "Secure Infrastructure",
+          copy: "Adaptive network defense, identity protection, and resilient computing for institutions that cannot suspend operations when conditions change.",
+          surface: "Networks / Identity",
+          proof: "Human-governed response"
         },
         swarm: {
-          title: "Autonomous Force Governance",
-          copy: "Drone veil geometry, exclusion map compilation, and human escalation guarantees for private cities and convoy corridors.",
-          surface: "Swarm / Protection",
-          proof: "Civilian exclusion ledger"
+          title: "Autonomous Operations",
+          copy: "Perception, coordination, and human-command systems for industrial sites, infrastructure corridors, and complex operating environments.",
+          surface: "Robotics / Coordination",
+          proof: "Defined operating boundaries"
         },
         capital: {
-          title: "Capital Custody Rail",
-          copy: "Settlement silence, patent collateral custody, and private reputation proofs for capital that must move without advertising intent.",
-          surface: "Ledger / Mandate",
-          proof: "Board escrow seal"
+          title: "Trusted Institutional Computing",
+          copy: "Confidential settlement, durable records, and jurisdiction-aware computing for financial institutions and multinational enterprises.",
+          surface: "Custody / Settlement",
+          proof: "Verifiable authority"
         },
         blackwall: {
-          title: "Blackwall Perimeter Interface",
-          copy: "Rogue-machine contact, quarantine treaty logic, and hostile cognition scoring for networks that need an accountable boundary between intelligence and infection.",
-          surface: "Blackwall / ICE",
-          proof: "Treaty witness log"
+          title: "Advanced Materials & Manufacturing",
+          copy: "Precision fabrication, resilient materials, and integrated cybernetic production from research-scale prototypes to regional manufacturing programs.",
+          surface: "Materials / Fabrication",
+          proof: "Regional quality systems"
         }
       },
-      matrixEyebrow: "Engineering Matrix",
-      matrixTitle: "Control plane comparison.",
+      matrixEyebrow: "Research Principles",
+      matrixTitle: "One assurance model across every research platform.",
       matrix: {
-        system: "System",
-        control: "Control plane",
-        object: "Proof object",
-        boundary: "Failure boundary",
+        system: "Platform",
+        control: "Human authority",
+        object: "Assurance evidence",
+        boundary: "Operating boundary",
         neural: {
-          control: "Biometric consent quorum",
-          object: "Construct drift certificate",
-          boundary: "Identity divergence above 0.7%"
+          control: "Identity and consent governance",
+          object: "Clinical and technical validation",
+          boundary: "Defined use and revocation rights"
         },
         ice: {
-          control: "Disposable hostile-route partition",
-          object: "Trace burn receipt",
-          boundary: "Collateral route exposure"
+          control: "Named response authority",
+          object: "Continuous integrity record",
+          boundary: "Jurisdiction and client policy"
         },
         swarm: {
-          control: "Human escalation governor",
-          object: "Exclusion-map vote log",
-          boundary: "Civilian uncertainty zone"
+          control: "Human command and intervention",
+          object: "Decision and maintenance record",
+          boundary: "Declared operating environment"
         },
         capital: {
-          control: "Blind settlement notary",
-          object: "Escrowed mandate seal",
-          boundary: "Jurisdictional disclosure trigger"
+          control: "Mandated access authority",
+          object: "Auditable custody record",
+          boundary: "Applicable law and mandate"
         },
         blackwall: {
-          control: "Treaty quarantine switch",
-          object: "Machine-contact witness log",
-          boundary: "Intent drift above treaty range"
+          control: "Qualified production authority",
+          object: "Material and process traceability",
+          boundary: "Certified production specification"
         }
       },
-      networkEyebrow: "Networked Pages",
-      networkTitle: "A public map of private infrastructure.",
-      networkCopy: "The library is designed as a connective layer: product files hold commercial packaging, service files hold procurement fit, and this page holds the engineering language that binds them together."
+      networkEyebrow: "Explore Arasaka",
+      networkTitle: "Research connected to operating capability.",
+      networkCopy: "Arasaka research moves through specialized divisions, regional facilities, and client solutions with a common standard for stewardship, quality, and long-term support."
     },
     blackwallRoute: {
       back: "Return to technology library",
@@ -5893,7 +5894,7 @@ const translations = {
       subsidiaries: "子会社",
       services: "サービス",
       products: "製品群",
-      technology: "技術",
+      technology: "研究開発",
       opsArchive: "記録庫",
       watchfloor: "監視室",
       board: "取締役会",
@@ -7513,87 +7514,88 @@ const translations = {
       mapCopy: "委任はサービス、製品、事象ファイル、技術記録から入ることができます。同じ権限オブジェクトが四つの面すべてに存在するまで起動しません。"
     },
     tech: {
-      back: "企業グリッドへ戻る",
-      kicker: "荒坂技術ライブラリ",
-      title: "技術記録",
-      summary: "主権顧客、条約家系、基幹インフラ運営者に限定されるシステムの工学ノート、制御面、運用範囲。",
-      openProducts: "製品索引を開く",
-      indexEyebrow: "ライブラリ索引",
-      indexTitle: "私的権力の参照アーキテクチャ。",
-      indexCopy: "各記録は、製品面、統治プロトコル、証跡オブジェクト、取締役会または国家指揮権限が求める障害境界を接続します。",
+      back: "企業ホームへ戻る",
+      kicker: "荒坂イノベーション＆研究",
+      title: "世代単位で歩む機関のためのエンジニアリング。",
+      summary: "荒坂は、人間能力、強靭なインフラ、自律運用、先端産業生産が交差する領域で、信頼されるシステムを開発しています。",
+      request: "相談を申し込む",
+      openProducts: "ソリューションを見る",
+      indexEyebrow: "研究プラットフォーム",
+      indexTitle: "より永続的な世界のための基盤技術。",
+      indexCopy: "当社の研究グループは、長期科学を生産技術、地域保証、責任ある人間の監督と統合します。",
       labels: {
-        surface: "表面",
-        latency: "遅延",
-        proof: "証跡"
+        surface: "重点領域",
+        latency: "プログラム",
+        proof: "保証"
       },
       cards: {
         neural: {
-          title: "神経基盤プロトコル",
-          copy: "身体の寿命を超えても同意を追い越さない継続性システムのための構成体取得、生体エスクロー、エングラム偏移制御。",
-          surface: "レリック / 神輿",
-          proof: "立会済み構成体ハッシュ"
+          title: "ニューラルインターフェイス＆人間継続性",
+          copy: "アイデンティティ、同意、臨床上の説明責任を中心に設計された、生体適合インターフェイス、適応型支援システム、継続性研究。",
+          surface: "神経システム / サイバネティクス",
+          proof: "人間のアイデンティティと同意"
         },
         ice: {
-          title: "ブラックICEランタイム",
-          copy: "侵入を取締役会レベルの事象として扱うネットワーク向けの罠区画、敵対経路焼却、隔離立会ロジック。",
-          surface: "メッシュ / 対侵入",
-          proof: "隔離レシート"
+          title: "セキュアインフラ",
+          copy: "状況が変化しても運用を停止できない機関のための、適応型ネットワーク防衛、ID保護、強靭なコンピューティング。",
+          surface: "ネットワーク / ID",
+          proof: "人間が統治する対応"
         },
         swarm: {
-          title: "自律戦力統治",
-          copy: "私設都市と護送回廊向けのドローン遮蔽幾何、排除地図コンパイル、人間へのエスカレーション保証。",
-          surface: "スウォーム / 警護",
-          proof: "民間人排除台帳"
+          title: "自律運用",
+          copy: "産業拠点、インフラ回廊、複雑な運用環境向けの知覚、協調、人間指揮システム。",
+          surface: "ロボティクス / 協調",
+          proof: "定義された運用境界"
         },
         capital: {
-          title: "資本保管レール",
-          copy: "意図を公開せずに移動しなければならない資本のための沈黙決済、特許担保保管、私的評判証明。",
-          surface: "台帳 / 委任",
-          proof: "取締役会エスクロー印"
+          title: "信頼される機関コンピューティング",
+          copy: "金融機関と多国籍企業向けの機密決済、永続的記録、管轄対応コンピューティング。",
+          surface: "保管 / 決済",
+          proof: "検証可能な権限"
         },
         blackwall: {
-          title: "ブラックウォール境界インターフェイス",
-          copy: "知性と感染の間に説明可能な境界を必要とするネットワークのための、ローグ機械接触、隔離条約ロジック、敵対認知スコアリング。",
-          surface: "ブラックウォール / ICE",
-          proof: "条約立会ログ"
+          title: "先端材料＆製造",
+          copy: "研究規模の試作から地域製造プログラムまでを支える、精密加工、強靭材料、統合サイバネティクス生産。",
+          surface: "材料 / 製造",
+          proof: "地域品質システム"
         }
       },
-      matrixEyebrow: "工学行列",
-      matrixTitle: "制御面比較。",
+      matrixEyebrow: "研究原則",
+      matrixTitle: "すべての研究プラットフォームに共通する保証モデル。",
       matrix: {
-        system: "システム",
-        control: "制御面",
-        object: "証跡",
-        boundary: "障害境界",
+        system: "プラットフォーム",
+        control: "人間の権限",
+        object: "保証証跡",
+        boundary: "運用境界",
         neural: {
-          control: "生体同意クォーラム",
-          object: "構成体偏移証明書",
-          boundary: "同一性偏差0.7%以上"
+          control: "IDと同意の統治",
+          object: "臨床・技術検証",
+          boundary: "定義された利用・取消権"
         },
         ice: {
-          control: "使い捨て敵対経路区画",
-          object: "追跡焼却レシート",
-          boundary: "副次経路露出"
+          control: "指名された対応権限",
+          object: "継続的な整合性記録",
+          boundary: "管轄と顧客方針"
         },
         swarm: {
-          control: "人間エスカレーション統治",
-          object: "排除地図投票ログ",
-          boundary: "民間不確実領域"
+          control: "人間の指揮と介入",
+          object: "判断・保守記録",
+          boundary: "宣言された運用環境"
         },
         capital: {
-          control: "盲目決済公証",
-          object: "エスクロー済み委任印",
-          boundary: "管轄開示トリガー"
+          control: "委任されたアクセス権限",
+          object: "監査可能な保管記録",
+          boundary: "適用法と委任"
         },
         blackwall: {
-          control: "条約隔離スイッチ",
-          object: "機械接触立会ログ",
-          boundary: "条約範囲を超える意図偏移"
+          control: "認定生産権限",
+          object: "材料・工程トレーサビリティ",
+          boundary: "認証生産仕様"
         }
       },
-      networkEyebrow: "接続ページ",
-      networkTitle: "私的インフラの公開地図。",
-      networkCopy: "このライブラリは接続層として設計されています。製品ファイルは商用パッケージを、サービスファイルは調達適合を、このページはそれらを結ぶ工学言語を保持します。"
+      networkEyebrow: "荒坂を知る",
+      networkTitle: "運用能力へ接続する研究。",
+      networkCopy: "荒坂の研究は、専門部門、地域施設、顧客ソリューションを通じ、統轄、品質、長期支援の共通基準の下で実用化されます。"
     },
     blackwallRoute: {
       back: "技術ライブラリへ戻る",

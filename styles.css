@@ -5772,12 +5772,20 @@ a,
 }
 
 .tech-route-main > .product-route-header,
-.tech-route-hero {
+.tech-library-page .tech-route-main .tech-route-hero {
   grid-area: auto;
 }
 
-.tech-route-hero {
+.tech-library-page .tech-route-main .tech-route-hero {
   min-height: 430px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(4, 5, 7, 0.98) 0%, rgba(4, 5, 7, 0.86) 48%, rgba(4, 5, 7, 0.2) 100%),
+    url("assets/cyberware-foundry.png") center right / cover no-repeat;
+}
+
+.tech-library-page .tech-route-hero > * {
+  max-width: 690px;
 }
 
 .tech-section-shell,
@@ -22955,9 +22963,12 @@ a,
     inset: 12px;
   }
 
-  .tech-route-hero {
+  .tech-library-page .tech-route-main .tech-route-hero {
     min-height: 360px;
     padding: 18px;
+    background:
+      linear-gradient(180deg, rgba(4, 5, 7, 0.82) 0%, rgba(4, 5, 7, 0.94) 64%, rgba(4, 5, 7, 1) 100%),
+      url("assets/cyberware-foundry.png") center / cover no-repeat;
   }
 
   .tech-section-shell,
