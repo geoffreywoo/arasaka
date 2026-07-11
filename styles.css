@@ -61,6 +61,47 @@ body.has-product-page {
   overflow: hidden;
 }
 
+/* The public homepage is a controlled corporate surface. Operational consoles
+   remain available through their dedicated dossiers and technology routes. */
+.public-homepage .field-console,
+.public-homepage .status-rail,
+.public-homepage .megacity-section,
+.public-homepage .lore-section,
+.public-homepage .command-ribbon,
+.public-homepage .protocol-band,
+.public-homepage .foundry-section,
+.public-homepage .systems-section,
+.public-homepage .ice-section,
+.public-homepage .swarm-section,
+.public-homepage .stack-section,
+.public-homepage .archive-section,
+.public-homepage .mikoshi-section,
+.public-homepage .soulkiller-section,
+.public-homepage .vault-section,
+.public-homepage .custody-section,
+.public-homepage .capital-section,
+.public-homepage .exchange-section,
+.public-homepage .topology-section,
+.public-homepage .blackwall-section,
+.public-homepage .matrix-section,
+.public-homepage .simulation-section,
+.public-homepage .casefile-section,
+.public-homepage .doctrine-section,
+.public-homepage .dossier-section,
+.public-homepage .clientroom-section,
+.public-homepage .operations-section,
+.public-homepage .source-section {
+  display: none;
+}
+
+.public-homepage {
+  padding-bottom: 0;
+}
+
+.public-homepage .public-node-dock {
+  display: none;
+}
+
 [data-scramble-lock] {
   display: inline-block;
   text-rendering: geometricPrecision;
@@ -22691,6 +22732,11 @@ a,
   }
 
   .signal-spine {
+    display: none;
+  }
+
+  .signal-weather,
+  .hero-signal-canvas {
     display: none;
   }
 }

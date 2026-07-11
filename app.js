@@ -17537,7 +17537,7 @@ function initCursorReticle() {
 }
 
 function initSignalWeather() {
-  if (!signalWeatherCanvas) return;
+  if (!signalWeatherCanvas || window.matchMedia("(max-width: 720px), (prefers-reduced-motion: reduce)").matches) return;
 
   const context = signalWeatherCanvas.getContext("2d");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -18030,7 +18030,7 @@ if (form) {
 }
 
 function initHeroCanvas() {
-  if (!heroCanvas) return;
+  if (!heroCanvas || window.matchMedia("(max-width: 720px), (prefers-reduced-motion: reduce)").matches) return;
 
   const context = heroCanvas.getContext("2d");
   const frame = heroCanvas.closest(".hero");
