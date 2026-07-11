@@ -70,6 +70,7 @@ body.has-product-page {
 .public-homepage .command-ribbon,
 .public-homepage .protocol-band,
 .public-homepage .foundry-section,
+.public-homepage .tech-registry-section,
 .public-homepage .systems-section,
 .public-homepage .ice-section,
 .public-homepage .swarm-section,
@@ -90,6 +91,7 @@ body.has-product-page {
 .public-homepage .dossier-section,
 .public-homepage .clientroom-section,
 .public-homepage .operations-section,
+.public-homepage .regional-section,
 .public-homepage .source-section {
   display: none;
 }
@@ -103,7 +105,13 @@ body.has-product-page {
 }
 
 .public-homepage .public-restricted,
-.public-homepage .protocol-api {
+.public-homepage .public-restricted-action,
+.public-homepage .protocol-api,
+.public-homepage .solution-bundles,
+.public-homepage .acquisition-matrix,
+.public-homepage .mandate-router,
+.public-homepage .assurance-ledger,
+.public-homepage .terminal-panel {
   display: none;
 }
 

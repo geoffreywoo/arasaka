@@ -269,6 +269,48 @@ const translations = {
       mapTitle: "Regional command binds divisions, subsidiaries, products, custody systems, and board authority.",
       mapCopy: "A command node is not an office. It is the place where legal permission, machine authority, human quorum, and operational risk become a single executable mandate."
     },
+    secureNet: {
+      back: "Return to products", kicker: "ARASAKA NETWORK SECURITY",
+      title: "Security that adapts before the threat becomes an incident.",
+      summary: "SecureNet combines adaptive counterintrusion, credential isolation, resilient segmentation, and human-led response for institutions operating critical networks.",
+      request: "Request a security consultation", caption: "SecureNet managed defense and credential-protection surface.",
+      readout1: { label: "Continuous assurance", copy: "Regional security operations monitor identity, network, and endpoint integrity." },
+      readout2: { label: "Response governance", copy: "Named operators retain authority over isolation, escalation, and recovery." },
+      readout3: { label: "Deployment scope", copy: "Architectures adapt to sovereign, financial, industrial, and research environments." },
+      sectionEyebrow: "Defense Portfolio", sectionTitle: "One managed security fabric across identity, network, and response.", sectionCopy: "SecureNet is delivered as an integrated service with architecture, operations, assurance, and incident command under one accountable regional team.",
+      card1: { title: "Managed Defense", copy: "Continuous detection, containment, and recovery for high-consequence environments." },
+      card2: { title: "Identity Protection", copy: "Credential isolation and privileged-access controls for people, machines, and autonomous agents." },
+      card3: { title: "Incident Command", copy: "Human-led response, evidence preservation, and operational restoration across jurisdictions." },
+      mapEyebrow: "Assurance Boundary", mapTitle: "Public assurance outside. Restricted countermeasures inside.", mapCopy: "Technical countermeasure specifications and threat intelligence are released only after client qualification and regional security review."
+    },
+    custodyPublic: {
+      back: "Return to products", kicker: "ARASAKA BANK INSTITUTIONAL SERVICES",
+      title: "Capital infrastructure designed to outlast the market around it.",
+      summary: "Arasaka Bank provides protected settlement, intellectual-property custody, capital continuity, and counterparty assurance for institutions, family offices, and sovereign pools.",
+      request: "Request an institutional consultation", caption: "Institutional custody, protected settlement, and continuity surface.",
+      readout1: { label: "Custody model", copy: "Client assets and authority keys remain separated across legal and technical boundaries." },
+      readout2: { label: "Settlement", copy: "Protected institutional settlement with continuous counterparty verification." },
+      readout3: { label: "Continuity", copy: "Regional and off-world redundancy supports long-horizon institutional mandates." },
+      sectionEyebrow: "Institutional Platform", sectionTitle: "Custody connects capital, intellectual property, and authority.", sectionCopy: "The network combines regulated banking, protected infrastructure, and continuity planning under Arasaka group governance.",
+      card1: { title: "Protected Settlement", copy: "Verified counterparties, segregated execution, and resilient transaction authority." },
+      card2: { title: "IP Custody", copy: "Control, licensing, and succession safeguards for strategic intellectual property." },
+      card3: { title: "Capital Continuity", copy: "Governance and recovery planning for institutions operating across generations." },
+      mapEyebrow: "Institutional Boundary", mapTitle: "Client-facing assurance with private execution infrastructure.", mapCopy: "Detailed settlement topology and custody controls are disclosed only within qualified institutional review."
+    },
+    perimeterPublic: {
+      back: "Return to products", kicker: "ARASAKA SECURITY SERVICES",
+      title: "A protected environment that moves with the people inside it.",
+      summary: "Autonomous Perimeter Systems combine aerial surveillance, facility protection, protected mobility, and human-authorized response for critical infrastructure and executive operations.",
+      request: "Request a security consultation", caption: "Autonomous surveillance, protected mobility, and response surface.",
+      readout1: { label: "Command model", copy: "Named security officers retain authority over every escalated response." },
+      readout2: { label: "Coverage", copy: "Integrated aerial, terrestrial, facility, and mobility awareness." },
+      readout3: { label: "Availability", copy: "Regional command centers coordinate protection and recovery continuously." },
+      sectionEyebrow: "Protection Portfolio", sectionTitle: "Facilities, routes, and principals protected as one environment.", sectionCopy: "Arasaka integrates autonomous sensing with trained personnel, regional intelligence, and accountable human command.",
+      card1: { title: "Facility Protection", copy: "Persistent surveillance and layered access control for critical sites." },
+      card2: { title: "Protected Mobility", copy: "Route intelligence, convoy awareness, and coordinated executive movement." },
+      card3: { title: "Regional Response", copy: "Human-led escalation, incident command, and continuity restoration." },
+      mapEyebrow: "Security Boundary", mapTitle: "Public safety commitments with restricted tactical implementation.", mapCopy: "Formation logic, response envelopes, and tactical configurations are disclosed only after client qualification."
+    },
     relicSpec: {
       productCta: "Open technical specification",
       back: "Return to Relic dossier",
@@ -2557,44 +2599,44 @@ const translations = {
       }
     },
     hero: {
-      eyebrow: "荒坂株式会社 | Sovereign Security / Autonomous Defense / Capital Systems",
+      eyebrow: "荒坂株式会社 | Security / Banking / Manufacturing / Advanced Systems",
       title: "Securing Sovereign Continuity at Planetary Scale.",
-      text: "Arasaka operates the control layer beneath sovereign capital: neural custody, autonomous protection, synthetic intelligence containment, and city-scale continuity for family offices, states, and systemically important institutions.",
+      text: "Arasaka is a family-guided global group providing security, banking, manufacturing, cybernetics, and advanced systems to institutions shaping the next century.",
       ctaPrimary: "Request Institutional Access",
       ctaSecondary: "View Corporate Systems",
       diagnostics: {
         region: "Core diagnostics",
         aria: "Diagnostic layer",
         mode: {
-          relic: "Relic",
-          blackwall: "Blackwall",
-          ledger: "Ledger",
-          drone: "Drone"
+          relic: "Continuity",
+          blackwall: "SecureNet",
+          ledger: "Custody",
+          drone: "Perimeter"
         },
         detail: {
           relic: {
-            primaryLabel: "RELIC CUSTODY",
-            primaryValue: "98.74%",
-            secondaryLabel: "MIKOSHI GATE",
-            secondaryValue: "COLD"
+            primaryLabel: "CONTINUITY PLATFORM",
+            primaryValue: "AVAILABLE",
+            secondaryLabel: "CLINICAL ASSURANCE",
+            secondaryValue: "ACTIVE"
           },
           blackwall: {
-            primaryLabel: "BLACKWALL EDGE",
-            primaryValue: "SEALED",
-            secondaryLabel: "HOSTILE AI DRIFT",
-            secondaryValue: "0.04%"
+            primaryLabel: "SECURENET",
+            primaryValue: "ONLINE",
+            secondaryLabel: "THREAT RESPONSE",
+            secondaryValue: "READY"
           },
           ledger: {
-            primaryLabel: "BLACK LEDGER",
-            primaryValue: "DARK",
-            secondaryLabel: "SETTLEMENT TRACE",
-            secondaryValue: "0x00"
+            primaryLabel: "CUSTODY NETWORK",
+            primaryValue: "AVAILABLE",
+            secondaryLabel: "SETTLEMENT",
+            secondaryValue: "ACTIVE"
           },
           drone: {
-            primaryLabel: "DRONE COMMAND",
-            primaryValue: "ARMED",
-            secondaryLabel: "HUMAN CHAIN",
-            secondaryValue: "INTACT"
+            primaryLabel: "PERIMETER SYSTEMS",
+            primaryValue: "ONLINE",
+            secondaryLabel: "HUMAN COMMAND",
+            secondaryValue: "VERIFIED"
           }
         }
       }
@@ -2618,32 +2660,32 @@ const translations = {
       aria: "Live corporate status",
       gridAria: "Live systems telemetry",
       eyebrow: "Live Corporate Status",
-      title: "Global control surfaces are online across custody, counterintrusion, capital, and autonomous protection.",
-      text: "Public telemetry is intentionally narrow. Each signal below represents a board-witnessed operating surface with private routing, human authorization, and regional command authority behind it.",
+      title: "Global services remain available across life sciences, network security, institutional custody, and protection.",
+      text: "Public availability reflects regional service readiness. Client operations, infrastructure topology, and active security posture remain confidential.",
       state: "State",
       node: "Node",
       custody: {
-        title: "Neural Custody",
-        text: "Construct storage, succession rehearsal, and Mikoshi witness are maintained under sealed family command.",
-        state: "COLD",
+        title: "Life Sciences Continuity",
+        text: "Clinical cybernetics, neural-interface assurance, and continuity services operate under group medical governance.",
+        state: "AVAILABLE",
         node: "Tokyo Root"
       },
       ice: {
-        title: "Black ICE Mesh",
-        text: "Hostile runner traces, Blackwall-adjacent pressure, and intrusion burn rights are held in witnessed control.",
-        state: "SEALED",
-        node: "Edge Cell"
+        title: "SecureNet Operations",
+        text: "Managed detection, credential protection, and incident response remain active across critical client networks.",
+        state: "ONLINE",
+        node: "Regional SOC"
       },
       ledger: {
-        title: "Black Ledger",
-        text: "Patent leverage, settlement silence, and reputation collateral are routed below public-market visibility.",
-        state: "DARK",
-        node: "Orbital Vault"
+        title: "Institutional Custody",
+        text: "Protected settlement, intellectual-property custody, and capital-continuity services remain available.",
+        state: "ACTIVE",
+        node: "Arasaka Bank"
       },
       protection: {
-        title: "Autonomous Protection",
-        text: "Drone veils, extraction corridors, and perimeter denial remain armed behind accountable human command.",
-        state: "ARMED",
+        title: "Autonomous Perimeter",
+        text: "Facility protection, protected mobility, and regional response remain active under human command.",
+        state: "READY",
         node: "Night City"
       }
     },
@@ -2655,51 +2697,51 @@ const translations = {
       metric1: {
         label: "Protected Asset Surface",
         value: "¥42.7T",
-        text: "Capital, memory, patents, facilities, and executive identity secured under family command."
+        text: "Capital, intellectual property, facilities, and strategic infrastructure secured under group governance."
       },
       metric2: {
         label: "Jurisdictions",
         value: "128",
-        text: "Operating theaters routed through Tokyo root, regional subsidiaries, and orbital cold custody."
+        text: "Operations coordinated through Tokyo headquarters and accountable regional companies."
       },
       metric3: {
-        label: "Autonomous Response Windows",
+        label: "Regional Response Readiness",
         value: "00:18",
-        text: "Human-authorized tactical escalation from tower perimeter to drone corridor."
+        text: "Human-led security coordination from local operations to regional command."
       },
       metric4: {
-        label: "Continuity Mandates",
+        label: "Continuity Programs",
         value: "AA-90",
-        text: "Board-grade neural custody, succession rehearsal, and construct governance under sealed assurance."
+        text: "Long-term governance, succession planning, and institutional resilience programs."
       }
     },
     mandateExchange: {
-      aria: "Sovereign mandate exchange",
-      ledgerAria: "Mandate routing ledger",
-      eyebrow: "Sovereign Mandate Exchange",
-      title: "Qualified authority is routed before any product is disclosed.",
-      text: "Public access resolves into a mandate class, command sponsor, risk posture, and sealed deployment envelope before Arasaka opens a private room.",
+      aria: "Institutional engagement",
+      ledgerAria: "Institutional engagement routes",
+      eyebrow: "Institutional Engagement",
+      title: "Qualified client needs are assessed before solution design begins.",
+      text: "Arasaka regional teams align each engagement with an accountable sponsor, business area, assurance requirement, and consultation path.",
       sponsor: "Sponsor",
-      envelope: "Envelope",
+      envelope: "Service",
       continuity: {
-        title: "Continuity Authority",
-        text: "Founder succession, engram witness, and post-biological command rights routed through Relic and Mikoshi custody.",
-        sponsor: "Family command"
+        title: "Life Sciences & Continuity",
+        text: "Clinical cybernetics, neural interfaces, and continuity requirements assessed under group medical governance.",
+        sponsor: "Client advisory"
       },
       counter: {
-        title: "Counterintrusion Authority",
-        text: "Hostile runner traces, Blackwall-adjacent contact, and burn authorization resolved into human-witnessed theater control.",
-        sponsor: "Netrunner cell"
+        title: "Network Security",
+        text: "Threat containment, identity protection, resilient segmentation, and incident response aligned to client operations.",
+        sponsor: "Security advisory"
       },
       capital: {
-        title: "Capital Authority",
-        text: "Patent leverage, reputation collateral, and founder liquidity routed beneath public market visibility.",
-        sponsor: "Black ledger desk"
+        title: "Institutional Custody",
+        text: "Protected settlement, intellectual-property custody, and capital continuity aligned to institutional governance.",
+        sponsor: "Institutional desk"
       },
       force: {
-        title: "Protection Authority",
-        text: "Drone veils, extraction corridors, and city-grid denial routed through accountable human command.",
-        sponsor: "Tactical director"
+        title: "Protection Services",
+        text: "Facility protection, protected mobility, and regional response designed under accountable human command.",
+        sponsor: "Regional office"
       }
     },
     fieldConsole: {
@@ -3152,92 +3194,92 @@ const translations = {
     },
     subsidiaries: {
       eyebrow: "Operating Companies",
-      title: "The group is structured as a sovereign-grade control stack.",
-      text: "Each operating company carries its own jurisdiction, mandate lane, and assurance route while remaining bound to the Tokyo root.",
+      title: "Specialized companies. One group standard.",
+      text: "Arasaka operating companies combine local expertise with shared technology, capital, governance, and long-term family stewardship.",
       aria: "Arasaka operating company registry",
       jurisdiction: "Jurisdiction",
       mandate: "Mandate",
-      clearance: "Clearance",
+      clearance: "Registry",
       route: "Route",
-      open: "Open registry route",
+      open: "Open company profile",
       security: {
         title: "Arasaka Security K.K.",
-        text: "Executive protection, autonomous response, and theater command for physical assets under hostile pressure.",
+        text: "Corporate security, executive protection, regional response, and critical-infrastructure services.",
         jurisdiction: "Tokyo / Night City",
-        mandate: "Autonomous protection",
-        clearance: "SEC-12",
-        route: "SV-04",
-        href: "services/autonomous-protection/"
+        mandate: "Security services",
+        clearance: "SEC-01",
+        route: "AP-03",
+        href: "solutions/autonomous-perimeter/"
       },
       banking: {
-        title: "Arasaka Capital Systems",
-        text: "Black Ledger custody, founder liquidity, patent gravity, and quiet settlement rails for sovereign counterparties.",
+        title: "Arasaka Bank K.K.",
+        text: "Commercial banking, institutional custody, reconstruction finance, and protected settlement.",
         jurisdiction: "Tokyo / Frankfurt",
         mandate: "Capital continuity",
-        clearance: "BL-00",
-        route: "SV-03",
-        href: "services/black-ledger-mandate/"
+        clearance: "BK-02",
+        route: "IC-02",
+        href: "solutions/institutional-custody/"
       },
       cybernetics: {
-        title: "Arasaka Cybernetics Foundry",
-        text: "Neural ports, implant firmware, combat prosthetics, and identity hardware for sanctioned operators.",
+        title: "Arasaka Cybernetics K.K.",
+        text: "Clinical interfaces, prosthetics, implant firmware, and advanced human-machine systems.",
         jurisdiction: "Osaka / Orbital",
         mandate: "Body substrate",
-        clearance: "CY-19",
-        route: "Foundry",
-        href: "#foundry"
+        clearance: "CY-01",
+        route: "LIFE SCIENCES",
+        href: "products/relic/"
       },
       intelligence: {
-        title: "Arasaka Netrunner Bureau",
-        text: "Black ICE, rogue-machine quarantine, hostile signature markets, and memory-safe counterintrusion cells.",
-        jurisdiction: "Night City / Blackwall Edge",
-        mandate: "Counterintrusion",
-        clearance: "ICE-77",
-        route: "SV-02",
-        href: "services/counterintrusion/"
+        title: "Arasaka Information Systems K.K.",
+        text: "Secure infrastructure, managed network defense, identity protection, and incident assurance.",
+        jurisdiction: "Tokyo / Global",
+        mandate: "Network security",
+        clearance: "SN-01",
+        route: "SECURENET",
+        href: "solutions/securenet/"
       },
       continuity: {
-        title: "Mikoshi Continuity Office",
-        text: "Engram custody, construct partitioning, succession rehearsal, and post-biological governance proofs.",
-        jurisdiction: "Orbital Cold / Tokyo",
-        mandate: "Neural continuity",
-        clearance: "AA-90",
-        route: "AR-RELIC",
+        title: "Arasaka Life Sciences K.K.",
+        text: "Clinical cybernetics, neural-interface assurance, continuity research, and medical governance.",
+        jurisdiction: "Tokyo / Global",
+        mandate: "Life sciences",
+        clearance: "LS-01",
+        route: "CONTINUITY",
         href: "products/relic/"
       },
       foot: "Registry extracts are public-safe summaries. Control ledgers, beneficial counterparties, and deployment maps remain private-room material."
     },
     services: {
       eyebrow: "Services",
-      title: "Deployment teams for sovereign cybernetic operations.",
-      text: "Arasaka services package operators, hardware, counterintelligence, and governance into accountable engagements with measurable response windows.",
+      title: "Integrated teams for high-consequence institutional operations.",
+      text: "Arasaka combines specialist personnel, technology, regional operations, and governance into accountable long-term client engagements.",
       aria: "Arasaka service offerings",
-      path: "Path",
-      window: "Window",
-      route: "Service dossier",
+      path: "Area",
+      window: "Availability",
+      route: "Explore service",
       executive: {
-        title: "Executive Continuity Deployment",
-        text: "Board-level identity custody, succession simulation, and memory escrow for founders whose authority must survive disruption.",
-        path: "Relic / Mikoshi",
-        window: "72-hour seal"
+        title: "Executive Continuity Advisory",
+        text: "Governance, succession planning, neural-interface assurance, and continuity services for critical leadership.",
+        path: "Life Sciences",
+        window: "Regional advisory"
       },
       counter: {
-        title: "Counterintrusion Theater",
-        text: "Netrunner cells, Black ICE quarantine, and human-witnessed burn authority for sovereign networks under active probe.",
-        path: "Black ICE Mesh",
-        window: "0.9ms trap"
+        title: "Managed Network Defense",
+        text: "Adaptive detection, credential protection, resilient segmentation, and human-led incident response.",
+        path: "SecureNet",
+        window: "24/7 managed"
       },
       capital: {
-        title: "Black Ledger Mandate",
-        text: "Private settlement rails, patent gravity mapping, and founder custody structures for capital that must move without spectacle.",
-        path: "Black Ledger",
-        window: "T+0 dark rail"
+        title: "Institutional Capital Advisory",
+        text: "Protected settlement, intellectual-property custody, and capital-continuity planning for complex institutions.",
+        path: "Arasaka Bank",
+        window: "Institutional review"
       },
       protection: {
-        title: "Autonomous Protection Detail",
-        text: "Drone veils, extraction corridors, and city-grid response choreography for principals crossing hostile districts.",
-        path: "Defense Swarm",
-        window: "00:18 response"
+        title: "Executive & Infrastructure Protection",
+        text: "Facility security, protected mobility, regional intelligence, and accountable human-led response.",
+        path: "Security Services",
+        window: "24/7 regional"
       }
     },
     foundry: {
@@ -4718,7 +4760,7 @@ const translations = {
       matrix: {
         relic: { domain: "Engram continuity", surface: "Neural custody", proof: "Archive integrity" },
         mikoshi: { domain: "Construct sovereignty", surface: "Orbital archive", proof: "Partition witness" },
-        ice: { domain: "Counterintrusion", surface: "Black ICE mesh", proof: "Trace vault" },
+        ice: { domain: "Network security", surface: "Managed defense", proof: "Assurance record" },
         ledger: { domain: "Founder capital", surface: "Dark settlement", proof: "Mandate hash" },
         swarm: { domain: "Executive mobility", surface: "Drone veil", proof: "Response window" },
         soulkiller: { domain: "Identity severance", surface: "Blacksite lab", proof: "Custody seal" },
@@ -6111,6 +6153,48 @@ const translations = {
       mapEyebrow: "管轄経路",
       mapTitle: "地域指揮は部門、子会社、製品、保管システム、取締役会権限を結合します。",
       mapCopy: "指揮ノードはオフィスではありません。法的許可、機械権限、人間のクォーラム、運用リスクが単一の実行可能な委任になる場所です。"
+    },
+    secureNet: {
+      back: "製品一覧へ戻る", kicker: "荒坂ネットワークセキュリティ",
+      title: "脅威が事象になる前に適応するセキュリティ。",
+      summary: "SecureNetは、重要ネットワークを運用する機関向けに、適応型対侵入、資格情報隔離、強靭な分割、人間主導の対応を統合します。",
+      request: "セキュリティ相談を申し込む", caption: "SecureNet管理防衛・資格情報保護面。",
+      readout1: { label: "継続保証", copy: "地域警備運用がID、ネットワーク、エンドポイントの整合性を監視します。" },
+      readout2: { label: "対応統治", copy: "指名オペレーターが隔離、上申、復旧の権限を保持します。" },
+      readout3: { label: "配備範囲", copy: "主権、金融、産業、研究環境へ適応するアーキテクチャ。" },
+      sectionEyebrow: "防衛ポートフォリオ", sectionTitle: "ID、ネットワーク、対応を一つの管理セキュリティ基盤へ。", sectionCopy: "SecureNetは、設計、運用、保証、事象指揮を一つの責任ある地域チームで提供します。",
+      card1: { title: "管理防衛", copy: "高影響環境向けの継続検知、封じ込め、復旧。" },
+      card2: { title: "ID保護", copy: "人、機械、自律エージェント向けの資格情報隔離と特権アクセス統制。" },
+      card3: { title: "事象指揮", copy: "管轄をまたぐ人間主導の対応、証拠保全、運用復旧。" },
+      mapEyebrow: "保証境界", mapTitle: "外側に公開保証。内側に制限対抗策。", mapCopy: "技術対抗策仕様と脅威情報は、顧客適格性確認と地域セキュリティ審査後にのみ開示されます。"
+    },
+    custodyPublic: {
+      back: "製品一覧へ戻る", kicker: "荒坂銀行 機関サービス",
+      title: "周囲の市場より長く存続する資本インフラ。",
+      summary: "荒坂銀行は、機関、ファミリーオフィス、主権資本向けに、保護決済、知的財産保管、資本継続性、相手方保証を提供します。",
+      request: "機関相談を申し込む", caption: "機関保管、保護決済、継続性面。",
+      readout1: { label: "保管モデル", copy: "顧客資産と権限鍵を法的・技術的境界で分離します。" },
+      readout2: { label: "決済", copy: "継続的相手方検証を伴う保護機関決済。" },
+      readout3: { label: "継続性", copy: "地域および軌道冗長性が長期機関委任を支えます。" },
+      sectionEyebrow: "機関プラットフォーム", sectionTitle: "保管が資本、知的財産、権限を接続する。", sectionCopy: "荒坂グループ統治の下で、規制銀行、保護インフラ、継続性計画を統合します。",
+      card1: { title: "保護決済", copy: "検証済み相手方、分離執行、強靭な取引権限。" },
+      card2: { title: "知的財産保管", copy: "戦略的知的財産の制御、ライセンス、継承保護。" },
+      card3: { title: "資本継続性", copy: "世代を超えて運営する機関向けの統治・復旧計画。" },
+      mapEyebrow: "機関境界", mapTitle: "顧客向け保証と非公開実行インフラ。", mapCopy: "詳細な決済トポロジーと保管統制は、適格機関審査内でのみ開示されます。"
+    },
+    perimeterPublic: {
+      back: "製品一覧へ戻る", kicker: "荒坂警備サービス",
+      title: "内部の人々と共に移動する保護環境。",
+      summary: "自律境界システムは、重要インフラと役員運用向けに航空監視、施設防護、保護移動、人間承認型対応を統合します。",
+      request: "警備相談を申し込む", caption: "自律監視、保護移動、対応面。",
+      readout1: { label: "指揮モデル", copy: "指名警備責任者が全ての上申対応の権限を保持します。" },
+      readout2: { label: "カバレッジ", copy: "航空、地上、施設、移動を統合した状況認識。" },
+      readout3: { label: "可用性", copy: "地域指揮センターが保護と復旧を継続調整します。" },
+      sectionEyebrow: "防護ポートフォリオ", sectionTitle: "施設、経路、要人を一つの環境として防護する。", sectionCopy: "荒坂は自律センシングを訓練人員、地域情報、責任ある人間指揮と統合します。",
+      card1: { title: "施設防護", copy: "重要拠点向けの持続監視と多層アクセス制御。" },
+      card2: { title: "保護移動", copy: "経路情報、護送認識、調整済み役員移動。" },
+      card3: { title: "地域対応", copy: "人間主導の上申、事象指揮、継続性復旧。" },
+      mapEyebrow: "警備境界", mapTitle: "公開安全コミットメントと制限戦術実装。", mapCopy: "編隊ロジック、対応範囲、戦術構成は顧客適格性確認後にのみ開示されます。"
     },
     relicSpec: {
       productCta: "技術仕様を開く",
@@ -8400,44 +8484,44 @@ const translations = {
       }
     },
     hero: {
-      eyebrow: "荒坂株式会社 | 主権警備 / 自律防衛 / 資本システム",
+      eyebrow: "荒坂株式会社 | 警備 / 銀行 / 製造 / 先端システム",
       title: "惑星規模で主権的継続性を保全する。",
-      text: "荒坂は主権資本の下層にある制御レイヤーを運用します。神経保管、自律防衛、合成知能の封じ込め、都市規模の継続性を、ファミリーオフィス、国家、システム上重要な機関へ提供します。",
+      text: "荒坂は、次の世紀を形づくる機関へ警備、銀行、製造、サイバネティクス、先端システムを提供する一族主導のグローバルグループです。",
       ctaPrimary: "機関アクセスを申請",
       ctaSecondary: "法人システムを見る",
       diagnostics: {
         region: "コア診断",
         aria: "診断レイヤー",
         mode: {
-          relic: "レリック",
-          blackwall: "ブラックウォール",
-          ledger: "台帳",
-          drone: "ドローン"
+          relic: "継続性",
+          blackwall: "SecureNet",
+          ledger: "保管",
+          drone: "境界"
         },
         detail: {
           relic: {
-            primaryLabel: "レリック保管",
-            primaryValue: "98.74%",
-            secondaryLabel: "ミコシゲート",
-            secondaryValue: "冷却"
+            primaryLabel: "継続性プラットフォーム",
+            primaryValue: "利用可能",
+            secondaryLabel: "臨床保証",
+            secondaryValue: "稼働"
           },
           blackwall: {
-            primaryLabel: "ブラックウォール縁",
-            primaryValue: "封鎖",
-            secondaryLabel: "敵対AI偏移",
-            secondaryValue: "0.04%"
+            primaryLabel: "SecureNet",
+            primaryValue: "オンライン",
+            secondaryLabel: "脅威対応",
+            secondaryValue: "準備完了"
           },
           ledger: {
-            primaryLabel: "ブラック台帳",
-            primaryValue: "秘匿",
-            secondaryLabel: "決済痕跡",
-            secondaryValue: "0x00"
+            primaryLabel: "保管ネットワーク",
+            primaryValue: "利用可能",
+            secondaryLabel: "決済",
+            secondaryValue: "稼働"
           },
           drone: {
-            primaryLabel: "ドローン指揮",
-            primaryValue: "武装",
-            secondaryLabel: "人間承認経路",
-            secondaryValue: "正常"
+            primaryLabel: "境界システム",
+            primaryValue: "オンライン",
+            secondaryLabel: "人間指揮",
+            secondaryValue: "検証済み"
           }
         }
       }
@@ -8461,32 +8545,32 @@ const translations = {
       aria: "ライブ法人ステータス",
       gridAria: "ライブシステムテレメトリ",
       eyebrow: "ライブ法人ステータス",
-      title: "保管、対侵入、資本、自律防衛にわたるグローバル制御面は稼働中です。",
-      text: "公開テレメトリは意図的に狭く設計されています。以下の各信号は、非公開経路、人間承認、地域指揮権限を背後に持つ、取締役会立会い済みの運用面を表します。",
+      title: "生命科学、ネットワークセキュリティ、機関保管、警護のグローバルサービスは利用可能です。",
+      text: "公開情報は地域サービスの準備状況を示します。顧客運用、インフラ構成、稼働中の警備態勢は機密です。",
       state: "状態",
       node: "ノード",
       custody: {
-        title: "神経保管",
-        text: "コンストラクト保管、継承リハーサル、ミコシ立会いを、封印済み一族指揮下で維持します。",
-        state: "冷却",
+        title: "生命科学・継続性",
+        text: "臨床サイバネティクス、神経インターフェース保証、継続性サービスをグループ医療統治下で運用します。",
+        state: "利用可能",
         node: "東京ルート"
       },
       ice: {
-        title: "ブラックICE網",
-        text: "敵対ランナー痕跡、ブラックウォール隣接圧力、侵入焼却権限を立会い済み制御内に保持します。",
-        state: "封鎖",
-        node: "エッジセル"
+        title: "SecureNet運用",
+        text: "管理検知、資格情報保護、事象対応が重要顧客ネットワーク全体で稼働しています。",
+        state: "オンライン",
+        node: "地域SOC"
       },
       ledger: {
-        title: "ブラック台帳",
-        text: "特許レバレッジ、決済沈黙、評判担保を公開市場の可視性より下層で経路化します。",
-        state: "秘匿",
-        node: "軌道保管庫"
+        title: "機関保管",
+        text: "保護決済、知的財産保管、資本継続性サービスが利用可能です。",
+        state: "稼働",
+        node: "荒坂銀行"
       },
       protection: {
-        title: "自律防衛",
-        text: "ドローンヴェール、抽出回廊、境界拒否を、説明責任ある人間指揮の背後で武装維持します。",
-        state: "武装",
+        title: "自律境界",
+        text: "施設防護、保護移動、地域対応が人間指揮下で稼働しています。",
+        state: "準備完了",
         node: "ナイトシティ"
       }
     },
@@ -8498,51 +8582,51 @@ const translations = {
       metric1: {
         label: "保護資産面",
         value: "42.7兆円",
-        text: "資本、記憶、特許、施設、役員IDを一族指揮下で保全。"
+        text: "資本、知的財産、施設、戦略インフラをグループ統治下で保全。"
       },
       metric2: {
         label: "管轄地域",
         value: "128",
-        text: "東京ルート、地域子会社、軌道冷却保管を通じて運用地域を経路化。"
+        text: "東京本社と責任ある地域企業を通じて運用を調整。"
       },
       metric3: {
-        label: "自律応答窓",
+        label: "地域対応準備",
         value: "00:18",
-        text: "タワー境界からドローン回廊まで、人間承認の戦術エスカレーション。"
+        text: "現地運用から地域指揮まで、人間主導の警備調整。"
       },
       metric4: {
-        label: "継続性委任",
+        label: "継続性プログラム",
         value: "AA-90",
-        text: "封印済み保証下の取締役会級神経保管、継承リハーサル、コンストラクト統治。"
+        text: "長期統治、継承計画、機関強靭性プログラム。"
       }
     },
     mandateExchange: {
-      aria: "主権委任取引所",
-      ledgerAria: "委任経路台帳",
-      eyebrow: "主権委任取引所",
-      title: "適格な権限は、製品開示の前に経路化されます。",
-      text: "公開アクセスは、荒坂が private room を開く前に、委任分類、指揮スポンサー、リスク姿勢、封印済み配備エンベロープへ解決されます。",
+      aria: "機関エンゲージメント",
+      ledgerAria: "機関相談経路",
+      eyebrow: "機関エンゲージメント",
+      title: "ソリューション設計前に適格顧客の要件を評価します。",
+      text: "荒坂の地域チームが、各案件を責任スポンサー、事業分野、保証要件、相談経路へ整合させます。",
       sponsor: "スポンサー",
-      envelope: "エンベロープ",
+      envelope: "サービス",
       continuity: {
-        title: "継続性権限",
-        text: "創業者継承、エングラム証人、ポスト生体指揮権を、レリックと神輿保管へ経路化。",
-        sponsor: "一族指揮"
+        title: "生命科学・継続性",
+        text: "臨床サイバネティクス、神経インターフェース、継続性要件をグループ医療統治下で評価します。",
+        sponsor: "顧客アドバイザリー"
       },
       counter: {
-        title: "対侵入権限",
-        text: "敵対ランナー痕跡、ブラックウォール隣接接触、焼却承認を、人間証人付きの作戦域制御へ解決。",
-        sponsor: "ネットランナーセル"
+        title: "ネットワークセキュリティ",
+        text: "脅威封じ込め、ID保護、強靭な分割、事象対応を顧客運用へ整合します。",
+        sponsor: "セキュリティ助言"
       },
       capital: {
-        title: "資本権限",
-        text: "特許レバレッジ、評判担保、創業者流動性を、公開市場の可視性の下層へ経路化。",
-        sponsor: "ブラック台帳デスク"
+        title: "機関保管",
+        text: "保護決済、知的財産保管、資本継続性を機関統治へ整合します。",
+        sponsor: "機関デスク"
       },
       force: {
-        title: "保護権限",
-        text: "ドローン遮蔽、抽出回廊、都市網拒否を、説明責任ある人間指揮へ経路化。",
-        sponsor: "戦術責任者"
+        title: "警護サービス",
+        text: "施設防護、保護移動、地域対応を責任ある人間指揮下で設計します。",
+        sponsor: "地域オフィス"
       }
     },
     fieldConsole: {
@@ -8995,92 +9079,92 @@ const translations = {
     },
     subsidiaries: {
       eyebrow: "運用会社",
-      title: "グループは主権級の制御スタックとして構成されています。",
-      text: "各運用会社は独自の管轄、委任レーン、保証経路を持ちながら、東京ルートへ結合されています。",
+      title: "専門企業。一つのグループ基準。",
+      text: "荒坂の事業会社は、地域専門性を共有技術、資本、統治、一族の長期的統轄と統合します。",
       aria: "荒坂運用会社登録簿",
       jurisdiction: "管轄",
       mandate: "委任",
-      clearance: "認証",
+      clearance: "登録",
       route: "経路",
-      open: "登録経路を開く",
+      open: "企業プロフィールを見る",
       security: {
         title: "荒坂警備株式会社",
-        text: "敵対圧力下の物理資産向けに、要人防護、自律応答、戦域指揮を提供します。",
+        text: "企業警備、役員警護、地域対応、重要インフラサービス。",
         jurisdiction: "東京 / ナイトシティ",
-        mandate: "自律防護",
-        clearance: "SEC-12",
-        route: "SV-04",
-        href: "services/autonomous-protection/"
+        mandate: "警備サービス",
+        clearance: "SEC-01",
+        route: "AP-03",
+        href: "solutions/autonomous-perimeter/"
       },
       banking: {
-        title: "荒坂資本システム",
-        text: "主権的相手方のためのブラック台帳保管、創業者流動性、特許重力、静かな決済レール。",
+        title: "荒坂銀行株式会社",
+        text: "商業銀行、機関保管、復興金融、保護決済。",
         jurisdiction: "東京 / フランクフルト",
         mandate: "資本継続",
-        clearance: "BL-00",
-        route: "SV-03",
-        href: "services/black-ledger-mandate/"
+        clearance: "BK-02",
+        route: "IC-02",
+        href: "solutions/institutional-custody/"
       },
       cybernetics: {
-        title: "荒坂サイバネティクス鋳造所",
-        text: "認可オペレーター向けの神経ポート、インプラントファームウェア、戦闘義肢、IDハードウェア。",
+        title: "荒坂サイバネティクス株式会社",
+        text: "臨床インターフェース、義肢、インプラントファームウェア、先端人間機械システム。",
         jurisdiction: "大阪 / 軌道",
         mandate: "身体基層",
-        clearance: "CY-19",
-        route: "鋳造所",
-        href: "#foundry"
+        clearance: "CY-01",
+        route: "生命科学",
+        href: "products/relic/"
       },
       intelligence: {
-        title: "荒坂ネットランナー局",
-        text: "ブラックICE、ローグマシン隔離、敵対署名市場、記憶安全対侵入セルを運用します。",
-        jurisdiction: "ナイトシティ / ブラックウォール端",
-        mandate: "対侵入",
-        clearance: "ICE-77",
-        route: "SV-02",
-        href: "services/counterintrusion/"
+        title: "荒坂情報システム株式会社",
+        text: "セキュアインフラ、管理ネットワーク防衛、ID保護、事象保証。",
+        jurisdiction: "東京 / グローバル",
+        mandate: "ネットワークセキュリティ",
+        clearance: "SN-01",
+        route: "SECURENET",
+        href: "solutions/securenet/"
       },
       continuity: {
-        title: "神輿継続性オフィス",
-        text: "エングラム保管、構成体分割、継承演習、死後統治証明を扱います。",
-        jurisdiction: "軌道冷却 / 東京",
-        mandate: "神経継続",
-        clearance: "AA-90",
-        route: "AR-RELIC",
+        title: "荒坂生命科学株式会社",
+        text: "臨床サイバネティクス、神経インターフェース保証、継続性研究、医療統治。",
+        jurisdiction: "東京 / グローバル",
+        mandate: "生命科学",
+        clearance: "LS-01",
+        route: "継続性",
         href: "products/relic/"
       },
       foot: "登録簿抜粋は公開安全な要約です。制御台帳、実質的相手方、配備地図はプライベートルーム資料として保持されます。"
     },
     services: {
       eyebrow: "サービス",
-      title: "主権的サイバネティック作戦のための配備チーム。",
-      text: "荒坂サービスは、オペレーター、ハードウェア、対情報、統治を、測定可能な応答窓を持つ責任明確なエンゲージメントへ梱包します。",
+      title: "高影響の機関運用を支える統合チーム。",
+      text: "荒坂は専門人材、技術、地域運用、統治を責任ある長期顧客案件へ統合します。",
       aria: "荒坂サービス提供",
-      path: "経路",
-      window: "窓口",
-      route: "サービス記録",
+      path: "分野",
+      window: "提供体制",
+      route: "サービスを見る",
       executive: {
-        title: "役員継続配備",
-        text: "権限が破壊を生き延びる必要がある創業者向けの、取締役会レベルID保管、継承シミュレーション、記憶エスクロー。",
-        path: "レリック / 神輿",
-        window: "72時間封印"
+        title: "役員継続性アドバイザリー",
+        text: "重要リーダー向けの統治、継承計画、神経インターフェース保証、継続性サービス。",
+        path: "生命科学",
+        window: "地域助言"
       },
       counter: {
-        title: "対侵入作戦区",
-        text: "能動探査下の主権ネットワーク向けに、ネットランナーセル、ブラックICE隔離、人間証人付き焼却権限を提供します。",
-        path: "ブラックICEメッシュ",
-        window: "0.9ms 罠"
+        title: "管理ネットワーク防衛",
+        text: "適応型検知、資格情報保護、強靭な分割、人間主導の事象対応。",
+        path: "SecureNet",
+        window: "24時間管理"
       },
       capital: {
-        title: "ブラック台帳委任",
-        text: "見世物にならずに移動すべき資本のための、私的決済レール、特許重力マッピング、創業者保管構造。",
-        path: "ブラック台帳",
-        window: "T+0 暗黒レール"
+        title: "機関資本アドバイザリー",
+        text: "複雑な機関向けの保護決済、知的財産保管、資本継続性計画。",
+        path: "荒坂銀行",
+        window: "機関審査"
       },
       protection: {
-        title: "自律防護ディテール",
-        text: "敵対地区を横断するプリンシパル向けの、ドローンヴェール、脱出回廊、都市網応答の振付。",
-        path: "防衛スウォーム",
-        window: "00:18 応答"
+        title: "役員・インフラ警護",
+        text: "施設警備、保護移動、地域情報、責任ある人間主導の対応。",
+        path: "警備サービス",
+        window: "24時間地域対応"
       }
     },
     foundry: {
@@ -10561,7 +10645,7 @@ const translations = {
       matrix: {
         relic: { domain: "エングラム継続", surface: "神経保管", proof: "アーカイブ完全性" },
         mikoshi: { domain: "コンストラクト主権", surface: "軌道アーカイブ", proof: "分割証人" },
-        ice: { domain: "対侵入", surface: "ブラックICEメッシュ", proof: "追跡保管庫" },
+        ice: { domain: "ネットワークセキュリティ", surface: "管理防衛", proof: "保証記録" },
         ledger: { domain: "創業者資本", surface: "暗黒決済", proof: "委任ハッシュ" },
         swarm: { domain: "役員機動性", surface: "ドローンヴェール", proof: "応答窓" },
         soulkiller: { domain: "身元切断", surface: "ブラックサイト研究室", proof: "保管封印" },

@@ -1,5 +1,9 @@
 # Asset Attribution
 
+## Public solution photography
+
+- `solution-securenet-hero.jpg`, `solution-custody-hero.jpg`, and `solution-perimeter-hero.jpg` are original AI-generated concept images created for this project with OpenAI image generation. They contain no third-party game screenshots or source imagery.
+
 - `cyberpunk2077-showdown-press.png` - Cyberpunk 2077 official press screenshot from the CD PROJEKT RED Press Center. Source: https://press.cdprojektred.com/en/224/797
 - `cyberpunk2077-afterlife-press.png` - Cyberpunk 2077 official press screenshot thumbnail from the CD PROJEKT RED Press Center. Source: https://press.cdprojektred.com/en/224/797
 - `product-*-catalog.png` and `service-*-catalog.png` - original generated bitmap catalog/spec plates made for this design-fiction web concept. Some plates composite the credited Cyberpunk 2077 press screenshots above; others composite original generated site imagery.
