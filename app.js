@@ -10,7 +10,7 @@ const translations = {
       products: "Products",
       technology: "Innovation",
       opsArchive: "Archive",
-      watchfloor: "Watchfloor",
+      watchfloor: "Operations",
       board: "Governance",
       perimeter: "Perimeter",
       foundry: "Foundry",
@@ -1528,52 +1528,52 @@ const translations = {
       mapCopy: "The casefile turns reputation mythology into enterprise finance architecture: blind settlement, mandate escrow, collateral custody, and governed disclosure."
     },
     opsWatch: {
-      back: "Return to operations",
-      kicker: "NIGHT CITY WATCHFLOOR",
-      title: "Every mandate receives a desk before it becomes a deployment.",
-      summary: "A live command surface for continuity, counterintrusion, capital custody, and autonomous protection mandates before private systems are released into Night City operating theaters.",
-      openContinuity: "Open continuity service",
-      openTech: "Open technology library",
-      visualCaption: "Night City regional security operations center.",
+      back: "Return to corporate home",
+      kicker: "ARASAKA GLOBAL OPERATIONS",
+      title: "Built for institutions that cannot stop.",
+      summary: "Arasaka coordinates security, network assurance, institutional services, and operational resilience through accountable regional teams and a shared global service model.",
+      openContinuity: "Contact operations",
+      openTech: "Global presence",
+      visualCaption: "Night City regional operations center.",
       readouts: {
         desks: {
-          label: "Mandate desks",
-          copy: "Continuity, ICE, capital, and protection desks assigned before activation."
+          label: "Service availability",
+          copy: "Regional teams coordinate critical service, escalation, and continuity support at all times."
         },
         response: {
-          label: "Response window",
-          copy: "Median first theater response from signed authorization to command acknowledgment."
+          label: "Operating model",
+          copy: "Security, technology, financial services, and infrastructure expertise operate through one accountable model."
         },
         coverage: {
-          label: "District coverage",
-          copy: "Night City corporate corridors covered by active telemetry, patrol, and custody routing."
+          label: "Client access",
+          copy: "Local leadership connects clients to the capabilities and standards of the global Arasaka group."
         }
       },
-      deskEyebrow: "Operational Desks",
-      deskTitle: "Theater command is split by proof object.",
-      deskCopy: "Each desk owns a different evidence trail: construct hash, quarantine receipt, mandate seal, or exclusion-map vote. The watchfloor exists so those trails converge before escalation.",
-      openDesk: "Open desk route",
+      deskEyebrow: "Operating Capabilities",
+      deskTitle: "Specialized teams. One standard of responsibility.",
+      deskCopy: "Arasaka operations integrate people, systems, facilities, and regional leadership around the continuity and protection of each client institution.",
+      openDesk: "Explore capability",
       desks: {
         continuity: {
-          title: "Continuity Desk",
-          copy: "Board quorum, Relic custody, successor authority, and Mikoshi witness paths are held in one escalation surface."
+          title: "Integrated Security Operations",
+          copy: "Protective intelligence, site security, autonomous support, and incident coordination delivered through accountable regional leadership."
         },
         ice: {
-          title: "Counterintrusion Desk",
-          copy: "Blackwall-adjacent signatures, hostile route burn, and quarantine receipts route through human burn authority."
+          title: "Network Assurance",
+          copy: "Continuous identity, network, and endpoint assurance with human-led response for critical institutional environments."
         },
         capital: {
-          title: "Capital Desk",
-          copy: "Blind settlement, collateral lock, and disclosure switches are watched before private capital moves."
+          title: "Institutional Operations",
+          copy: "Protected settlement, custody, records, and cross-border coordination for financial institutions and multinational enterprises."
         },
         protection: {
-          title: "Protection Desk",
-          copy: "Drone veils, exclusion-map votes, and convoy corridors remain bound to named escalation officers."
+          title: "Operational Resilience",
+          copy: "Continuity planning, crisis coordination, infrastructure support, and recovery programs for long-lived institutions."
         }
       },
-      mapEyebrow: "Theater Routing",
-      mapTitle: "The watchfloor routes incidents into services, products, and technical doctrine.",
-      mapCopy: "Service teams receive the mandate. Product systems hold the control surface. Technical dossiers define the proof object and failure boundary."
+      mapEyebrow: "Global Service Model",
+      mapTitle: "Regional responsibility connected to group-wide capability.",
+      mapCopy: "Clients work with regional teams that coordinate specialized divisions, technology platforms, and institutional resources across the Arasaka group."
     },
     governanceDocket: {
       back: "Return to corporate home",
@@ -5896,7 +5896,7 @@ const translations = {
       products: "製品群",
       technology: "研究開発",
       opsArchive: "記録庫",
-      watchfloor: "監視室",
+      watchfloor: "オペレーション",
       board: "ガバナンス",
       perimeter: "境界",
       foundry: "鋳造所",
@@ -7414,52 +7414,52 @@ const translations = {
       mapCopy: "ケースファイルは評判神話を企業金融アーキテクチャへ変換します。盲目決済、委任エスクロー、担保保管、統治済み開示です。"
     },
     opsWatch: {
-      back: "運用へ戻る",
-      kicker: "ナイトシティ監視室",
-      title: "すべての委任は配備になる前にデスクを受け取る。",
-      summary: "継続、対侵入、資本保管、自律警護の委任を、私的システムがナイトシティ運用劇場へ解放される前に保持するライブ指揮面。",
-      openContinuity: "継続サービスを開く",
-      openTech: "技術ライブラリを開く",
-      visualCaption: "ナイトシティ地域警備運用センター。",
+      back: "企業ホームへ戻る",
+      kicker: "荒坂グローバルオペレーション",
+      title: "止まることのできない機関のために。",
+      summary: "荒坂は、責任ある地域チームと共通のグローバルサービスモデルを通じて、警備、ネットワーク保証、機関サービス、運用強靭性を調整します。",
+      openContinuity: "オペレーションへ連絡",
+      openTech: "グローバル拠点",
+      visualCaption: "ナイトシティ地域オペレーションセンター。",
       readouts: {
         desks: {
-          label: "委任デスク",
-          copy: "継続、ICE、資本、警護デスクは起動前に割り当てられます。"
+          label: "サービス提供",
+          copy: "地域チームが重要サービス、エスカレーション、継続性支援を常時調整します。"
         },
         response: {
-          label: "応答窓口",
-          copy: "署名済み承認から指揮確認までの初回劇場応答中央値。"
+          label: "運用モデル",
+          copy: "警備、技術、金融サービス、インフラの専門性を一つの責任あるモデルで運用します。"
         },
         coverage: {
-          label: "地区カバレッジ",
-          copy: "稼働テレメトリー、巡回、保管ルーティングで覆われるナイトシティ企業回廊。"
+          label: "顧客アクセス",
+          copy: "現地リーダーが顧客を荒坂グループ全体の能力と基準へ接続します。"
         }
       },
-      deskEyebrow: "運用デスク",
-      deskTitle: "劇場指揮は証跡オブジェクト別に分割されます。",
-      deskCopy: "各デスクは異なる証跡を所有します。構成体ハッシュ、隔離レシート、委任印、排除地図投票。監視室はエスカレーション前にそれらを収束させます。",
-      openDesk: "デスク経路を開く",
+      deskEyebrow: "運用能力",
+      deskTitle: "専門チーム。一つの責任基準。",
+      deskCopy: "荒坂オペレーションは、各顧客機関の継続と保護を中心に、人材、システム、施設、地域リーダーシップを統合します。",
+      openDesk: "能力を見る",
       desks: {
         continuity: {
-          title: "継続デスク",
-          copy: "取締役会クォーラム、Relic保管、継承者権限、神輿立会経路を単一エスカレーション面に保持します。"
+          title: "統合警備オペレーション",
+          copy: "保護インテリジェンス、施設警備、自律支援、事象調整を、責任ある地域リーダーシップを通じて提供します。"
         },
         ice: {
-          title: "対侵入デスク",
-          copy: "ブラックウォール隣接署名、敵対経路焼却、隔離レシートは人間の焼却権限を経由します。"
+          title: "ネットワーク保証",
+          copy: "重要な機関環境向けに、ID、ネットワーク、エンドポイントの継続保証と人間主導の対応を提供します。"
         },
         capital: {
-          title: "資本デスク",
-          copy: "盲目決済、担保ロック、開示スイッチは私的資本が移動する前に監視されます。"
+          title: "機関オペレーション",
+          copy: "金融機関と多国籍企業向けの保護決済、保管、記録、越境調整。"
         },
         protection: {
-          title: "警護デスク",
-          copy: "ドローン遮蔽、排除地図投票、護送回廊は指名済みエスカレーション責任者へ結合されたままです。"
+          title: "運用強靭性",
+          copy: "長期存続する機関向けの継続計画、危機調整、インフラ支援、復旧プログラム。"
         }
       },
-      mapEyebrow: "劇場ルーティング",
-      mapTitle: "監視室は事象をサービス、製品、技術ドクトリンへルーティングします。",
-      mapCopy: "サービスチームが委任を受け取り、製品システムが制御面を保持し、技術記録が証跡オブジェクトと障害境界を定義します。"
+      mapEyebrow: "グローバルサービスモデル",
+      mapTitle: "地域責任をグループ全体の能力へ接続。",
+      mapCopy: "顧客は、荒坂グループ全体の専門部門、技術プラットフォーム、機関資源を調整する地域チームと連携します。"
     },
     governanceDocket: {
       back: "企業ホームへ戻る",
