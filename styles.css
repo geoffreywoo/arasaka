@@ -102,6 +102,11 @@ body.has-product-page {
   display: none;
 }
 
+.public-homepage .public-restricted,
+.public-homepage .protocol-api {
+  display: none;
+}
+
 [data-scramble-lock] {
   display: inline-block;
   text-rendering: geometricPrecision;

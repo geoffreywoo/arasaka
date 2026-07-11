@@ -777,7 +777,7 @@ const translations = {
       back: "Return to Black Ledger dossier",
       kicker: "BL-00 / CUSTODY SPECIFICATION",
       title: "Capital is quietest when custody becomes infrastructure.",
-      summary: "Black Ledger is specified as a private capital custody system: blind settlement rails, patent collateral maps, mandate escrow, and board-readable liquidity proofs for founders, sovereigns, and controlled shells.",
+      summary: "Black Ledger is specified as a private capital custody system: blind settlement rails, patent collateral maps, mandate escrow, and board-readable liquidity proofs for founders, sovereigns, and regulated holding entities.",
       openRail: "Open capital custody rail",
       openService: "Open mandate service",
       visualCaption: "Black Ledger institutional custody and settlement surface.",
@@ -4920,16 +4920,16 @@ const translations = {
           text: "Private construct vaulting, memory partition control, and simulation chambers for post-body governance."
         },
         ice: {
-          title: "Black ICE Mesh",
-          text: "Counterintrusion membranes, hostile netrunner burn logic, and Blackwall-adjacent quarantine for sovereign networks."
+          title: "SecureNet Defense Mesh",
+          text: "Adaptive counterintrusion, credential isolation, and managed threat containment for sovereign networks."
         },
         ledger: {
-          title: "Black Ledger Custody",
-          text: "Dark settlement, patent gravity, and capital continuity rails for founders, family offices, and sovereign pools."
+          title: "Institutional Custody Network",
+          text: "Protected settlement, intellectual-property custody, and capital continuity for institutions, family offices, and sovereign pools."
         },
         swarm: {
-          title: "Autonomous Defense Swarm",
-          text: "Drone veils, extraction corridors, and human-authorized kinetic response for city-scale executive protection."
+          title: "Autonomous Perimeter Systems",
+          text: "Aerial surveillance, protected mobility corridors, and human-authorized response for critical facilities and executive protection."
         },
         soulkiller: {
           title: "Soulkiller Redaction Lab",
@@ -6616,7 +6616,7 @@ const translations = {
       back: "Black Ledgerドシエへ戻る",
       kicker: "BL-00 / 保管仕様",
       title: "資本は、保管がインフラになるとき最も静かです。",
-      summary: "Black Ledgerは私的資本保管システムとして仕様化されます。盲目決済レール、特許担保マップ、委任エスクロー、創業者、主権者、制御済みシェル向けの取締役会可読流動性証明です。",
+      summary: "Black Ledgerは私的資本保管システムとして仕様化されます。盲目決済レール、特許担保マップ、委任エスクロー、創業者、主権者、規制対象持株事業体向けの取締役会可読流動性証明です。",
       openRail: "資本保管レールを開く",
       openService: "委任サービスを開く",
       visualCaption: "Black Ledger機関保管・決済面。",
@@ -10759,16 +10759,16 @@ const translations = {
           text: "身体後の統治に向けた、私的コンストラクト保管、記憶パーティション制御、シミュレーション室。"
         },
         ice: {
-          title: "ブラックICEメッシュ",
-          text: "主権ネットワーク向けの、対侵入膜、敵対ネットランナー焼却ロジック、ブラックウォール隣接隔離。"
+          title: "SecureNet防衛メッシュ",
+          text: "主権ネットワーク向けの適応型対侵入、資格情報隔離、管理型脅威封じ込め。"
         },
         ledger: {
-          title: "ブラック台帳保管",
-          text: "創業者、ファミリーオフィス、主権資本プールのための、暗黒決済、特許重力、資本継続レール。"
+          title: "機関保管ネットワーク",
+          text: "機関、ファミリーオフィス、主権資本プール向けの保護決済、知的財産保管、資本継続。"
         },
         swarm: {
-          title: "自律防衛スウォーム",
-          text: "都市規模の役員保護に向けた、ドローンヴェール、脱出回廊、人間承認型の物理即応。"
+          title: "自律境界システム",
+          text: "重要施設と役員警護向けの航空監視、保護移動回廊、人間承認型応答。"
         },
         soulkiller: {
           title: "ソウルキラー秘匿研究室",
