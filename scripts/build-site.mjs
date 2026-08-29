@@ -14,6 +14,19 @@ const products = [
     summary: "Governed capture, custody, and continuity planning for leadership knowledge and institutional memory.",
     summaryJa: "経営知識と組織記憶のための、統治された取得・保管・継承計画。",
     hero: "assets/product-relic-hero-v2.jpg",
+    operationImage: "assets/product-relic-operation-v1.jpg",
+    operationAlt: "Relic continuity chamber in a private Tokyo installation",
+    operationAltJa: "東京のプライベート施設に設置された Relic コンティニュイティ・チェンバー",
+    operationHeadline: "A private continuity environment, installed around the institution.",
+    operationHeadlineJa: "組織のために構築される、プライベートな継承環境。",
+    operationCopy: "Relic is deployed as a dedicated environment with separate capture, validation, and custody zones. Client-appointed authorities govern every transfer, release, and recovery event.",
+    operationCopyJa: "Relic は、取得、検証、カストディを分離した専用環境として導入されます。顧客が指名した権限者が、すべての転送、解放、復旧を統治します。",
+    operationMetrics: [
+      ["Capture session", "6–12 hr", "取得セッション"],
+      ["Validation cycles", "03", "検証サイクル"],
+      ["Archive replicas", "03", "アーカイブ複製"],
+      ["Recovery objective", "< 90 min", "復旧目標"]
+    ],
     accent: "red",
     specs: [
       ["Archive integrity", "99.9994%", "アーカイブ完全性"],
@@ -58,6 +71,19 @@ const products = [
     summary: "Adaptive network inspection, identity protection, and human-led incident command for critical environments.",
     summaryJa: "重要環境のための適応型ネットワーク検査、ID保護、人間主導のインシデント指揮。",
     hero: "assets/product-securenet-appliance-v2.jpg",
+    operationImage: "assets/product-securenet-operation-v1.jpg",
+    operationAlt: "SecureNet regional command center and defense mesh appliances",
+    operationAltJa: "SecureNet 地域コマンドセンターとディフェンス・メッシュ機器",
+    operationHeadline: "Defense becomes an operating capability, not a collection of alerts.",
+    operationHeadlineJa: "防御を、アラートの集合ではなく運用能力へ。",
+    operationCopy: "SecureNet binds inspection hardware, identity policy, evidence retention, and named regional command into one response environment. It is installed segment by segment, then operated continuously.",
+    operationCopyJa: "SecureNet は、検査ハードウェア、ID方針、証拠保持、指名された地域指揮を一つの対応環境に統合します。セグメント単位で導入し、その後は継続的に運用します。",
+    operationMetrics: [
+      ["Protected segments", "12K+", "保護セグメント"],
+      ["Correlation zones", "08", "相関ゾーン"],
+      ["Evidence retention", "7 years", "証拠保持"],
+      ["Escalation SLA", "< 4 min", "エスカレーション SLA"]
+    ],
     accent: "cyan",
     specs: [
       ["Inspection latency", "0.8 ms", "検査遅延"],
@@ -102,6 +128,19 @@ const products = [
     summary: "Protected custody and settlement infrastructure for capital, intellectual property, and sovereign counterparties.",
     summaryJa: "資本、知的財産、主権カウンターパーティーのための保護された保管・決済インフラ。",
     hero: "assets/product-custody-core-v2.jpg",
+    operationImage: "assets/product-custody-operation-v1.jpg",
+    operationAlt: "Institutional custody modules crossing a controlled settlement threshold",
+    operationAltJa: "管理された決済境界を通過する機関向けカストディ・モジュール",
+    operationHeadline: "Every movement crosses a governed threshold.",
+    operationHeadlineJa: "すべての移動が、統治された境界を通過する。",
+    operationCopy: "Custody sites separate intake, holding, settlement, and disclosure into physically and cryptographically distinct zones. Material movement requires a defined quorum and produces a permanent receipt.",
+    operationCopyJa: "カストディ施設では、受入、保管、決済、開示を物理的かつ暗号学的に分離します。重要な移動には所定の承認定足数が必要で、恒久的な受領記録が生成されます。",
+    operationMetrics: [
+      ["Custody cells", "256 / site", "カストディ・セル"],
+      ["Approval quorum", "2 of 3", "承認定足数"],
+      ["Receipt finality", "< 4 s", "受領確定"],
+      ["Control attestation", "Annual", "管理証明"]
+    ],
     accent: "gold",
     specs: [
       ["Settlement", "T+0", "決済"],
@@ -146,6 +185,19 @@ const products = [
     summary: "Sensor fusion, coordinated response, and human-authorized protection for facilities and mobility corridors.",
     summaryJa: "施設と移動経路のためのセンサー融合、協調対応、人間承認型防護。",
     hero: "assets/product-perimeter-sentinel-v2.jpg",
+    operationImage: "assets/product-perimeter-operation-v1.jpg",
+    operationAlt: "Autonomous perimeter units operating under human command at a Tokyo campus",
+    operationAltJa: "東京のキャンパスで人間の指揮下にあるオートノマス・ペリメーター・ユニット",
+    operationHeadline: "A protected perimeter that adapts without surrendering command.",
+    operationHeadlineJa: "指揮権を手放さずに適応する、防護ペリメーター。",
+    operationCopy: "Perimeter deployments combine a centimeter-scale site model, distributed sensing, and coordinated ground and aerial units. Named operators retain direct override and authorize every consequential action.",
+    operationCopyJa: "ペリメーター導入では、センチメートル精度のサイトモデル、分散センシング、地上・航空ユニットの協調を統合します。指名オペレーターが直接オーバーライドを保持し、すべての重要な行動を承認します。",
+    operationMetrics: [
+      ["Sensor channels", "18 / unit", "センサー・チャンネル"],
+      ["Site-model resolution", "5 cm", "サイトモデル解像度"],
+      ["Command latency", "< 250 ms", "指揮遅延"],
+      ["Override path", "Direct", "オーバーライド経路"]
+    ],
     accent: "lime",
     specs: [
       ["Response envelope", "18 s", "応答時間"],
@@ -282,6 +334,17 @@ function productCard(product, root, featured = false) {
     </a>`;
 }
 
+function operationTile(product, root) {
+  return `<a class="operation-tile product-${product.accent}" href="${root}products/${product.slug}/">
+      <figure><img src="${root}${product.operationImage}" alt="${escapeHtml(product.operationAlt)}" loading="lazy"></figure>
+      <div class="operation-tile-copy">
+        <span data-scramble>${product.code}</span>
+        <div><strong data-ja="${escapeHtml(product.nameJa)}">${product.name}</strong><small data-ja="導入環境">Installed environment</small></div>
+        <span aria-hidden="true">↗</span>
+      </div>
+    </a>`;
+}
+
 function documentShell({ root, active, page, title, titleJa, description, canonical, image, body }) {
   return `<!doctype html>
 <html lang="en" data-language="en">
@@ -337,9 +400,9 @@ function homePage() {
       <section class="home-hero" style="--hero-image: url('${featured.hero}')">
         <div class="home-hero-shade"></div>
         <div class="shell home-hero-content">
-          ${translated("p", "Arasaka integrated systems", "荒坂統合システム", "eyebrow")}
-          ${translated("h1", "Infrastructure for institutions built to endure.", "永続する組織のためのインフラストラクチャ。")}
-          ${translated("p", "Arasaka unifies continuity, network security, strategic custody, and protective autonomy under one accountable operating architecture.", "荒坂は、コンティニュイティ、ネットワーク・セキュリティ、戦略資産カストディ、防護オートノミーを、一つの説明責任ある運用アーキテクチャに統合します。", "hero-summary")}
+          ${translated("p", "Arasaka Corporation / Integrated systems", "荒坂株式会社 / 統合システム", "eyebrow")}
+          ${translated("h1", "Critical infrastructure for institutions built to endure.", "永続する組織のための、重要インフラストラクチャ。")}
+          ${translated("p", "Across continuity, network defense, strategic custody, and protective autonomy, Arasaka designs, manufactures, and operates the systems institutions entrust with their future.", "コンティニュイティ、ネットワーク防御、戦略資産カストディ、防護オートノミーにおいて、荒坂は組織が未来を託すシステムを設計、製造、運用します。", "hero-summary")}
           <div class="hero-actions">
             <a class="button button-primary" href="products/"><span data-ja="製品ポートフォリオ">Explore products</span><span aria-hidden="true">↗</span></a>
             <a class="button button-ghost" href="contact/"><span data-ja="導入相談">Discuss deployment</span><span aria-hidden="true">↗</span></a>
@@ -355,9 +418,9 @@ function homePage() {
       <section class="proof-strip" aria-label="Corporate profile" data-aria-ja="企業概要">
         <div class="shell proof-grid">
           <div><strong>1915</strong><span data-ja="東京で創業">Founded in Tokyo</span></div>
-          <div><strong>04</strong><span data-ja="統合プラットフォーム">Integrated platforms</span></div>
-          <div><strong>24 / 7</strong><span data-ja="地域運用">Regional operations</span></div>
-          <div><strong>PRIVATE</strong><span data-ja="長期的経営">Long-horizon stewardship</span></div>
+          <div><strong>US$3.2T</strong><span data-ja="保護委任資産">Assets under protected mandate</span></div>
+          <div><strong>42</strong><span data-ja="事業展開市場">Markets served</span></div>
+          <div><strong>24 / 7</strong><span data-ja="地域コマンド">Regional command</span></div>
         </div>
       </section>
       <section class="section section-light" id="products">
@@ -369,6 +432,15 @@ function homePage() {
           <div class="product-grid">
             ${products.map((product, index) => productCard(product, root, index === 0)).join("")}
           </div>
+        </div>
+      </section>
+      <section class="section operations-showcase">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div>${translated("p", "Operational environments", "運用環境", "eyebrow")}${translated("h2", "Engineered as products. Delivered as accountable systems.", "製品として設計し、説明責任あるシステムとして提供。")}</div>
+            ${translated("p", "Every installation combines manufactured hardware, control software, protected facilities, and named operating teams inside one governed boundary.", "すべての導入で、製造ハードウェア、制御ソフトウェア、保護施設、指名された運用チームを一つの統治境界に統合します。", "section-intro")}
+          </div>
+          <div class="operation-gallery">${products.map((product) => operationTile(product, root)).join("")}</div>
         </div>
       </section>
       <section class="architecture-band">
@@ -443,7 +515,7 @@ ${cta(root)}`;
 function productsPage() {
   const root = "../";
   const body = `
-${pageHero({root, eyebrow: "Product portfolio", eyebrowJa: "製品ポートフォリオ", title: "Four systems. One operating architecture.", titleJa: "4つのシステム。1つの運用アーキテクチャ。", summary: "Arasaka platforms combine manufactured systems, software control, service operations, and accountable governance for institutions with long time horizons.", summaryJa: "荒坂プラットフォームは、長期的視野を持つ機関向けに、製造システム、ソフトウェア制御、サービス運用、説明責任あるガバナンスを統合します。", image: products[1].hero})}
+${pageHero({root, eyebrow: "Product portfolio", eyebrowJa: "製品ポートフォリオ", title: "Four systems. One operating architecture.", titleJa: "4つのシステム。1つの運用アーキテクチャ。", summary: "Arasaka designs, manufactures, and operates a focused portfolio for continuity, defense, custody, and protective autonomy, unified by one institutional control architecture.", summaryJa: "荒坂は、コンティニュイティ、防御、カストディ、防護オートノミーに集中したポートフォリオを設計、製造、運用し、一つの機関統制アーキテクチャで統合します。", image: products[1].hero})}
       <section class="section section-light">
         <div class="shell">
           <div class="section-heading split-heading"><div>${translated("p", "Flagship systems", "フラッグシップ・システム", "eyebrow")}${translated("h2", "A focused portfolio for institutional control.", "機関統制のための集中ポートフォリオ。")}</div>${translated("p", "Each product has a defined job, clear operating boundary, and deployment path. Together they form an integrated institutional stack.", "各製品は明確な役割、運用境界、導入経路を持ちます。組み合わせることで統合機関スタックを形成します。", "section-intro")}</div>
@@ -485,6 +557,20 @@ ${pageHero({root, eyebrow: product.category, eyebrowJa: product.categoryJa, titl
         </div>
         <div class="shell capability-grid">${product.capabilities.map(([title, copy, titleJa, copyJa], index) => `<article><span>0${index + 1}</span><h3 data-ja="${escapeHtml(titleJa)}">${title}</h3><p data-ja="${escapeHtml(copyJa)}">${copy}</p></article>`).join("")}</div>
       </section>
+      <section class="product-operation product-${product.accent}">
+        <div class="shell product-operation-layout">
+          <figure>
+            <img src="${root}${product.operationImage}" alt="${escapeHtml(product.operationAlt)}" data-alt-ja="${escapeHtml(product.operationAltJa)}" loading="lazy">
+            <figcaption><span data-scramble>${product.code}/OPS</span><span data-ja="導入環境">Installed environment</span></figcaption>
+          </figure>
+          <div class="product-operation-copy">
+            ${translated("p", "System in operation", "稼働中のシステム", "eyebrow")}
+            ${translated("h2", product.operationHeadline, product.operationHeadlineJa)}
+            ${translated("p", product.operationCopy, product.operationCopyJa, "operation-intro")}
+            <dl class="operation-metrics">${product.operationMetrics.map(([label, value, labelJa]) => `<div><dt data-ja="${escapeHtml(labelJa)}">${label}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>
+          </div>
+        </div>
+      </section>
       <section class="section product-architecture">
         <div class="shell">
           <div class="section-heading split-heading"><div>${translated("p", "System architecture", "システム・アーキテクチャ", "eyebrow")}${translated("h2", "A complete operating environment.", "完全な運用環境。")}</div>${translated("p", "Hardware, software, custody, and governance are designed as one product boundary.", "ハードウェア、ソフトウェア、カストディ、ガバナンスを一つの製品境界として設計します。", "section-intro")}</div>
@@ -511,10 +597,10 @@ ${cta(root, `Evaluate ${product.name} for your institution.`, `${product.nameJa}
 function industriesPage() {
   const root = "../";
   const industries = [
-    ["public-institutions", "Public institutions", "公共機関", "Sovereign operations require systems that remain accountable through crisis, transition, and long operating horizons.", "主権運用には、危機、移行、長期運用を通じて説明責任を維持するシステムが必要です。", ["Relic", "SecureNet", "Perimeter"], products[3].hero],
-    ["financial-services", "Financial services", "金融サービス", "Protect strategic assets, privileged identities, and settlement authority without sacrificing speed or proof.", "速度や証明を犠牲にせず、戦略資産、特権ID、決済権限を保護します。", ["Custody", "SecureNet"], products[2].hero],
-    ["advanced-industry", "Advanced industry", "先端産業", "Secure manufacturing, research campuses, and critical infrastructure across physical and digital boundaries.", "物理・デジタル境界をまたいで、製造、研究キャンパス、重要インフラを保護します。", ["SecureNet", "Perimeter"], products[1].hero],
-    ["life-sciences", "Life sciences", "ライフサイエンス", "Preserve institutional knowledge, protect confidential research, and plan continuity before key transitions.", "組織知識を保全し、機密研究を守り、重要な移行前にコンティニュイティを計画します。", ["Relic", "Custody"], products[0].hero]
+    ["public-institutions", "Public institutions", "公共機関", "Sovereign operations require systems that remain accountable through crisis, transition, and long operating horizons.", "主権運用には、危機、移行、長期運用を通じて説明責任を維持するシステムが必要です。", ["Relic", "SecureNet", "Perimeter"], products[3].operationImage],
+    ["financial-services", "Financial services", "金融サービス", "Protect strategic assets, privileged identities, and settlement authority without sacrificing speed or proof.", "速度や証明を犠牲にせず、戦略資産、特権ID、決済権限を保護します。", ["Custody", "SecureNet"], products[2].operationImage],
+    ["advanced-industry", "Advanced industry", "先端産業", "Secure manufacturing, research campuses, and critical infrastructure across physical and digital boundaries.", "物理・デジタル境界をまたいで、製造、研究キャンパス、重要インフラを保護します。", ["SecureNet", "Perimeter"], products[1].operationImage],
+    ["life-sciences", "Life sciences", "ライフサイエンス", "Preserve institutional knowledge, protect confidential research, and plan continuity before key transitions.", "組織知識を保全し、機密研究を守り、重要な移行前にコンティニュイティを計画します。", ["Relic", "Custody"], products[0].operationImage]
   ];
   const body = `
 ${pageHero({root, eyebrow: "Industries", eyebrowJa: "産業", title: "Systems for environments where failure compounds.", titleJa: "失敗が連鎖する環境のためのシステム。", summary: "Arasaka products are designed for institutions whose security, authority, assets, and knowledge must remain operational through disruption.", summaryJa: "荒坂製品は、混乱時にもセキュリティ、権限、資産、知識を運用し続ける必要がある機関向けに設計されています。", image: "assets/security-operations.jpg"})}
@@ -545,8 +631,8 @@ ${cta(root, "Move research into a governed deployment.", "研究を統治され�
 function companyPage() {
   const root = "../";
   const body = `
-${pageHero({root, eyebrow: "Arasaka Corporation", eyebrowJa: "荒坂株式会社", title: "Long-horizon stewardship. Accountable regional operation.", titleJa: "長期的統括。説明責任ある地域運用。", summary: "Founded in Tokyo in 1915, Arasaka operates through specialized product groups, regional companies, and shared standards for governance and assurance.", summaryJa: "1915年に東京で創業した荒坂は、専門製品グループ、地域会社、共通のガバナンス・保証基準を通じて事業を展開しています。", image: "assets/hero-headquarters.jpg"})}
-      <section class="section section-light company-intro"><div class="shell two-column-intro"><div>${translated("p", "Company", "企業情報", "eyebrow")}${translated("h2", "A private group organized around institutional systems.", "機関システムを中心に組織された非公開企業グループ。")}</div>${translated("p", "Arasaka combines long-term ownership with specialized operating companies. Group standards govern identity, authority, evidence, safety, and service quality while regional teams remain accountable for client outcomes.", "荒坂は長期保有と専門事業会社を組み合わせています。グループ基準がID、権限、証拠、安全、サービス品質を統治し、地域チームが顧客成果に責任を持ちます。", "lead-copy")}</div></section>
+${pageHero({root, eyebrow: "Arasaka Corporation", eyebrowJa: "荒坂株式会社", title: "Long-horizon stewardship. Accountable regional operation.", titleJa: "長期的統括。説明責任ある地域運用。", summary: "Founded in Tokyo in 1915, Arasaka allocates long-horizon capital across specialized product groups, 42 markets, and shared standards for governance and assurance.", summaryJa: "1915年に東京で創業した荒坂は、専門製品グループ、42市場、共通のガバナンス・保証基準に長期資本を配分しています。", image: "assets/hero-headquarters.jpg"})}
+      <section class="section section-light company-intro"><div class="shell two-column-intro"><div>${translated("p", "Company", "企業情報", "eyebrow")}${translated("h2", "A private group organized around institutional systems.", "機関システムを中心に組織された非公開企業グループ。")}</div>${translated("p", "Arasaka combines permanent private ownership with specialized operating companies. More than US$3.2 trillion in protected mandates is governed through group standards for identity, authority, evidence, safety, and service quality, while regional teams remain accountable for client outcomes.", "荒坂は恒久的な非公開所有と専門事業会社を組み合わせています。3.2兆米ドル超の保護委任資産を、ID、権限、証拠、安全、サービス品質に関するグループ基準で統治し、地域チームが顧客成果に責任を持ちます。", "lead-copy")}</div></section>
       <section class="section operating-groups" id="operating-groups"><div class="shell"><div class="section-heading split-heading"><div>${translated("p", "Operating groups", "事業グループ", "eyebrow")}${translated("h2", "Specialized companies. Shared control architecture.", "専門会社。共通の管理アーキテクチャ。")}</div><a class="text-link" href="${root}products/"><span data-ja="製品を見る">View products</span><span aria-hidden="true">↗</span></a></div><div class="operating-grid">${products.map((p,i)=>`<a href="${root}products/${p.slug}/"><span>0${i+1}</span><strong data-ja="${escapeHtml(p.categoryJa)}">${p.category}</strong><p data-ja="${escapeHtml(p.summaryJa)}">${p.summary}</p></a>`).join("")}</div></div></section>
       <section class="global-section" id="global"><div class="shell global-layout"><div>${translated("p", "Global operations", "グローバル運用", "eyebrow")}${translated("h2", "One group standard. Regional operating authority.", "一つのグループ基準。地域の運用権限。")}${translated("p", "Regional companies adapt deployment, compliance, and service operations to local institutions while remaining inside shared group controls.", "地域会社は、共通のグループ統制内で、導入、コンプライアンス、サービス運用を各地域の機関に適合させます。")}</div><div class="region-list"><div><strong>APAC</strong><span data-ja="東京地域統括">Tokyo regional command</span></div><div><strong>AMERICAS</strong><span data-ja="西半球運用">Western hemisphere operations</span></div><div><strong>EMEA</strong><span data-ja="欧州・中東・アフリカ運用">Europe, Middle East, and Africa</span></div><div><strong>ORBITAL</strong><span data-ja="域外研究・カストディ">Extraterritorial research and custody</span></div></div></div></section>
       <section class="section section-light governance-section" id="governance"><div class="shell"><div class="section-heading split-heading"><div>${translated("p", "Governance", "ガバナンス", "eyebrow")}${translated("h2", "Stewardship measured in generations.", "世代単位で評価される統括。")}</div>${translated("p", "Board oversight, named operating authority, client-held controls, and evidence retention govern every material system deployment.", "取締役会監督、指名された運用権限、顧客保有の管理、証拠保持がすべての重要なシステム導入を統治します。", "section-intro")}</div><div class="governance-grid"><article><span>01</span><h3 data-ja="取締役会監督">Board oversight</h3><p data-ja="重要な製品、地域、リスク方針に対する長期的監督。">Long-term oversight of material product, regional, and risk policies.</p></article><article><span>02</span><h3 data-ja="指名権限">Named authority</h3><p data-ja="重要な決定には特定可能な人間の責任者。">An identifiable human owner for every consequential decision.</p></article><article><span>03</span><h3 data-ja="顧客管理">Client control</h3><p data-ja="鍵、復旧、承認境界を顧客が保持。">Clients retain defined key, recovery, and approval boundaries.</p></article><article><span>04</span><h3 data-ja="監査可能性">Auditability</h3><p data-ja="来歴、変更、操作受領を審査可能な形で保持。">Reviewable provenance, change history, and action receipts.</p></article></div></div></section>

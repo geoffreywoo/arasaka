@@ -6,6 +6,8 @@
 
 - `product-relic-hero-v2.jpg`, `product-securenet-appliance-v2.jpg`, `product-custody-core-v2.jpg`, and `product-perimeter-sentinel-v2.jpg` are original AI-generated product concept images created for this project with OpenAI image generation.
 
+- `product-relic-operation-v1.jpg`, `product-securenet-operation-v1.jpg`, `product-custody-operation-v1.jpg`, and `product-perimeter-operation-v1.jpg` are original AI-generated operational environment images created for this project with OpenAI image generation. Their scenes and depicted systems are fictional.
+
 - `hero-headquarters.png`, `security-operations.png`, and `cyberware-foundry.png` are original AI-generated corporate environment images. Their `.jpg` counterparts are compressed delivery derivatives used by the public site.
 
 - `cyberpunk2077-showdown-press.png` - Cyberpunk 2077 official press screenshot from the CD PROJEKT RED Press Center. Source: https://press.cdprojektred.com/en/224/797

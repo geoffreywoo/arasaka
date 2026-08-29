@@ -4,6 +4,7 @@ const languageButtons = [...document.querySelectorAll("[data-language]")];
 const translatableNodes = [...document.querySelectorAll("[data-ja]")];
 const placeholderNodes = [...document.querySelectorAll("[data-placeholder-ja]")];
 const ariaNodes = [...document.querySelectorAll("[data-aria-ja]")];
+const altNodes = [...document.querySelectorAll("[data-alt-ja]")];
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
 const inquiryForm = document.querySelector("[data-inquiry-form]");
@@ -36,6 +37,10 @@ placeholderNodes.forEach((node) => {
 
 ariaNodes.forEach((node) => {
   node.dataset.ariaEn = node.getAttribute("aria-label") || "";
+});
+
+altNodes.forEach((node) => {
+  node.dataset.altEn = node.getAttribute("alt") || "";
 });
 
 function readStoredLanguage() {
@@ -88,6 +93,13 @@ function applyLanguage(language) {
     node.setAttribute(
       "aria-label",
       currentLanguage === "ja" ? node.dataset.ariaJa : node.dataset.ariaEn
+    );
+  });
+
+  altNodes.forEach((node) => {
+    node.setAttribute(
+      "alt",
+      currentLanguage === "ja" ? node.dataset.altJa : node.dataset.altEn
     );
   });
 

@@ -29,9 +29,13 @@ class PageParser(HTMLParser):
         self.h1_count = 0
         self.images_without_alt = []
         self.empty_japanese = []
+        self.operation_sections = 0
+        self.operation_metric_lists = 0
+        self.project_links = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
+        classes = set(attributes.get("class", "").split())
 
         if attributes.get("id"):
             self.ids.add(attributes["id"])
@@ -41,6 +45,8 @@ class PageParser(HTMLParser):
 
         if tag == "a" and "href" in attributes:
             self.links.append(attributes["href"])
+            if "footer-project-link" in classes:
+                self.project_links.append(attributes["href"])
 
         if tag in {"img", "script"} and attributes.get("src"):
             self.assets.append(attributes["src"])
@@ -53,6 +59,15 @@ class PageParser(HTMLParser):
 
         if "data-ja" in attributes and not attributes["data-ja"].strip():
             self.empty_japanese.append(tag)
+
+        if "data-alt-ja" in attributes and not attributes["data-alt-ja"].strip():
+            self.empty_japanese.append(f"{tag}[data-alt-ja]")
+
+        if tag == "section" and "product-operation" in classes:
+            self.operation_sections += 1
+
+        if tag == "dl" and "operation-metrics" in classes:
+            self.operation_metric_lists += 1
 
 
 def target_file(source_page, raw_url):
@@ -120,6 +135,24 @@ def main():
             failures.append(f"{relative_path}: images missing alt: {parser.images_without_alt}")
         if parser.empty_japanese:
             failures.append(f"{relative_path}: empty data-ja attributes on {parser.empty_japanese}")
+        if parser.project_links != ["https://x.com/geoffwoo"]:
+            failures.append(f"{relative_path}: expected one Geoff Woo X link, found {parser.project_links}")
+
+        is_product_detail = (
+            len(relative_path.parts) == 3
+            and relative_path.parts[0] == "products"
+        )
+        expected_operation_count = 1 if is_product_detail else 0
+        if parser.operation_sections != expected_operation_count:
+            failures.append(
+                f"{relative_path}: expected {expected_operation_count} product operation section, "
+                f"found {parser.operation_sections}"
+            )
+        if parser.operation_metric_lists != expected_operation_count:
+            failures.append(
+                f"{relative_path}: expected {expected_operation_count} operation metric list, "
+                f"found {parser.operation_metric_lists}"
+            )
 
         for asset_url in parser.assets:
             target, _ = target_file(page, asset_url)
