@@ -21,7 +21,21 @@ Good copy is operational, specific, and restrained. It should sound like procure
 
 ## Local Checks
 
-There is no build step. Before opening a pull request, please run:
+Page content and shared templates live in `scripts/build-site.mjs`. After changing them, regenerate the committed static pages:
+
+```bash
+node scripts/build-site.mjs
+```
+
+Before opening a pull request, run the structural verifier and JavaScript checks:
+
+```bash
+python3 scripts/verify_site.py
+node --check app.js
+node --check scripts/build-site.mjs
+```
+
+Then run a local server:
 
 ```bash
 python3 -m http.server 4187
@@ -33,11 +47,7 @@ Then spot-check the page or route you changed at:
 http://127.0.0.1:4187/
 ```
 
-For JavaScript edits, also run:
-
-```bash
-node --check app.js
-```
+Spot-check the homepage, the relevant route, and a 390px mobile viewport in both English and Japanese.
 
 ## Asset And IP Boundaries
 

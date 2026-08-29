@@ -1,246 +1,145 @@
 # Arasaka
 
-An open-source, bilingual, design-fiction corporate website for `arasaka.com`.
+An open-source, bilingual corporate design-fiction website for [arasaka.com](https://www.arasaka.com/).
 
-Arasaka is a Geoffrey Woo personal project: a public-web artifact exploring how a fictional cyberpunk megacorporation might present itself if it behaved like a real sovereign-scale conglomerate. The site treats products, services, governance, procurement language, regional command, technical specifications, incident archives, investor-grade custody surfaces, and public accountability disclosures as the primary material of the fiction.
+Arasaka is a personal project by Geoffrey Woo. It explores how a fictional sovereign-scale conglomerate might present continuity, network security, strategic custody, and protective autonomy as credible institutional products.
 
-This is intentionally not a wiki, recap, reference explainer, or fanpage. It is built to feel like the controlled public web presence of a multi-trillion-dollar institution that treats memory, identity, security, capital, autonomous force, and continuity as operational product lines.
-
-The repository is public so the craft is inspectable: information architecture, bilingual copy systems, static deployment, responsive layout, generated/composite asset handling, licensing boundaries, and the small details that make speculative fiction feel operationally real.
+The public site is intentionally written and structured like a real corporation. It is not a wiki, game recap, or lore index. Product architecture, deployment, assurance, industries, research, company information, and institutional contact are the primary surfaces.
 
 This project is unofficial and unaffiliated with CD PROJEKT RED, CD PROJEKT, or Cyberpunk 2077.
 
-## Status
-
-- Production: https://www.arasaka.com/
-- Repository: https://github.com/geoffreywoo/arasaka
-- License: MIT for original source code and documentation
-- Deployment: static site on Vercel
-- Scope note: brand, universe, press, generated, and composite assets have separate provenance notes
-
 ## Mission
 
-Arasaka is a public-web thought experiment about institutional power, corporate myth, and the way speculative technology becomes more believable when it is expressed through ordinary enterprise surfaces.
+The project asks one question:
 
-The project starts from one question:
+> What would a sovereign-scale technology company publish if neural continuity, accountable autonomy, and institutional custody were ordinary enterprise infrastructure?
 
-> What would a sovereign-scale technology, security, capital, and continuity conglomerate publish if cybernetic identity, neural persistence, autonomous defense, private intelligence, and institutional custody were real enterprise infrastructure?
+The intended effect is quiet plausibility. Visitors should encounter a focused product company before they encounter the fiction behind it.
 
-The website treats speculative cyberpunk themes as serious corporate systems:
+## Public Site Map
 
-- Neural continuity as executive succession and identity custody infrastructure
-- Black ICE and counterintrusion as enterprise-grade security products
-- Autonomous protection as regional command, force readiness, and route assurance
-- Capital custody as board-governed mandate, patent, settlement, and escrow infrastructure
-- Incident archives as public evidence packets rather than lore summaries
-- Japanese and English localization as a real operating layer, not decorative texture
+The public architecture is deliberately small:
 
-The intended effect is quiet plausibility. A visitor should feel like they have found a controlled corporate website from a vast, opaque company rather than a page describing one. The project succeeds when the fiction feels institutional before it feels theatrical.
+```text
+/
+├── products/
+│   ├── relic/
+│   ├── securenet/
+│   ├── custody/
+│   └── perimeter/
+├── industries/
+├── research/
+├── company/
+└── contact/
+```
 
-## Project Goals
+- **Homepage** introduces the integrated portfolio, operating architecture, industries, and deployment model.
+- **Products** compares four flagship systems and explains how they operate together.
+- **Product pages** cover capabilities, architecture, deployment, assurance, and related products.
+- **Industries** maps products to public institutions, financial services, advanced industry, and life sciences.
+- **Research** presents neural continuity, secure compute, institutional systems, and trustworthy autonomy.
+- **Company** covers operating groups, regional operations, governance, and careers.
+- **Contact** routes an institutional inquiry into a prepared email draft.
 
-- Build the most plausible public website a fictional sovereign-scale conglomerate would publish.
-- Keep English and Japanese localization central to the operating model.
-- Treat every route as a real corporate surface: product, service, governance, archive, region, or protocol.
-- Preserve mobile-first usability for visitors arriving from social links, search, or direct domain entry.
-- Make the repo understandable enough that other designers, writers, and engineers can study or improve the illusion.
-- Maintain clear attribution and licensing boundaries around third-party IP, trademarks, press images, user-provided brand assets, and generated/composite imagery.
-
-## Why Open Source
-
-The repository is open so people can inspect how the illusion is built: the copy system, route architecture, bilingual content model, responsive layout, asset attribution, and static deployment setup.
-
-Good forks and contributions should improve the craft of the site:
-
-- More credible corporate information architecture
-- Better mobile reading and navigation
-- Cleaner Japanese localization
-- Stronger accessibility and performance
-- Better attribution and asset provenance
-- More restrained product, service, and governance surfaces
-
-The project is open source as original code and documentation. It is not a blanket license to reuse third-party intellectual property, trademarks, screenshots, fictional universe concepts, user-provided identity assets, or generated/composite imagery.
-
-## Repository Philosophy
-
-This project is open source in the spirit of a design studio case file: the implementation is visible, reusable, and critiqueable, while the referenced fictional universe and visual identity remain bounded by their respective rights.
-
-Contributions should make the public website more credible, not louder. The best change usually removes friction, sharpens language, improves localization, fixes an accessibility issue, clarifies attribution, or adds a route that feels like it could have passed through a corporate communications department.
+Earlier experimental product, service, archive, technology, and protocol URLs are permanently redirected to the closest canonical product or corporate page in `vercel.json`.
 
 ## Design Principles
 
-- Make every surface feel owned by a large, old, powerful institution.
-- Prefer operational specificity over generic cyberpunk style.
-- Treat fictional products like real procurement, compliance, and governance objects.
-- Keep the mobile experience dense, legible, and fast to scan.
-- Use Japanese localization as product infrastructure.
-- Keep Geoffrey Woo authorship subtle and personal.
-- Credit source material clearly.
-- Preserve enough restraint that the fiction feels corporate before it feels theatrical.
+- Present products before universe references.
+- Use operationally specific copy instead of theatrical interface language.
+- Keep the public architecture easy to scan and difficult to misunderstand.
+- Treat English and Japanese as equal product surfaces.
+- Make mobile the default reading environment.
+- Use named authority, client control, evidence, and assurance as recurring product concepts.
+- Keep the user-provided Arasaka mark and wordmark consistent across every page.
+- Credit third-party names and imagery without interrupting the corporate experience.
 
 ## Technology
 
-This is a static website. There is no framework, package install, compile step, or application server.
+The site is static and has no runtime dependencies.
 
-- `index.html` - homepage structure, metadata, bilingual content hooks, product/service surfaces, operations modules, disclosures, and the main corporate experience
-- `styles.css` - responsive visual system, route layouts, mobile navigation, product/service dossiers, cyberpunk interface treatment, and reduced-motion support
-- `app.js` - language switching, interactive console behavior, route hydration, localized product/service data, and casefile content registries
-- `vercel.json` - static deployment configuration for Vercel
-- `LICENSE` - MIT license for original source code and documentation, with scope notes
-- `assets/ATTRIBUTION.md` - asset provenance and third-party reference notes
-
-## Repository Structure
-
-```text
-.
-├── index.html                 # primary corporate homepage
-├── app.js                     # localization, route data, and interactions
-├── styles.css                 # responsive visual system
-├── vercel.json                # static Vercel deployment configuration
-├── assets/                    # identity, generated, composite, and credited media
-├── products/                  # product-line routes and specification dossiers
-├── services/                  # service-line routes and protocol dossiers
-├── technology/                # platform and subsystem routes
-├── archive/                   # public casefiles and evidence surfaces
-├── blackwall/                 # perimeter and containment routes
-├── .github/                   # issue and pull request templates
-├── CONTRIBUTING.md            # contribution guidelines
-├── SECURITY.md                # security reporting scope
-└── LICENSE                    # MIT license for original code and docs
-```
-
-## Site Map
-
-- `technology/` - platform overview and subsystem dossiers
-- `operations/` - command, deployment, and readiness surfaces
-- `archive/` - institutional archive and public casefiles
-- `governance/` - board authority, custody gates, and control doctrine
-- `blackwall/` - perimeter doctrine and rogue-machine containment
-- `divisions/`, `subsidiaries/`, and `regional/` - organization, operating entities, and command geography
-- `products/*/` - product pages for Relic, Mikoshi, Black ICE, Black Ledger, Swarm, and Soulkiller-inspired systems
-- `services/*/` - service pages for executive continuity, counterintrusion, mandate, and autonomous protection offerings
-- `assets/` - generated imagery, identity assets, credited press references, and attribution notes
+- `scripts/build-site.mjs` contains the structured bilingual content model and page templates.
+- `index.html` and the route `index.html` files are generated and committed for static hosting.
+- `styles.css` contains the shared responsive design system.
+- `app.js` handles localization, the mobile menu, short code-lock animation, and contact email preparation.
+- `vercel.json` defines security headers, asset caching, and legacy redirects.
+- `sitemap.xml` lists only canonical public pages.
+- `assets/ATTRIBUTION.md` records image provenance and rights boundaries.
 
 ## Local Development
 
-You can open the homepage directly:
+Regenerate the static pages after changing page content or templates:
 
 ```bash
-open index.html
+node scripts/build-site.mjs
 ```
 
-For route testing, run a local static server from the repository root:
+Run a local server from the repository root:
 
 ```bash
 python3 -m http.server 4187
 ```
 
-Then visit:
+Then open:
 
 ```text
 http://127.0.0.1:4187/
-http://127.0.0.1:4187/technology/
-http://127.0.0.1:4187/technology/neural-substrate/
-http://127.0.0.1:4187/technology/neural-substrate/engram-custody/
-http://127.0.0.1:4187/technology/neural-substrate/identity-escrow/
-http://127.0.0.1:4187/technology/black-ice-runtime/
-http://127.0.0.1:4187/technology/capital-custody/
-http://127.0.0.1:4187/technology/capital-custody/selective-disclosure-switch/
-http://127.0.0.1:4187/technology/autonomous-force/
-http://127.0.0.1:4187/technology/autonomous-force/rules-of-force-ledger/
-http://127.0.0.1:4187/divisions/
-http://127.0.0.1:4187/subsidiaries/
-http://127.0.0.1:4187/regional/
-http://127.0.0.1:4187/operations/
-http://127.0.0.1:4187/archive/
-http://127.0.0.1:4187/archive/tower/
-http://127.0.0.1:4187/archive/konpeki/
-http://127.0.0.1:4187/archive/afterlife/
-http://127.0.0.1:4187/governance/
-http://127.0.0.1:4187/blackwall/
-http://127.0.0.1:4187/blackwall/contact-protocol/
-http://127.0.0.1:4187/blackwall/mirror-cell-substrate/
-http://127.0.0.1:4187/blackwall/containment-docket/
+http://127.0.0.1:4187/products/
 http://127.0.0.1:4187/products/relic/
-http://127.0.0.1:4187/products/relic/technical-specification/
-http://127.0.0.1:4187/products/relic/host-compatibility/
-http://127.0.0.1:4187/products/mikoshi/
-http://127.0.0.1:4187/products/mikoshi/runtime-specification/
-http://127.0.0.1:4187/products/mikoshi/release-arbitration/
-http://127.0.0.1:4187/products/ice/
-http://127.0.0.1:4187/products/ice/mesh-specification/
-http://127.0.0.1:4187/products/ice/credential-geometry/
-http://127.0.0.1:4187/products/ledger/
-http://127.0.0.1:4187/products/ledger/custody-specification/
-http://127.0.0.1:4187/products/ledger/patent-gravity/
-http://127.0.0.1:4187/products/swarm/
-http://127.0.0.1:4187/products/swarm/formation-specification/
-http://127.0.0.1:4187/products/swarm/civilian-exclusion/
-http://127.0.0.1:4187/products/soulkiller/
-http://127.0.0.1:4187/products/soulkiller/extraction-specification/
-http://127.0.0.1:4187/products/soulkiller/redaction-warrant/
-http://127.0.0.1:4187/services/executive-continuity/
-http://127.0.0.1:4187/services/executive-continuity/activation-protocol/
-http://127.0.0.1:4187/services/executive-continuity/succession-rehearsal/
-http://127.0.0.1:4187/services/counterintrusion/
-http://127.0.0.1:4187/services/counterintrusion/response-protocol/
-http://127.0.0.1:4187/services/black-ledger-mandate/
-http://127.0.0.1:4187/services/black-ledger-mandate/settlement-protocol/
-http://127.0.0.1:4187/services/autonomous-protection/
-http://127.0.0.1:4187/services/autonomous-protection/route-protocol/
+http://127.0.0.1:4187/products/securenet/
+http://127.0.0.1:4187/products/custody/
+http://127.0.0.1:4187/products/perimeter/
+http://127.0.0.1:4187/industries/
+http://127.0.0.1:4187/research/
+http://127.0.0.1:4187/company/
+http://127.0.0.1:4187/contact/
 ```
+
+The homepage can also be opened directly as `index.html`. A local server is recommended for testing clean route URLs and redirects.
+
+## Verification
+
+Before publishing:
+
+```bash
+node --check app.js
+node --check scripts/build-site.mjs
+node scripts/build-site.mjs
+git diff --check
+```
+
+Also verify:
+
+- Every canonical page returns successfully.
+- Internal links resolve to canonical pages or valid fragment targets.
+- English and Japanese switching works on desktop and mobile.
+- Mobile pages have no horizontal overflow.
+- Navigation, focus states, form labels, and reduced motion remain usable.
+- Legacy URLs redirect to the intended canonical destination.
+- The custom domain contains a distinctive change from the release.
 
 ## Deployment
 
-The production site is deployed on Vercel as a static project:
+Production is a static Vercel project:
 
 ```text
 https://www.arasaka.com/
 ```
 
-Vercel serves the checked-in static files directly. There are no required environment variables.
-
-## Maintainer Notes
-
-- Keep `.vercel/` local and untracked.
-- Update `assets/ATTRIBUTION.md` whenever adding or replacing imagery.
-- Run `node --check app.js` after JavaScript or localization edits.
-- Spot-check changed routes on a narrow mobile viewport before publishing.
-- Keep public copy restrained, institutional, and procurement-grade.
+Vercel serves the committed HTML, CSS, JavaScript, and image assets directly. There are no required environment variables.
 
 ## Open Source Scope
 
-The original source code and documentation in this repository are open-sourced under the MIT License. See `LICENSE`.
+Original source code and documentation are provided under the MIT License. That license does not automatically cover third-party names, fictional-universe concepts, user-provided identity assets, press imagery, or generated/composite media.
 
-Important exclusions:
+See [LICENSE](LICENSE) and [assets/ATTRIBUTION.md](assets/ATTRIBUTION.md) before reusing the project or its assets.
 
-- Cyberpunk 2077 names, references, screenshots, and related intellectual property belong to CD PROJEKT RED / CD PROJEKT.
-- Arasaka and related fictional universe concepts are used here as unofficial design-fiction references.
-- User-provided logo and wordmark assets, generated imagery, and composite assets in `assets/` may have separate provenance and are not automatically relicensed for unrestricted reuse.
-- Asset provenance notes live in `assets/ATTRIBUTION.md`.
+## Attribution
 
-If you fork this project, replace or re-clear brand, game, and image assets before using it commercially.
+This is an unofficial, independent design-fiction project. Referenced names and credited imagery belong to their respective rights holders.
 
-## Attribution And Disclaimer
+Project links:
 
-This site is an unofficial, independent web concept. It is not affiliated with, approved by, sponsored by, or endorsed by CD PROJEKT RED, CD PROJEKT, Cyberpunk 2077, or any rights holder.
-
-Cyberpunk 2077 referenced names and credited press imagery belong to their respective owners. This project exists as design fiction, interface study, and personal creative production by Geoffrey Woo.
-
-## Contributing
-
-Contributions are welcome when they make the project feel more plausible, usable, accessible, or technically clean.
-
-Good contribution areas:
-
-- Mobile layout fixes
-- Accessibility improvements
-- Japanese copy corrections
-- Attribution corrections
-- Performance improvements
-- Cleaner route information architecture
-- Product/spec imagery that preserves the restrained corporate tone
-
-Please keep the site controlled, corporate, and believable. The best contribution makes the fiction feel more like a real operating company and less like a reference page.
-
-See `CONTRIBUTING.md` for contribution guidelines.
+- [Geoffrey Woo](https://www.geoffreywoo.com/)
+- [X / @geoffwoo](https://x.com/geoffwoo)
+- [Instagram / @geoffwoo](https://instagram.com/geoffwoo)
