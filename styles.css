@@ -1708,31 +1708,22 @@ h3 {
 }
 
 .footer-attribution {
-  display: grid;
-  gap: 12px;
-}
-
-.footer-attribution > strong {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-}
-
-.footer-attribution nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px 20px;
+  align-items: flex-end;
 }
 
-.footer-attribution a {
+.footer-project-link {
+  width: fit-content;
   padding-bottom: 3px;
   border-bottom: 1px solid var(--red);
   color: var(--muted-dark);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-.footer-attribution a:hover,
-.footer-attribution a:focus-visible {
+.footer-project-link:hover,
+.footer-project-link:focus-visible {
   color: var(--white);
 }
 

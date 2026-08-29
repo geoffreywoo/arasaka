@@ -249,12 +249,7 @@ function footer(root) {
       </div>
       <div class="footer-bottom shell">
         <div class="footer-attribution">
-          ${translated("strong", "Personal project by Geoffrey Woo", "Geoffrey Woo による個人プロジェクト")}
-          <nav aria-label="Geoffrey Woo links" data-aria-ja="Geoffrey Woo のリンク">
-            <a href="https://x.com/geoffwoo" target="_blank" rel="noopener noreferrer">X / @geoffwoo</a>
-            <a href="https://instagram.com/geoffwoo" target="_blank" rel="noopener noreferrer">Instagram / @geoffwoo</a>
-            <a href="https://www.geoffreywoo.com/" target="_blank" rel="noopener noreferrer">geoffreywoo.com</a>
-          </nav>
+          <a class="footer-project-link" href="https://x.com/geoffwoo" target="_blank" rel="noopener noreferrer" data-ja="Geoff Woo プロジェクト">A Geoff Woo project</a>
         </div>
         ${translated("p", "Independent design-fiction project. Referenced names and credited imagery belong to their respective rights holders.", "独立したデザインフィクション・プロジェクトです。参照名称およびクレジット表記された画像は各権利者に帰属します。", "footer-legal")}
       </div>

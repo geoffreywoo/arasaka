@@ -4,7 +4,7 @@ This repository is a static website with no application server, database, user a
 
 ## Reporting Issues
 
-If you find a security-sensitive issue, please avoid opening a public issue with exploit details. Contact Geoffrey Woo through the public contact paths linked from https://www.geoffreywoo.com/.
+If you find a security-sensitive issue, please avoid opening a public issue with exploit details. Contact Geoff Woo through [X / @geoffwoo](https://x.com/geoffwoo).
 
 For ordinary bugs, broken links, layout problems, attribution corrections, and copy fixes, GitHub issues or pull requests are welcome.
 

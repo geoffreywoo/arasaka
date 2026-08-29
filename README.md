@@ -2,7 +2,7 @@
 
 An open-source, bilingual corporate design-fiction website for [arasaka.com](https://www.arasaka.com/).
 
-Arasaka is a personal project by Geoffrey Woo. It explores how a fictional sovereign-scale conglomerate might present continuity, network security, strategic custody, and protective autonomy as credible institutional products.
+Arasaka is a Geoff Woo project. It explores how a fictional sovereign-scale conglomerate might present continuity, network security, strategic custody, and protective autonomy as credible institutional products.
 
 The public site is intentionally written and structured like a real corporation. It is not a wiki, game recap, or lore index. Product architecture, deployment, assurance, industries, research, company information, and institutional contact are the primary surfaces.
 
@@ -138,8 +138,4 @@ See [LICENSE](LICENSE) and [assets/ATTRIBUTION.md](assets/ATTRIBUTION.md) before
 
 This is an unofficial, independent design-fiction project. Referenced names and credited imagery belong to their respective rights holders.
 
-Project links:
-
-- [Geoffrey Woo](https://www.geoffreywoo.com/)
-- [X / @geoffwoo](https://x.com/geoffwoo)
-- [Instagram / @geoffwoo](https://instagram.com/geoffwoo)
+Project: [X / @geoffwoo](https://x.com/geoffwoo)
