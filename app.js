@@ -4812,7 +4812,8 @@ const translations = {
     },
     footer: {
       registry: "荒坂株式会社 Public Corporate Network",
-      cameo: "quiet relay",
+      projectBy: "Personal project by Geoffrey Woo",
+      socialAria: "Geoffrey Woo links",
       notice: "Independent corporate systems concept. Referenced Cyberpunk 2077 names and credited press imagery belong to CD PROJEKT RED / CD PROJEKT."
     },
     products: {
@@ -10799,7 +10800,8 @@ const translations = {
     },
     footer: {
       registry: "荒坂株式会社 公開法人ネットワーク",
-      cameo: "秘匿中継",
+      projectBy: "Geoffrey Woo による個人プロジェクト",
+      socialAria: "Geoffrey Woo のリンク",
       notice: "独立した法人システム構想です。参照された Cyberpunk 2077 の名称およびクレジット表記されたプレス画像は CD PROJEKT RED / CD PROJEKT に帰属します。"
     },
     products: {
