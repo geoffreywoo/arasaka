@@ -1,6 +1,107 @@
 const translations = {
   en: {
     title: "Arasaka Corporation | 荒坂株式会社",
+    homeRefresh: {
+      nav: {
+        global: "Global Presence",
+        globalShort: "Global"
+      },
+      hero: {
+        eyebrow: "ARASAKA ADVANCED SYSTEMS / 2077",
+        title: "Sovereign systems for the next century.",
+        text: "Arasaka integrates neural continuity, secure networks, institutional custody, and autonomous protection into one accountable operating architecture.",
+        explore: "Explore the portfolio",
+        access: "Request institutional access",
+        actionsAria: "Primary actions",
+        featured: "Featured system",
+        featuredAria: "Featured system",
+        class: "System class",
+        classValue: "Neural continuity",
+        availability: "Availability",
+        availabilityValue: "Institutional deployment"
+      },
+      intro: {
+        eyebrow: "INTEGRATED PORTFOLIO",
+        title: "Four systems. One command architecture.",
+        text: "Each Arasaka platform is engineered as a complete institutional environment: manufactured hardware, software control, human authority, service operations, and auditable assurance."
+      },
+      products: {
+        aria: "Arasaka product portfolio",
+        open: "View system",
+        relic: {
+          category: "NEURAL CONTINUITY",
+          title: "Relic Continuity Suite",
+          text: "A governed neural archive for executive memory, succession rehearsal, and continuity custody across biological and synthetic states.",
+          openAria: "Open Relic Continuity Suite"
+        },
+        securenet: {
+          category: "NETWORK SECURITY",
+          title: "SecureNet Defense Mesh",
+          text: "Sovereign network processing, identity defense, and managed incident response deployed from client edge to regional command.",
+          openAria: "Open SecureNet Defense Mesh"
+        },
+        custody: {
+          category: "INSTITUTIONAL FINANCE",
+          title: "Institutional Custody Network",
+          text: "Protected settlement and custody infrastructure for strategic capital, intellectual property, and sovereign counterparties.",
+          openAria: "Open Institutional Custody Network"
+        },
+        perimeter: {
+          category: "AUTONOMOUS SECURITY",
+          title: "Autonomous Perimeter Systems",
+          text: "A coordinated sentinel architecture for facilities, protected mobility, and high-consequence response under named human command.",
+          openAria: "Open Autonomous Perimeter Systems"
+        }
+      },
+      spec: {
+        capture: "Capture",
+        integrity: "Archive integrity",
+        authority: "Authority",
+        latency: "Inspection latency",
+        topology: "Topology",
+        settlement: "Settlement",
+        custody: "Custody class",
+        response: "Response envelope",
+        command: "Command model"
+      },
+      scale: {
+        eyebrow: "PLANETARY OPERATING SCALE",
+        title: "One group across every critical domain.",
+        text: "Security, banking, manufacturing, life sciences, and advanced research operate under common group standards and Tokyo stewardship.",
+        open: "Explore operating groups",
+        aria: "Arasaka corporate scale",
+        founded: "Founded in Tokyo",
+        jurisdictions: "Jurisdictions served",
+        assets: "Protected asset surface",
+        commands: "Regional commands"
+      },
+      global: {
+        eyebrow: "GLOBAL PRESENCE",
+        title: "Tokyo stewardship. Regional accountability.",
+        text: "Arasaka combines long-horizon family governance with accountable regional companies, manufacturing campuses, financial centers, and security operations.",
+        locations: "Locations and regional offices",
+        governance: "Corporate governance",
+        innovation: "Innovation and research"
+      },
+      links: {
+        aria: "Corporate information",
+        governance: "Governance & stewardship",
+        governanceText: "Group standards, oversight, and long-term accountability.",
+        innovation: "Innovation portfolio",
+        innovationText: "Research platforms for the next industrial century.",
+        careers: "Careers at Arasaka",
+        careersText: "Build systems measured across generations."
+      },
+      contact: {
+        eyebrow: "INSTITUTIONAL ACCESS",
+        title: "Talk to Arasaka.",
+        text: "Institutional clients, government partners, and qualified enterprises may request a confidential consultation with an Arasaka regional office.",
+        route: "Routing",
+        routeValue: "Regional client office",
+        response: "Initial response",
+        responseValue: "Within one business day"
+      }
+    },
     skip: "Skip to content",
     nav: {
       home: "Home",
@@ -5887,6 +5988,107 @@ const translations = {
   },
   ja: {
     title: "荒坂株式会社 | Arasaka Corporation",
+    homeRefresh: {
+      nav: {
+        global: "グローバル拠点",
+        globalShort: "拠点"
+      },
+      hero: {
+        eyebrow: "荒坂先端システム / 2077",
+        title: "次の世紀を支える主権システム。",
+        text: "荒坂は、神経継続性、セキュアネットワーク、機関保管、自律防護を、説明責任を備えた単一の運用基盤へ統合します。",
+        explore: "製品ポートフォリオを見る",
+        access: "機関アクセスを申請",
+        actionsAria: "主要操作",
+        featured: "注目システム",
+        featuredAria: "注目システム",
+        class: "システム分類",
+        classValue: "神経継続性",
+        availability: "提供形態",
+        availabilityValue: "機関向け導入"
+      },
+      intro: {
+        eyebrow: "統合ポートフォリオ",
+        title: "四つのシステム。一つの指揮基盤。",
+        text: "荒坂の各プラットフォームは、製造ハードウェア、ソフトウェア制御、人間の権限、サービス運用、監査可能な保証を一体化した機関環境として設計されています。"
+      },
+      products: {
+        aria: "荒坂製品ポートフォリオ",
+        open: "システムを見る",
+        relic: {
+          category: "神経継続性",
+          title: "Relic 継続性スイート",
+          text: "経営者の記憶、継承演習、生体・合成状態をまたぐ継続性保管のための統治された神経アーカイブです。",
+          openAria: "Relic 継続性スイートを開く"
+        },
+        securenet: {
+          category: "ネットワークセキュリティ",
+          title: "SecureNet 防衛メッシュ",
+          text: "顧客エッジから地域指揮まで展開する、主権ネットワーク処理、ID防衛、マネージド事案対応です。",
+          openAria: "SecureNet 防衛メッシュを開く"
+        },
+        custody: {
+          category: "機関金融",
+          title: "機関保管ネットワーク",
+          text: "戦略資本、知的財産、主権取引先のための保護決済・保管インフラです。",
+          openAria: "機関保管ネットワークを開く"
+        },
+        perimeter: {
+          category: "自律警備",
+          title: "自律境界システム",
+          text: "施設、保護移動、高重大度対応を、明示された人間指揮の下で統合するセンチネル基盤です。",
+          openAria: "自律境界システムを開く"
+        }
+      },
+      spec: {
+        capture: "取得速度",
+        integrity: "アーカイブ完全性",
+        authority: "権限",
+        latency: "検査遅延",
+        topology: "構成",
+        settlement: "決済",
+        custody: "保管等級",
+        response: "応答範囲",
+        command: "指揮モデル"
+      },
+      scale: {
+        eyebrow: "惑星規模の事業基盤",
+        title: "あらゆる重要領域を担う一つのグループ。",
+        text: "警備、銀行、製造、生命科学、先端研究を、共通のグループ基準と東京本社の監督下で運営します。",
+        open: "事業部門を見る",
+        aria: "荒坂グループ規模",
+        founded: "東京で創業",
+        jurisdictions: "展開管轄地域",
+        assets: "保護資産面",
+        commands: "地域指揮拠点"
+      },
+      global: {
+        eyebrow: "グローバル拠点",
+        title: "東京の長期統治。地域の説明責任。",
+        text: "荒坂は、長期志向の一族統治と、説明責任を負う地域会社、製造拠点、金融センター、警備運用を統合しています。",
+        locations: "拠点・地域オフィス",
+        governance: "コーポレートガバナンス",
+        innovation: "イノベーション・研究"
+      },
+      links: {
+        aria: "企業情報",
+        governance: "ガバナンスと長期統治",
+        governanceText: "グループ基準、監督、長期的な説明責任。",
+        innovation: "イノベーション・ポートフォリオ",
+        innovationText: "次の産業世紀に向けた研究基盤。",
+        careers: "荒坂で働く",
+        careersText: "世代を超えて評価されるシステムを築く。"
+      },
+      contact: {
+        eyebrow: "機関アクセス",
+        title: "荒坂へご相談ください。",
+        text: "機関顧客、政府パートナー、適格企業は、荒坂の地域オフィスへ機密相談を申請できます。",
+        route: "担当経路",
+        routeValue: "地域クライアントオフィス",
+        response: "初回応答",
+        responseValue: "1営業日以内"
+      }
+    },
     skip: "本文へ移動",
     nav: {
       home: "ホーム",
