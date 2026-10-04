@@ -75,7 +75,7 @@ These are relevant places to earn contextual references, not a bulk submission q
 
 Suggested unframed Projects entry, no external edit performed:
 
-> **Arasaka** — An open-source corporate design-fiction project imagining Arasaka's next chapter, in English and Japanese. [Visit arasaka.com](https://www.arasaka.com/).
+> **Arasaka**: An open-source corporate design-fiction project imagining Arasaka's next chapter, in English and Japanese. [Visit arasaka.com](https://www.arasaka.com/).
 
 Use the natural anchor `Arasaka` or `arasaka.com`, not a repeated keyword list. Keep any deeper write-up on Geoffrey's site original and personal; do not manufacture an endorsement by a real company.
 

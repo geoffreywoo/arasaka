@@ -18,7 +18,8 @@ const imageMetadata = JSON.parse(await readFile(resolve(root, "assets/image-mani
 function image(id, lang, current, cls = "", eager = false, mobile = false) {
   const asset = assets[id], meta = imageMetadata[id];
   const src = (size, ext) => relative(`/assets/${asset.stem}-${size}.${ext}`, current);
-  const sizes = cls.includes("hero-media") ? "100vw" : "(max-width:600px) 100vw, (max-width:1000px) 50vw, 720px";
+  // Cover crops need enough source pixels for their height, not just viewport width.
+  const sizes = cls.includes("hero-media") ? "(max-width:600px) 900px, 100vw" : cls.includes("company-band-media") ? "(max-width:600px) 1100px, 100vw" : "(max-width:600px) 100vw, (max-width:1000px) 50vw, 720px";
   const set = ext => [480, 960, 1600].map(size => `${src(size, ext)} ${size}w`).join(", ");
   return `<picture class="${cls}" style="--image-position:${asset.position}">${mobile ? `<source media="(max-width:600px)" srcset="${src("mobile", "webp")}" type="image/webp">` : ""}<source type="image/webp" srcset="${set("webp")}" sizes="${sizes}"><img src="${src(960, "jpg")}" srcset="${set("jpg")}" sizes="${sizes}" width="${meta.width}" height="${meta.height}" alt="${esc(t(asset.alt, lang))}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async"></picture>`;
 }
