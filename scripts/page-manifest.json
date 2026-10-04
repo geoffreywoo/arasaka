@@ -1,0 +1,425 @@
+{
+  "origin": "https://www.arasaka.com",
+  "pages": [
+    {
+      "id": "home",
+      "lang": "en",
+      "route": "/",
+      "file": "index.html",
+      "title": "Arasaka Corporation | Security, Capital & Continuity",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/home-en.jpg",
+      "hash": "d4df60ad48c239f6fae7cdd8de2af9ad64073f93bd4baa64210215309e2d3bb1",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/",
+        "ja": "https://www.arasaka.com/ja/"
+      }
+    },
+    {
+      "id": "home",
+      "lang": "ja",
+      "route": "/ja/",
+      "file": "ja/index.html",
+      "title": "アラサカ株式会社 | 警備・資本・継承",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/home-ja.jpg",
+      "hash": "716216386874fd0a442851d34a0f7ebcb49785a6f6ff52afa6d5b2244dea4816",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/",
+        "ja": "https://www.arasaka.com/ja/"
+      }
+    },
+    {
+      "id": "businesses",
+      "lang": "en",
+      "route": "/businesses/",
+      "file": "businesses/index.html",
+      "title": "Our Businesses | Arasaka Corporation",
+      "image": "/assets/headquarters-v3-1600.jpg",
+      "social": "/assets/social/businesses-en.jpg",
+      "hash": "3dffeabef0ab9539a8bbafd055f7a7a5f186de386dca808cd8e41f2bf165261e",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/",
+        "ja": "https://www.arasaka.com/ja/businesses/"
+      }
+    },
+    {
+      "id": "businesses",
+      "lang": "ja",
+      "route": "/ja/businesses/",
+      "file": "ja/businesses/index.html",
+      "title": "事業紹介 | アラサカ株式会社",
+      "image": "/assets/headquarters-v3-1600.jpg",
+      "social": "/assets/social/businesses-ja.jpg",
+      "hash": "b05136e36bb018963720163960a52a35cadf36b9d758d20e79319e98133204fb",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/",
+        "ja": "https://www.arasaka.com/ja/businesses/"
+      }
+    },
+    {
+      "id": "security",
+      "lang": "en",
+      "route": "/businesses/security/",
+      "file": "businesses/security/index.html",
+      "title": "Security & Defense | Arasaka Corporation",
+      "image": "/assets/security-v3-1600.jpg",
+      "social": "/assets/social/security-en.jpg",
+      "hash": "4f4b7b3ad0693623e3b31162ddce817488fe77011a2ec2d7d59792716eaf1fdd",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/security/",
+        "ja": "https://www.arasaka.com/ja/businesses/security/"
+      }
+    },
+    {
+      "id": "security",
+      "lang": "ja",
+      "route": "/ja/businesses/security/",
+      "file": "ja/businesses/security/index.html",
+      "title": "警備・防衛 | アラサカ株式会社",
+      "image": "/assets/security-v3-1600.jpg",
+      "social": "/assets/social/security-ja.jpg",
+      "hash": "14c11ce633d60f41daccc67b0b9aba5f7c177280236067259ab48587b66e1b34",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/security/",
+        "ja": "https://www.arasaka.com/ja/businesses/security/"
+      }
+    },
+    {
+      "id": "banking",
+      "lang": "en",
+      "route": "/businesses/banking/",
+      "file": "businesses/banking/index.html",
+      "title": "Banking & Capital | Arasaka Corporation",
+      "image": "/assets/banking-v3-1600.jpg",
+      "social": "/assets/social/banking-en.jpg",
+      "hash": "642a302bc9d7239bae0cf6e5b6ae49e28294a8c911c5398703c839c412dc1f7d",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/banking/",
+        "ja": "https://www.arasaka.com/ja/businesses/banking/"
+      }
+    },
+    {
+      "id": "banking",
+      "lang": "ja",
+      "route": "/ja/businesses/banking/",
+      "file": "ja/businesses/banking/index.html",
+      "title": "銀行・資本 | アラサカ株式会社",
+      "image": "/assets/banking-v3-1600.jpg",
+      "social": "/assets/social/banking-ja.jpg",
+      "hash": "8f3f5c79b58edc110512f49b4ffa68a4f1ee613f7f5f57da8cd7501eace81961",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/banking/",
+        "ja": "https://www.arasaka.com/ja/businesses/banking/"
+      }
+    },
+    {
+      "id": "technology",
+      "lang": "en",
+      "route": "/businesses/technology/",
+      "file": "businesses/technology/index.html",
+      "title": "Advanced Technology | Arasaka Corporation",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/technology-en.jpg",
+      "hash": "3efa3ba87319e4a4ebebbf023b011bf0feb4f52d5204e15dcf26a85d1d86f379",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/technology/",
+        "ja": "https://www.arasaka.com/ja/businesses/technology/"
+      }
+    },
+    {
+      "id": "technology",
+      "lang": "ja",
+      "route": "/ja/businesses/technology/",
+      "file": "ja/businesses/technology/index.html",
+      "title": "先端技術 | アラサカ株式会社",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/technology-ja.jpg",
+      "hash": "976bf6465d82a18a1e9603eb3b966d5da1db4a881b90f36321e712889972c6a0",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/businesses/technology/",
+        "ja": "https://www.arasaka.com/ja/businesses/technology/"
+      }
+    },
+    {
+      "id": "products",
+      "lang": "en",
+      "route": "/products/",
+      "file": "products/index.html",
+      "title": "Relic, Mikoshi & Smart Weapons | Arasaka Products",
+      "image": "/assets/shingen-v3-1600.jpg",
+      "social": "/assets/social/products-en.jpg",
+      "hash": "ed59c599dab5f3234e28b9d746a2f9ea61672b52f979d6c0e201032fc6066e14",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/",
+        "ja": "https://www.arasaka.com/ja/products/"
+      }
+    },
+    {
+      "id": "products",
+      "lang": "ja",
+      "route": "/ja/products/",
+      "file": "ja/products/index.html",
+      "title": "Relic・ミコシ・スマート兵器 | アラサカ製品",
+      "image": "/assets/shingen-v3-1600.jpg",
+      "social": "/assets/social/products-ja.jpg",
+      "hash": "92526092d446cd8d1d96dd8a3491c6f30860d7aa721723cdc4146ce7a69e2c4d",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/",
+        "ja": "https://www.arasaka.com/ja/products/"
+      }
+    },
+    {
+      "id": "relic",
+      "lang": "en",
+      "route": "/products/relic/",
+      "file": "products/relic/index.html",
+      "title": "Relic | Arasaka Neural biochip",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/relic-en.jpg",
+      "hash": "21d36fac3b8595ab1ab003d5a09ddf28816f9deef22506663d4326723ee2dcd4",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/relic/",
+        "ja": "https://www.arasaka.com/ja/products/relic/"
+      }
+    },
+    {
+      "id": "relic",
+      "lang": "ja",
+      "route": "/ja/products/relic/",
+      "file": "ja/products/relic/index.html",
+      "title": "Relic | アラサカ ニューラル・バイオチップ",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/relic-ja.jpg",
+      "hash": "0847e846d4e1eb8f0cd3f8dc7c811c5abe0663a2bcba02748f91ec57dbefbbf4",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/relic/",
+        "ja": "https://www.arasaka.com/ja/products/relic/"
+      }
+    },
+    {
+      "id": "mikoshi",
+      "lang": "en",
+      "route": "/products/mikoshi/",
+      "file": "products/mikoshi/index.html",
+      "title": "Mikoshi | Arasaka Engram infrastructure",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/mikoshi-en.jpg",
+      "hash": "cdefe631bc5973843409306b36edc435233181735ff4e727318b6972aa5c39a4",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/mikoshi/",
+        "ja": "https://www.arasaka.com/ja/products/mikoshi/"
+      }
+    },
+    {
+      "id": "mikoshi",
+      "lang": "ja",
+      "route": "/ja/products/mikoshi/",
+      "file": "ja/products/mikoshi/index.html",
+      "title": "ミコシ | アラサカ エングラム基盤",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/mikoshi-ja.jpg",
+      "hash": "b2ef779146c539984d556e0d0461c306aac06c0a1543e0c95055b895e5957639",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/mikoshi/",
+        "ja": "https://www.arasaka.com/ja/products/mikoshi/"
+      }
+    },
+    {
+      "id": "shingen",
+      "lang": "en",
+      "route": "/products/shingen/",
+      "file": "products/shingen/index.html",
+      "title": "TKI-20 Shingen | Arasaka Smart submachine gun",
+      "image": "/assets/shingen-v3-1600.jpg",
+      "social": "/assets/social/shingen-en.jpg",
+      "hash": "452e690e403e5ba02b2d34c72a07e93e91efd59a3d4bf6222d50c68f9da1a96f",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/shingen/",
+        "ja": "https://www.arasaka.com/ja/products/shingen/"
+      }
+    },
+    {
+      "id": "shingen",
+      "lang": "ja",
+      "route": "/ja/products/shingen/",
+      "file": "ja/products/shingen/index.html",
+      "title": "シンゲン | アラサカ スマート・サブマシンガン",
+      "image": "/assets/shingen-v3-1600.jpg",
+      "social": "/assets/social/shingen-ja.jpg",
+      "hash": "efe371c888fed5079a9f2138334cb2020a8bb06a15f521820b53b4f0925c95e4",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/shingen/",
+        "ja": "https://www.arasaka.com/ja/products/shingen/"
+      }
+    },
+    {
+      "id": "yukimura",
+      "lang": "en",
+      "route": "/products/yukimura/",
+      "file": "products/yukimura/index.html",
+      "title": "HJKE-11 Yukimura | Arasaka Smart pistol",
+      "image": "/assets/yukimura-v3-1600.jpg",
+      "social": "/assets/social/yukimura-en.jpg",
+      "hash": "ba63a86549910b108e764878d097b03e623ee008109f722a640705322e451e9b",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/yukimura/",
+        "ja": "https://www.arasaka.com/ja/products/yukimura/"
+      }
+    },
+    {
+      "id": "yukimura",
+      "lang": "ja",
+      "route": "/ja/products/yukimura/",
+      "file": "ja/products/yukimura/index.html",
+      "title": "ユキムラ | アラサカ スマート・ピストル",
+      "image": "/assets/yukimura-v3-1600.jpg",
+      "social": "/assets/social/yukimura-ja.jpg",
+      "hash": "930b68f2f4b175d91f89e854764e99894ff4e5a0e029843be09854d235d40bc0",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/products/yukimura/",
+        "ja": "https://www.arasaka.com/ja/products/yukimura/"
+      }
+    },
+    {
+      "id": "research",
+      "lang": "en",
+      "route": "/research/",
+      "file": "research/index.html",
+      "title": "Neural Interfaces & Engram Research | Arasaka",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/research-en.jpg",
+      "hash": "8f7b0566f466d68b73bd4289e2462c3e5d506ef7af27b69c0f5db2179086fa9e",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/research/",
+        "ja": "https://www.arasaka.com/ja/research/"
+      }
+    },
+    {
+      "id": "research",
+      "lang": "ja",
+      "route": "/ja/research/",
+      "file": "ja/research/index.html",
+      "title": "神経接続とエングラム研究 | アラサカ",
+      "image": "/assets/mikoshi-v3-1600.jpg",
+      "social": "/assets/social/research-ja.jpg",
+      "hash": "611c4b6ce339117bece9dd8189c3f8da7be4aeeaee78f5378529244b347d3c3a",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/research/",
+        "ja": "https://www.arasaka.com/ja/research/"
+      }
+    },
+    {
+      "id": "engram-technology",
+      "lang": "en",
+      "route": "/research/engram-technology/",
+      "file": "research/engram-technology/index.html",
+      "title": "Relic, Mikoshi & Soulkiller: Engram Architecture | Arasaka",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/engram-technology-en.jpg",
+      "hash": "776090372967321347be8297432056544ba668aa09f03838f20717629c1152b0",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/research/engram-technology/",
+        "ja": "https://www.arasaka.com/ja/research/engram-technology/"
+      }
+    },
+    {
+      "id": "engram-technology",
+      "lang": "ja",
+      "route": "/ja/research/engram-technology/",
+      "file": "ja/research/engram-technology/index.html",
+      "title": "Relic・ミコシ・ソウルキラー：エングラム技術 | アラサカ",
+      "image": "/assets/relic-v3-1600.jpg",
+      "social": "/assets/social/engram-technology-ja.jpg",
+      "hash": "1ad92f2a974a6f79121e09d91eee13ec24b84b9512e1164f32b1a31520fd7c92",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/research/engram-technology/",
+        "ja": "https://www.arasaka.com/ja/research/engram-technology/"
+      }
+    },
+    {
+      "id": "company",
+      "lang": "en",
+      "route": "/company/",
+      "file": "company/index.html",
+      "title": "Company & Restored Leadership | Arasaka Corporation",
+      "image": "/assets/headquarters-v3-1600.jpg",
+      "social": "/assets/social/company-en.jpg",
+      "hash": "092fed4798d82e6f64309c53de7af56e2925bad288e3143884478b40b53662a0",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/company/",
+        "ja": "https://www.arasaka.com/ja/company/"
+      }
+    },
+    {
+      "id": "company",
+      "lang": "ja",
+      "route": "/ja/company/",
+      "file": "ja/company/index.html",
+      "title": "企業情報と指導体制 | アラサカ株式会社",
+      "image": "/assets/headquarters-v3-1600.jpg",
+      "social": "/assets/social/company-ja.jpg",
+      "hash": "6901389456ef5425ec8af0b100dae9c7341ccc247d874e9b178e041e24b2dfba",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/company/",
+        "ja": "https://www.arasaka.com/ja/company/"
+      }
+    },
+    {
+      "id": "contact",
+      "lang": "en",
+      "route": "/contact/",
+      "file": "contact/index.html",
+      "title": "Global Operations & Regional Directory | Arasaka",
+      "image": "/assets/banking-v3-1600.jpg",
+      "social": "/assets/social/contact-en.jpg",
+      "hash": "764283d93d2bb7bdd4b53dc3a8fdec3d3b58fd4d0c80dfe2be3a3d24ca50270e",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/contact/",
+        "ja": "https://www.arasaka.com/ja/contact/"
+      }
+    },
+    {
+      "id": "contact",
+      "lang": "ja",
+      "route": "/ja/contact/",
+      "file": "ja/contact/index.html",
+      "title": "グローバル拠点・地域一覧 | アラサカ",
+      "image": "/assets/banking-v3-1600.jpg",
+      "social": "/assets/social/contact-ja.jpg",
+      "hash": "4e619576029d10a1c0c13b1718206c0248dda4e6a82f2a27935525c4f770017f",
+      "lastmod": "2026-10-04",
+      "alternates": {
+        "en": "https://www.arasaka.com/contact/",
+        "ja": "https://www.arasaka.com/ja/contact/"
+      }
+    }
+  ]
+}
