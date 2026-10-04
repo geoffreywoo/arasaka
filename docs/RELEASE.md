@@ -42,7 +42,7 @@ PR [#1](https://github.com/geoffreywoo/arasaka/pull/1) merged as `ff2046a11819af
 
 The custom domain passed all 28 exact HTML hash checks, shared assets and sitemap, 127 HTTP redirects, the 112-case viewport matrix, and 28 no-JavaScript navigation checks. An apex Japanese product request returned 308 to the matching www URL, preserving the path. Production mobile Lighthouse 13.5.0 scored 100 in all four categories: FCP 0.9s, LCP 1.1s, CLS 0, TBT 0ms. These are one-run lab results, not field measurements.
 
-A final image-quality pass adjusts source selection for tall mobile cover crops and explicitly tests that letter-lock labels settle. That follow-up is preview-verified before merging; it does not change routes, identity artwork, or the narrative premise. The original pre-refresh rollback remains retained.
+A final image-quality pass adjusts source selection for tall mobile cover crops and explicitly tests that letter-lock labels settle. The sharper Mikoshi page scored 99 performance and 100 accessibility, best practices, and SEO in the local mobile lab check (LCP 2.3s). That follow-up is preview-verified before merging; it does not change routes, identity artwork, or the narrative premise. The original pre-refresh rollback remains retained.
 
 ## CI Authorization
 
