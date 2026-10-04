@@ -17,11 +17,11 @@ Thanks for considering a contribution. This repository is a static design-fictio
 
 This site should read like a controlled corporate website from a sovereign-scale conglomerate. Please avoid additions that make the project feel like a lore explainer, parody page, meme, or wiki.
 
-Good copy is operational, specific, and restrained. It should sound like procurement, compliance, investor relations, security operations, or public accountability material from a company that expects to be obeyed.
+Good copy is specific and restrained: explain businesses, products, manufacturing, and regional operations. Avoid unsupported financial figures, performance promises, recruitment claims, or fictional contact routing. Saburo's restored leadership is this project's chosen narrative branch, not a declaration of canonical franchise history. Document source material versus speculative additions in `docs/CONTENT-SOURCES.md`.
 
 ## Local Checks
 
-Page content and shared templates live in `scripts/build-site.mjs`. After changing them, regenerate the committed static pages:
+Page definitions and bilingual content live in `scripts/site-content.mjs`; shared templates live in `scripts/build-site.mjs`. After changing them, regenerate all 28 committed static pages:
 
 ```bash
 node scripts/build-site.mjs
@@ -47,7 +47,7 @@ Then spot-check the page or route you changed at:
 http://127.0.0.1:4187/
 ```
 
-Spot-check the homepage, the relevant route, and a 390px mobile viewport in both English and Japanese.
+Check 360px, 390px, 768px, and desktop in both languages, including images, native menus, keyboard focus, reduced motion, and no-JavaScript navigation. With Playwright available, run `node scripts/verify-browser.mjs`. The shared manifest drives structural and browser coverage. No locale preference should cause an automatic redirect.
 
 ## Asset And IP Boundaries
 

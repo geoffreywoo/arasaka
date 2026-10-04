@@ -1,0 +1,6 @@
+.git
+.github
+assets/source
+scripts
+test-results
+node_modules

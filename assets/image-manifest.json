@@ -1,0 +1,30 @@
+{
+  "relic": {
+    "width": 1672,
+    "height": 941
+  },
+  "headquarters": {
+    "width": 1672,
+    "height": 941
+  },
+  "mikoshi": {
+    "width": 1672,
+    "height": 941
+  },
+  "shingen": {
+    "width": 1672,
+    "height": 941
+  },
+  "yukimura": {
+    "width": 1672,
+    "height": 941
+  },
+  "security": {
+    "width": 1672,
+    "height": 941
+  },
+  "banking": {
+    "width": 1672,
+    "height": 941
+  }
+}
