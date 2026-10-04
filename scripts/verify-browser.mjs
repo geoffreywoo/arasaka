@@ -58,6 +58,7 @@ try {
         const file = `${entry.id}-${entry.lang}-${width}.png`;
         await page.locator("summary").evaluate(el => el.blur());
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+        await page.waitForTimeout(450);
         await page.screenshot({ path: resolve(output, file), animations: "disabled" });
         screenshots.push(file);
       }
@@ -85,6 +86,10 @@ try {
   if (JSON.stringify(before) !== JSON.stringify(after)) failures.push("Reduced motion scramble changed");
   if (await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior) !== "auto") failures.push("Reduced motion smooth scroll remains");
   await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto(base + "/products/shingen/");
+  await page.waitForTimeout(600);
+  const expectedCodes = await page.evaluate(html => [...new DOMParser().parseFromString(html, "text/html").querySelectorAll("[data-scramble]")].map(el => el.textContent), await readFile(resolve(root, "products/shingen/index.html"), "utf8"));
+  if (JSON.stringify(await page.locator("[data-scramble]").allTextContents()) !== JSON.stringify(expectedCodes)) failures.push("Letter-lock labels did not settle");
   await page.goto(base + "/products/relic/#profile");
   await page.locator('.language-switch a[lang="ja"]').click();
   if (!page.url().endsWith("/ja/products/relic/#profile")) failures.push("Language switch lost fragment");
