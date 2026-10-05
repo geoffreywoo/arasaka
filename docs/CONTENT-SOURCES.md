@@ -1,5 +1,13 @@
 # Content Sources & Narrative Boundaries
 
+## The Cost of Continuity
+
+Source URLs below were reopened on 2026-10-05. The Relic account describes commercial personality interaction; the Corporations article describes Night City's protective services and Japanese-product distribution. Neither establishes the invented NC-0417 service terms, custody permissions, executive directive, or subjective-identity findings.
+
+NC-0417 is a new fictional case: an anonymous client, her daughter, a railway memory, and five internal records at relative days 0, 18, 26, 31, and 44. All correspondence, annotations, departments' decisions, and operational policies are creative extrapolation. They are not official game shards or quotations from established characters. The narrative makes no finding that personality recognition proves personal survival. Administrative closure does not resolve the story's identity question.
+
+The Saburo restoration premise remains the selected ending branch, not the canonical sequel. No precise post-2077 year, new canonical scandal, ordinary host-transfer service, or invented quantitative performance is asserted. Public-page custody/authorization language is this project's institutional model, not a verified Arasaka contract. Generated settings and equipment are reconstructed illustrations, not exact official depictions.
+
 Reviewed for the restored-empire refresh on 2026-10-03 (America/Los_Angeles). This document separates referenced setting material from new design fiction. Source links are citations, not claims of endorsement.
 
 ## Reference Material

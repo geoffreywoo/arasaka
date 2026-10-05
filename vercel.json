@@ -362,26 +362,6 @@
       "permanent": true
     },
     {
-      "source": "/archive",
-      "destination": "/research/",
-      "permanent": true
-    },
-    {
-      "source": "/archive/",
-      "destination": "/research/",
-      "permanent": true
-    },
-    {
-      "source": "/archive/:path*/",
-      "destination": "/research/",
-      "permanent": true
-    },
-    {
-      "source": "/archive/:path*",
-      "destination": "/research/",
-      "permanent": true
-    },
-    {
       "source": "/blackwall",
       "destination": "/research/",
       "permanent": true

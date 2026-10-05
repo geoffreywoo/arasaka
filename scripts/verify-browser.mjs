@@ -38,10 +38,16 @@ try {
           const r = el.getBoundingClientRect();
           return el.checkVisibility() && r.width > 0 && (r.right > innerWidth + 1 || r.left < -1) && getComputedStyle(el).position !== "absolute";
         }).map(el => `${el.tagName}.${el.className}`).slice(0, 5);
-        return { scrollWidth: document.documentElement.scrollWidth, width: innerWidth, overflow, brokenImages: [...document.images].filter(img => !img.complete || !img.naturalWidth).map(img => img.currentSrc), h1: document.querySelector("h1").innerText, language: document.documentElement.lang };
+        const framing = [...document.querySelectorAll('.archive-photo, .dossier-photo')].map(el => {
+          const box = el.getBoundingClientRect(), img = el.querySelector('img').getBoundingClientRect();
+          const expected = el.classList.contains('archive-photo') ? 16/10 : innerWidth <= 600 ? 4/3 : 21/9;
+          return { ratio: box.width/box.height, expected, imageHeight: img.height, height: box.height };
+        });
+        return { scrollWidth: document.documentElement.scrollWidth, width: innerWidth, overflow, framing, brokenImages: [...document.images].filter(img => !img.complete || !img.naturalWidth).map(img => img.currentSrc), h1: document.querySelector("h1").innerText, language: document.documentElement.lang };
       });
       if (result.scrollWidth > width || result.overflow.length || result.brokenImages.length) failures.push(`${entry.route} ${width}: ${JSON.stringify(result)}`);
       if (result.language !== entry.lang) failures.push(`${entry.route}: incorrect language`);
+      if (result.framing.some(f => Math.abs(f.ratio-f.expected) > .01 || Math.abs(f.imageHeight-f.height) > 1)) failures.push(`${entry.route}: image framing failed ${JSON.stringify(result.framing)}`);
       if (width <= 768) {
         const menu = page.locator("[data-mobile-menu]");
         await menu.locator("summary").focus();
@@ -54,7 +60,7 @@ try {
         if (!await menu.locator("summary").evaluate(el => el === document.activeElement)) failures.push(`${entry.route}: menu focus not restored`);
       }
       checks.push({ route: entry.route, width, status: response.status(), ...result });
-      if ((width === 390 && ["home", "shingen", "mikoshi", "company", "banking", "engram-technology"].includes(entry.id)) || (width === 1440 && ["home", "products", "company", "engram-technology"].includes(entry.id))) {
+      if ((width === 390 && ["home", "shingen", "mikoshi", "company", "banking", "engram-technology", "archive", "client-intake", "case-disposition"].includes(entry.id)) || (width === 1440 && ["home", "products", "company", "engram-technology", "archive", "client-intake"].includes(entry.id))) {
         const file = `${entry.id}-${entry.lang}-${width}.png`;
         await page.locator("summary").evaluate(el => el.blur());
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
@@ -77,7 +83,27 @@ try {
     await alt.click();
     if (plain.url() !== base + new URL(entry.alternates[entry.lang === "en" ? "ja" : "en"]).pathname) failures.push(`${entry.route}: no-JS language link failed`);
   }
+  for (const prefix of ["", "/ja"]) {
+    await plain.goto(base + prefix + "/products/relic/");
+    await plain.locator('.record-reference a').click();
+    for (const id of ["client-intake", "access-review", "identity-assessment", "succession-directive", "case-disposition"]) {
+      if (!plain.url().endsWith(prefix + "/archive/" + id + "/")) failures.push("No-JS archive trail failed: " + id);
+      await plain.locator('.record-navigation a').last().click();
+    }
+    if (!plain.url().endsWith(prefix + "/archive/")) failures.push("No-JS archive return failed");
+  }
   await noJS.close();
+  for (const locale of ["", "/ja"]) {
+    await page.goto(base + locale + "/products/relic/");
+    await page.locator('.record-reference a').click();
+    if (!page.url().endsWith(locale + "/archive/client-intake/")) failures.push("Relic dossier discovery failed");
+    for (const id of ["access-review", "identity-assessment", "succession-directive", "case-disposition"]) {
+      await page.locator('.record-navigation a').last().click();
+      if (!page.url().endsWith(locale + "/archive/" + id + "/")) failures.push("Dossier sequence failed: " + id);
+    }
+    await page.locator('.record-navigation a').last().click();
+    if (!page.url().endsWith(locale + "/archive/")) failures.push("Dossier return failed");
+  }
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(base + "/products/shingen/");
   const before = await page.locator("[data-scramble]").allTextContents();
@@ -94,7 +120,7 @@ try {
   await page.locator('.language-switch a[lang="ja"]').click();
   if (!page.url().endsWith("/ja/products/relic/#profile")) failures.push("Language switch lost fragment");
   await writeFile(resolve(output, "report.json"), JSON.stringify({ base, checkedAt: new Date().toISOString(), viewportChecks: checks.length, noJavaScriptPages: pages.length, checks, screenshots, failures }, null, 2) + "\n");
-  console.log(`${failures.length ? "FAIL" : "PASS"}: ${checks.length} viewport checks, 28 no-JS pages, keyboard navigation, language links, reduced motion`);
+  console.log(`${failures.length ? "FAIL" : "PASS"}: ${checks.length} viewport checks, ${pages.length} no-JS pages, keyboard navigation, archive trail, language links, reduced motion`);
   if (failures.length) { console.error(failures.join("\n")); process.exitCode = 1; }
 } finally {
   await browser.close();

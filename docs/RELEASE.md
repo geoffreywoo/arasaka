@@ -1,5 +1,19 @@
 # Restored Empire Release Verification
 
+## The Cost of Continuity / 2026-10-05
+
+This follow-up expands the site to 20 pages in each language / 40 canonical URLs. Five connected NC-0417 dossiers and their index use the existing static generator. All 14 public pages receive new narrative connections; eight reconstructed scenes and a portrait Relic adaptation provide the new imagery. Supplied identity assets and Geoff Woo/X attribution remain unchanged.
+
+Local structural and narrative checks pass. Browser verification covers 160 viewport cases, 40 no-JavaScript pages, complete EN/JA dossier trails with and without JavaScript, keyboard navigation, language switching, reduced motion, and fixed document-image proportions. Screenshot review caught and corrected intrinsic image-height expansion; mobile Lighthouse identified and corrected the archive introduction's contrast.
+
+Mobile Lighthouse lab results: Home 98 performance, Relic 99, Archive 100, Executive Directive 100; all four have 100 accessibility, best practices, and SEO after the archive contrast correction. These are local simulated results, not field measurements. Test receipts remain in ignored `test-results/lighthouse-continuity-*.json` and browser reports.
+
+Four obsolete `/archive` redirects would have intercepted the new index and dossiers. They are removed, leaving 123 unrelated permanent legacy redirects. Preview and production HTTP checks must verify all remaining rules and confirm that the archive returns content rather than redirecting to Research.
+
+The immediate pre-change rollback deployment is `dpl_BzTNXa74vKEoGJwCxiGAR7bbgD2M`, `https://arasaka-1ayh2u40k-geoffrey-woos-projects.vercel.app`, confirmed READY on 2026-10-05. It is retained alongside the older rollback below. Deployment receipts for this follow-up are recorded only after preview and production confirmation. No outreach, Search Console changes, or analytics additions are included.
+
+Verified protected preview: `dpl_FkT9CgYQpx2fWhsB1em6UQnhjPvg`, [preview](https://arasaka-j7h9hgcpa-geoffrey-woos-projects.vercel.app), READY. Authenticated HTTP checks passed all 40 exact page hashes, every active responsive photo variant, social images, shared assets, sitemap, and 123 HTTP 308 redirects. The preview also passed the full 160-case browser matrix and 40 no-JavaScript checks. Deployment protection remained enabled. [PR #3](https://github.com/geoffreywoo/arasaka/pull/3) carries the release; the final production receipt is kept in ignored `test-results/continuity-release-receipt.json` after live confirmation, avoiding a documentation-only redeployment loop.
+
 Release work began 2026-10-03, America/Los_Angeles. UTC sitemap timestamps may fall on 2026-10-04. Technical checks do not prove Google indexing or ranking.
 
 ## Existing Project & Rollback

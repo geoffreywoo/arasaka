@@ -1,6 +1,6 @@
 # Search Setup & Measurement
 
-Canonical host: **https://www.arasaka.com**. There are 28 published canonical pages, not 28 confirmed indexed pages. Search Console access and provider metrics have not been supplied; those values remain unknown, not zero.
+Canonical host: **https://www.arasaka.com**. The Cost of Continuity release expands the technical inventory to 40 canonical pages; this is not a count of confirmed indexed pages. Search Console access and provider metrics have not been supplied; those values remain unknown, not zero.
 
 ## Implemented
 
@@ -24,7 +24,7 @@ Create the first saved receipt after owner access is available. Use the last com
 
 | Metric | Baseline | Source / definition |
 | --- | --- | --- |
-| Published canonical URLs | 28 after refresh | Generated manifest; technical inventory only |
+| Published canonical URLs | 40 after continuity release | Generated manifest; technical inventory only |
 | Search impressions | Pending owner export | Search Console Performance, web search, same date filters |
 | Search clicks | Pending owner export | Same Performance export; not total traffic |
 | Indexed pages | Pending owner export | Page Indexing report; distinguish indexed/excluded/pending |

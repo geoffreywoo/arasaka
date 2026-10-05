@@ -1,6 +1,7 @@
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
+import { assets } from "./site-content.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const manifest = JSON.parse(await readFile(resolve(root, "scripts/page-manifest.json"), "utf8"));
@@ -26,7 +27,12 @@ for (const entry of manifest.pages) {
   if (base === manifest.origin && /noindex/i.test(response.headers.get("x-robots-tag") || "")) failures.push(`${entry.route}: production is noindex`);
   checks.push({ route: entry.route, status: response.status, hash: hash(body) });
 }
-for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.social]).concat(["/styles.css", "/app.js", "/robots.txt", "/sitemap.xml"]))) {
+const imagePaths = Object.values(assets).flatMap(a => [480,960,1600].flatMap(width => ["jpg","webp"].map(ext => `/assets/${a.stem}-${width}.${ext}`)));
+for (const a of Object.values(assets)) {
+  const mobile = `/assets/${a.stem}-mobile.webp`;
+  try { await access(resolve(root, mobile.slice(1))); imagePaths.push(mobile); } catch (error) { if (error.code !== "ENOENT") throw error; }
+}
+for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.social]).concat(imagePaths, ["/styles.css", "/app.js", "/robots.txt", "/sitemap.xml"]))) {
   const response = await fetch(base + path, { headers });
   const remote = Buffer.from(await response.arrayBuffer());
   const local = await readFile(resolve(root, path.slice(1)));
@@ -43,5 +49,5 @@ for (const rule of config.redirects) {
 }
 await mkdir(output, { recursive: true });
 await writeFile(resolve(output, "report.json"), JSON.stringify({ base, checkedAt: new Date().toISOString(), failures, checks }, null, 2) + "\n");
-console.log(`${failures.length ? "FAIL" : "PASS"}: 28 live HTML hashes, shared assets/sitemap, ${config.redirects.length} permanent redirects`);
+console.log(`${failures.length ? "FAIL" : "PASS"}: ${manifest.pages.length} live HTML hashes, shared assets/sitemap, ${config.redirects.length} permanent redirects`);
 if (failures.length) { console.error(failures.join("\n")); process.exitCode = 1; }

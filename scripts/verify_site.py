@@ -76,7 +76,7 @@ def main():
     expected = {p["file"] for p in PAGES}
     actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob("index.html") if not {".git", ".vercel", "node_modules"}.intersection(p.relative_to(ROOT).parts)}
     check(actual == expected, f"Route coverage mismatch: {actual ^ expected}")
-    check(len(PAGES) == 28 and Counter(p["lang"] for p in PAGES) == {"en": 14, "ja": 14}, "Expected 14 EN and 14 JA pages")
+    check(len(PAGES) == 40 and Counter(p["lang"] for p in PAGES) == {"en": 20, "ja": 20}, "Expected 20 EN and 20 JA pages")
     titles, descriptions = set(), set()
     for entry in PAGES:
         page = ROOT / entry["file"]
@@ -123,7 +123,7 @@ def main():
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml", "i": "http://www.google.com/schemas/sitemap-image/1.1"}
     entries = ET.parse(ROOT / "sitemap.xml").getroot().findall("s:url", ns)
     sitemap = {e.findtext("s:loc", namespaces=ns): e for e in entries}
-    check(set(sitemap) == {ORIGIN + p["route"] for p in PAGES} and len(entries) == 28, "Sitemap coverage mismatch")
+    check(set(sitemap) == {ORIGIN + p["route"] for p in PAGES} and len(entries) == len(PAGES), "Sitemap coverage mismatch")
     for p in PAGES:
         e = sitemap.get(ORIGIN + p["route"])
         if e is None: continue
@@ -141,7 +141,7 @@ def main():
     if failures:
         print("Site verification failed:\n" + "\n".join("- " + f for f in failures))
         raise SystemExit(1)
-    print(f"PASS: 28 localized pages; links, assets, metadata, language pairs, sitemap, and {len(redirects)} redirects")
+    print(f"PASS: {len(PAGES)} localized pages; links, assets, metadata, language pairs, sitemap, and {len(redirects)} redirects")
 
 
 if __name__ == "__main__": main()
