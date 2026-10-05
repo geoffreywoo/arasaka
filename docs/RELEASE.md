@@ -12,6 +12,8 @@ Four obsolete `/archive` redirects would have intercepted the new index and doss
 
 The immediate pre-change rollback deployment is `dpl_BzTNXa74vKEoGJwCxiGAR7bbgD2M`, `https://arasaka-1ayh2u40k-geoffrey-woos-projects.vercel.app`, confirmed READY on 2026-10-05. It is retained alongside the older rollback below. Deployment receipts for this follow-up are recorded only after preview and production confirmation. No outreach, Search Console changes, or analytics additions are included.
 
+Verified protected preview: `dpl_FkT9CgYQpx2fWhsB1em6UQnhjPvg`, [preview](https://arasaka-j7h9hgcpa-geoffrey-woos-projects.vercel.app), READY. Authenticated HTTP checks passed all 40 exact page hashes, every active responsive photo variant, social images, shared assets, sitemap, and 123 HTTP 308 redirects. The preview also passed the full 160-case browser matrix and 40 no-JavaScript checks. Deployment protection remained enabled. [PR #3](https://github.com/geoffreywoo/arasaka/pull/3) carries the release; the final production receipt is kept in ignored `test-results/continuity-release-receipt.json` after live confirmation, avoiding a documentation-only redeployment loop.
+
 Release work began 2026-10-03, America/Los_Angeles. UTC sitemap timestamps may fall on 2026-10-04. Technical checks do not prove Google indexing or ranking.
 
 ## Existing Project & Rollback
