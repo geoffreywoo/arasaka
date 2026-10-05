@@ -21,7 +21,7 @@ Good copy is specific and restrained: explain businesses, products, manufacturin
 
 ## Local Checks
 
-Page definitions and bilingual content live in `scripts/site-content.mjs`; shared templates live in `scripts/build-site.mjs`. After changing them, regenerate all 28 committed static pages:
+Page definitions live in `scripts/site-content.mjs`; bilingual dossiers and public narrative connections live in `scripts/archive-content.mjs`; shared templates live in `scripts/build-site.mjs`. After changing them, regenerate all 40 committed static pages and run `node scripts/verify-narrative.mjs` in addition to structural verification:
 
 ```bash
 node scripts/build-site.mjs

@@ -1,5 +1,13 @@
 # Asset Attribution
 
+## The Cost of Continuity / 2026-10-05
+
+Eight new AI-generated photographic reconstructions appear in `source/*-v4.png`: Relic in a fitted case, Mikoshi containment infrastructure, Tokyo headquarters, Night City perimeter, cartridge custody, microassembly, family consultation, and a vacant review terminal. A ninth source, `relic-mobile-v4.png`, is a portrait adaptation of the same product scene. Prompts and cleanup notes are recorded in `generation-v4.json`; delivery mappings are in `generation-inputs.json`.
+
+These are original illustrative reconstructions, not official locations, extracted models, recovered records, or real product photographs. The pictured family does not represent a canonical character or identify the fictional NC-0417 participants. Generated crests, lettering, and insignia were removed from selected scenes; Mikoshi's initially generated humanoid projections were removed to avoid implying literal human figures in storage. The supplied identity files remain unchanged and are used separately in interface/social graphics. Weapon visuals remain the previously documented v3 reconstructions.
+
+All case documents and archive annotations are original fiction. No game shards or official character dialogue are reproduced. Code licensing does not confer franchise or identity-artwork rights.
+
 ## Restored Empire Refresh
 
 Seven coordinated original AI-generated concept scenes were created with OpenAI image generation for this project on 2026-10-03 (local time). They are visual reconstructions, not official screenshots, extracted game models, certified product photography, or exact reproductions of in-game silhouettes.

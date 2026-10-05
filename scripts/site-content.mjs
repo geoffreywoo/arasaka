@@ -1,11 +1,17 @@
+import { dossiers } from "./archive-content.mjs";
 export const origin = "https://www.arasaka.com";
 export const languages = ["en", "ja"];
 export const pair = (en, ja) => ({ en, ja });
 
 export const assets = {
-  relic: { stem: "relic-v3", alt: pair("Relic biochip in a precision laboratory cradle", "精密な実験用ホルダーに収められたRelicバイオチップ"), position: "76% center" },
-  headquarters: { stem: "headquarters-v3", alt: pair("Arasaka Tokyo headquarters and corporate plaza", "アラサカ東京本社と企業広場"), position: "center" },
-  mikoshi: { stem: "mikoshi-v3", alt: pair("Mikoshi engram archive infrastructure", "ミコシのエングラム・アーカイブ基盤"), position: "center" },
+  relic: { stem: "relic-v4", alt: pair("Reconstructed Relic neural cartridge with gold contacts in a fitted transport case", "専用運搬ケースに収められた金色端子付きRelic神経カートリッジの再構成画像"), position: "76% center" },
+  headquarters: { stem: "headquarters-v4", alt: pair("Reconstructed Tokyo headquarters plaza, graphite towers and staff arriving beneath elevated transit", "高架交通の下で職員が到着する、東京本社広場と黒鉛色の塔の再構成画像"), position: "center" },
+  mikoshi: { stem: "mikoshi-v4", alt: pair("Reconstructed Mikoshi containment columns beyond a controlled archive threshold", "管理された境界の奥に並ぶミコシの保管設備の再構成画像"), position: "center" },
+  "night-city": { stem: "night-city-v4", alt: pair("Speculative Night City corporate perimeter with staff, guards and elevated transit", "職員、警備員、高架交通を含む、独自に構想したナイトシティの企業境界"), position: "center" },
+  transport: { stem: "transport-v4", alt: pair("Gloved custodians handing over a sealed neural cartridge case at an inspection counter", "検査窓口で密封された神経カートリッジケースを引き継ぐ、手袋を着用した管理担当者"), position: "center" },
+  manufacturing: { stem: "manufacturing-v4", alt: pair("Robotic microassembly and gold contacts under inspection optics in a reconstructed cleanroom", "再構成したクリーンルーム内の検査光学装置の下にある、ロボット微細組立設備と金色端子"), position: "center" },
+  consultation: { stem: "consultation-v4", alt: pair("A parent and adult daughter beside an inactive interface and an empty consultation chair", "停止中の接続機器と空いた相談用椅子のそばに座る親と成人した娘"), position: "center" },
+  "review-terminal": { stem: "review-terminal-v4", alt: pair("An empty visitor chair facing an inactive review terminal and retained paper folder", "停止中の審査端末と保管された書類に向かう、空いた訪問者用の椅子"), position: "center" },
   shingen: { stem: "shingen-v3", alt: pair("TKI-20 Shingen smart submachine gun, reconstructed product view", "TKI-20シンゲンのスマート・サブマシンガンを再構成した製品画像"), position: "center" },
   yukimura: { stem: "yukimura-v3", alt: pair("HJKE-11 Yukimura smart pistol, reconstructed product view", "HJKE-11ユキムラのスマート・ピストルを再構成した製品画像"), position: "center" },
   security: { stem: "security-v3", alt: pair("Private security team at a Tokyo logistics terminal", "東京の物流ターミナルで活動する民間警備チーム"), position: "center" },
@@ -64,7 +70,7 @@ export const businesses = [
 export const products = [
   {
     id: "relic", code: "RELIC", name: pair("Relic", "Relic"), category: pair("Neural biochip", "ニューラル・バイオチップ"), image: "relic", business: "technology",
-    headline: pair("What defines you, carried forward.", "あなたを形づくるものを、その先へ。"),
+    headline: pair("A familiar voice. A physical connection.", "聞き覚えのある声。物理的な接点。"),
     summary: pair("Arasaka's biochip platform for stored personality constructs and neural interaction.", "人格構築体の保存と神経接続のための、アラサカのバイオチップ・プラットフォーム。"),
     overview: pair("Relic places a digital personality construct on a biochip designed for neural interfacing. It is the most visible expression of Arasaka's work in engram technology: a physical connection to knowledge, memory, and identity.", "Relicは、神経接続を目的とするバイオチップにデジタル人格構築体を格納します。知識、記憶、アイデンティティへの物理的な接点として、アラサカのエングラム技術を象徴します。"),
     features: [
@@ -80,7 +86,7 @@ export const products = [
   },
   {
     id: "mikoshi", code: "MIKOSHI", name: pair("Mikoshi", "ミコシ"), category: pair("Engram infrastructure", "エングラム基盤"), image: "mikoshi", business: "technology",
-    headline: pair("An archive beyond the individual.", "個人を超えて続く、アーカイブ。"),
+    headline: pair("The archive behind the encounter.", "出会いの背後にある、アーカイブ。"),
     summary: pair("Protected infrastructure for the storage and management of digital personality constructs.", "デジタル人格構築体の保存と管理を担う、保護された基盤。"),
     overview: pair("Mikoshi is Arasaka's engram archive environment, not a consumer device. It provides the protected digital infrastructure in which personality constructs can be retained and managed, separate from the biochip that carries a construct.", "ミコシは、一般消費者向け機器ではなく、アラサカのエングラム・アーカイブ環境です。構築体を携帯するバイオチップとは別に、人格構築体を保持・管理するための保護されたデジタル基盤を提供します。"),
     features: [[pair("Dedicated archive", "専用アーカイブ"), pair("A distinct environment for digital personality constructs rather than general-purpose storage.", "汎用ストレージとは異なる、デジタル人格構築体のための専用環境。")], [pair("Protected access", "保護されたアクセス"), pair("Archive operations are separated from public networks and ordinary consumer interfaces.", "アーカイブ運用を公開ネットワークや一般消費者向けインターフェースから分離します。")], [pair("Platform relationship", "プラットフォームとの関係"), pair("Mikoshi retains the archive; Relic carries a construct into a neural interface.", "ミコシがアーカイブを保持し、Relicが構築体を神経接続へ運びます。")]],
@@ -92,7 +98,7 @@ export const products = [
   },
   {
     id: "shingen", code: "TKI-20", name: pair("Shingen", "シンゲン"), category: pair("Smart submachine gun", "スマート・サブマシンガン"), image: "shingen", business: "security",
-    headline: pair("Precision, integrated.", "精度を、一体に。"),
+    headline: pair("TKI-20. Smart systems in a compact format.", "TKI-20。小型構成のスマートシステム。"),
     summary: pair("The TKI-20 Shingen brings smart targeting to a compact submachine-gun platform.", "TKI-20シンゲンは、小型サブマシンガンにスマート照準を統合します。"),
     overview: pair("Shingen is part of Arasaka's smart weapon family. Its compact platform connects weapon design with the smart-link ecosystem, reflecting a manufacturing philosophy in which hardware and interface are developed together.", "シンゲンは、アラサカのスマート兵器群の一つです。小型プラットフォームとスマートリンク環境を結び、ハードウェアとインターフェースを一体開発する製造思想を体現します。"),
     features: [[pair("Smart platform", "スマート・プラットフォーム"), pair("Designed around integrated smart targeting and a compatible smart-link interface.", "統合型スマート照準と、対応するスマートリンク接続を中心に設計。")], [pair("Compact format", "小型構成"), pair("A submachine-gun form factor within Arasaka's broader defense manufacturing portfolio.", "アラサカの防衛製造群を構成する、サブマシンガン形式。")], [pair("Family design", "共通設計"), pair("A shared industrial language across receiver geometry, controls, and targeting interfaces.", "本体形状、操作系、照準接続に共通する工業設計。")]],
@@ -104,7 +110,7 @@ export const products = [
   },
   {
     id: "yukimura", code: "HJKE-11", name: pair("Yukimura", "ユキムラ"), category: pair("Smart pistol", "スマート・ピストル"), image: "yukimura", business: "security",
-    headline: pair("A compact expression of capability.", "能力を、コンパクトに。"),
+    headline: pair("HJKE-11. The smart pistol platform.", "HJKE-11。スマート・ピストル。"),
     summary: pair("The HJKE-11 Yukimura is Arasaka's compact smart-pistol platform.", "HJKE-11ユキムラは、アラサカの小型スマート・ピストルです。"),
     overview: pair("Yukimura extends Arasaka's smart weapon technology into a compact pistol. Its industrial form and smart-link relationship make it a recognizable counterpart to the Shingen within the group's defense portfolio.", "ユキムラは、アラサカのスマート兵器技術を小型ピストルへ展開します。その工業的形状とスマートリンク接続は、防衛製品群におけるシンゲンの対応機種を形づくります。"),
     features: [[pair("Smart targeting", "スマート照準"), pair("Part of the smart weapon class, paired with the compatible targeting-interface ecosystem.", "対応する照準接続環境と連携する、スマート兵器の一つ。")], [pair("Pistol platform", "ピストル・プラットフォーム"), pair("A compact format distinguished from the Shingen submachine-gun platform.", "シンゲンのサブマシンガン構成とは異なる、小型形式。")], [pair("Arasaka manufacture", "アラサカ製造"), pair("Product engineering, interface design, and precision manufacturing within the group's defense business.", "グループの防衛事業における、製品開発、接続設計、精密製造。")]],
@@ -126,12 +132,15 @@ export const pages = [
   page("research", "/research/", "research", "Neural Interfaces & Engram Research | Arasaka", "神経接続とエングラム研究 | アラサカ", "Arasaka research across personality engrams, neural interfaces, archive infrastructure, and integrated smart systems.", "人格エングラム、神経接続、アーカイブ基盤、スマートシステム統合を横断するアラサカの研究。", "mikoshi"),
   page("engram-technology", "/research/engram-technology/", "research", "Relic, Mikoshi & Soulkiller: Engram Architecture | Arasaka", "Relic・ミコシ・ソウルキラー：エングラム技術 | アラサカ", "Understand the distinct roles of Soulkiller, Mikoshi, and Relic in Arasaka's engram technology architecture.", "アラサカのエングラム技術における、ソウルキラー、ミコシ、Relicの異なる役割を解説します。", "relic", "research"),
   page("company", "/company/", "company", "Company & Restored Leadership | Arasaka Corporation", "企業情報と指導体制 | アラサカ株式会社", "Arasaka's global organization and renewed direction under restored leadership in a speculative post-2077 future.", "2077年以降の独自の未来像における、指導体制に復帰したアラサカの世界組織と新たな方針。", "headquarters"),
-  page("contact", "/contact/", "contact", "Global Operations & Regional Directory | Arasaka", "グローバル拠点・地域一覧 | アラサカ", "Arasaka's Tokyo headquarters, Night City regional presence, and the relationship between its global business divisions.", "アラサカの東京本社、ナイトシティの地域拠点、世界の事業部門間の関係を紹介します。", "banking"),
+  page("contact", "/contact/", "contact", "Global Operations & Regional Directory | Arasaka", "グローバル拠点・地域一覧 | アラサカ", "Arasaka's Tokyo headquarters, Night City regional presence, and the relationship between its global business divisions.", "アラサカの東京本社、ナイトシティの地域拠点、世界の事業部門間の関係を紹介します。", "night-city"),
+  page("archive", "/archive/", "archive", "Continuity Archive: Case NC-0417 | Arasaka Design Fiction", "継承アーカイブ：案件NC-0417 | アラサカのデザインフィクション", "Five fictional internal records trace a family's encounter with Relic, Mikoshi, and the limits of institutional continuity.", "五つの架空の内部記録を通じ、家族とRelic、ミコシ、組織としての継承の限界との関わりを描きます。", "review-terminal"),
+  ...dossiers.map(d => page(d.id, `/archive/${d.id}/`, "archive", `${d.name.en} | NC-0417 | Arasaka Fictional Archive`, `${d.name.ja} | NC-0417 | アラサカ架空アーカイブ`, `Fictional internal record: ${d.summary.en}`, `架空の内部記録：${d.summary.ja}`, d.image, "archive")),
 ];
 
 export const label = id => ({
   home: pair("Home", "ホーム"), businesses: pair("Businesses", "事業紹介"), products: pair("Products", "製品"), research: pair("Research", "研究"), company: pair("Company", "企業情報"), contact: pair("Global Operations", "グローバル拠点"), "engram-technology": pair("Engram technology", "エングラム技術"),
-}[id] || businesses.find(b => b.id === id)?.name || products.find(p => p.id === id)?.name);
+  archive: pair("Archive", "アーカイブ"),
+}[id] || businesses.find(b => b.id === id)?.name || products.find(p => p.id === id)?.name || dossiers.find(d => d.id === id)?.name);
 
 export const retiredRoutes = {
   "/industries/": "/businesses/", "/products/securenet/": "/businesses/security/", "/products/perimeter/": "/businesses/security/", "/products/custody/": "/businesses/banking/", "/products/soulkiller/": "/research/engram-technology/",

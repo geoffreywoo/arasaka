@@ -7,10 +7,10 @@
       "route": "/",
       "file": "index.html",
       "title": "Arasaka Corporation | Security, Capital & Continuity",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/home-en.jpg",
-      "hash": "86da16cc6576f95a406fd40501a8d25a414c84d1a389eeb37d03f12e050e2eb8",
-      "lastmod": "2026-10-04",
+      "hash": "d3985b9b97f040f7e667e7dbbf72a7bb6ff84734c8b8d89bbd1f17dd093335f1",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/",
         "ja": "https://www.arasaka.com/ja/"
@@ -22,10 +22,10 @@
       "route": "/ja/",
       "file": "ja/index.html",
       "title": "アラサカ株式会社 | 警備・資本・継承",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/home-ja.jpg",
-      "hash": "f5188c38f2cbb54ec5bdba047586ac1e089001ed1b07dbf794f4b94117d46977",
-      "lastmod": "2026-10-04",
+      "hash": "491bdf3f388e016b1844f285eea006de1f48969d208d7930f8b51d147124f93b",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/",
         "ja": "https://www.arasaka.com/ja/"
@@ -37,10 +37,10 @@
       "route": "/businesses/",
       "file": "businesses/index.html",
       "title": "Our Businesses | Arasaka Corporation",
-      "image": "/assets/headquarters-v3-1600.jpg",
+      "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/businesses-en.jpg",
-      "hash": "54665fbda0ace6c82e1006d32ef6c9ed915e701cbd94d88dad03ad0fb5399024",
-      "lastmod": "2026-10-04",
+      "hash": "ed0e99e9721c6bf9223e4703b1312c9a9eeb30ad2e6aa353229080a2110c6b27",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/",
         "ja": "https://www.arasaka.com/ja/businesses/"
@@ -52,10 +52,10 @@
       "route": "/ja/businesses/",
       "file": "ja/businesses/index.html",
       "title": "事業紹介 | アラサカ株式会社",
-      "image": "/assets/headquarters-v3-1600.jpg",
+      "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/businesses-ja.jpg",
-      "hash": "59dccec7f8e880839e042cc2fa03af207d9fabdf225b99e7578906dcf5c221ed",
-      "lastmod": "2026-10-04",
+      "hash": "e9877662335a460aa891341d71e4f43d6b444f0245680e762875f6ef1366b3b2",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/",
         "ja": "https://www.arasaka.com/ja/businesses/"
@@ -69,8 +69,8 @@
       "title": "Security & Defense | Arasaka Corporation",
       "image": "/assets/security-v3-1600.jpg",
       "social": "/assets/social/security-en.jpg",
-      "hash": "3f7c07c3ce1d92331305dbd33035fc0cd455d17d8dc07e759d051ac18c132fa3",
-      "lastmod": "2026-10-04",
+      "hash": "1bae9c438462e2541929b6b65664ee46ea0d469b8b18db8afc7470bf5a9baa43",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/security/",
         "ja": "https://www.arasaka.com/ja/businesses/security/"
@@ -84,8 +84,8 @@
       "title": "警備・防衛 | アラサカ株式会社",
       "image": "/assets/security-v3-1600.jpg",
       "social": "/assets/social/security-ja.jpg",
-      "hash": "71efcedfa096a0eacc900d66c39017ef3a0cde211ed20183267d272a14e4fb57",
-      "lastmod": "2026-10-04",
+      "hash": "21babe8f3636beb243a88991ab6cea13f85ec1c5da1ef3f04fdc02ef47ff86ef",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/security/",
         "ja": "https://www.arasaka.com/ja/businesses/security/"
@@ -99,8 +99,8 @@
       "title": "Banking & Capital | Arasaka Corporation",
       "image": "/assets/banking-v3-1600.jpg",
       "social": "/assets/social/banking-en.jpg",
-      "hash": "2e6eb079a7431894a8dbbbd0315c4a0767184d7de658e236fe3234bd7939a219",
-      "lastmod": "2026-10-04",
+      "hash": "f71706e0773653999b5d7df49cf609cafeb772c259fe4cc069bdea5b690df990",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/banking/",
         "ja": "https://www.arasaka.com/ja/businesses/banking/"
@@ -114,8 +114,8 @@
       "title": "銀行・資本 | アラサカ株式会社",
       "image": "/assets/banking-v3-1600.jpg",
       "social": "/assets/social/banking-ja.jpg",
-      "hash": "dcc6c63dc3b5abc3b15bcdbbdd36f8886cc8feb5da749941989ed67de58f3eee",
-      "lastmod": "2026-10-04",
+      "hash": "af890f6879badf4a866f72aef083f86658435792c3010b452eb0d432384adada",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/banking/",
         "ja": "https://www.arasaka.com/ja/businesses/banking/"
@@ -127,10 +127,10 @@
       "route": "/businesses/technology/",
       "file": "businesses/technology/index.html",
       "title": "Advanced Technology | Arasaka Corporation",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/technology-en.jpg",
-      "hash": "6325617a1975c16c950e56ad62fadb6ecf2c1c6d235322b66b8389e5bb57e818",
-      "lastmod": "2026-10-04",
+      "hash": "76885ad2ceda6eecb27eed3a3d1f6558942cc725b5f18cfb4e8d07a4b231fed7",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/technology/",
         "ja": "https://www.arasaka.com/ja/businesses/technology/"
@@ -142,10 +142,10 @@
       "route": "/ja/businesses/technology/",
       "file": "ja/businesses/technology/index.html",
       "title": "先端技術 | アラサカ株式会社",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/technology-ja.jpg",
-      "hash": "796c43ed084f02e40288d123fa7f208fe7a4e4af24187b51fd340090b606174b",
-      "lastmod": "2026-10-04",
+      "hash": "65ee8afed0d8caafcf1894fd8b16592df637c5ee19fcadf2d2a2c7eee8e57509",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/technology/",
         "ja": "https://www.arasaka.com/ja/businesses/technology/"
@@ -159,8 +159,8 @@
       "title": "Relic, Mikoshi & Smart Weapons | Arasaka Products",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/products-en.jpg",
-      "hash": "b1d838981d6f0235875d47f4e5dfe3197ce9019c9eefb8b31a3d9273cb6c3ac4",
-      "lastmod": "2026-10-04",
+      "hash": "623d2c93ab7922780ffbdcd4309b1f90b2486ab1b48746ad8c4f01cd1883971c",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/",
         "ja": "https://www.arasaka.com/ja/products/"
@@ -174,8 +174,8 @@
       "title": "Relic・ミコシ・スマート兵器 | アラサカ製品",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/products-ja.jpg",
-      "hash": "fe8bdbdb924e3d9bf358c4ffd87d557d94a0da1e6f4d8e1d64f497577a7d6e30",
-      "lastmod": "2026-10-04",
+      "hash": "6012c4ca3925d2f36bb3d077b64426eeaef827bfeea0038699379289c82991cc",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/",
         "ja": "https://www.arasaka.com/ja/products/"
@@ -187,10 +187,10 @@
       "route": "/products/relic/",
       "file": "products/relic/index.html",
       "title": "Relic | Arasaka Neural biochip",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/relic-en.jpg",
-      "hash": "4b4f731e6fa4ce6eb1f1d9ccc22d6a4aebb7ba164b906a59b50ef310858146c3",
-      "lastmod": "2026-10-04",
+      "hash": "0829a4ec2906dcf76401d0fd9bae01e04ebf0fd61a0b9cf24be265c2c6148266",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/relic/",
         "ja": "https://www.arasaka.com/ja/products/relic/"
@@ -202,10 +202,10 @@
       "route": "/ja/products/relic/",
       "file": "ja/products/relic/index.html",
       "title": "Relic | アラサカ ニューラル・バイオチップ",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/relic-ja.jpg",
-      "hash": "557ff8b5bec710ad5d4ab20330871d5114e7f65f0b367f984a0e105b16ba2b74",
-      "lastmod": "2026-10-04",
+      "hash": "ecff7548aeecb3a662a04be7ed67e4d2aa2142fb0b3ab1783044c28381a47bd1",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/relic/",
         "ja": "https://www.arasaka.com/ja/products/relic/"
@@ -217,10 +217,10 @@
       "route": "/products/mikoshi/",
       "file": "products/mikoshi/index.html",
       "title": "Mikoshi | Arasaka Engram infrastructure",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/mikoshi-en.jpg",
-      "hash": "d7ac91f37595f33cd27f9ae071c1464748ed02d4cbc982313410be3ba9521f57",
-      "lastmod": "2026-10-04",
+      "hash": "333c47e0f7bc22dac18c675cca33db4e20b07a65706ff1ff9be9d53d75fb18d9",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/mikoshi/",
         "ja": "https://www.arasaka.com/ja/products/mikoshi/"
@@ -232,10 +232,10 @@
       "route": "/ja/products/mikoshi/",
       "file": "ja/products/mikoshi/index.html",
       "title": "ミコシ | アラサカ エングラム基盤",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/mikoshi-ja.jpg",
-      "hash": "43950675e8b4557a08cf00e1e127cf19dc45609b0788e7246471a5b40c7fd353",
-      "lastmod": "2026-10-04",
+      "hash": "be078a13caaa74e3bd0235cce421a337a045bda4a487b778d807947561ec0d16",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/mikoshi/",
         "ja": "https://www.arasaka.com/ja/products/mikoshi/"
@@ -249,8 +249,8 @@
       "title": "TKI-20 Shingen | Arasaka Smart submachine gun",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/shingen-en.jpg",
-      "hash": "a4c5765103a5236eb1df8c3b27c0b71f975b3ef46f66b2fc6b3856d7813acd53",
-      "lastmod": "2026-10-04",
+      "hash": "bcf8c54b19519ec6a9bf259d9fad5835488d541f1b8c202908dc678f01cf8ad2",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/shingen/",
         "ja": "https://www.arasaka.com/ja/products/shingen/"
@@ -264,8 +264,8 @@
       "title": "シンゲン | アラサカ スマート・サブマシンガン",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/shingen-ja.jpg",
-      "hash": "c5917d971a0e8e464bdb1f930fe73b7d8922891b386c50f223b6f2c690cb6f9b",
-      "lastmod": "2026-10-04",
+      "hash": "2c832a43f14d89013e40b605e691663f5d25859b134e3f359c3c5ba5e8c91b56",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/shingen/",
         "ja": "https://www.arasaka.com/ja/products/shingen/"
@@ -279,8 +279,8 @@
       "title": "HJKE-11 Yukimura | Arasaka Smart pistol",
       "image": "/assets/yukimura-v3-1600.jpg",
       "social": "/assets/social/yukimura-en.jpg",
-      "hash": "28f930409d82a1192fc9db1b1c02691aa05c16d1bded4ac78756f4891aeca44b",
-      "lastmod": "2026-10-04",
+      "hash": "b39e62b10bf232f5431a7728dc18ebc098e46593f5ae9ff2fea9071aa3e0b784",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/yukimura/",
         "ja": "https://www.arasaka.com/ja/products/yukimura/"
@@ -294,8 +294,8 @@
       "title": "ユキムラ | アラサカ スマート・ピストル",
       "image": "/assets/yukimura-v3-1600.jpg",
       "social": "/assets/social/yukimura-ja.jpg",
-      "hash": "4dffaabd0cd7f1db891532a34be9350bbc4283b3e7f38c090a34a807bf6dc442",
-      "lastmod": "2026-10-04",
+      "hash": "e1cd0ddb373e3cd66cb32073189014e7234836f7836ddb5e743bd5abfd78ed4f",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/products/yukimura/",
         "ja": "https://www.arasaka.com/ja/products/yukimura/"
@@ -307,10 +307,10 @@
       "route": "/research/",
       "file": "research/index.html",
       "title": "Neural Interfaces & Engram Research | Arasaka",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/research-en.jpg",
-      "hash": "aeb95c431006cfcad2d08da4c610d1ac527a03b2fa0e32c7d0cb0d31f4f51cdc",
-      "lastmod": "2026-10-04",
+      "hash": "4b5e92a8e90102b92bedbc4d401a0756387359a89ca70f72be9b6de8f2602426",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/research/",
         "ja": "https://www.arasaka.com/ja/research/"
@@ -322,10 +322,10 @@
       "route": "/ja/research/",
       "file": "ja/research/index.html",
       "title": "神経接続とエングラム研究 | アラサカ",
-      "image": "/assets/mikoshi-v3-1600.jpg",
+      "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/research-ja.jpg",
-      "hash": "a9faf2082cdd3b5c668d526bf28262bd469efbd0988c4b4c8c3d98120312503a",
-      "lastmod": "2026-10-04",
+      "hash": "39f1ccf098246e4d1ce40ef94b2e46f0e7af21b0e73291cbab3785cca2baeebf",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/research/",
         "ja": "https://www.arasaka.com/ja/research/"
@@ -337,10 +337,10 @@
       "route": "/research/engram-technology/",
       "file": "research/engram-technology/index.html",
       "title": "Relic, Mikoshi & Soulkiller: Engram Architecture | Arasaka",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/engram-technology-en.jpg",
-      "hash": "23225410abbf6320485414c4dad23b7096663cb2773f364189c9f1312da7e013",
-      "lastmod": "2026-10-04",
+      "hash": "6d45d70eb9e91547724a54a1c40344e228e11b39213cdcb34a3f10589aa2c37b",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/research/engram-technology/",
         "ja": "https://www.arasaka.com/ja/research/engram-technology/"
@@ -352,10 +352,10 @@
       "route": "/ja/research/engram-technology/",
       "file": "ja/research/engram-technology/index.html",
       "title": "Relic・ミコシ・ソウルキラー：エングラム技術 | アラサカ",
-      "image": "/assets/relic-v3-1600.jpg",
+      "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/engram-technology-ja.jpg",
-      "hash": "f4601a47b0f521dae82a7d4efbeee800a808294ca408dc66b504f70ddc4afd26",
-      "lastmod": "2026-10-04",
+      "hash": "0122868ec2f7c647a2b13b0e7a80cff9a20070687145f7e04643fbbbacbc5ee8",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/research/engram-technology/",
         "ja": "https://www.arasaka.com/ja/research/engram-technology/"
@@ -367,10 +367,10 @@
       "route": "/company/",
       "file": "company/index.html",
       "title": "Company & Restored Leadership | Arasaka Corporation",
-      "image": "/assets/headquarters-v3-1600.jpg",
+      "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/company-en.jpg",
-      "hash": "4ed1a238ff9f2bf9bf61e65ab4d907c989d990676cf0895d66dea9ef5c3df483",
-      "lastmod": "2026-10-04",
+      "hash": "edb163b9842205f23b9a325f95014d80c62036cce0d7d84df4a3e789c4d50d2f",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/company/",
         "ja": "https://www.arasaka.com/ja/company/"
@@ -382,10 +382,10 @@
       "route": "/ja/company/",
       "file": "ja/company/index.html",
       "title": "企業情報と指導体制 | アラサカ株式会社",
-      "image": "/assets/headquarters-v3-1600.jpg",
+      "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/company-ja.jpg",
-      "hash": "5aab7dcfe445f664007e8a8cc4625c8a4358f51e6e5ffa4fcdd1c69e2d3ff991",
-      "lastmod": "2026-10-04",
+      "hash": "cb2a97b04d806863749866d437917e020b66c158df1444466a8ac1d9c7ada854",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/company/",
         "ja": "https://www.arasaka.com/ja/company/"
@@ -397,10 +397,10 @@
       "route": "/contact/",
       "file": "contact/index.html",
       "title": "Global Operations & Regional Directory | Arasaka",
-      "image": "/assets/banking-v3-1600.jpg",
+      "image": "/assets/night-city-v4-1600.jpg",
       "social": "/assets/social/contact-en.jpg",
-      "hash": "662df9d87a143c2c6dcbbdd4eba0a394dd8a2c05ef227d79498af9b2af857f25",
-      "lastmod": "2026-10-04",
+      "hash": "e07db7076a5f5eb2af9504366887abbf5af245591839d4110071602230fe3d73",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/contact/",
         "ja": "https://www.arasaka.com/ja/contact/"
@@ -412,13 +412,193 @@
       "route": "/ja/contact/",
       "file": "ja/contact/index.html",
       "title": "グローバル拠点・地域一覧 | アラサカ",
-      "image": "/assets/banking-v3-1600.jpg",
+      "image": "/assets/night-city-v4-1600.jpg",
       "social": "/assets/social/contact-ja.jpg",
-      "hash": "b237c309409344b9e40143bc5278ecef757bef831f2dd11d34f70d488879a87d",
-      "lastmod": "2026-10-04",
+      "hash": "5b63ce81f88c2af22be6d5ab77465e6a50cb88ac96ec1bc4710905b428462a2a",
+      "lastmod": "2026-10-05",
       "alternates": {
         "en": "https://www.arasaka.com/contact/",
         "ja": "https://www.arasaka.com/ja/contact/"
+      }
+    },
+    {
+      "id": "archive",
+      "lang": "en",
+      "route": "/archive/",
+      "file": "archive/index.html",
+      "title": "Continuity Archive: Case NC-0417 | Arasaka Design Fiction",
+      "image": "/assets/review-terminal-v4-1600.jpg",
+      "social": "/assets/social/archive-en.jpg",
+      "hash": "79ff161cd87c7792a8cca3eaffc5e1a29ee98099bd3418830bbd07aa19e4d869",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/",
+        "ja": "https://www.arasaka.com/ja/archive/"
+      }
+    },
+    {
+      "id": "archive",
+      "lang": "ja",
+      "route": "/ja/archive/",
+      "file": "ja/archive/index.html",
+      "title": "継承アーカイブ：案件NC-0417 | アラサカのデザインフィクション",
+      "image": "/assets/review-terminal-v4-1600.jpg",
+      "social": "/assets/social/archive-ja.jpg",
+      "hash": "bbca49544bd16e8066872906b14d73fbec7c0756a41d56c7434e9fca8fb80125",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/",
+        "ja": "https://www.arasaka.com/ja/archive/"
+      }
+    },
+    {
+      "id": "client-intake",
+      "lang": "en",
+      "route": "/archive/client-intake/",
+      "file": "archive/client-intake/index.html",
+      "title": "Continuity Enrollment Record | NC-0417 | Arasaka Fictional Archive",
+      "image": "/assets/consultation-v4-1600.jpg",
+      "social": "/assets/social/client-intake-en.jpg",
+      "hash": "e90a62d0b4ea776ab084bc6defd128a260f3a42a6cbfc6294a8c2ccb3ca049e0",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/client-intake/",
+        "ja": "https://www.arasaka.com/ja/archive/client-intake/"
+      }
+    },
+    {
+      "id": "client-intake",
+      "lang": "ja",
+      "route": "/ja/archive/client-intake/",
+      "file": "ja/archive/client-intake/index.html",
+      "title": "継承プログラム登録記録 | NC-0417 | アラサカ架空アーカイブ",
+      "image": "/assets/consultation-v4-1600.jpg",
+      "social": "/assets/social/client-intake-ja.jpg",
+      "hash": "bbb3186c0fb7d59926f58e740d19d5196ab50024b2dad40199c2ab50a7f18eb1",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/client-intake/",
+        "ja": "https://www.arasaka.com/ja/archive/client-intake/"
+      }
+    },
+    {
+      "id": "access-review",
+      "lang": "en",
+      "route": "/archive/access-review/",
+      "file": "archive/access-review/index.html",
+      "title": "Construct Access Review | NC-0417 | Arasaka Fictional Archive",
+      "image": "/assets/transport-v4-1600.jpg",
+      "social": "/assets/social/access-review-en.jpg",
+      "hash": "f7067537fbc8a8cfceab5f6eef13dc84c4629e569fe56224406f11f05692a324",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/access-review/",
+        "ja": "https://www.arasaka.com/ja/archive/access-review/"
+      }
+    },
+    {
+      "id": "access-review",
+      "lang": "ja",
+      "route": "/ja/archive/access-review/",
+      "file": "ja/archive/access-review/index.html",
+      "title": "構築体アクセス審査 | NC-0417 | アラサカ架空アーカイブ",
+      "image": "/assets/transport-v4-1600.jpg",
+      "social": "/assets/social/access-review-ja.jpg",
+      "hash": "5736370cfd1dd7c9efbe203344b648f01a4bf959ea55095a9f4c163d9ff77086",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/access-review/",
+        "ja": "https://www.arasaka.com/ja/archive/access-review/"
+      }
+    },
+    {
+      "id": "identity-assessment",
+      "lang": "en",
+      "route": "/archive/identity-assessment/",
+      "file": "archive/identity-assessment/index.html",
+      "title": "Identity Assessment | NC-0417 | Arasaka Fictional Archive",
+      "image": "/assets/mikoshi-v4-1600.jpg",
+      "social": "/assets/social/identity-assessment-en.jpg",
+      "hash": "34787ebfd392a70a343efe883b973480565ae71749cb138f3f02de84747a9f53",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/identity-assessment/",
+        "ja": "https://www.arasaka.com/ja/archive/identity-assessment/"
+      }
+    },
+    {
+      "id": "identity-assessment",
+      "lang": "ja",
+      "route": "/ja/archive/identity-assessment/",
+      "file": "ja/archive/identity-assessment/index.html",
+      "title": "本人性評価 | NC-0417 | アラサカ架空アーカイブ",
+      "image": "/assets/mikoshi-v4-1600.jpg",
+      "social": "/assets/social/identity-assessment-ja.jpg",
+      "hash": "df668aaa8cbbf0bb773cc62324bee1a59c32822357606231e5ea117a5a9992f8",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/identity-assessment/",
+        "ja": "https://www.arasaka.com/ja/archive/identity-assessment/"
+      }
+    },
+    {
+      "id": "succession-directive",
+      "lang": "en",
+      "route": "/archive/succession-directive/",
+      "file": "archive/succession-directive/index.html",
+      "title": "Executive Succession Directive | NC-0417 | Arasaka Fictional Archive",
+      "image": "/assets/headquarters-v4-1600.jpg",
+      "social": "/assets/social/succession-directive-en.jpg",
+      "hash": "71fa817bfbcc41f8226fe1a983115a1ee147bd8fd554ca88a446fd104a6bb413",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/succession-directive/",
+        "ja": "https://www.arasaka.com/ja/archive/succession-directive/"
+      }
+    },
+    {
+      "id": "succession-directive",
+      "lang": "ja",
+      "route": "/ja/archive/succession-directive/",
+      "file": "ja/archive/succession-directive/index.html",
+      "title": "経営継承指令 | NC-0417 | アラサカ架空アーカイブ",
+      "image": "/assets/headquarters-v4-1600.jpg",
+      "social": "/assets/social/succession-directive-ja.jpg",
+      "hash": "92c1780604a3f77dafc7c3f42e1a4d49764ec7b8576765f99bfea6593804dbb8",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/succession-directive/",
+        "ja": "https://www.arasaka.com/ja/archive/succession-directive/"
+      }
+    },
+    {
+      "id": "case-disposition",
+      "lang": "en",
+      "route": "/archive/case-disposition/",
+      "file": "archive/case-disposition/index.html",
+      "title": "Case Disposition | NC-0417 | Arasaka Fictional Archive",
+      "image": "/assets/review-terminal-v4-1600.jpg",
+      "social": "/assets/social/case-disposition-en.jpg",
+      "hash": "6d8eda4a3914489333c4726ca83ae2b3048e1af2c58a1b75ff70469e801bd68a",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/case-disposition/",
+        "ja": "https://www.arasaka.com/ja/archive/case-disposition/"
+      }
+    },
+    {
+      "id": "case-disposition",
+      "lang": "ja",
+      "route": "/ja/archive/case-disposition/",
+      "file": "ja/archive/case-disposition/index.html",
+      "title": "案件処理記録 | NC-0417 | アラサカ架空アーカイブ",
+      "image": "/assets/review-terminal-v4-1600.jpg",
+      "social": "/assets/social/case-disposition-ja.jpg",
+      "hash": "b29bc23cc6b54f7bcfa254f09dac7365575d5c8918520871b25e866f1c992926",
+      "lastmod": "2026-10-05",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/case-disposition/",
+        "ja": "https://www.arasaka.com/ja/archive/case-disposition/"
       }
     }
   ]

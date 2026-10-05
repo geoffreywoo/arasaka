@@ -1,0 +1,57 @@
+{
+  "created": "2026-10-05",
+  "visuals": [
+    {
+      "key": "relic",
+      "source": "assets/source/relic-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Macro product photography of a slender neural memory biochip cartridge in a black fitted transport case, brushed titanium shell, translucent dark red core and gold contacts. Entire cartridge on right half, left half dark charcoal negative space. No giant glowing tube, no generic computer. Crisp plausible miniature electronics. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": null
+    },
+    {
+      "key": "mikoshi",
+      "source": "assets/source/mikoshi-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. A monumental underground engram archive, black monolithic columns with recessed pale optical channels, concrete containment walls, a security threshold and one small engineer behind glass. Precise controlled white lighting, red access signal, deep physical scale. Architecture not ordinary server racks. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": "Removed generated branding and lettering; Mikoshi humanoid projections replaced by containment surfaces."
+    },
+    {
+      "key": "headquarters",
+      "source": "assets/source/headquarters-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Monumental paired graphite towers over a severe Japanese modernist Tokyo headquarters plaza, pale stone, sculptural pines, pedestrians and elevated transit, daylight. Strong architecture conveys dynastic power, recognizable Japanese metropolis, no fantasy ruin. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": "Removed generated branding and lettering; Mikoshi humanoid projections replaced by containment surfaces."
+    },
+    {
+      "key": "night-city",
+      "source": "assets/source/night-city-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Street-level architectural reportage in futuristic Night City corporate district, immense graphite corporate tower behind a controlled perimeter, Japanese-influenced streetscape, overhead transit, workers and civilians separated by glass turnstiles. Clear late afternoon light, cool concrete with small red architectural accents. No neon wallpaper. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": "Removed generated branding and lettering; Mikoshi humanoid projections replaced by containment surfaces."
+    },
+    {
+      "key": "transport",
+      "source": "assets/source/transport-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Close corporate reportage of gloved laboratory technician hands transferring a fitted black neural cartridge case across a brushed metal security counter, two-person chain-of-custody, closed vault door behind. Sharp objects and realistic hands, white inspection light, neutral black silver and restrained red. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": "Removed generated branding and lettering; Mikoshi humanoid projections replaced by containment surfaces."
+    },
+    {
+      "key": "manufacturing",
+      "source": "assets/source/manufacturing-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Precision Japanese cybernetic manufacturing cleanroom, robotic microassembly stage with magnified miniature gold neural contacts under inspection optics, technicians behind glass, ordered equipment. White laboratory lighting, inspectable mechanism, pale green and graphite materials, red safety accent. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": null
+    },
+    {
+      "key": "consultation",
+      "source": "assets/source/consultation-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. Quiet near-future private continuity consultation room, a parent and adult daughter seated opposite an empty chair and small inactive neural interface on table, faces in profile not recognizable. Pale architectural surfaces, daylight through tall windows, graphite chairs, deep red wall accent. Dignified, emotionally restrained, not a hospital surgery. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": null
+    },
+    {
+      "key": "review-terminal",
+      "source": "assets/source/review-terminal-v4.png",
+      "prompt": "Original photorealistic 16:9 wide premium corporate design-fiction photograph for Arasaka after Cyberpunk 2077. An empty visitor chair facing a dark glass wall and inactive archive review terminal in a sealed institutional consultation room, small red indicator, abandoned paper folder on desk. Crisp cinematic architectural photography, readable objects, controlled pale light, human absence, no horror gore. World feels lived-in, authoritative and materially believable, not generic stock science fiction. Frame main objects inside central 60 percent for mobile cropping. No text, logos, lettering, watermark, collages or UI. Existing identity applied separately.",
+      "cleanup": "Removed generated branding and lettering; Mikoshi humanoid projections replaced by containment surfaces."
+    }
+  ],
+  "mobile": {
+    "source": "assets/source/relic-mobile-v4.png",
+    "prompt": "Portrait 3:5 adaptation of exact cartridge and case; entire object in upper 40%, charcoal negative space below; no branding."
+  }
+}
