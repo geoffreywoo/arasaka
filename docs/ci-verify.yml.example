@@ -15,6 +15,7 @@ jobs:
           python-version: '3.12'
       - run: node --check app.js
       - run: node --check scripts/build-site.mjs
+      - run: node --check scripts/network-content.mjs
       - run: node scripts/build-site.mjs
       - run: python3 scripts/verify_site.py
       - run: node scripts/verify-narrative.mjs

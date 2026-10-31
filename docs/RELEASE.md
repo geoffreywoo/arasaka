@@ -1,4 +1,34 @@
-# Restored Empire Release Verification
+# Release Verification
+
+## Imperial Network / 2026-10-31
+
+User-selected option 3 is implemented in the existing static site: monumental architecture, the supplied identity, industrial display type, desktop/mobile division rail, and a white Relic flagship band. Six new logical routes bring the site to 26 pages per language / 52 canonical URLs. NC-0417 remains intact; NC-1102 adds three linked records at relative days 0, 1, and 7 without assigning a future year.
+
+The release adds three regional/organization profiles, twelve coordinated reconstructed image families, keyboard product inspection, native-dialog localized search, typed build-time entity relationships, and a small [world bible](WORLD-BIBLE.md). All meaningful content and language navigation remain ordinary static HTML. There is no backend, account system, WebGL dependency, fake live telemetry, boot screen, or access gate.
+
+### Local Verification
+
+| Check | Result |
+| --- | --- |
+| Structural | PASS: 52 pages, assets, links/fragments, self-canonicals, reciprocal languages, sitemap, 123 retained redirects |
+| Narrative | PASS: eight complete bilingual dossiers, independent case clocks, real entity destinations, product views, two 26-page search indexes |
+| Browser | PASS: 208 viewport cases at 360/390/768/1440px, plus eight short-window homepage cases |
+| Progressive enhancement | PASS: all 52 pages without JavaScript, both case trails, language links, native menus |
+| Interaction | PASS: exact document-code search, Japanese body search, empty/escaped results, keyboard navigation, Escape/focus return, product tabs |
+| Visual | PASS: combined reference/render review, no horizontal overflow, broken images, framing errors, rail collision, or recorded JS/console errors |
+| Mobile Lighthouse | Home EN 96, Home JA 96, Relic EN 98, Mikoshi JA 97, Organization EN 97, Territorial Access JA 99 performance; all 100 accessibility, best practices, SEO |
+
+Lighthouse 13.5.0 results are simulated local mobile lab measurements, not field Core Web Vitals, indexing, or ranking guarantees. The first homepage performance result was 92; a dedicated sharp portrait crop raised both localized homepages to 96. The search Escape behavior and short-window rail collision were corrected before the final browser pass.
+
+Raw reports remain in ignored `test-results/imperial-final/` and `test-results/imperial-lighthouse-*.json`. [Design QA](../design-qa.md) records the selected reference, normalization, iterations, and deliberate differences. The checked GitHub Actions template remains inactive because the existing OAuth authorization lacks workflow-write scope; no Actions success is claimed.
+
+### Release Gate And Rollback
+
+The existing public GitHub repository and existing Vercel project are retained. Immediate pre-release production was freshly confirmed READY through Vercel as `dpl_8BVSqxewez433q6zQetK47v91vTG`, [retained deployment](https://arasaka-lml27bla2-geoffrey-woos-projects.vercel.app), commit `cc5835e61ccc7f6ac6d25135cda66323fdde571e`, with both custom-domain aliases. Do not delete it.
+
+The branch must pass protected-preview page/asset hashes, all HTTP redirects, and the full browser suite before merging. Reopen production and confirm the exact released HTML/assets, routes, language pairs, interactions, apex redirect, and READY custom-domain mapping. Final provider receipts are recorded in ignored `test-results/imperial-release-receipt.json` after live verification to avoid a documentation-only redeployment loop.
+
+No outreach, analytics, Search Console ownership, sitemap-submission, DNS, or security-protection changes are included.
 
 ## The Cost of Continuity / 2026-10-05
 

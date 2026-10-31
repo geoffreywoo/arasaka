@@ -76,7 +76,7 @@ def main():
     expected = {p["file"] for p in PAGES}
     actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob("index.html") if not {".git", ".vercel", "node_modules"}.intersection(p.relative_to(ROOT).parts)}
     check(actual == expected, f"Route coverage mismatch: {actual ^ expected}")
-    check(len(PAGES) == 40 and Counter(p["lang"] for p in PAGES) == {"en": 20, "ja": 20}, "Expected 20 EN and 20 JA pages")
+    check(len(PAGES) == 52 and Counter(p["lang"] for p in PAGES) == {"en": 26, "ja": 26}, "Expected 26 EN and 26 JA pages")
     titles, descriptions = set(), set()
     for entry in PAGES:
         page = ROOT / entry["file"]

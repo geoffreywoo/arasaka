@@ -1,5 +1,17 @@
 # Asset Attribution
 
+## Imperial Network / 2026-10-31
+
+Twelve new AI-generated photographic reconstructions are stored in `source/*-v5.png`. Exact generation prompts, references, and review notes are recorded in [generation-v5.json](generation-v5.json); responsive delivery mappings remain in `generation-inputs.json`.
+
+The family comprises one headquarters exterior, three recurring facility scenes (Tokyo atrium, Night City annex, and financial handover office), two Mikoshi infrastructure views, and six product detail/context views. Existing reconstructed Relic/Shingen/Yukimura overviews complete the product inspection sets. These are not exact official silhouettes, extracted models, engineering documents, canonical buildings, or real product photographs.
+
+The headquarters image is derived from the user's selected option 3 design concept. New scenes use its concrete/graphite architectural materials. Mikoshi's revised views use the prior sealed-archive reference rather than headquarters towers; Yukimura's revised detail is a distinct macro view. No official logo was generated or substituted. Supplied mark and wordmark files are unchanged and applied separately in HTML and social graphics.
+
+The release uses 24 active image families and 52 localized social cards. The headquarters mobile derivative is a production crop/resample of the same reviewed source, not a separate invented scene. Historic unused derivatives remain historical repository material. All eight internal records, including the three NC-1102 records and their policies, are original fiction.
+
+`icons.svg` includes Lucide Search, Menu, X, and ArrowUpRight, under the included Lucide/Feather notices. The self-hosted `orbitron-900.ttf` is Orbitron by The League of Moveable Type, distributed through [Google Fonts](https://fonts.google.com/specimen/Orbitron). Preserve [ORBITRON-LICENSE.txt](ORBITRON-LICENSE.txt), its SIL Open Font License, and reserved-name conditions. It is not covered by the repository's MIT code license.
+
 ## The Cost of Continuity / 2026-10-05
 
 Eight new AI-generated photographic reconstructions appear in `source/*-v4.png`: Relic in a fitted case, Mikoshi containment infrastructure, Tokyo headquarters, Night City perimeter, cartridge custody, microassembly, family consultation, and a vacant review terminal. A ninth source, `relic-mobile-v4.png`, is a portrait adaptation of the same product scene. Prompts and cleanup notes are recorded in `generation-v4.json`; delivery mappings are in `generation-inputs.json`.

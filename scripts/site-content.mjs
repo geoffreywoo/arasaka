@@ -1,9 +1,11 @@
 import { dossiers } from "./archive-content.mjs";
+import { networkAssets, networkProfiles, networkRecords } from "./network-content.mjs";
 export const origin = "https://www.arasaka.com";
 export const languages = ["en", "ja"];
 export const pair = (en, ja) => ({ en, ja });
 
 export const assets = {
+  ...networkAssets,
   relic: { stem: "relic-v4", alt: pair("Reconstructed Relic neural cartridge with gold contacts in a fitted transport case", "専用運搬ケースに収められた金色端子付きRelic神経カートリッジの再構成画像"), position: "76% center" },
   headquarters: { stem: "headquarters-v4", alt: pair("Reconstructed Tokyo headquarters plaza, graphite towers and staff arriving beneath elevated transit", "高架交通の下で職員が到着する、東京本社広場と黒鉛色の塔の再構成画像"), position: "center" },
   mikoshi: { stem: "mikoshi-v4", alt: pair("Reconstructed Mikoshi containment columns beyond a controlled archive threshold", "管理された境界の奥に並ぶミコシの保管設備の再構成画像"), position: "center" },
@@ -124,23 +126,25 @@ export const products = [
 
 const page = (id, route, section, title, titleJa, description, descriptionJa, image, parent = null) => ({ id, route, section, title: pair(title, titleJa), description: pair(description, descriptionJa), image, parent });
 export const pages = [
-  page("home", "/", "home", "Arasaka Corporation | Security, Capital & Continuity", "アラサカ株式会社 | 警備・資本・継承", "An independent vision of Arasaka after 2077: global security, banking, Relic biochips, and Mikoshi technology, in English and Japanese.", "2077年以降のアラサカを描く独立した構想。世界規模の警備、銀行、Relicバイオチップ、ミコシの技術を、日本語と英語で。", "relic"),
-  page("businesses", "/businesses/", "businesses", "Our Businesses | Arasaka Corporation", "事業紹介 | アラサカ株式会社", "Explore Arasaka's security and defense, banking and capital, and advanced technology businesses.", "アラサカの警備・防衛、銀行・資本、先端技術の各事業を紹介します。", "headquarters"),
+  page("home", "/", "home", "Arasaka Corporation | Security, Capital & Continuity", "アラサカ株式会社 | 警備・資本・継承", "An independent vision of Arasaka after 2077: global security, banking, Relic biochips, and Mikoshi technology, in English and Japanese.", "2077年以降のアラサカを描く独立した構想。世界規模の警備、銀行、Relicバイオチップ、ミコシの技術を、日本語と英語で。", "imperial-headquarters"),
+  page("businesses", "/businesses/", "businesses", "Our Businesses | Arasaka Corporation", "事業紹介 | アラサカ株式会社", "Explore Arasaka's security and defense, banking and capital, and advanced technology businesses.", "アラサカの警備・防衛、銀行・資本、先端技術の各事業を紹介します。", "imperial-headquarters"),
   ...businesses.map(b => page(b.id, `/businesses/${b.id}/`, "businesses", `${b.name.en} | Arasaka Corporation`, `${b.name.ja} | アラサカ株式会社`, b.summary.en, b.summary.ja, b.image, "businesses")),
   page("products", "/products/", "products", "Relic, Mikoshi & Smart Weapons | Arasaka Products", "Relic・ミコシ・スマート兵器 | アラサカ製品", "Explore Relic biochips, Mikoshi engram infrastructure, TKI-20 Shingen, and HJKE-11 Yukimura.", "Relicバイオチップ、ミコシのエングラム基盤、TKI-20シンゲン、HJKE-11ユキムラを紹介します。", "shingen"),
   ...products.map(p => page(p.id, `/products/${p.id}/`, "products", `${p.code === "RELIC" || p.code === "MIKOSHI" ? "" : `${p.code} `}${p.name.en} | Arasaka ${p.category.en}`, `${p.name.ja} | アラサカ ${p.category.ja}`, p.summary.en, p.summary.ja, p.image, "products")),
   page("research", "/research/", "research", "Neural Interfaces & Engram Research | Arasaka", "神経接続とエングラム研究 | アラサカ", "Arasaka research across personality engrams, neural interfaces, archive infrastructure, and integrated smart systems.", "人格エングラム、神経接続、アーカイブ基盤、スマートシステム統合を横断するアラサカの研究。", "mikoshi"),
   page("engram-technology", "/research/engram-technology/", "research", "Relic, Mikoshi & Soulkiller: Engram Architecture | Arasaka", "Relic・ミコシ・ソウルキラー：エングラム技術 | アラサカ", "Understand the distinct roles of Soulkiller, Mikoshi, and Relic in Arasaka's engram technology architecture.", "アラサカのエングラム技術における、ソウルキラー、ミコシ、Relicの異なる役割を解説します。", "relic", "research"),
-  page("company", "/company/", "company", "Company & Restored Leadership | Arasaka Corporation", "企業情報と指導体制 | アラサカ株式会社", "Arasaka's global organization and renewed direction under restored leadership in a speculative post-2077 future.", "2077年以降の独自の未来像における、指導体制に復帰したアラサカの世界組織と新たな方針。", "headquarters"),
-  page("contact", "/contact/", "contact", "Global Operations & Regional Directory | Arasaka", "グローバル拠点・地域一覧 | アラサカ", "Arasaka's Tokyo headquarters, Night City regional presence, and the relationship between its global business divisions.", "アラサカの東京本社、ナイトシティの地域拠点、世界の事業部門間の関係を紹介します。", "night-city"),
-  page("archive", "/archive/", "archive", "Continuity Archive: Case NC-0417 | Arasaka Design Fiction", "継承アーカイブ：案件NC-0417 | アラサカのデザインフィクション", "Five fictional internal records trace a family's encounter with Relic, Mikoshi, and the limits of institutional continuity.", "五つの架空の内部記録を通じ、家族とRelic、ミコシ、組織としての継承の限界との関わりを描きます。", "review-terminal"),
+  page("company", "/company/", "company", "Company & Restored Leadership | Arasaka Corporation", "企業情報と指導体制 | アラサカ株式会社", "Arasaka's global organization and renewed direction under restored leadership in a speculative post-2077 future.", "2077年以降の独自の未来像における、指導体制に復帰したアラサカの世界組織と新たな方針。", "imperial-headquarters"),
+  page("contact", "/contact/", "contact", "Global Operations & Regional Directory | Arasaka", "グローバル拠点・地域一覧 | アラサカ", "Arasaka's Tokyo headquarters, Night City regional presence, and the relationship between its global business divisions.", "アラサカの東京本社、ナイトシティの地域拠点、世界の事業部門間の関係を紹介します。", "night-city-annex"),
+  page("archive", "/archive/", "archive", "Institutional Archive: Identity, Territory & Capital | Arasaka", "組織アーカイブ：人格・領域・資本 | アラサカ", "Eight fictional records connect personality preservation, regional security, and financial succession across Arasaka.", "八つの架空の記録が、人格保存、地域警備、金融上の継承をアラサカ全体で結びます。", "night-city-annex"),
   ...dossiers.map(d => page(d.id, `/archive/${d.id}/`, "archive", `${d.name.en} | NC-0417 | Arasaka Fictional Archive`, `${d.name.ja} | NC-0417 | アラサカ架空アーカイブ`, `Fictional internal record: ${d.summary.en}`, `架空の内部記録：${d.summary.ja}`, d.image, "archive")),
+  ...networkProfiles.map(p => page(p.id, p.route, p.section, `${p.name.en} | Arasaka Corporation`, `${p.name.ja} | アラサカ株式会社`, p.summary.en, p.summary.ja, p.image, p.parent)),
+  ...networkRecords.map(d => page(d.id, `/archive/${d.id}/`, "archive", `${d.name.en} | NC-1102 | Arasaka Fictional Archive`, `${d.name.ja} | NC-1102 | アラサカ架空アーカイブ`, `Fictional internal record: ${d.summary.en}`, `架空の内部記録：${d.summary.ja}`, d.image, "archive")),
 ];
 
 export const label = id => ({
   home: pair("Home", "ホーム"), businesses: pair("Businesses", "事業紹介"), products: pair("Products", "製品"), research: pair("Research", "研究"), company: pair("Company", "企業情報"), contact: pair("Global Operations", "グローバル拠点"), "engram-technology": pair("Engram technology", "エングラム技術"),
   archive: pair("Archive", "アーカイブ"),
-}[id] || businesses.find(b => b.id === id)?.name || products.find(p => p.id === id)?.name || dossiers.find(d => d.id === id)?.name);
+}[id] || businesses.find(b => b.id === id)?.name || products.find(p => p.id === id)?.name || dossiers.find(d => d.id === id)?.name || networkProfiles.find(p => p.id === id)?.name || networkRecords.find(d => d.id === id)?.name);
 
 export const retiredRoutes = {
   "/industries/": "/businesses/", "/products/securenet/": "/businesses/security/", "/products/perimeter/": "/businesses/security/", "/products/custody/": "/businesses/banking/", "/products/soulkiller/": "/research/engram-technology/",

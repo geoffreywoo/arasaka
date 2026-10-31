@@ -1,0 +1,792 @@
+{
+  "fiction": true,
+  "entities": [
+    {
+      "id": "home",
+      "type": "home",
+      "route": "/",
+      "name": {
+        "en": "Home",
+        "ja": "ホーム"
+      }
+    },
+    {
+      "id": "businesses",
+      "type": "businesses",
+      "route": "/businesses/",
+      "name": {
+        "en": "Businesses",
+        "ja": "事業紹介"
+      }
+    },
+    {
+      "id": "security",
+      "type": "businesses",
+      "route": "/businesses/security/",
+      "name": {
+        "en": "Security & Defense",
+        "ja": "警備・防衛"
+      }
+    },
+    {
+      "id": "banking",
+      "type": "businesses",
+      "route": "/businesses/banking/",
+      "name": {
+        "en": "Banking & Capital",
+        "ja": "銀行・資本"
+      }
+    },
+    {
+      "id": "technology",
+      "type": "businesses",
+      "route": "/businesses/technology/",
+      "name": {
+        "en": "Advanced Technology",
+        "ja": "先端技術"
+      }
+    },
+    {
+      "id": "products",
+      "type": "products",
+      "route": "/products/",
+      "name": {
+        "en": "Products",
+        "ja": "製品"
+      }
+    },
+    {
+      "id": "relic",
+      "type": "products",
+      "route": "/products/relic/",
+      "name": {
+        "en": "Relic",
+        "ja": "Relic"
+      }
+    },
+    {
+      "id": "mikoshi",
+      "type": "products",
+      "route": "/products/mikoshi/",
+      "name": {
+        "en": "Mikoshi",
+        "ja": "ミコシ"
+      }
+    },
+    {
+      "id": "shingen",
+      "type": "products",
+      "route": "/products/shingen/",
+      "name": {
+        "en": "Shingen",
+        "ja": "シンゲン"
+      }
+    },
+    {
+      "id": "yukimura",
+      "type": "products",
+      "route": "/products/yukimura/",
+      "name": {
+        "en": "Yukimura",
+        "ja": "ユキムラ"
+      }
+    },
+    {
+      "id": "research",
+      "type": "research",
+      "route": "/research/",
+      "name": {
+        "en": "Research",
+        "ja": "研究"
+      }
+    },
+    {
+      "id": "engram-technology",
+      "type": "research",
+      "route": "/research/engram-technology/",
+      "name": {
+        "en": "Engram technology",
+        "ja": "エングラム技術"
+      }
+    },
+    {
+      "id": "company",
+      "type": "company",
+      "route": "/company/",
+      "name": {
+        "en": "Company",
+        "ja": "企業情報"
+      }
+    },
+    {
+      "id": "contact",
+      "type": "contact",
+      "route": "/contact/",
+      "name": {
+        "en": "Global Operations",
+        "ja": "グローバル拠点"
+      }
+    },
+    {
+      "id": "archive",
+      "type": "record",
+      "route": "/archive/",
+      "name": {
+        "en": "Archive",
+        "ja": "アーカイブ"
+      }
+    },
+    {
+      "id": "client-intake",
+      "type": "record",
+      "route": "/archive/client-intake/",
+      "name": {
+        "en": "Continuity Enrollment Record",
+        "ja": "継承プログラム登録記録"
+      }
+    },
+    {
+      "id": "access-review",
+      "type": "record",
+      "route": "/archive/access-review/",
+      "name": {
+        "en": "Construct Access Review",
+        "ja": "構築体アクセス審査"
+      }
+    },
+    {
+      "id": "identity-assessment",
+      "type": "record",
+      "route": "/archive/identity-assessment/",
+      "name": {
+        "en": "Identity Assessment",
+        "ja": "本人性評価"
+      }
+    },
+    {
+      "id": "succession-directive",
+      "type": "record",
+      "route": "/archive/succession-directive/",
+      "name": {
+        "en": "Executive Succession Directive",
+        "ja": "経営継承指令"
+      }
+    },
+    {
+      "id": "case-disposition",
+      "type": "record",
+      "route": "/archive/case-disposition/",
+      "name": {
+        "en": "Case Disposition",
+        "ja": "案件処理記録"
+      }
+    },
+    {
+      "id": "organization",
+      "type": "institution",
+      "route": "/company/organization/",
+      "name": {
+        "en": "Organization & authority",
+        "ja": "組織と権限"
+      }
+    },
+    {
+      "id": "tokyo-operations",
+      "type": "institution",
+      "route": "/operations/tokyo/",
+      "name": {
+        "en": "Tokyo",
+        "ja": "東京"
+      }
+    },
+    {
+      "id": "night-city-operations",
+      "type": "institution",
+      "route": "/operations/night-city/",
+      "name": {
+        "en": "Night City",
+        "ja": "ナイトシティ"
+      }
+    },
+    {
+      "id": "asset-succession",
+      "type": "record",
+      "route": "/archive/asset-succession/",
+      "name": {
+        "en": "Asset Succession Instruction",
+        "ja": "資産継承指示書"
+      }
+    },
+    {
+      "id": "territorial-access",
+      "type": "record",
+      "route": "/archive/territorial-access/",
+      "name": {
+        "en": "Territorial Access Report",
+        "ja": "施設アクセス報告書"
+      }
+    },
+    {
+      "id": "institutional-review",
+      "type": "record",
+      "route": "/archive/institutional-review/",
+      "name": {
+        "en": "Institutional Review",
+        "ja": "組織審査記録"
+      }
+    },
+    {
+      "id": "group-secretariat",
+      "type": "office",
+      "page": "organization",
+      "anchor": "office-1",
+      "name": {
+        "en": "Group Secretariat",
+        "ja": "グループ事務局"
+      },
+      "route": "/company/organization/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "regional-counsel",
+      "type": "office",
+      "page": "organization",
+      "anchor": "office-2",
+      "name": {
+        "en": "Regional Counsel",
+        "ja": "地域法務"
+      },
+      "route": "/company/organization/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "financial-relationships",
+      "type": "office",
+      "page": "organization",
+      "anchor": "office-3",
+      "name": {
+        "en": "Financial Relationships",
+        "ja": "金融関係室"
+      },
+      "route": "/company/organization/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "regional-security",
+      "type": "office",
+      "page": "organization",
+      "anchor": "office-4",
+      "name": {
+        "en": "Regional Security & Archive Operations",
+        "ja": "地域警備・アーカイブ運用"
+      },
+      "route": "/company/organization/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "tokyo-concourse",
+      "type": "facility",
+      "page": "tokyo-operations",
+      "anchor": "location-1",
+      "name": {
+        "en": "Headquarters concourse",
+        "ja": "本社コンコース"
+      },
+      "route": "/operations/tokyo/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "regional-annex",
+      "type": "facility",
+      "page": "night-city-operations",
+      "anchor": "location-1",
+      "name": {
+        "en": "Night City regional annex",
+        "ja": "ナイトシティ地域別館"
+      },
+      "route": "/operations/night-city/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "NC-0417",
+      "type": "case",
+      "page": "archive",
+      "anchor": "NC-0417",
+      "name": {
+        "en": "The cost of continuity",
+        "ja": "継承の代償"
+      },
+      "route": "/archive/",
+      "provenance": "project-fiction"
+    },
+    {
+      "id": "NC-1102",
+      "type": "case",
+      "page": "archive",
+      "anchor": "NC-1102",
+      "name": {
+        "en": "The regional transition",
+        "ja": "地域の移行"
+      },
+      "route": "/archive/",
+      "provenance": "project-fiction"
+    }
+  ],
+  "edges": [
+    {
+      "from": "home",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "home",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "home",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "businesses",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "businesses",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "security",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "security",
+      "to": "territorial-access",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "security",
+      "to": "institutional-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "banking",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "banking",
+      "to": "asset-succession",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "banking",
+      "to": "case-disposition",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "technology",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "technology",
+      "to": "engram-technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "technology",
+      "to": "identity-assessment",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "products",
+      "to": "technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "products",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "products",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "relic",
+      "to": "mikoshi",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "relic",
+      "to": "client-intake",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "relic",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "mikoshi",
+      "to": "relic",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "mikoshi",
+      "to": "access-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "mikoshi",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "shingen",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "shingen",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "shingen",
+      "to": "yukimura",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "yukimura",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "yukimura",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "yukimura",
+      "to": "shingen",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "research",
+      "to": "identity-assessment",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "research",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "research",
+      "to": "technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "engram-technology",
+      "to": "identity-assessment",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "engram-technology",
+      "to": "succession-directive",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "engram-technology",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "company",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "company",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "company",
+      "to": "institutional-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "contact",
+      "to": "tokyo-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "contact",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "contact",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "client-intake",
+      "to": "relic",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "client-intake",
+      "to": "banking",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "access-review",
+      "to": "mikoshi",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "access-review",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "identity-assessment",
+      "to": "research",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "identity-assessment",
+      "to": "technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "succession-directive",
+      "to": "company",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "succession-directive",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "case-disposition",
+      "to": "banking",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "case-disposition",
+      "to": "institutional-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "company",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "banking",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "succession-directive",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "organization",
+      "to": "institutional-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "tokyo-operations",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "tokyo-operations",
+      "to": "company",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "tokyo-operations",
+      "to": "technology",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "tokyo-operations",
+      "to": "asset-succession",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "tokyo-operations",
+      "to": "succession-directive",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "shingen",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "yukimura",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "asset-succession",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "territorial-access",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "night-city-operations",
+      "to": "institutional-review",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "asset-succession",
+      "to": "banking",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "asset-succession",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "asset-succession",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "territorial-access",
+      "to": "security",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "territorial-access",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "territorial-access",
+      "to": "asset-succession",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "institutional-review",
+      "to": "organization",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "institutional-review",
+      "to": "night-city-operations",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "institutional-review",
+      "to": "succession-directive",
+      "relationship": "contextual-link"
+    },
+    {
+      "from": "group-secretariat",
+      "to": "institutional-review",
+      "relationship": "issues"
+    },
+    {
+      "from": "regional-counsel",
+      "to": "institutional-review",
+      "relationship": "reviews-scope"
+    },
+    {
+      "from": "financial-relationships",
+      "to": "asset-succession",
+      "relationship": "issues"
+    },
+    {
+      "from": "regional-security",
+      "to": "territorial-access",
+      "relationship": "issues"
+    },
+    {
+      "from": "tokyo-concourse",
+      "to": "group-secretariat",
+      "relationship": "situates"
+    },
+    {
+      "from": "regional-annex",
+      "to": "territorial-access",
+      "relationship": "subject-of"
+    },
+    {
+      "from": "NC-1102",
+      "to": "asset-succession",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-1102",
+      "to": "territorial-access",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-1102",
+      "to": "institutional-review",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-0417",
+      "to": "client-intake",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-0417",
+      "to": "access-review",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-0417",
+      "to": "identity-assessment",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-0417",
+      "to": "succession-directive",
+      "relationship": "contains"
+    },
+    {
+      "from": "NC-0417",
+      "to": "case-disposition",
+      "relationship": "contains"
+    }
+  ]
+}

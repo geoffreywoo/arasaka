@@ -18,7 +18,11 @@ for (const [key, { source, mobileSource }] of Object.entries(inputs)) {
     await sharp(input).resize({ width }).jpeg({ quality: 82, mozjpeg: true }).toFile(resolve(root, `assets/${asset.stem}-${width}.jpg`));
     await sharp(input).resize({ width }).webp({ quality: 80 }).toFile(resolve(root, `assets/${asset.stem}-${width}.webp`));
   }
-  if (key === "relic") {
+  if (key === "imperial-headquarters") {
+    const width = Math.round(dimensions.height * 864 / 940);
+    const left = Math.round((dimensions.width - width) * .56);
+    await sharp(input).extract({left,top:0,width,height:dimensions.height}).resize(864,940).webp({quality:76}).toFile(resolve(root,`assets/${asset.stem}-mobile.webp`));
+  } else if (key === "relic") {
     await sharp(resolve(root, mobileSource)).resize({ width: 720 }).webp({ quality: 82 }).toFile(resolve(root, `assets/${asset.stem}-mobile.webp`));
   } else if (key === "shingen" || key === "yukimura") {
     const photo = await sharp(input).resize({ width: 720 }).toBuffer();
@@ -37,8 +41,8 @@ for (const page of pages) {
   for (const lang of languages) await writeFile(resolve(root, `assets/social/${page.id}-${lang}.jpg`), social);
 }
 
-// Vendor only the three Lucide paths used by the static interface.
-const icons = ["Menu", "X", "ArrowUpRight"].map(name => {
+// Vendor only the Lucide paths used by the static interface.
+const icons = ["Menu", "X", "ArrowUpRight", "Search"].map(name => {
   const node = lucide.icons[name];
   const paths = node.map(([tag, attrs]) => `<${tag} ${Object.entries(attrs).map(([key,value]) => `${key}="${value}"`).join(" ")}/>`).join("");
   const id = name.replace(/[A-Z]/g, (c,i) => `${i ? "-" : ""}${c.toLowerCase()}`);
