@@ -452,12 +452,12 @@
       "permanent": true
     },
     {
-      "source": "/operations/:path*/",
+      "source": "/operations/:path((?!tokyo(?:/|$)|night-city(?:/|$)).*)/",
       "destination": "/company/",
       "permanent": true
     },
     {
-      "source": "/operations/:path*",
+      "source": "/operations/:path((?!tokyo(?:/|$)|night-city(?:/|$)).*)",
       "destination": "/company/",
       "permanent": true
     },

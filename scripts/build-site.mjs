@@ -232,8 +232,9 @@ await writeFile(resolve(root, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
 const config = JSON.parse(await readFile(resolve(root, "vercel.json"), "utf8"));
 const retired = Object.fromEntries(Object.entries(retiredRoutes).flatMap(([source, destination]) => [[source, destination], [`/ja${source}`, `/ja${destination}`]]));
 config.redirects = config.redirects.filter(r => !r.source.startsWith("/products/mikoshi") && !r.source.startsWith("/ja/products/mikoshi") && !r.source.startsWith("/archive") && !r.source.startsWith("/ja/archive")).map(r => {
+  const source = ["/operations/:path*", "/operations/:path*/"].includes(r.source) ? r.source.replace(":path*", ":path((?!tokyo(?:/|$)|night-city(?:/|$)).*)") : r.source;
   const match = Object.entries(retired).find(([source]) => r.source === source.slice(0, -1) || r.source.startsWith(source));
-  return { ...r, destination: match?.[1] || retiredRoutes[r.destination] || r.destination };
+  return { ...r, source, destination: match?.[1] || retiredRoutes[r.destination] || r.destination };
 });
 for (const [source, destination] of Object.entries(retired)) for (const variant of [source.slice(0, -1), source, `${source}:path*`]) {
   if (!config.redirects.some(r => r.source === variant)) config.redirects.push({ source: variant, destination, permanent: true });

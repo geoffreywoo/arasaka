@@ -133,7 +133,20 @@ def main():
     redirects = json.loads((ROOT / "vercel.json").read_text())["redirects"]
     routes = {p["route"] for p in PAGES}
     check(len({r["source"] for r in redirects}) == len(redirects), "Duplicate redirect sources")
-    for r in redirects: check(r["destination"] in routes and r["permanent"] and r["source"] not in routes, f"Conflicting/invalid redirect: {r}")
+    for r in redirects:
+        check(r["destination"] in routes and r["permanent"] and r["source"] not in routes, f"Conflicting/invalid redirect: {r}")
+        for route in routes:
+            for path in [route, route.rstrip("/") or "/"]:
+                source = r["source"]
+                if ":path*" in source:
+                    prefix, suffix = source.split(":path*", 1)
+                    matches = path.startswith(prefix) and (not suffix or path.endswith(suffix))
+                elif ":path(" in source:
+                    prefix, expression = source.split(":path", 1)
+                    matches = re.fullmatch(re.escape(prefix) + expression, path) is not None
+                else:
+                    matches = source == path
+                check(not matches, f"Redirect intercepts active route {path}: {source}")
     retired = {"/products/soulkiller/": "/research/engram-technology/", "/products/securenet/": "/businesses/security/", "/products/perimeter/": "/businesses/security/", "/products/custody/": "/businesses/banking/", "/industries/": "/businesses/"}
     for old, dest in retired.items():
         for prefix in ["", "/ja"]: check(any(r["source"] == prefix + old and r["destination"] == prefix + dest for r in redirects), "Missing redirect " + prefix + old)

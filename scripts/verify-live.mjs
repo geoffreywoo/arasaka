@@ -40,7 +40,7 @@ for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.s
   checks.push({ asset: path, status: response.status, bytes: remote.length });
 }
 for (const rule of config.redirects) {
-  const path = rule.source.replace(":path*", "legacy-check");
+  const path = rule.source.includes(":path(") ? rule.source.split(":path(")[0] + "legacy-check" + (rule.source.endsWith("/") ? "/" : "") : rule.source.replace(":path*", "legacy-check");
   const response = await fetch(base + path, { headers, redirect: "manual" });
   const location = response.headers.get("location");
   const destination = location ? new URL(location, base).pathname : null;

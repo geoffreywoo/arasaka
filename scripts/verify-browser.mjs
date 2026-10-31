@@ -26,6 +26,7 @@ try {
     await page.setViewportSize({ width, height: width < 600 ? 844 : 1000 });
     for (const entry of pages) {
       const response = await page.goto(base + entry.route, { waitUntil: "load" });
+      if (new URL(page.url()).pathname !== entry.route) failures.push(`${entry.route} ${width}: unexpected redirect to ${page.url()}`);
       if (response.status() !== 200) failures.push(`${entry.route} ${width}: HTTP ${response.status()}`);
       await page.evaluate(async () => {
         const images = [...document.images];

@@ -28,6 +28,8 @@ The existing public GitHub repository and existing Vercel project are retained. 
 
 The branch must pass protected-preview page/asset hashes, all HTTP redirects, and the full browser suite before merging. Reopen production and confirm the exact released HTML/assets, routes, language pairs, interactions, apex redirect, and READY custom-domain mapping. Final provider receipts are recorded in ignored `test-results/imperial-release-receipt.json` after live verification to avoid a documentation-only redeployment loop.
 
+The first protected preview exposed two legacy `/operations/:path*` rules intercepting the new English regional profiles. They are narrowed with a negative-lookahead capture group, preserving the existing root and unknown-legacy redirects while exempting Tokyo and Night City. Structural verification now checks wildcard/regex collisions against every active route, browser verification rejects unexpected redirect destinations, and live verification probes the retained legacy behavior. See [Vercel pattern guidance](https://vercel.com/docs/project-configuration/vercel-json#negative-lookahead).
+
 No outreach, analytics, Search Console ownership, sitemap-submission, DNS, or security-protection changes are included.
 
 ## The Cost of Continuity / 2026-10-05
