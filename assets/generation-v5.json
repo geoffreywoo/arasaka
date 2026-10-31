@@ -1,0 +1,92 @@
+{
+  "release": "Imperial Network",
+  "created": "2026-10-31",
+  "generator": "OpenAI image generation",
+  "scope": "Unofficial illustrative reconstructions; not official game renders or validated engineering. Supplied identity artwork is applied separately.",
+  "assets": [
+    {
+      "id": "imperial-headquarters",
+      "file": "source/imperial-headquarters-v5.png",
+      "reference": "User-selected option 3 desktop/mobile concept",
+      "prompt": "Extract and faithfully reconstruct ONLY the architectural photograph from the selected desktop website design on the left of this reference board, as a standalone 16:9 wide high-resolution photographic website hero. No interface, no typography, no sidebar, no frame, no product or mobile screen. Same upward viewpoint from a Tokyo elevated transit concourse, monumental dark graphite tower with pale concrete structural fins and suspended connective decks, cool morning sky, small suited workers at a controlled perimeter, restrained red architectural lamps. Preserve the tower massing, camera angle, clear material detail, and walkways of the selected design. Keep left lower area naturally shaded for later white website copy. Remove EVERY logo, insignia, crest, engraved symbol and lettering from buildings/banners/clothes; blank architectural surfaces, no replacement shapes. Existing supplied identity will be applied separately in the HTML. Full-bleed actual architectural photography, physically credible, not futuristic CGI illustration. Wide 16:9, clear and inspectable, no fog, no neon, no watermark.",
+      "review": "Architecture extracted as a standalone photograph; generated branding excluded."
+    },
+    {
+      "id": "tokyo-atrium",
+      "file": "source/tokyo-atrium-v5.png",
+      "reference": "source/imperial-headquarters-v5.png",
+      "prompt": "Original high-resolution 16:9 photorealistic corporate architectural/reportage image for the Arasaka Imperial Network website. An interior view within this same Tokyo megastructure: monumental group headquarters atrium, tall pale concrete fins, graphite stone floor, suspended bridges and clerical service counter, small black-suited staff, clear cool daylight and small red door indicators. No warm hotel luxury, no fantasy holograms. Physical reference to the same monumental architecture. Maintain the reference's architectural palette of pale concrete, graphite glass, steel, cool daylight, restrained red signals. All objects and people physically plausible and clearly visible. EVERY sign, wall, clothing patch and device must be plain and unbranded. No logos, insignia, emblems, symbols, text, lettering, watermark, UI, collage, or borders. No decorative neon. This is reconstructed design fiction, not an official game asset.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "night-city-annex",
+      "file": "source/night-city-annex-v5.png",
+      "reference": "source/imperial-headquarters-v5.png",
+      "prompt": "Original high-resolution 16:9 photorealistic corporate architectural/reportage image for the Arasaka Imperial Network website. Original speculative Night City regional logistics annex after 2077. Pale concrete and graphite steel, elevated tram deck, secure glass turnstiles, loading hall and staff entrance both clearly visible. Several maintenance contractors in muted gray workwear wait outside the closed pedestrian gate while suited employees cross an upper bridge. Cool early morning sun, no violence, no readable screens. This is the recurring regional annex in fictional case NC-1102. Use the same architectural materials as the reference, but a distinct low-rise industrial regional facility. Maintain the reference's architectural palette of pale concrete, graphite glass, steel, cool daylight, restrained red signals. All objects and people physically plausible and clearly visible. EVERY sign, wall, clothing patch and device must be plain and unbranded. No logos, insignia, emblems, symbols, text, lettering, watermark, UI, collage, or borders. No decorative neon. This is reconstructed design fiction, not an official game asset.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "succession-office",
+      "file": "source/succession-office-v5.png",
+      "reference": "source/imperial-headquarters-v5.png",
+      "prompt": "Original high-resolution 16:9 photorealistic corporate architectural/reportage image for the Arasaka Imperial Network website. Arasaka financial relationship office in Tokyo, inside the same monumental concrete/graphite complex. Long controlled document handover counter, two staff in restrained black business clothing, one seated contractor representative with a closed folder. Pale blue daylight, a glass records corridor, red access indicator. Show the institutional process, not cash or trading dashboards. Clear realistic interior architectural photography. Maintain the reference's architectural palette of pale concrete, graphite glass, steel, cool daylight, restrained red signals. All objects and people physically plausible and clearly visible. EVERY sign, wall, clothing patch and device must be plain and unbranded. No logos, insignia, emblems, symbols, text, lettering, watermark, UI, collage, or borders. No decorative neon. This is reconstructed design fiction, not an official game asset.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "mikoshi-overview",
+      "file": "source/mikoshi-overview-v5.png",
+      "reference": "source/mikoshi-v4.png",
+      "prompt": "16:9 premium photographic product/infrastructure reconstruction for Arasaka. A NEW camera view inside this same SEALED UNDERGROUND ARCHIVE from the reference, not a headquarters or office. Symmetric long view of huge opaque black containment columns, recessed cold-white optical channels, pale concrete vault walls, security threshold and tiny engineer behind glass. No sky, windows to outdoors, office towers, bridges, souls or humanoid holograms. Closely follow reference archive layout. Bright controlled laboratory lighting, readable material detail. Every surface, sign, garment and device unbranded. NO logos, lettering, insignia, symbols, numbers, text, UI, collage, border or watermark.",
+      "review": "Revised and re-inspected: sealed underground infrastructure / distinct macro crop, respectively."
+    },
+    {
+      "id": "mikoshi-detail",
+      "file": "source/mikoshi-detail-v5.png",
+      "reference": "source/mikoshi-v4.png",
+      "prompt": "16:9 premium photographic product/infrastructure reconstruction for Arasaka. A tight photographic DETAIL view of ONE sealed black archive column in the underground archive from the reference. Show the physical inspection boundary and recessed cold-white optical strip, matte graphite surfaces, red threshold lamp, a small technician seen through glass at far edge. It must look like a secure archive equipment room, not an outdoor office complex. No sky, towers, holograms, humanoid figures in columns or transparent souls. Every surface, sign, garment and device unbranded. NO logos, lettering, insignia, symbols, numbers, text, UI, collage, border or watermark.",
+      "review": "Revised and re-inspected: sealed underground infrastructure / distinct macro crop, respectively."
+    },
+    {
+      "id": "relic-detail",
+      "file": "source/relic-detail-v5.png",
+      "reference": "source/relic-v4.png",
+      "prompt": "Original 16:9 high-resolution photorealistic supplemental product photograph for Arasaka Imperial Network. A sharply lit close macro view of this exact neural biochip cartridge's gold contacts and brushed titanium/red translucent housing, resting in its fitted black case. Preserve the reference object, premium material optics, neutral charcoal backdrop, no disassembly or invented mechanism diagram. Preserve the exact reference product identity and scale; source is an illustrative reconstruction, not a certified game model. No text, logos, lettering, branding, UI, diagram, watermark, collage, or frame. Keep objects sharp and inspectable with restrained premium lighting. All garments and walls plain and unbranded.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "relic-context",
+      "file": "source/relic-context-v5.png",
+      "reference": "source/relic-v4.png",
+      "prompt": "Original 16:9 high-resolution photorealistic supplemental product photograph for Arasaka Imperial Network. The exact neural cartridge and its fitted case on a controlled custody counter in a graphite and pale concrete consultation facility. Plain black gloved custodian hands stand nearby, not inserting it into a person. Cool inspection light, small red access lamp. Physical cartridge remains clearly inspectable and consistent with reference. Preserve the exact reference product identity and scale; source is an illustrative reconstruction, not a certified game model. No text, logos, lettering, branding, UI, diagram, watermark, collage, or frame. Keep objects sharp and inspectable with restrained premium lighting. All garments and walls plain and unbranded.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "shingen-detail",
+      "file": "source/shingen-detail-v5.png",
+      "reference": "source/shingen-v3.png",
+      "prompt": "Original 16:9 high-resolution photorealistic supplemental product photograph for Arasaka Imperial Network. Close industrial product photograph of the same fictional smart submachine gun's upper receiver and external targeting housing. Preserve all external proportions and black/red material language. Only closed external surfaces, no internal mechanisms, exploded views, instructions, ammunition or handling diagram. Pale cool gray studio background. Preserve the exact reference product identity and scale; source is an illustrative reconstruction, not a certified game model. No text, logos, lettering, branding, UI, diagram, watermark, collage, or frame. Keep objects sharp and inspectable with restrained premium lighting. All garments and walls plain and unbranded.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "shingen-context",
+      "file": "source/shingen-context-v5.png",
+      "reference": "source/shingen-v3.png",
+      "prompt": "Original 16:9 high-resolution photorealistic supplemental product photograph for Arasaka Imperial Network. The same complete fictional smart submachine gun lies secured on an equipment inspection counter inside a near-future corporate regional security facility. No person holding it, no operation, no ammunition. Clear full object, pale concrete architecture, graphite equipment lockers, cool daylight and restrained red access lamp. Equipment custody rather than combat. Preserve the exact reference product identity and scale; source is an illustrative reconstruction, not a certified game model. No text, logos, lettering, branding, UI, diagram, watermark, collage, or frame. Keep objects sharp and inspectable with restrained premium lighting. All garments and walls plain and unbranded.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    },
+    {
+      "id": "yukimura-detail",
+      "file": "source/yukimura-detail-v5.png",
+      "reference": "source/yukimura-v3.png",
+      "prompt": "16:9 premium photographic product/infrastructure reconstruction for Arasaka. Create a TIGHT MACRO CROP of this exact fictional smart pistol's forward closed housing and external geometric vents. The frame must NOT show the entire pistol. Only front third of the external housing, silver machining, matte black finish, red detail and a little pale cool-gray studio background. Maintain exact reference product geometry. No internal mechanisms, ammunition, assembly, disassembly, instructions, firing or holding. Every surface, sign, garment and device unbranded. NO logos, lettering, insignia, symbols, numbers, text, UI, collage, border or watermark.",
+      "review": "Revised and re-inspected: sealed underground infrastructure / distinct macro crop, respectively."
+    },
+    {
+      "id": "yukimura-context",
+      "file": "source/yukimura-context-v5.png",
+      "reference": "source/yukimura-v3.png",
+      "prompt": "Original 16:9 high-resolution photorealistic supplemental product photograph for Arasaka Imperial Network. The exact complete fictional smart pistol lies in a fitted equipment tray on a security inventory counter inside a corporate regional facility. No person using or holding it, no ammunition. Pale concrete, graphite lockers, cool daylight and small restrained red access lamp. Clear product photography within a believable institutional setting. Preserve the exact reference product identity and scale; source is an illustrative reconstruction, not a certified game model. No text, logos, lettering, branding, UI, diagram, watermark, collage, or frame. Keep objects sharp and inspectable with restrained premium lighting. All garments and walls plain and unbranded.",
+      "review": "Inspected for material continuity, distinct framing, and absence of generated identity artwork."
+    }
+  ]
+}

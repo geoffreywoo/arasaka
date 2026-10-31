@@ -32,7 +32,7 @@ for (const a of Object.values(assets)) {
   const mobile = `/assets/${a.stem}-mobile.webp`;
   try { await access(resolve(root, mobile.slice(1))); imagePaths.push(mobile); } catch (error) { if (error.code !== "ENOENT") throw error; }
 }
-for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.social]).concat(imagePaths, ["/styles.css", "/app.js", "/robots.txt", "/sitemap.xml"]))) {
+for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.social]).concat(imagePaths, ["/styles.css", "/app.js", "/robots.txt", "/sitemap.xml", "/assets/icons.svg", "/assets/orbitron-900.ttf", "/assets/search-en.json", "/assets/search-ja.json", "/assets/institutional-relationships.json"]))) {
   const response = await fetch(base + path, { headers });
   const remote = Buffer.from(await response.arrayBuffer());
   const local = await readFile(resolve(root, path.slice(1)));
@@ -40,7 +40,7 @@ for (const path of new Set(manifest.pages.flatMap(entry => [entry.image, entry.s
   checks.push({ asset: path, status: response.status, bytes: remote.length });
 }
 for (const rule of config.redirects) {
-  const path = rule.source.replace(":path*", "legacy-check");
+  const path = rule.source.includes(":path(") ? rule.source.split(":path(")[0] + "legacy-check" + (rule.source.endsWith("/") ? "/" : "") : rule.source.replace(":path*", "legacy-check");
   const response = await fetch(base + path, { headers, redirect: "manual" });
   const location = response.headers.get("location");
   const destination = location ? new URL(location, base).pathname : null;

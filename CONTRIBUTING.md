@@ -21,7 +21,7 @@ Good copy is specific and restrained: explain businesses, products, manufacturin
 
 ## Local Checks
 
-Page definitions live in `scripts/site-content.mjs`; bilingual dossiers and public narrative connections live in `scripts/archive-content.mjs`; shared templates live in `scripts/build-site.mjs`. After changing them, regenerate all 40 committed static pages and run `node scripts/verify-narrative.mjs` in addition to structural verification:
+Page definitions live in `scripts/site-content.mjs`; NC-0417 dossiers and public connections live in `scripts/archive-content.mjs`; NC-1102, regional profiles, inspection views, and entity relationships live in `scripts/network-content.mjs`. Shared templates live in `scripts/build-site.mjs`. Read `docs/WORLD-BIBLE.md` before extending the institution. After changing content, regenerate all 52 committed static pages and run `node scripts/verify-narrative.mjs` in addition to structural verification:
 
 ```bash
 node scripts/build-site.mjs
@@ -48,6 +48,8 @@ http://127.0.0.1:4187/
 ```
 
 Check 360px, 390px, 768px, and desktop in both languages, including images, native menus, keyboard focus, reduced motion, and no-JavaScript navigation. With Playwright available, run `node scripts/verify-browser.mjs`. The shared manifest drives structural and browser coverage. No locale preference should cause an automatic redirect.
+
+Search must find document codes and Japanese body text. Product views must remain readable without JavaScript. Entity references must point to an existing page or fragment, not a decorative number. Do not add live telemetry, mandatory loading, fake authorization, analytics, or external search dependencies.
 
 ## Asset And IP Boundaries
 

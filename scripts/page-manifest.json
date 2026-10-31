@@ -7,10 +7,10 @@
       "route": "/",
       "file": "index.html",
       "title": "Arasaka Corporation | Security, Capital & Continuity",
-      "image": "/assets/relic-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/home-en.jpg",
-      "hash": "d3985b9b97f040f7e667e7dbbf72a7bb6ff84734c8b8d89bbd1f17dd093335f1",
-      "lastmod": "2026-10-05",
+      "hash": "16b1929fff58b102b7059ed77766af047836bad437c225960d4453902094a3cb",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/",
         "ja": "https://www.arasaka.com/ja/"
@@ -22,10 +22,10 @@
       "route": "/ja/",
       "file": "ja/index.html",
       "title": "アラサカ株式会社 | 警備・資本・継承",
-      "image": "/assets/relic-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/home-ja.jpg",
-      "hash": "491bdf3f388e016b1844f285eea006de1f48969d208d7930f8b51d147124f93b",
-      "lastmod": "2026-10-05",
+      "hash": "f9afad76a5f2948d85b93dcae719e116228d9da675cf95296bd77b430fd2dffb",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/",
         "ja": "https://www.arasaka.com/ja/"
@@ -37,10 +37,10 @@
       "route": "/businesses/",
       "file": "businesses/index.html",
       "title": "Our Businesses | Arasaka Corporation",
-      "image": "/assets/headquarters-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/businesses-en.jpg",
-      "hash": "ed0e99e9721c6bf9223e4703b1312c9a9eeb30ad2e6aa353229080a2110c6b27",
-      "lastmod": "2026-10-05",
+      "hash": "c91848390aed05399afc305766102c8c22cc2dcd08ea0a8a6b779f03de51c86f",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/",
         "ja": "https://www.arasaka.com/ja/businesses/"
@@ -52,10 +52,10 @@
       "route": "/ja/businesses/",
       "file": "ja/businesses/index.html",
       "title": "事業紹介 | アラサカ株式会社",
-      "image": "/assets/headquarters-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/businesses-ja.jpg",
-      "hash": "e9877662335a460aa891341d71e4f43d6b444f0245680e762875f6ef1366b3b2",
-      "lastmod": "2026-10-05",
+      "hash": "5dd08bc7ff3b70d3bb00678bfb8da788c78ba75543a8601b1db1d568597e5ded",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/",
         "ja": "https://www.arasaka.com/ja/businesses/"
@@ -69,8 +69,8 @@
       "title": "Security & Defense | Arasaka Corporation",
       "image": "/assets/security-v3-1600.jpg",
       "social": "/assets/social/security-en.jpg",
-      "hash": "1bae9c438462e2541929b6b65664ee46ea0d469b8b18db8afc7470bf5a9baa43",
-      "lastmod": "2026-10-05",
+      "hash": "12d7d31e2aa10ebdb34a29c589c97dc979b2d5738914dee3c27f3463d21d4b22",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/security/",
         "ja": "https://www.arasaka.com/ja/businesses/security/"
@@ -84,8 +84,8 @@
       "title": "警備・防衛 | アラサカ株式会社",
       "image": "/assets/security-v3-1600.jpg",
       "social": "/assets/social/security-ja.jpg",
-      "hash": "21babe8f3636beb243a88991ab6cea13f85ec1c5da1ef3f04fdc02ef47ff86ef",
-      "lastmod": "2026-10-05",
+      "hash": "5ecc8b8bcda3246c3c58a1dcc04ddc32022e5d318b3eca7d9f3265194b6a912d",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/security/",
         "ja": "https://www.arasaka.com/ja/businesses/security/"
@@ -99,8 +99,8 @@
       "title": "Banking & Capital | Arasaka Corporation",
       "image": "/assets/banking-v3-1600.jpg",
       "social": "/assets/social/banking-en.jpg",
-      "hash": "f71706e0773653999b5d7df49cf609cafeb772c259fe4cc069bdea5b690df990",
-      "lastmod": "2026-10-05",
+      "hash": "4c373c826fa3a5f09f33ec442341dc7d026baf7dc628453e0afcd5037b97c8bb",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/banking/",
         "ja": "https://www.arasaka.com/ja/businesses/banking/"
@@ -114,8 +114,8 @@
       "title": "銀行・資本 | アラサカ株式会社",
       "image": "/assets/banking-v3-1600.jpg",
       "social": "/assets/social/banking-ja.jpg",
-      "hash": "af890f6879badf4a866f72aef083f86658435792c3010b452eb0d432384adada",
-      "lastmod": "2026-10-05",
+      "hash": "55fa4d92001247bb8becb07e9a7b32e6f688fafb16da0c2d7ac0d43e66c6a15a",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/banking/",
         "ja": "https://www.arasaka.com/ja/businesses/banking/"
@@ -129,8 +129,8 @@
       "title": "Advanced Technology | Arasaka Corporation",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/technology-en.jpg",
-      "hash": "76885ad2ceda6eecb27eed3a3d1f6558942cc725b5f18cfb4e8d07a4b231fed7",
-      "lastmod": "2026-10-05",
+      "hash": "151d1728f4048e24aae6f3f6e8c0c40338b2d0c53c435c6b1c2f2180276d7eb5",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/technology/",
         "ja": "https://www.arasaka.com/ja/businesses/technology/"
@@ -144,8 +144,8 @@
       "title": "先端技術 | アラサカ株式会社",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/technology-ja.jpg",
-      "hash": "65ee8afed0d8caafcf1894fd8b16592df637c5ee19fcadf2d2a2c7eee8e57509",
-      "lastmod": "2026-10-05",
+      "hash": "386bbce7ed5f4371c40f0286a123effa92e0554512facfe6c8959aef16dadbfb",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/businesses/technology/",
         "ja": "https://www.arasaka.com/ja/businesses/technology/"
@@ -159,8 +159,8 @@
       "title": "Relic, Mikoshi & Smart Weapons | Arasaka Products",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/products-en.jpg",
-      "hash": "43afc976d7120d121cccd4ac915e9027a3393669415cfddf3a568bb2795de373",
-      "lastmod": "2026-10-05",
+      "hash": "0fa2d0f84bbae62416bd0b57bc8f269393cb8f365b4f9f254bb844ce92112d8a",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/",
         "ja": "https://www.arasaka.com/ja/products/"
@@ -174,8 +174,8 @@
       "title": "Relic・ミコシ・スマート兵器 | アラサカ製品",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/products-ja.jpg",
-      "hash": "5047842cbe6f8f49de7540c1ba54f0184c07cd8f091ccf4d041ded2cac0d9666",
-      "lastmod": "2026-10-05",
+      "hash": "5e35e44deb008be10a6b0c6ad2bad405b86b5795dd01ce6cc308d12690178fc4",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/",
         "ja": "https://www.arasaka.com/ja/products/"
@@ -189,8 +189,8 @@
       "title": "Relic | Arasaka Neural biochip",
       "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/relic-en.jpg",
-      "hash": "0829a4ec2906dcf76401d0fd9bae01e04ebf0fd61a0b9cf24be265c2c6148266",
-      "lastmod": "2026-10-05",
+      "hash": "f8776bf9f371d813dd3a23c17e76fdb4c8c0f81250e5f7f2dc332be2d234676a",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/relic/",
         "ja": "https://www.arasaka.com/ja/products/relic/"
@@ -204,8 +204,8 @@
       "title": "Relic | アラサカ ニューラル・バイオチップ",
       "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/relic-ja.jpg",
-      "hash": "ecff7548aeecb3a662a04be7ed67e4d2aa2142fb0b3ab1783044c28381a47bd1",
-      "lastmod": "2026-10-05",
+      "hash": "ce492325defe17ecafa87566f28e1ce4b8bacd464f50962b4bf3b9c7efdb1b4a",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/relic/",
         "ja": "https://www.arasaka.com/ja/products/relic/"
@@ -219,8 +219,8 @@
       "title": "Mikoshi | Arasaka Engram infrastructure",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/mikoshi-en.jpg",
-      "hash": "333c47e0f7bc22dac18c675cca33db4e20b07a65706ff1ff9be9d53d75fb18d9",
-      "lastmod": "2026-10-05",
+      "hash": "5d47b8e72347383452eff372ab1a4cfca37e2b87e38040095266bc3650570869",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/mikoshi/",
         "ja": "https://www.arasaka.com/ja/products/mikoshi/"
@@ -234,8 +234,8 @@
       "title": "ミコシ | アラサカ エングラム基盤",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/mikoshi-ja.jpg",
-      "hash": "be078a13caaa74e3bd0235cce421a337a045bda4a487b778d807947561ec0d16",
-      "lastmod": "2026-10-05",
+      "hash": "44041f1289f7d57188b3c24d97348f4674ce17188ed8f16a8ee983d89c37be2e",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/mikoshi/",
         "ja": "https://www.arasaka.com/ja/products/mikoshi/"
@@ -249,8 +249,8 @@
       "title": "TKI-20 Shingen | Arasaka Smart submachine gun",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/shingen-en.jpg",
-      "hash": "bcf8c54b19519ec6a9bf259d9fad5835488d541f1b8c202908dc678f01cf8ad2",
-      "lastmod": "2026-10-05",
+      "hash": "49ffb5403d846023127652552aca09e37e4dd512df390b897728c23729058909",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/shingen/",
         "ja": "https://www.arasaka.com/ja/products/shingen/"
@@ -264,8 +264,8 @@
       "title": "シンゲン | アラサカ スマート・サブマシンガン",
       "image": "/assets/shingen-v3-1600.jpg",
       "social": "/assets/social/shingen-ja.jpg",
-      "hash": "2c832a43f14d89013e40b605e691663f5d25859b134e3f359c3c5ba5e8c91b56",
-      "lastmod": "2026-10-05",
+      "hash": "4bf31107df472e59e0463c3e665fde6aca4753c0a9be396c76f4d7cd9e9d0bee",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/shingen/",
         "ja": "https://www.arasaka.com/ja/products/shingen/"
@@ -279,8 +279,8 @@
       "title": "HJKE-11 Yukimura | Arasaka Smart pistol",
       "image": "/assets/yukimura-v3-1600.jpg",
       "social": "/assets/social/yukimura-en.jpg",
-      "hash": "b39e62b10bf232f5431a7728dc18ebc098e46593f5ae9ff2fea9071aa3e0b784",
-      "lastmod": "2026-10-05",
+      "hash": "b09ff0ba275f5830303f5f05c533affc449af01d31598319087a5fb7a465bfcb",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/yukimura/",
         "ja": "https://www.arasaka.com/ja/products/yukimura/"
@@ -294,8 +294,8 @@
       "title": "ユキムラ | アラサカ スマート・ピストル",
       "image": "/assets/yukimura-v3-1600.jpg",
       "social": "/assets/social/yukimura-ja.jpg",
-      "hash": "e1cd0ddb373e3cd66cb32073189014e7234836f7836ddb5e743bd5abfd78ed4f",
-      "lastmod": "2026-10-05",
+      "hash": "0a91956ed47c187f1af28614608938439544267fc2966bd02523559b05ca2df0",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/products/yukimura/",
         "ja": "https://www.arasaka.com/ja/products/yukimura/"
@@ -309,8 +309,8 @@
       "title": "Neural Interfaces & Engram Research | Arasaka",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/research-en.jpg",
-      "hash": "4b5e92a8e90102b92bedbc4d401a0756387359a89ca70f72be9b6de8f2602426",
-      "lastmod": "2026-10-05",
+      "hash": "bb2f15515290c7662435d1da94a98d0c55550029994289741152ad87d7aaae45",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/research/",
         "ja": "https://www.arasaka.com/ja/research/"
@@ -324,8 +324,8 @@
       "title": "神経接続とエングラム研究 | アラサカ",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/research-ja.jpg",
-      "hash": "39f1ccf098246e4d1ce40ef94b2e46f0e7af21b0e73291cbab3785cca2baeebf",
-      "lastmod": "2026-10-05",
+      "hash": "c5bb7795cc6a68fc365300d2087df6d5586e9073e4f36d289ac0f0518d56016f",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/research/",
         "ja": "https://www.arasaka.com/ja/research/"
@@ -339,8 +339,8 @@
       "title": "Relic, Mikoshi & Soulkiller: Engram Architecture | Arasaka",
       "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/engram-technology-en.jpg",
-      "hash": "6d45d70eb9e91547724a54a1c40344e228e11b39213cdcb34a3f10589aa2c37b",
-      "lastmod": "2026-10-05",
+      "hash": "9c8fba3b32f008d1f5a541061ab96879b968e0223379b62ff60ab149010322e8",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/research/engram-technology/",
         "ja": "https://www.arasaka.com/ja/research/engram-technology/"
@@ -354,8 +354,8 @@
       "title": "Relic・ミコシ・ソウルキラー：エングラム技術 | アラサカ",
       "image": "/assets/relic-v4-1600.jpg",
       "social": "/assets/social/engram-technology-ja.jpg",
-      "hash": "0122868ec2f7c647a2b13b0e7a80cff9a20070687145f7e04643fbbbacbc5ee8",
-      "lastmod": "2026-10-05",
+      "hash": "dce629425093ef71677fc78acedd9b03684c36080f6adb33c90c1ef1ca5488aa",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/research/engram-technology/",
         "ja": "https://www.arasaka.com/ja/research/engram-technology/"
@@ -367,10 +367,10 @@
       "route": "/company/",
       "file": "company/index.html",
       "title": "Company & Restored Leadership | Arasaka Corporation",
-      "image": "/assets/headquarters-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/company-en.jpg",
-      "hash": "edb163b9842205f23b9a325f95014d80c62036cce0d7d84df4a3e789c4d50d2f",
-      "lastmod": "2026-10-05",
+      "hash": "3237a6e77cbb38b3468a3e4302fe46c64e6b180a383f571e5eb3a21247416ae5",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/company/",
         "ja": "https://www.arasaka.com/ja/company/"
@@ -382,10 +382,10 @@
       "route": "/ja/company/",
       "file": "ja/company/index.html",
       "title": "企業情報と指導体制 | アラサカ株式会社",
-      "image": "/assets/headquarters-v4-1600.jpg",
+      "image": "/assets/imperial-headquarters-v5-1600.jpg",
       "social": "/assets/social/company-ja.jpg",
-      "hash": "cb2a97b04d806863749866d437917e020b66c158df1444466a8ac1d9c7ada854",
-      "lastmod": "2026-10-05",
+      "hash": "38ed581af9fe8963c54fbb8bddb6eb9c3cc4370f1b28aebd539818f7c32347b6",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/company/",
         "ja": "https://www.arasaka.com/ja/company/"
@@ -397,10 +397,10 @@
       "route": "/contact/",
       "file": "contact/index.html",
       "title": "Global Operations & Regional Directory | Arasaka",
-      "image": "/assets/night-city-v4-1600.jpg",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
       "social": "/assets/social/contact-en.jpg",
-      "hash": "e07db7076a5f5eb2af9504366887abbf5af245591839d4110071602230fe3d73",
-      "lastmod": "2026-10-05",
+      "hash": "a280a05794e71d877dc083b1d1d3d44d89865633bea85534d8bd9dae40afd59d",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/contact/",
         "ja": "https://www.arasaka.com/ja/contact/"
@@ -412,10 +412,10 @@
       "route": "/ja/contact/",
       "file": "ja/contact/index.html",
       "title": "グローバル拠点・地域一覧 | アラサカ",
-      "image": "/assets/night-city-v4-1600.jpg",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
       "social": "/assets/social/contact-ja.jpg",
-      "hash": "5b63ce81f88c2af22be6d5ab77465e6a50cb88ac96ec1bc4710905b428462a2a",
-      "lastmod": "2026-10-05",
+      "hash": "78e2b1e3b94883b9293af3707993a11a24e3de21a4a49c74a7f265cea290f423",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/contact/",
         "ja": "https://www.arasaka.com/ja/contact/"
@@ -426,11 +426,11 @@
       "lang": "en",
       "route": "/archive/",
       "file": "archive/index.html",
-      "title": "Continuity Archive: Case NC-0417 | Arasaka Design Fiction",
-      "image": "/assets/review-terminal-v4-1600.jpg",
+      "title": "Institutional Archive: Identity, Territory & Capital | Arasaka",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
       "social": "/assets/social/archive-en.jpg",
-      "hash": "79ff161cd87c7792a8cca3eaffc5e1a29ee98099bd3418830bbd07aa19e4d869",
-      "lastmod": "2026-10-05",
+      "hash": "2792481b942a12cf15dbcff1f00f4fd99280674a976f0c649f768ec6a4a7b316",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/",
         "ja": "https://www.arasaka.com/ja/archive/"
@@ -441,11 +441,11 @@
       "lang": "ja",
       "route": "/ja/archive/",
       "file": "ja/archive/index.html",
-      "title": "継承アーカイブ：案件NC-0417 | アラサカのデザインフィクション",
-      "image": "/assets/review-terminal-v4-1600.jpg",
+      "title": "組織アーカイブ：人格・領域・資本 | アラサカ",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
       "social": "/assets/social/archive-ja.jpg",
-      "hash": "bbca49544bd16e8066872906b14d73fbec7c0756a41d56c7434e9fca8fb80125",
-      "lastmod": "2026-10-05",
+      "hash": "0d5ecd4cf7cda5cc82bb9b37fdfa00daed0910957a1e5baf0776c6a3e57967cd",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/",
         "ja": "https://www.arasaka.com/ja/archive/"
@@ -459,8 +459,8 @@
       "title": "Continuity Enrollment Record | NC-0417 | Arasaka Fictional Archive",
       "image": "/assets/consultation-v4-1600.jpg",
       "social": "/assets/social/client-intake-en.jpg",
-      "hash": "e90a62d0b4ea776ab084bc6defd128a260f3a42a6cbfc6294a8c2ccb3ca049e0",
-      "lastmod": "2026-10-05",
+      "hash": "8337b10f4a63bd9ac2f5df0a3ca65010c8ea1455c3ea2eae0fa236e9ae915bf9",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/client-intake/",
         "ja": "https://www.arasaka.com/ja/archive/client-intake/"
@@ -474,8 +474,8 @@
       "title": "継承プログラム登録記録 | NC-0417 | アラサカ架空アーカイブ",
       "image": "/assets/consultation-v4-1600.jpg",
       "social": "/assets/social/client-intake-ja.jpg",
-      "hash": "bbb3186c0fb7d59926f58e740d19d5196ab50024b2dad40199c2ab50a7f18eb1",
-      "lastmod": "2026-10-05",
+      "hash": "7abc379335bacd7815904078315309031f1c129af6df1d4fd57d366d19f00c84",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/client-intake/",
         "ja": "https://www.arasaka.com/ja/archive/client-intake/"
@@ -489,8 +489,8 @@
       "title": "Construct Access Review | NC-0417 | Arasaka Fictional Archive",
       "image": "/assets/transport-v4-1600.jpg",
       "social": "/assets/social/access-review-en.jpg",
-      "hash": "f7067537fbc8a8cfceab5f6eef13dc84c4629e569fe56224406f11f05692a324",
-      "lastmod": "2026-10-05",
+      "hash": "64fa2a32decd546352bb022b69e25e104b2e79dc948e8a6f2c6c94791013cb1d",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/access-review/",
         "ja": "https://www.arasaka.com/ja/archive/access-review/"
@@ -504,8 +504,8 @@
       "title": "構築体アクセス審査 | NC-0417 | アラサカ架空アーカイブ",
       "image": "/assets/transport-v4-1600.jpg",
       "social": "/assets/social/access-review-ja.jpg",
-      "hash": "5736370cfd1dd7c9efbe203344b648f01a4bf959ea55095a9f4c163d9ff77086",
-      "lastmod": "2026-10-05",
+      "hash": "23971fec0d57c4a7aa7bd46f774635b2e2be762c8c1e33b7c889d277a83187af",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/access-review/",
         "ja": "https://www.arasaka.com/ja/archive/access-review/"
@@ -519,8 +519,8 @@
       "title": "Identity Assessment | NC-0417 | Arasaka Fictional Archive",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/identity-assessment-en.jpg",
-      "hash": "34787ebfd392a70a343efe883b973480565ae71749cb138f3f02de84747a9f53",
-      "lastmod": "2026-10-05",
+      "hash": "57cf23455df6c50382d8e82f26a2b1713ff76d4919d9ba0f8443636799bd7694",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/identity-assessment/",
         "ja": "https://www.arasaka.com/ja/archive/identity-assessment/"
@@ -534,8 +534,8 @@
       "title": "本人性評価 | NC-0417 | アラサカ架空アーカイブ",
       "image": "/assets/mikoshi-v4-1600.jpg",
       "social": "/assets/social/identity-assessment-ja.jpg",
-      "hash": "df668aaa8cbbf0bb773cc62324bee1a59c32822357606231e5ea117a5a9992f8",
-      "lastmod": "2026-10-05",
+      "hash": "6ec7f2b52fbff836fc82b991b8a2c97f0fb0c05d17041e89a92f4dfc168cfd55",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/identity-assessment/",
         "ja": "https://www.arasaka.com/ja/archive/identity-assessment/"
@@ -549,8 +549,8 @@
       "title": "Executive Succession Directive | NC-0417 | Arasaka Fictional Archive",
       "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/succession-directive-en.jpg",
-      "hash": "71fa817bfbcc41f8226fe1a983115a1ee147bd8fd554ca88a446fd104a6bb413",
-      "lastmod": "2026-10-05",
+      "hash": "a574bd9272ee79ca6f5ab83dbf2444276190b0ac07d6d7f03bc9a2044a5f5d2e",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/succession-directive/",
         "ja": "https://www.arasaka.com/ja/archive/succession-directive/"
@@ -564,8 +564,8 @@
       "title": "経営継承指令 | NC-0417 | アラサカ架空アーカイブ",
       "image": "/assets/headquarters-v4-1600.jpg",
       "social": "/assets/social/succession-directive-ja.jpg",
-      "hash": "92c1780604a3f77dafc7c3f42e1a4d49764ec7b8576765f99bfea6593804dbb8",
-      "lastmod": "2026-10-05",
+      "hash": "0bd5331ef4465cfc9bd8c371d6a33d2fa4ac44945d51512016b4ad444b1dffde",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/succession-directive/",
         "ja": "https://www.arasaka.com/ja/archive/succession-directive/"
@@ -579,8 +579,8 @@
       "title": "Case Disposition | NC-0417 | Arasaka Fictional Archive",
       "image": "/assets/review-terminal-v4-1600.jpg",
       "social": "/assets/social/case-disposition-en.jpg",
-      "hash": "6d8eda4a3914489333c4726ca83ae2b3048e1af2c58a1b75ff70469e801bd68a",
-      "lastmod": "2026-10-05",
+      "hash": "51527a4621a7ae7edb914c2ed42ae2a3de882d211ad99d5d09db7cb997726c1b",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/case-disposition/",
         "ja": "https://www.arasaka.com/ja/archive/case-disposition/"
@@ -594,11 +594,191 @@
       "title": "案件処理記録 | NC-0417 | アラサカ架空アーカイブ",
       "image": "/assets/review-terminal-v4-1600.jpg",
       "social": "/assets/social/case-disposition-ja.jpg",
-      "hash": "b29bc23cc6b54f7bcfa254f09dac7365575d5c8918520871b25e866f1c992926",
-      "lastmod": "2026-10-05",
+      "hash": "3790de08955db4a01f8619a853f74b4161df6df059b88c2b59c337fb2627ca31",
+      "lastmod": "2026-10-31",
       "alternates": {
         "en": "https://www.arasaka.com/archive/case-disposition/",
         "ja": "https://www.arasaka.com/ja/archive/case-disposition/"
+      }
+    },
+    {
+      "id": "organization",
+      "lang": "en",
+      "route": "/company/organization/",
+      "file": "company/organization/index.html",
+      "title": "Organization & authority | Arasaka Corporation",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/organization-en.jpg",
+      "hash": "6ac1e286bcbb4c059c65b697da1b857a337eecb1c7df0fd7763ee70f1686a7d7",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/company/organization/",
+        "ja": "https://www.arasaka.com/ja/company/organization/"
+      }
+    },
+    {
+      "id": "organization",
+      "lang": "ja",
+      "route": "/ja/company/organization/",
+      "file": "ja/company/organization/index.html",
+      "title": "組織と権限 | アラサカ株式会社",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/organization-ja.jpg",
+      "hash": "b1bd09aec8848b77b62d1f2889fd31657930d90b79f17664f3f2f7361220fd58",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/company/organization/",
+        "ja": "https://www.arasaka.com/ja/company/organization/"
+      }
+    },
+    {
+      "id": "tokyo-operations",
+      "lang": "en",
+      "route": "/operations/tokyo/",
+      "file": "operations/tokyo/index.html",
+      "title": "Tokyo | Arasaka Corporation",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/tokyo-operations-en.jpg",
+      "hash": "b5146876dbfb04bbd879013722d13c32b9f1047f1766711d446df426d70c015f",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/operations/tokyo/",
+        "ja": "https://www.arasaka.com/ja/operations/tokyo/"
+      }
+    },
+    {
+      "id": "tokyo-operations",
+      "lang": "ja",
+      "route": "/ja/operations/tokyo/",
+      "file": "ja/operations/tokyo/index.html",
+      "title": "東京 | アラサカ株式会社",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/tokyo-operations-ja.jpg",
+      "hash": "5d42e40bf8ca0b36f2ee6b194b51bad0f7916fc5dc3ee5fe8326855bad58f396",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/operations/tokyo/",
+        "ja": "https://www.arasaka.com/ja/operations/tokyo/"
+      }
+    },
+    {
+      "id": "night-city-operations",
+      "lang": "en",
+      "route": "/operations/night-city/",
+      "file": "operations/night-city/index.html",
+      "title": "Night City | Arasaka Corporation",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
+      "social": "/assets/social/night-city-operations-en.jpg",
+      "hash": "5560db1dc9062c5d1ffd1ffda909f4d4355503d78d4bc63e66a95344ce99fc51",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/operations/night-city/",
+        "ja": "https://www.arasaka.com/ja/operations/night-city/"
+      }
+    },
+    {
+      "id": "night-city-operations",
+      "lang": "ja",
+      "route": "/ja/operations/night-city/",
+      "file": "ja/operations/night-city/index.html",
+      "title": "ナイトシティ | アラサカ株式会社",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
+      "social": "/assets/social/night-city-operations-ja.jpg",
+      "hash": "2dccd5ec5034b36fb814d70223fd7adbe39e97f7fc4ed49ab21f745085830d56",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/operations/night-city/",
+        "ja": "https://www.arasaka.com/ja/operations/night-city/"
+      }
+    },
+    {
+      "id": "asset-succession",
+      "lang": "en",
+      "route": "/archive/asset-succession/",
+      "file": "archive/asset-succession/index.html",
+      "title": "Asset Succession Instruction | NC-1102 | Arasaka Fictional Archive",
+      "image": "/assets/succession-office-v5-1600.jpg",
+      "social": "/assets/social/asset-succession-en.jpg",
+      "hash": "eaca72c567feb19c02234a1b3f38abe7cb5bd7c425eab715d1e4e92bb637f322",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/asset-succession/",
+        "ja": "https://www.arasaka.com/ja/archive/asset-succession/"
+      }
+    },
+    {
+      "id": "asset-succession",
+      "lang": "ja",
+      "route": "/ja/archive/asset-succession/",
+      "file": "ja/archive/asset-succession/index.html",
+      "title": "資産継承指示書 | NC-1102 | アラサカ架空アーカイブ",
+      "image": "/assets/succession-office-v5-1600.jpg",
+      "social": "/assets/social/asset-succession-ja.jpg",
+      "hash": "ac4722aa06bfae69c6711d3080d76c6bdb781ff2c4884e59fd7d3697b684bbf3",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/asset-succession/",
+        "ja": "https://www.arasaka.com/ja/archive/asset-succession/"
+      }
+    },
+    {
+      "id": "territorial-access",
+      "lang": "en",
+      "route": "/archive/territorial-access/",
+      "file": "archive/territorial-access/index.html",
+      "title": "Territorial Access Report | NC-1102 | Arasaka Fictional Archive",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
+      "social": "/assets/social/territorial-access-en.jpg",
+      "hash": "dd198b4776a1c0bab049c2351d38345c02d7830fd20df9e747a717e4f08b17bf",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/territorial-access/",
+        "ja": "https://www.arasaka.com/ja/archive/territorial-access/"
+      }
+    },
+    {
+      "id": "territorial-access",
+      "lang": "ja",
+      "route": "/ja/archive/territorial-access/",
+      "file": "ja/archive/territorial-access/index.html",
+      "title": "施設アクセス報告書 | NC-1102 | アラサカ架空アーカイブ",
+      "image": "/assets/night-city-annex-v5-1600.jpg",
+      "social": "/assets/social/territorial-access-ja.jpg",
+      "hash": "a3dc3c156b315e79b6e1416634983c04ec0ed63fcbc4a87e767cb011d0dd29fa",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/territorial-access/",
+        "ja": "https://www.arasaka.com/ja/archive/territorial-access/"
+      }
+    },
+    {
+      "id": "institutional-review",
+      "lang": "en",
+      "route": "/archive/institutional-review/",
+      "file": "archive/institutional-review/index.html",
+      "title": "Institutional Review | NC-1102 | Arasaka Fictional Archive",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/institutional-review-en.jpg",
+      "hash": "a786c146f77e0cdc1881cf2e30a44e6c338d1065800465462466bc7e84398f53",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/institutional-review/",
+        "ja": "https://www.arasaka.com/ja/archive/institutional-review/"
+      }
+    },
+    {
+      "id": "institutional-review",
+      "lang": "ja",
+      "route": "/ja/archive/institutional-review/",
+      "file": "ja/archive/institutional-review/index.html",
+      "title": "組織審査記録 | NC-1102 | アラサカ架空アーカイブ",
+      "image": "/assets/tokyo-atrium-v5-1600.jpg",
+      "social": "/assets/social/institutional-review-ja.jpg",
+      "hash": "2603ffc3caf5cf69868d1f9f144fcddcbfda03f1e72d67cf040b8d14e0ca65cb",
+      "lastmod": "2026-10-31",
+      "alternates": {
+        "en": "https://www.arasaka.com/archive/institutional-review/",
+        "ja": "https://www.arasaka.com/ja/archive/institutional-review/"
       }
     }
   ]

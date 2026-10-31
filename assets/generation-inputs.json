@@ -54,5 +54,53 @@
   "banking": {
     "source": "assets/source/banking-v3.png",
     "prompt": "Use case: photorealistic-natural. Original wide 16:9 architectural corporate photograph of the private banking and capital operations floor of a speculative post-2077 Arasaka Japanese conglomerate. Sophisticated large financial institution interior high above Tokyo: long brushed-metal service desks, pale stone floors, panoramic city skyline in morning daylight, calm seated professionals in fine tailored suits, a dark secure vault corridor visible behind glass. Understated deep red architectural panel, black furniture, silver detail, daylight blue city. Believable global bank rather than sci-fi trading cockpit, no giant digital numbers, no flashy holograms, no stacks of cash. Inspectable well-lit spatial detail, authoritative Japanese minimalism. No text, logos, watermarks."
+  },
+  "imperial-headquarters": {
+    "source": "assets/source/imperial-headquarters-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "tokyo-atrium": {
+    "source": "assets/source/tokyo-atrium-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "night-city-annex": {
+    "source": "assets/source/night-city-annex-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "succession-office": {
+    "source": "assets/source/succession-office-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "mikoshi-overview": {
+    "source": "assets/source/mikoshi-overview-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "mikoshi-detail": {
+    "source": "assets/source/mikoshi-detail-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "relic-detail": {
+    "source": "assets/source/relic-detail-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "relic-context": {
+    "source": "assets/source/relic-context-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "shingen-detail": {
+    "source": "assets/source/shingen-detail-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "shingen-context": {
+    "source": "assets/source/shingen-context-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "yukimura-detail": {
+    "source": "assets/source/yukimura-detail-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
+  },
+  "yukimura-context": {
+    "source": "assets/source/yukimura-context-v5.png",
+    "prompt": "See generation-v5.json for the recorded source prompt and references."
   }
 }

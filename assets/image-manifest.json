@@ -46,5 +46,53 @@
   "banking": {
     "width": 1672,
     "height": 941
+  },
+  "imperial-headquarters": {
+    "width": 1672,
+    "height": 941
+  },
+  "tokyo-atrium": {
+    "width": 1672,
+    "height": 941
+  },
+  "night-city-annex": {
+    "width": 1672,
+    "height": 941
+  },
+  "succession-office": {
+    "width": 1672,
+    "height": 941
+  },
+  "mikoshi-overview": {
+    "width": 1672,
+    "height": 941
+  },
+  "mikoshi-detail": {
+    "width": 1672,
+    "height": 941
+  },
+  "relic-detail": {
+    "width": 1672,
+    "height": 941
+  },
+  "relic-context": {
+    "width": 1672,
+    "height": 941
+  },
+  "shingen-detail": {
+    "width": 1672,
+    "height": 941
+  },
+  "shingen-context": {
+    "width": 1672,
+    "height": 941
+  },
+  "yukimura-detail": {
+    "width": 1672,
+    "height": 941
+  },
+  "yukimura-context": {
+    "width": 1672,
+    "height": 941
   }
 }

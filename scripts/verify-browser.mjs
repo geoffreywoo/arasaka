@@ -26,6 +26,7 @@ try {
     await page.setViewportSize({ width, height: width < 600 ? 844 : 1000 });
     for (const entry of pages) {
       const response = await page.goto(base + entry.route, { waitUntil: "load" });
+      if (new URL(page.url()).pathname !== entry.route) failures.push(`${entry.route} ${width}: unexpected redirect to ${page.url()}`);
       if (response.status() !== 200) failures.push(`${entry.route} ${width}: HTTP ${response.status()}`);
       await page.evaluate(async () => {
         const images = [...document.images];
@@ -38,9 +39,9 @@ try {
           const r = el.getBoundingClientRect();
           return el.checkVisibility() && r.width > 0 && (r.right > innerWidth + 1 || r.left < -1) && getComputedStyle(el).position !== "absolute";
         }).map(el => `${el.tagName}.${el.className}`).slice(0, 5);
-        const framing = [...document.querySelectorAll('.archive-photo, .dossier-photo')].map(el => {
+        const framing = [...document.querySelectorAll('.archive-photo, .dossier-photo, .inspection-image')].filter(el=>el.checkVisibility()).map(el => {
           const box = el.getBoundingClientRect(), img = el.querySelector('img').getBoundingClientRect();
-          const expected = el.classList.contains('archive-photo') ? 16/10 : innerWidth <= 600 ? 4/3 : 21/9;
+          const expected = el.classList.contains('inspection-image') ? 16/9 : el.classList.contains('archive-photo') ? 16/10 : innerWidth <= 600 ? 4/3 : 21/9;
           return { ratio: box.width/box.height, expected, imageHeight: img.height, height: box.height };
         });
         return { scrollWidth: document.documentElement.scrollWidth, width: innerWidth, overflow, framing, brokenImages: [...document.images].filter(img => !img.complete || !img.naturalWidth).map(img => img.currentSrc), h1: document.querySelector("h1").innerText, language: document.documentElement.lang };
@@ -60,7 +61,7 @@ try {
         if (!await menu.locator("summary").evaluate(el => el === document.activeElement)) failures.push(`${entry.route}: menu focus not restored`);
       }
       checks.push({ route: entry.route, width, status: response.status(), ...result });
-      if ((width === 390 && ["home", "shingen", "mikoshi", "company", "banking", "engram-technology", "archive", "client-intake", "case-disposition"].includes(entry.id)) || (width === 1440 && ["home", "products", "company", "engram-technology", "archive", "client-intake"].includes(entry.id))) {
+      if ((width === 390 && ["home", "shingen", "mikoshi", "company", "banking", "engram-technology", "archive", "client-intake", "case-disposition", "night-city-operations", "organization", "territorial-access"].includes(entry.id)) || (width === 1440 && ["home", "products", "company", "engram-technology", "archive", "client-intake", "organization", "night-city-operations", "territorial-access"].includes(entry.id))) {
         const file = `${entry.id}-${entry.lang}-${width}.png`;
         await page.locator("summary").evaluate(el => el.blur());
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
@@ -70,6 +71,16 @@ try {
       }
     }
     console.log(`Checked ${pages.length} pages at ${width}px`);
+  }
+  for (const [width,height] of [[1440,736],[1265,736],[1024,650],[768,650]]) for (const locale of ["","/ja"]) {
+    await page.setViewportSize({width,height});
+    await page.goto(base+locale+"/");
+    const overlap = await page.evaluate(()=>{
+      const copy=document.querySelector('.imperial-copy').getBoundingClientRect();
+      const rail=document.querySelector('.division-rail a:last-child').getBoundingClientRect();
+      return copy.top < rail.bottom && copy.left < rail.right;
+    });
+    if (overlap) failures.push(`Short-window rail overlap: ${locale} ${width}x${height}`);
   }
   const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   if (cookies.length) await noJS.addCookies(cookies);
@@ -91,6 +102,13 @@ try {
       await plain.locator('.record-navigation a').last().click();
     }
     if (!plain.url().endsWith(prefix + "/archive/")) failures.push("No-JS archive return failed");
+    await plain.goto(base + prefix + "/archive/asset-succession/");
+    for (const id of ["asset-succession","territorial-access","institutional-review"]) {
+      if (!plain.url().endsWith(prefix + "/archive/" + id + "/")) failures.push("No-JS regional trail failed: " + id);
+      await plain.locator('.record-navigation a').last().click();
+    }
+    await plain.goto(base + prefix + "/products/relic/");
+    if (await plain.locator('.inspection-view:visible').count() !== 3 || await plain.locator('[data-search-open]').isVisible()) failures.push("No-JS inspection/search fallback failed");
   }
   await noJS.close();
   for (const locale of ["", "/ja"]) {
@@ -103,6 +121,36 @@ try {
     }
     await page.locator('.record-navigation a').last().click();
     if (!page.url().endsWith(locale + "/archive/")) failures.push("Dossier return failed");
+    await page.goto(base + locale + "/");
+    await page.locator('[data-search-open]').click();
+    const input = page.locator('#search-query');
+    await input.fill("TA / 1102 / 02");
+    await page.locator('#search-results a').first().waitFor();
+    if (await page.locator('#search-results a').count() !== 1) failures.push("Exact document search failed");
+    await page.screenshot({path:resolve(output,"search-"+(locale ? "ja" : "en")+".png")});
+    await input.press("ArrowDown");
+    await page.keyboard.press("Enter");
+    await page.waitForURL(base + locale + "/archive/territorial-access/");
+    if (!page.url().endsWith(locale + "/archive/territorial-access/")) failures.push("Search keyboard navigation failed");
+    await page.locator('[data-search-open]').click();
+    await input.fill(locale ? "職員入口" : "NC-1102");
+    await page.locator('#search-results a').first().waitFor();
+    if (await page.locator('#search-results a').count() < 1) failures.push("Localized body search failed");
+    await input.fill("<img src=x onerror=alert(1)>");
+    if (await page.locator('#search-results img').count() || await page.locator('#search-results a').count()) failures.push("Search escaping/empty state failed");
+    await page.keyboard.press("Escape");
+    await page.locator('#site-search').waitFor({state:"hidden"});
+    await page.waitForFunction(()=>document.querySelector('[data-search-open]')===document.activeElement);
+    if (await page.locator('#site-search').isVisible() || !await page.locator('[data-search-open]').evaluate(el=>el===document.activeElement)) failures.push("Search Escape/focus failed");
+    for (const id of ["relic","shingen","yukimura","mikoshi"]) {
+      await page.goto(base + locale + "/products/" + id + "/");
+      const tabs = page.locator('.inspection-tabs [role=tab]');
+      await tabs.first().focus();
+      await page.keyboard.press("End");
+      const count = await tabs.count();
+      if (await tabs.last().getAttribute('aria-selected') !== "true" || await page.locator('.inspection-view:visible').count() !== 1 || !await page.locator('#view-'+(count-1)).isVisible()) failures.push("Inspection keyboard selection failed: "+id);
+      if (!locale && id === "relic") await page.locator('#inspection').screenshot({path:resolve(output,"relic-inspection.png")});
+    }
   }
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(base + "/products/shingen/");

@@ -1,4 +1,4 @@
-# Arasaka: Restored Empire
+# Arasaka: Imperial Network
 
 **Security. Capital. Continuity.**
 
@@ -18,7 +18,11 @@ This project approaches that question as a working corporate website, not a lore
 
 The mission is to make a fictional institution feel coherent through its products, organization, language, and visual identity, while keeping its provenance honest. Mobile visitors and Japanese readers receive the same complete experience as desktop English readers.
 
-**The Cost of Continuity** adds a second reading beneath the corporate front. Five connected internal records follow a family's request to bring a stored personality home. Intake, custody, research, executive authority, and final disposition each explain part of the case; none can settle the family's central question. Documents are discoverable through product and research references, with no passwords, timers, or mandatory puzzles.
+**Imperial Network** connects the public corporation to the institution beneath it. Architecture establishes scale; products make its work tangible; internal records reveal the difference between a completed instruction and a resolved human situation. The homepage follows the user-selected architectural design, with products immediately below.
+
+Two cases offer a second reading. **NC-0417 / The Cost of Continuity** follows a family's request to bring a stored personality home. **NC-1102 / The Regional Transition** follows an asset transfer from a Tokyo financial counter to a maintenance team waiting outside a Night City entrance. The financial instruction is complete. Their return to work is not established.
+
+Discover the records through product, research, division, and regional links. There are no passwords, timers, fake access-denied screens, clearance systems, or mandatory puzzles. Every story remains readable without JavaScript.
 
 ![Continuity archive](docs/screenshots/archive.jpg)
 
@@ -34,11 +38,11 @@ The site is unofficial and unaffiliated with CD PROJEKT RED, CD PROJEKT, or R. T
 
 See [content sources](docs/CONTENT-SOURCES.md) and [asset attribution](assets/ATTRIBUTION.md) for precise boundaries.
 
-Case NC-0417, the family, the railway memory, all internal correspondence, the relative day sequence, and the custody/succession policies are original fiction. They are not recovered game shards, official Arasaka contracts, or a claim about the canonical sequel. Classification labels are narrative styling, not real access controls. No exact future year is asserted.
+Cases NC-0417 and NC-1102, their participants, correspondence, relative day sequences, regional annex, recurring offices, and custody/succession policies are original fiction. They are not recovered game shards, official Arasaka contracts, or a claim about the canonical sequel. Classification labels are narrative styling, not real access controls. No exact future year is asserted. The [world bible](docs/WORLD-BIBLE.md) defines recurring places, roles, vocabulary, and continuity boundaries.
 
 ## Information Architecture
 
-Twenty pages are generated in each language: **40 canonical URLs**.
+Twenty-six pages are generated in each language: **52 canonical URLs**.
 
 | Area | English routes | Japanese equivalent |
 | --- | --- | --- |
@@ -46,19 +50,19 @@ Twenty pages are generated in each language: **40 canonical URLs**.
 | Businesses | `/businesses/`, `/businesses/security/`, `/businesses/banking/`, `/businesses/technology/` | Prefix each with `/ja` |
 | Products | `/products/`, `/products/relic/`, `/products/mikoshi/`, `/products/shingen/`, `/products/yukimura/` | Prefix each with `/ja` |
 | Research | `/research/`, `/research/engram-technology/` | Prefix each with `/ja` |
-| Company | `/company/` | `/ja/company/` |
-| Global Operations | `/contact/` | `/ja/contact/` |
-| Archive | `/archive/`, plus `client-intake/`, `access-review/`, `identity-assessment/`, `succession-directive/`, `case-disposition/` | Prefix each with `/ja` |
+| Company | `/company/`, `/company/organization/` | Prefix each with `/ja` |
+| Global Operations | `/contact/`, `/operations/tokyo/`, `/operations/night-city/` | Prefix each with `/ja` |
+| Archive | `/archive/`, plus `client-intake/`, `access-review/`, `identity-assessment/`, `succession-directive/`, `case-disposition/`, `asset-succession/`, `territorial-access/`, `institutional-review/` | Prefix each with `/ja` |
 
 English and Japanese are rendered in HTML, with normal language links, reciprocal `hreflang`, and self-canonicals. Nothing redirects based on browser language. Retired invented brands redirect to the nearest business or technology brief; Mikoshi remains a standalone active page.
 
 ## Design & Imagery
 
-Twelve active concept scenes include eight new reconstructions: Tokyo headquarters, Relic, Mikoshi, Night City, cartridge custody, precision manufacturing, family consultation, and a vacant review terminal. Existing weapon, security, and banking imagery remains where useful. Responsive WebP/JPEG sizes, a dedicated portrait Relic composition, and 40 page-specific social cards are generated from documented originals. Supplied identity artwork is preserved; generated insignia was removed during image review.
+Twenty-four active image families include twelve new reconstructions: an architectural homepage, a Tokyo atrium, a Night City annex, a financial handover office, two Mikoshi infrastructure views, and detail/context views for Relic, Shingen, and Yukimura. The three handheld products each have overview, detail, and context views; Mikoshi has two infrastructure views. Responsive WebP/JPEG derivatives, dedicated mobile headquarters/Relic compositions, and 52 localized social cards are generated from documented originals. Supplied identity artwork remains separate and unchanged.
 
 ![Arasaka mobile homepage](docs/screenshots/mobile.jpg)
 
-Full-bleed imagery, unframed editorial sections, compact platform profiles, native menus, and restrained letter-lock labels keep the experience product-forward. Navigation and content work without JavaScript; the optional animation respects reduced motion.
+Graphite, concrete white, arterial red, squared industrial display type, and a desktop/mobile division rail define the public interface. Product inspection uses accessible keyboard tabs; without JavaScript all views are visible. A native search dialog covers all localized pages and document references using build-time indexes, with no search service or tracking. Ordinary navigation remains the foundation; short letter-lock labels respect reduced motion.
 
 ## Static Architecture
 
@@ -68,11 +72,14 @@ There is no runtime framework, external font service, analytics dependency, or b
 | --- | --- |
 | `scripts/site-content.mjs` | Shared page definitions, bilingual content, image mapping, product profiles, retired routes |
 | `scripts/archive-content.mjs` | Bilingual case documents, relative chronology, annotations, and public-page narrative connections |
+| `scripts/network-content.mjs` | NC-1102, offices, regional profiles, inspection views, and typed entity relationships |
 | `scripts/build-site.mjs` | HTML templates, metadata, localized navigation, sitemap, redirects |
 | `scripts/page-manifest.json` | Generated verification registry, content hashes, stable modification dates |
 | `styles.css`, `app.js` | Responsive presentation and optional progressive enhancements |
 | `scripts/prepare-images.mjs` | Responsive image derivatives, social cards, vendored Lucide icons |
-| `scripts/verify_site.py` | Dependency-free structural checks across all 40 pages |
+| `assets/search-{en,ja}.json` | Generated 26-page localized search indexes |
+| `assets/institutional-relationships.json` | Generated page, office, facility, and case relationships with real destinations |
+| `scripts/verify_site.py` | Dependency-free structural checks across all 52 pages |
 | `scripts/verify-narrative.mjs` | Case identity, chronology, bilingual completeness, discovery, and fiction-boundary checks |
 | `scripts/verify-browser.mjs` | Playwright viewport, image, keyboard, no-JS, and reduced-motion checks |
 | `scripts/verify-live.mjs` | Deployed HTML/asset hashes and real HTTP redirect checks |
@@ -115,6 +122,6 @@ Deploy to the **existing** `arasaka` Vercel project, verify a preview, then rele
 
 ## Open Source & Rights
 
-Original code and documentation are MIT licensed. That license does not grant rights to Cyberpunk names, concepts, trademarks, the supplied identity artwork, game screenshots, or generated/composite media. Lucide icons have their own included license.
+Original code and documentation are MIT licensed. That license does not grant rights to Cyberpunk names, concepts, trademarks, the supplied identity artwork, game screenshots, or generated/composite media. Lucide icons retain their included license; the self-hosted Orbitron display font retains its SIL Open Font License.
 
 Read [LICENSE](LICENSE), [asset attribution](assets/ATTRIBUTION.md), and [CONTRIBUTING.md](CONTRIBUTING.md) before reusing or extending the project.

@@ -1,5 +1,17 @@
 # Content Sources & Narrative Boundaries
 
+## Imperial Network / 2026-10-31
+
+The source-grounded layer is unchanged: Arasaka's broad businesses, Tokyo and Night City, the named products, and the selected restoration branch. This release adds original institutional fiction, not newly discovered canon.
+
+NC-1102 is a regional asset transfer at relative days 0, 1, and 7. Its financial instruction, gate report, executive review, maintenance roster, cabinet key, contractor representative, receiving administrator, and regional annex are inventions. The Group Secretariat, Regional Counsel, Financial Relationships, and the described regional/archive offices are recurring project roles, not a verified official organization chart.
+
+The public phrase "Regional transition complete" refers to the asset and facility transition. It does not say every employee or contractor has returned. Day 1 retains the pedestrian exception; day 7 closes the review while retaining that unresolved consequence. Do not write a later summary that converts administrative closure into restored access.
+
+The [world bible](WORLD-BIBLE.md) is the continuity authority for original additions. The generated relationship graph distinguishes page destinations from invented offices, facilities, and cases. Both cases have separate relative clocks; their day numbers do not establish a common calendar or exact future year.
+
+Twelve v5 images extend the same reconstructed visual family. They do not establish canonical architecture, product geometry, archive capacity, safety, technical performance, or internal security procedures. Product captions and repository attribution preserve this boundary.
+
 ## The Cost of Continuity
 
 Source URLs below were reopened on 2026-10-05. The Relic account describes commercial personality interaction; the Corporations article describes Night City's protective services and Japanese-product distribution. Neither establishes the invented NC-0417 service terms, custody permissions, executive directive, or subjective-identity findings.
